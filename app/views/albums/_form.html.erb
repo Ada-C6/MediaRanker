@@ -1,0 +1,13 @@
+<p>
+  albums form
+</p>
+<section class="from-new-edit">
+  <% form_for @albums do |f| method: http_method %>
+    <%= f.label :Name  %>
+    <%= f.text_field :name  %>
+    <%= f.label :Artist %>
+    <%= f.test_field :artist %>
+    <%= f.label :Description %>
+    <%= f.text_field :description %>
+  <% end %>
+</section>
