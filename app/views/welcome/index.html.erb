@@ -11,7 +11,7 @@
   <ol>
     <% @movies.each do |movie| %>
     <li>
-      <h2><%= movie.name %></h2>
+      <h2><%= link_to movie.name, movie_path(movie) %></h2>
       <small><%= movie.upvotes %></small>
     </li>
 
