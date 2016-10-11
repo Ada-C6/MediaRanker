@@ -1,2 +1,11 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<article>
+  <h2><%= @album.title %></h1>
+  <h3>Recorded by: <%= @album.artist %> </h3>
+  <h4>Upvotes: <%= @album.upvotes %> </h4>
+  <p> <%= @album.description %> </p>
+  <%= button_to "Upvote", albums_update_path, method: :patch %>
+  <%= button_to "Edit #{@album.title}", albums_edit_path(@album.id), method: :get %>
+  <%= button_to "Delete", albums_destroy_path(@album.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= button_to "View all albums", albums_index_path, method: :get %>
+  <%= button_to "View all media", main_path, method: :get %>
+</article>

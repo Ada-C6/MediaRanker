@@ -16,11 +16,13 @@ Rails.application.routes.draw do
 
   post 'albums/create'
 
-  get 'albums/:id/edit' => 'albums#edit'
+  get 'albums/:id/edit' => 'albums#edit', as: 'albums_edit'
 
-  put 'albums/:id/update' => 'albums#update'
+  put 'albums/:id/update' => 'albums#update', as: 'albums_update'
 
-  delete 'albums/:id/destroy' => 'albums#destroy'
+  patch 'albums/:id/update' => 'albums#update', as: 'albums_upvote'
+
+  delete 'albums/:id/destroy' => 'albums#destroy', as: 'albums_destroy'
 
   # Book-specific
 
@@ -32,11 +34,13 @@ Rails.application.routes.draw do
 
   post 'books/create'
 
-  get 'books/:id/edit' => 'books#edit'
+  get 'books/:id/edit' => 'books#edit', as: 'books_edit'
 
-  put 'books/:id/update' => 'books#update'
+  put 'books/:id/update' => 'books#update', as: 'books_update'
 
-  delete 'books/:id/destroy' => 'books#destroy'
+  patch 'books/:id/update' => 'books#update', as: 'books_upvote'
+
+  delete 'books/:id/destroy' => 'books#destroy', as: 'books_destroy'
 
   # Movie-specific
 
@@ -48,11 +52,13 @@ Rails.application.routes.draw do
 
   post 'movies/create'
 
-  get 'movies/:id/edit' => 'movies#edit'
+  get 'movies/:id/edit' => 'movies#edit', as: 'movies_edit'
 
-  put 'movies/:id/update' => 'movies#update'
+  put 'movies/:id/update' => 'movies#update', as: 'movies_update'
 
-  delete 'movies/:id/destroy' => 'movies#destroy'
+  patch 'movies/:id/update' => 'movies#update', as: 'movies_upvote'
+
+  delete 'movies/:id/destroy' => 'movies#destroy', as: 'movies_destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

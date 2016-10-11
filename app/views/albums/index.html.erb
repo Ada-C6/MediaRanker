@@ -1,2 +1,14 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<h2>Albums in the database</h2>
+
+<TABLE>
+  <% @albums.each do |album| %>
+    <TR>
+      <TD>Upvotes: <%= album.upvotes %></TD>
+      <TD><%= link_to album.title, albums_show_path(album.id) %></TD>
+      <TD><%= button_to "Upvote", albums_update_path(album.id), method: :patch %></TD>
+    </TR>
+  <% end %>
+</TABLE>
+
+<%= button_to "View all media", main_path, method: :get %>
+<%= button_to "Add an album", albums_new_path, method: :get %>
