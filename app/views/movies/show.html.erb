@@ -1,3 +1,16 @@
+<section>
+  <h1><%= @movie.name %></h1>
+  <small><%= @movie.director %></small>
+  <h2>Ranked: <%= @movie.upvotes %></h2>
+  <p>
+  <%= @movie.description %>
+  </p>
+
+</section>
+
 <p>
-  will show a specific movie
+  will be upvote button
 </p>
+
+<%= link_to "View all Movies", movies_path  %>
+<%= link_to "View all Media", root_path %>
