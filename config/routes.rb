@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
-  root to: 'movie#index', as: 'index'
+  root to: 'movies#index', as: 'index'
 
-  get 'movies/index'
+  # get 'movies/index'=> 'movie#index'
 
-  get 'movies/show'
+  get 'movies/:id' => 'movies#show', as: 'show'
 
-  get 'movies/edit'
+  get 'movies/:id/edit' => 'movies#edit', as: 'edit'
 
-  get 'movies/update'
+  patch 'movies/:id/update' => 'movies#update', as: 'update'
 
-  get 'movies/delete'
+  delete 'movies/:id/delete' => 'movies#delete', as: 'delete'
 
   get 'movies/upvote'
+
 
 
 

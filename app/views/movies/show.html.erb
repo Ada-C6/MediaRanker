@@ -1,2 +1,17 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+
+<h1 class="detail_title">
+<%= @movie.name %>
+</h1>
+<h2>
+  Directed by <%= @movie.director %>
+</h2>
+
+<section class="detail_content">
+  <p>Ranked: <%= @movie.votes %></p>
+  <p><%= @movie.description %></p>
+</section>
+
+<section class="botton">
+  <%= link_to "Edit #{@movie.name}", edit_path(@movie.id) %>
+  <%= link_to "DELETE", delete_path(@movie.id), data: { confirm: "Are you sure you want to delete this market?" }, method: :delete %>
+</section>
