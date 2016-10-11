@@ -3,7 +3,7 @@
 <h4><%= "#{ @album.description }" %></h4>
 
 
-<%= button_to "Edit #{ @album.name }", edit_album_path(@album) %>
-<%= link_to "DELETE", album_path(@album), method: :delete, data: { confirm: "Are you really sure?" } %>
-<%= link_to "View all Albums", albums_path %>
-<%= link_to "View all Media", root_path %>
+<%= button_to "Edit #{ @album.name }", edit_album_path(@album), method: :get %>
+<%= button_to "DELETE", album_path(@album), method: :delete, data: { confirm: "Are you really sure?" } %>
+<%= button_to "View all Albums", albums_path, method: :get %>
+<%= button_to "View all Media", root_path, method: :get %>

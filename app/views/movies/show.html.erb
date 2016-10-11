@@ -3,7 +3,7 @@
 <h4><%= "#{ @movie.description }" %></h4>
 
 
-<%= button_to "Edit #{ @movie.name }", edit_movie_path(@movie) %>
-<%= link_to "DELETE", movie_path(@movie), method: :delete, data: { confirm: "Are you really sure?" } %>
-<%= link_to "View all Movies", movies_path %>
-<%= link_to "View all Media", root_path %>
+<%= button_to "Edit #{ @movie.name }", edit_movie_path(@movie), method: :get %>
+<%= button_to "DELETE", movie_path(@movie), method: :delete, data: { confirm: "Are you really sure?" } %>
+<%= button_to "View all Movies", movies_path, method: :get %>
+<%= button_to "View all Media", root_path, method: :get %>
