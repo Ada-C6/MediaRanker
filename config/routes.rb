@@ -50,7 +50,7 @@ Rails.application.routes.draw do
 
   delete 'books/:id/destroy' => 'books#destroy', as: 'book_delete'
 
-  get 'books/upvote'
+  post 'books/:id/upvote' => 'books#upvote', as: 'book_upvote'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
