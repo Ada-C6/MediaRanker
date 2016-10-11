@@ -9,9 +9,12 @@
   <% @movies.each do |m| %>
     <tr>
       <td><%= "Ranked: #{m.ranking}" %></td>
-      <td><%= m.name %></td>
+      <td><%= link_to m.name, movie_path(m) %></td>
       <td><%= link_to "Upvote", upvote_movie_path(m), method: :patch %></td>
     </tr>
   <% end %>
 
 </table>
+
+<%= link_to "THIS SHOULD SHOW ALL MEDIA", movies_path %>
+<%= link_to "Add a Movie", new_movie_path %>

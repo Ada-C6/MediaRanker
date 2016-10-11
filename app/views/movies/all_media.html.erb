@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Top Movies</th>
+    <th>Top Books</th>
+    <th>Top Albums</th>
+  </tr>
+
+  <% if @movies.count >= 10 %>
+    <% rows = 10 %>
+  <% else %>
+    <% rows = @movies.count %>
+  <% end %>
+
+  <% rows.times do |i| %>
+    <tr>
+      <td><%= "#{@movies[i].name} Ranked: #{@movies[i].ranking}" %></td>
+    </tr>
+  <% end %>
+
+  <tr>
+    <td><%= link_to "View More Movies", movies_path %></td>
+  </tr>
+
+</table>

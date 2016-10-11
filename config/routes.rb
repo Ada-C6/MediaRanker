@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'movies#all_media'
+
   resources :movies
 
   patch '/movies/upvote/:id', to: 'movies#upvote', as: 'upvote_movie'
