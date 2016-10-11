@@ -38,6 +38,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    Book.find(params[:id]).destroy
+
+    redirect_to books_path
   end
 
   def upvote
