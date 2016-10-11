@@ -1,7 +1,7 @@
 require 'csv'
 
 CSV.read('seed_csvs/movies.csv').each do |line|
-  movie_hash = { name: line[0], director: line[1], description: line[2], ranking: line[4]}
+  movie_hash = { name: line[0], director: line[1], description: line[2], ranking: line[3].to_i}
   Movie.create(movie_hash)
 end
 
