@@ -43,4 +43,4 @@ movies = [
 
 Album.create(albums)
 Book.create(books)
-Movie.create(movie)
+Movie.create(movies)
