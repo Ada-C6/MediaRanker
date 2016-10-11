@@ -1,0 +1,5 @@
+<h1><%= @book.name %></h1> <p>Written by: <%= @book.author %></p>
+  <p>Ranked: <%= @book.ranking %></p>
+  <p><%= @book.description %></p>
+  <p><%= button_to("Upvote", book_upvote_path(@book.id), method: :patch) %></p>
+  <p><%= button_to("Edit - #{ @book.name }", edit_book_path(@book.id), method: :get) %><%= button_to("DELETE", book_path(@book.id), method: :delete, data: { confirm: "Are you sure?"} ) %> <%= button_to("View All Books", books_path, method: :get) %><%= button_to("View All Media",root_path, method: :get)%></p>
