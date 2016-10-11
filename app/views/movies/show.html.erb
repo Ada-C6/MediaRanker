@@ -1,7 +1,12 @@
 <h2><%= @this_item.name %></h2>
 <h3>Directed by: <%=@this_item.director%></h3>
 
-<h4>Rank: <%=@this_item.rank %></h4>
+<h4>Rank: <%=@this_item.rank%></h4>
+
+
+
+<p><%=link_to "Edit", edit_movie_path(@id)%></p>
+<%= link_to "Delete", delete_movie_path(@id),  method: :delete , data: {confirm: "Are you really sure?"}%>
 
 <p><%=link_to "View all Movies", movies_path%></p>
 <p><%=link_to "View all Media", root_path%></p>

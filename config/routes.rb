@@ -5,7 +5,13 @@ Rails.application.routes.draw do
 
   get '/movies' => 'movies#index'
   get '/movies/new' => 'movies#new'
-  get '/movies/:id' => 'movies#show'
+  post 'movies/new' => 'movies#create'
+  get '/movies/:id', to: 'movies#show', as: 'show_movie'
+  get '/movies/:id/edit', to: 'movies#edit', as: 'edit_movie'
+  patch '/movies/:id' => 'movies#update'
+  delete '/movies/:id', to: 'movies#destroy', as: 'delete_movie'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -6,8 +6,8 @@
   </tr
   <% @full_list.each do |item| %>
     <tr>
-      <td>TBD</td>
-      <td><%= item.name %></td>
+      <td><%=item.id%></td>
+      <td><%=link_to item.name, show_movie_path(item.id)%></td>
       <td>TBD - Button to submit vote</td>
 
 
@@ -16,3 +16,4 @@
 </table>
 
 <p><%=link_to "View all Media", root_path%></p>
+<p><%=link_to "Add a Movie", movies_new_path%></p>

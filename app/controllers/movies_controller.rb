@@ -5,11 +5,46 @@ class MoviesController < ApplicationController
   end
 
   def show
-    id = Integer(params[:id])
-    @this_item = Movie.find(id)
+    @id = Integer(params[:id])
+    @this_item = Movie.find(@id)
   end
 
   def new
     @new_item = Movie.new
   end
+
+  def create
+    @new_item = Movie.new(movie_params)
+    @new_item.save
+    redirect_to movies_path
+  end
+
+  def edit
+    @id = params[:id]
+    @this_item = Movie.find(params[:id])
+
+  end
+
+  def update
+    @this_item = Movie.find(params[:id])
+    if @this_item.update(movie_params)
+      redirect_to edit_movie_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @item = Movie.find(params[:id]).destroy
+    redirect_to movies_path
+  end
+
+end
+
+
+
+private
+
+def movie_params
+  params.require(:movie).permit(:name, :director, :description, :rank)
 end
