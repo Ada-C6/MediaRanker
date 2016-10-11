@@ -2,7 +2,7 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    # Right now the order of the books is the order they're in the database. I will need to sort them by their ranking at some point. Woooo, mergesort? maybe here, maybe in the model. Go look at that article we read about how to move things to the model. 
+    # Right now the order of the books is the order they're in the database. I will need to sort them by their ranking at some point. Woooo, mergesort? maybe here, maybe in the model. Go look at that article we read about how to move things to the model.
   end
 
   def show
@@ -25,9 +25,16 @@ class BooksController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
 
   def update
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+      redirect_to book_path(@book)
+    else
+      render :edit
+    end
   end
 
   def destroy

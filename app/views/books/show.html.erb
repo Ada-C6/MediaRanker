@@ -5,6 +5,9 @@
 <p>
   <%= button_to "Upvote",   upvote_book_path(@book), method: :patch %>
 </p>
+<p>
+  <%= button_to "Edit Book",   edit_book_path(@book), method: :get %>
+</p>
 
 <section class="sub-nav">
   <ul>
