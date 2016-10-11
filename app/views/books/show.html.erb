@@ -1,2 +1,8 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<section>
+  <h1><%= @mybook.title %></h1>
+  <p><%= @mybook.creator %></p>
+  <p><%= @mybook.description %></p>
+  <%= button_to("Edit book", edit_book_path(@mybook.id), method: :get)%>
+
+  <%= button_to("Delete book", book_path(@mybook.id), method: :delete)%>
+</section>

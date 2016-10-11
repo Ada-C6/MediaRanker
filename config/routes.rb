@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   resources :albums
   resources :movies
-
   resources :books
+  resources :media, only: [:index, :show]
+  # root to: ''
 
 
 #     Prefix Verb   URI Pattern                Controller#Action

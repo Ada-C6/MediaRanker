@@ -6,44 +6,53 @@ class BooksController < ApplicationController
   end
 
   def show
-    @mybooks = Book.find(params[:id])
+    @mybook = Book.find(params[:id])
   end
 
   def new
-    @mybooks = Book.new
+    @mybook = Book.new
     @book_method = :post
     @book_path = books_path
   end
 
   def create
-    @mybooks = Book.new
-    @mybooks.title = params[:book][:title]
-    @mybooks.creator = params[:book][:creator]
-    @mybooks.description = params[:book][:description]
-    @mybooks.rank = params[:book][:rank]
-    @mybooks.save
+    @mybook = Book.new
+    @mybook.title = params[:book][:title]
+    @mybook.creator = params[:book][:creator]
+    @mybook.description = params[:book][:description]
+    @mybook.rank = params[:book][:rank]
+    @mybook.save
     redirect_to books_path
   end
 
   def edit
-    @mybooks = Book.find(params[:id].to_i)
+    @mybook = Book.find(params[:id].to_i)
+    @book_method = :put
+    @books_path = edit_book_path(@mybook.id)
+    if @mybook == nil
+          render :file => 'public/404.html',
+              :status => :not_found
+    end
   end
 
   def update
-    @mybooks = Book.find(params[:id])
-    if @mybooks == nil
+    @mybook = Book.find(params[:id])
+    if @mybook == nil
       render :file => 'public/404.html', :status => :not_found
     end
-    @mybooks.title = params[:book][:title]
-    @mybooks.creator = params[:book][:creator]
-    @mybooks.description = params[:book][:description]
-    @mybooks.rank = params[:book][:rank]
-    @mybooks.save
-    redirect_to books_show_path(@mybook.id)
+    @mybook.title = params[:book][:title]
+    @mybook.creator = params[:book][:creator]
+    @mybook.description = params[:book][:description]
+    @mybook.rank = params[:book][:rank]
+    @mybook.save
+    redirect_to book_path(@mybook.id)
   end
 
 
 
-  def delete
+  def destroy
+    @mybook = Book.find(params[:id])
+    @mybook.destroy
+    redirect_to books_path
   end
 end
