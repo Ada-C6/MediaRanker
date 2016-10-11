@@ -4,14 +4,45 @@
   <small>Ranking the Best of Everything</small>
 </header>
 
-<h1>Top Movies</h1>
 
-<ol>
-<% @movies.each do |movie| %>
-  <li>
-    <h2><%= movie.name %></h2>
-    <small><%= movie.upvotes %></small>
-  </li>
+<section>
+  <h1>Top Movies</h1>
 
-<% end  %>
-</ol>
+  <ol>
+    <% @movies.each do |movie| %>
+    <li>
+      <h2><%= movie.name %></h2>
+      <small><%= movie.upvotes %></small>
+    </li>
+
+    <% end  %>
+  </ol>
+</section>
+
+<section>
+  <h1>Top Books</h1>
+
+  <ol>
+    <% @books.each do |book| %>
+    <li>
+      <h2><%= book.name %></h2>
+      <small><%= book.upvotes %></small>
+    </li>
+
+    <% end  %>
+  </ol>
+</section>
+
+<section>
+  <h1>Top Albums</h1>
+
+  <ol>
+    <% @albums.each do |album| %>
+    <li>
+      <h2><%= album.name %></h2>
+      <small><%= album.upvotes %></small>
+    </li>
+
+    <% end  %>
+  </ol>
+</section>
