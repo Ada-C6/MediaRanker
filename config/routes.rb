@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'books/index'
+
+  get 'books/new'
+
+  get 'books/create'
+
+  get 'books/show'
+
+  get 'books/edit'
+
+  get 'books/update'
+
+  get 'books/delete'
+
+  get 'books/show_all'
+
+  get 'books/upvote'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
