@@ -1,4 +1,6 @@
-<h1>Albums</h1>
+<%= render partial: "shared/index", locals: { media_type: :albums, media_collection: @albums } %>
+
+<!-- <h1>Albums</h1>
 <table>
   <tr>
     <th>
@@ -12,7 +14,7 @@
     </th>
   </tr>
 
-  <%= @albums.each do |album| %>
+  <% @albums.each do |album| %>
   <tr>
     <td>
       <%= "Ranked: #{album.ranking}" %>
@@ -25,5 +27,5 @@
     </td>
   </tr>
   <% end %>
-  
-</table>
+
+</table> -->
