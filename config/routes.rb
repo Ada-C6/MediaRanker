@@ -1,21 +1,21 @@
 Rails.application.routes.draw do
-  get 'movies/index'
+  get 'movies/index' => 'movies#index', as: 'index_movies'
 
-  get 'movies/new'
+  get 'movies/new' => 'movies#new', as: 'new_movie'
 
-  get 'movies/create'
+  get 'movies/create' => 'movies#create', as: 'create_movie'
 
-  get 'movies/show'
+  get 'movies/show/:id' => 'movies#show', as: 'show_movie'
 
-  get 'movies/edit'
+  get 'movies/:id/edit' => 'movies#edit', as: 'edit_movie'
 
-  get 'movies/update'
+  get 'movies/:id/update' => 'movies#update', as: 'update_movie'
 
-  get 'movies/delete'
+  get 'movies/:id/delete' => 'movies#delete', as: 'delete_movie'
 
-  get 'movies/show_all'
+  get 'movies/show_all' => 'movies#show_all', as: 'show_all_movies'
 
-  get 'movies/upvote'
+  get 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
 
   get 'albums/index'
 
