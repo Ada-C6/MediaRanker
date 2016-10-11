@@ -1,5 +1,5 @@
 10.times do |i|
-    album_hash = { name: "Album Title \##{(i)}", artist: "Artist Name \##{(i)}", description: "Here is a description of Album Title \##{(i)}. It is a great album, worth listening to and possibly adding to your personal collection. You will not be disappointed. Check out this album from your local library so you can make your own opinion and upvote it here.", rank: 0 }
+    album_hash = { name: "Album Title \##{(i+1)}", artist: "Artist Name \##{(i+1)}", description: "Here is a description of Album Title \##{(i+1)}. It is a great album, worth listening to and possibly adding to your personal collection. You will not be disappointed. Check out this album from your local library so you can make your own opinion and upvote it here.", rank: 0 }
     Album.create(album_hash)
 end
 

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :home, only: [:index]
 
     resources :albums
+    patch 'albums/:id/upvote' => 'albums#upvote', as: 'album_upvote'
 
     resources :books
 
