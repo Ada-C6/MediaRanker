@@ -57,10 +57,8 @@ class AlbumsController < ApplicationController
     redirect_to action: "index"
   end
 
-  # def upvote
-  #   Albums.increment_counter(:upvote, params[:id])
-  #   OR
-  # @album = findAlbum
-  # @album.increment! :upvote 
-  # end
+  def upvote
+    Album.increment_counter(:ranked, params[:id])
+    redirect_to action: "show"
+  end
 end

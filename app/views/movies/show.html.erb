@@ -8,7 +8,7 @@
 </section>
 
 <ul>
-  <li><%= button_to 'Upvote', like_path(params[:id]), method: :put %></li>
+  <li><%= button_to 'Upvote', mupvote_path(params[:id]), method: :put %></li>
   <li><%= button_to 'Edit movie', edit_movie_path(params[:id]), method: :get %></li>
   <li><%= button_to 'Delete movie', { controller: :movies, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
   <li><%= button_to 'View All Movies', movies_path, method: :get %></li>

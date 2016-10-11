@@ -56,4 +56,9 @@ class MoviesController < ApplicationController
 
     redirect_to action: "index"
   end
+
+  def upvote
+    Movie.increment_counter(:ranked, params[:id])
+    redirect_to action: "show"
+  end
 end

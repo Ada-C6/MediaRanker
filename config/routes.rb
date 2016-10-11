@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :books
   resources :movies
 
-  put "like" => "albums#upvote"
+  put "like/:id" => "albums#upvote", as: "upvote"
+  put "like/books/:id" => "books#upvote", as: "bupvote"
+  put "like/movies/:id" => "movies#upvote", as: "mupvote"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
