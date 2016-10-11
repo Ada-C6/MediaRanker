@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'albums/index'
+
+  get 'albums/new'
+
+  get 'albums/create'
+
+  get 'albums/show'
+
+  get 'albums/edit'
+
+  get 'albums/update'
+
+  get 'albums/delete'
+
+  get 'albums/show_all'
+
+  get 'albums/upvote'
+
   get 'books/index'
 
   get 'books/new'
