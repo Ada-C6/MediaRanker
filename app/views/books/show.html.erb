@@ -1,2 +1,12 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1><%= @mybook.title %></h1>
+<p>  Written By: <%= @mybook.author %> </p>
+<p>  Genre: <%= @mybook.genre %> </p>
+<p>  Description: <%= @mybook.description %> </p>
+<p>  Rank: <%= @mybook.rank %> </p>
+
+<p class="edit_button"><%= button_to "Edit Book", {controller: 'books', action: 'edit'}, {path: 'edit_book', method: :get} %></p>
+
+<p class="delete_button"><%= button_to "Delete Book", {path: 'book', method: :delete}, data: {confirm: "Are you sure?"}%></p>
+
+<p class="all_button"><%= button_to "View All Books", {controller: 'books', action: 'index'}, {path: 'books', method: :get} %></p>
+<p class="media_button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>

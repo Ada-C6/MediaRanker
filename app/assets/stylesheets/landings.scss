@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-seven-movies, seven-books, seven-songs {
-  width: 30%;
+main {
+  text-align: center;
+}
+.seven-movies, .seven-books, .seven-songs {
+  width: 32%;
   margin: auto;
   display: inline-block;
   border: 1px solid black;
