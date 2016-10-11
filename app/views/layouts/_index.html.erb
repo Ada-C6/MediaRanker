@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p>Ranking</p>
+      </th>
+      <th>
+        <p>Name</p>
+      </th>
+      <th>
+        <p>Upvote</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% media.each do |m| %>
+        <td><%= "#{ m.upvotes }" %></td>
+        <td><%= link_to "#{ m.name }", url_for(m) %></td>
+        <td><%= button_to "Upvote", action: :vote, id: m.id %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<%= button_to "View All Media", root_path, method: :get %>
+<%= button_to "Add an Album", new_album_path, method: :get %>
