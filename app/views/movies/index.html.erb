@@ -4,11 +4,11 @@
     <th>Name</th>
     <th>Upvote</th>
   </tr>
-<% @movies.each do |movie| %>
+  <% @movies.each do |movie| %>
   <td><%= "Ranked: #{movie.rank}"%></td>
   <td><%= link_to "#{movie.name}", movie_path(movie) %></td>
   <td><%= "upvote button :(" %><%# link_to #####WHAT GOES HERE FOR UPVOTE?? button?? %></td>
-<% end %>
+  <% end %>
 </tbody>
 
 <%# link_to "View All Media", ######ROOT ROUTE %>

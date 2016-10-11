@@ -4,11 +4,11 @@
     <th>Name</th>
     <th>Upvote</th>
   </tr>
-<% @books.each do |book| %>
+  <% @books.each do |book| %>
   <td><%= "Ranked: #{book.rank}"%></td>
   <td><%= link_to "#{book.name}", book_path(book) %></td>
   <td><%= "upvote button :(" %><%# link_to #####WHAT GOES HERE FOR UPVOTE?? button?? %></td>
-<% end %>
+  <% end %>
 </tbody>
 
 <%# link_to "View All Media", ######ROOT ROUTE %>

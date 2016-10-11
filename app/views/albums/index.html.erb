@@ -4,11 +4,11 @@
     <th>Name</th>
     <th>Upvote</th>
   </tr>
-<% @albums.each do |album| %>
+  <% @albums.each do |album| %>
   <td><%= "Ranked: #{album.rank}"%></td>
   <td><%= link_to "#{album.name}", album_path(album) %></td>
   <td><%= "upvote button :(" %><%# link_to #####WHAT GOES HERE FOR UPVOTE?? button?? %></td>
-<% end %>
+  <% end %>
 </tbody>
 
 <%# link_to "View All Media", ######ROOT ROUTE %>
