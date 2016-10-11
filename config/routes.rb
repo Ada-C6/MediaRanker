@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   #root 'media#index'
   resources :movies
+  resources :books
 
   #to update the ranking using an upvote button:
   patch 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
