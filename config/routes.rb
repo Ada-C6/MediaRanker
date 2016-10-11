@@ -1,47 +1,12 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  root to: 'home#index'
 
-  get 'albums/index'
+  get 'home/index' => 'home#index', as: 'homeindex'
 
-  get 'albums/show'
+  resources :albums
+  resources :books
+  resources :movies
 
-  get 'albums/edit'
-
-  get 'albums/update'
-
-  get 'albums/new'
-
-  get 'albums/create'
-
-  get 'albums/destroy'
-
-  get 'books/index'
-
-  get 'books/show'
-
-  get 'books/edit'
-
-  get 'books/update'
-
-  get 'books/new'
-
-  get 'books/create'
-
-  get 'books/destroy'
-
-  get 'movies/index'
-
-  get 'movies/show'
-
-  get 'movies/edit'
-
-  get 'movies/update'
-
-  get 'movies/new'
-
-  get 'movies/create'
-
-  get 'movies/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
