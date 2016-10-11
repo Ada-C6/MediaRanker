@@ -23,7 +23,7 @@ class BooksController < ApplicationController
   def update
     @book = findBook
 
-    if @book.update(title: params[:album][:title], written_by: params[:album][:written_by], description: params[:album][:description])
+    if @book.update(title: params[:book][:title], written_by: params[:book][:written_by], description: params[:book][:description])
       redirect_to action: "show"
     else
       render 'edit'
