@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
+  root 'homes#index'
+
   get 'homes/index'
 
-  get 'movies/index'
+  get 'movies/index' => 'movies#index', as: 'movie_index'
 
   get 'movies/show/:id' => 'movies#show', as: 'movie_show'
 
@@ -17,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'movies/upvote'
 
-  get 'albums/index'
+  get 'albums/index' => 'albums#index', as: 'album_index'
 
   get 'albums/show/:id' => 'albums#show', as: 'album_show'
 
@@ -33,7 +36,7 @@ Rails.application.routes.draw do
 
   get 'albums/upvote'
 
-  get 'books/index'
+  get 'books/index' => 'books#index', as: 'book_index'
 
   get 'books/show/:id' => 'books#show', as: 'book_show'
 
