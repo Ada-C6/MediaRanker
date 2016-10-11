@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  get '/movies' => 'movies#index'
+  get '/movies/new', to: 'movies#new', as: 'new_movie'
+  post '/movies/new' => 'movies#create'
+  get '/movies/:id', to: 'movies#show', as: 'movie'
+  get '/movies/:id/edit', to: "movies#edit", as: 'edit_movie'
+  patch 'movies/:id/' => 'movies#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

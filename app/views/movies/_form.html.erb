@@ -1,0 +1,12 @@
+<%= form_for @new_movie, :url => { method: :post} do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :director %>
+  <%= f.text_field :director %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit action_name "Save" %>
+<% end %>
