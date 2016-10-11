@@ -6,12 +6,11 @@
     <th>Album Name</th>
     <th>More...</th>
   </tr>
+
   <% @albums.each do |album| %>
   <tr>
     <td><%= "#{album.rank_points}" %></td>
     <td><%= "#{album.name}" %></td>
-    <td><small>
-      <%= link_to "[Details]", album_path(album) %>
-  </tr>
+    <td><small><%= link_to "[Details]", album_path(album) %></small></tr>
   <% end %>
 </table>

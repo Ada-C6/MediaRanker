@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'homepage#index'
   resources :albums, :books, :movies
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,32 @@
+<h2>Top Five For All Categories</h2>
+
+<h5><%= link_to "Submit a new album for voting", new_album_path %></h5>
+<h5><%= link_to "Submit a new book for voting", new_book_path %></h5>
+<h5><%= link_to "Submit a new movie for voting", new_movie_path %></h5>
+
+<table class="index-table">
+  <tr>
+    <th colspan="2">Albums</th>
+    <th colspan="2">Books</th>
+    <th colspan="2">Movies</th>
+  </tr>
+
+  <% 5.times do |i| %>
+  <tr>
+    <td><%= "#{@albums[i].rank_points}" %></td>
+    <td><%= "#{@albums[i].name}" %></td>
+
+    <td><%= "#{@books[i].rank_points}" %></td>
+    <td><%= "#{@books[i].name}" %></td>
+
+    <td><%= "#{@movies[i].rank_points}" %></td>
+    <td><%= "#{@movies[i].name}" %></td>
+  </tr>
+  <% end %>
+  
+  <tr>
+    <td colspan="2"><%= link_to "More Albums...", albums_path %></td>
+    <td colspan="2"><%= link_to "More Books...", books_path %></td>
+    <td colspan="2"><%= link_to "More Movies...", movies_path %></td>
+  </tr>
+</table>
