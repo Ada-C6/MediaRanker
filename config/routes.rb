@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   get 'movies/show'
 
-  get 'movies/new'
+  get 'movies/new' => 'movies#new', as: 'movie_new'
 
-  get 'movies/create'
+  post 'movies/create' => 'movies#create', as: 'movie_create'
 
   get 'movies/edit'
 
@@ -19,9 +19,9 @@ Rails.application.routes.draw do
 
   get 'albums/show'
 
-  get 'albums/new'
+  get 'albums/new' => 'albums#new', as: 'album_new'
 
-  get 'albums/create'
+  post 'albums/create' => 'albums#create', as: 'album_create'
 
   get 'albums/edit'
 
