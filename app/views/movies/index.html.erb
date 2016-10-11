@@ -1,2 +1,17 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h2>Movies</h2>
+<%# link_to 'Add an Album', album_new_path %>
+<table>
+<tr>
+  <th>Rank</th>
+  <th>Title</th>
+  <th>Upvote</th>
+  <th colspan="2"></th>
+</tr>
+<% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.rank %> </td>
+      <td><%= movie.title %></td>
+      <td><%# link_to 'Upvote!', market_show_path(market) %></td
+    </tr>
+  <% end %>
+</table>
