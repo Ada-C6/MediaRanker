@@ -1,0 +1,33 @@
+<% if @movie.errors.any? %>
+  <ul class="errors">
+    <% @movie.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @movie, method: http_method do |f| %>
+  <p>
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :director %>:
+    <%= f.text_field :director %>
+  </p>
+
+  <p>
+    <%= f.label :description %>:
+    <%= f.text_field :description %>
+  </p>
+
+  <%= f.submit "Submit" %>
+<% end %>
+
+<p>
+  <%= link_to "Back to All Movies", movies_path %>
+</p>
