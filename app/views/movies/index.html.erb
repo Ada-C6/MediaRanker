@@ -10,7 +10,7 @@
     <tr>
       <td><%= "Ranked: #{m.ranking}" %></td>
       <td><%= m.name %></td>
-      <td><%= link_to "Upvote", upvote_movie_path(m) %></td>
+      <td><%= link_to "Upvote", upvote_movie_path(m), method: :patch %></td>
     </tr>
   <% end %>
 

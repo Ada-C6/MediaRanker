@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.order('ranking DESC')
   end
 
   def show
@@ -9,6 +9,8 @@ class MoviesController < ApplicationController
   def upvote
     @movie = Movie.find(params[:id])
     @movie.ranking += 1
+    @movie.save
+
     redirect_to movies_path # change to individual movie show view
   end
 
