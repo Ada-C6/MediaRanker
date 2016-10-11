@@ -1,2 +1,2 @@
-<h1>Albums#edit</h1>
-<p>Find me in app/views/albums/edit.html.erb</p>
+<h1>Edit an Album</h1>
+<%= render partial: "albumform", method: :post, locals: { action_name: album_path, params: {id: @album.id }} %>
