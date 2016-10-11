@@ -1,1 +1,9 @@
-<h1>Has name, artist: ranking (upvotes), description, buttons to upvote, edit, delete, view all albums, and view all media</h1>
+<h1><%= "#{ @album.name }" %></h1><h2>Recorded by: <%= "#{ @album.artist }" %></h2>
+<h3>Ranked: <%= "#{ @album.upvotes }" %></h3>
+<h4><%= "#{ @album.description }" %></h4>
+
+
+<%= button_to "Edit #{ @album.name }", edit_album_path(@album) %>
+<%= link_to "DELETE", album_path(@album), method: :delete, data: { confirm: "Are you really sure?" } %>
+<%= link_to "View all Albums", albums_path %>
+<%= link_to "View all Media", root_path %>

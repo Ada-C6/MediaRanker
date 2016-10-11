@@ -1,1 +1,9 @@
-<h1>Has name, director: ranking (upvotes), description, buttons to upvote, edit, delete, view all movies, and view all media</h1>
+<h1><%= "#{ @movie.name }" %></h1><h2>Directed by: <%= "#{ @movie.director }" %></h2>
+<h3>Ranked: <%= "#{ @movie.upvotes }" %></h3>
+<h4><%= "#{ @movie.description }" %></h4>
+
+
+<%= button_to "Edit #{ @movie.name }", edit_movie_path(@movie) %>
+<%= link_to "DELETE", movie_path(@movie), method: :delete, data: { confirm: "Are you really sure?" } %>
+<%= link_to "View all Movies", movies_path %>
+<%= link_to "View all Media", root_path %>

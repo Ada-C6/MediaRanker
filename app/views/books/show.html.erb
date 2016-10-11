@@ -1,1 +1,9 @@
-<h1>Has name, author: ranking (upvotes), description, buttons to upvote, edit, delete, view all books, and view all media</h1>
+<h1><%= "#{ @book.name }" %></h1><h2>Written by: <%= "#{ @book.author }" %></h2>
+<h3>Ranked: <%= "#{ @book.upvotes }" %></h3>
+<h4><%= "#{ @book.description }" %></h4>
+
+
+<%= button_to "Edit #{ @book.name }", edit_book_path(@book) %>
+<%= button_to "DELETE", book_path(@book), method: :delete, data: { confirm: "Are you really sure?" } %>
+<%= button_to "View all Books", books_path %>
+<%= button_to "View all Media", root_path %>
