@@ -7,7 +7,7 @@
   <th>Upvote</th>
   <th colspan="2"></th>
 </tr>
-<% @movies.each do |movie| %>
+<% @movies..order('rank DESC')each do |movie| %>
     <tr>
       <td><%= movie.rank %> </td>
       <td><%= link_to movie.title, movie_show_path(movie.id) %></td>
