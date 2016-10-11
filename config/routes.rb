@@ -35,9 +35,9 @@ Rails.application.routes.draw do
 
   get 'books/show'
 
-  get 'books/new'
+  get 'books/new' => 'books#new', as: 'book_new'
 
-  get 'books/create'
+  post 'books/create' => 'books#create', as: 'book_create'
 
   get 'books/edit'
 
