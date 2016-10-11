@@ -1,45 +1,48 @@
 Rails.application.routes.draw do
-  get 'movies/index'
+  root to: 'homepages#index'
+  get 'homepages/index', as: 'index'
 
-  get 'movies/show'
+  get 'movies/index' => 'movies#index', as: 'index_movies'
 
-  get 'movies/new'
+  get 'movies/show' => 'movies#show', as: 'show_movies'
 
-  get 'movies/create'
+  get 'movies/new' => 'movies#new', as: 'new_movies'
 
-  get 'movies/edit'
+  post 'movies/create' => 'movies#create', as:'create_movies'
 
-  get 'movies/update'
+  get 'movies/edit' => 'movies#edit', as: 'edit_movies'
 
-  get 'movies/destroy'
+  patch 'movies/update' => 'movies#update', as: 'update_movies'
 
-  get 'books/index'
+  delete 'movies/destroy' => 'movies#destroy', as: 'delete_movies'
 
-  get 'books/show'
+  get 'books/index' => 'books#index', as: 'index_books'
 
-  get 'books/new'
+  get 'books/show' => 'books#show', as: 'show_books'
 
-  get 'books/create'
+  get 'books/new' => 'books#new', as: 'new_books'
 
-  get 'books/edit'
+  post 'books/create' => 'books#create', as: 'create_books'
 
-  get 'books/update'
+  get 'books/edit' => 'books#edit', as: 'edit_books'
 
-  get 'books/destroy'
+  patch 'books/update' => 'books#update', as: 'update_books'
 
-  get 'albums/index'
+  delete 'books/destroy' => 'books#destroy', as: 'delete_books'
 
-  get 'albums/show'
+  get 'albums/index' => 'albums#index', as: 'index_albums'
 
-  get 'albums/new'
+  get 'albums/show' => 'albums#show', as: 'show_albums'
 
-  get 'albums/create'
+  get 'albums/new' => 'albums#new', as: 'new_albums'
 
-  get 'albums/edit'
+  post 'albums/create' => 'albums#create', as: 'create_albums'
 
-  get 'albums/update'
+  get 'albums/edit' => 'albums#edit', as: 'edit_albums'
 
-  get 'albums/destroy'
+  patch 'albums/update' => 'albums#update', as: 'update_albums'
+
+  delete 'albums/destroy' => 'albums#destroy', as: 'delete_albums'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
