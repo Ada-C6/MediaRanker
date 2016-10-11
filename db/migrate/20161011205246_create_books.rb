@@ -1,8 +1,8 @@
-class CreateMovies < ActiveRecord::Migration
+class CreateBooks < ActiveRecord::Migration
   def change
-    create_table :movies do |t|
+    create_table :books do |t|
       t.string :name
-      t.string :director
+      t.string :author
       t.text :description
       t.integer :rank
 
