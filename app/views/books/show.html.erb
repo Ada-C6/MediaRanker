@@ -1,2 +1,7 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h1><%= @book.title %></h1>
+<h3>Author:<%= @book.author %></h3>
+<p><%= @book.description %></p>
+<p>Ranked: <%= @book.rank %></p>
+
+<%# button_to "Edit Market", market_edit_path(@book.id), method: :get%>
+<%# button_to "Delete Market", market_delete_path(@book.id), method: :delete, data: {confirm:"Are you Sure?" }  %>

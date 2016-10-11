@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   get 'books/index'
 
-  get 'books/show'
+  get 'books/show/:id' => 'books#show', as: 'book_show'
 
   get 'books/new' => 'books#new', as: 'book_new'
 

@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id].to_i)
   end
 
   def new
@@ -17,7 +18,7 @@ class BooksController < ApplicationController
     @newbook.author = params[:book][:author]
     @newbook.description = params[:book][:description]
     @newbook.rank = 0
-    
+
     @newbook.save
 
     redirect_to action: 'index'
