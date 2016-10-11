@@ -5,5 +5,6 @@
 
 <%= link_to 'Edit Movie', movie_edit_path(@movie.id) %>
 <%= button_to "Delete Movie", movie_delete_path(@movie.id), method: :delete, data: {confirm:"Are you Sure?" }  %>
+<%= button_to 'Upvote', movie_upvote_path(@movie.id), method: :post %>
 
 <%= link_to 'Show All Media', index_path %>

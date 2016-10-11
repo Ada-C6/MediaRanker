@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   delete 'movies/:id/destroy' => 'movies#destroy', as: 'movie_delete'
 
-  get 'movies/upvote'
+  post 'movies/:id/upvote' => 'movies#upvote', as: 'movie_upvote'
 
   get 'albums/index' => 'albums#index', as: 'album_index'
 
@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
   delete 'albums/:id/destroy' => 'albums#destroy', as: 'album_delete'
 
-  get 'albums/upvote'
+  post 'albums/:id/upvote' => 'albums#upvote', as: 'album_upvote'
 
   get 'books/index' => 'books#index', as: 'book_index'
 

@@ -47,5 +47,10 @@ class AlbumsController < ApplicationController
   end
 
   def upvote
+    @album = Album.find(params[:id])
+    @album.rank += 1
+    @album.save
+
+    redirect_to action: 'index'
   end
 end

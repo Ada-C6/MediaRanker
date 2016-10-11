@@ -46,5 +46,10 @@ class MoviesController < ApplicationController
   end
 
   def upvote
+    @movie = Movie.find(params[:id])
+    @movie.rank += 1
+    @movie.save
+
+    redirect_to action: 'index'
   end
 end

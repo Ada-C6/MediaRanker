@@ -5,6 +5,6 @@
 
 <%= link_to 'Edit Book', book_edit_path(@book.id) %>
 <%= button_to "Delete Book", book_delete_path(@book.id), method: :delete, data: {confirm:"Are you Sure?" }  %>
-<%= button_to '+1', book_upvote_path(@book.id), method: :post %>
+<%= button_to 'Upvote', book_upvote_path(@book.id), method: :post %>
 
 <%= link_to 'Show All Media', index_path %>

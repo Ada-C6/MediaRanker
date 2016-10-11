@@ -5,5 +5,6 @@
 
 <%= link_to 'Edit Album', album_edit_path(@album.id) %>
 <%= button_to "Delete Album", album_delete_path(@album.id), method: :delete, data: {confirm:"Are you Sure?" }  %>
+<%= button_to 'Upvote', album_upvote_path(@album.id), method: :post %>
 
 <%= link_to 'Show All Media', index_path %>
