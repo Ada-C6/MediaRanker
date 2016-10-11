@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :movies
   resources :books
+  patch 'books/:id/upvote', to: 'books#upvote', as: 'upvote_book'
   resources :albums
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

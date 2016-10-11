@@ -1,7 +1,18 @@
-<ul>
+<h1> All the books. </h1> 
+<table>
 <% @books.each do |book| %>
-  <li><%= link_to book.title, book_path(book) %></li>
+  <tr>
+    <td>
+      Rank: <%= book.rank %>
+    </td>
+    <td>
+      <%= link_to book.title, book_path(book) %>
+    </td>
+    <td>
+      <%= button_to "Upvote",   upvote_book_path(book), method: :patch %>
+    </td>
+  </tr>
 <% end %>
-</ul>
+</table>
 
 <%= button_to "Add new book", new_book_path, method: :get%>

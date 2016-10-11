@@ -1,3 +1,18 @@
 <h1><%= @book.title %></h1>
 <h2> By: <%= @book.author %></h2>
 <p><%= @book.description %></p>
+<p>Rank: <%= @book.rank %></p>
+<p>
+  <%= button_to "Upvote",   upvote_book_path(@book), method: :patch %>
+</p>
+
+<section class="sub-nav">
+  <ul>
+    <li>
+      <%= link_to "Back to all Books", books_path %>
+    </li>
+    <li>
+      <%# link_to "Back to MediaRanker Home", root_path %>
+    </li>
+  </ul>
+</section>
