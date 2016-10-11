@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'homes/index'
+
   get 'movies/index'
 
   get 'movies/show/:id' => 'movies#show', as: 'movie_show'
