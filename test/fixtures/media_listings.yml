@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  creator: MyString
+  description: MyString
+  ranking: 1
+  type: 
+
+two:
+  name: MyString
+  creator: MyString
+  description: MyString
+  ranking: 1
+  type: 

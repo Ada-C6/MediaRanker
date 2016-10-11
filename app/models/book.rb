@@ -1,0 +1,2 @@
+class Book < MediaListing
+end
