@@ -2,8 +2,6 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.order(upvotes: :desc)
-
-
   end
 
   def show
@@ -26,7 +24,6 @@ class MoviesController < ApplicationController
 
   end
 
-
   def destroy
     movie = Movie.find(params[:id])
     movie.destroy
@@ -38,8 +35,5 @@ class MoviesController < ApplicationController
   def movie_params
     params.require(:movie).permit(:name, :director, :description)
   end
-
-
-
 
 end
