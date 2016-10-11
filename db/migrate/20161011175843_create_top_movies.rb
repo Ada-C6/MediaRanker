@@ -5,7 +5,7 @@ class CreateTopMovies < ActiveRecord::Migration
       t.string :director
       t.string :description
       t.integer :rank
-      
+
       t.timestamps null: false
     end
   end
