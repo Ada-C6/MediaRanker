@@ -1,11 +1,14 @@
 <h2>All Albums</h2>
+
 <table class="index-table">
   <tr>
+    <th>Points</th>
     <th>Album Name</th>
     <th>Actions</th>
   </tr>
   <% @albums.each do |album| %>
   <tr>
+    <td><%= "#{album.rank_points}" %></td>
     <td><%= link_to "#{album.name}", album_path(album) %></td>
     <td><small>
       <%= link_to "[Edit]", edit_album_path(album) %>

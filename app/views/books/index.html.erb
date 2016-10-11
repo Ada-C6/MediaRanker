@@ -1,1 +1,18 @@
 <h2>All Books</h2>
+
+<table class="index-table">
+  <tr>
+    <th>Points</th>
+    <th>Book Name</th>
+    <th>Actions</th>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+    <td><%= "#{book.rank_points}" %></td>
+    <td><%= link_to "#{book.name}", book_path(book) %></td>
+    <td><small>
+      <%= link_to "[Edit]", edit_book_path(book) %>
+      <%= link_to "[Delete]", book_path(book), method: :delete, data: { confirm: "Really, now?" } %></small> </td>
+  </tr>
+  <% end %>
+</table>

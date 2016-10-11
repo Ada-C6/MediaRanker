@@ -1,1 +1,18 @@
 <h2>All Movies</h2>
+
+<table class="index-table">
+  <tr>
+    <th>Points</th>
+    <th>Movie Name</th>
+    <th>Actions</th>
+  </tr>
+  <% @movies.each do |movie| %>
+  <tr>
+    <td><%= "#{movie.rank_points}" %></td>
+    <td><%= link_to "#{movie.name}", movie_path(movie) %></td>
+    <td><small>
+      <%= link_to "[Edit]", edit_movie_path(movie) %>
+      <%= link_to "[Delete]", movie_path(movie), method: :delete, data: { confirm: "Really, now?" } %></small> </td>
+  </tr>
+  <% end %>
+</table>
