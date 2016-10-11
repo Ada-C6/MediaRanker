@@ -1,2 +1,7 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%= @movie.title %></h1>
+<h3>Directed by:<%= @movie.director %></h3>
+<p><%= @movie.description %></p>
+<p>Ranked: <%= @movie.rank %></p>
+
+<%# button_to "Edit Market", market_edit_path(@movie.id), method: :get%>
+<%# button_to "Delete Market", market_delete_path(@movie.id), method: :delete, data: {confirm:"Are you Sure?" }  %>
