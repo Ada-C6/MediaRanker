@@ -12,6 +12,8 @@
   <%= f.hidden_field :vote, :value => @book.upvote %>
   <%= f.submit "Upvote!" %>
 <% end %>
+
 <%= link_to "Edit Book", edit_book_path %>
+<%= link_to "Delete this book!", book_path(@book), :method =>'delete', data: { confirm: "Are you really sure?"} %>
 <%= link_to "Home", root_path %>
 <%= link_to "All Books", books_path %>

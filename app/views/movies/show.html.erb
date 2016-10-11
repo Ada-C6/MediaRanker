@@ -12,6 +12,8 @@
   <%= f.hidden_field :vote, :value => @movie.upvote %>
   <%= f.submit "Upvote!" %>
 <% end %>
+
 <%= link_to "Edit Movie", edit_movie_path %>
+<%= link_to "Delete this movie!", movie_path(@movie), :method =>'delete', data: { confirm: "Are you really sure?"} %>
 <%= link_to "Home", root_path %>
 <%= link_to "All Movies", movies_path %>
