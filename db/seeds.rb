@@ -6,13 +6,21 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-movie_names = %w(Matrix StarTrek Cats Lovelace)
-movie_directors = %w(Neo Picard Kitty Ada)
+movie_names = %w(Matrix StarTrek Cats Lovelace A B C D E F G)
+movie_directors = %w(Neo Picard Kitty Ada a b c d e f g)
 movie_descriptions = [
   "Some people in leather dusters dodge bullets",
   "Best movie ever, just go watch it",
   "Meow meow meow meow",
-  "code code code"
+  "code code code",
+  "hello",
+  "hello",
+  "hello",
+  "hello",
+  "hello",
+  "hello",
+  "hello",
+
 ]
 
 index = 0

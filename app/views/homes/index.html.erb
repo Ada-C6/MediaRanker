@@ -1,5 +1,5 @@
 <h3>Movies</h3>
-<% @movies.each do |movie| %>
+<% @movies[0..9].each do |movie| %>
 <ul>
   <li><%= link_to "#{movie.title}", movie_path(movie) %></li>
   <%= "Ranking: #{movie.vote}" %>
@@ -12,7 +12,7 @@
 </p>
 
 <h3>Books</h3>
-<% @books.each do |book| %>
+<% @books[0..9].each do |book| %>
 <ul>
   <li><%= link_to "#{book.title}", book_path(book) %></li>
   <%= "Ranking: #{book.vote}" %>
@@ -27,7 +27,7 @@
 
 
 <h3>Albums</h3>
-<% @albums.each do |album| %>
+<% @albums[0..9].each do |album| %>
 <ul>
   <li><%= link_to "#{album.title}", album_path(album) %></li>
   <%= "Ranking: #{album.vote}" %>
