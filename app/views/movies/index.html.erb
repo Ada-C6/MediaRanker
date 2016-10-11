@@ -1,0 +1,7 @@
+<h1>Viewing All Movies </h1>
+
+<h3> Ranking || Name || Upvote </h3>
+<% @movies.each do |movie| %>
+<%= "#{movie.ranking} |------------|" %>
+<%=  link_to "#{movie.name}", movie_path(movie) %>
+<% end %>
