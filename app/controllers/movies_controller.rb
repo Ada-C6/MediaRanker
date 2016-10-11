@@ -25,9 +25,18 @@ class MoviesController < ApplicationController
   end
 
   def edit
+    @movie = Movie.find(params[:id])
   end
 
   def update
+    @movie = Movie.find(params[:id])
+    @movie.title = params[:movie][:title]
+    @movie.director = params[:movie][:director]
+    @movie.description = params[:movie][:description]
+
+    @movie.save
+
+    redirect_to action: 'index'
   end
 
   def destroy

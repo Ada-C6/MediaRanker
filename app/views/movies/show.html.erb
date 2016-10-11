@@ -3,5 +3,4 @@
 <p><%= @movie.description %></p>
 <p>Ranked: <%= @movie.rank %></p>
 
-<%# button_to "Edit Market", market_edit_path(@movie.id), method: :get%>
-<%# button_to "Delete Market", market_delete_path(@movie.id), method: :delete, data: {confirm:"Are you Sure?" }  %>
+<%= link_to 'Edit Movie', movie_edit_path(@movie.id) %>

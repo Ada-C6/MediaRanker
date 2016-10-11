@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   post 'movies/create' => 'movies#create', as: 'movie_create'
 
-  get 'movies/edit'
+  get 'movies/:id/edit' => 'movies#edit', as: 'movie_edit'
 
-  get 'movies/update'
+  put 'movies/:id/update' => 'movies#update', as: 'movie_update'
 
   get 'movies/destroy'
 
@@ -23,9 +23,9 @@ Rails.application.routes.draw do
 
   post 'albums/create' => 'albums#create', as: 'album_create'
 
-  get 'albums/edit'
+  get 'albums/:id/edit' => 'albums#edit', as: 'album_edit'
 
-  get 'albums/update'
+  put 'albums/:id/update' => 'albums#update', as: 'album_update'
 
   get 'albums/destroy'
 
@@ -39,9 +39,9 @@ Rails.application.routes.draw do
 
   post 'books/create' => 'books#create', as: 'book_create'
 
-  get 'books/edit'
+  get 'books/:id/edit' => 'books#edit', as: 'book_edit'
 
-  get 'books/update'
+  put 'books/:id/update' => 'books#update', as: 'book_update'
 
   get 'books/destroy'
 

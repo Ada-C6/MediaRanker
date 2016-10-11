@@ -3,5 +3,4 @@
 <p><%= @book.description %></p>
 <p>Ranked: <%= @book.rank %></p>
 
-<%# button_to "Edit Market", market_edit_path(@book.id), method: :get%>
-<%# button_to "Delete Market", market_delete_path(@book.id), method: :delete, data: {confirm:"Are you Sure?" }  %>
+<%= link_to 'Edit Book', book_edit_path(@book.id) %>
