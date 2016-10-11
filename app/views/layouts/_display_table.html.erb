@@ -1,0 +1,33 @@
+<h1>PRINT STUFF HERE</h1>
+<table>
+  <tbody>
+    <tr>
+      <th>
+        Ranking
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Upvote
+      </th>
+    </tr>
+
+      <% @items.each do |item| %>
+      <tr>
+        <th>
+          <%= "Ranked: #{item.vote}" %>
+        </th>
+        <th>
+          <%= link_to "#{item.title}", item_path(item) %>
+        </th>
+        <th>
+          <%= form_for item, method: :patch do |f|%>
+            <%= f.hidden_field :vote, :value => item.upvote %>
+            <%= f.submit "Upvote!" %>
+          <% end %>
+        </th>
+      </tr>
+      <% end %>
+    </tbody>
+</table>
