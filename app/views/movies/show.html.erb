@@ -1,2 +1,16 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%= @movie[:name] %></h1>
+
+<section>
+  <h2><%= @movie.name%></h2>
+  <h3> Directed by: <%= @movie.directed_by %> </h3>
+  <h3> Ranked: <%= @movie.ranked %> </h3>
+  <p> <%= @movie.description %> </p>
+</section>
+
+<ul>
+  <li><%= button_to 'Upvote', like_path(params[:id]), method: :put %></li>
+  <li><%= button_to 'Edit movie', edit_movie_path(params[:id]), method: :get %></li>
+  <li><%= button_to 'Delete movie', { controller: :movies, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  <li><%= button_to 'View All Movies', movies_path, method: :get %></li>
+  <li><%= button_to 'View All Media', root_path, method: :get %></li>
+</ul>

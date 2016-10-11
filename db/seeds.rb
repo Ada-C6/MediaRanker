@@ -12,4 +12,8 @@ Album.create(title: "Barton Hollow", recorded_by: "The Civil Wars", ranked: 0, d
 
 Album.create(title: "The Phosphorescent Blues", recorded_by: "Punch Brothers", ranked: 0, description: "The Phosphorescent Blues is the fourth studio album by the American group Punch Brothers, released on January 27, 2015.")
 
+#Books
+Book.create(title: "Pride & Prejudice", written_by: "Jane Austen", ranked: 0, description: "Pride and Prejudice is a novel by Jane Austen, first published in 1813.")
+
 #Movies
+Movie.create(name: "Pride & Prejudice", directed_by: "Joe Wright", ranked: 0, description: "Pride and Prejudice is a novel by Jane Austen, first published in 1813.")
