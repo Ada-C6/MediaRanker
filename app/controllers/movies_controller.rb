@@ -1,11 +1,11 @@
 class MoviesController < ApplicationController
   def index
-    # @movies = Movie.all
-    @movies = Movie.order('votes DESC')
+    @movies = Movie.order('votes DESC').first(10)
+
   end
 
   def all
-    @movies = Movie.all
+    @movies = Movie.order('votes DESC').first(10)
   end
 
   def show

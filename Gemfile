@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record

@@ -12,6 +12,10 @@
           <%= link_to movie.name, show_path(movie.id) %>
       </p>
 
+      <p class="list_row">
+          <%= link_to "Upvote", upvote_path(movie.id) %>
+      </p>
+
     <% end %>
   </article>
 
