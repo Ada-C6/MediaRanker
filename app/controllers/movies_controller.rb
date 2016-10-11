@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
-
+  require 'sort_by_rank.rb'
+  include SortByRank
+  
   def index
     @movies = sort_by_rank(Movie.all)
   end

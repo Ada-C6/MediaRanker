@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
-
+  require 'sort_by_rank.rb'
+  include SortByRank
+  
   def index
     @books = sort_by_rank(Book.all)
   end

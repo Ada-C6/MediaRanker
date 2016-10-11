@@ -7,27 +7,27 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @market = Album.create(album_params)
+    @album = Album.create(album_params)
 
     redirect_to albums_path
   end
 
   def new
-    @market = Album.new
+    @album = Album.new
   end
 
   def edit
-    @market = Album.find(params[:id])
+    @album = Album.find(params[:id])
   end
 
   def show
-    @market = Album.find(params[:id])
+    @album = Album.find(params[:id])
   end
 
   def update
-    @market = Album.find(params[:id])
+    @album = Album.find(params[:id])
 
-    if @market.update(album_params)
+    if @album.update(album_params)
       redirect_to album_path
     else
       render :edit
@@ -35,7 +35,7 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
-    @market = Album.find(params[:id]).destroy
+    @album = Album.find(params[:id]).destroy
 
     redirect_to albums_path
   end
