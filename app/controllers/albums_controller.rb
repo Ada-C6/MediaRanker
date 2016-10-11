@@ -57,14 +57,10 @@ class AlbumsController < ApplicationController
     redirect_to action: "index"
   end
 
-  def upvote
-    @album = findAlbum
-
-    session[:voting_id] ||= create_unique_voting_id
-    voter = VotingSession.find_or_create_by_unique_voting_id(session[:voting_id])
-
-    @album.upvote_by voter
-    
-    redirect_to action: "show"
-  end
+  # def upvote
+  #   Albums.increment_counter(:upvote, params[:id])
+  #   OR
+  # @album = findAlbum
+  # @album.increment! :upvote 
+  # end
 end
