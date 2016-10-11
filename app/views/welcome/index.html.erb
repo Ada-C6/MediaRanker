@@ -39,7 +39,7 @@
   <ol>
     <% @albums.each do |album| %>
     <li>
-      <h2><%= album.name %></h2>
+      <h2><%= link_to album.name, album_path(album) %></h2>
       <small><%= album.upvotes %></small>
     </li>
 
