@@ -39,4 +39,12 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
   end
+
+  private
+
+def album_params
+  params.require(:album).permit(:name, :artist, :description) #do i want :rank ?
+end
+
+
 end
