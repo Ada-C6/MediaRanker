@@ -1,7 +1,7 @@
 <h1>Viewing All Movies </h1>
 
 <h3> Ranking || Name || Upvote </h3>
-<% @movies.each do |movie| %>
+<% @all_movies.each do |movie| %>
 <p><%= "#{movie.ranking} |------------|" %>
 <%=  link_to "#{movie.name}", movie_path(movie) %>
 <%= button_to "UPVOTE", upvote_movie_path(movie), method: :patch  %> </p>

@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @all_movies = Movie.all
+    # @all_movies.sort
   end
 
   def new
@@ -50,7 +51,7 @@ class MoviesController < ApplicationController
     @movie.ranking += 1
     @movie.save
     end
-    redirect_to movies_path
+    redirect_to movie_path(@movie)
   end
 
 
