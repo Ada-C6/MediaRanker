@@ -1,16 +1,9 @@
 Rails.application.routes.draw do
-  get 'landings/index'
-
-  get 'landings/show'
-
-  get 'landing/index'
-
-  get 'landing/show'
-
+  resources :landings, only: [:index, :show]
   resources :books
   resources :movies
   resources :songs
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

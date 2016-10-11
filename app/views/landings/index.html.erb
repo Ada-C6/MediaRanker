@@ -1,2 +1,33 @@
-<h1>Landings#index</h1>
-<p>Find me in app/views/landings/index.html.erb</p>
+<h1>Welcome to Media Ranker!</h1>
+<article class="seven-movies">
+  <h1>Top 7 Movies</h1>
+  <% @movies.each do |movie| %>
+    <article class="one-movie">
+    <h4><%= link_to movie.title, movie_path(movie.id) %></h4>
+    <p>  Directed by: <%= movie.director %></p>
+    </article>
+  <% end %>
+  <p>  <%= link_to "See All Movies", movies_path %></p>
+</article>
+
+<article class="seven-books">
+  <h1>Top 7 Books</h1>
+  <% @books.each do |book| %>
+    <article class="one-book">
+    <h4><%= link_to book.title, book_path(book.id) %></h4>
+    <p>  Written by: <%= book.author %></p>
+    </article>
+  <% end %>
+  <p>  <%= link_to "See All Books", books_path %></p>
+</article>
+
+<article class="seven-songs">
+  <h1>Top 7 Songs</h1>
+  <% @songs.each do |song| %>
+    <article class="one-song">
+    <h4><%= link_to song.title, song_path(song.id) %></h4>
+    <p>  Artist: <%= song.artist %></p>
+    </article>
+  <% end %>
+  <p>  <%= link_to "See All Songs", songs_path %></p>
+</article>
