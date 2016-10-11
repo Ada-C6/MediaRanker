@@ -23,7 +23,10 @@
           <%= link_to "#{book.title}", book_path(book) %>
         </th>
         <th>
-          <%= "Upvote button here" %>
+          <%= form_for book, method: :patch do |f|%>
+            <%= f.hidden_field :vote, :value => book.upvote %>
+            <%= f.submit "Upvote!" %>
+          <% end %>
         </th>
       </tr>
       <% end %>

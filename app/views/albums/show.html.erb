@@ -8,7 +8,9 @@
 </p>
 
 
-<%# link_to "Upvote", edit_album_path %>
-<%= link_to "Edit Album", edit_album_path %>
+<%= form_for @album, method: :patch do |f|%>
+  <%= f.hidden_field :vote, :value => @album.upvote %>
+  <%= f.submit "Upvote!" %>
+<% end %><%= link_to "Edit Album", edit_album_path %>
 <%= link_to "Home", root_path %>
 <%= link_to "All Albums", albums_path %>

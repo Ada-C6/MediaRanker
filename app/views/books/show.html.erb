@@ -8,7 +8,10 @@
 </p>
 
 
-<%# link_to "Upvote", edit_book_path %>
+<%= form_for @book, method: :patch do |f|%>
+  <%= f.hidden_field :vote, :value => @book.upvote %>
+  <%= f.submit "Upvote!" %>
+<% end %>
 <%= link_to "Edit Book", edit_book_path %>
 <%= link_to "Home", root_path %>
 <%= link_to "All Books", books_path %>

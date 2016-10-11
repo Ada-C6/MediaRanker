@@ -8,7 +8,10 @@
 </p>
 
 
-<%# link_to "Upvote", edit_movie_path %>
+<%= form_for @movie, method: :patch do |f|%>
+  <%= f.hidden_field :vote, :value => @movie.upvote %>
+  <%= f.submit "Upvote!" %>
+<% end %>
 <%= link_to "Edit Movie", edit_movie_path %>
 <%= link_to "Home", root_path %>
 <%= link_to "All Movies", movies_path %>

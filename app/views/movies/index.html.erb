@@ -23,7 +23,10 @@
           <%= link_to "#{movie.title}", movie_path(movie) %>
         </th>
         <th>
-          <%= "Upvote button here" %>
+          <%= form_for movie, method: :patch do |f|%>
+            <%= f.hidden_field :vote, :value => movie.upvote %>
+            <%= f.submit "Upvote!" %>
+          <% end %>
         </th>
       </tr>
       <% end %>
