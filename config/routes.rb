@@ -1,22 +1,10 @@
 Rails.application.routes.draw do
-  get 'seinfelds/index'
-
-  get 'seinfelds/show'
-
-  get 'seinfelds/new'
-
-  get 'seinfelds/create'
-
-  get 'seinfelds/edit'
-
-  get 'seinfelds/update'
-
-  get 'seinfelds/destroy'
-
+  root to: 'landings#index'
   resources :landings, only: [:index, :show]
   resources :books
   resources :movies
   resources :songs
+  resources :seinfelds
 
   patch 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
   patch 'books/:id/downvote' => 'books#downvote', as: 'downvote_book'
@@ -26,6 +14,9 @@ Rails.application.routes.draw do
 
   patch 'songs/:id/upvote' => 'songs#upvote', as: 'upvote_song'
   patch 'songs/:id/downvote' => 'songs#downvote', as: 'downvote_song'
+
+  patch 'seinfelds/:id/upvote' => 'seinfelds#upvote', as: 'upvote_seinfeld'
+  patch 'seinfelds/:id/downvote' => 'seinfelds#downvote', as: 'downvote_seinfeld'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

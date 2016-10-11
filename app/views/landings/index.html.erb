@@ -32,4 +32,15 @@
   <% end %>
   <p>  <%= link_to "See All Songs", songs_path %></p>
 </article>
+
+<article class="seven-seinfelds">
+  <h1>Top 7 Episodes of Seinfeld</h1>
+  <% @seinfelds.each do |seinfeld| %>
+    <article class="one-seinfeld">
+    <h4><%= link_to seinfeld.title, seinfeld_path(seinfeld.id) %></h4>
+    <p> Votes: <%= seinfeld.rank %></p>
+    </article>
+  <% end %>
+  <p>  <%= link_to "See All Episodes", seinfelds_path %></p>
+</article>
 </main>

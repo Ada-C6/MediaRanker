@@ -1,0 +1,11 @@
+<main>
+  <% @objects.each do |object| %>
+    <article class="one-object">
+      <h4><%= link_to object.title, object_path(object.id) %></h4>
+      <p> Votes: <%= object.rank %></p>
+    </article>
+  <% end %>
+</main>
+
+<p class="new_button"><%= button_to "Add New Seinfeld Episode", {controller: 'objects', action: 'new'}, {path: 'new_object', method: :get} %></p>
+<p class="media_button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>

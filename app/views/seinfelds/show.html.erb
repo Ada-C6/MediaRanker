@@ -1,2 +1,18 @@
-<h1>Seinfelds#show</h1>
-<p>Find me in app/views/seinfelds/show.html.erb</p>
+<h1><%= @myseinfeld.title %></h1>
+<p>  Season: <%= @myseinfeld.season %> </p>
+<p>  Episode: <%= @myseinfeld.episode %> </p>
+<p>  Description: <%= @myseinfeld.description %> </p>
+<p>  Votes: <%= @myseinfeld.rank %> </p>
+
+<article class="vote-buttons">
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'seinfelds', action: 'upvote', id: @myseinfeld.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'seinfelds', action: 'downvote', id: @myseinfeld.id}, method: :patch%></p>
+</article>
+
+<article class="reroute-buttons">
+  <p class="edit-button"><%= button_to "Edit Episode", {controller: 'seinfelds', action: 'edit'}, {path: 'edit_seinfeld', method: :get} %></p>
+  <p class="delete-button"><%= button_to "Delete Episode", {controller: 'seinfelds', action: 'destroy'}, path: 'seinfeld', method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+  <p class="all-button"><%= button_to "View All Movies", {controller: 'seinfelds', action: 'index'}, {path: 'seinfelds', method: :get} %></p>
+  <p class="media-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>
