@@ -1,6 +1,6 @@
-<% if @album.errors.any? %>
+<% if @book.errors.any? %>
   <ul class="errors">
-    <% @album.errors.each do |column, message| %>
+    <% @book.errors.each do |column, message| %>
       <li>
         <strong><%= column.capitalize %></strong>
         <%= message %>
@@ -9,15 +9,15 @@
   </ul>
 <% end %>
 
-<%= form_for @album, method: http_method do |f| %>
+<%= form_for @book, method: http_method do |f| %>
   <p>
-    <%= f.label :name %>:
-    <%= f.text_field :name %>
+    <%= f.label :title %>:
+    <%= f.text_field :title %>
   </p>
 
   <p>
-    <%= f.label :artist %>:
-    <%= f.text_field :artist %>
+    <%= f.label :author %>:
+    <%= f.text_field :author %>
   </p>
 
   <p>
@@ -29,5 +29,5 @@
 <% end %>
 
 <p>
-  <%= link_to "Back to All Albums", albums_path %>
+  <%= link_to "Back to All Books", books_path %>
 </p>
