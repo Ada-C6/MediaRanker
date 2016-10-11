@@ -1,8 +1,6 @@
-<h1>MediaRanker</h1>
-<h2>Choose your favorites and see what others like!</h2>
 
 <section>
-  
+
   <h3>Movies</h3>
   <% @movies.each do |movie| %>
     <p><%= link_to movie.title, movies_show_path(movie.id) %>, Upvotes: <%= movie.upvotes %> </p>
