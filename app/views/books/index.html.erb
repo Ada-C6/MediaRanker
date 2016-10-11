@@ -3,3 +3,5 @@
   <li><%= link_to book.title, book_path(book) %></li>
 <% end %>
 </ul>
+
+<%= button_to "Add new book", new_book_path, method: :get%>
