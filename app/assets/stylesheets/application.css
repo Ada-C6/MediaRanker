@@ -26,3 +26,8 @@ header {
 header li {
   display: inline-block;
 }
+
+.top-container {
+  width: 32%;
+  float: left;
+}

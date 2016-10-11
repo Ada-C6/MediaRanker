@@ -1,1 +1,26 @@
-<h1>This is the main page, which will list Top Movies, Top Books, Top Albums (10 of each, in order, with number of upvotes), a link to each item, links to the rest of each category at the bottom, a link to itself, and </h1>
+<div class="top-container">
+  <h1>Top Movies</h1>
+  <% 10.times do |m| %>
+    <h2><%= link_to "#{ @movies[m].name }", movie_path(@movies[m]) %></h2>
+    <h3><%= "Ranked: #{ @movies[m].upvotes }" %></h3>
+  <% end %>
+  <h6><%= link_to "View More Movies", movies_path %></h6>
+</div>
+
+<div class="top-container">
+  <h1>Top Books</h1>
+  <% 10.times do |b| %>
+    <h2><%= link_to "#{ @books[b].name }", book_path(@books[b]) %></h2>
+    <h3><%= "Ranked: #{ @books[b].upvotes }" %></h3>
+  <% end %>
+  <h6><%= link_to "View More Books", books_path %></h6>
+</div>
+
+<div class="top-container">
+  <h1>Top Albums</h1>
+  <% 10.times do |a| %>
+    <h2><%= link_to "#{ @albums[a].name }", album_path(@albums[a]) %></h2>
+    <h3><%= "Ranked: #{ @albums[a].upvotes }" %></h3>
+  <% end %>
+  <h6><%= link_to "View More Albums", albums_path %></h6>
+</div>

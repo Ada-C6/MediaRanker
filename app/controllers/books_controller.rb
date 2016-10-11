@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.all.order(:upvotes).reverse
   end
 
   def show
@@ -15,7 +15,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
 
     if @book.save
-      redirect_to book_path
+      redirect_to book_path(@book)
     else
       render :new
     end

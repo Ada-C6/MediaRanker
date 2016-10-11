@@ -2,7 +2,7 @@
 <h3>Ranked: <%= "#{ @movie.upvotes }" %></h3>
 <h4><%= "#{ @movie.description }" %></h4>
 
-
+<%= button_to "Upvote", root_path %>
 <%= button_to "Edit #{ @movie.name }", edit_movie_path(@movie), method: :get %>
 <%= button_to "DELETE", movie_path(@movie), method: :delete, data: { confirm: "Are you really sure?" } %>
 <%= button_to "View all Movies", movies_path, method: :get %>

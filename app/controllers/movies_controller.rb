@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.all.order(:upvotes).reverse
   end
 
   def show
@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
 
     if @movie.save
-      redirect_to movie_path
+      redirect_to movie_path(@movie)
     else
       render :new
     end
