@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'movies/index'
+
+  get 'movies/new'
+
+  get 'movies/create'
+
+  get 'movies/show'
+
+  get 'movies/edit'
+
+  get 'movies/update'
+
+  get 'movies/delete'
+
+  get 'movies/show_all'
+
+  get 'movies/upvote'
+
   get 'albums/index'
 
   get 'albums/new'
