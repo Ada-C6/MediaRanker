@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'media#index'
+
+  get 'media/index'
+
   get 'albums/index'
 
   get 'albums/show'
