@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.all.order(rank: :desc)
   end
 
   def find_book
@@ -9,6 +9,20 @@ class BooksController < ApplicationController
 
   def show
     @mybook = find_book
+  end
+
+  def upvote
+    @mybook = find_book
+    @mybook.rank += 1
+    @mybook.save
+    render :show
+  end
+
+  def downvote
+    @mybook = find_book
+    @mybook.rank -= 1
+    @mybook.save
+    render :show
   end
 
   def new
@@ -49,7 +63,7 @@ class BooksController < ApplicationController
     @mybook.author = params[:book][:author]
     @mybook.genre = params[:book][:genre]
     @mybook.description = params[:book][:description]
-    # @mybook.rank 
+    # @mybook.rank
 
     if @mybook.save
       redirect_to book_path(@mybook.id)
@@ -62,5 +76,10 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    @mybook = find_book
+    if @mybook != nil
+      @mybook.destroy
+      redirect_to books_path
+    end
   end
 end

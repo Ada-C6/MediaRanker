@@ -1,2 +1,13 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1>Media Ranker Songs</h1>
+
+<main>
+  <% @songs.each do |song| %>
+    <article class="one-song">
+      <h4><%= link_to song.title, song_path(song.id) %></h4>
+      <p> Rank: <%= song.rank %></p>
+    </article>
+  <% end %>
+</main>
+
+<p class="new_button"><%= button_to "Add New Song", {controller: 'songs', action: 'new'}, {path: 'new_song', method: :get} %></p>
+<p class="media_button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>

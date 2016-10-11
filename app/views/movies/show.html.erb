@@ -1,2 +1,18 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%= @mymovie.title %></h1>
+<p>  Directed By: <%= @mymovie.director %> </p>
+<p>  Genre: <%= @mymovie.genre %> </p>
+<p>  Description: <%= @mymovie.description %> </p>
+<p>  Rank: <%= @mymovie.rank %> </p>
+
+<article class="vote-buttons">
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'movies', action: 'upvote', id: @mymovie.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'movies', action: 'downvote', id: @mymovie.id}, method: :patch%></p>
+</article>
+
+<article class="reroute-buttons">
+  <p class="edit-button"><%= button_to "Edit Movie", {controller: 'movies', action: 'edit'}, {path: 'edit_movie', method: :get} %></p>
+  <p class="delete-button"><%= button_to "Delete Movie", {controller: 'movies', action: 'destroy'}, path: 'movie', method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+  <p class="all-button"><%= button_to "View All Movies", {controller: 'movies', action: 'index'}, {path: 'movies', method: :get} %></p>
+  <p class="media-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>

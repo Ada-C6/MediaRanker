@@ -4,9 +4,15 @@
 <p>  Description: <%= @mybook.description %> </p>
 <p>  Rank: <%= @mybook.rank %> </p>
 
-<p class="edit_button"><%= button_to "Edit Book", {controller: 'books', action: 'edit'}, {path: 'edit_book', method: :get} %></p>
+<article class="vote-buttons">
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'books', action: 'upvote', id: @mybook.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'books', action: 'downvote', id: @mybook.id}, method: :patch%></p>
+</article>
 
-<p class="delete_button"><%= button_to "Delete Book", {path: 'book', method: :delete}, data: {confirm: "Are you sure?"}%></p>
+<article class="reroute-buttons">
+  <p class="edit-button"><%= button_to "Edit Book", {controller: 'books', action: 'edit'}, {path: 'edit_book', method: :get} %></p>
+  <p class="delete-button"><%= button_to "Delete Book", {controller: 'books', action: 'destroy'}, path: 'book', method: :delete, data: {confirm: "Are you sure?"}%></p>
 
-<p class="all_button"><%= button_to "View All Books", {controller: 'books', action: 'index'}, {path: 'books', method: :get} %></p>
-<p class="media_button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+  <p class="all-button"><%= button_to "View All Books", {controller: 'books', action: 'index'}, {path: 'books', method: :get} %></p>
+  <p class="media-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>

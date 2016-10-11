@@ -1,5 +1,5 @@
 <%= @error if @error %>
-<%= form_for @mybook,
+<%= form_for @mysong,
   method: @post_method,
   url: @post_path do |f| %>
   <div class="form_attribute">
@@ -7,16 +7,16 @@
     <%= f.text_field :title %>
   </div>
   <div class="form_attribute">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.label :artist %>
+    <%= f.text_field :artist %>
+  </div>
+  <div class="form_attribute">
+    <%= f.label :album %>
+    <%= f.text_field :album %>
   </div>
   <div class="form_attribute">
     <%= f.label :genre %>
     <%= f.text_field :genre %>
-  </div>
-  <div class="form_attribute">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
   </div>
   <div class="form_attribute">
     <%= f.submit %>

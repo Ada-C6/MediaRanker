@@ -1,2 +1,18 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<h1><%= @mysong.title %></h1>
+<p>  Artist: <%= @mysong.artist %> </p>
+<p>  Album: <%= @mysong.album %> </p>
+<p>  Genre: <%= @mysong.genre %> </p>
+<p>  Rank: <%= @mysong.rank %> </p>
+
+<article class="vote-buttons">
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'songs', action: 'upvote', id: @mysong.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'songs', action: 'downvote', id: @mysong.id}, method: :patch%></p>
+</article>
+
+<article class="reroute-buttons">
+  <p class="edit-button"><%= button_to "Edit Song", {controller: 'songs', action: 'edit'}, {path: 'edit_song', method: :get} %></p>
+  <p class="delete-button"><%= button_to "Delete Song", {controller: 'songs', action: 'destroy'}, path: 'song', method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+  <p class="all-button"><%= button_to "View All Songs", {controller: 'songs', action: 'index'}, {path: 'songs', method: :get} %></p>
+  <p class="media-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>
