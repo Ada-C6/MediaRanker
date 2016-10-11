@@ -10,8 +10,8 @@
     <% media.each do |media| %>
     <tr>
       <td><%= media.ranked %></td>
-      <td><%= media.title %></td>
-      <td>Upvote Button</td>
+      <td><%= link_to media.title, url_for(media) %></td>
+      <td><%= button_to "Upvote" %></td>
     </tr>
     <% end %>
   </tbody>

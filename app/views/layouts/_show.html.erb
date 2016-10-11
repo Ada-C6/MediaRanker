@@ -1,0 +1,22 @@
+<% if media.class == Book %>
+  <% who = media.written_by %>
+  <% by = "Written by: " %>
+<% elsif media.class == Album %>
+  <% who = media.recorded_by %>
+  <% by = "Recorded by: " %>
+<% elsif media.class == Movie %>
+  <% who = media.directed_by %>
+  <% by = "Recorded by: " %>
+<% end %>
+
+<h1><%= media.title %></h1>
+<h2><%= by %><%= who %></h2>
+<h3>Ranked: <%= media.ranked %></h3>
+<p>
+  <%= media.description %>
+</p>
+
+<%= button_to "Upvote" %>
+<%= button_to "DELETE" %>
+<%= button_to "View All Albums" %>
+<%= button_to "View All Media" %>
