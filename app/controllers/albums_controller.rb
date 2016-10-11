@@ -3,8 +3,7 @@ class AlbumsController < ApplicationController
   include SortByRank
 
   def index
-    @albums = Album.all
-    @albums = sort_by_rank(@albums)
+    @albums = sort_by_rank(Album.all)
   end
 
   def create

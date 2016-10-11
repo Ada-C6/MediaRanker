@@ -1,8 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
-    @books = sort_by_rank(@books)
+    @books = sort_by_rank(Book.all)
   end
 
   def create
