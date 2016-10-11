@@ -1,0 +1,13 @@
+<h1><%="#{@movie.name}"%></h1>
+<p>
+  Year: <%="#{@movie.year}"%>
+</p>
+<div >
+  Current Rank: <%="#{@movie.rank}"%>
+</div>
+<div class="Description">
+  <p>Description: <%="#{@movie.description}"%></p>
+</div>
+
+<%=button_to "Edit", edit_movie_path(@movie.id), method: :get%>
+<%=button_to "All Media", medias_path %>

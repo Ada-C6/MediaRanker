@@ -1,0 +1,15 @@
+<h1>List of Movies</h1>
+
+
+<%@movie.each do |movie| %>
+<h3><%="#{movie.name}"%></h3>
+<p>
+  Year: <%="#{movie.year}"%>
+</p>
+<div >
+  Current Rank: <%="#{movie.rank}"%>
+</div>
+
+<%end%>
+
+<%=link_to "All Media", medias_path %>
