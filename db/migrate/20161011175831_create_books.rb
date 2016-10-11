@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :name
       t.string :author
       t.string :description
-      t.integer :rank
+      t.integer :rank_points
 
       t.timestamps null: false
     end
