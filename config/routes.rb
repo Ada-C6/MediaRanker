@@ -1,11 +1,14 @@
-Rails.application.routes.draw do
-  get 'media_ranker/index'
 
+
+Rails.application.routes.draw do
+  root 'media_ranker#index'
   resources :mediaranker
+  # get 'media_ranker/index'
   resources :albums
   resources :books
   resources :movies
 end
+
 
 
 # get 'albums/index'

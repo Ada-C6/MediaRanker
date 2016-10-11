@@ -1,2 +1,30 @@
 <h1>Movies#show</h1>
 <p>Find me in app/views/movies/show.html.erb</p>
+
+<article>
+  <h1><%= @movie.name %></h1>
+  <p>
+    directed by: <%= @movie.artist %>
+  </p>
+  <p>
+    ranked: <%= @movie.votes %>
+  </p>
+  <p>
+    <%= @movie.description %>
+  </p>
+  <p>
+    <%= button_to 'upvote', {action: "update", id: movie.id }, method: :patch %>
+  </p>
+  <p>
+    <%= link_to 'edit', edit_movie_path %>
+  </p>
+  <p>
+    <%= button_to 'delete', {action: "destroy", id: movie.id }, method: :delete, data: {confirm: "Are you sure?"} %>
+  </p>
+  <p>
+    <%= link_to 'view all', movies_path %>
+  </p>
+  <p>
+    <%= link_to 'Media Ranker', mediaranker_index_path %>
+  </p>
+</article>

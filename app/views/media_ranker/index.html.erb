@@ -1,2 +1,48 @@
 <h1>MediaRanker#index</h1>
 <p>Find me in app/views/media_ranker/index.html.erb</p>
+
+<article>
+  <h1>top books</h1>
+  <% @index_books.each do |book| %>
+  <p>
+    <%= link_to "#{book.name}", book_path %>
+  </p>
+  <p>
+    ranked: book.votes
+  </p>
+  <% end %>
+  <p>
+    <%= link_to "view all", books_path %>
+  </p>
+</article>
+
+
+<article>
+  <h1>top movies</h1>
+  <% @index_movies.each do |movie| %>
+  <p>
+    <%= link_to "#{movie.name}", movie_path %>
+  </p>
+  <p>
+    ranked: movie.votes
+  </p>
+  <% end %>
+  <p>
+    <%= link_to "view all", movies_path %>
+  </p>
+</article>
+
+<article>
+  <h1>top albums</h1>
+  <% @index_albums.each do |album| %>
+  <p>
+    <%= link_to "#{album.name}", album_path %>
+  </p>
+  <p>
+    ranked: album.votes
+  </p>
+  <% end %>
+  <p>
+    <%= link_to "view all", albums_path %>
+  </p>
+</article>

@@ -1,2 +1,23 @@
 <h1>Books#index</h1>
 <p>Find me in app/views/books/index.html.erb</p>
+
+<article>
+  <h1>ranking</h1> <h1>name</h1> <h1>upvote</h1>
+  <% @books.each do |book| %>
+  <p>
+    ranked: book.votes
+  </p>
+  <p>
+    <%= link_to "#{book.name}", book_path %>
+  </p>
+  <p>
+    <%= button_to 'upvote', {action: "update", id: book.id }, method: :patch %>
+  </p>
+  <% end %>
+  <p>
+    <%= link_to 'Media Ranker', mediaranker_index_path %>
+  </p>
+  <p>
+    <%= link_to 'add new', new_book_path %>
+  </p>
+</article>
