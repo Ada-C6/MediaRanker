@@ -51,5 +51,9 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
+    @album = findAlbum
+    @album.destroy
+
+    redirect_to action: "index"
   end
 end
