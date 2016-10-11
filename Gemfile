@@ -42,6 +42,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # in theory the spring gem may have influenced why console wasn't working. 
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
