@@ -35,23 +35,23 @@ Rails.application.routes.draw do
 
   get 'albums/:id/upvote' => 'albums#upvote', as: 'upvote_album'
 
-  get 'books/index'
+  get 'books/index' => 'books#index', as: 'index_books'
 
-  get 'books/new'
+  get 'books/new' => 'books#new', as: 'new_book'
 
-  get 'books/create'
+  post 'books/create' => 'books#create', as: 'create_book'
 
-  get 'books/show'
+  get 'books/show/:id' => 'books#show', as: 'show_book'
 
-  get 'books/edit'
+  get 'books/:id/edit' => 'books#edit', as: 'edit_book'
 
-  get 'books/update'
+  get 'books/:id/update' => 'books#update', as: 'update_book'
 
-  get 'books/delete'
+  get 'books/:id/delete' => 'books#delete', as: 'delete_book'
 
-  get 'books/show_all'
+  get 'books/show_all' => 'books#show_all', as: 'show_all_books'
 
-  get 'books/upvote'
+  get 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
