@@ -1,0 +1,20 @@
+<h2>Detailed Movie Info</h2>
+
+<table class="index-table">
+  <tr>
+    <th>Points</th>
+    <th>Movie Name</th>
+    <th>Movie Director</th>
+    <th>Movie Description</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td><%= "#{@movie.rank_points}" %></td>
+    <td><%= "#{@movie.name}" %></td>
+    <td><%= "#{@movie.director}" %></td>
+    <td><%= "#{@movie.description}" %></td>
+    <td><small>
+      <%= link_to "[Edit]", edit_movie_path(@movie) %>
+      <%= link_to "[Delete]", movie_path(@movie), method: :delete, data: { confirm: "Really, now?" } %></small> </td>
+  </tr>
+</table>

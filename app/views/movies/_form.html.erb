@@ -1,0 +1,32 @@
+<% if @movie.errors.any? %>
+  <ul class="error">
+    <% @movie.errors.each do |error, message| %>
+    <li><strong><%= error.upcase %></strong><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @movie, url: path, method: http_method do |f| %>
+<table class="form">
+  <tr>
+    <td><%= f.label :name, "Movie Name: " %> </td>
+    <td><%= f.text_field :name, :size => 50 %> </td>
+  </tr>
+
+  <tr>
+    <td><%= f.label :director, "Movie Director: " %> </td>
+    <td><%= f.text_field :director, :size => 50 %> </td>
+  </td>
+
+  <tr>
+    <td><%= f.label :description, "Movie Description: " %></td>
+    <td><%= f.text_field :description, :size => 75 %></td>
+  </tr>
+
+    <%= f.hidden_field :rank_points, value: 1 %>
+
+  <tr>
+    <td><%= f.submit "Submit Movie Info" %></td>
+  </tr>
+</table>
+<% end %>
