@@ -41,6 +41,9 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
+    Album.find(params[:id]).destroy
+
+    redirect_to action: 'index'
   end
 
   def upvote

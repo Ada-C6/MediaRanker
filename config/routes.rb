@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   put 'movies/:id/update' => 'movies#update', as: 'movie_update'
 
-  get 'movies/destroy'
+  delete 'movies/:id/destroy' => 'movies#destroy', as: 'movie_delete'
 
   get 'movies/upvote'
 
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   put 'albums/:id/update' => 'albums#update', as: 'album_update'
 
-  get 'albums/destroy'
+  delete 'albums/:id/destroy' => 'albums#destroy', as: 'album_delete'
 
   get 'albums/upvote'
 
@@ -43,7 +43,7 @@ Rails.application.routes.draw do
 
   put 'books/:id/update' => 'books#update', as: 'book_update'
 
-  get 'books/destroy'
+  delete 'books/:id/destroy' => 'books#destroy', as: 'book_delete'
 
   get 'books/upvote'
 

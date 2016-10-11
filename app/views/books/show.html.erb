@@ -4,3 +4,4 @@
 <p>Ranked: <%= @book.rank %></p>
 
 <%= link_to 'Edit Book', book_edit_path(@book.id) %>
+<%= button_to "Delete Book", book_delete_path(@book.id), method: :delete, data: {confirm:"Are you Sure?" }  %>

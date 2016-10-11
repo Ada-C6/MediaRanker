@@ -40,6 +40,9 @@ class MoviesController < ApplicationController
   end
 
   def destroy
+    Movie.find(params[:id]).destroy
+
+    redirect_to action: 'index'
   end
 
   def upvote
