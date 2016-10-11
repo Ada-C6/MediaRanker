@@ -1,2 +1,11 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h3><%= "#{@movie.title}" %></h3>
+<h2><%= "Directed by #{@movie.director}" %></h2>
+<p>
+  <%= "#{@movie.description}" %>
+</p>
+
+
+<%# link_to "Upvote", edit_movie_path %>
+<%= link_to "Edit Movie", edit_movie_path %>
+<%= link_to "Home", root_path %>
+<%= link_to "All Movies", movies_path %>

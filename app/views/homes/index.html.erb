@@ -1,22 +1,31 @@
-<h1>Homes#index</h1>
+<h1>Ultimate Media Ranker</h1>
 
+<h3>Movies</h3>
 <% @movies.each do |movie| %>
 <ul>
 
-  <li><%= "#{movie.name}" %></li>
+  <li><%= link_to "#{movie.title}", movie_path(movie) %></li>
 
 </ul>
 
+<% end %>
+
+<h3>Books</h3>
 <% @books.each do |book| %>
 <ul>
 
-  <li><%= "#{book.name}" %></li>
+  <li><%= link_to "#{book.title}", book_path(book) %></li>
 
 </ul>
 
+<% end %>
+
+<h3>Albums</h3>
 <% @albums.each do |album| %>
 <ul>
 
-  <li><%= "#{album.name}" %></li>
+  <li><%= link_to "#{album.title}", album_path(album) %></li>
 
 </ul>
+
+<% end %>

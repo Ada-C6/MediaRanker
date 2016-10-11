@@ -1,2 +1,34 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>All Movies</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <th>
+        Ranking
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Upvote
+      </th>
+    </tr>
+
+      <% @movies.each do |movie| %>
+      <tr>
+        <th>
+          <%= "Ranked: #{movie.vote}" %>
+        </th>
+        <th>
+          <%= link_to "#{movie.title}", movie_path(movie) %>
+        </th>
+        <th>
+          <%= "Upvote button here" %>
+        </th>
+      </tr>
+      <% end %>
+
+
+
+  </tbody>
+</table>
