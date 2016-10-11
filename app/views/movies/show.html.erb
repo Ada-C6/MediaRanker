@@ -1,8 +1,6 @@
 <%= render partial: 'layouts/show', locals: { media: @movie } %>
 
-<p>
-  will be upvote button
-</p>
+<%= render partial: 'layouts/upvote', locals: { media: @movie } %>
 
 <%= link_to "Edit #{@movie.name}", edit_movie_path(@movie) %>
 <%= link_to "DELETE", movie_path,

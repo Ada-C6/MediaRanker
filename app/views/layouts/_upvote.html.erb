@@ -1,0 +1,5 @@
+<%= form_for media do |f| %>
+  <%= f.hidden_field :upvotes, value: media.upvotes + 1 %>
+  <%= f.submit "Upvote" %>
+
+<% end %>
