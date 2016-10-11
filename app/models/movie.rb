@@ -4,4 +4,8 @@ class Movie < ActiveRecord::Base
     return Movie.order(upvotes: :desc).limit(10)
   end
 
+  def self.all_ranked
+    return Movie.order(upvotes: :desc)
+  end
+
 end
