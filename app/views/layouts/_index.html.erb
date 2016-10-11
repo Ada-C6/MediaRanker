@@ -1,0 +1,17 @@
+    <table>
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
+    <tr>
+
+      <% media_collection.each do |media| %>
+    <tr>
+      <td><%= media.upvotes %></td>
+      <td><%= link_to media.name, movie_path(media) %></td>
+      <td><%= link_to "Upvote", movie_path(media) %></td>
+    </tr>
+      <% end  %>
+
+</table>

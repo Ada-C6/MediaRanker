@@ -1,12 +1,4 @@
-<section>
-  <h1><%= @movie.name %></h1>
-  <small><%= @movie.director %></small>
-  <h2>Ranked: <%= @movie.upvotes %></h2>
-  <p>
-  <%= @movie.description %>
-  </p>
-
-</section>
+<%= render partial: 'layouts/show', locals: { media: @movie } %>
 
 <p>
   will be upvote button
