@@ -1,6 +1,9 @@
 class AlbumController < ApplicationController
+  include SortByRank
+
   def index
     @albums = Album.all
+    @albums = sort_by_rank(@albums)
   end
 
   def create

@@ -1,6 +1,9 @@
 class MovieController < ApplicationController
+  include SortByRank
+
   def index
     @movies = Movie.all
+    @movies = sort_by_rank(@movies)
   end
 
   def create
