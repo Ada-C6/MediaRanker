@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.order('ranking DESC')
+    @data = Movie.order('ranking DESC')
   end
 
   def show
@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
 
   def all_media
     @movies = Movie.order('ranking DESC')
+    @books = Book.order('ranking DESC')
   end
 
   def upvote

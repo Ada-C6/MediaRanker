@@ -1,3 +1,6 @@
+<%= render partial: "layouts/index", locals: {category: "Movies"} %>
+
+
 <h1>All Movies</h1>
 <table>
   <tr>
@@ -6,7 +9,7 @@
     <th>Upvote</th>
   </tr>
 
-  <% @movies.each do |m| %>
+  <% @data.each do |m| %>
     <tr>
       <td><%= "Ranked: #{m.ranking}" %></td>
       <td><%= link_to m.name, movie_path(m) %></td>

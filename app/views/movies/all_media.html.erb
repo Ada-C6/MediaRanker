@@ -5,20 +5,22 @@
     <th>Top Albums</th>
   </tr>
 
-  <% if @movies.count >= 10 %>
+  <% if @movies.count >= 10 && @books.count >= 10 %>
     <% rows = 10 %>
   <% else %>
-    <% rows = @movies.count %>
+    <% rows = [@movies.count, @books.count].min %>
   <% end %>
 
   <% rows.times do |i| %>
     <tr>
       <td><%= "#{@movies[i].name} Ranked: #{@movies[i].ranking}" %></td>
+      <td><%= "#{ @books[i].name } Ranked: #{ @books[i].ranking }" %></td>
     </tr>
   <% end %>
 
   <tr>
-    <td><%= link_to "View More Movies", movies_path %></td>
+    <td><%= link_to "View All Movies", movies_path %></td>
+    <td><%= link_to "View All Books", books_path %></td>
   </tr>
 
 </table>

@@ -1,0 +1,22 @@
+inside _index
+
+<h1>Top <%= category %></h1>
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+
+  <% @data.each do |d| %>
+    <tr>
+      <td><%= "Ranked: #{d.ranking}" %></td>
+      <td><%= link_to d.name, book_path(d) %></td>
+      <td><%= link_to "Upvote", route.to_sym(d), method: :patch %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+<br />
+end of _index
