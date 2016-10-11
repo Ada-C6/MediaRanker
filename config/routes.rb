@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+root to: 'movies#index'
+
+#movie routes
+
   get 'movies/index' => 'movies#index', as: 'index_movies'
 
   get 'movies/new' => 'movies#new', as: 'new_movie'
@@ -17,6 +22,9 @@ Rails.application.routes.draw do
 
   patch 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
 
+
+#album routes
+
   get 'albums/index' => 'albums#index', as: 'index_albums'
 
   get 'albums/new' => 'albums#new', as: 'new_album'
@@ -33,7 +41,10 @@ Rails.application.routes.draw do
 
   get 'albums/show_all' => 'albums#show_all', as: 'show_all_albums'
 
-  get 'albums/:id/upvote' => 'albums#upvote', as: 'upvote_album'
+  patch 'albums/:id/upvote' => 'albums#upvote', as: 'upvote_album'
+
+
+#book routes
 
   get 'books/index' => 'books#index', as: 'index_books'
 
@@ -51,7 +62,7 @@ Rails.application.routes.draw do
 
   get 'books/show_all' => 'books#show_all', as: 'show_all_books'
 
-  get 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
+  patch 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
