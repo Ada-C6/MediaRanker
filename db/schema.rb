@@ -17,27 +17,27 @@ ActiveRecord::Schema.define(version: 20161011205622) do
     t.string   "title"
     t.string   "artist"
     t.text     "description"
-    t.integer  "upvotes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "upvotes",     default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.text     "description"
-    t.integer  "upvotes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "upvotes",     default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.string   "director"
     t.text     "description"
-    t.integer  "upvotes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "upvotes",     default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

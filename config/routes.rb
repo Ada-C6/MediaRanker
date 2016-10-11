@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'albums/index'
 
-  get 'albums/show/:id' => 'albums#show'
+  get 'albums/show/:id' => 'albums#show', as: 'albums_show'
 
   get 'albums/new'
 
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get 'books/index'
 
-  get 'books/show/:id' => 'books#show'
+  get 'books/show/:id' => 'books#show', as: 'books_show'
 
   get 'books/new'
 
@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
   get 'movies/index'
 
-  get 'movies/show/:id' => 'movies#show'
+  get 'movies/show/:id' => 'movies#show', as: 'movies_show'
 
   get 'movies/new'
 
