@@ -1,0 +1,12 @@
+<h1><%= media.title %></h1>
+<h2>By:
+  <% if media.class == Book %>
+    <%= media.author %>
+  <% elsif media.class == Movie %>
+    <%= media.director %>
+  <% elsif media.class == Album %>
+    <%= media.artist %>
+  <% end %>
+</h2>
+<p><%= media.description %></p>
+<p>Rank: <%= media.rank %></p>
