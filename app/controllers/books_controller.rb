@@ -42,9 +42,9 @@ class BooksController < ApplicationController
 
   private
 
-def book_params
-  params.require(:book).permit(:name, :author, :description) #do i want :rank ?
-end
+  def book_params
+    params.require(:book).permit(:name, :author, :description) #do i want :rank ?
+  end
 
 
 end

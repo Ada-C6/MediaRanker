@@ -42,9 +42,9 @@ class AlbumsController < ApplicationController
 
   private
 
-def album_params
-  params.require(:album).permit(:name, :artist, :description) #do i want :rank ?
-end
+  def album_params
+    params.require(:album).permit(:name, :artist, :description) #do i want :rank ?
+  end
 
 
 end

@@ -42,8 +42,8 @@ class MoviesController < ApplicationController
 
   private
 
-def movie_params
-  params.require(:movie).permit(:name, :director, :description) #do i want :rank ?
-end
+  def movie_params
+    params.require(:movie).permit(:name, :director, :description) #do i want :rank ?
+  end
 
 end
