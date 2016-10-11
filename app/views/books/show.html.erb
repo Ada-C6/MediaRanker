@@ -1,2 +1,14 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h3><%= "#{@book.title}" %></h3>
+<h4><%= "Written by #{@book.author}" %></h4>
+<p>
+  <%= "#{@book.description}" %>
+</p>
+<p>
+  <%= "Ranked: #{@book.vote}" %>
+</p>
+
+
+<%# link_to "Upvote", edit_book_path %>
+<%= link_to "Edit Book", edit_book_path %>
+<%= link_to "Home", root_path %>
+<%= link_to "All Books", books_path %>

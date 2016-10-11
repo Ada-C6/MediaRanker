@@ -3,29 +3,36 @@
 <h3>Movies</h3>
 <% @movies.each do |movie| %>
 <ul>
-
   <li><%= link_to "#{movie.title}", movie_path(movie) %></li>
-
 </ul>
 
 <% end %>
+
+<p>
+  <%= link_to "View all movies", movies_path %>
+</p>
 
 <h3>Books</h3>
 <% @books.each do |book| %>
 <ul>
-
   <li><%= link_to "#{book.title}", book_path(book) %></li>
-
 </ul>
 
 <% end %>
+
+<p>
+  <%= link_to "View all books", books_path %>
+</p>
+
 
 <h3>Albums</h3>
 <% @albums.each do |album| %>
 <ul>
-
   <li><%= link_to "#{album.title}", album_path(album) %></li>
-
 </ul>
 
 <% end %>
+
+<p>
+  <%= link_to "View all albums", albums_path %>
+</p>
