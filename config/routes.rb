@@ -3,55 +3,55 @@ Rails.application.routes.draw do
 
   get 'movies/new' => 'movies#new', as: 'new_movie'
 
-  get 'movies/create' => 'movies#create', as: 'create_movie'
+  post 'movies/create' => 'movies#create', as: 'create_movie'
 
   get 'movies/show/:id' => 'movies#show', as: 'show_movie'
 
   get 'movies/:id/edit' => 'movies#edit', as: 'edit_movie'
 
-  get 'movies/:id/update' => 'movies#update', as: 'update_movie'
+  put 'movies/:id/update' => 'movies#update', as: 'update_movie'
 
-  get 'movies/:id/delete' => 'movies#delete', as: 'delete_movie'
+  destroy 'movies/:id/delete' => 'movies#delete', as: 'delete_movie'
 
   get 'movies/show_all' => 'movies#show_all', as: 'show_all_movies'
 
-  get 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
+  patch 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
 
-  get 'albums/index'
+  get 'albums/index' => 'albums#index', as: 'index_albums'
 
-  get 'albums/new'
+  get 'albums/new' => 'albums#new', as: 'new_album'
 
-  get 'albums/create'
+  post 'albums/create' => 'albums#create', as: 'create_album'
 
-  get 'albums/show'
+  get 'albums/show/:id' => 'albums#show', as: 'show_album'
 
-  get 'albums/edit'
+  get 'albums/:id/edit' => 'albums#edit', as: 'edit_album'
 
-  get 'albums/update'
+  put 'albums/:id/update' => 'albums#update', as: 'update_album'
 
-  get 'albums/delete'
+  get 'albums/:id/delete' => 'albums#delete', as: 'delete_album'
 
-  get 'albums/show_all'
+  get 'albums/show_all' => 'albums#show_all', as: 'show_all_albums'
 
-  get 'albums/upvote'
+  get 'albums/:id/upvote' => 'albums#upvote', as: 'upvote_album'
 
-  get 'books/index'
+  get 'books/index' => 'books#index', as: 'index_books'
 
-  get 'books/new'
+  get 'books/new' => 'books#new', as: 'new_book'
 
-  get 'books/create'
+  post 'books/create' => 'books#create', as: 'create_book'
 
-  get 'books/show'
+  get 'books/show/:id' => 'books#show', as: 'show_book'
 
-  get 'books/edit'
+  get 'books/:id/edit' => 'books#edit', as: 'edit_book'
 
-  get 'books/update'
+  get 'books/:id/update' => 'books#update', as: 'update_book'
 
-  get 'books/delete'
+  get 'books/:id/delete' => 'books#delete', as: 'delete_book'
 
-  get 'books/show_all'
+  get 'books/show_all' => 'books#show_all', as: 'show_all_books'
 
-  get 'books/upvote'
+  get 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
