@@ -1,4 +1,5 @@
-class AlbumController < ApplicationController
+class AlbumsController < ApplicationController
+  require 'sort_by_rank.rb'
   include SortByRank
 
   def index

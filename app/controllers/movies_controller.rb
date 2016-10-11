@@ -1,5 +1,4 @@
-class MovieController < ApplicationController
-  include SortByRank
+class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all

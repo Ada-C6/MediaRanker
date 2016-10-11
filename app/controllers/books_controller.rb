@@ -1,5 +1,4 @@
-class BookController < ApplicationController
-  include SortByRank
+class BooksController < ApplicationController
 
   def index
     @books = Book.all
