@@ -1,9 +1,35 @@
-<h1>All Movies</h1>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Ranking</th>
+      <th scope="col">Movie</th>
+      <th scope="col">Upvote</th>
+    </tr>
+  </thead>
 
-<ol>
-  <% @movies.each do |movie| %>
-  <li><%= link_to movie.name, movie_path(movie) %></li>
-<% end %>
-</ol>
+  <tbody>
+    <% @movies.each do |movie| %>
+    <tr>
 
-<p><%= link_to "Add New Movie", new_movie_path %></p>
+      <td>
+        Ranked: <%= ranking(movie) %>
+      </td>
+
+      <td scope="row">
+        <%= link_to "#{movie.name}", movie_path(movie) %>
+      </td>
+
+
+      <td>
+        LINK TO UPVOTE BUTTON
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<p>
+  LINK TO ALL MEDIA
+  <%= link_to "Add New Movie", new_movie_path %>
+</p>
