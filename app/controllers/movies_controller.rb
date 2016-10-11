@@ -1,5 +1,10 @@
 class MoviesController < ApplicationController
   def index
+    # @movies = Movie.all
+    @movies = Movie.order('votes DESC')
+  end
+
+  def all
     @movies = Movie.all
   end
 
@@ -31,5 +36,21 @@ class MoviesController < ApplicationController
   end
 
   def upvote
+
+    @movie = Movie.find(params[:id].to_i)
+    Movie.increment_counter(:votes, params[:id])
+    # @movie = Movie.find(params[:id].to_i)
+    # @move.vote = params[]
+    # @vote = @movie.votes
+    # if @vote == nil
+    #   @vote = 0
+    # else
+    #   @vote += 1
+    # end
+
+    # @vote.save
+    redirect_to action: 'show'
   end
+
+
 end

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # get 'movies/index'=> 'movie#index'
 
+  get 'movies/all' => 'movies#all', as: 'all'
+
   get 'movies/:id' => 'movies#show', as: 'show'
 
   get 'movies/:id/edit' => 'movies#edit', as: 'edit'
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
   delete 'movies/:id/delete' => 'movies#delete', as: 'delete'
 
-  get 'movies/upvote'
+  get 'movies/:id/upvote' => 'movies#upvote', as: 'upvote'
 
 
 
