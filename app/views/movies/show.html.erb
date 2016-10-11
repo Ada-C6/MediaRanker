@@ -1,2 +1,5 @@
-<h1><%@this_movie.name%> Directed By: <% @this_movie.director %></h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%@this_movie.name%></h1>
+<h2>Directed By: <% @this_movie.director %></h2>
+<h4>Rank: <%=@this_movie.rank%></h4>
+<p><%=@this_movie.description%></p>
+<%= button_to("Upvote", {action: "upvote", id: @this_movie.id}, method: :patch) %>

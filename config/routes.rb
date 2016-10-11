@@ -3,9 +3,12 @@ Rails.application.routes.draw do
 
 
 
+patch 'movies/:id/upvote' => 'movies#upvote'
+
 Rails.application.routes.draw do
   resources :albums, :books, :movies
 end
+
   # get 'media/index'
 
   # get 'albums/index'
