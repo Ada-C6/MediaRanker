@@ -41,9 +41,9 @@ class MoviesController < ApplicationController
 
 # ---- PRIVATE METHODS ----
 
-private
+  private
 
-def movie_params
-  params.require(:movie).permit(:name, :director, :description, :rank)
-end
+  def movie_params
+    params.require(:movie).permit(:name, :director, :description, :rank)
+  end
 end
