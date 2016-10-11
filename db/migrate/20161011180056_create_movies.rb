@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :title
       t.string :directed_by
-      t.integer :ranked
+      t.integer :ranked, default: 0
       t.string :description
 
       t.timestamps null: false
