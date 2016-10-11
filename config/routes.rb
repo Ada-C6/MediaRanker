@@ -1,4 +1,48 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  get 'wizards/index'
+
+  get 'wizards/show'
+
+  get 'wizards/new'
+
+  get 'wizards/create'
+
+  get 'wizards/edit'
+
+  get 'wizards/update'
+
+  get 'wizards/delete'
+
+  get 'leslies/index'
+
+  get 'leslies/show'
+
+  get 'leslies/new'
+
+  get 'leslies/create'
+
+  get 'leslies/edit'
+
+  get 'leslies/update'
+
+  get 'leslies/delete'
+
+  get 'bobs/index'
+
+  get 'bobs/show'
+
+  get 'bobs/new'
+
+  get 'bobs/create'
+
+  get 'bobs/edit'
+
+  get 'bobs/update'
+
+  get 'bobs/delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
