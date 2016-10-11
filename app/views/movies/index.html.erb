@@ -1,1 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        <p>Ranking</p>
+      </th>
+      <th>
+        <p>Name</p>
+      </th>
+      <th>
+        <p>Upvote</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @movies.each do |m| %>
+        <td><%= "#{ m.upvotes }" %></td>
+        <td><%= link_to "#{ m.name }", movie_path(m) %></td>
+        <td><%= button_to "Upvote", root_path %></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+
 <h1>This will have a column-formatted list of ranking (upvotes), name, and button to upvote. Below that, there are buttons to View All Media and Add a Movie</h1>
