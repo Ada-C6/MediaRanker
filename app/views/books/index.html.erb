@@ -1,2 +1,16 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<tbody>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+<% @books.each do |book| %>
+  <td><%= "Ranked: #{book.rank}"%></td>
+  <td><%= link_to "#{book.name}", book_path(book) %></td>
+  <td><%= "upvote button :(" %><%# link_to #####WHAT GOES HERE FOR UPVOTE?? button?? %></td>
+<% end %>
+</tbody>
+
+<%# link_to "View All Media", ######ROOT ROUTE %>
+
+<h4><%= link_to "Add a Book", new_book_path %> </h4>
