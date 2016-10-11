@@ -12,7 +12,7 @@
   will be upvote button
 </p>
 
-
+<%= link_to "Edit #{@movie.name}", edit_movie_path(@movie) %>
 <%= link_to "DELETE", movie_path,
   method: :delete,
   data: {confirm: "Are you sure?"} %>

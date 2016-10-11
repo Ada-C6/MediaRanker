@@ -8,6 +8,10 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
+  def edit
+  end
+
+
   def destroy
     movie = Movie.find(params[:id])
     movie.destroy
