@@ -25,7 +25,7 @@
   <ol>
     <% @books.each do |book| %>
     <li>
-      <h2><%= book.name %></h2>
+      <h2><%= link_to book.name, book_path(book) %></h2>
       <small><%= book.upvotes %></small>
     </li>
 
