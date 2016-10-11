@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'seinfelds/index'
+
+  get 'seinfelds/show'
+
+  get 'seinfelds/new'
+
+  get 'seinfelds/create'
+
+  get 'seinfelds/edit'
+
+  get 'seinfelds/update'
+
+  get 'seinfelds/destroy'
+
   resources :landings, only: [:index, :show]
   resources :books
   resources :movies

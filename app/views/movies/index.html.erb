@@ -4,7 +4,7 @@
   <% @movies.each do |movie| %>
     <article class="one-movie">
       <h4><%= link_to movie.title, movie_path(movie.id) %></h4>
-      <p> Rank: <%= movie.rank %></p>
+      <p> Votes: <%= movie.rank %></p>
     </article>
   <% end %>
 </main>

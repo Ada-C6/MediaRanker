@@ -4,7 +4,7 @@
   <% @songs.each do |song| %>
     <article class="one-song">
       <h4><%= link_to song.title, song_path(song.id) %></h4>
-      <p> Rank: <%= song.rank %></p>
+      <p> Votes: <%= song.rank %></p>
     </article>
   <% end %>
 </main>

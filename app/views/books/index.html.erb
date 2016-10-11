@@ -4,7 +4,7 @@
   <% @books.each do |book| %>
     <article class="one-book">
       <h4><%= link_to book.title, book_path(book.id) %></h4>
-      <p> Rank: <%= book.rank %></p>
+      <p> Votes: <%= book.rank %></p>
     </article>
   <% end %>
 </main>

@@ -5,7 +5,7 @@
   <% @movies.each do |movie| %>
     <article class="one-movie">
     <h4><%= link_to movie.title, movie_path(movie.id) %></h4>
-    <p> Rank: <%= movie.rank %></p>
+    <p> Votes: <%= movie.rank %></p>
     </article>
   <% end %>
   <p>  <%= link_to "See All Movies", movies_path %></p>
@@ -16,7 +16,7 @@
   <% @books.each do |book| %>
     <article class="one-book">
     <h4><%= link_to book.title, book_path(book.id) %></h4>
-    <p> Rank: <%= book.rank %></p>
+    <p> Votes: <%= book.rank %></p>
     </article>
   <% end %>
   <p>  <%= link_to "See All Books", books_path %></p>
@@ -27,7 +27,7 @@
   <% @songs.each do |song| %>
     <article class="one-song">
     <h4><%= link_to song.title, song_path(song.id) %></h4>
-    <p> Rank: <%= song.rank %></p>
+    <p> Votes: <%= song.rank %></p>
     </article>
   <% end %>
   <p>  <%= link_to "See All Songs", songs_path %></p>

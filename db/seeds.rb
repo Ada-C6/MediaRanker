@@ -21,3 +21,7 @@ end
 CSV.foreach('seed_csvs/songs.csv', :headers => true) do |csv_obj|
   Song.create(id: csv_obj['id'].to_i, title: csv_obj['title'], artist: csv_obj['artist'], album: csv_obj['album'], genre: csv_obj['genre'], rank: csv_obj['rank'])
 end
+
+CSV.foreach('seed_csvs/seinfeld_episodes.csv', :headers => true) do |csv_obj|
+  Song.create(id: csv_obj['id'].to_i, title: csv_obj['title'], season: csv_obj['season'], episode: csv_obj['episode'], description: csv_obj['description'], rank: csv_obj['rank'])
+end

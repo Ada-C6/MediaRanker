@@ -2,7 +2,7 @@
 <p>  Written By: <%= @mybook.author %> </p>
 <p>  Genre: <%= @mybook.genre %> </p>
 <p>  Description: <%= @mybook.description %> </p>
-<p>  Rank: <%= @mybook.rank %> </p>
+<p>  Votes: <%= @mybook.rank %> </p>
 
 <article class="vote-buttons">
   <p class="upvote-button"><%= button_to "Upvote", {controller: 'books', action: 'upvote', id: @mybook.id}, method: :patch%></p>

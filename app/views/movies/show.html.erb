@@ -2,7 +2,7 @@
 <p>  Directed By: <%= @mymovie.director %> </p>
 <p>  Genre: <%= @mymovie.genre %> </p>
 <p>  Description: <%= @mymovie.description %> </p>
-<p>  Rank: <%= @mymovie.rank %> </p>
+<p>  Votes: <%= @mymovie.rank %> </p>
 
 <article class="vote-buttons">
   <p class="upvote-button"><%= button_to "Upvote", {controller: 'movies', action: 'upvote', id: @mymovie.id}, method: :patch%></p>

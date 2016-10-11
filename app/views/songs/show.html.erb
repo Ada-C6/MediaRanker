@@ -2,7 +2,7 @@
 <p>  Artist: <%= @mysong.artist %> </p>
 <p>  Album: <%= @mysong.album %> </p>
 <p>  Genre: <%= @mysong.genre %> </p>
-<p>  Rank: <%= @mysong.rank %> </p>
+<p>  Votes: <%= @mysong.rank %> </p>
 
 <article class="vote-buttons">
   <p class="upvote-button"><%= button_to "Upvote", {controller: 'songs', action: 'upvote', id: @mysong.id}, method: :patch%></p>
