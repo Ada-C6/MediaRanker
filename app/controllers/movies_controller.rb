@@ -3,6 +3,7 @@ class MoviesController < ApplicationController
   end
 
   def show
+    @this_movie=Movie.find(params[:id])
   end
 
   def edit
