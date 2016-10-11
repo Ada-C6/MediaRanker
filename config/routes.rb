@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :movies, except: [:new, :create]
-  resources :books, except: [:new, :create]
+  resources :books,  except: [:new, :create]
+  resources :albums, except: [:new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
