@@ -1,0 +1,14 @@
+<h2>Add a New Market</h2>
+
+<%= form_for @new_item, :url => { method: :post} do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :director %>
+<%= f.text_field :director %>
+
+<%= f.label :description %>
+<%= f.text_area :description %>
+
+  <%= f.submit "Submit" %>
+<% end %>
