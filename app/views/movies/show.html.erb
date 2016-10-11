@@ -1,2 +1,28 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h3><%= "#{@movie.name} Recorded by: #{@movie.director}" %></h3>
+
+<h4><%= "Ranked: #{@movie.rank}" %></h4>
+<p><%= "#{@movie.description}" %></p>
+
+
+<!-- UPVOTE -->
+<%# button_to "Upvote", ??? %>
+<!-- I assume upvote is a button, but could be wrong -->
+<!-- no idea how to do the path, possibly update? idk!!! -->
+
+<!-- EDIT  -->
+
+<%= link_to "Edit #{@movie.name}", edit_movie_path %>
+
+
+<!-- DELETE -->
+
+<%= link_to "DELETE", movie_path(movie), method: :delete,
+    data: {confirm: "Are you really, really sure?"}%></li>
+
+<!-- VIEW ALL MOVIES -->
+
+<%= link_to "View All Movies", movies_path %>
+
+<!-- VIEW ALL MEDIA -->
+
+<%# link_to "View All Media", ######ROOT ROUTE %>

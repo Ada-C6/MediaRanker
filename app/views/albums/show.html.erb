@@ -1,2 +1,27 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<h3><%= "#{@album.name} Recorded by: #{@album.artist}" %></h3>
+
+<h4><%= "Ranked: #{@album.rank}" %></h4>
+<p><%= "#{@album.description}" %></p>
+
+<!-- UPVOTE -->
+<%# button_to "Upvote", ??? %>
+<!-- I assume upvote is a button, but could be wrong -->
+<!-- no idea how to do the path, possibly update? idk!!! -->
+
+<!-- EDIT  -->
+
+<%= link_to "Edit #{@album.name}", edit_album_path %>
+
+
+<!-- DELETE -->
+
+<%= link_to "DELETE", album_path(album), method: :delete,
+    data: {confirm: "Are you really, really sure?"}%></li>
+
+<!-- VIEW ALL ALBUMS -->
+
+<%= link_to "View All Albums", albums_path %>
+
+<!-- VIEW ALL MEDIA -->
+
+<%# link_to "View All Media", ######ROOT ROUTE %>
