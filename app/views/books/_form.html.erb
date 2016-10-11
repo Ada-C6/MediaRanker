@@ -1,0 +1,32 @@
+<% if @book.errors.any? %>
+  <ul class="error">
+    <% @book.errors.each do |error, message| %>
+    <li><strong><%= error.upcase %></strong><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @book, url: path, method: http_method do |f| %>
+<table class="form">
+  <tr>
+    <td><%= f.label :name, "Book Name: " %> </td>
+    <td><%= f.text_field :name, :size => 50 %> </td>
+  </tr>
+
+  <tr>
+    <td><%= f.label :author, "Book Author: " %> </td>
+    <td><%= f.text_field :author, :size => 50 %> </td>
+  </td>
+
+  <tr>
+    <td><%= f.label :description, "Book Description: " %></td>
+    <td><%= f.text_field :description, :size => 75 %></td>
+  </tr>
+
+    <%= f.hidden_field :rank_points, value: 1 %>
+
+  <tr>
+    <td><%= f.submit "Submit Book Info" %></td>
+  </tr>
+</table>
+<% end %>
