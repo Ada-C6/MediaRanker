@@ -1,6 +1,17 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<header>
 
-<p>
-  This page will display a list of movies, books, and albums
-</p>
+  <h1>Media Ranker</h1>
+  <small>Ranking the Best of Everything</small>
+</header>
+
+<h1>Top Movies</h1>
+
+<ol>
+<% @movies.each do |movie| %>
+  <li>
+    <h2><%= movie.name %></h2>
+    <small><%= movie.upvotes %></small>
+  </li>
+
+<% end  %>
+</ol>
