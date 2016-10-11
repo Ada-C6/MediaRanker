@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'media/index' => 'media#index', as: 'media'
   root 'media#index'
 
 

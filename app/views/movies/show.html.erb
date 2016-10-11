@@ -3,3 +3,7 @@
 <h4>Rank: <%=@this_movie.rank%></h4>
 <p><%=@this_movie.description%></p>
 <%= button_to("Upvote", {action: "upvote", id: @this_movie.id}, method: :patch) %>
+<%= button_to("Edit", {action: "edit", id: @this_movie.id}, method: :get) %>
+<%= button_to("Delete", {action: "destroy", id: @this_movie.id}, method: :delete) %>
+<%= button_to("View All Movies", {action: "index"}, method: :get) %>
+<%= button_to("View All Media", media_path, method: :get) %>
