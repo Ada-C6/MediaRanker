@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'homes#index'
 
-  get 'homes/index'
+  get 'homes/index' => 'homes#index', as: 'index'
 
   get 'movies/index' => 'movies#index', as: 'movie_index'
 
