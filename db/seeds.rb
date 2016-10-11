@@ -9,7 +9,7 @@
 50.times do
 	Book.create({
 		name: Faker::Book.title.titleize, 
-		author: Faker::Book.author.capitalize, 
+		author: Faker::Book.author.titleize, 
 		description: "A #{Faker::Book.genre.downcase} book", 
 		rank: 0
 		}
@@ -19,7 +19,7 @@ end
 50.times do 
 	Album.create(
 		{name: "#{Faker::Hacker.adjective.capitalize} #{Faker::Hipster.word.capitalize}", 
-		artist: Faker::Book.author.capitalize, 
+		artist: Faker::Book.author.titleize, 
 		description: Faker::Hipster.sentence.capitalize, 
 		rank: 0
 		}
@@ -29,7 +29,7 @@ end
 50.times do 
 	Movie.create(
 		{name: Faker::Company.catch_phrase.titleize, 
-		director: Faker::Book.author.capitalize, 
+		director: Faker::Book.author.titleize, 
 		description: Faker::Company.bs.capitalize, 
 		rank: 0
 		}
