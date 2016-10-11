@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def index
     @all_movies = Movie.all
-    # @all_movies.sort
+    @all_movies = @all_movies.order(:ranking).reverse
   end
 
   def new
