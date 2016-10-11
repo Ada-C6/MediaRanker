@@ -5,11 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 50.times do
 	Book.create({
 		name: Faker::Book.title.titleize, 
 		author: Faker::Book.author.capitalize, 
-		description: "A #{Faker::Book.genre} book", 
+		description: "A #{Faker::Book.genre.downcase} book", 
 		rank: 0
 		}
 	)
