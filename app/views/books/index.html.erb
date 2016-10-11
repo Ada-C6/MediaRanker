@@ -11,7 +11,7 @@
     <tr>
       <td><%= book.rank %> </td>
       <td><%= link_to book.title, book_show_path(book.id) %></td>
-      <td><%# link_to 'Upvote!', market_show_path(market) %></td
+      <td><%= button_to 'Upvote', book_upvote_path(book.id), method: :post %></td
     </tr>
   <% end %>
 </table>

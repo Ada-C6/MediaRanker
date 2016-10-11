@@ -11,7 +11,7 @@
     <tr>
       <td><%= movie.rank %> </td>
       <td><%= link_to movie.title, movie_show_path(movie.id) %></td>
-      <td><%# link_to 'Upvote!', market_show_path(market) %></td
+      <td><%= button_to 'Upvote', movie_upvote_path(movie.id), method: :post %></td
     </tr>
   <% end %>
 </table>
