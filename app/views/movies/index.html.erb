@@ -1,0 +1,13 @@
+<table>
+<th>Ranking</th>
+<th>Name</th>
+<th>Upvote</th>
+
+<% @movies.each do |movie| %>
+  <tr>
+    <td>Ranked: <%= movie.ranking %></td>
+    <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
+    <td><%= button_to("Upvote", movie_upvote_path(movie.id), method: :patch) %>
+  </tr>
+<% end %>
+</table>
