@@ -17,7 +17,7 @@
       <% @books.each do |b| %>
         <td><%= "#{ b.upvotes }" %></td>
         <td><%= link_to "#{ b.name }", book_path(b) %></td>
-        <td><%= button_to "Upvote", root_path %></td>
+        <td><%= button_to "Upvote", action: :vote, id: b.id %></td>
     </tr>
       <% end %>
   </tbody>

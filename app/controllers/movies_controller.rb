@@ -39,6 +39,12 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def vote
+    @movie = Movie.find(params[:id])
+    @movie.increment!(:upvotes)
+    redirect_to movie_path
+  end
+
   private
 
   def movie_params

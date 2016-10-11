@@ -17,7 +17,7 @@
       <% @albums.each do |a| %>
         <td><%= "#{ a.upvotes }" %></td>
         <td><%= link_to "#{ a.name }", album_path(a) %></td>
-        <td><%= button_to "Upvote", root_path %></td>
+        <td><%= button_to "Upvote", action: :vote, id: a.id %></td>
     </tr>
       <% end %>
   </tbody>

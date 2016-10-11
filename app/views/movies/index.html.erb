@@ -17,7 +17,7 @@
       <% @movies.each do |m| %>
         <td><%= "#{ m.upvotes }" %></td>
         <td><%= link_to "#{ m.name }", movie_path(m) %></td>
-        <td><%= button_to "Upvote", root_path %></td>
+        <td><%= button_to "Upvote", action: :vote, id: m.id %></td>
     </tr>
       <% end %>
   </tbody>

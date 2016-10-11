@@ -2,7 +2,7 @@
 <h3>Ranked: <%= "#{ @album.upvotes }" %></h3>
 <h4><%= "#{ @album.description }" %></h4>
 
-<%= button_to "Upvote", root_path %>
+<%= button_to "Upvote", action: :vote, id: @album.id %>
 <%= button_to "Edit #{ @album.name }", edit_album_path(@album), method: :get %>
 <%= button_to "DELETE", album_path(@album), method: :delete, data: { confirm: "Are you really sure?" } %>
 <%= button_to "View all Albums", albums_path, method: :get %>
