@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :movies
-  patch '/movies/:id', to: 'movies#upvote', as: 'upvote_movie'
+  patch '/movies/:id/upvote', to: 'movies#upvote', as: 'upvote_movie'
 
   resources :books
-  patch '/books/:id', to: 'books#upvote', as: 'upvote_book'
+  patch '/books/:id/upvote', to: 'books#upvote', as: 'upvote_book'
 
   resources :albums
-  patch '/albums/:id', to: 'albums#upvote', as: 'upvote_album'
+  patch '/albums/:id/upvote', to: 'albums#upvote', as: 'upvote_album'
 
 
 

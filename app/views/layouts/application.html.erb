@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <%= link_to "Media Ranker", welcome_index_path%>
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
+  <footer>
+  </footer>
 </body>
 </html>

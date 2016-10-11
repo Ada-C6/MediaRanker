@@ -5,9 +5,10 @@
 
   <% @movies.each do | movie | %>
   <ul>
-    <li><%= link_to "#{movie.name}", movie_path(movie.id) %><%= " (Ranked: #{movie.rank})" %></li>
+    <li><%= link_to "#{movie.name}", movie_path(movie.id) %><%= " (# of Votes: #{movie.rank})" %></li>
   </ul>
   <% end  %>
+  <%= link_to "See More Movies", movies_path, method: :get %>
 </section>
 
 <section>
@@ -15,9 +16,10 @@
 
   <% @books.each do | book | %>
   <ul>
-    <li><%= link_to "#{book.name}", book_path(book.id) %><%= " (Ranked: #{book.rank})" %></li>
+    <li><%= link_to "#{book.name}", book_path(book.id) %><%= " (# of Votes: #{book.rank})" %></li>
   </ul>
   <% end  %>
+  <%= link_to "See More Books", books_path, method: :get %>
 </section>
 
 <section>
@@ -25,7 +27,8 @@
 
   <% @albums.each do | album | %>
   <ul>
-    <li><%= link_to "#{album.name}", album_path(album.id) %><%= " (Ranked: #{album.rank})" %></li>
+    <li><%= link_to "#{album.name}", album_path(album.id) %><%= " (# of Votes: #{album.rank})" %></li>
   </ul>
   <% end  %>
+  <%= link_to "See More Albums", albums_path, method: :get %>
 </section>

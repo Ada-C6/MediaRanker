@@ -1,0 +1,21 @@
+<%# name, title, rank, description  %>
+<h1><%= "#{ @movie.name }" %></h1>
+
+<h3><%= "Directed by: #{ @movie.director }" %></h3>
+<section>
+  <h4><%= "# of Votes: #{ @movie.rank }" %></h4>
+  <h4><%= "Description: #{ @movie.description }" %></h4>
+</section>
+
+<%# buttons: edit, delete, upvote, view all movies, view all media  %>
+<section>
+  <%= button_to "UpVote", upvote_movie_path(@movie.id), method: :patch %>
+
+
+  <%= button_to "Edit", edit_movie_path(@movie.id), method: :get %>
+  <%= button_to "Delete", movie_path(@movie.id), method: :delete,
+        data: {confirm: "Are you sure you want to delete permanently?"}%>
+
+  <%= button_to "View all Movies", movies_path, method: :get %>
+  <%= button_to "View all Media", welcome_index_path, method: :get %>
+</section>
