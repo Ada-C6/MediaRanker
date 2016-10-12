@@ -18,7 +18,7 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "should create an entity" do
     assert_difference('Movie.count', 1) do
-      post_params = { movie: { title: "Movie Title", author: "Grace Hopper", description: "Great movie on computers!" }}
+      post_params = { movie: { title: "Movie Title", director: "Grace Hopper", description: "Great movie on computers!"}}
       post :create, post_params
     end
     assert_response :redirect
@@ -30,7 +30,7 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
 test "should be able to update" do
-    put :update, :id => movies(:one), :movie => {:title => 'New Title'}
+    put :update, :id => movies(:one), :movie => {:title => 'New Title', :director => "New Director", :description => "New Description"}
     assert_equal "New Title", Movie.find(movies(:one).id).title
   end
 
