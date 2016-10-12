@@ -7,7 +7,7 @@
 
 <%= link_to("Edit #{ @album.name }", edit_album_path(@album), class: "button") %>
 
-<%= link_to("DELETE", new_album_path, class: "button") %>
+<%= link_to("DELETE", album_path(@album), method: :delete, data: {confirm: "Are you sure you want to permanently delete this album?"}, class: "button") %>
 
 <%= link_to("View All Albums", albums_path, class: "button") %>
 
