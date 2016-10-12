@@ -6,6 +6,7 @@
           <%= "Ranked: #{@movies[i].ranked}" %></li>
       <% end %>
     </ul>
+    <%= link_to "View More Movies", movies_path %>
 </article>
 
 <article class="top-books">
@@ -16,6 +17,7 @@
           <%= "Ranked: #{@books[i].ranked}" %></li>
       <% end %>
     </ul>
+    <%= link_to "View More Books", books_path %>
 </article>
 
 <article class="top-albums">
@@ -26,4 +28,5 @@
           <%= "Ranked: #{@albums[i].ranked}" %></li>
       <% end %>
     </ul>
+    <%= link_to "View More Albums", albums_path %>
 </article>

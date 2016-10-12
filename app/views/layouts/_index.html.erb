@@ -13,7 +13,7 @@
     <tr>
       <td><%= media.ranked %></td>
       <td><%= link_to media.title, url_for(media) %></td>
-      <td><%= button_to "Upvote" %></td>
+      <td><%= link_to "Upvote", url_for(media), { action: "upvote", method: "patch" } %></td>
     </tr>
     <% end %>
   </tbody>
