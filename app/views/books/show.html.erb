@@ -1,0 +1,14 @@
+<h1><%= @book.name %></h1>
+<h3>Recorded by: <%= @book.author %></h3>
+<h5>Ranked: <%= @book.rank %></h5>
+<p><%= @book.description %></p>
+
+<%= button_to("upvote", book_upvote_path(@book), method: :patch) %>
+
+<%= link_to("Edit #{ @book.name }", edit_book_path(@book), class: "button") %>
+
+<%= link_to("DELETE", book_path(@book), method: :delete, data: {confirm: "Are you sure you want to permanently delete this book?"}, class: "button") %>
+
+<%= link_to("View All Books", books_path, class: "button") %>
+
+<%= link_to("View All Media", root_path, class: "button") %>
