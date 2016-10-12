@@ -3,8 +3,11 @@
 <h4><%= "Ranked: #{@book.rank}" %></h4>
 <p><%= "#{@book.description}" %></p>
 
-<!-- UPVOTE -->
-<%# button_to "Upvote", ??? %>
+
+<%= button_to "Upvote", :action => "upvote" %>
+
+
+
 <!-- I assume upvote is a button, but could be wrong -->
 <!-- no idea how to do the path, possibly update? idk!!! -->
 

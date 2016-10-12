@@ -40,6 +40,12 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+
+
+  # def upvote
+  #   @book.rank += 1
+  # end
+
   private
 
   def book_params
