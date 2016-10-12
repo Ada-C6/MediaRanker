@@ -1,3 +1,15 @@
+1. this will redirect you to your first show movie page. 
+def destroy
+  @mymovie = Movie.find(params[:id])
+  @mymovie.destroy
+  redirect_to movies_path(@mymovie.id)
+end
+
+
+
+
+
+
 1. not sure if this will be helfpul.
 <% @movies.each do |movie| %>
 <h2><%=link_to(movie.name
