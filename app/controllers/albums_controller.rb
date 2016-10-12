@@ -42,6 +42,13 @@ class AlbumsController < ApplicationController
     redirect_to albums_path
   end
 
+  def upvote
+    @album = Album.find(params[:id])
+    @album.ranking += 1
+    @album.save
+    redirect_to album_path(@album)
+  end
+
   private
 
   def album_params

@@ -12,24 +12,26 @@
     </th>
   </tr>
 
-  <% media_collection.each do |item| %>
+  <% media_collection.each do |media_item| %>
   <% case media_type %>
     <% when :albums %>
-      <% media_path = album_path(item) %>
+      <% media_path = album_path(media_item) %>
     <% when :movies %>
-      <% media_path = movie_path(item) %>
+      <% media_path = movie_path(media_item) %>
     <% when :books %>
-      <% media_path = book_path(item) %>
+      <% media_path = book_path(media_item) %>
   <% end %>
   <tr>
     <td>
-      <%= "Ranked: #{item.ranking}" %>
+      <%= "Ranked: #{media_item.ranking}" %>
     </td>
     <td>
-      <%= link_to item.name, media_path %>
+      <%= link_to media_item.name, media_path %>
     </td>
     <td>
-      TODO: Upvote button
+      <%= button_to [:upvote, media_item], method: :patch do %>
+        Upvote
+      <% end %>
     </td>
   </tr>
   <% end %>

@@ -1,3 +1,5 @@
+<%# @TODO - refactor DRY! replace paths with symbols? %>
+
 <% case media_type %>
   <% when :albums %>
     <% media_path = album_path(media_item) %>
@@ -25,11 +27,15 @@
 <p>
   <%= media_item.description %>
 </p>
-<%= button_to "Upvote", media_path, method: :patch %>
+<%# button_to "Upvote", media_path, method: :patch, media_item.upvote %>
+
+<%= button_to [:upvote, media_item], method: :patch do %>
+  Upvote
+<% end %>
 
 <%= link_to "Edit #{media_item.name}", edit_media_path %>
 
-<%= link_to "DELETE", media_path, method: :delete %>
+<%= link_to "DELETE", media_path, method: :delete, data: { confirm: "Are you sure?" } %>
 
 <%= link_to "View All #{media_type.to_s.capitalize}", index_path %>
 
