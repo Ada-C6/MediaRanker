@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: Wrath of Khan
   director: MyString
   description: MyString
   vote: 1
 
 two:
-  title: MyString
+  title: Into Darkness
   director: MyString
   description: MyString
-  vote: 1
+  vote: 1001
+
+three:
+  title: The Great Picard Fanclub
+  director: Sean Olson
+  description: MyString
+  vote: 0
