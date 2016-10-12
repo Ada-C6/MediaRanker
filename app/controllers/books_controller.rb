@@ -27,7 +27,6 @@ class BooksController < ApplicationController
     else
       render :edit
     end
-
   end
 
   def delete
@@ -41,10 +40,12 @@ class BooksController < ApplicationController
   end
 
 
-
-  # def upvote
-  #   @book.rank += 1
-  # end
+  def upvote
+    @book = Book.find(params[:id])
+    @book.rank += 1
+    @book.save
+    redirect_to :back
+  end
 
   private
 

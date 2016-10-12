@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(market_params)
+    @movie = Movie.new(movie_params)
     if @movie.save
       redirect_to movies_path
     else
@@ -39,6 +39,15 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
   end
+
+  def upvote
+    @movie = Movie.find(params[:id])
+    @movie.rank += 1
+    @movie.save
+
+    redirect_to :back
+  end
+
 
   private
 
