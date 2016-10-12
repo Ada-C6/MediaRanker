@@ -1,0 +1,9 @@
+<h1>Album Name: <%= @album.name %> </h1>
+<h2> Author: <%= @album.artist %></h2>
+<p> Ranked: <%= @album.ranking %> </p>
+<p> <%= @album.description %> </p>
+
+<%# button_to "UPVOTE", upvote_album_path(@album), method: :patch  %>
+<%= link_to "edit", edit_album_path %>
+<%= link_to "DELETE", album_path(@album.id), method: :delete,
+data: { confirm: 'Are you sure?'} %>

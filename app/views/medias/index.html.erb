@@ -1,4 +1,5 @@
 <h1>Media Ranker</h1>
+
 <h2>Top Movies </h2>
 <% @movies.each do |movie| %>
 <p>
@@ -7,6 +8,7 @@
 </p>
 <% end %>
 <%= link_to "View More Movies", movies_path %>
+
 <h2>Top Books </h2>
 <% @books.each do |book| %>
 <p>
@@ -15,4 +17,7 @@
 </p>
 <% end %>
 <%= link_to "View More Books", books_path %>
+
 <h2>Top Albums</h2>
+
+<%= link_to "View More Albums", albums_path %>

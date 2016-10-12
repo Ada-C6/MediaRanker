@@ -6,22 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-books = [
-  { name: "Ada",
-    author: "Lovelace",
-    description: "A book about Ada Lovelace",
-    ranking: 4
-  },
-  { name: "Grace Times",
-    author: "Hopper",
-    description: "how",
-    ranking: 1
-  }
-]
-
-books.each do |book|
-  Book.create(book)
-end
+# books = [
+#   { name: "Ada",
+#     author: "Lovelace",
+#     description: "A book about Ada Lovelace",
+#     ranking: 4
+#   },
+#   { name: "Grace Times",
+#     author: "Hopper",
+#     description: "how",
+#     ranking: 1
+#   }
+# ]
+#
+# books.each do |book|
+#   Book.create(book)
+# end
 
 #don't forget to uncomment and add this when you create the album model!
 # albums = [

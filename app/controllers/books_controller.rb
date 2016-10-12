@@ -57,8 +57,8 @@ class BooksController < ApplicationController
   end
 
   private
-  def book_params #will permit and require params we trust
-  params.require(:book).permit(:name, :author, :description,)
+  def book_params 
+  params.require(:book).permit(:name, :author, :description)
   end
 
 end
