@@ -4,7 +4,7 @@
 <p> <%= @album.description %> </p>
 
 <%= button_to "UPVOTE", upvote_album_path(@album), method: :patch  %>
-<%= link_to "edit", edit_album_path %>
+<%= link_to "Edit #{@album.name}", edit_album_path %>
 <%= link_to "DELETE", album_path(@album.id), method: :delete,
 data: { confirm: 'Are you sure?'} %>
 

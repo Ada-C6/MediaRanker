@@ -4,11 +4,9 @@
 <p> <%= @movie.description %> </p>
 
 <%= button_to "UPVOTE", upvote_movie_path(@movie), method: :patch  %>
-<%= link_to "edit", edit_movie_path %>
+<%= link_to "Edit #{@movie.name}", edit_movie_path %>
 <%= link_to "DELETE", movie_path(@movie.id), method: :delete,
 data: { confirm: 'Are you sure?'} %>
 
-<!-- LINK DOESN'T WORK YET -->
-<%= link_to "View All Media"%>
-<!-- @TODO Put the All movies link in the root path -->
+<%= link_to "View All Media", root_path%>
 <%= link_to "View All Movies", movies_path %>
