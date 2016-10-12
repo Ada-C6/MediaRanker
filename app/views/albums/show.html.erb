@@ -1,0 +1,14 @@
+<h2><%= @this_item.name %></h2>
+<h3>Directed by: <%=@this_item.artist%></h3>
+
+<h4>Rank: <%=@this_item.rank%></h4>
+
+
+
+<%= button_to "Vote", vote_album_path(@id), method: :patch %>
+
+<p><%=link_to "Edit", edit_album_path(@id)%></p>
+<%= link_to "Delete", delete_album_path(@id),  method: :delete , data: {confirm: "Are you really sure?"}%>
+
+<p><%=link_to "View all Albums", albums_path%></p>
+<p><%=link_to "View all Media", root_path%></p>

@@ -8,13 +8,13 @@
       <li><%= link_to item.name, show_movie_path(item) %></li>
     <% end %>
   </ul>
-  <li><%=link_to "Top Books", movies_path%></li>
+  <li><%=link_to "Top Books", books_path%></li>
   <ul>
     <% @books.each do |item| %>
       <li><%= item.title %></li>
     <% end %>
   </ul>
-  <li><%=link_to "Top Albums", movies_path%></li>
+  <li><%=link_to "Top Albums", albums_path%></li>
   <ul>
     <% @albums.each do |item| %>
       <li><%= item.name %></li>
