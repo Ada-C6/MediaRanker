@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   patch 'movies/:id/upvote', to: 'movies#upvote', as: 'upvote_movie'
   patch 'books/:id/upvote', to: 'books#upvote', as: 'upvote_book'
   patch 'albums/:id/upvote', to: 'albums#upvote', as: 'upvote_album'
+  root 'books#home'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
