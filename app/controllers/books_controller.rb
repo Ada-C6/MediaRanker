@@ -50,6 +50,8 @@ class BooksController < ApplicationController
     @book.rank += 1
     @book.save
 
-    redirect_to action: 'index'
+    # This ensures users stay on current page when hitting the upvote button_to
+    # I think this is a better user experience :)
+    redirect_to :back
   end
 end

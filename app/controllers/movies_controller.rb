@@ -50,6 +50,8 @@ class MoviesController < ApplicationController
     @movie.rank += 1
     @movie.save
 
-    redirect_to action: 'index'
+    # This ensures users stay on current page when hitting the upvote button_to
+    # I think this is a better user experience :)
+    redirect_to :back
   end
 end
