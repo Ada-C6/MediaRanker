@@ -1,0 +1,14 @@
+<section>
+  <h3>Top Movies</h3>
+  <% @movies.each do |movie| %>
+  <p><%= link_to "#{movie.name}" %> <span>Ranked: <%= ranking(movie) %></span></p>
+  <% end %>
+</section>
+
+<section>
+  <h3>Top Books</h3>
+</section>
+
+<section>
+  <h3>Top Albums</h3>
+</section>
