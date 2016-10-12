@@ -52,6 +52,8 @@ Rails.application.routes.draw do
 
   delete 'bobs/:id/delete' => 'bobs#delete', as: 'delete_bob'
 
+  post 'bobs/:id/upvote' => 'bobs#upvote', as: 'upvote_bob'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

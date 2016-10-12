@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011203705) do
+ActiveRecord::Schema.define(version: 20161012204918) do
+
+  create_table "bob_votes", force: :cascade do |t|
+    t.integer  "bob_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bobs", force: :cascade do |t|
     t.string   "name"
@@ -29,7 +35,19 @@ ActiveRecord::Schema.define(version: 20161011203705) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "magical_stories", force: :cascade do |t|
+  create_table "leslie_votes", force: :cascade do |t|
+    t.integer  "leslie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wizard_votes", force: :cascade do |t|
+    t.integer  "wizard_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wizards", force: :cascade do |t|
     t.string   "title"
     t.string   "author_director"
     t.string   "main_character"
