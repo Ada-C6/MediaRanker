@@ -12,8 +12,13 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.create(filter_params)
-    redirect_to books_show_path(book.id)
+    @book = Book.new(filter_params)
+
+    if @book.save
+          redirect_to books_show_path(@book.id)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -21,7 +26,7 @@ class BooksController < ApplicationController
   end
 
   def update
-    book = Book.find(params[:id])
+    @book = Book.find(params[:id])
 
     # Verb patch is used for upvote; verb put is used for full edit
 
@@ -33,8 +38,14 @@ class BooksController < ApplicationController
         redirect_to books_index_path
       end
     else
-      book.update(filter_params)
-      redirect_to books_show_path
+      @book.update_attributes(filter_params)
+
+      if @book.save
+        redirect_to books_show_path(@book.id)
+      else
+        @book.restore_attributes
+        render :edit
+      end
     end
   end
 

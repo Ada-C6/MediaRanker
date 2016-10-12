@@ -1,6 +1,21 @@
 <h2>Edit a book</h2>
 
 <section>
+
+  <% if @book.errors.any? %>
+    <section class = "errors">
+      <p>Whoops! We couldn't save your changes because:</p>
+      <ul>
+        <% @book.errors.each do |column, message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+      <p>Please edit your entries and try again.</p>
+    </section>
+  <% end %>
+
   <%= form_for @book, url: books_update_path, method: :put do |f| %>
 
     <%= f.label :title %>

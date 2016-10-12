@@ -1,6 +1,21 @@
 <h2>Edit a movie</h2>
 
 <section>
+
+  <% if @movie.errors.any? %>
+    <section class = "errors">
+      <p>Whoops! We couldn't save your changes because:</p>
+      <ul>
+        <% @movie.errors.each do |column, message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+      <p>Please edit your entries and try again.</p>
+    </section>
+  <% end %>
+
   <%= form_for @movie, url: movies_update_path, method: :put do |f| %>
 
     <%= f.label :title %>

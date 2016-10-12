@@ -12,8 +12,13 @@ class MoviesController < ApplicationController
   end
 
   def create
-    movie = Movie.create(filter_params)
-    redirect_to movies_show_path(movie.id)
+    @movie = Movie.new(filter_params)
+
+    if @movie.save
+      redirect_to movies_show_path(@movie.id)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -21,20 +26,26 @@ class MoviesController < ApplicationController
   end
 
   def update
-    movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
 
     # Verb patch is used for upvote; verb put is used for full edit
 
     if request.patch?
-      movie.update(upvotes: movie.upvotes + 1)
+      @movie.update(upvotes: @movie.upvotes + 1)
       if request.referer.include?('show')
-        redirect_to movies_show_path(movie.id)
+        redirect_to movies_show_path(@movie.id)
       else
         redirect_to movies_index_path
       end
     else
-      movie.update(filter_params)
-      redirect_to movies_show_path
+      @movie.update_attributes(filter_params)
+
+      if @movie.save
+        redirect_to movies_show_path(@movie.id)
+      else
+        @movie.restore_attributes
+        render :edit
+      end
     end
   end
 

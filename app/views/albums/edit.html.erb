@@ -1,5 +1,19 @@
 <h2>Edit an album</h2>
 
+<% if @album.errors.any? %>
+  <section class = "errors">
+    <p>Whoops! We couldn't save your changes because:</p>
+    <ul>
+      <% @album.errors.each do |column, message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+    <p>Please edit your entries and try again.</p>
+  </section>
+<% end %>
+
 <section>
   <%= form_for @album, url: albums_update_path, method: :put do |f| %>
 
