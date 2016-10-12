@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  artist: MyString
-  description: MyString
+vitalogy:
+  name: Vitalogy
+  artist: Pearl Jam
+  description: 90s grunge
   upvotes: 1
 
-two:
-  name: MyString
-  artist: MyString
-  description: MyString
+mellon_collie:
+  name: Mellon Collie and the Infinite Sadness
+  artist: Smashing Pumpkins
+  description: Ethereal two-for-one
   upvotes: 1

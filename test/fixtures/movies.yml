@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
-  description: MyString
+pulp_fiction:
+  name: Pulp Fiction
+  director: Quentin Tarantino
+  description: Travolta and Thurman dance
   upvotes: 1
 
-two:
-  name: MyString
-  director: MyString
-  description: MyString
+the_usual_suspects:
+  name: The Usual Suspects
+  director: Bryan Singer
+  description: Keyser Soze
   upvotes: 1

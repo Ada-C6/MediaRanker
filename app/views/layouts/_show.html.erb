@@ -4,5 +4,5 @@
 <%= button_to "Upvote", action: :vote, id: media.id %>
 <%= button_to "Edit #{ media.name }", url_for(action: 'edit', controller: type), method: :get %>
 <%= button_to "DELETE", url_for(media), method: :delete, data: { confirm: "Are you really sure?" } %>
-<%= button_to "View all Albums", polymorphic_url(type), method: :get %>
+<%= button_to "View all #{ type.capitalize }", polymorphic_url(type), method: :get %>
 <%= button_to "View all Media", root_path, method: :get %>

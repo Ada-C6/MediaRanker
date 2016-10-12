@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  author: MyString
-  description: MyString
+we_the_living:
+  name: We The Living
+  author: Ayn Rand
+  description: Being a Libertarian
   upvotes: 1
 
-two:
-  name: MyString
-  author: MyString
-  description: MyString
+one_fish_two_fish:
+  name: One Fish Two Fish
+  author: Dr. Seuss
+  description: Kid book with fish
   upvotes: 1

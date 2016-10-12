@@ -24,4 +24,4 @@
 </table>
 
 <%= button_to "View All Media", root_path, method: :get %>
-<%= button_to "Add an Album", new_album_path, method: :get %>
+<%= button_to "Add New #{ type.capitalize }", url_for(action: 'new', controller: type), method: :get %>
