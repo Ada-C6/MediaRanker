@@ -49,4 +49,6 @@ group :development do
 # this adds colors to testss
   group :test do
   gem 'minitest-reporters'
+  end
+  
 end
