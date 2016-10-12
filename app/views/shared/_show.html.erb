@@ -1,3 +1,21 @@
+<% case media_type %>
+  <% when :albums %>
+    <% media_path = album_path(media_item) %>
+    <% index_path = albums_path %>
+    <% edit_media_path = edit_album_path(media_item) %>
+    <% made_by_verb = "Recorded" %>
+  <% when :movies %>
+    <% media_path = movie_path(media_item) %>
+    <% index_path = movies_path %>
+    <% edit_media_path = edit_movie_path(media_item) %>
+    <% made_by_verb = "Directed" %>
+  <% when :books %>
+    <% media_path = book_path(media_item) %>
+    <% index_path = books_path %>
+    <% edit_media_path = edit_book_path(media_item) %>
+    <% made_by_verb = "Written" %>
+<% end %>
+
 <h1>
   <%= media_item.name %> <small><%= "#{made_by_verb} by: #{creator}" %></small>
 </h1>
@@ -7,3 +25,12 @@
 <p>
   <%= media_item.description %>
 </p>
+<%= button_to "Upvote", media_path, method: :patch %>
+
+<%= link_to "Edit #{media_item.name}", edit_media_path %>
+
+<%= link_to "DELETE", media_path, method: :delete %>
+
+<%= link_to "View All #{media_type.to_s.capitalize}", index_path %>
+
+<h4><%# @TODO: ADD LINK TO HOME SITE HERE! %> View All Media Link Will Be Here</h4>
