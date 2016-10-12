@@ -2,4 +2,4 @@
   <p>Ranked: <%= @album.ranking %></p>
   <p><%= @album.description %></p>
   <p><%= button_to("Upvote", album_upvote_path(@album.id), method: :patch) %></p>
-  <p><%= button_to("Edit - #{ @album.name }", edit_album_path(@album.id), method: :get) %><%= button_to("DELETE", album_path(@album.id), method: :delete, data: { confirm: "Are you sure?"} ) %> <%= button_to("View All Albums", albums_path, method: :get) %><%= button_to("View All Media",root_path, method: :get)%></p>
+  <p><%= button_to("Edit #{ @album.name }", edit_album_path(@album.id), method: :get) %><%= button_to("DELETE", album_path(@album.id), method: :delete, data: { confirm: "Are you sure?"} ) %> <%= button_to("View All Albums", albums_path, method: :get) %><%= button_to("View All Media",root_path, method: :get)%></p>
