@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   root 'media#index'
 
 
-
+patch 'books/:id/upvote' => 'books#upvote'
 patch 'movies/:id/upvote' => 'movies#upvote'
+patch 'albums/:id/upvote' => 'albums#upvote'
+
 
 Rails.application.routes.draw do
   resources :albums, :books, :movies

@@ -56,5 +56,8 @@ class MoviesController < ApplicationController
     @this_movie=Movie.find(params[:id])
     @this_movie.rank+=1
     @this_movie.save
+    redirect_to movie_url(@this_movie)
+
+    #how do you say "the last page it was on"
   end
 end
