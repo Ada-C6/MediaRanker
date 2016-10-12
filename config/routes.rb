@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     patch 'books/:id/upvote' => 'books#upvote', as: 'book_upvote'
 
     resources :movies
+    patch 'movies/:id/upvote' => 'movies#upvote', as: 'movie_upvote'
 end
