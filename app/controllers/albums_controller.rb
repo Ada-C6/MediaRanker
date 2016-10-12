@@ -17,6 +17,10 @@ class AlbumsController < ApplicationController
         end
     end
 
+    def show
+        @album = Album.find(params[:id])
+    end
+
     def upvote
         @album = Album.find(params[:id])
         if @album.upvote_one
