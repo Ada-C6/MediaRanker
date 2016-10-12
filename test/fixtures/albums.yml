@@ -1,21 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  string: MyString
-  recorded_by: MyString
-  string: MyString
-  ranked: MyString
-  integer: MyString
-  description: MyString
-  string: MyString
+suburbs:
+  title: "The Suburbs"
+  recorded_by: Arcade Fire
+  ranked: 1
+  description: "Best album"
 
-two:
-  title: MyString
-  string: MyString
-  recorded_by: MyString
-  string: MyString
-  ranked: MyString
-  integer: MyString
-  description: MyString
-  string: MyString
+parachutes:
+  title: "Parachutes"
+  recorded_by: "Coldplay"
+  ranked: 2
+  description: "Good album"

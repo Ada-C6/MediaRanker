@@ -1,21 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  string: MyString
-  written_by: MyString
-  string: MyString
-  ranked: MyString
-  integer: MyString
-  description: MyString
-  string: MyString
+mockingbird:
+  title: "To Kill a Mockingbird"
+  written_by: "Ken Kesey"
+  ranked: 1
+  description: "This is a description"
 
-two:
-  title: MyString
-  string: MyString
-  written_by: MyString
-  string: MyString
-  ranked: MyString
-  integer: MyString
-  description: MyString
-  string: MyString
+pride:
+  title: "Pride and Prejudice"
+  written_by: "Jane Austen"
+  ranked: 2
+  description: "Best book ever"
