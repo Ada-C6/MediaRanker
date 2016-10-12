@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.media_container {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+}

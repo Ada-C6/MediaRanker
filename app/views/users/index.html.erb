@@ -7,31 +7,31 @@
 <hr />
 
 <p>Reveal all movies first. Then you can limit what shows on users main page.</p>
+<section class="media_container">
+  <article>
+    <h1>Top Movies/All Movies</h1>
+      <% @movies.each do |movie| %>
+      <h1><%= link_to(movie.name, movie_path(movie.id)) %>
+      <%= "Ranked: " %>
+      <% end %>
+    </h1>
+  </article>
 
-<article>
-  <h1>Top Movies/All Movies</h1>
-    <% @movies.each do |movie| %>
-    <h1><%= link_to(movie.name, movie_path(movie.id)) %>
-    <%= "Ranked: " %>
-    <% end %>
-  </h1>
-</article>
+  <article>
 
-<article>
+     <h1>Top Books</h1>
+     <% @books.each do |book| %>
+     <h1><%= link_to(book.name, book_path(book.id)) %>
+     <% end %>
+     </h1>
 
-   <h1>Top Books</h1>
-   <% @books.each do |book| %>
-   <h1><%= link_to(book.name, book_path(book.id)) %>
-   <% end %>
-   </h1>
+  </article>
 
-</article>
-
-<article>
-   <h1>Top Albums</h1>
-   <% @albums.each do |album| %>
-   <h1><%= link_to(album.name, album_path(album.id)) %>
-   <% end %>
-   </h1>
-
-</article>
+  <article>
+     <h1>Top Albums</h1>
+     <% @albums.each do |album| %>
+     <h1><%= link_to(album.name, album_path(album.id)) %>
+     <% end %>
+     </h1>
+  </article>
+</section>
