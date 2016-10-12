@@ -7,7 +7,7 @@
     <h1>Top Movies/All Movies</h1>
       <% @movies.each do |movie| %>
       <h2 class="mediabox"><%= link_to(movie.name, movie_path(movie.id)) %>
-      <p><%= "Ranked: " %></p>
+      <p> Ranked:</p>
       </h2>
 
       <% end %>

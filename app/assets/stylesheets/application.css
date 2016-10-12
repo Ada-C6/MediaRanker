@@ -44,4 +44,16 @@ header.page-header {
 .button_row {
   display: flex;
   flex-direction: row;
+
+}
+
+.button_row input {
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px;
+
+}
+
+.danger {
+  background-color: red;
 }

@@ -1,2 +1,19 @@
 <h1>Albums#show</h1>
 <p>Find me in app/views/albums/show.html.erb</p>
+<section>
+  <h1>Title: <%=@myalbum.name %></h1>
+    <p>Artist: <%=@myalbum.artist %></p>
+    <p>Ranked: </p>
+    <p>Description: <%=@myalbum.description%></p>
+
+  <section class="button_row">
+    <%=button_to("Edit #{@myalbum.name}", edit_movie_path(@myalbum.id), method: :get)%>
+
+    <%=button_to("DELETE", movie_path(@myalbum.id), method: :delete) %>
+
+    <%=button_to("View All Movies") %>
+
+    <%=button_to("View All Media") %>
+  </section>
+
+</section>
