@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-
+root to: 'media#index'
   resources :albums
   resources :movies
   resources :books
   resources :media, only: [:index, :show]
-  # root to: ''
+  resources :books do
+  member do
+    post 'upvote'
+  end
+end
 
 
 #     Prefix Verb   URI Pattern                Controller#Action
@@ -32,8 +36,9 @@ Rails.application.routes.draw do
 #            PATCH  /books/:id(.:format)       books#update
 #            PUT    /books/:id(.:format)       books#update
 #            DELETE /books/:id(.:format)       books#destroy
-
-
+#       media GET    /media(.:format)           media#index
+#     medium GET    /media/:id(.:format)       media#show
+#  upvote_book POST   /books/:id/upvote(.:format) books#upvote
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

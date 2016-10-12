@@ -20,7 +20,6 @@ class BooksController < ApplicationController
     @mybook.title = params[:book][:title]
     @mybook.creator = params[:book][:creator]
     @mybook.description = params[:book][:description]
-    @mybook.rank = params[:book][:rank]
     @mybook.save
     redirect_to books_path
   end
@@ -55,4 +54,13 @@ class BooksController < ApplicationController
     @mybook.destroy
     redirect_to books_path
   end
-end
+
+  def upvote
+    @mybook = Book.find(params[:id])
+    @mybook.rank += 1
+    @mybook.save
+    redirect_to books_path
+
+  end
+
+end#end of class
