@@ -39,3 +39,9 @@ header.page-header {
   border-width: 1px;
   border-radius: 6px;
 }
+
+
+.button_row {
+  display: flex;
+  flex-direction: row;
+}
