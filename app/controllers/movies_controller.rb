@@ -1,7 +1,4 @@
 class MoviesController < ApplicationController
-  def findMovie
-    return Movie.find(params[:id].to_i)
-  end
 
   def index
     @movies = Movie.all
@@ -60,5 +57,10 @@ class MoviesController < ApplicationController
   def upvote
     Movie.increment_counter(:ranked, params[:id])
     redirect_to action: "show"
+  end
+
+  private
+  def findMovie
+    return Movie.find(params[:id].to_i)
   end
 end

@@ -1,7 +1,4 @@
 class BooksController < ApplicationController
-  def findBook
-    return Book.find(params[:id].to_i)
-  end
 
   def index
     @books = Book.all
@@ -61,5 +58,11 @@ class BooksController < ApplicationController
     Book.increment_counter(:ranked, params[:id])
     redirect_to action: "show"
   end
+
+  private
+  def findBook
+    return Book.find(params[:id].to_i)
+  end
+
 
 end

@@ -1,7 +1,4 @@
 class AlbumsController < ApplicationController
-  def findAlbum
-    return Album.find(params[:id].to_i)
-  end
 
   def index
     @albums = Album.all
@@ -9,6 +6,11 @@ class AlbumsController < ApplicationController
 
   def show
     @album = findAlbum
+
+    if @album == nil
+      render :file => 'public/404.html',
+          :status => :not_found
+    end
   end
 
   def edit
@@ -60,5 +62,11 @@ class AlbumsController < ApplicationController
   def upvote
     Album.increment_counter(:ranked, params[:id])
     redirect_to action: "show"
+  end
+
+  private
+
+  def findAlbum
+    return Album.find(params[:id].to_i)
   end
 end
