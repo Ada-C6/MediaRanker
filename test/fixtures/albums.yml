@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  creator: MyString
-  description: MyString
-  rank: 1
+  title: Nevermind
+  creator: Nirvana
+  description: first album
+  rank: 0
+  id: 1
 
 two:
-  title: MyString
-  creator: MyString
-  description: MyString
-  rank: 1
+  title: Heart Shape box
+  creator: Nirvana
+  description: fourth album
+  rank: 0
+  id: 2
