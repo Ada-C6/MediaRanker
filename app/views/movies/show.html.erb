@@ -1,2 +1,8 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<section>
+  <h1><%= @mymovie.title %></h1>
+  <p><%= @mymovie.creator %></p>
+  <p><%= @mymovie.description %></p>
+  <%= button_to("Edit Movie", edit_movie_path(@mymovie.id), method: :get)%>
+
+  <%= button_to("Delete Movie", movie_path(@mymovie.id), method: :delete)%>
+</section>

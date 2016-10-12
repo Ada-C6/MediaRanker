@@ -4,7 +4,7 @@ root to: 'media#index'
   resources :movies
   resources :books
   resources :media, only: [:index, :show]
-  resources :books do
+  resources :books, :albums, :movies do
   member do
     post 'upvote'
   end

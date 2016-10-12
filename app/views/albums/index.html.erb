@@ -1,2 +1,6 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<h1>Albums</h1>
+<% @albums.each do |album| %>
+<h2><%= link_to(album.title, album_path(album.id)) %></h2>
+<p><%= button_to 'UpVote', upvote_album_path(album.id), method: :post %></p>
+<p>Rank: <%= album.rank %></p>
+<% end %>
