@@ -3,7 +3,10 @@
 <p> Ranked: <%= @album.ranking %> </p>
 <p> <%= @album.description %> </p>
 
-<%# button_to "UPVOTE", upvote_album_path(@album), method: :patch  %>
+<%= button_to "UPVOTE", upvote_album_path(@album), method: :patch  %>
 <%= link_to "edit", edit_album_path %>
 <%= link_to "DELETE", album_path(@album.id), method: :delete,
 data: { confirm: 'Are you sure?'} %>
+
+<%= link_to "View All Media", root_path%>
+<%= link_to "View All Albums", albums_path %>

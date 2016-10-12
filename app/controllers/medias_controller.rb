@@ -4,7 +4,7 @@ class MediasController < ApplicationController
     @movies.order(:ranking).reverse
     @books = Book.all
     @books.order(:ranking).reverse
-    # @albums = Album.all
-    # @albums.order(:ranking).reverse
+    @albums = Album.all
+    @albums.order(:ranking).reverse
   end
 end
