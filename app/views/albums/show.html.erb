@@ -9,7 +9,7 @@
   <section class="button_row">
     <%=button_to("Edit #{@myalbum.name}", edit_album_path(@myalbum.id), method: :get)%>
 
-    <%=button_to("DELETE", movie_path(@myalbum.id), method: :delete) %>
+    <%=button_to("DELETE", album_path(@myalbum.id), method: :delete) %>
 
     <%=button_to("View All Movies") %>
 
