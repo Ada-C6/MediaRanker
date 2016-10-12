@@ -10,9 +10,11 @@
 
   <% rows.times do |i| %>
     <tr>
-      <td><%= "#{ @movies[i].name} Ranked: #{@movies[i].ranking }" %></td>
-      <td><%= "#{ @books[i].name } Ranked: #{ @books[i].ranking }" %></td>
-      <td><%= "#{ @albums[i].name } Ranked: #{ @albums[i].ranking }" %></td>
+      <td><span class = "name"><%= link_to @movies[i].name, movie_path(@movies[i]) %></span><%=" Ranked: #{@movies[i].ranking }" %></td>
+
+      <td><span class = "name"><%= link_to @books[i].name, book_path(@books[i]) %></span><%= " Ranked: #{ @books[i].ranking }" %></td>
+
+      <td><span class = "name"><%= link_to @albums[i].name, album_path(@albums[i]) %></span><%= " Ranked: #{ @albums[i].ranking }" %></td>
     </tr>
   <% end %>
 
