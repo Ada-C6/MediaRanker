@@ -1,0 +1,2 @@
+<h1>Edit a Book</h1>
+<%= render partial: "bookform", method: :post, locals: { action_name: book_path, params: {id: @book.id }} %>

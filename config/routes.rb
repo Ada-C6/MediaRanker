@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  root to: 'home#index'
+
+  get 'home/index' => 'home#index', as: 'homeindex'
+
+  resources :albums
+  resources :books
+  resources :movies
+
+  put "like/:id" => "albums#upvote", as: "upvote"
+  put "like/books/:id" => "books#upvote", as: "bupvote"
+  put "like/movies/:id" => "movies#upvote", as: "mupvote"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

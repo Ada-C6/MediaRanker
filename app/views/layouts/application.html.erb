@@ -7,6 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <h1><%= link_to 'MediaRanker', root_path %> </h1>
+        </li>
+        <li>
+          Rank Movies, Music, Books!
+        </li>
+      </ul>
+    </nav>
+
+  </header>
 
 <%= yield %>
 

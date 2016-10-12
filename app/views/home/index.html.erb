@@ -1,0 +1,23 @@
+<h1>Top Movies</h1>
+<% @movies.each do |movie| %>
+  <article>
+    <h2><%= link_to(movie.name, movie_path(movie.id)) %></h2>
+    <h3>Ranked: <%= movie.ranked %></h3>
+  </article>
+<% end %>
+
+<h1>Top Books</h1>
+<% @books.each do |book| %>
+  <article>
+    <h2><%= link_to(book.title, book_path(book.id)) %></h2>
+    <h3>Ranked: <%= book.ranked %></h3>
+  </article>
+<% end %>
+
+<h1>Top Albums</h1>
+<% @albums.each do |album| %>
+  <article>
+    <h2><%= link_to(album.title, album_path(album.id)) %></h2>
+    <h3>Ranked: <%= album.ranked %></h3>
+  </article>
+<% end %>

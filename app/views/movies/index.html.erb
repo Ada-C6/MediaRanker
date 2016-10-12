@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+
+<% @movies.each do |movie| %>
+
+  <tr>
+    <td>Ranked: <%= movie.ranked %></td>
+    <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
+    <td><%= button_to "Upvote", movie_path(movie.id), method: :get %></td>
+  </tr>
+  </table>
+
+<% end %>
+
+<ul>
+  <li><%= button_to 'View All Media', root_path, method: :get %> </li>
+  <li><%= button_to 'Add a Movie', new_movie_path, method: :get %> </li>
+</ul>
