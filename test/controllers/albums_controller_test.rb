@@ -14,6 +14,13 @@ class AlbumsControllerTest < ActionController::TestCase
 
     assert_equal assigns(:album), albums(:suburbs)
   end
+# not working
+  # test "should not get show for invalid id" do
+  #   get :show, {id: albums(:suburbs).id}
+  #   suburbs.delete
+  #   get :show, {id: albums(:suburbs).id}
+  #   assert_response :error
+  # end
 
   test "should get edit" do
     get :edit, {id: albums(:suburbs).id}
@@ -70,7 +77,6 @@ end
       delete :destroy, {id: albums(:suburbs).id}
     end
   end
-
 
   test "should be able to use upvote method to increase rating on album" do
     assert_difference("Album.find(albums(:suburbs).id).ranked", 1) do
