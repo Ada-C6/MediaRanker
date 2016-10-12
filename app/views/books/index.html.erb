@@ -4,7 +4,7 @@
 <% @all_books.each do |book| %>
 <p><%= "#{book.ranking} |------------|" %>
 <%=  link_to "#{book.name}", book_path(book) %>
-<%# button_to "UPVOTE", upvote_book_path(book), method: :patch  %> </p>
+<%= button_to "UPVOTE", upvote_book_path(book), method: :patch  %> </p>
 <% end %>
 
 <!-- LINK DOESN'T WORK YET -->

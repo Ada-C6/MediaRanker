@@ -43,18 +43,18 @@ class BooksController < ApplicationController
   end
 
 
-  # def upvote
-  #   @book = Book.find(params[:id])
-  #   if @book.ranking == nil #from when I had nil values for ranking
-  #     @book.ranking = 0
-  #     @book.ranking += 1
-  #     @book.save
-  #   else
-  #   @book.ranking += 1
-  #   @book.save
-  #   end
-  #   redirect_to book_path(@book)
-  # end
+  def upvote
+    @book = Book.find(params[:id])
+    if @book.ranking == nil #from when I had nil values for ranking
+      @book.ranking = 0
+      @book.ranking += 1
+      @book.save
+    else
+    @book.ranking += 1
+    @book.save
+    end
+    redirect_to book_path(@book)
+  end
 
   private
   def book_params #will permit and require params we trust
