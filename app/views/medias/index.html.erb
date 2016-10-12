@@ -6,25 +6,25 @@
 <div class="Movies">
   <h3> Top Movies</h3>
   <ul>
-  <% @movies.each do |film|%>
-  <li><%=link_to "#{film.name}", movie_path(film)%> Number of Votes <%= "#{film.rank}" %></li>
-  <%end%>
+    <% @movies.each do |film|%>
+    <li><%=link_to "#{film.name}", movie_path(film)%> Number of Votes <%= "#{film.rank}" %></li>
+    <%end%>
   </ul>
 </div>
 
 <div class="Books">
   <h3> Best Books</h3>
   <ul>
-  <% @books.each do |book|%>
-  <li> <%=link_to "#{book.title}", book_path(book)%> Number of Votes <%= "#{book.rank}" %> </li>
-  <%end%>
+    <% @books.each do |book|%>
+    <li> <%=link_to "#{book.title}", book_path(book)%> Number of Votes <%= "#{book.rank}" %> </li>
+    <%end%>
   </ul>
 </div>
 
 <div class="Albums">
   <h3> Top Albums</h3>
   <% @albums.each do |album|%>
-    <li><%=link_to "#{album.title}", album_path(album)%> Number of Votes <%= "#{album.rank}" %></li>
-      </ul>
-  <%end%>
+  <li><%=link_to "#{album.title}", album_path(album)%> Number of Votes <%= "#{album.rank}" %></li>
+</ul>
+<%end%>
 </div>

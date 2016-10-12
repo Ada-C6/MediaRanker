@@ -1,8 +1,9 @@
 class MoviesController < ApplicationController
+
   def index
     @movie = Movie.all.order(:rank).reverse
-
   end
+
   def show
     @movie = Movie.find(params[:id])
   end
@@ -10,6 +11,7 @@ class MoviesController < ApplicationController
   def new
     @movie = Movie.new
   end
+
   def create
     @movie = Movie.new(movie_params)
     if @movie.save
@@ -41,9 +43,8 @@ class MoviesController < ApplicationController
 
   def destroy
     Movie.find(params[:id]).destroy
-    redirect_to tasks_path
+    redirect_to movies_path
   end
-
 
   private
 
