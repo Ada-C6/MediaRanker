@@ -17,6 +17,14 @@ class BookTest < ActiveSupport::TestCase
     book2 = Book.new(name: "The Fountainhead", author: "Ayn Rand", description: "Libertarian awesomeness")
     assert book2.valid?
   end
+
+  test "Cannot create a book with missing information" do
+    book = Book.new
+    assert_not book.valid?
+    assert_includes book.errors, :name
+    assert_includes book.errors, :author
+    assert_includes book.errors, :description
+  end
   # test "the truth" do
   #   assert true
   # end

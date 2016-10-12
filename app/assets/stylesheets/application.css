@@ -18,9 +18,19 @@ html {
 }
 
 header {
-  padding-bottom: 9px;
+
   margin: 40px 0 20px 0;
   border-bottom: 1px solid #eee;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2d689b;
+  text-decoration: underline;
 }
 
 header li {
@@ -30,4 +40,8 @@ header li {
 .top-container {
   width: 32%;
   float: left;
+}
+
+h3, small {
+  color: #777;
 }

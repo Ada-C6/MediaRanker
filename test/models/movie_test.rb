@@ -17,6 +17,14 @@ class MovieTest < ActiveSupport::TestCase
     movie2 = Movie.new(name: "Raging Bull", director: "Martin Scorsese", description: "I've never seen this movie")
     assert movie2.valid?
   end
+
+  test "Cannot create a movie with missing information" do
+    movie = Movie.new
+    assert_not movie.valid?
+    assert_includes movie.errors, :name
+    assert_includes movie.errors, :director
+    assert_includes movie.errors, :description
+  end
   # test "the truth" do
   #   assert true
   # end

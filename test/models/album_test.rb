@@ -18,6 +18,14 @@ class AlbumTest < ActiveSupport::TestCase
     album2 = Album.new(name: "No Code", artist: "Pearl Jam", description: "90s grunge rock")
     assert album2.valid?
   end
+
+  test "Cannot create an album with missing information" do
+    album = Album.new
+    assert_not album.valid?
+    assert_includes album.errors, :name
+    assert_includes album.errors, :artist
+    assert_includes album.errors, :description
+  end
   # test "the truth" do
   #   assert true
   # end
