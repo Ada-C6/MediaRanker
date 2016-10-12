@@ -21,9 +21,25 @@ class MoviesController < ApplicationController
   end
 
   def update
+    @mymovie = Movie.find(params[:id])
+    if @mymovie == nil
+      render :file => 'public/404.html', :status => :not_found
+    end
+    @mymovie.name = params[:movie][:name]
+    @mymovie.director = params[:movie][:director]
+    @mymovie.description = params[:movie][:description]
+    @mymovie.save
+    redirect_to users_path(@mymovie.id)
   end
 
   def edit
+    @mymovie = Movie.find(params[:id])
+    @movie_method = :put
+    @movie_path = movie_path
+    if @mymovie == nil
+      render :file => 'public/404.html',
+      :status => :not_found
+    end
   end
 
   def destroy
