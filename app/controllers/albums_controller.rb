@@ -30,7 +30,7 @@ class AlbumsController < ApplicationController
   def update
     @this_item = Album.find(params[:id])
     if @this_item.update(album_params)
-      redirect_to edit_album_path
+      redirect_to show_album_path(params[:id])
     else
       render :edit
     end

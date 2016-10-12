@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   post 'albums/new' => 'albums#create'
   get '/albums/:id', to: 'albums#show', as: 'show_album'
   get '/albums/:id/edit', to: 'albums#edit', as: 'edit_album'
-  patch '/albums/:id' => 'albums#update'
+  patch '/albums/:id/edit' => 'albums#update'
   patch '/albums/:id/vote', to: 'albums#vote', as: 'vote_album'
   delete '/albums/:id', to: 'albums#destroy', as: 'delete_album'
 

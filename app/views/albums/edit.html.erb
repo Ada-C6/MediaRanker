@@ -1,6 +1,6 @@
 <h2>Edit Albums</h2>
 
-<%= form_for @this_item, method: :patch do |f| %>
+<%= form_for @this_item, :url => { method: :patch} do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
 

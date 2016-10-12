@@ -30,7 +30,7 @@ class BooksController < ApplicationController
   def update
     @this_item = Book.find(params[:id])
     if @this_item.update(book_params)
-      redirect_to edit_book_path
+      redirect_to show_book_path(params[:id])
     else
       render :edit
     end

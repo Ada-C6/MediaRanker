@@ -11,13 +11,13 @@
   <li><%=link_to "Top Books", books_path%></li>
   <ul>
     <% @books.each do |item| %>
-      <li><%= item.title %></li>
+      <li><%= link_to item.title, show_book_path(item) %></li>
     <% end %>
   </ul>
   <li><%=link_to "Top Albums", albums_path%></li>
   <ul>
     <% @albums.each do |item| %>
-      <li><%= item.name %></li>
+      <li><%= link_to item.name, show_album_path(item) %></li>
     <% end %>
   </ul>
 </ul>
