@@ -5,14 +5,24 @@
 <h1>MAIN PAGE</h1>
 <p>This is page that is going to link to the other pages.</p>
 <hr />
-<!-- <div> could give class="col-md-4" -->
 
-<h1>Top Movies</h1>
 <p>Reveal all movies first. Then you can limit what shows on users main page.</p>
-  <% @movies.each do |movie| %>
-  <h2><%=link_to(movie.name, movies_path(movie[:id])) %></h2>
-  <% end %>
 
-  <h1>Top Books</h1>
-  <h1>Top Albums</h1>
-<!-- </div> -->
+<article>
+  <h1>Top Movies/All Movies</h1>
+    <% @movies.each do |movie| %>
+    <h1><%= link_to(movie.name, movie_path(movie.id)) %>
+    <%= "Ranked: " %>
+    <% end %>
+  </h1>
+</article>
+
+<article>
+
+   <h1>Top Books</h1>
+   <% @books.each do |book| %>
+   <h1><%= link_to(book.name, book_path(book.id)) %>
+   <% end %>
+   </h1>
+
+</article>
