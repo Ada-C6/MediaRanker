@@ -17,6 +17,22 @@ why isn't my button row styling not applying to my add movie, add book, add alub
 
 
 
+3. this article was super helpful: http://uxmovement.com/buttons/when-to-use-a-button-or-link/
+
+
+4. <!-- link_to
+  <h1><%=link_to "MEDIA RANKER", users_path %></h1> -->
+
+
+5. This works
+
+    <button><%=link_to "View All Movies", movies_path %></button>
+
+
+6. <input id="movie_upvote" name="movie[upvote]" type="hidden" />
+how the eff am i going to keep track of votes
+http://docs.railsbridge.org/intro-to-rails/allow_people_to_vote
+
 
 
 1. not sure if this will be helfpul.
