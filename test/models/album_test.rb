@@ -23,5 +23,5 @@ class AlbumTest < ActiveSupport::TestCase
     albums(:two).description = nil
     assert albums(:one).valid?
   end
-
+  
 end

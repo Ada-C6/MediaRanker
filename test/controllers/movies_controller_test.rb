@@ -40,9 +40,9 @@ test "should be able to update" do
   end
 
   test "should be able to upvote" do
-    @request.env['HTTP_REFERER'] = '/movies/index'
-    post :upvote, {id: 1}
-    assert_response :redirect
+      @request.env['HTTP_REFERER'] = '/movies/index'
+      post :upvote, {id: 1}
+      assert_response :redirect
   end
-
+  
 end
