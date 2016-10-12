@@ -11,7 +11,7 @@
     <%= link_to "#{movie.name}", movie_path %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "update", id: movie.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: movie.id }, method: :patch %>
   </p>
   <% end %>
   <p>

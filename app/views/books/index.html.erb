@@ -11,7 +11,7 @@
     <%= link_to "#{book.name}", book_path %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "update", id: book.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: book.id }, method: :patch %>
   </p>
   <% end %>
   <p>

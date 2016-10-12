@@ -13,7 +13,7 @@
     <%= @book.description %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "update", id: book.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: book.id }, method: :patch %>
   </p>
   <p>
     <%= link_to 'edit', edit_book_path %>

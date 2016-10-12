@@ -20,18 +20,44 @@ class BooksController < ApplicationController
   end
 
   def new
+    @book = Book.new
   end
 
   def create
+    @params = params
+    @book = Book.new
+    @book.name = params[:book][:name]
+    @book.author = params[:book][:author]
+    @book.description = params[:book][:description]
+    @book.save
+    redirect_to book_path(@book.id)
   end
 
   def edit
+    show
   end
 
   def update
+    @params = params
+    @book = find_one
+    @book.name = params[:book][:name]
+    @book.author = params[:book][:author]
+    @book.description = params[:book][:description]
+    @book.save
+    redirect_to book_path(@book.id)
+  end
+
+  def upvote
+    @book = find_one
+    @book.votes += 1
+    @book.save
+    redirect_to album_path(@book.id)
   end
 
   def delete
+    @book = find_one
+    @book.destroy
+    redirect_to books_path
   end
 end
 

@@ -20,18 +20,44 @@ class AlbumsController < ApplicationController
   end
 
   def new
+    @album = Album.new
   end
 
   def create
+    @params = params
+    @album = Album.new
+    @album.name = params[:album][:name]
+    @album.artist = params[:album][:artist]
+    @album.description = params[:album][:description]
+    @album.save
+    redirect_to album_path(@album.id)
   end
 
   def edit
+    show
   end
 
   def update
+    @params = params
+    @album = find_one
+    @album.name = params[:album][:name]
+    @album.artist = params[:album][:artist]
+    @album.description = params[:album][:description]
+    @album.save
+    redirect_to album_path(@album.id)
+  end
+
+  def upvote
+    @album = find_one
+    @album.votes += 1
+    @album.save
+    redirect_to album_path(@album.id)
   end
 
   def delete
+    @album = find_one
+    @album.destroy
+    redirect_to albums_path
   end
 end
 

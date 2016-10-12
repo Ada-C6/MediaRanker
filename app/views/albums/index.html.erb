@@ -12,7 +12,7 @@
     <%= link_to "#{album.name}", album_path %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "update", id: album.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: album.id }, method: :patch %>
   </p>
   <% end %>
   <p>

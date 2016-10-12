@@ -13,7 +13,7 @@
     <%= @movie.description %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "update", id: movie.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: movie.id }, method: :patch %>
   </p>
   <p>
     <%= link_to 'edit', edit_movie_path %>
