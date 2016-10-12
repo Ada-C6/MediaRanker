@@ -1,21 +1,26 @@
 <section>
   <h3>Top Movies</h3>
-  <% @movies.sort_by_rank.each do |movie| %>
-  <p><%= link_to "#{movie.name}" %> <span>Ranked: <%= ranking(movie) %></span></p>
+  <ol>
+    <% @movies.sort_by_rank.each do |movie| %>
+    <li><%= link_to "#{movie.name}", movie_path(movie) %> <span>Ranked: <%= ranking(movie) %></span></li>
   <% end %>
+</ol>
 </section>
 
 <section>
   <h3>Top Books</h3>
-  <% @books.sort_by_rank.each do |book| %>
-  <p><%= link_to "#{book.title}" %> <span>Ranked: <%= ranking(book) %></span></p>
-  <% end %>
+  <ol>
+    <% @books.sort_by_rank.each do |book| %>
+    <li><%= link_to "#{book.title}", book_path(book) %> <span>Ranked: <%= ranking(book) %></span></li>
+    <% end %>
+  </ol>
 </section>
 
 <section>
   <h3>Top Albums</h3>
-  <% @albums.sort_by_rank.each do |album| %>
-  <p><%= link_to "#{album.name}" %> <span>Ranked: <%= ranking(album) %></span></p>
-  <% end %>
-
+  <ol>
+    <% @albums.sort_by_rank.each do |album| %>
+    <li><%= link_to "#{album.name}", album_path(album) %> <span>Ranked: <%= ranking(album) %></span></li>
+    <% end %>
+  </ol>
 </section>
