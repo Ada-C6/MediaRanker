@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  author: MyString
-  description: MyString
-  rank: 1
+    id: 1
+    title: "Book1"
+    author: "Author1"
+    description: "A great first book!"
+    rank: 0
 
 two:
-  title: MyString
-  author: MyString
-  description: MyString
-  rank: 1
+    id: 2
+    title: "Book2"
+    author: "Author2"
+    description: "A great second book!"
+    rank: 0

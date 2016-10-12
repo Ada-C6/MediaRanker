@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  artist: MyString
-  description: MyString
-  rank: 1
+    id: 1
+    title: "Album1"
+    artist: "Artist1"
+    description: "A great first album!"
+    rank: 0
 
 two:
-  title: MyString
-  artist: MyString
-  description: MyString
-  rank: 1
+    id: 2
+    title: "Album2"
+    artist: "Artist2"
+    description: "A great second album!"
+    rank: 0

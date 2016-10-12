@@ -7,7 +7,7 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    get :show, {id: 1}
     assert_response :success
   end
 
@@ -16,29 +16,33 @@ class MoviesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get create" do
-    get :create
-    assert_response :success
+  test "should create an entity" do
+    assert_difference('Movie.count', 1) do
+      post_params = { movie: { title: "Movie Title", author: "Grace Hopper", description: "Great movie on computers!" }}
+      post :create, post_params
+    end
+    assert_response :redirect
   end
-
+  #
   test "should get edit" do
-    get :edit
+    get :edit, {id: 1}
     assert_response :success
   end
 
-  test "should get update" do
-    get :update
-    assert_response :success
+test "should be able to update" do
+    put :update, :id => movies(:one), :movie => {:title => 'New Title'}
+    assert_equal "New Title", Movie.find(movies(:one).id).title
   end
 
-  test "should get destroy" do
-    get :destroy
-    assert_response :success
+  test "should be able to delete" do
+    delete :destroy, {id: 1 }
+    assert_response :redirect
   end
 
-  test "should get upvote" do
-    get :upvote
-    assert_response :success
+  test "should be able to upvote" do
+    @request.env['HTTP_REFERER'] = '/movies/index'
+    post :upvote, {id: 1}
+    assert_response :redirect
   end
 
 end

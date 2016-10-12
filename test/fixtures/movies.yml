@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  director: MyString
-  description: MyString
-  rank: 1
+    id: 1
+    title: "Movie1"
+    director: "Director1"
+    description: "A great first movie!"
+    rank: 0
 
 two:
-  title: MyString
-  director: MyString
-  description: MyString
-  rank: 1
+    id: 2
+    title: "Movie2"
+    director: "Director2"
+    description: "A great second movie!"
+    rank: 0
