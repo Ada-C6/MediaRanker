@@ -3,10 +3,14 @@
 Rails.application.routes.draw do
   root 'media_ranker#index'
   resources :mediaranker
-  # get 'media_ranker/index'
   resources :albums
+  patch 'albums/:id/upvote' => 'albums#upvote'
+
   resources :books
+  patch 'books/:id/upvote' => 'books#upvote'
+
   resources :movies
+  patch 'movies/:id/upvote' => 'movies#upvote'
 end
 
 
