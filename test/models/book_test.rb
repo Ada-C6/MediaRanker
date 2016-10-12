@@ -6,10 +6,11 @@ class BookTest < ActiveSupport::TestCase
     assert book.valid?
   end
 
-  test "Cannot create two books with the same title" do
+  test "Cannot create two books with the same title and author" do
     book1 = Book.create!(name: "Atlas Shrugged", author: "Ayn Rand", description: "Libertarian snobbery")
     book2 = Book.new(name: "Atlas Shrugged", author: "Ayn Rand", description: "Libertarian awesomeness")
     assert_not book2.valid?
+    assert_includes book2.errors, :name
   end
 
   test "Can create two books with different titles" do

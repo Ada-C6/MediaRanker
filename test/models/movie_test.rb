@@ -6,10 +6,11 @@ class MovieTest < ActiveSupport::TestCase
     assert movie.valid?
   end
 
-  test "Cannot create two movies with the same title" do
+  test "Cannot create two movies with the same title and director" do
     movie1 = Movie.create!(name: "Goodfellas", director: "Martin Scorcese", description: "Mob movie I've never seen")
-    movie2 = Movie.new(name: "Goodfellas", director: "Scorcese", description: "I've never seen this movie")
+    movie2 = Movie.new(name: "Goodfellas", director: "Martin Scorcese", description: "I've never seen this movie")
     assert_not movie2.valid?
+    assert_includes movie2.errors, :name
   end
 
   test "Can create two movies with different titles" do

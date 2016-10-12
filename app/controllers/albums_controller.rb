@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
-
+    @album.upvotes = 0
     if @album.save
       redirect_to album_path(@album)
     else
