@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-  attr_reader :upvote
 
   def index
     @movies = Movie.all
