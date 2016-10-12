@@ -13,7 +13,6 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.new(movie_params)
-    @movie.rank = 0
 
     if @movie.save
       # saved successfully

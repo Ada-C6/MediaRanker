@@ -1,0 +1,21 @@
+<%# name, title, rank, description  %>
+<h1><%= "#{ @album.name }" %></h1>
+
+<h3><%= "Artist: #{ @album.artist }" %></h3>
+<section>
+  <h4><%= "# of Votes: #{ @album.rank }" %></h4>
+  <h4><%= "Description: #{ @album.description }" %></h4>
+</section>
+
+<%# buttons: edit, delete, upvote, view all movies, view all media  %>
+<section>
+  <%= button_to "UpVote", upvote_album_path(@album.id), method: :patch %>
+
+
+  <%= button_to "Edit", edit_album_path(@album.id), method: :get %>
+  <%= button_to "Delete", album_path(@album.id), method: :delete,
+        data: {confirm: "Are you sure you want to delete permanently?"}%>
+
+  <%= button_to "View all Albums", albums_path, method: :get %>
+  <%= button_to "View all Media", welcome_index_path, method: :get %>
+</section>

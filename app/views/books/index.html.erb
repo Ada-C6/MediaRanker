@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th># of Votes</th>
+    <th>Book Name</th>
+    <th>UpVote</th>
+  </tr>
+
+  <% @books_by_rank.each do | book | %>
+    <tr>
+        <td><%= book.rank %></td>
+        <td><%= link_to "#{book.name}", book_path(book.id) %></td>
+        <td><%= button_to "UpVote", upvote_book_path(book.id), method: :patch %></td>
+    </tr>
+  <% end  %>
+</table>
+
+<section>
+  <%= button_to "View all Media", welcome_index_path, method: :get %>
+  <%= button_to "Add a Book", new_book_path, method: :get %>
+</section>
