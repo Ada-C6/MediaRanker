@@ -61,4 +61,9 @@ class SongsControllerTest < ActionController::TestCase
       delete :destroy, {id: songs(:anywhere).id }
     end
   end
+
+  test "responds with error if file isn't found" do
+    delete :destroy, {id: 1000}
+    assert_response :missing
+  end
 end

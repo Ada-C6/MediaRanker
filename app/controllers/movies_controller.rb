@@ -4,7 +4,11 @@ class MoviesController < ApplicationController
   end
 
   def find_movie
-    return Movie.find(params[:id].to_i)
+    if Movie.exists?(params[:id].to_i) == true
+      return Movie.find(params[:id].to_i)
+    else
+      render :status => 404
+    end
   end
 
   def show
@@ -76,7 +80,7 @@ class MoviesController < ApplicationController
 
   def destroy
     @mymovie = find_movie
-    if @mymovie != nil
+    if @mymovie.class == Movie
       @mymovie.destroy
       redirect_to movies_path
     end

@@ -4,7 +4,11 @@ class SeinfeldsController < ApplicationController
   end
 
   def find_seinfeld
-    return Seinfeld.find(params[:id].to_i)
+    if Seinfeld.exists?(params[:id].to_i) == true
+      return Seinfeld.find(params[:id].to_i)
+    else
+      render :status => 404
+    end
   end
 
   def show
@@ -76,7 +80,7 @@ class SeinfeldsController < ApplicationController
 
   def destroy
     @myseinfeld = find_seinfeld
-    if @myseinfeld != nil
+    if @myseinfeld.class == Seinfeld
       @myseinfeld.destroy
       redirect_to seinfelds_path
     end

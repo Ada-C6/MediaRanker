@@ -4,7 +4,11 @@ class BooksController < ApplicationController
   end
 
   def find_book
-    return Book.find(params[:id].to_i)
+    if Book.exists?(params[:id].to_i) == true
+      return Book.find(params[:id].to_i)
+    else
+      render :status => 404
+    end
   end
 
   def show
@@ -76,7 +80,7 @@ class BooksController < ApplicationController
 
   def destroy
     @mybook = find_book
-    if @mybook != nil
+    if @mybook.class == Book
       @mybook.destroy
       redirect_to books_path
     end

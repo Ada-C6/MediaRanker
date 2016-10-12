@@ -4,7 +4,11 @@ class SongsController < ApplicationController
   end
 
   def find_song
-    return Song.find(params[:id].to_i)
+    if Song.exists?(params[:id].to_i) == true
+      return Song.find(params[:id].to_i)
+    else
+      render :status => 404
+    end
   end
 
   def show
@@ -76,7 +80,7 @@ class SongsController < ApplicationController
 
   def destroy
     @mysong = find_song
-    if @mysong != nil
+    if @mysong.class == Song
       @mysong.destroy
       redirect_to songs_path
     end
