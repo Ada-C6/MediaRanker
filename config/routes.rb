@@ -1,4 +1,61 @@
 Rails.application.routes.draw do
+  get 'media/index' => 'media#index', as: 'media'
+  root 'media#index'
+
+
+patch 'books/:id/upvote' => 'books#upvote'
+patch 'movies/:id/upvote' => 'movies#upvote'
+patch 'albums/:id/upvote' => 'albums#upvote'
+
+
+Rails.application.routes.draw do
+  resources :albums, :books, :movies
+end
+
+  # get 'media/index'
+
+  # get 'albums/index'
+
+  # get 'albums/show'
+
+  # get 'albums/edit'
+
+  # get 'albums/update'
+
+  # get 'albums/new'
+
+  # get 'albums/create'
+
+  # get 'albums/destroy'
+
+  # get 'books/index'
+
+  # get 'books/show'
+
+  # get 'books/edit'
+
+  # get 'books/update'
+
+  # get 'books/new'
+
+  # get 'books/create'
+
+  # get 'books/destroy'
+
+  # get 'movies/index'
+
+  # get 'movies/show'
+
+  # get 'movies/edit'
+
+  # get 'movies/update'
+
+  # get 'movies/new'
+
+  # get 'movies/create'
+
+  # get 'movies/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,9 @@
+<h1><%=@this_book.name%></h1>
+<h2>Written By: <%= @this_book.author %></h2>
+<h4>Rank: <%=@this_book.rank%></h4>
+<p><%=@this_book.description%></p>
+<%= button_to("Upvote", {action: "upvote", id: @this_book.id}, method: :patch) %>
+<%= button_to("Edit", {action: "edit", id: @this_book.id}, method: :get) %>
+<%= button_to("Delete", {action: "destroy", id: @this_book.id}, method: :delete, data: {confirm:  "are you sure?"}) %>
+<%= button_to("View All Books", {action: "index"}, method: :get) %>
+<%= button_to("View All Media", media_path, method: :get) %>
