@@ -1,0 +1,8 @@
+<h3>Ranked: <%= "#{ media.upvotes }" %></h3>
+<h4><%= "#{ media.description }" %></h4>
+
+<%= button_to "Upvote", action: :vote, id: media.id %>
+<%= button_to "Edit #{ media.name }", url_for(action: 'edit', controller: media) %>
+<%= button_to "DELETE", url_for(media), method: :delete, data: { confirm: "Are you really sure?" } %>
+<%= button_to "View all Albums", polymorphic_url(type), method: :get %>
+<%= button_to "View all Media", root_path, method: :get %>
