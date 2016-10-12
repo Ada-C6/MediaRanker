@@ -16,9 +16,13 @@ Rails.application.routes.draw do
 
   post 'albums/create'
 
+  get 'albums/create' => 'albums#new' # For refresh of mis-completed form
+
   get 'albums/:id/edit' => 'albums#edit', as: 'albums_edit'
 
   put 'albums/:id/update' => 'albums#update', as: 'albums_update'
+
+  get 'albums/:id/update' => 'albums#edit' # For refresh of mis-completed form
 
   patch 'albums/:id/update' => 'albums#update', as: 'albums_upvote'
 
@@ -34,9 +38,13 @@ Rails.application.routes.draw do
 
   post 'books/create'
 
+  get 'books/create' => 'books#new' # For refresh of mis-completed form
+
   get 'books/:id/edit' => 'books#edit', as: 'books_edit'
 
   put 'books/:id/update' => 'books#update', as: 'books_update'
+
+  get 'books/:id/update' => 'books#edit' # For refresh of mis-completed form
 
   patch 'books/:id/update' => 'books#update', as: 'books_upvote'
 
@@ -50,9 +58,13 @@ Rails.application.routes.draw do
 
   get 'movies/new'
 
+  get 'movies/create' => 'movies#new' # For refresh of mis-completed form
+
   post 'movies/create'
 
   get 'movies/:id/edit' => 'movies#edit', as: 'movies_edit'
+
+  get 'movies/:id/update' => 'movies#edit' # For refresh of mis-completed form
 
   put 'movies/:id/update' => 'movies#update', as: 'movies_update'
 

@@ -13968,3 +13968,587 @@ Processing by MoviesController#update as HTML
   [1m[35m (0.1ms)[0m  rollback transaction
   Rendered movies/edit.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/2/update" for ::1 at 2016-10-12 13:44:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/movies/2/update"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.5ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.9ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.8ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.4ms)
+
+
+Started GET "/movies/2/update" for ::1 at 2016-10-12 13:45:10 -0700
+
+ActionController::RoutingError (No route matches [GET] "/movies/2/update"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.4ms)
+
+
+Started GET "/main" for ::1 at 2016-10-12 13:45:13 -0700
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.8ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 327ms (Views: 314.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/albums/show/12" for ::1 at 2016-10-12 13:45:15 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered albums/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 67ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/12/edit" for ::1 at 2016-10-12 13:45:17 -0700
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered albums/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/albums/12/update" for ::1 at 2016-10-12 13:45:20 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hl8CE5SXcsqha+lF+ur/q94/axGHJXqzJyDwkyelDHtorLpD/B8RvsgWviM98yOrEdN0akjNbhxa9GIm9ls/Pw==", "album"=>{"title"=>"Fearless", "artist"=>"", "description"=>"Pop/country hit music."}, "commit"=>"Update Album", "id"=>"12"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'Fearless' AND "albums"."id" != 12 AND "albums"."artist" = '') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.1ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'Fearless' AND "albums"."id" != 12 AND "albums"."artist" = '') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered albums/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/12/update" for ::1 at 2016-10-12 13:45:22 -0700
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered albums/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 13:45:22 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-12 13:47:37 -0700
+Processing by MainsController#index as HTML
+  Parameters: {"authenticity_token"=>"X2Y+7ai8VK1padDpqdOX9GKxl7F2x8K3imNuG9au/F0plYa9wDQ32QAUh49uykv0rV2Iyrkv1hj3t/yuB1DPGQ=="}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 49ms (Views: 39.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/movies/show/2" for ::1 at 2016-10-12 13:47:39 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (1.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-10-12 13:47:41 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/movies/2/update" for ::1 at 2016-10-12 13:47:44 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZciuuDuU/DDSz4+ty5CBsLFWNYPjB1ACZ8d2a1Yk/TcTOxboUxyfRLuy2MsMiV2wfroq+CzvRK0aE+Teh9rOcw==", "movie"=>{"title"=>"My Neighbor Totoro", "director"=>"", "description"=>"Movie about forest spirits. "}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'My Neighbor Totoro' AND "movies"."id" != 2 AND "movies"."director" = '') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mMovie Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'My Neighbor Totoro' AND "movies"."id" != 2 AND "movies"."director" = '') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered movies/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/2/update" for ::1 at 2016-10-12 13:47:46 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 13:47:46 -0700
+
+
+Started GET "/movies/2/update" for ::1 at 2016-10-12 13:47:48 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:47:48 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-12 13:48:09 -0700
+Processing by MainsController#index as HTML
+  Parameters: {"authenticity_token"=>"Sz40im7iGe8xQOQkJOx4QlvqcUaBVraHCAp9vxazNLI9zYzaBmp6m1g9s0Lj9aRClAZuPU6+oih13u8Kx00H9g=="}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.8ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/index" for ::1 at 2016-10-12 13:48:11 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-10-12 13:48:12 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies/create" for ::1 at 2016-10-12 13:48:20 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vk5qnOzpFb2g0J9KDv4Td8SrMBKq8oGXPxkKcOawMc3IvdLMhGF2ycmtyCzJ5893C0cvaWUalThCzZjFN04CiQ==", "movie"=>{"title"=>"ASLKDjfLk", "director"=>"laksdfjlsk", "description"=>""}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'ASLKDjfLk' AND "movies"."director" = 'laksdfjlsk') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered movies/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/create" for ::1 at 2016-10-12 13:48:22 -0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 13:48:22 -0700
+
+
+Started POST "/movies/create" for ::1 at 2016-10-12 13:49:22 -0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UWh9h4uxgjF7IOMxntE2uiZ5ocj1HvUmxPWDsK6dz1cnm8XX4znhRRJdtFdZyOq66ZW+szr24Ym5IREFf2P8Ew==", "movie"=>{"title"=>"Kubo and the Two Strings", "director"=>"Travis Knight", "description"=>"Magic, adventure, and family."}, "commit"=>"Create Movie"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'Kubo and the Two Strings' AND "movies"."director" = 'Travis Knight') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "director", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Kubo and the Two Strings"], ["director", "Travis Knight"], ["description", "Magic, adventure, and family."], ["created_at", "2016-10-12 20:49:22.296024"], ["updated_at", "2016-10-12 20:49:22.296024"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/show/8
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/show/8" for ::1 at 2016-10-12 13:49:22 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered movies/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/main" for ::1 at 2016-10-12 13:49:24 -0700
+Processing by MainsController#index as HTML
+  Parameters: {"authenticity_token"=>"T2u5zluLkUL2w91o/B4iJXY1hIzWwe17oomZKo5oAYA5mAGeMwPyNp++ig47B/4ludmb9xkp+dTfXQufX5YyxA=="}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 39ms (Views: 30.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/albums/show/4" for ::1 at 2016-10-12 13:50:17 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered albums/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/albums/4/edit" for ::1 at 2016-10-12 13:50:19 -0700
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered albums/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/albums/4/update" for ::1 at 2016-10-12 13:50:21 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FhU+eDjgon9GRlzaIxLU6VizlbxtTT0nsKcnpdtLtyeq+ypiGvh/ZRkThWvlZdTao7RLT5dIFvjFg4rRpMdmA==", "album"=>{"title"=>"The Red Album", "artist"=>"", "description"=>"Classic Beatles album. Red color."}, "commit"=>"Update Album", "id"=>"4"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.1ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = '') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = '') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered albums/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/4/update" for ::1 at 2016-10-12 13:50:22 -0700
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered albums/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 13:50:23 -0700
+
+
+Started PUT "/albums/4/update" for ::1 at 2016-10-12 13:50:29 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OyyYuJdNMmSgeIYF+wtH1IWTxQxFAANNQy34Lq3VrctN3yDo/8VREMkF0WM8EpvUSn/ad4roF+I++WqbfCuejw==", "album"=>{"title"=>"The Red Album", "artist"=>"The Beatles", "description"=>"Classic Beatles album. Red color..."}, "commit"=>"Update Album", "id"=>"4"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.1ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = 'The Beatles') LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "albums" SET "description" = ?, "updated_at" = ? WHERE "albums"."id" = ?[0m  [["description", "Classic Beatles album. Red color..."], ["updated_at", "2016-10-12 20:50:29.972354"], ["id", 4]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.2ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = 'The Beatles') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/show/4
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/albums/show/4" for ::1 at 2016-10-12 13:50:29 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered albums/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-12 13:50:35 -0700
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC[0m
+  Rendered albums/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/new" for ::1 at 2016-10-12 13:50:39 -0700
+Processing by AlbumsController#new as HTML
+  Rendered albums/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums/create" for ::1 at 2016-10-12 13:50:44 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ptw+ngVodDUQyRpAUYAxK5Q1LUUAq1coJGOVVbqqoSVIL4bObeAXQXm0TSaWme0rW9kyPs9DQ4dZtwfga1SSYQ==", "album"=>{"title"=>"ASKsdlfjsk", "artist"=>"", "description"=>""}, "commit"=>"Create Album"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'ASKsdlfjsk' AND "albums"."artist" = '') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered albums/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/albums/create" for ::1 at 2016-10-12 13:51:49 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NnNlwtgkcAQhgkZVyNxRWGUTUTl02ipb/3P0aDNEvLFAgN2SsKwTcEj/ETMPxY1Yqv9OQrsyPvSCp2bd4rqP9Q==", "album"=>{"title"=>"Greatest Hits", "artist"=>"Cat Stevens", "description"=>"Cat Stevens' greatest hits."}, "commit"=>"Create Album"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.3ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'Greatest Hits' AND "albums"."artist" = 'Cat Stevens') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "albums" ("title", "artist", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Greatest Hits"], ["artist", "Cat Stevens"], ["description", "Cat Stevens' greatest hits."], ["created_at", "2016-10-12 20:51:49.340559"], ["updated_at", "2016-10-12 20:51:49.340559"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/show/19
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/albums/show/19" for ::1 at 2016-10-12 13:51:49 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 19]]
+  Rendered albums/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-12 13:51:53 -0700
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms)
