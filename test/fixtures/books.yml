@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  author: MyString
-  genre: MyString
-  description: MyText
-  rank: 1
+red_fern:
+  title: "Where the Red Fern Grows"
+  author: "Wilson Rawls"
+  genre: "Children"
+  description: "About a boy who buys and trains two Redbone Coonhound hunting dogs"
+  rank: 54
 
-two:
-  title: MyString
-  author: MyString
-  genre: MyString
-  description: MyText
-  rank: 1
+dingo:
+  title: "The Dingo Ate Your Baby"
+  author: "Anonymous"
+  genre: "Non-Fiction"
+  description: "One time, a dingo ate a baby"
+  rank: 3

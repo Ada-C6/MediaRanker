@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  artist: MyString
-  album: MyString
-  genre: MyString
-  rank: 1
+anywhere:
+  title: "Anywhere"
+  artist: "Dillon Francis"
+  album: "Anywhere"
+  genre: "Dance"
+  rank: 15
 
-two:
-  title: MyString
-  artist: MyString
-  album: MyString
-  genre: MyString
-  rank: 1
+cool_girl:
+  title: "Cool Girl"
+  artist: "Tove Lo"
+  album: "Cool Girl"
+  genre: "Dance"
+  rank: 30

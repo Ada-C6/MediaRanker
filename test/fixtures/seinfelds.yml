@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  season: 1
-  episode: 1
-  description: MyText
-  rank: 1
+peephole:
+  title: "The Reverse Peephole"
+  season: 9
+  episode: 12
+  description: "Elaine's boyfriend, Puddy, wears a fur coat; Jerry starts living without a wallet; Newman may be evicted."
+  rank: 63
 
-two:
-  title: MyString
-  season: 1
-  episode: 1
-  description: MyText
-  rank: 1
+slicer:
+  title: "The Slicer"
+  season: 9
+  episode: 7
+  description: "Kramer gets into meat slicing; Jerry dates a doctor (Marcia Cross) who isn't impressed with his job; George's new boss is a former adversary."
+  rank: 54

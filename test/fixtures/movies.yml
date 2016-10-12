@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  director: MyString
-  genre: MyString
-  description: MyText
-  rank: 1
+mean_girls:
+  title: "Mean Girls"
+  director: "Mark Waters"
+  genre: "Comedy"
+  description: "Some Girls in High School"
+  rank: 3
 
-two:
-  title: MyString
-  director: MyString
-  genre: MyString
-  description: MyText
-  rank: 1
+how_to_lose:
+  title: "How to Lose a Guy in 10 Days"
+  director: "Donald Petrie"
+  genre: "Romance"
+  description: "A great film - high quality cinema (in all seriousness)"
+  rank: 123
