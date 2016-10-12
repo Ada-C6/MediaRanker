@@ -4,8 +4,9 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+black_celebration:
+ name: Black Celebration
+ artist: Depeche Mode
+ ranking: 0
+ description: Tunes
