@@ -2,47 +2,51 @@ Rails.application.routes.draw do
   root to: 'homepages#index'
   get 'homepages/index', as: 'index'
 
+  get 'hompages/show' => 'homepages#show', as: 'show_homepages'
+
   get 'movies/index' => 'movies#index', as: 'index_movies'
 
-  get 'movies/show' => 'movies#show', as: 'show_movies'
+  get 'movies/show/:id' => 'movies#show', as: 'show_movies'
 
   get 'movies/new' => 'movies#new', as: 'new_movies'
 
   post 'movies/create' => 'movies#create', as:'create_movies'
 
-  get 'movies/edit' => 'movies#edit', as: 'edit_movies'
+  get 'movies/:id/edit' => 'movies#edit', as: 'edit_movies'
 
-  patch 'movies/update' => 'movies#update', as: 'update_movies'
+  patch 'movies/:id/update' => 'movies#update', as: 'update_movies'
 
   delete 'movies/destroy' => 'movies#destroy', as: 'delete_movies'
 
   get 'books/index' => 'books#index', as: 'index_books'
 
-  get 'books/show' => 'books#show', as: 'show_books'
+  get 'books/show/:id' => 'books#show', as: 'show_books'
 
   get 'books/new' => 'books#new', as: 'new_books'
 
   post 'books/create' => 'books#create', as: 'create_books'
 
-  get 'books/edit' => 'books#edit', as: 'edit_books'
+  get 'books/:id/edit' => 'books#edit', as: 'edit_books'
 
-  patch 'books/update' => 'books#update', as: 'update_books'
+  patch 'books/:id/update' => 'books#update', as: 'update_books'
 
   delete 'books/destroy' => 'books#destroy', as: 'delete_books'
 
   get 'albums/index' => 'albums#index', as: 'index_albums'
 
-  get 'albums/show' => 'albums#show', as: 'show_albums'
+  get 'albums/show/:id' => 'albums#show', as: 'show_albums'
 
   get 'albums/new' => 'albums#new', as: 'new_albums'
 
   post 'albums/create' => 'albums#create', as: 'create_albums'
 
-  get 'albums/edit' => 'albums#edit', as: 'edit_albums'
+  get 'albums/:id/edit' => 'albums#edit', as: 'edit_albums'
 
-  patch 'albums/update' => 'albums#update', as: 'update_albums'
+  patch 'albums/:id/update' => 'albums#update', as: 'update_albums'
 
-  delete 'albums/destroy' => 'albums#destroy', as: 'delete_albums'
+  patch 'albums/:id/upvote' => 'albums#upvote', as: 'upvote_albums'
+
+  delete 'albums/:id/destroy' => 'albums#destroy', as: 'delete_albums'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

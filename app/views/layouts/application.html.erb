@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MediaRanker</title>
+  <title>AwesomeSauce</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>MediaRanker</h1>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+      </ul>
+    </nav>
+  </header>
 
 <%= yield %>
 
