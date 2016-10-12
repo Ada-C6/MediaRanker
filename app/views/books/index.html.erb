@@ -8,14 +8,14 @@
     ranked: book.votes
   </p>
   <p>
-    <%= link_to "#{book.name}", book_path %>
+    <%= link_to "#{book.name}", book_path(book.id) %>
   </p>
   <p>
     <%= button_to 'upvote', {action: "upvote", id: book.id }, method: :patch %>
   </p>
   <% end %>
   <p>
-    <%= link_to 'Media Ranker', mediaranker_index_path %>
+    <%= link_to 'Media Ranker', root_path %>
   </p>
   <p>
     <%= link_to 'add new', new_book_path %>

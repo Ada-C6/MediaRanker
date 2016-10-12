@@ -13,18 +13,18 @@
     <%= @album.description %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "upvote", id: album.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: @album.id }, method: :patch %>
   </p>
   <p>
     <%= link_to 'edit', edit_album_path %>
   </p>
   <p>
-    <%= button_to 'delete', {action: "destroy", id: album.id }, method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= button_to 'delete', {action: "destroy", id: @album.id }, method: :delete, data: {confirm: "Are you sure?"} %>
   </p>
   <p>
     <%= link_to 'view all', albums_path %>
   </p>
   <p>
-    <%= link_to 'Media Ranker', mediaranker_index_path %>
+    <%= link_to 'Media Ranker', root_path %>
   </p>
 </article>

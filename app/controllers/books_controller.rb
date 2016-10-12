@@ -1,13 +1,12 @@
 class BooksController < ApplicationController
 
   def find_n_sort_all
-    # @movies = Movie.all.sort {|a,b| b <=> a}
-    @books = Book.all.sort {|a,b| b <=> a}
-    # @albums = Album.all.sort {|a,b| b <=> a}
+    @books = Book.all
+    # @books = Book.all.sort {|a,b| b <=> a}
   end
 
   def find_one
-    return Album.find(params[:id].to_i)
+    return Book.find(params[:id].to_i)
   end
 
   def index
@@ -15,12 +14,12 @@ class BooksController < ApplicationController
   end
 
   def show
-    find_n_sort_all
-    @movie = find_one
+    @book = find_one
   end
 
   def new
     @book = Book.new
+    @path_name = books_path
   end
 
   def create
@@ -29,6 +28,7 @@ class BooksController < ApplicationController
     @book.name = params[:book][:name]
     @book.author = params[:book][:author]
     @book.description = params[:book][:description]
+    @book.votes = 0
     @book.save
     redirect_to book_path(@book.id)
   end
@@ -51,10 +51,10 @@ class BooksController < ApplicationController
     @book = find_one
     @book.votes += 1
     @book.save
-    redirect_to album_path(@book.id)
+    redirect_to books_path
   end
 
-  def delete
+  def destroy
     @book = find_one
     @book.destroy
     redirect_to books_path
@@ -63,5 +63,5 @@ end
 
 private
 def params
-  params.require(:book).permit(:name, :author, :description)
+  params.require(:book).permit(:name, :author, :description, :votes)
 end

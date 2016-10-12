@@ -2,11 +2,14 @@
 
 Rails.application.routes.draw do
   root 'media_ranker#index'
-  resources :mediaranker
+
+  resources :media_ranker
   resources :albums
+  # post 'albums/create' => 'albums#create'
   patch 'albums/:id/upvote' => 'albums#upvote'
 
   resources :books
+  # post 'books/create' => 'books#create'
   patch 'books/:id/upvote' => 'books#upvote'
 
   resources :movies

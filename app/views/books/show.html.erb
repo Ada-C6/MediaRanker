@@ -4,7 +4,7 @@
 <article>
   <h1><%= @book.name %></h1>
   <p>
-    directed by: <%= @book.artist %>
+    directed by: <%= @book.author %>
   </p>
   <p>
     ranked: <%= @book.votes %>
@@ -13,18 +13,18 @@
     <%= @book.description %>
   </p>
   <p>
-    <%= button_to 'upvote', {action: "upvote", id: book.id }, method: :patch %>
+    <%= button_to 'upvote', {action: "upvote", id: @book.id }, method: :patch %>
   </p>
   <p>
     <%= link_to 'edit', edit_book_path %>
   </p>
   <p>
-    <%= button_to 'delete', {action: "destroy", id: book.id }, method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= button_to 'delete', {action: "destroy", id: @book.id }, method: :delete, data: {confirm: "Are you sure?"} %>
   </p>
   <p>
     <%= link_to 'view all', books_path %>
   </p>
   <p>
-    <%= link_to 'Media Ranker', mediaranker_index_path %>
+    <%= link_to 'Media Ranker', root_path %>
   </p>
 </article>

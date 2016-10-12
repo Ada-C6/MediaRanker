@@ -9,14 +9,14 @@
     ranked: album.votes
   </p>
   <p>
-    <%= link_to "#{album.name}", album_path %>
+    <%= link_to album.name, album_path(album.id) %>
   </p>
   <p>
     <%= button_to 'upvote', {action: "upvote", id: album.id }, method: :patch %>
   </p>
   <% end %>
   <p>
-    <%= link_to 'Media Ranker', mediaranker_index_path %>
+    <%= link_to 'Media Ranker', root_path %>
   </p>
   <p>
     <%= link_to 'add new', new_album_path %>

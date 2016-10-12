@@ -1,9 +1,8 @@
 class AlbumsController < ApplicationController
 
   def find_n_sort_all
-    # @movies = Movie.all.sort {|a,b| b <=> a}
-    # @books = Book.all.sort {|a,b| b <=> a}
-    @albums = Album.all.sort {|a,b| b <=> a}
+    @albums = Album.all
+    # @albums = Album.all.sort {|a,b| b <=> a}
   end
 
   def find_one
@@ -15,12 +14,12 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    find_n_sort_all
     @album = find_one
   end
 
   def new
     @album = Album.new
+    @path_name = albums_path
   end
 
   def create
@@ -29,7 +28,9 @@ class AlbumsController < ApplicationController
     @album.name = params[:album][:name]
     @album.artist = params[:album][:artist]
     @album.description = params[:album][:description]
+    @album.votes = 0
     @album.save
+
     redirect_to album_path(@album.id)
   end
 
@@ -51,10 +52,10 @@ class AlbumsController < ApplicationController
     @album = find_one
     @album.votes += 1
     @album.save
-    redirect_to album_path(@album.id)
+    redirect_to albums_path
   end
 
-  def delete
+  def destroy
     @album = find_one
     @album.destroy
     redirect_to albums_path
@@ -63,5 +64,5 @@ end
 
 private
 def params
-  params.require(:album).permit(:name, :artist, :description)
+  params.require(:album).permit(:name, :artist, :description, :votes)
 end

@@ -8,14 +8,14 @@
     ranked: movie.votes
   </p>
   <p>
-    <%= link_to "#{movie.name}", movie_path %>
+    <%= link_to movie.name, movie_path(movie.id) %>
   </p>
   <p>
     <%= button_to 'upvote', {action: "upvote", id: movie.id }, method: :patch %>
   </p>
   <% end %>
   <p>
-    <%= link_to 'Media Ranker', mediaranker_index_path %>
+    <%= link_to 'Media Ranker', root_path %>
   </p>
   <p>
     <%= link_to 'add new', new_movie_path %>
