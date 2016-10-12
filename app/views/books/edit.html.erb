@@ -1,2 +1,2 @@
 <h1> Edit <%= @book.title %> </h1>
-<%= render partial: "form", locals: {http_method: :patch}%>
+<%= render partial: "layouts/form", locals: {http_method: :patch, media: @book}%>
