@@ -1,4 +1,7 @@
 class MediaController < ApplicationController
   def index
-  end 
+    @movies = Movie.all
+    @books = Book.all
+    @albums = Album.all
+  end
 end

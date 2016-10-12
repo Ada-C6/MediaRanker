@@ -5,6 +5,8 @@
 
 
 
+<%= button_to "Vote", vote_movie_path(@id), method: :patch %>
+
 <p><%=link_to "Edit", edit_movie_path(@id)%></p>
 <%= link_to "Delete", delete_movie_path(@id),  method: :delete , data: {confirm: "Are you really sure?"}%>
 

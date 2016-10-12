@@ -11,10 +11,12 @@ class MoviesController < ApplicationController
 
   def new
     @new_item = Movie.new
+
   end
 
   def create
     @new_item = Movie.new(movie_params)
+    @new_item.rank = 0
     @new_item.save
     redirect_to movies_path
   end
@@ -34,6 +36,15 @@ class MoviesController < ApplicationController
     end
   end
 
+  def vote
+    id = params[:id]
+    this_item = Movie.find(id)
+    this_item.rank +=1
+    this_item.save
+    redirect_to movies_path
+
+  end
+
   def destroy
     @item = Movie.find(params[:id]).destroy
     redirect_to movies_path
@@ -46,5 +57,5 @@ end
 private
 
 def movie_params
-  params.require(:movie).permit(:name, :director, :description, :rank)
+  params.require(:movie).permit(:name, :director, :description)
 end

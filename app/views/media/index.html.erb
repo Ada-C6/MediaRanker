@@ -2,7 +2,22 @@
 <h3>Ranking the Best of Everything</h3>
 
 <ul>
-  <li><%=link_to "Top Movies", 'www.google.com'%></li>
-  <li><%=link_to "Top Books", 'www.google.com'%></li>
-  <li><%=link_to "Top Albums", 'www.google.com'%></li>
+  <li><%=link_to "Top Movies", movies_path%></li>
+  <ul>
+    <% @movies.each do |item| %>
+      <li><%= link_to item.name, show_movie_path(item) %></li>
+    <% end %>
+  </ul>
+  <li><%=link_to "Top Books", movies_path%></li>
+  <ul>
+    <% @books.each do |item| %>
+      <li><%= item.title %></li>
+    <% end %>
+  </ul>
+  <li><%=link_to "Top Albums", movies_path%></li>
+  <ul>
+    <% @albums.each do |item| %>
+      <li><%= item.name %></li>
+    <% end %>
+  </ul>
 </ul>

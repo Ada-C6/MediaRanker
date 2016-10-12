@@ -6,11 +6,9 @@
   </tr
   <% @full_list.each do |item| %>
     <tr>
-      <td><%=item.id%></td>
+      <td><%=item.rank%></td>
       <td><%=link_to item.name, show_movie_path(item.id)%></td>
-      <td>TBD - Button to submit vote</td>
-
-
+      <td><%= button_to "Vote", vote_movie_path(item.id), method: :patch %></td>
     </tr>
   <% end %>
 </table>
