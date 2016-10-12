@@ -10,7 +10,7 @@
   <tr>
     <td>Ranked: <%= book.ranked %></td>
     <td><%= link_to(book.title, book_path(book.id)) %></td>
-
+    <td><%= button_to "Upvote", book_path(book.id), method: :get %></td>
   </tr>
   </table>
 
