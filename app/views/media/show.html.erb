@@ -1,0 +1,11 @@
+<h1>This One Medium</h1>
+<p>Ranking: <%= @my_medium.votes.count %> </p>
+<p>Name: <%= @my_medium.name %></p>
+<p>Artist: <%= @my_medium.artist %></p>
+<p>Description: <%= @my_medium.description %></p>
+
+<p><%= button_to("Upvote", upvote_media_path(@my_medium.id)) %></p>
+<p><%= button_to("Downvote", downvote_media_path(@my_medium.id)) %></p>
+<p><%= button_to("Edit Medium", edit_media_path(@my_medium.id), method: :get) %></p>
+<p><%= button_to("Delete Medium", delete_media_path(@my_medium.id), data: {confirm: "Are you sure you want to destroy this beautiful music?"}) %></p>
+

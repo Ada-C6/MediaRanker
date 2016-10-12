@@ -1,0 +1,16 @@
+<h1>Media!</h1>
+
+	<% @mediums.each do |medium| %>
+	<article>
+		<p>Ranking: <%= medium.votes.count %> </p>
+		<p>Name: <%= link_to(medium.name, show_media_path(medium.id)) %></p>
+		<p>Artist: <%=medium.artist %></p>
+		<p>Description: <%= medium.description %></p>
+
+		<p><%= button_to("Upvote", upvote_media_path(medium.id)) %></p>
+		<p><%= button_to("Downvote", downvote_media_path(medium.id)) %></p>
+		<p><%= button_to("Edit Medium", edit_media_path(medium.id), method: :get, action: :edit) %></p>
+		<p><%= button_to("Delete Medium", delete_media_path(medium.id), data: {confirm: "Are you sure you want to destroy this beautiful music?"}) %></p>
+	</article>
+	<% end %>
+
