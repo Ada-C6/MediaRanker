@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'site#index'
   resources :movies
 
   patch 'movies/:id/upvote', to: 'movies#upvote', as: 'upvote_movie'
