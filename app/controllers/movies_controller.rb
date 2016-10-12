@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   def index
+    @all_movies=Movie.order(rank: :desc)
   end
 
   def show
@@ -28,7 +29,7 @@ class MoviesController < ApplicationController
   def new
     @this_movie=Movie.new
     @movie_method= :post
-    @movie_path= movie_url(@this_movie)
+    @movie_path= movies_url
   end
 
   def create
@@ -37,6 +38,7 @@ class MoviesController < ApplicationController
     @this_movie.name = params[:movie][:name]
     @this_movie.director = params[:movie][:director]
     @this_movie.description = params[:movie][:description]
+    @this_movie.rank = 1
     
     @this_movie.save
     
@@ -44,6 +46,10 @@ class MoviesController < ApplicationController
   end
 
   def destroy
+    @this_movie=Movie.find(params[:id])
+    @this_movie.destroy
+
+    redirect_to movies_url
   end
 
   def upvote 
