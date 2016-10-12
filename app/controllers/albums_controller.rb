@@ -5,8 +5,10 @@ class AlbumsController < ApplicationController
 
     def upvote
         @album = Album.find(params[:id])
-        @album.upvote_one
-        @album.save
-        redirect_to albums_path
+        if @album.upvote_one
+            redirect_to albums_path
+        else
+            #raise error
+        end
     end
 end
