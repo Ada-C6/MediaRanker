@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   def all_media
     @movies = Movie.order('ranking DESC')
     @books = Book.order('ranking DESC')
+    @albums = Album.order('ranking DESC')
   end
 
   def upvote

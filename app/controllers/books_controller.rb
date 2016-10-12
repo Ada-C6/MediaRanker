@@ -47,7 +47,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Movie.find(params[:id]).destroy
+    @book = Book.find(params[:id]).destroy
     redirect_to books_path
   end
 
