@@ -1,9 +1,2 @@
 <h1><%= "#{ @book.name }" %></h1><h2>Written by: <%= "#{ @book.author }" %></h2>
-<h3>Ranked: <%= "#{ @book.upvotes }" %></h3>
-<h4><%= "#{ @book.description }" %></h4>
-
-<%= button_to "Upvote", action: :vote, id: @book.id %>
-<%= button_to "Edit #{ @book.name }", edit_book_path(@book), method: :get %>
-<%= button_to "DELETE", book_path(@book), method: :delete, data: { confirm: "Are you really sure?" } %>
-<%= button_to "View all Books", books_path, method: :get %>
-<%= button_to "View all Media", root_path, method: :get %>
+<%= render partial: '/layouts/show', locals: { media: @book, type: "books" } %>
