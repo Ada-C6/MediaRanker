@@ -1,6 +1,21 @@
 <h2>Add a new album</h2>
 
-<section>
+<article>
+
+  <% if @album.errors.any? %>
+    <section class = "errors">
+      <p>Whoops! We couldn't save your album because:</p>
+      <ul>
+        <% @album.errors.each do |column, message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+      <p>Please edit your entries and try again.</p>
+    </section>
+  <% end %>
+
   <%= form_for @album, url: albums_create_path, method: :post do |f| %>
 
     <%= f.label :title %>
@@ -15,4 +30,5 @@
     <%= f.submit %>
 
   <% end %>
-</section>
+
+</article>

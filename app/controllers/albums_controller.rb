@@ -12,8 +12,14 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    album = Album.create(filter_params)
-    redirect_to albums_show_path(album.id)
+    @album = Album.new(filter_params)
+
+    if @album.save
+      redirect_to albums_show_path(@album.id)
+    else
+      render :new
+    end
+
   end
 
   def edit
