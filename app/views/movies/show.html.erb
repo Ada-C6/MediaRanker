@@ -1,3 +1,16 @@
 <p>
   movies show
 </p>
+
+<h1>
+  <%= @movie.name  %>
+  <small>Directed by: <%= @movie.director %> </small>
+</h1>
+<h4>Ranked:</h4>
+<p><%= @movie.description %></p>
+<p id="upvote"><%= link_to "Upvote" %></p>
+
+<p class="buttons"> <%= link_to "Edit #{@movie.name}", edit_movie_path %>
+<%= link_to "Delete", movie_path, method: :delete, confirm: 'Are you sure?' %>
+<%= link_to"View All Movies", movies_path, method: :get %>
+<%= link_to "View All Media", root_path, method: :get %> </p>

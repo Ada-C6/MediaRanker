@@ -1,3 +1,15 @@
 <p>
   albums show
 </p>
+<h1>
+  <%= @album.name  %>
+  <small>Artist: <%= @album.artist%> </small>
+</h1>
+<h4>Ranked:</h4>
+<p><%= @album.description %></p>
+<p id="upvote"><%= link_to "Upvote" %></p>
+
+<p class="buttons"> <%= link_to "Edit #{@album.name}", edit_album_path %>
+<%= link_to "Delete", album_path, method: :delete, confirm: 'Are you sure?' %>
+<%= link_to"View All albums", albums_path, method: :get %>
+<%= link_to "View All Media", root_path, method: :get %> </p>
