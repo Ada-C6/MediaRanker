@@ -9,6 +9,10 @@ class AlbumTest < ActiveSupport::TestCase
 	  	
 	  	assert_not an_album.valid? "An album without a name is invalid."
 	    an_album.name = "Somewhere over the rainbow"
-	    an_album.valid?  "Somehow #{album.name}is not a valid name."
+	    an_album.valid?  "Somehow #{an_album.name}is not a valid name."
+  	end
+
+  	test "You can't escape was by Fellow" do
+  		assert_equal albums(:no_escape).artist, "Fellow"
   	end
 end

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
-  description: MyText
+dead_or_alive:
+  name: Dead or Alive
+  director: G. Allen
+  description: A videogame made into a movie
   rank: 
 
-two:
-  name: MyString
-  director: MyString
-  description: MyText
+king_kong:
+  name: King Kong
+  director: Someone
+  description: You know what happens already
   rank: 
