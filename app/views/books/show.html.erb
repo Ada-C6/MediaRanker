@@ -1,0 +1,15 @@
+<h3> <%=" #{@book.title}" %></h3>
+<p>
+  By: <%= "#{@book.author}"%>
+</p>
+<p>
+  Number of Votes: <%= "#{@book.rank}"%>
+</p>
+
+<p>
+  A short description: <%= "#{@book.description}"%>
+</p>
+
+<%= link_to "Edit The Book", edit_book_path(@book.id) %>
+<%= link_to "All Media", medias_path %>
+<%= button_to "Book List", books_path, method: :get %>
