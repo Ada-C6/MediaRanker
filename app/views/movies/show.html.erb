@@ -3,7 +3,6 @@
 <p> Ranked: <%= @movie.ranking %> </p>
 <p> <%= @movie.description %> </p>
 
-<!-- @TODO upvote button currently redirects to the index page, need to change this  -->
 <%= button_to "UPVOTE", upvote_movie_path(@movie), method: :patch  %>
 <%= link_to "edit", edit_movie_path %>
 <%= link_to "DELETE", movie_path(@movie.id), method: :delete,

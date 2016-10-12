@@ -1,0 +1,14 @@
+<h1>Book Name: <%= @book.name %> </h1>
+<h2> Author: <%= @book.author %></h2>
+<p> Ranked: <%= @book.ranking %> </p>
+<p> <%= @book.description %> </p>
+
+<%= button_to "UPVOTE", upvote_book_path(@book), method: :patch  %>
+<%= link_to "edit", edit_book_path %>
+<%= link_to "DELETE", book_path(@book.id), method: :delete,
+data: { confirm: 'Are you sure?'} %>
+
+<!-- LINK DOESN'T WORK YET -->
+<%= link_to "View All Media"%>
+<!-- @TODO Put the All movies link in the root path -->
+<%= link_to "View All Books", books_path %>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :books
 
   #to update the ranking using an upvote button:
+  patch 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
   patch 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

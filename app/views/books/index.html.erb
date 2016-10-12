@@ -1,0 +1,13 @@
+<h1>Viewing All Books </h1>
+
+<h3> Ranking || Name || Upvote </h3>
+<% @all_books.each do |book| %>
+<p><%= "#{book.ranking} |------------|" %>
+<%=  link_to "#{book.name}", book_path(book) %>
+<%# button_to "UPVOTE", upvote_book_path(book), method: :patch  %> </p>
+<% end %>
+
+<!-- LINK DOESN'T WORK YET -->
+<%= link_to "View All Media"%>
+
+<%= link_to "Add a Book", new_book_path%>
