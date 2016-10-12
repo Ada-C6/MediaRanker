@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   #root 'media#index'
+  root 'medias#index'
   resources :movies
   resources :books
 
