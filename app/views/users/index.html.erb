@@ -6,27 +6,30 @@
       <h2 class="mediabox"><%= link_to(movie.name, movie_path(movie.id)) %>
       <p> Ranked:</p>
       </h2>
-
       <% end %>
+  <p><%=button_to("Add Movie", new_movie_path, method: :get)%></p>
   </article>
 
   <article >
      <h1>Top Books</h1>
-     <% @books.each do |book| %>
-     <h2 class="mediabox"><%= link_to(book.name, book_path(book.id)) %>
-      <p><%= "Ranked: " %></p>
-     </h2>
-     <% end %>
+       <% @books.each do |book| %>
+       <h2 class="mediabox"><%= link_to(book.name, book_path(book.id)) %>
+        <p>Ranked</p>
+       </h2>
+       <% end %>
+      <p><%=button_to("Add Book", new_book_path, method: :get) %></p>
   </article>
 
   <article >
-     <h1>Top Albums</h1>
-     <% @albums.each do |album| %>
-     <h2 class="mediabox"><%= link_to(album.name, album_path(album.id)) %>
-    <p><%= "Ranked: " %></p>
-       </h2>
-     <% end %>
 
+     <h1>Top Albums</h1>
+       <% @albums.each do |album| %>
+       <h2 class="mediabox"><%= link_to(album.name, album_path(album.id)) %>
+      <p>Ranked: </p>
+         </h2>
+       <% end %>
+       <p><%=button_to("Add Album", new_album_path, method: :get) %></p>
   </article>
+
 
 </section>

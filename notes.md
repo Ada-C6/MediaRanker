@@ -1,10 +1,19 @@
-1. this will redirect you to your first show movie page. 
+1. this will redirect you to your first show movie page.
 def destroy
   @mymovie = Movie.find(params[:id])
   @mymovie.destroy
   redirect_to movies_path(@mymovie.id)
 end
 
+2.      <h1>Top Albums</h1>
+       <% @albums.each do |album| %>
+       <h2 class="mediabox"><%= link_to(album.name, album_path(album.id)) %>
+      <p>Ranked: </p>
+         </h2>
+       <% end %>
+       <p class="button_row"><%=button_to("Add Album", new_album_path, method: :get) %></p>
+  </article>
+why isn't my button row styling not applying to my add movie, add book, add alubm buttons
 
 
 

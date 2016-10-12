@@ -5,12 +5,17 @@ class MoviesController < ApplicationController
 
   def new
     @mymovie = Movie.new
-    # @movie_method = :post
-    # @movie_path = movie_create_path
+    @movie_method = :post
+    @movie_path = movies_path
   end
 
   def create
-
+    @mymovie = Movie.new
+    @mymovie.name = params[:movie][:name]
+    @mymovie.director = params[:movie][:director]
+    @mymovie.description = params[:movie][:description]
+    @mymovie.save
+    redirect_to users_path(@mymovie.id)
   end
 
   def show
