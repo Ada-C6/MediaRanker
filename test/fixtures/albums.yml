@@ -1,11 +1,20 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+bad_company:
+  name: Bad Company
+  artist: Bad Company
+  description: the best album ever
+  rank: 1000
+white_album:
+  name: White Album
+  artist: The Beatles
+  description: Classic Beatles songs
+  rank: 999
+blue:
+  name: Blue
+  artist: Third Eye Blind
+  description: not as good as their self-titled, but good
+  rank: 50
+nil_rank:
+  name: Nothing
+  artist: Nada Surf
+  description: zip
+  rank: nil
