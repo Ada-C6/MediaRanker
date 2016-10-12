@@ -15,14 +15,14 @@ class BooksController < ApplicationController
     @mybook = find_book
     @mybook.rank += 1
     @mybook.save
-    render :show
+    redirect_to book_path(@mybook.id)
   end
 
   def downvote
     @mybook = find_book
     @mybook.rank -= 1
     @mybook.save
-    render :show
+    redirect_to book_path(@mybook.id)
   end
 
   def new
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
       @post_path = books_path
-      render :new_book
+      render :new
     end
   end
 
@@ -63,7 +63,6 @@ class BooksController < ApplicationController
     @mybook.author = params[:book][:author]
     @mybook.genre = params[:book][:genre]
     @mybook.description = params[:book][:description]
-    # @mybook.rank
 
     if @mybook.save
       redirect_to book_path(@mybook.id)
@@ -71,7 +70,7 @@ class BooksController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :put
       @post_path = book_path(@mybook.id)
-      render :edit_book
+      render :edit
     end
   end
 

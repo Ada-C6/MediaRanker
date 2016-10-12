@@ -15,14 +15,14 @@ class MoviesController < ApplicationController
     @mymovie = find_movie
     @mymovie.rank += 1
     @mymovie.save
-    render :show
+    redirect_to movie_path
   end
 
   def downvote
     @mymovie = find_movie
     @mymovie.rank -= 1
     @mymovie.save
-    render :show
+    redirect_to movie_path
   end
 
   def new
@@ -46,7 +46,7 @@ class MoviesController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
       @post_path = movies_path
-      render :new_movie
+      render :new
     end
   end
 
@@ -70,7 +70,7 @@ class MoviesController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :put
       @post_path = movie_path(@mymovie.id)
-      render :edit_movie
+      render :edit
     end
   end
 

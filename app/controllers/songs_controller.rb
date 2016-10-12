@@ -15,14 +15,14 @@ class SongsController < ApplicationController
     @mysong = find_song
     @mysong.rank += 1
     @mysong.save
-    render :show
+    redirect_to show_song
   end
 
   def downvote
     @mysong = find_song
     @mysong.rank -= 1
     @mysong.save
-    render :show
+    redirect_to show_song
   end
 
   def new
@@ -46,7 +46,7 @@ class SongsController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
       @post_path = songs_path
-      render :new_song
+      render :new
     end
   end
 
@@ -70,7 +70,7 @@ class SongsController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :put
       @post_path = song_path(@mysong.id)
-      render :edit_song
+      render :edit
     end
   end
 

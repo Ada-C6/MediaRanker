@@ -15,14 +15,14 @@ class SeinfeldsController < ApplicationController
     @myseinfeld = find_seinfeld
     @myseinfeld.rank += 1
     @myseinfeld.save
-    render :show
+    redirect_to show_seinfeld
   end
 
   def downvote
     @myseinfeld = find_seinfeld
     @myseinfeld.rank -= 1
     @myseinfeld.save
-    render :show
+    redirect_to show_seinfeld
   end
 
   def new
@@ -46,7 +46,7 @@ class SeinfeldsController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
       @post_path = seinfelds_path
-      render :new_seinfeld
+      render :new
     end
   end
 
@@ -70,7 +70,7 @@ class SeinfeldsController < ApplicationController
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :put
       @post_path = seinfeld_path(@myseinfeld.id)
-      render :edit_seinfeld
+      render :edit
     end
   end
 
