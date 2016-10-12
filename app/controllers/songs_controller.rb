@@ -15,14 +15,14 @@ class SongsController < ApplicationController
     @mysong = find_song
     @mysong.rank += 1
     @mysong.save
-    redirect_to show_song
+    redirect_to song_path
   end
 
   def downvote
     @mysong = find_song
     @mysong.rank -= 1
     @mysong.save
-    redirect_to show_song
+    redirect_to song_path
   end
 
   def new
