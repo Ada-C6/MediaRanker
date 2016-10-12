@@ -36,6 +36,10 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+  gem 'minitest-reporters'
+end
+
 group :development do
   # Adding better_errors Gem
   gem "better_errors"
