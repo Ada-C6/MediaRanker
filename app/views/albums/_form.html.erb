@@ -1,0 +1,11 @@
+<%= form_for @album, method: http_method do |a| %>
+
+<p><%= a.label "Name" %></p>
+<p><%= a.text_field :name %></p>
+<p><%= a.label "Artist" %></p>
+<p><%= a.text_field :artist %></p>
+<p><%= a.label "Description" %></p>
+<p><%= a.text_field :description %></p>
+
+<%= a.submit "Save" %>
+<% end %>

@@ -1,0 +1,11 @@
+<%= form_for @movie, method: http_method do |m| %>
+
+<p><%= m.label "Name" %></p>
+<p><%= m.text_field :name %></p>
+<p><%= m.label "Director" %></p>
+<p><%= m.text_field :director %></p>
+<p><%= m.label "Description" %></p>
+<p><%= m.text_field :description %></p>
+
+<%= m.submit "Save" %>
+<% end %>

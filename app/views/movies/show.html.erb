@@ -1,0 +1,16 @@
+<h2><%= @movie.name %></h2>
+
+<p>Directed by: <%= @movie.director %></p>
+
+<p>Ranked: <%= @movie.ranked %></p>
+
+<p>Description:<%= @movie.description %></p>
+
+<p><%= button_to "Upvote", upvote_movie_path(@movie.id), :method => :patch %></p>
+
+<ul>
+  <li><%= link_to "Edit '#{@movie.name}'", edit_movie_path(@movie.id) %></li>
+  <li><%= link_to "Delete", movie_path(@movie.id), method: :delete, data: { confirm: "Are you sure you want to delete?"} %></li>
+  <li><%= link_to "View All Movies", movies_path %></li>
+  <li><%= link_to "View All Media", home_path %></li>
+</ul>
