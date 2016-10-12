@@ -40,9 +40,17 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
+  def upvote
+    @book = Book.find(params[:id])
+    @book.ranked += 1
+    @book.save
+
+    redirect_to book_path(@book.id)
+  end
+
   private
 
-  def book_params
-    params.require(:book).permit(:title, :directed_by, :description)
-  end
+  # def book_params
+  #   params.require(:book).permit(:title, :written_by, :description, :ranked)
+  # end
 end

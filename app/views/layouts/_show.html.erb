@@ -16,7 +16,8 @@
   <%= media.description %>
 </p>
 
-<%= button_to "Upvote" %>
-<%= button_to "DELETE" %>
-<%= button_to "View All Albums" %>
-<%= button_to "View All Media" %>
+<%= link_to "Upvote", url_for(media), { action: "upvote", method: "patch" } %>
+<%= link_to "Edit", url_for(media), { method: "edit" } %>
+<%= button_to "DELETE", url_for(media), { method: "delete" } %>
+<%= link_to "View All #{type.capitalize}", polymorphic_url(type) %>
+<%= link_to "View All Media", root_path, { method: "get"} %>
