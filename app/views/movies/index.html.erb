@@ -1,0 +1,18 @@
+<h1> All the movies. </h1>
+<table>
+<% @movies.each do |movie| %>
+  <tr>
+    <td>
+      Rank: <%= movie.rank %>
+    </td>
+    <td>
+      <%= link_to movie.title, movie_path(movie) %>
+    </td>
+    <td>
+      <%= button_to "Upvote",   upvote_movie_path(movie), method: :patch %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= button_to "Add new movie", new_movie_path, method: :get%>
