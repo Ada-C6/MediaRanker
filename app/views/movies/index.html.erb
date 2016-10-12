@@ -1,23 +1,4 @@
 <%= render partial: "layouts/index", locals: {category: "Movies"} %>
 
-
-<h1>All Movies</h1>
-<table>
-  <tr>
-    <th>Ranking</th>
-    <th>Name</th>
-    <th>Upvote</th>
-  </tr>
-
-  <% @data.each do |m| %>
-    <tr>
-      <td><%= "Ranked: #{m.ranking}" %></td>
-      <td><%= link_to m.name, movie_path(m) %></td>
-      <td><%= link_to "Upvote", upvote_movie_path(m), method: :patch %></td>
-    </tr>
-  <% end %>
-
-</table>
-
 <%= link_to "View All Media", root_path %>
 <%= link_to "Add a Movie", new_movie_path %>

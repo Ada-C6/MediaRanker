@@ -1,22 +1,4 @@
+<%= render partial: "layouts/index", locals: {category: "Books"} %>
 
-<%= render partial: "layouts/index", locals: {category: "Books", route: upvote_book_path } %>
-
-
-
-<!--
-<table>
-  <tr>
-    <th>Ranking</th>
-    <th>Name</th>
-    <th>Upvote</th>
-  </tr> -->
-
-  <%# @data.each do |b| %>
-    <tr>
-      <td><%#= "Ranked: #{b.ranking}" %></td>
-      <td><%#= link_to b.name, book_path(b) %></td>
-      <td><%#= link_to "Upvote", upvote_book_path(b), method: :patch %></td>
-    </tr>
-  <%# end %>
-
-<!-- </table> -->
+<%= link_to "View All Media", root_path %>
+<%= link_to "Add a Book", new_book_path %>
