@@ -1,0 +1,30 @@
+<section>
+  <h1>Top Movies</h1>
+  <article class="full_list">
+    <% @movies.each do |movie| %>
+      <%= render partial: 'movie', locals: { :movie => movie } %>
+    <% end %>
+  </article>
+
+  <p><%= link_to "view more movies", media_all_path(:movie) %></p>
+</section>
+<section>
+  <h1>Top Books</h1>
+  <article class="full_list">
+    <% @books.each do |book| %>
+      <%= render partial: 'book', locals: { :book => book } %>
+    <% end %>
+  </article>
+
+  <p><%= link_to "view more books", media_all_path(:book) %></p>
+</section>
+<section>
+  <h1>Top Albums</h1>
+  <article class="full_list">
+    <% @albums.each do |album| %>
+      <%= render partial: 'album', locals: { :album => album } %>
+    <% end %>
+  </article>
+
+  <p><%= link_to "view more albums", media_all_path(:album) %></p>
+</section>

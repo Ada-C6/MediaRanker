@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
-  root to: 'movies#index', as: 'index'
+  root to: 'media#index', as: 'index'
 
-  # get 'movies/index'=> 'movie#index'
+  get 'media/:type/index' => 'media#index'
+
+  get 'media/:type/all' => 'media#all', as: 'media_all'
+
+  get 'media/:id/show' => 'media#show', as: 'medium_show'
+
+  get 'media/:id/edit' => 'media#edit', as: 'medium_edit'
+
+  patch 'media/:id/update' => 'media#update', as: 'medium_update'
+
+  delete 'media/:id/delete' => 'media#delete', as: 'medium_delete'
+
+  get 'media/:id/upvote' => 'media#upvote', as: 'medium_upvote'
+
+  # get 'movies/index'=> 'movie#index
+  #root to: 'movies#index', as: 'index''
 
   get 'movies/all' => 'movies#all', as: 'all'
 
@@ -14,9 +29,6 @@ Rails.application.routes.draw do
   delete 'movies/:id/delete' => 'movies#delete', as: 'delete'
 
   get 'movies/:id/upvote' => 'movies#upvote', as: 'upvote'
-
-
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

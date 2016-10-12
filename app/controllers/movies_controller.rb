@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
     @movies = Movie.order('votes DESC').first(10)
-
   end
 
   def all
@@ -27,7 +26,6 @@ class MoviesController < ApplicationController
     @movie.save
 
     redirect_to action: 'show'
-    # , id:@movie.id
   end
 
   def delete
@@ -39,18 +37,8 @@ class MoviesController < ApplicationController
 
     @movie = Movie.find(params[:id].to_i)
     Movie.increment_counter(:votes, params[:id])
-    # @movie = Movie.find(params[:id].to_i)
-    # @move.vote = params[]
-    # @vote = @movie.votes
-    # if @vote == nil
-    #   @vote = 0
-    # else
-    #   @vote += 1
-    # end
 
-    # @vote.save
     redirect_to action: 'show'
   end
-
 
 end

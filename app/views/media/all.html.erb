@@ -1,0 +1,18 @@
+<h1><%= @medium_type_name %> </h1>
+
+<p>Ranking</p>
+<p>Name</p>
+<p>Upvote</p>
+<section>
+  <h1>Top <%= @medium_type_name.pluralize %></h1>
+  <article class="full_list">
+    <% @media.each do |medium| %>
+      <%= render partial: medium.type.downcase, locals: { medium.type.downcase.to_sym => medium } %>
+
+      <p class="list_row">
+          <%= link_to "Upvote", medium_upvote_path(medium.id) %>
+      </p>
+      <hr />
+    <% end %>
+  </article>
+</section>

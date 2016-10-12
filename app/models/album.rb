@@ -1,0 +1,3 @@
+class Album < Medium
+
+end

@@ -1,0 +1,31 @@
+<section>
+  <header>
+    <h1>Edit Movie</h1>
+  </header>
+
+    <article class="form">
+    <%= form_for @medium, url: medium_update_path do |f| %>
+
+      <ul>
+        <li>
+          <%= f.label "Name:" %>
+          <%= f.text_field :name, :class => "name" %>
+        </li>
+
+        <li>
+          <%= f.label "Director:" %>
+          <%= f.text_field :director, :class => "director" %>
+        </li>
+
+        <li>
+          <%= f.label "Description:" %>
+          <%= f.text_field :description, :class => "description" %>
+        </li>
+
+      </ul>
+
+      <%= f.submit 'Save'%>
+
+    <% end %>
+  </article>
+</section>
