@@ -1,0 +1,14 @@
+<h1><%= @movie.name %></h1>
+<h3>Directed by: <%= @movie.director %></h3>
+<h5>Ranked: <%= @movie.rank %></h5>
+<p><%= @movie.description %></p>
+
+<%= button_to("upvote", movie_upvote_path(@movie), method: :patch) %>
+
+<%= link_to("Edit #{ @movie.name }", edit_movie_path(@movie), class: "button") %>
+
+<%= link_to("DELETE", movie_path(@movie), method: :delete, data: {confirm: "Are you sure you want to permanently delete this movie?"}, class: "button") %>
+
+<%= link_to("View All Movies", movies_path, class: "button") %>
+
+<%= link_to("View All Media", root_path, class: "button") %>

@@ -17,17 +17,6 @@ class BooksController < ApplicationController
         end
     end
 
-    def upvote
-        @book = Book.find(params[:id])
-        if @book.upvote_one
-            redirect_to books_path
-        else
-            #raise error
-        end
-    end
-
-
-
     def show
         @book = Book.find(params[:id])
     end
