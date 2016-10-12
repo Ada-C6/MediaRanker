@@ -33,7 +33,7 @@ why isn't my button row styling not applying to my add movie, add book, add alub
 how the eff am i going to keep track of votes
 http://docs.railsbridge.org/intro-to-rails/allow_people_to_vote
 
-
+7. sybmol back with redirect_to 
 
 1. not sure if this will be helfpul.
 <% @movies.each do |movie| %>

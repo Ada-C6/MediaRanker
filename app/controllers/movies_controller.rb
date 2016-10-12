@@ -9,6 +9,13 @@ class MoviesController < ApplicationController
     @movie_path = movies_path
   end
 
+  def show
+    @mymovie = Movie.find(params[:id])
+    if @mymovie == nil
+        render :file => 'public/404.html', :status => :not_found
+    end
+  end
+
   def create
     @mymovie = Movie.new
     @mymovie.name = params[:movie][:name]
@@ -16,13 +23,6 @@ class MoviesController < ApplicationController
     @mymovie.description = params[:movie][:description]
     @mymovie.save
     redirect_to users_path(@mymovie.id)
-  end
-
-  def show
-    @mymovie = Movie.find(params[:id])
-    if @mymovie == nil
-        render :file => 'public/404.html', :status => :not_found
-    end
   end
 
   def update
