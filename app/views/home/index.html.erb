@@ -1,5 +1,24 @@
-<%= link_to("View More Albums", albums_path, class: "button") %>
+<table class="index_table">
+    <tr>
+        <th colspan="2">Top Albums</th>
+        <th colspan="2">Top Books</th>
+        <th colspan="2">Top Movies</th>
+    </tr>
 
-<%= link_to("View More Books", books_path, class: "button") %>
+    <% 5.times do |i| %>
+    <tr>
+        <td><%= link_to "#{ @albums[i].name }", album_path(@albums[i]) %></td>
+        <td><small>Votes:<%= "#{ @albums[i].rank }" %></td>
+        <td><%= link_to "#{ @books[i].name }", book_path(@books[i]) %></td>
+        <td><small>Votes:<%= "#{ @books[i].rank }" %></td>
+        <td><%= link_to "#{ @movies[i].name }", movie_path(@movies[i]) %></td>
+        <td><small>Votes:<%= "#{ @movies[i].rank }" %></td>
+    </tr>
+    <% end %>
+    <tr>
+        <th colspan="2"><%= link_to("View All Albums", albums_path, class: "button") %></th>
+        <th colspan="2"><%= link_to("View All Books", books_path, class: "button") %></th>
+        <th colspan="2"><%= link_to("View All Movies", movies_path, class: "button") %></th>
+    </tr>
 
-<%= link_to("View More Movies", movies_path, class: "button") %>
+</table>
