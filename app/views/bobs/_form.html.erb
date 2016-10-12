@@ -1,0 +1,13 @@
+<%= form_for @bob, url: action_name do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :appears_in %>
+  <%= f.text_field :appears_in %>
+
+  <%= f.label :identifying_quality %>
+  <%= f.text_field :identifying_quality %>
+
+  <%= f.submit %>
+<% end %>

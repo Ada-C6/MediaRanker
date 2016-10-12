@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/index'
+
+  root 'home#index'
+
+  get 'home/index' => 'home#index', as: 'home'
+
+  #############################################
 
   get 'wizards/index'
 
@@ -15,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'wizards/delete'
 
+  #############################################
+
   get 'leslies/index'
 
   get 'leslies/show'
@@ -29,19 +36,21 @@ Rails.application.routes.draw do
 
   get 'leslies/delete'
 
-  get 'bobs/index'
+  #############################################
 
-  get 'bobs/show'
+  get 'bobs/index' => 'bobs#index', as: 'bob'
 
-  get 'bobs/new'
+  get 'bobs/show/:id' => 'bobs#show', as: 'show_bob'
 
-  get 'bobs/create'
+  get 'bobs/new' => 'bobs#new', as: 'new_bob'
 
-  get 'bobs/edit'
+  post 'bobs/create' => 'bobs#create', as: 'create_bob'
 
-  get 'bobs/update'
+  get 'bobs/:id/edit' => 'bobs#edit', as: 'edit_bob'
 
-  get 'bobs/delete'
+  patch 'bobs/:id/update' => 'bobs#update', as: 'update_bob'
+
+  delete 'bobs/:id/delete' => 'bobs#delete', as: 'delete_bob'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

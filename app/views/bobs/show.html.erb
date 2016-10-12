@@ -1,2 +1,8 @@
-<h1>Bobs#show</h1>
-<p>Find me in app/views/bobs/show.html.erb</p>
+<h2><%= @bob.name %></h2>
+<p><%= @bob.appears_in %></p>
+<p><%= @bob.identifying_quality %></p>
+
+
+<p><%= button_to( 'edit', {action: "edit", id: @bob.id }, method: :get ) %></p>
+<p> <%= button_to( 'delete', {action: "delete", id: @bob.id }, method: :delete, data: {confirm: "Are you sure?"} ) %> </p>
+<p><%= link_to( 'list of all bobs', bob_path ) %></p>
