@@ -5,7 +5,7 @@
   <h1>ranking</h1> <h1>name</h1> <h1>upvote</h1>
   <% @movies.each do |movie| %>
   <p>
-    ranked: movie.votes
+    ranked: <%=movie.votes%>
   </p>
   <p>
     <%= link_to movie.name, movie_path(movie.id) %>

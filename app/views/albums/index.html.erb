@@ -6,7 +6,7 @@
   <h1>ranking</h1> <h1>name</h1> <h1>upvote</h1>
   <% @albums.each do |album| %>
   <p>
-    ranked: album.votes
+    ranked: <%=album.votes%>
   </p>
   <p>
     <%= link_to album.name, album_path(album.id) %>

@@ -8,7 +8,7 @@
     <%= link_to book.name, book_path(book.id) %>
   </p>
   <p>
-    ranked: book.votes
+    ranked: <%=book.votes%>
   </p>
   <% end %>
   <p>
@@ -24,7 +24,7 @@
     <%= link_to movie.name, movie_path(movie.id) %>
   </p>
   <p>
-    ranked: movie.votes
+    ranked: <%=movie.votes%>
   </p>
   <% end %>
   <p>
@@ -39,7 +39,7 @@
     <%= link_to album.name, album_path(album.id) %>
   </p>
   <p>
-    ranked: album.votes
+    ranked: <%=album.votes%>
   </p>
   <% end %>
   <p>

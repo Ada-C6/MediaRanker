@@ -1,8 +1,8 @@
 class BooksController < ApplicationController
 
   def find_n_sort_all
-    @books = Book.all
-    # @books = Book.all.sort {|a,b| b <=> a}
+    # @books = Book.all
+    @books = Book.all.sort {|a,b| a <=> b}
   end
 
   def find_one

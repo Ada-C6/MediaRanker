@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
 
   def find_n_sort_all
-    @movies = Movie.all
-    # @movies = Movie.all.sort {|a,b| b <=> a}
+    # @movies = Movie.all
+    @movies = Movie.all.sort {|a,b| a <=> b}
   end
 
   def find_one

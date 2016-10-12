@@ -1,8 +1,8 @@
 class AlbumsController < ApplicationController
 
   def find_n_sort_all
-    @albums = Album.all
-    # @albums = Album.all.sort {|a,b| b <=> a}
+    # @albums = Album.all
+    @albums = Album.all.sort {|a,b| a <=> b}
   end
 
   def find_one
