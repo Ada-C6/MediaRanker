@@ -1,6 +1,8 @@
 class AlbumsController < ApplicationController
   require 'sort_by_rank.rb'
+  require 'vote.rb'
   include SortByRank
+  include Vote
 
   def index
     @albums = sort_by_rank(Album.all)
@@ -32,6 +34,13 @@ class AlbumsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def upvote
+    album = Album.find(params[:id])
+    add_vote(album).save
+
+    redirect_to albums_path
   end
 
   def destroy

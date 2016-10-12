@@ -6,13 +6,14 @@
 
 <table class="index-table">
   <tr>
-    <th colspan="2">Albums</th>
-    <th colspan="2">Books</th>
-    <th colspan="2">Movies</th>
+    <th colspan="3">Albums</th>
+    <th colspan="3">Books</th>
+    <th colspan="3">Movies</th>
   </tr>
 
   <% 5.times do |i| %>
   <tr>
+    <td><%= button_to "Upvote", upvote_album_path(@albums[i]), contoller: :albums, action: :upvote, method: :patch %> </td>
     <td><%= "#{@albums[i].rank_points}" %></td>
     <td><%= "#{@albums[i].name}" %></td>
 
@@ -23,10 +24,10 @@
     <td><%= "#{@movies[i].name}" %></td>
   </tr>
   <% end %>
-  
+
   <tr>
-    <td colspan="2"><%= link_to "More Albums...", albums_path %></td>
-    <td colspan="2"><%= link_to "More Books...", books_path %></td>
-    <td colspan="2"><%= link_to "More Movies...", movies_path %></td>
+    <td colspan="3"><%= link_to "More Albums...", albums_path %></td>
+    <td colspan="3"><%= link_to "More Books...", books_path %></td>
+    <td colspan="3"><%= link_to "More Movies...", movies_path %></td>
   </tr>
 </table>
