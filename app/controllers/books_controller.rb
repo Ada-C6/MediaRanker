@@ -1,10 +1,14 @@
 class BooksController < ApplicationController
   def index
     @all_books=Book.order(rank: :desc)
+    #session[:return_to] ||= request.referer
+
   end
 
   def show
     @this_book=Book.find(params[:id])
+    #session[:return_to] ||= request.referer
+
   end
 
   def edit
@@ -58,6 +62,8 @@ class BooksController < ApplicationController
     
     @this_book.save
     
+    # redirect_to session[:return_to]
+
     redirect_to book_url(@this_book) #how do you say "the last page it was on"
   end
 
