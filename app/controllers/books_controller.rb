@@ -1,7 +1,9 @@
 class BooksController < ApplicationController
   require 'sort_by_rank.rb'
+  require 'vote.rb'
   include SortByRank
-  
+  include Vote
+
   def index
     @books = sort_by_rank(Book.all)
   end
@@ -36,6 +38,13 @@ class BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id]).destroy
+
+    redirect_to books_path
+  end
+
+  def upvote
+    book = Book.find(params[:id])
+    add_vote(book).save
 
     redirect_to books_path
   end

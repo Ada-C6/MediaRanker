@@ -1,7 +1,9 @@
 class MoviesController < ApplicationController
   require 'sort_by_rank.rb'
+  require 'vote.rb'
   include SortByRank
-  
+  include Vote
+
   def index
     @movies = sort_by_rank(Movie.all)
   end
@@ -32,6 +34,13 @@ class MoviesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def upvote
+    movie = Movie.find(params[:id])
+    add_vote(movie).save
+
+    redirect_to movies_path
   end
 
   def destroy

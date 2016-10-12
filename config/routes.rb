@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'homepage#index'
+
   patch '/albums/:id', to: "albums#upvote", as: 'upvote_album'
+  patch '/books/:id', to: "books#upvote", as: 'upvote_book'
+  patch '/movies/:id', to: "movies#upvote", as: 'upvote_movie'
+
   resources :albums, :books, :movies
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -17,9 +17,11 @@
     <td><%= "#{@albums[i].rank_points}" %></td>
     <td><%= "#{@albums[i].name}" %></td>
 
+    <td><%= button_to "Upvote", upvote_book_path(@books[i]), contoller: :books, action: :upvote, method: :patch %> </td>
     <td><%= "#{@books[i].rank_points}" %></td>
     <td><%= "#{@books[i].name}" %></td>
 
+    <td><%= button_to "Upvote", upvote_movie_path(@movies[i]), contoller: :movies, action: :upvote, method: :patch %> </td>
     <td><%= "#{@movies[i].rank_points}" %></td>
     <td><%= "#{@movies[i].name}" %></td>
   </tr>
