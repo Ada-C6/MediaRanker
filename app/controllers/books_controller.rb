@@ -26,7 +26,14 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    if @book.update(book_params)
+
+    if params[:_method] == "patch"
+      @book.ranked += 1
+    else
+      @book.update(book_params)
+    end
+
+    if @book.save
       redirect_to book_path(@book)
     else
       render :edit
@@ -40,17 +47,17 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-  def upvote
-    @book = Book.find(params[:id])
-    @book.ranked += 1
-    @book.save
-
-    redirect_to book_path(@book.id)
-  end
+  # def upvote #is there a way to incorporate this to update to use with patch vs put?
+  #   @book = Book.find(params[:id])
+  #   @book.ranked += 1
+  #   @book.save
+  #
+  #   redirect_to book_path(@book.id)
+  # end
 
   private
 
-  # def book_params
-  #   params.require(:book).permit(:title, :written_by, :description, :ranked)
-  # end
+  def book_params
+    params.require(:book).permit(:title, :by, :description, :ranked)
+  end
 end

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  written_by: MyString
-  ranked: 1
-  description: MyString
+matilda:
+  title: Matilda
+  written_by: Roald Dahl
+  ranked: rand(50)
+  description: Awesome book
 
-two:
-  title: MyString
-  written_by: MyString
-  ranked: 1
-  description: MyString
+the_girls:
+  title: The Girls
+  written_by: Emma Cline
+  ranked: rand(50)
+  description: Northern California, during the violent end of the 1960s. At the start of summer, a lonely and thoughtful teenager, Evie Boyd, sees a group of girls in the park, and is immediately caught by their freedom, their careless dress, their dangerous aura of abandon. 

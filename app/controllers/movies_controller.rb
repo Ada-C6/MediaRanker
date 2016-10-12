@@ -26,7 +26,14 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params[:id])
-    if @movie.update(movie_params)
+
+    if params[:_method] == "patch"
+      @movie.ranked += 1
+    else
+      @movie.update(movie_params)
+    end
+
+    if @movie.save
       redirect_to movie_path(@movie)
     else
       render :edit
@@ -40,17 +47,17 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
-  def upvote
-    @movie = Movie.find(params[:id])
-    @movie.ranked += 1
-    @movie.save
-
-    redirect_to movie_path(@movie.id)
-  end
+  # def upvote
+  #   @movie = Movie.find(params[:id])
+  #   @movie.ranked += 1
+  #   @movie.save
+  #
+  #   redirect_to movie_path(@movie.id)
+  # end
 
   private
 
   def movie_params
-    params.require(:movie).permit(:title, :directed_by, :description)
+    params.require(:movie).permit(:title, :by, :description)
   end
 end

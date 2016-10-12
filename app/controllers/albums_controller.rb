@@ -26,7 +26,14 @@ class AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    if @album.update(album_params)
+
+    if params[:_method] == "patch"
+      @album.ranked += 1
+    else
+      @album.update(album_params)
+    end
+
+    if @album.save
       redirect_to album_path(@album)
     else
       render :edit
@@ -40,17 +47,17 @@ class AlbumsController < ApplicationController
     redirect_to albums_path
   end
 
-  def upvote
-    @album = Album.find(params[:id])
-    @album.ranked += 1
-    @album.save
-
-    redirect_to album_path(@album.id)
-  end
+  # def upvote
+  #   @album = Album.find(params[:id])
+  #   @album.ranked += 1
+  #   @album.save
+  #
+  #   redirect_to album_path(@album.id)
+  # end
 
   private
 
   def album_params
-    params.require(:album).permit(:title, :recorded_by, :description)
+    params.require(:album).permit(:title, :by, :description)
   end
 end

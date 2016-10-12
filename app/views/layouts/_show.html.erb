@@ -1,23 +1,20 @@
 <% if media.class == Book %>
-  <% who = media.written_by %>
   <% by = "Written by: " %>
 <% elsif media.class == Album %>
-  <% who = media.recorded_by %>
   <% by = "Recorded by: " %>
 <% elsif media.class == Movie %>
-  <% who = media.directed_by %>
   <% by = "Recorded by: " %>
 <% end %>
 
 <h1><%= media.title %></h1>
-<h2><%= by %><%= who %></h2>
+<h2><%= by %><%= media.by %></h2>
 <h3>Ranked: <%= media.ranked %></h3>
 <p>
   <%= media.description %>
 </p>
 
 <%= link_to "Upvote", url_for(media), { action: "upvote", method: "patch" } %>
-<%= link_to "Edit", url_for(media), { method: "edit" } %>
+<%= link_to "Edit", polymorphic_path([:edit, media]) %>
 <%= button_to "DELETE", url_for(media), { method: "delete" } %>
 <%= link_to "View All #{type.capitalize}", polymorphic_url(type) %>
 <%= link_to "View All Media", root_path, { method: "get"} %>
