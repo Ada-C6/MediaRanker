@@ -18,7 +18,7 @@ def index
     @this_album=Album.find(params[:id])
     
     @this_album.name = params[:album][:name]
-    @this_album.author = params[:album][:author]
+    @this_album.artist = params[:album][:artist]
     @this_album.description = params[:album][:description]
 
     @this_album.save
@@ -36,7 +36,7 @@ def index
     @this_album=Album.new
     #set the values for attributes
     @this_album.name = params[:album][:name]
-    @this_album.author = params[:album][:author]
+    @this_album.artist = params[:album][:artist]
     @this_album.description = params[:album][:description]
     @this_album.rank = 1
     
@@ -46,7 +46,7 @@ def index
   end
 
   def destroy
-    @this_album=album.find(params[:id])
+    @this_album=Album.find(params[:id])
     @this_album.destroy
 
     redirect_to albums_url
