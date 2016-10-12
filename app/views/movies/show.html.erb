@@ -4,7 +4,7 @@
 <section>
   <h1>Title: <%=@mymovie.name %></h1>
   <p>Directed by: <%=@mymovie.director %></p>
-  <p>Ranked: </p>
+  <p>Ranked: <%=@mymovie.vote_count %> </p>
   <p>Description: <%=@mymovie.description%></p>
   <section class="button_row">
     <%=button_to("Edit #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get)%>

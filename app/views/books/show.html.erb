@@ -3,7 +3,7 @@
 <section>
   <h1>Title: <%=@mybook.name %></h1>
   <p>Author: <%=@mybook.author %></p>
-  <p>Ranked: </p>
+  <p>Ranked: <%=@mybook.vote_count %> </p>
   <p>Description: <%=@mybook.description%></p>
   <section class="button_row">
     <%=button_to("Edit #{@mybook.name}", edit_book_path(@mybook.id), method: :get)%>
