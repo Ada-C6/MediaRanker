@@ -1,37 +1,4 @@
-<h1>All Albums</h1>
-
-<table>
-  <tbody>
-    <tr>
-      <th>
-        Ranking
-      </th>
-      <th>
-        Title
-      </th>
-      <th>
-        Upvote
-      </th>
-    </tr>
-
-      <% @albums.each do |album| %>
-      <tr>
-        <th>
-          <%= "Ranked: #{album.vote}" %>
-        </th>
-        <th>
-          <%= link_to "#{album.title}", album_path(album) %>
-        </th>
-        <th>
-          <%= form_for album, method: :patch do |f|%>
-            <%= f.hidden_field :vote, :value => album.upvote %>
-            <%= f.submit "Upvote!" %>
-          <% end %>
-        </th>
-      </tr>
-      <% end %>
-    </tbody>
-</table>
+<%= render partial: "layouts/display_table", locals: {items: @albums, title: "These are all the albums:"} %>
 
 <h4><%= link_to "Add a new album", new_album_path %></h4>
 <h4><%= link_to "Home", root_path %></h4>

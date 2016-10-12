@@ -1,37 +1,4 @@
-<h1>All Movies</h1>
-
-<table>
-  <tbody>
-    <tr>
-      <th>
-        Ranking
-      </th>
-      <th>
-        Title
-      </th>
-      <th>
-        Upvote
-      </th>
-    </tr>
-
-      <% @movies.each do |movie| %>
-      <tr>
-        <th>
-          <%= "Ranked: #{movie.vote}" %>
-        </th>
-        <th>
-          <%= link_to "#{movie.title}", movie_path(movie) %>
-        </th>
-        <th>
-          <%= form_for movie, method: :patch do |f|%>
-            <%= f.hidden_field :vote, :value => movie.upvote %>
-            <%= f.submit "Upvote!" %>
-          <% end %>
-        </th>
-      </tr>
-      <% end %>
-    </tbody>
-</table>
+<%= render partial: "layouts/display_table", locals: {items: @movies, title: "These are all the movies:"} %>
 
 <h4><%= link_to "Add a new movie", new_movie_path %></h4>
 <h4><%= link_to "Home", root_path %></h4>

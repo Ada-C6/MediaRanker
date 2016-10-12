@@ -1,4 +1,6 @@
-<h1>PRINT STUFF HERE</h1>
+<h3><%= title %></h3>
+
+
 <table>
   <tbody>
     <tr>
@@ -19,7 +21,7 @@
           <%= "Ranked: #{item.vote}" %>
         </th>
         <th>
-          <%= link_to "#{item.title}", item_path(item) %>
+          <%= link_to "#{item.title}", item %>
         </th>
         <th>
           <%= form_for item, method: :patch do |f|%>

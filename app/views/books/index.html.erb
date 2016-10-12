@@ -1,39 +1,4 @@
-<h1>All Books</h1>
-
-<%# render partial: "layouts/display_table", locals: {@books: :items} %>
-
-<table>
-  <tbody>
-    <tr>
-      <th>
-        Ranking
-      </th>
-      <th>
-        Title
-      </th>
-      <th>
-        Upvote
-      </th>
-    </tr>
-
-      <% @books.each do |book| %>
-      <tr>
-        <th>
-          <%= "Ranked: #{book.vote}" %>
-        </th>
-        <th>
-          <%= link_to "#{book.title}", book_path(book) %>
-        </th>
-        <th>
-          <%= form_for book, method: :patch do |f|%>
-            <%= f.hidden_field :vote, :value => book.upvote %>
-            <%= f.submit "Upvote!" %>
-          <% end %>
-        </th>
-      </tr>
-      <% end %>
-    </tbody>
-</table>
+<%= render partial: "layouts/display_table", locals: {items: @books, title: "These are all the books:"} %>
 
 <h4><%= link_to "Add a new book", new_book_path %></h4>
 <h4><%= link_to "Home", root_path %></h4>
