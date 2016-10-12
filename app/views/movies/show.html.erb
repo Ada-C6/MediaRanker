@@ -11,4 +11,5 @@
 
 <%=button_to "Edit", edit_movie_path(@movie.id), method: :get%>
 <%=button_to "All Media", medias_path, method: :get%>
+<%=button_to "All Movies", movies_path, method: :get%>
 <%= button_to "UpVote Now!", movies_upvote_path(@movie.id), method: :patch%>
