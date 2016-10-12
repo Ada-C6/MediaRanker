@@ -4,10 +4,10 @@ one:
   title: MyString
   author: MyString
   description: MyString
-  votes: 
+  vote: 1
 
 two:
   title: MyString
   author: MyString
   description: MyString
-  votes: 
+  vote: 1
