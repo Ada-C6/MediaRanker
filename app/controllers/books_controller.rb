@@ -55,7 +55,6 @@ class BooksController < ApplicationController
   end
 
   def upvote
-
     @mybook.upvote
     redirect_to books_path
   end
@@ -63,7 +62,12 @@ class BooksController < ApplicationController
   private
 
   def find_book
-    @mybook = Book.find(params[:id])
+    @mybook = Book.find_by(params[:id])
+    if @mybook == nil
+      redirect_to books_path
+
+    end
+
   end
 
 end#end of class

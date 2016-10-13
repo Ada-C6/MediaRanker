@@ -3,6 +3,9 @@
   <p><%= @mybook.creator %></p>
   <p><%= @mybook.description %></p>
   <%= button_to("Edit book", edit_book_path(@mybook.id), method: :get)%>
-
   <%= button_to("Delete book", book_path(@mybook.id), method: :delete)%>
+  <p><%= button_to 'UpVote', upvote_book_path(@mybook.id), method: :post %></p>
+  <p>Rank: <%= @mybook.rank %></p>
+  <p><%= button_to('View All Books', books_path, method: :get) %></p>
+  <p><%= button_to('View All Media', media_path, method: :get) %></p>
 </section>
