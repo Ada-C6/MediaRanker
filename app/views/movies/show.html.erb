@@ -6,9 +6,11 @@
   <p>Directed by: <%=@mymovie.director %></p>
   <p>Ranked: <%=@mymovie.vote_count %> </p>
   <p>Description: <%=@mymovie.description%></p>
+
   <section>
     <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch) %>
   </section>
+
   <section class="button_row">
     <%=button_to("Edit #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get)%>
 
@@ -17,5 +19,6 @@
     <%=button_to "View All Movies", movies_path, method: :get %>
 
     <%=button_to "View All Media", users_path, method: :get %>
+
   </section>
 </section>

@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.all
+    @albums = Album.order(vote_count: :desc).all
   end
 
   def new
@@ -58,7 +58,7 @@ class AlbumsController < ApplicationController
     @myalbum.vote_count += 1
     @myalbum.save
     redirect_to :back
-  end 
+  end
 
 
 

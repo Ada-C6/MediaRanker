@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.order(vote_count: :desc).all 
   end
 
   def new
