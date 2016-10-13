@@ -42,14 +42,8 @@ class MoviesController < ApplicationController
 
   def upvote
     @movie = Movie.find(params[:id])
-    if @movie.ranking == nil #from when I had nil values for ranking
-      @movie.ranking = 0
-      @movie.ranking += 1
-      @movie.save
-    else
     @movie.ranking += 1
     @movie.save
-    end
     redirect_to movie_path(@movie)
   end
 

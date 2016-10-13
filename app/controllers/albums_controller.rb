@@ -39,16 +39,11 @@ class AlbumsController < ApplicationController
     redirect_to albums_path
   end
 
+
   def upvote
     @album = Album.find(params[:id])
-    if @album.ranking == nil #from when I had nil values for ranking
-      @album.ranking = 0
-      @album.ranking += 1
-      @album.save
-    else
     @album.ranking += 1
     @album.save
-    end
     redirect_to album_path(@album)
   end
 
