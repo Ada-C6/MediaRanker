@@ -13,11 +13,11 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test 'creating book changes the number of books' do
-  assert_difference "Book.count", 1 do
-    post :create, params: {book: {title: "No Way", creator: "Bob Dylon", description:"So good"}}
+    assert_difference "Book.count", 1 do
+      post :create, {book: {title: "No Way", creator: "Bob Dylon", description:"So good"}}
         assert_response :redirect
-end
-end
+    end
+  end
   test "should get edit" do
     get :edit, {id: 1}
     assert_response :success
@@ -45,9 +45,18 @@ end
 
   test "deleting a book changes the number of books" do
     assert_difference("Book.count", -1) do
-      delete :destroy, params: {id: books(:one).id}
+      delete :destroy, {id: books(:one).id}
       assert_response :redirect
     end
+  end
+
+  # test "deleting a book that isn't in the database" do
+  #   delete :destroy, {id: books(:two).id}
+  #   assert_no_difference("Book.count") do
+  #     delete :destroy, {id: books(:two).id}
+  #
+  #     assert_response :redirect
+  #   end
   end
 
 end
