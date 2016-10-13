@@ -27,6 +27,10 @@
 a {
     text-decoration: none;
 }
+
+body {
+    margin: 0.8em;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
