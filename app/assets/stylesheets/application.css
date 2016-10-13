@@ -23,6 +23,10 @@
 .page-header h1 {
     margin-left: 156px;
 }
+
+a {
+    text-decoration: none;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
