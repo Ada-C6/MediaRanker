@@ -14,3 +14,15 @@
  *= require_self
  */
   @import url('foundation.css');
+
+header {
+  text-align: center;
+  margin-bottom: 0.75em;
+}
+
+
+
+@media only screen and (max-width: 73em) {
+  /* Note: img will still be loaded, but not shown */
+  header small { display: block; margin-bottom: 0.9em}
+}
