@@ -32,7 +32,7 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "should get destroy" do
-    get :destroy
+    delete :destroy
     assert_response :success
   end
 
