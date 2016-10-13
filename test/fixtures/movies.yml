@@ -4,8 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+# one: {}
+# # column: value
+# #
+# two: {}
+# #  column: value
+valid_data:
+  name: movie 1
+  director: director 1
+  description: song number one
+  ranked: 8
+
+missing_name:
+  director: director 2
+  description: song number one
+  ranked: 8

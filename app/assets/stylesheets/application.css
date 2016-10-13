@@ -1,3 +1,6 @@
+@import 'https://fonts.googleapis.com/css?family=Lobster';
+@import url('foundation.css');
+
 
  .mainpage-colomn {
      position: relative;
@@ -26,13 +29,14 @@
  .header-all h1 {
    margin-left: 158px;
  }
+
  h1 {
     font-size: 36px;
-}
+ }
 
  h2 {
     font-size: 30px
-}
+ }
 
  body {
     font-family: Helvetica;
@@ -49,12 +53,26 @@
  #mainpage-moves{
    display: inline-block;
    float: right;
-}
+ }
 
-small {
+ small {
    font-size: 70%;
-}
+ }
 
+  table, td {
+    padding: 8px;
+    line-height: 1.5;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+
+/*
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}*/
 /*.buttons {
    display: inline-block;
    float: right;

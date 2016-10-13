@@ -1,19 +1,25 @@
 
-<article class="table">
+<table class="table"  style="width:100%">
+<thead class="table-head">
+<tr>
+  <th>Ranking</th>
+  <th>Name</th>
+  <th>Upvote</th>
+</tr>
+</thead>
+
 <tbody class="table-body">
+  <% @movies.each do |movie|  %>
   <tr>
-    <th>Ranking</th>
-    <th>Name</th>
-    <th>Upvote</th>
+    <%# TODO: change rank %>
+    <td>Rank: </td>
+    <td><%=link_to "#{movie.name}", movie_path(movie)%></td>
+    <%# TODO: change path %>
+    <td><%= link_to "Upvote", root_path %></td>
   </tr>
-  <hr>
-  <tr>
-    <td>Name</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
+  <% end %>
 </tbody>
-</article>
+</table>
 
 <%= link_to "View All Media", root_path %>
 <%= link_to "Add a Movie", new_movie_path %>

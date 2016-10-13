@@ -1,3 +1,25 @@
-<p>
-  Hello from Albums index
-</p>
+
+<table class="table"  style="width:100%">
+<thead class="table-head">
+<tr>
+  <th>Ranking</th>
+  <th>Name</th>
+  <th>Upvote</th>
+</tr>
+</thead>
+
+<tbody class="table-body">
+  <% @albums.each do |album|  %>
+  <tr>
+    <%# TODO: change rank %>
+    <td>Rank: </td>
+    <td><%=link_to "#{album.name}", album_path(album)%></td>
+    <%# TODO: change path %>
+    <td><%= link_to "Upvote", root_path %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+
+<%= link_to "View All Media", root_path %>
+<%= link_to "Add a album", new_album_path %>
