@@ -46,10 +46,13 @@ def index
   end
 
   def destroy
-    @this_album=Album.find(params[:id])
-    @this_album.destroy
-
-    redirect_to albums_url
+    potential=Album.find_by_id(params[:id]) 
+    
+    unless potential==nil 
+      @this_album=potential
+      @this_album.destroy
+      redirect_to albums_url
+    end
   end
 
   def upvote
@@ -58,6 +61,6 @@ def index
     
     @this_album.save
     
-    redirect_to album_url(@this_album) #how do you say "the last page it was on"
+    redirect_to :back
   end
 end

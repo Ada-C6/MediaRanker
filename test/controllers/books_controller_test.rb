@@ -48,4 +48,17 @@ class BooksControllerTest < ActionController::TestCase
     end
   end
 
+  test "can't delete a book that is not there" do
+    assert_difference("Book.count",0) do 
+      delete :destroy, {id: 400}
+    end
+  end
+  
+  test "should be able to upvote a book" do
+         #fake page for page page to come from
+        request.env["HTTP_REFERER"]="blah"
+        upvote_params = {book:{name: books(:nap).name, author: books(:nap).author}, id: books(:nap).id}
+        patch :upvote, upvote_params
+        assert_redirected_to("blah")
+  end
 end

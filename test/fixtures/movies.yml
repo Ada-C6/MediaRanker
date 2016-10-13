@@ -4,10 +4,10 @@ dead_or_alive:
   name: Dead or Alive
   director: G. Allen
   description: A videogame made into a movie
-  rank: 
+  rank: 1
 
 king_kong:
   name: King Kong
   director: Someone
   description: You know what happens already
-  rank: 
+  rank: 1

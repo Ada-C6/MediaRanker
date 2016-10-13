@@ -47,4 +47,19 @@ class MoviesControllerTest < ActionController::TestCase
       assert_response :redirect
     end
   end
+
+  test "can't delete a movie that is not there" do
+    assert_difference("Movie.count",0) do 
+      delete :destroy, {id: 400}
+    end
+  end
+
+  test "should be able to upvote a movie" do
+         #fake page for page page to come from
+        request.env["HTTP_REFERER"]="blah"
+        upvote_params = {movie:{name: movies(:dead_or_alive).name, director: movies(:dead_or_alive).director}, id: movies(:dead_or_alive).id}
+        patch :upvote, upvote_params
+        assert_redirected_to("blah")
+  end
+  
 end

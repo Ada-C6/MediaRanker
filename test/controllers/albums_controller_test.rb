@@ -48,4 +48,17 @@ class AlbumsControllerTest < ActionController::TestCase
     end
   end
 
+  test "can't delete an album that is not there" do
+    assert_difference("Album.count",0) do 
+      delete :destroy, {id: 400}
+    end
+  end
+
+  test "should be able to upvote a book" do
+         #fake page for page page to come from
+        request.env["HTTP_REFERER"]="blah"
+        upvote_params = {album:{name: albums(:no_escape).name, artist: albums(:no_escape).artist}, id: albums(:no_escape).id}
+        patch :upvote, upvote_params
+        assert_redirected_to("blah")
+  end
 end
