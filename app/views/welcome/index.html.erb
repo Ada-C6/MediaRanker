@@ -1,34 +1,24 @@
-<h1>Welcome Page</h1>
+<h1>Check out our Top Hits:</h1>
 
-<section>
-  <h3>Top Movies:</h3>
+<table>
+  <tr>
+    <th><h3>Top Movies:</h3></th>
+    <th><h3>Top Books:</h3></th>
+    <th><h3>Top Albums:</h3></th>
+  </tr>
 
-  <% @movies.each do | movie | %>
-  <ul>
-    <li><%= link_to "#{movie.name}", movie_path(movie.id) %><%= " (# of Votes: #{movie.rank})" %></li>
-  </ul>
-  <% end  %>
-  <%= link_to "See More Movies", movies_path, method: :get %>
-</section>
+  <% 3.times do | i | %>
+  <tr>
+      <td><%= link_to "#{@movies_by_rank[i].name}", movie_path(@movies_by_rank[i].id) %><%= " (Votes: #{@movies_by_rank[i].rank})" %></td>
 
-<section>
-  <h3>Top Books:</h3>
+      <td><%= link_to "#{@books_by_rank[i].name}", book_path(@books_by_rank[i].id) %><%= " (Votes: #{@books_by_rank[i].rank})" %></td>
 
-  <% @books.each do | book | %>
-  <ul>
-    <li><%= link_to "#{book.name}", book_path(book.id) %><%= " (# of Votes: #{book.rank})" %></li>
-  </ul>
-  <% end  %>
-  <%= link_to "See More Books", books_path, method: :get %>
-</section>
-
-<section>
-  <h3>Top Albums:</h3>
-
-  <% @albums.each do | album | %>
-  <ul>
-    <li><%= link_to "#{album.name}", album_path(album.id) %><%= " (# of Votes: #{album.rank})" %></li>
-  </ul>
-  <% end  %>
-  <%= link_to "See More Albums", albums_path, method: :get %>
-</section>
+      <td><%= link_to "#{@albums_by_rank[i].name}", album_path(@albums_by_rank[i].id) %><%= " (Votes: #{@albums_by_rank[i].rank})" %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td><%= link_to "See More Movies", movies_path, method: :get %></td>
+    <td><%= link_to "See More Books", books_path, method: :get %></td>
+    <td><%= link_to "See More Albums", albums_path, method: :get %></td>
+  </tr>
+</table>

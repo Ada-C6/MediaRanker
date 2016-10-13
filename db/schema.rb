@@ -31,9 +31,6 @@ ActiveRecord::Schema.define(version: 20161012000259) do
     t.datetime "updated_at",              null: false
   end
 
-  create_table "default_value_for_ranks", force: :cascade do |t|
-  end
-
   create_table "movies", force: :cascade do |t|
     t.string   "name"
     t.string   "director"
