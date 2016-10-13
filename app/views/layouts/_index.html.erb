@@ -17,11 +17,11 @@
       <% media.each do |m| %>
         <td><%= "#{ m.upvotes }" %></td>
         <td><%= link_to "#{ m.name }", url_for(m) %></td>
-        <td><%= button_to "Upvote", action: :vote, id: m.id %></td>
+        <td><%= button_to "Upvote", { action: :vote, id: m.id }, { :class => "upvote-button"} %></td>
     </tr>
       <% end %>
   </tbody>
 </table>
 
-<%= button_to "View All Media", root_path, method: :get %>
-<%= button_to "Add New #{ type.capitalize }", url_for(action: 'new', controller: type), method: :get %>
+<%= button_to "View All Media", root_path, method: :get, :class => "buttons" %>
+<%= button_to "Add New #{ type.capitalize }", url_for(action: 'new', controller: type), method: :get, :class => "buttons" %>

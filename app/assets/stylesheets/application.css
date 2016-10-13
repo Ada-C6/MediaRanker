@@ -20,6 +20,11 @@ html {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+body {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
 header {
   margin: 40px 0 20px 0;
   /*border-bottom: 1px solid #eee;*/
@@ -35,10 +40,29 @@ a:hover {
   text-decoration: underline;
 }
 
-header li {
+li {
   display: inline-block;
 }
 
 h3, h4 {
   color: #777;
+}
+
+/*Buttons on each media item's page except for upvote*/
+.list-of-buttons {
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.buttons {
+  border-radius: 5px;
+}
+
+.upvote-button {
+  background-color: #428bca;
+  border-radius: 45%;
+}
+
+.delete-button {
+  background-color: red;
 }
