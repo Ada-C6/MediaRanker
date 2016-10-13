@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
     rescue_from ActiveRecord::RecordNotFound, :with => :render_404
 
     def render_404
-      render :file => "#{Rails.root}/public/404", :raise => ActiveRecord::RecordNotFound
+      render :file => "#{Rails.root}/public/404", :status => 404
     end
 end

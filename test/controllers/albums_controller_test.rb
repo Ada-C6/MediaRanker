@@ -11,6 +11,11 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get 404 for record that does not exist" do
+    get :show, {id: 99999999999}
+    assert_response :missing
+  end
+
   test "should get new" do
     get :new
     assert_response :success
@@ -35,10 +40,10 @@ class AlbumsControllerTest < ActionController::TestCase
   end
 
   test "should be able to delete a record" do
-   assert_difference("Album.count", -1) do
-     delete :destroy, {id: 1 }
-   end
- end
+    assert_difference("Album.count", -1) do
+    delete :destroy, {id: 1 }
+    end
+  end
 
   test "should be able to upvote" do
    assert_difference("Album.find(albums(:one).id).rank", 1) do
@@ -47,9 +52,5 @@ class AlbumsControllerTest < ActionController::TestCase
      post :upvote, post_params
    end
   end
-
-    test "trying to delete a record that does not exist will raise" do
-      assert_raises(Exception) { delete :destroy, {id: 10 } }
-    end
 
 end

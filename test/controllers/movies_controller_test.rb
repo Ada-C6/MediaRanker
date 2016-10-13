@@ -11,6 +11,11 @@ class MoviesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get 404 for record that does not exist" do
+    get :show, {id: 99999999999}
+    assert_response :missing
+  end
+
   test "should get new" do
     get :new
     assert_response :success
