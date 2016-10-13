@@ -7,6 +7,14 @@ class AlbumsController < ApplicationController
   def show
     @id = Integer(params[:id])
     @this_item = Album.find(@id)
+    @name = @this_item.name
+    @person = @this_item.artist
+    @description = @this_item.description
+    @show = vote_album_path(@id)
+    @edit = edit_album_path(@id)
+    @delete = edit_album_path(@id)
+    @index = albums_path
+    @root = root_path
   end
 
   def new

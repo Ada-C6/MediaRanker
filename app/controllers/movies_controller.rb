@@ -7,6 +7,14 @@ class MoviesController < ApplicationController
   def show
     @id = Integer(params[:id])
     @this_item = Movie.find(@id)
+    @name = @this_item.name
+    @person = @this_item.director
+    @description = @this_item.description
+    @show = vote_movie_path(@id)
+    @edit = edit_movie_path(@id)
+    @delete = edit_movie_path(@id)
+    @index = movies_path
+    @root = root_path
   end
 
   def new

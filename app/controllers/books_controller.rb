@@ -7,6 +7,14 @@ class BooksController < ApplicationController
   def show
     @id = Integer(params[:id])
     @this_item = Book.find(@id)
+    @name = @this_item.title
+    @person = @this_item.author
+    @description = @this_item.description
+    @show = vote_book_path(@id)
+    @edit = edit_book_path(@id)
+    @delete = edit_book_path(@id)
+    @index = books_path
+    @root = root_path
   end
 
   def new

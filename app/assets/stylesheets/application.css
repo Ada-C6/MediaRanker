@@ -16,3 +16,8 @@ header {
 body {
   margin: 10vmin;
 }
+
+ul
+{
+list-style-type: none;
+}

@@ -1,23 +1,11 @@
+<%= render "layouts/show" %>
 
-<main class = "show">
-  <section>
-    <div class="row">
-      <h2 class="small-12 large-6 columns"><%= @this_item.name %></h2>
-      <h3 class="small-12 large-6 columns">Directed by: <%=@this_item.director%></h3>
-    </div>
-    <div class="row">
-      <h4 class="small-12">Rank: <%=@this_item.rank%></h4>
-
-      <p class="small-12"><%=@this_item.description%></p>
-      <p class="small-12"><%= button_to "Vote", vote_movie_path(@id), method: :patch %><p>
-    </div>
-  </section>
-
+<main>
+  <p class="small-12"><%= button_to "Vote", @show, method: :patch %><p>
   <div class="row">
-    <p class="small-6 medium-3 columns"><%=link_to "Edit",edit_movie_path(@id)%></p>
-    <p class="small-6 medium-3 columns"><%= link_to "Delete",delete_movie_path(@id),  method: :delete , data: {confirm: "Are you reallysure?"}%></p>
-    <p class="small-6 medium-3 columns"><%=link_to "View all Movies",movies_path%></p>
-    <p class="small-6 medium-3 columns"><%=link_to "View all Media",root_path%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "Edit", @edit%></p>
+    <p class="small-6 medium-3 columns"><%= link_to "Delete", @delete,  method: :delete , data: {confirm: "Are you reallysure?"}%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "View all Movies",@index%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "View all Media",@root%></p>
   <div>
-
 </main>

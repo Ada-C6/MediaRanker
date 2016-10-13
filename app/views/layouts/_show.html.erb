@@ -1,0 +1,22 @@
+
+<main>
+  <section>
+    <div class="row">
+      <h2 class="small-12 large-6 columns"><%= @name %></h2>
+      <h3 class="small-12 large-6 columns">By: <%=@person%></h3>
+    </div>
+    <div class="row">
+      <h4 class="small-12">Rank: <%=@this_item.rank%></h4>
+
+    </div>
+      <p class="small-12"><%=@description%></p>
+      <p class="small-12"><%= button_to "Vote", @show, method: :patch %><p>
+  </section>
+
+  <div class="row">
+    <p class="small-6 medium-3 columns"><%=link_to "Edit", @edit%></p>
+    <p class="small-6 medium-3 columns"><%= link_to "Delete", @delete,  method: :delete , data: {confirm: "Are you reallysure?"}%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "View all",@index%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "View all Media",@root%></p>
+  <div>
+</main>
