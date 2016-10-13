@@ -1,11 +1,10 @@
-@import url('foundation.css')
+@import url('foundation.css');
 
 
-/*header {
+header {
   border-bottom: 1px solid	#D3D3D3;
-}*/
+}
 
-/*
 header h1, h3 {
   display: inline;
   padding-bottom: 20px;
@@ -15,6 +14,11 @@ header img {
   width: 10%;
   min-width: 100px;
   margin: 20px 5px 0 20px;
+  /*float: left;*/
+}
+
+.quick_links {
+  text-align: center;
 }
 
 table {
@@ -27,10 +31,13 @@ table th {
   text-align: left;
 }
 
-table td {
-  font-size: 150%;
-  /*width: 30%;
+table tbody {
+  border: none;
 }
+
+/*table tr:hover {
+  background-color: #AAD2BA;
+}*/
 
 a {
   color: #73AB84;
@@ -44,4 +51,17 @@ a {
 a:hover {
   color: #AAD2BA;
   text-decoration: underline;
-}*/
+}
+
+div.button {
+  border: 1px solid	#D3D3D3;
+  background-color: white;
+}
+
+.form, .edit_form {
+  padding: 20px;
+}
+
+.show_media {
+  padding: 20px;
+}

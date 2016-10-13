@@ -1,4 +1,5 @@
-<%= form_for @movie do |m| %>
+<div class="form">
+  <%= form_for @movie do |m| %>
   <p><%= m.label "Name" %>
   <%= m.text_field :name %></p>
 
@@ -12,3 +13,4 @@
     <%= m.submit "Save" %>
   </p>
 <% end %>
+</div>

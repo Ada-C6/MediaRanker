@@ -1,14 +1,14 @@
-<%= form_for @album do |a| %>
+<div class="form">
+  <%= form_for @album do |a| %>
   <p><%= a.label "Name" %>
-  <%= a.text_field :name %></p>
+    <%= a.text_field :name %></p>
 
   <p><%= a.label "Artist" %>
-  <%= a.text_field :artist %></p>
+    <%= a.text_field :artist %></p>
 
   <p><%= a.label "Description" %>
-  <%= a.text_field :description %></p>
+    <%= a.text_field :description %></p>
 
-  <p>
-    <%= a.submit "Save" %>
-  </p>
-<% end %>
+  <p><%= a.submit "Save" %></p>
+  <% end %>
+</div>

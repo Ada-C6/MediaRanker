@@ -1,26 +1,26 @@
 <main>
-
+  <div class="quick_links"><h3><a href="/#movies">MOVIES</a> || <a href="/#books">BOOKS</a> || <a href="/#albums">ALBUMS</a></h3></div>
   <% min_rows = [@movies.count, @books.count, @albums.count].min %>
   <% min_rows >= 10 ? rows = 10 : rows = min_rows %>
 
   <section id="media">
     <article class="row small-up-1 medium-up-3">
       <article class="column">
-        <h3>Top Movies</h3>
+        <h3 id="movies">Top Movies</h3>
         <% rows.times do |i| %>
           <p><span class = "name"><%= link_to @movies[i].name, movie_path(@movies[i]) %></span><%=" Ranked: #{@movies[i].ranking }" %></p>
         <% end %>
         <p><%= link_to "View All Movies", movies_path %></p>
       </article>
       <article class="column">
-        <h3>Top Books</h3>
+        <h3 id="books">Top Books</h3>
         <% rows.times do |i| %>
           <p><span class = "name"><%= link_to @books[i].name, book_path(@books[i]) %></span><%= " Ranked: #{ @books[i].ranking }" %></p>
         <% end %>
         <p><%= link_to "View All Books", books_path %></p>
       </article>
       <article class="column">
-        <h3>Top Albums</h3>
+        <h3 id="albums">Top Albums</h3>
         <% rows.times do |i| %>
           <p><span class = "name"><%= link_to @albums[i].name, album_path(@albums[i]) %></span><%= " Ranked: #{ @albums[i].ranking }" %></p>
         <% end %>
