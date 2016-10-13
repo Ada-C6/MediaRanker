@@ -1,6 +1,7 @@
 <h1>Media Ranker</h1>
 
 <h2>Top Movies </h2>
+
 <% @movies.each do |movie| %>
 <p>
 <%=  link_to "#{movie.name}", movie_path(movie) %>

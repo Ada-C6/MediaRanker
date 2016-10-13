@@ -1,10 +1,7 @@
 class MediasController < ApplicationController
   def index
-    @movies = Movie.all
-    @movies.order(:ranking).reverse
-    @books = Book.all
-    @books.order(:ranking).reverse
-    @albums = Album.all
-    @albums.order(:ranking).reverse
+    @movies = Movie.all.order(:ranking).reverse.first(10)
+    @books = Book.all.order(:ranking).reverse.first(10)
+    @albums = Album.all.order(:ranking).reverse.first(10)
   end
 end
