@@ -1,41 +1,20 @@
 <section>
   <h1>Top Movies</h1>
 
-  <ol>
-    <% @movies.each do |movie| %>
-    <li>
-      <h2><%= link_to movie.name, movie_path(movie) %></h2>
-      <small><%= movie.upvotes %></small>
-    </li>
+  <%= render partial: 'layouts/media_list', locals: { media_collection: @movies } %>
 
-    <% end  %>
-  </ol>
 </section>
 
 <section>
   <h1>Top Books</h1>
 
-  <ol>
-    <% @books.each do |book| %>
-    <li>
-      <h2><%= link_to book.name, book_path(book) %></h2>
-      <small><%= book.upvotes %></small>
-    </li>
+  <%= render partial: 'layouts/media_list', locals: { media_collection: @books } %>
 
-    <% end  %>
-  </ol>
 </section>
 
 <section>
   <h1>Top Albums</h1>
 
-  <ol>
-    <% @albums.each do |album| %>
-    <li>
-      <h2><%= link_to album.name, album_path(album) %></h2>
-      <small><%= album.upvotes %></small>
-    </li>
+  <%= render partial: 'layouts/media_list', locals: { media_collection: @albums } %>
 
-    <% end  %>
-  </ol>
 </section>
