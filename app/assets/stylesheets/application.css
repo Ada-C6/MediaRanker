@@ -2,10 +2,19 @@
 @import url('foundation.css');
 
 .page-header {
-  background-image: url('/assets/images/owl.jpg');
+  border-bottom: solid thin;
+  background-image: url('/assets/owl.jpg');
   background-repeat: no-repeat;
+}
+
+.main-header {
+  margin-left: 10rem;
 }
 
 h1, h2, small {
 display: inline;
+}
+
+.button {
+  border-radius: 4rem;
 }
