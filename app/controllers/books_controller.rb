@@ -1,8 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @all_books = Book.all
-    #move the ranking logic to the model?
-    @all_books = @all_books.order(:ranking).reverse
+    @all_books = Book.all.order(:ranking).reverse
   end
 
   def show
@@ -57,7 +55,7 @@ class BooksController < ApplicationController
   end
 
   private
-  def book_params 
+  def book_params
   params.require(:book).permit(:name, :author, :description)
   end
 

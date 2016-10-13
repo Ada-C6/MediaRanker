@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @all_movies = Movie.all
-    @all_movies = @all_movies.order(:ranking).reverse
+    @all_movies = Movie.all.order(:ranking).reverse
   end
 
   def new
@@ -57,7 +56,7 @@ class MoviesController < ApplicationController
 
   private
   def movie_params #will permit and require params we trust
-  params.require(:movie).permit(:name, :director, :description,)
+  params.require(:movie).permit(:name, :director, :description)
   end
 
 end
