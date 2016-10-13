@@ -1,32 +1,34 @@
-<article class="top-movies">
-  <h1>Top Movies</h1>
-    <ul class="top-10">
+<main>
+  <article class="top-movies">
+    <h1>Top Movies</h1>
+    <section class="top-10">
       <% 10.times do |i| %>
-        <li><%= link_to @movies[i].title, movie_path(@movies[i]) %>
-          <%= "Ranked: #{@movies[i].ranked}" %></li>
-      <% end %>
-    </ul>
-    <%= link_to "View More Movies", movies_path %>
-</article>
+      <h2><%= link_to @movies[i].title, movie_path(@movies[i]) %>
+        <%= "Ranked: #{@movies[i].ranked}" %></h2>
+        <% end %>
+      </section>
+      <%= link_to "View More Movies", movies_path %>
+    </article>
 
-<article class="top-books">
-  <h1>Top Books</h1>
-    <ul class="top-10">
-      <% 10.times do |i| %>
-        <li><%= link_to @books[i].title, book_path(@books[i]) %>
-          <%= "Ranked: #{@books[i].ranked}" %></li>
-      <% end %>
-    </ul>
-    <%= link_to "View More Books", books_path %>
-</article>
+    <article class="top-books">
+      <h1>Top Books</h1>
+      <section class="top-10">
+        <% 10.times do |i| %>
+        <h2><%= link_to @books[i].title, book_path(@books[i]) %>
+          <%= "Ranked: #{@books[i].ranked}" %></h2>
+          <% end %>
+        </section>
+        <%= link_to "View More Books", books_path %>
+      </article>
 
-<article class="top-albums">
-  <h1>Top Albums</h1>
-    <ul class="top-ten">
-      <% 10.times do |i| %>
-        <li><%= link_to @albums[i].title, album_path(@albums[i]) %>
-          <%= "Ranked: #{@albums[i].ranked}" %></li>
-      <% end %>
-    </ul>
-    <%= link_to "View More Albums", albums_path %>
-</article>
+      <article class="top-albums">
+        <h1>Top Albums</h1>
+        <section class="top-10">
+          <% 10.times do |i| %>
+          <h2><%= link_to @albums[i].title, album_path(@albums[i]) %>
+            <%= "Ranked: #{@albums[i].ranked}" %></h2>
+            <% end %>
+          </section>
+          <%= link_to "View More Albums", albums_path %>
+        </article>
+</main>

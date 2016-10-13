@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  directed_by: MyString
+  by: MyString
   ranked: 1
   description: MyString
 
 two:
   title: MyString
-  directed_by: MyString
+  by: MyString
   ranked: 1
   description: MyString
