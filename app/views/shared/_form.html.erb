@@ -1,0 +1,11 @@
+<div>
+<%= form_for media_item, method: http_method do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label creator %>
+<%= f.text_field creator %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+<%= f.submit "Save" %>
+<% end %>
+</div>
