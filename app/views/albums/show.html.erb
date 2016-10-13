@@ -1,3 +1,4 @@
-<p>
-displays a specific album
-</p>
+<%= render partial: 'layouts/show', locals: { media: @album } %>
+
+<%= link_to "View all Albums", albums_path  %>
+<%= link_to "View all Media", root_path %>
