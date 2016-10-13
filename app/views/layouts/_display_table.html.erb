@@ -1,35 +1,32 @@
-<h3><%= title %></h3>
+<h3 ><%= title %></h3>
 
+<div class="row small-up-3 medium-up-3 large-up-3">
+  <div class="column">
+    Ranking
+  </div>
+  <div class="column">
+    Title
+  </div>
+  <div class="column">
+    Upvote
+  </div>
+</div>
 
-<table>
-  <tbody>
-    <tr class="row small-up-3 medium-up-3 large-up-3">
-      <th class="column">
-        Ranking
-      </th>
-      <th class="column">
-        Title
-      </th>
-      <th class="column">
-        Upvote
-      </th>
-    </tr>
+<% items.each do |item| %>
+<div class="row small-up-3 medium-up-3 large-up-3">
+  <div class="column">
+    <%= "Ranked: #{item.vote}" %>
+  </div>
+  <div class="column">
+    <%= link_to "#{item.title}", item %>
+  </div>
+  <div class="column">
+    <%= form_for item, method: :patch do |f|%>
+      <%= f.hidden_field :vote, :value => item.upvote %>
+      <%= f.submit "Upvote!" %>
+    <% end %>
+  </div>
 
-      <% items.each do |item| %>
-      <tr class="row small-up-3 medium-up-3 large-up-3">
-        <th class="column">
-          <%= "Ranked: #{item.vote}" %>
-        </th>
-        <th class="column">
-          <%= link_to "#{item.title}", item %>
-        </th>
-        <th class="column">
-          <%= form_for item, method: :patch do |f|%>
-            <%= f.hidden_field :vote, :value => item.upvote %>
-            <%= f.submit "Upvote!" %>
-          <% end %>
-        </th>
-      </tr>
-      <% end %>
-    </tbody>
-</table>
+</div>
+
+<% end %>

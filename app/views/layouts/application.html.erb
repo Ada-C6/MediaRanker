@@ -6,7 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="row">
+  <div class="column small-12 medium-12 large-12">
+
 
   <header>
     <h1><%= link_to "Ultimate Media Ranker", root_path %></h1>
@@ -14,5 +16,6 @@
 
 <%= yield %>
 
+</div>
 </body>
 </html>
