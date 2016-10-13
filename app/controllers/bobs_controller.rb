@@ -1,6 +1,6 @@
 class BobsController < ApplicationController
   def index
-    @bobs = Bob.all
+    @bobs = Bob.all.sort_by {|bob| bob.bob_votes.count }.reverse
   end
 
   def show
@@ -45,7 +45,7 @@ class BobsController < ApplicationController
 
   def upvote
     @bob = Bob.find(params[:id].to_i)
-    @bob.votes.create
+    @bob.bob_votes.create
     redirect_to bob_path
   end
 

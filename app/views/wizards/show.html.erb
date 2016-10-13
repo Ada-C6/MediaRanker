@@ -1,2 +1,11 @@
-<h1>Wizards#show</h1>
-<p>Find me in app/views/wizards/show.html.erb</p>
+<h2><%= @wizard.title %></h2>
+<p><%= @wizard.author_director %></p>
+<p><%= @wizard.main_character %></p>
+
+
+
+<p><%= pluralize(@wizard.wizard_votes.count, "vote") %></p>
+<p><%= button_to 'upvote', upvote_wizard_path(@wizard), method: :post %></p>
+<p><%= button_to( 'edit', {action: "edit", id: @wizard.id }, method: :get ) %></p>
+<p> <%= button_to( 'delete', {action: "delete", id: @wizard.id }, method: :delete, data: {confirm: "Are you sure?"} ) %> </p>
+<p><%= link_to( 'list of all wizards', wizard_path ) %></p>

@@ -1,3 +1,4 @@
 class Bob < ActiveRecord::Base
-  has_many :votes, dependent: :destroy
+  has_many :bob_votes, dependent: :destroy
+  validates :name, presence: true
 end

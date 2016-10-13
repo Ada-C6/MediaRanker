@@ -1,2 +1,11 @@
-<h1>Wizards#index</h1>
-<p>Find me in app/views/wizards/index.html.erb</p>
+<% @wizards.each do |wizard| %>
+<table>
+  <tr>
+    <td><%= link_to( wizard.title, show_wizard_path(wizard.id) ) %></td>
+    <td><%= button_to 'upvote', upvote_wizard_path(wizard), method: :post %></td>
+    <td><%= pluralize(wizard.wizard_votes.count, "vote") %></td>
+  </tr>
+</table>
+<% end %>
+
+<p><%= link_to( 'create a new magical story', new_wizard_path ) %></p>

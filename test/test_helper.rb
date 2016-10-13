@@ -4,6 +4,7 @@ require 'rails/test_help'
 require 'minitest/reporters'
 
 class ActiveSupport::TestCase
+  self.set_fixture_class leslies: Leslie
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   Minitest::Reporters.use!

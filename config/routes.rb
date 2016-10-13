@@ -6,35 +6,39 @@ Rails.application.routes.draw do
 
   #############################################
 
-  get 'wizards/index'
+  get 'wizards/index' => 'wizards#index', as: 'wizard'
 
-  get 'wizards/show'
+  get 'wizards/show/:id' => 'wizards#show', as: 'show_wizard'
 
-  get 'wizards/new'
+  get 'wizards/new' => 'wizards#new', as: 'new_wizard'
 
-  get 'wizards/create'
+  post 'wizards/create' => 'wizards#create', as: 'create_wizard'
 
-  get 'wizards/edit'
+  get 'wizards/:id/edit' => 'wizards#edit', as: 'edit_wizard'
 
-  get 'wizards/update'
+  patch 'wizards/:id/update' => 'wizards#update', as: 'update_wizard'
 
-  get 'wizards/delete'
+  delete 'wizards/:id/delete' => 'wizards#delete', as: 'delete_wizard'
+
+  post 'wizards/:id/upvote' => 'wizards#upvote', as: 'upvote_wizard'
 
   #############################################
 
-  get 'leslies/index'
+  get 'leslies/index' => 'leslies#index', as: 'leslie'
 
-  get 'leslies/show'
+  get 'leslies/show/:id' => 'leslies#show', as: 'show_leslie'
 
-  get 'leslies/new'
+  get 'leslies/new' => 'leslies#new', as: 'new_leslie'
 
-  get 'leslies/create'
+  post 'leslies/create' => 'leslies#create', as: 'create_leslie'
 
-  get 'leslies/edit'
+  get 'leslies/:id/edit' => 'leslies#edit', as: 'edit_leslie'
 
-  get 'leslies/update'
+  patch 'leslies/:id/update' => 'leslies#update', as: 'update_leslie'
 
-  get 'leslies/delete'
+  delete 'leslies/:id/delete' => 'leslies#delete', as: 'delete_leslie'
+
+  post 'leslies/:id/upvote' => 'leslies#upvote', as: 'upvote_leslie'
 
   #############################################
 

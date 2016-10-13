@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+File.open("#{Rails.root}/spec/fixtures/users.yml", 'w') do |file|
+  data = User.all.to_a.map(&:attributes)
+  data.each{|x| x.delete('id')}
+  file.write data.to_yaml
+end

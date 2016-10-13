@@ -1,10 +1,11 @@
-<h1>Bobs#index</h1>
-<p>Find me in app/views/bobs/index.html.erb</p>
-
 <% @bobs.each do |bob| %>
-<p><%= link_to( bob.name, show_bob_path(bob.id) ) %></p>
-
-<p><%= button_to 'upvote', upvote_bob_path(bob), method: :post %></p>
+<table>
+  <tr>
+    <td><%= link_to( bob.name, show_bob_path(bob.id) ) %></td>
+    <td><%= button_to 'upvote', upvote_bob_path(bob), method: :post %></td>
+    <td><%= pluralize(bob.bob_votes.count, "vote") %></td>
+  </tr>
+</table>
 <% end %>
 
 <p><%= link_to( 'create a new bob', new_bob_path ) %></p>
