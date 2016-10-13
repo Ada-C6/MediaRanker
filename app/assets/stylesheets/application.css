@@ -14,3 +14,25 @@
  *= require_self
  */
 @import url('foundation.css');
+
+header img{
+	max-width: 200px;
+	height: auto;
+	
+}
+
+/*header{
+	background: url("/assets/thumbs_up_down.png");
+	background-size: 100px;
+	background-repeat:no-repeat;
+}*/
+
+header h1,h2{
+	display: inline;
+}
+
+header h2{
+	display: inline;
+	color: gray;
+	font-size: 1.5em;
+}
