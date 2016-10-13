@@ -1,0 +1,8 @@
+<% @movies.each do |movie| %>
+<%= "#{movie.rank}" %>
+  <%= link_to("#{movie.title}", movie_path(movie)) %>
+  <%# BUTTON TO UPVOTE %>
+<% end %>
+
+<%= button_to("View all media", root_path, method: :get) %>
+<%= button_to("Add a movie", new_movie_path, method: :get) %>  
