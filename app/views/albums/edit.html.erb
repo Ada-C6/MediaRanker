@@ -1,32 +1,44 @@
-<h2>Edit an album</h2>
+<div class="row">
+  <div class="column">
+    <h2>Edit an album</h2>
+  </div>
+</div>
 
-<% if @album.errors.any? %>
-  <section class = "errors">
-    <p>Whoops! We couldn't save your changes because:</p>
-    <ul>
-      <% @album.errors.each do |column, message| %>
-        <li>
-          <%= message %>
-        </li>
-      <% end %>
-    </ul>
-    <p>Please edit your entries and try again.</p>
-  </section>
-<% end %>
+<article>
 
-<section>
-  <%= form_for @album, url: albums_update_path, method: :put do |f| %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :artist %>
-    <%= f.text_field :artist %>
-
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-
-    <%= f.submit %>
-
+  <% if @album.errors.any? %>
+    <section class="errors row">
+      <div class="column">
+        <p>Whoops! We couldn't save your changes because:</p>
+        <ul>
+          <% @album.errors.each do |column, message| %>
+            <li>
+              <%= message %>
+            </li>
+          <% end %>
+        </ul>
+        <p>Please edit your entries and try again.</p>
+      </div>
+    </section>
   <% end %>
-</section>
+
+  <section class="row">
+    <div class="column">
+      <%= form_for @album, url: albums_update_path, method: :put do |f| %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+
+        <%= f.label :artist %>
+        <%= f.text_field :artist %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+
+        <%= f.submit %>
+
+      <% end %>
+    </div>
+  </section>
+
+</article>

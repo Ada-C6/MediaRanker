@@ -1,14 +1,30 @@
-<h2>Books in the database</h2>
+<div class="row">
+  <div class="column">
+    <h2>Books in the database</h2>
+  </div>
+</div>
 
-<TABLE>
-  <% @books.each do |book| %>
-    <TR>
-      <TD>Upvotes: <%= book.upvotes %></TD>
-      <TD><%= link_to book.title, books_show_path(book.id) %></TD>
-      <TD><%= button_to "Upvote", books_update_path(book.id), method: :patch %></TD>
-    </TR>
-  <% end %>
-</TABLE>
+<div class=" row">
+  <div class="column">
+    <TABLE>
+      <% @books.each do |book| %>
+        <TR>
+          <TD>Upvotes: <%= book.upvotes %></TD>
+          <TD><%= link_to book.title, books_show_path(book.id) %></TD>
+          <TD><%= button_to "Upvote", books_update_path(book.id), method: :patch %></TD>
+        </TR>
+      <% end %>
+    </TABLE>
+  </div>
+</div>
 
-<%= button_to "View all media", main_path, method: :get %>
-<%= button_to "Add a book", books_new_path, method: :get %>
+<div class="row">
+  <div class="column small-4 medium-3 large-2">
+    <%= button_to "View all media", main_path, method: :get %>
+  </div>
+</div>
+<div class="row">
+  <div class="column small-4 medium-3 large-2">
+    <%= button_to "Add a book", books_new_path, method: :get %>
+  </div>
+</div>
