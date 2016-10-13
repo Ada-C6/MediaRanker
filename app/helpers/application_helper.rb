@@ -1,13 +1,22 @@
 module ApplicationHelper
 
-  def create_show_path(media)
-
+  def create_media_path(media)
     if media.class == Movie
-       movie_path(media)
+      movie_path(media)
     elsif media.class == Book
       book_path(media)
     elsif media.class == Album
       album_path(media)
+    end
+  end
+
+  def create_edit_path(media)
+    if media.class == Movie
+      edit_movie_path(media)
+    elsif media.class == Book
+      edit_book_path(media)
+    elsif media.class == Album
+      edit_album_path(media)
     end
   end
 

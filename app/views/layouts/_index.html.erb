@@ -1,4 +1,4 @@
-    <table>
+<table>
     <tr>
       <th>Ranking</th>
       <th>Name</th>
@@ -9,7 +9,7 @@
       <% media_collection.each do |media| %>
     <tr>
       <td><%= media.upvotes %></td>
-      <td><%= link_to media.name, create_show_path(media) %></td>
+      <td><%= link_to media.name, create_media_path(media) %></td>
       <td><%= render partial: 'layouts/upvote', locals: { media: media } %></td>
     </tr>
       <% end  %>
