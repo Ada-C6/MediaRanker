@@ -1,24 +1,33 @@
 <section class="row small-up-1 medium-up-3 large-up-3">
 
-<div class="column">
+<section class="column">
 <header>
   <h3>Top Movies</h3>
 </header>
 <%= render partial: "layouts/basic_info", locals: { media_type: @top_movies, media_class: "movie"}%>
-</div>
+<footer>
+  <%= link_to "See all Movies", movies_path %>
+</footer>
+</section>
 
-<div class="column">
+<section class="column">
 <header>
   <h3>Top Books</h3>
 </header>
 <%= render partial: "layouts/basic_info", locals: { media_type: @top_books, media_class: "book"}%>
-</div>
+<footer>
+  <%= link_to "See all Books", books_path %>
+</footer>
+</section>
 
-<div class="column">
+<section class="column">
 <header>
   <h3>Top Albums</h3>
 </header>
 <%= render partial: "layouts/basic_info", locals: { media_type: @top_books, media_class: "book"}%>
-</div>
+<footer>
+  <%= link_to "See all Albums", albums_path %>
+</footer>
+</section>
 
 </section>
