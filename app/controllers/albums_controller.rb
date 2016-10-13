@@ -67,6 +67,10 @@ class AlbumsController < ApplicationController
   private
 
   def findAlbum
-    return Album.find(params[:id].to_i)
+    if Album.exists?(params[:id].to_i)
+      return Album.find(params[:id].to_i)
+    else
+      render status: 404
+    end
   end
 end

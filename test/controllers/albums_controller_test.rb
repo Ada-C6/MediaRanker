@@ -84,4 +84,8 @@ end
     end
   end
 
+  # test "should not be able to delete something that isn't there" do
+  #   delete :destroy, {id: 23232323}
+  #   assert_response :error
+  # end
 end
