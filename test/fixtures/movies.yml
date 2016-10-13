@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
-  description: MyString
-  ranked: 1
+titanic:
+  name: Titanic
+  director: James Cameron
+  description: 1997 American epic romance-disaster film
+  ranked: 2
 
-two:
-  name: MyString
-  director: MyString
-  description: MyString
-  ranked: 1
+shawshank_redemption:
+  name: Shawshank Redemption
+  director: Frank Darabont
+  description: 1994 American drama film
+  ranked: 2
+
+no_rank:
+  name: Random Movie

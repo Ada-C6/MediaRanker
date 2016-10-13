@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.all.order(:ranked).reverse
   end
 
   def show
@@ -47,7 +47,7 @@ class BooksController < ApplicationController
 
     redirect_to book_path(@book.id)
   end
-  
+
   private
 
   def book_params
