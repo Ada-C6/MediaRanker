@@ -2,12 +2,16 @@
 <h5><%= link_to "Submit a new movie for voting", new_movie_path %></h5>
 <table class="index-table">
   <tr>
-    <th>Points</th>
+    <th colspan=2>Points</th>
     <th>Movie Name</th>
     <th>More...</th>
   </tr>
   <% @movies.each do |movie| %>
   <tr>
+    <td>
+      <%= button_to "⬆", vote_movie_path(movie, vote: "up"), contoller: :movies, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_movie_path(movie, vote: "down"), contoller: :movies, action: :vote, method: :patch %>
+    </td>
     <td><%= "#{movie.rank_points}" %></td>
     <td><%= "#{movie.name}" %></td>
     <td><small>

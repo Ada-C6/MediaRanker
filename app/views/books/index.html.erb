@@ -2,12 +2,16 @@
 <h5><%= link_to "Submit a new book for voting", new_book_path %></h5>
 <table class="index-table">
   <tr>
-    <th>Points</th>
+    <th colspan=2>Points</th>
     <th>Book Name</th>
     <th>More...</th>
   </tr>
   <% @books.each do |book| %>
   <tr>
+    <td>
+      <%= button_to "⬆", vote_book_path(book, vote: "up"), contoller: :books, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_book_path(book, vote: "down"), contoller: :books, action: :vote, method: :patch %>
+    </td>
     <td><%= "#{book.rank_points}" %></td>
     <td><%= "#{book.name}" %></td>
     <td><small>
