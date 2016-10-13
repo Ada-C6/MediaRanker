@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
+    @books = Book.order(ranked: :desc).limit(50)
   end
 
   def show
