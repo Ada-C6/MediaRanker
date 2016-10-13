@@ -1,3 +1,4 @@
-<p>
-  will show a specific book
-</p>
+<%= render partial: 'layouts/show', locals: { media: @book } %>
+
+<%= link_to "View all Books", books_path  %>
+<%= link_to "View all Media", root_path %>
