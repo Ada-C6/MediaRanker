@@ -23,21 +23,22 @@ class AlbumsControllerTest < ActionController::TestCase
     end
     assert_response :redirect
   end
-  #
+
   test "should get edit" do
     get :edit, {id: 1}
     assert_response :success
   end
 
-test "should be able to update" do
+  test "should be able to update" do
     put :update, :id => albums(:one), :album => {:title => 'New Title', :artist => "New Artist", :description => "New Description"}
     assert_equal "New Title", Album.find(albums(:one).id).title
   end
 
-  test "should be able to delete" do
-    delete :destroy, {id: 1 }
-    assert_response :redirect
-  end
+  test "should be able to delete a record" do
+   assert_difference("Album.count", -1) do
+     delete :destroy, {id: 1 }
+   end
+ end
 
   test "should be able to upvote" do
    assert_difference("Album.find(albums(:one).id).rank", 1) do
@@ -45,6 +46,10 @@ test "should be able to update" do
      @request.env['HTTP_REFERER'] = '/albums/index'
      post :upvote, post_params
    end
- end
+  end
+
+    test "trying to delete a record that does not exist will raise" do
+      assert_raises(Exception) { delete :destroy, {id: 10 } }
+    end
 
 end

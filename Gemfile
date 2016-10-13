@@ -44,7 +44,7 @@ end
 
 group :development do
   # Adding better_errors Gem
-  gem "better_errors"
+  # gem "better_errors"
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

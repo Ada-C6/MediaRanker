@@ -41,7 +41,8 @@ class AlbumsController < ApplicationController
   end
 
   def destroy
-    Album.find(params[:id]).destroy
+    @album = Album.find(params[:id])
+    @album.destroy
 
     redirect_to action: 'index'
   end
