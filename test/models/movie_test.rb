@@ -6,7 +6,9 @@ class MovieTest < ActiveSupport::TestCase
   # end
 
   test "Create a Movie with valid data" do
+    movie = Movie.new(name: "foo")
+    assert movie.valid?
 
-  end 
+  end
 
 end
