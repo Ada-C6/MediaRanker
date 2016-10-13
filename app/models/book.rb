@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base
-  validates :name, presence: :true
+  validates :name, presence: true,
+  uniqueness: true
 
 
 #move the logic for upvoting here?

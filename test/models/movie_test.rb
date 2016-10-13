@@ -10,8 +10,7 @@ class MovieTest < ActiveSupport::TestCase
 
   test "cannot create two movies of the same name" do
     movie1 = Movie.create!(name: "Who Cares?")
-    movie2 = Movie.create!(name: "Who Cares?")
+    movie2 = Movie.new(name: "Who Cares?")
     assert_not movie2.valid?
-    assert_not_equal movie1.id, movie2.id
   end
 end
