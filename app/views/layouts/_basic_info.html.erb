@@ -1,0 +1,15 @@
+<table>
+<% media_type.each do |media| %>
+  <tr>
+    <td>
+      Rank: <%= media.rank %>
+    </td>
+    <td>
+      <%= link_to media.title, send( "#{media_class}_path", media) %>
+    </td>
+    <td>
+      <%= button_to "Upvote", send(  "upvote_#{media_class}_path", media), method: :patch %>
+    </td>
+  </tr>
+<% end %>
+</table>
