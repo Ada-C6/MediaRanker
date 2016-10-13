@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
     def index
-        @books = Book.all.order(rank: :desc)
+        @books = Book.all.order(votes: :desc)
     end
 
     def new
@@ -9,7 +9,7 @@ class BooksController < ApplicationController
 
     def create
         @book = Book.new(book_params)
-        @book.rank = 0
+        @book.votes = 0
         if @book.save  # successful
             redirect_to books_path
         else  # unsuccessful, return to form with instance variables poplulated

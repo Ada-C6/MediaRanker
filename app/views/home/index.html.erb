@@ -8,11 +8,11 @@
     <% 5.times do |i| %>
     <tr>
         <td><%= link_to "#{ @albums[i].name }", album_path(@albums[i]) %></td>
-        <td><small>Votes:<%= "#{ @albums[i].rank }" %></td>
+        <td><small>Votes:<%= "#{ @albums[i].votes }" %></td>
         <td><%= link_to "#{ @books[i].name }", book_path(@books[i]) %></td>
-        <td><small>Votes:<%= "#{ @books[i].rank }" %></td>
+        <td><small>Votes:<%= "#{ @books[i].votes }" %></td>
         <td><%= link_to "#{ @movies[i].name }", movie_path(@movies[i]) %></td>
-        <td><small>Votes:<%= "#{ @movies[i].rank }" %></td>
+        <td><small>Votes:<%= "#{ @movies[i].votes }" %></td>
     </tr>
     <% end %>
     <tr>

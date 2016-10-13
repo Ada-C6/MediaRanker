@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
     def index
-        @albums = Album.all.order(rank: :desc)
+        @albums = Album.all.order(votes: :desc)
     end
 
     def new
@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
 
     def create
         @album = Album.new(album_params)
-        @album.rank = 0
+        @album.votes = 0
         if @album.save  # successful
             redirect_to albums_path
         else  # unsuccessful, return to form with instance variables poplulated

@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011183630) do
+ActiveRecord::Schema.define(version: 20161013221624) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "name"
     t.string   "artist"
     t.string   "description"
-    t.integer  "rank"
+    t.integer  "votes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20161011183630) do
     t.string   "name"
     t.string   "author"
     t.string   "description"
-    t.integer  "rank"
+    t.integer  "votes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20161011183630) do
     t.string   "name"
     t.string   "director"
     t.string   "description"
-    t.integer  "rank"
+    t.integer  "votes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

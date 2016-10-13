@@ -1,13 +1,13 @@
 <table class="index_table">
     <tr>
-        <th>Ranking</th>
+        <th>Votes</th>
         <th>Movie Name</th>
         <th>Upvote</th>
     </tr>
 
     <% @movies.each do |movie| %>
     <tr>
-        <td><%= "#{ movie.rank }" %></td>
+        <td><%= "#{ movie.votes }" %></td>
         <td><%= link_to "#{ movie.name }", movie_path(movie) %></td>
         <td><%= button_to("upvote", movie_upvote_path(movie), method: :patch) %></td>
     </tr>

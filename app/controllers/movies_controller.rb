@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
     def index
-        @movies = Movie.all.order(rank: :desc)
+        @movies = Movie.all.order(votes: :desc)
     end
 
     def new
@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
 
     def create
         @movie = Movie.new(movie_params)
-        @movie.rank = 0
+        @movie.votes = 0
         if @movie.save  # successful
             redirect_to movies_path
         else  # unsuccessful, return to form with instance variables poplulated

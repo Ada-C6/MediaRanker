@@ -1,6 +1,6 @@
 <h1><%= @movie.name %></h1>
 <h3>Directed by: <%= @movie.director %></h3>
-<h5>Ranked: <%= @movie.rank %></h5>
+<h5>Votes: <%= @movie.votes %></h5>
 <p><%= @movie.description %></p>
 
 <%= button_to("upvote", movie_upvote_path(@movie), method: :patch) %>
