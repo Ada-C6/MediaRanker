@@ -9,7 +9,21 @@ class AlbumTest < ActiveSupport::TestCase
 
   test "Create an album with a name" do
     albums.each do |album|
+      assert_not_nil album.name
       assert album.valid?
+    end
+  end
+
+  test "Cannot create an album without an artist" do
+    album = Album.new
+    assert_not album.valid?
+    assert_includes album.errors, :artist
+  end
+
+  test "Create an album with an artist" do
+    albums.each do |album|
+      assert_not_nil album.artist
+      assert.album.valid?
     end
   end
 

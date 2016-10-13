@@ -7,8 +7,22 @@ class MovieTest < ActiveSupport::TestCase
     assert_includes movie.errors, :name
   end
 
-  test "Create a book with a title" do
+  test "Create a movie with a name" do
     movies.each do |movie|
+      assert_not_nil movie.name
+      assert movie.valid?
+    end
+  end
+
+  test "Cannot create a movie without a director" do
+    movie = Movie.new
+    assert_not movie.valid?
+    assert_includes movie.errors, :director
+  end
+
+  test "Create a movie with a director" do
+    movies.each do |movie|
+      assert_not_nil movie.director
       assert movie.valid?
     end
   end

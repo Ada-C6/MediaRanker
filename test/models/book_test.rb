@@ -10,6 +10,20 @@ class BookTest < ActiveSupport::TestCase
 
   test "Create a book with a title" do
     books.each do |book|
+      assert_not_nil book.title
+      assert book.valid?
+    end
+  end
+
+  test "Cannot create a book without an author" do
+    book = Book.new
+    assert_not book.valid?
+    assert_includes book.errors, :author
+  end
+
+  test "Create a book with an author" do
+    books.each do |book|
+      assert_not_nil book.author
       assert book.valid?
     end
   end
