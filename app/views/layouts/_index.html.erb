@@ -9,8 +9,8 @@
       <% media_collection.each do |media| %>
     <tr>
       <td><%= media.upvotes %></td>
-      <td><%= link_to media.name, movie_path(media) %></td>
-      <td><%= link_to "Upvote", movie_path(media) %></td>
+      <td><%= link_to media.name, create_show_path(media) %></td>
+      <td><%= render partial: 'layouts/upvote', locals: { media: media } %></td>
     </tr>
       <% end  %>
 

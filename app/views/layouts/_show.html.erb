@@ -1,6 +1,6 @@
 <section>
   <h1><%= media.name %></h1>
-  <small><%= media.director %></small>
+  <small><%= get_creator(media) %></small>
   <h2>Ranked: <%= media.upvotes %></h2>
   <p>
   <%= media.description %>
