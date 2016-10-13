@@ -15,15 +15,24 @@
 
   <% 5.times do |i| %>
   <tr>
-    <td><%= button_to "Upvote", upvote_album_path(@albums[i]), contoller: :albums, action: :upvote, method: :patch %> </td>
+    <td>
+      <%= button_to "⬆", vote_album_path(@albums[i], vote: "up"), contoller: :albums, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_album_path(@albums[i], vote: "down"), contoller: :albums, action: :vote, method: :patch %>
+    </td>
     <td><%= "#{@albums[i].rank_points}" %></td>
     <td><%= "#{@albums[i].name}" %></td>
 
-    <td><%= button_to "Upvote", upvote_book_path(@books[i]), contoller: :books, action: :upvote, method: :patch %> </td>
+    <td>
+      <%= button_to "⬆", vote_book_path(@books[i]), contoller: :books, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_book_path(@books[i]), contoller: :books, action: :vote, method: :patch %>
+    </td>
     <td><%= "#{@books[i].rank_points}" %></td>
     <td><%= "#{@books[i].name}" %></td>
 
-    <td><%= button_to "Upvote", upvote_movie_path(@movies[i]), contoller: :movies, action: :upvote, method: :patch %> </td>
+    <td>
+      <%= button_to "⬆", vote_movie_path(@movies[i]), contoller: :movies, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_movie_path(@movies[i]), contoller: :movies, action: :vote, method: :patch %>
+    </td>
     <td><%= "#{@movies[i].rank_points}" %></td>
     <td><%= "#{@movies[i].name}" %></td>
   </tr>

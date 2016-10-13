@@ -36,9 +36,16 @@ class AlbumsController < ApplicationController
     end
   end
 
-  def upvote
+  def vote
     album = Album.find(params[:id])
-    add_vote(album).save
+
+    if params[:vote] == "up"
+      add_vote(album).save
+    elsif params[:vote] == "down"
+      subtract_vote(album).save
+    else
+      raise
+    end
 
     redirect_to albums_path
   end

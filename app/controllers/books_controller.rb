@@ -49,6 +49,14 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
+  def downvote
+    book = Book.find(params[:id])
+    subtract_vote(book).save
+
+    redirect_to books_path
+  end
+
+
   ####### STRONG PARAMS #########
 
   private

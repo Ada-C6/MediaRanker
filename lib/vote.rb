@@ -1,13 +1,12 @@
 module Vote
-  def add_vote(record)
-    record.rank_points += 1
-    record.save
+  def subtract_vote(record)
+    record.rank_points -= 1
     return record
   end
 
-  def subtract_vote(record)
-    record.rank_points -= 1
-    record.save
+  def add_vote(record)
+    record.rank_points += 1
     return record
   end
+
 end

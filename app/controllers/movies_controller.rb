@@ -43,6 +43,14 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def downvote
+    movie = Movies.find(params[:id])
+    subtract_vote(movie).save
+
+    redirect_to movies_path
+  end
+
+
   def destroy
     @movie = Movie.find(params[:id]).destroy
 
