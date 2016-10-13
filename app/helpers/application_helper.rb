@@ -30,4 +30,14 @@ module ApplicationHelper
     end
   end
 
+  def get_creator_field(media)
+    if media.class == Movie
+      :director
+    elsif media.class == Book
+      :author
+    elsif media.class == Album
+      :artist
+    end
+  end
+
 end

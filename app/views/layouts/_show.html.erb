@@ -8,7 +8,7 @@
 
 </section>
 
-<%= render partial: 'layouts/upvote', locals: { media: @movie } %>
+<%= render partial: 'layouts/upvote', locals: { media: media } %>
 
 <%= link_to "Edit #{media.name}", create_edit_path(media) %>
 <%= link_to "DELETE", create_media_path(media),
