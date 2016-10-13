@@ -1,3 +1,19 @@
+@import url('foundation.css');
+/*@import url('styles.css');*/
+
+.bottom-button {
+  display: inline-block;
+  padding: 1% 2% 1% 0;
+}
+
+.errors {
+  color: red;
+}
+
+.field_with_errors input, .field_with_errors textarea {
+  border: red 1px solid;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -1,33 +1,44 @@
-<h2>Edit a movie</h2>
+<div class="row">
+  <div class="column">
+    <h2>Edit a movie</h2>
+  </div>
+</div>
 
-<section>
+<article>
 
   <% if @movie.errors.any? %>
-    <section class = "errors">
-      <p>Whoops! We couldn't save your changes because:</p>
-      <ul>
-        <% @movie.errors.each do |column, message| %>
-          <li>
-            <%= message %>
-          </li>
-        <% end %>
-      </ul>
-      <p>Please edit your entries and try again.</p>
+    <section class="row errors">
+      <div class="column">
+        <p>Whoops! We couldn't save your changes because:</p>
+        <ul>
+          <% @movie.errors.each do |column, message| %>
+            <li>
+              <%= message %>
+            </li>
+          <% end %>
+        </ul>
+        <p>Please edit your entries and try again.</p>
+      </div>
     </section>
   <% end %>
 
-  <%= form_for @movie, url: movies_update_path, method: :put do |f| %>
+  <section class="row">
+    <div class="column">
+      <%= form_for @movie, url: movies_update_path, method: :put do |f| %>
 
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
 
-    <%= f.label :director %>
-    <%= f.text_field :director %>
+        <%= f.label :director %>
+        <%= f.text_field :director %>
 
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
 
-    <%= f.submit %>
+        <%= f.submit %>
 
-  <% end %>
-</section>
+      <% end %>
+    </div>
+  </section>
+
+</article>
