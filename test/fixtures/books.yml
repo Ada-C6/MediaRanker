@@ -3,11 +3,11 @@
 matilda:
   title: Matilda
   by: Roald Dahl
-  ranked: rand(50)
+  ranked: 50
   description: Awesome book
 
 the_girls:
   title: The Girls
   by: Emma Cline
-  ranked: rand(50)
+  ranked: 20
   description: Northern California, during the violent end of the 1960s. At the start of summer, a lonely and thoughtful teenager, Evie Boyd, sees a group of girls in the park, and is immediately caught by their freedom, their careless dress, their dangerous aura of abandon.

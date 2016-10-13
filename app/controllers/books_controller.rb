@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all.order(:ranked).reverse
+    @books = Book.by_rank
   end
 
   def new
@@ -28,7 +28,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
 
     if params[:_method] == "patch"
-      @book.ranked += 1
+      @book.upvote
     else
       @book.update(book_params)
     end

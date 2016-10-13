@@ -1,32 +1,32 @@
-<main>
-  <article class="top-movies">
+<main class="row small-up-1 large-up-3">
+  <article class="top-movies column">
     <h1>Top Movies</h1>
     <section class="top-10">
-      <% 10.times do |i| %>
-      <h2><%= link_to @movies[i].title, movie_path(@movies[i]) %>
-        <%= "Ranked: #{@movies[i].ranked}" %></h2>
+      <% @movies.each do |movie| %>
+      <h2><%= link_to movie.title, movie_path(movie) %></h2>
+        <h3 class="ranking"><%= "Ranked: #{movie.ranked}" %></h3>
         <% end %>
       </section>
       <%= link_to "View More Movies", movies_path %>
     </article>
 
-    <article class="top-books">
+    <article class="top-books column">
       <h1>Top Books</h1>
       <section class="top-10">
-        <% 10.times do |i| %>
-        <h2><%= link_to @books[i].title, book_path(@books[i]) %>
-          <%= "Ranked: #{@books[i].ranked}" %></h2>
+        <% @books.each do |book| %>
+        <h2><%= link_to book.title, book_path(book) %></h2>
+          <h3 class="ranking"><%= "Ranked: #{book.ranked}" %></h3>
           <% end %>
         </section>
         <%= link_to "View More Books", books_path %>
       </article>
 
-      <article class="top-albums">
+      <article class="top-albums column">
         <h1>Top Albums</h1>
         <section class="top-10">
-          <% 10.times do |i| %>
-          <h2><%= link_to @albums[i].title, album_path(@albums[i]) %>
-            <%= "Ranked: #{@albums[i].ranked}" %></h2>
+          <% @albums.each do |album| %>
+          <h2><%= link_to album.title, album_path(album) %></h2>
+            <h3 class="ranking"><%= "Ranked: #{album.ranked}" %></h3>
             <% end %>
           </section>
           <%= link_to "View More Albums", albums_path %>

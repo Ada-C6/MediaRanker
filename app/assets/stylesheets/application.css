@@ -1,3 +1,4 @@
+@import url('foundation.css');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,31 +15,44 @@
  *= require_self
  */
 
-article {
+/*article {
   display: inline-block;
   width: 25vw;
   min-width: 300px;
   padding: 2vw;
   vertical-align: top;
-}
+}*/
+
 
 main {
   width: 92vw;
   margin: auto;
 }
 
-h1, h2, h3 {
+.top-10 h2 {
+  display: inline;
+}
+
+/*h1, h2, h3 {
   font-family: Arial;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 a {
   text-decoration: none;
+}*/
+
+/*header {
+  padding: 4vmin;
+}*/
+
+header img {
+  margin: 4vmin;
 }
 
-header {
-  text-align: center;
-}
+/*.ranking {
+  font-size: 2em;
+}*/

@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    @movies = Movie.by_rank
-    @books = Book.all.order(:ranked).reverse
-    @albums = Album.all.order(:ranked).reverse
+    @movies = Movie.top_ten
+    @books = Book.top_ten
+    @albums = Album.top_ten
   end
 end

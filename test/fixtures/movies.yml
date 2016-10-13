@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  by: MyString
-  ranked: 1
+et:
+  title: E.T.
+  by: Stephen Spielberg
+  ranked: 15
   description: MyString
 
-two:
-  title: MyString
-  by: MyString
+my_girl:
+  title: My Girl
+  by: Don't Remember
   ranked: 1
   description: MyString
