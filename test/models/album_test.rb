@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Album cannot be created without a name" do
+    album = Album.new
+    assert_not album.valid?
+  end
 end

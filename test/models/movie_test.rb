@@ -8,6 +8,10 @@ class MovieTest < ActiveSupport::TestCase
     assert_not movies(:three).valid?
   end
 
-  #test cannot create two books of the same name?
-
+  test "can create two movies of the same name" do
+    movie1 = Movie.create!(name: "Who Cares?")
+    movie2 = Movie.create!(name: "Who Cares?")
+    assert movie2.valid?
+    assert_not_equal movie1.id, movie2.id
+  end
 end

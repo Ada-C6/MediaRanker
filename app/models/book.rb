@@ -1,4 +1,7 @@
 class Book < ActiveRecord::Base
+  validates :name, presence: :true
+
+
 #move the logic for upvoting here?
   # def upvoting
   #   @book = Book.find(params[:id])
