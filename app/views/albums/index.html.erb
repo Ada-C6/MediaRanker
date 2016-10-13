@@ -1,0 +1,13 @@
+<h1> Hottest Albums Out</h1>
+
+<% @album.each do |album| %>
+<p>  Title: <%=link_to "#{album.title}", album_path(album)%>
+</p>
+<p>  Votes: <%="#{album.rank}"%>
+</p>
+<p>
+  <%= button_to "UpVote Now!", album_upvote_path(album, method: :patch%>
+</p>
+<%end%>
+
+<%= button_to "Add an Album", new_album_path, method: :get %>

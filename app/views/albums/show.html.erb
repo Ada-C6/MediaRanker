@@ -1,0 +1,19 @@
+<h3> <%=" #{@album.title}" %></h3>
+<p>
+  By: <%= "#{@album.artist}"%>
+</p>
+<p>
+  Number of Votes: <%= "#{@album.rank}"%>
+</p>
+<p>
+  Best Song: <%= "#{@album.best_song}"%>
+</p>
+<p>
+  A short description: <%= "#{@album.description}"%>
+</p>
+<%= button_to "UpVote Now!", album_upvote_path(@album.id), method: :patch%>
+<%= link_to "Update", edit_album_path(@album.id) %>
+<%= link_to "All Media", medias_path %>
+<%= button_to "Album List", albums_path, method: :get %>
+<%= button_to "Delete Album", album_path(@album.id), method: :delete,
+data: {confirm: "Are you sure?"}%>

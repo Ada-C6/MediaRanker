@@ -13,5 +13,5 @@
 <%= link_to "Edit The Book", edit_book_path(@book.id) %>
 <%= link_to "All Media", medias_path %>
 <%= button_to "Book List", books_path, method: :get %>
-<%= button_to "Delete Movie", book_path(@book.id), method: :delete,
+<%= button_to "Delete Book", book_path(@book.id), method: :delete,
 data: {confirm: "Are you sure?"}%>
