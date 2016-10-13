@@ -4,9 +4,9 @@
 <p> <%= @book.description %> </p>
 
 <%= button_to "UPVOTE", upvote_book_path(@book), method: :patch  %>
-<%= link_to "Edit #{@book.name}", edit_book_path %>
+<%= link_to "Edit #{@book.name}", edit_book_path, class: "plain-button" %>
 <%= link_to "DELETE", book_path(@book.id), method: :delete,
 data: { confirm: 'Are you sure?'} %>
 
-<%= link_to "View All Media", root_path%>
-<%= link_to "View All Books", books_path %>
+<%= link_to "View All Media", root_path, class: "plain-button"%>
+<%= link_to "View All Books", books_path, class: "plain-button"%>
