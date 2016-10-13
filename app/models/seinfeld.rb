@@ -4,4 +4,6 @@ class Seinfeld < ActiveRecord::Base
   validates :season, presence: true
   validates :episode, presence: true
   validates :rank, presence: true
+
+
 end
