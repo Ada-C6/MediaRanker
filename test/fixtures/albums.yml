@@ -4,7 +4,7 @@ one:
   name: MyString
   artist: MyString
   description: MyString
-  upvotes: 1
+  upvotes: 0
 
 two:
   name: MyString
