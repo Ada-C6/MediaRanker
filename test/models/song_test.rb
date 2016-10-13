@@ -13,4 +13,10 @@ class SongTest < ActiveSupport::TestCase
     songs(:cool_girl).artist = nil
     assert_not songs(:cool_girl).valid? "Cool Girl should no longer be valid"
   end
+
+  test "Songs must have a unique combination of title and author" do
+    assert songs(:anywhere_title).valid? "Anywhere with same title and different author should be valid"
+
+    assert_not Song.new(title: "Anywhere", artist: "Dillon Francis", album: "Anywhere", genre: "Dance", rank: 15).valid? "Anywhere with same title and same artist should not be valid"
+  end
 end

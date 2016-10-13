@@ -14,4 +14,10 @@ class MovieTest < ActiveSupport::TestCase
     movies(:how_to_lose).rank = nil
     assert_not movies(:how_to_lose).valid? "How to Lose a Guy should no longer be valid"
   end
+
+  test "Books must have a unique combination of title and author" do
+    assert movies(:mean_girls_title).valid? "Mean Girls with same title and different author should be valid"
+
+    assert_not Movie.new(  title: "Mean Girls", director: "Mark Waters", genre: "Comedy", description: "Some Girls in High School", rank: 3).valid? "Mean Girls with same title and same author should not be valid"
+  end
 end

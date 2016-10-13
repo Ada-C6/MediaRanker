@@ -7,6 +7,13 @@ red_fern:
   description: "About a boy who buys and trains two Redbone Coonhound hunting dogs"
   rank: 54
 
+red_fern_title:
+  title: "Where the Red Fern Grows"
+  author: "A Different Author"
+  genre: "Children"
+  description: "About a boy who buys and trains two Redbone Coonhound hunting dogs"
+  rank: 30
+
 dingo:
   title: "The Dingo Ate Your Baby"
   author: "Anonymous"

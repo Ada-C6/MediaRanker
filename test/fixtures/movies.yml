@@ -7,6 +7,13 @@ mean_girls:
   description: "Some Girls in High School"
   rank: 3
 
+mean_girls_title:
+  title: "Mean Girls"
+  director: "A Different Director"
+  genre: "Comedy"
+  description: "Some Girls in High School"
+  rank: 3
+
 how_to_lose:
   title: "How to Lose a Guy in 10 Days"
   director: "Donald Petrie"

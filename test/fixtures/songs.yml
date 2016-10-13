@@ -7,6 +7,13 @@ anywhere:
   genre: "Dance"
   rank: 15
 
+anywhere_title:
+  title: "Anywhere"
+  artist: "Different artist"
+  album: "Anywhere"
+  genre: "Dance"
+  rank: 15
+
 cool_girl:
   title: "Cool Girl"
   artist: "Tove Lo"

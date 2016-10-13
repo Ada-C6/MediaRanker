@@ -13,4 +13,8 @@ class SeinfeldTest < ActiveSupport::TestCase
     seinfelds(:slicer).episode = nil
     assert_not seinfelds(:slicer).valid? "The Slicer should no longer be valid"
   end
+
+  test "Seinfeld Episodes must have a unique title" do
+    assert_not Seinfeld.new(title: "The Slicer", season: 8, episode: 7, description: "Kramer gets into meat slicing; Jerry dates a doctor (Marcia Cross) who isn't impressed with his job; George's new boss is a former adversary.", rank: 54).valid? "A Seinfeld Episode with same title and should not be valid"
+  end
 end
