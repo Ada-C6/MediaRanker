@@ -61,7 +61,7 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:name, :artist, :description, :rank_points)
+    params.require(:album).permit(:name, :artist, :description, :rank_points, :vote)
   end
 
 end

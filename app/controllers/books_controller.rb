@@ -42,16 +42,16 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-  def upvote
+  def vote
     book = Book.find(params[:id])
-    add_vote(book).save
 
-    redirect_to books_path
-  end
-
-  def downvote
-    book = Book.find(params[:id])
-    subtract_vote(book).save
+    if params[:vote] == "up"
+      add_vote(book).save
+    elsif params[:vote] == "down"
+      subtract_vote(book).save
+    else
+      raise
+    end
 
     redirect_to books_path
   end
@@ -62,7 +62,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :author, :description, :rank_points)
+    params.require(:book).permit(:name, :author, :description, :rank_points, :vote)
   end
 
 end

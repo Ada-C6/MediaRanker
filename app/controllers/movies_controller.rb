@@ -36,16 +36,16 @@ class MoviesController < ApplicationController
     end
   end
 
-  def upvote
+  def vote
     movie = Movie.find(params[:id])
-    add_vote(movie).save
 
-    redirect_to movies_path
-  end
-
-  def downvote
-    movie = Movies.find(params[:id])
-    subtract_vote(movie).save
+    if params[:vote] == "up"
+      add_vote(movie).save
+    elsif params[:vote] == "down"
+      subtract_vote(movie).save
+    else
+      raise
+    end
 
     redirect_to movies_path
   end
@@ -62,6 +62,6 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:name, :director, :description, :rank_points)
+    params.require(:movie).permit(:name, :director, :description, :rank_points, :vote)
   end
 end

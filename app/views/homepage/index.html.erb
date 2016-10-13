@@ -23,15 +23,15 @@
     <td><%= "#{@albums[i].name}" %></td>
 
     <td>
-      <%= button_to "⬆", vote_book_path(@books[i]), contoller: :books, action: :vote, method: :patch %>
-      <%= button_to "⬇", vote_book_path(@books[i]), contoller: :books, action: :vote, method: :patch %>
+      <%= button_to "⬆", vote_book_path(@books[i], vote: "up"), contoller: :books, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_book_path(@books[i], vote: "down"), contoller: :books, action: :vote, method: :patch %>
     </td>
     <td><%= "#{@books[i].rank_points}" %></td>
     <td><%= "#{@books[i].name}" %></td>
 
     <td>
-      <%= button_to "⬆", vote_movie_path(@movies[i]), contoller: :movies, action: :vote, method: :patch %>
-      <%= button_to "⬇", vote_movie_path(@movies[i]), contoller: :movies, action: :vote, method: :patch %>
+      <%= button_to "⬆", vote_movie_path(@movies[i], vote: "up"), contoller: :movies, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_movie_path(@movies[i], vote: "down"), contoller: :movies, action: :vote, method: :patch %>
     </td>
     <td><%= "#{@movies[i].rank_points}" %></td>
     <td><%= "#{@movies[i].name}" %></td>
