@@ -40,4 +40,8 @@ module ApplicationHelper
     end
   end
 
+  def add_upvote(media)
+    media.upvotes + 1
+  end
+
 end
