@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: "Sully"
-  year: 2016
-  rank: 1
-  synopsis: "Dang that dude saved everyone onboard"
+  title: "Interstellar"
+  year: 2014
+  rank: 2
+  synopsis: "Come on, TARS!"
 
 two:
   title: "Queen of Katwe"
