@@ -1,4 +1,6 @@
-body {
+@import url('foundation.css')
+
+/*body {
   margin: 20px;
   color: #1D1E18;
   font-family: Verdana, Geneva, sans-serif;
@@ -15,7 +17,8 @@ header h1, h3 {
 
 header img {
   width: 10%;
-  margin: 20px 20px 0 20px;
+  min-width: 100px;
+  margin: 20px 5px 0 20px;
 }
 
 table {
@@ -30,7 +33,7 @@ table th {
 
 table td {
   font-size: 150%;
-  /*width: 30%;*/
+  /*width: 30%;
 }
 
 a {
@@ -45,4 +48,4 @@ a {
 a:hover {
   color: #AAD2BA;
   text-decoration: underline;
-}
+}*/
