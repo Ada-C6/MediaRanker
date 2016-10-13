@@ -1,29 +1,50 @@
-<h1>Media Ranker</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Media Ranker</title>
+</head>
+<body>
 
-<h2>Top Movies </h2>
+  <article class="row small-up-1 medium-up-2 large-up-3">
+    <h1>Media Ranker</h1>
 
-<% @movies.each do |movie| %>
-<p>
-<%=  link_to "#{movie.name}", movie_path(movie) %>
-<%= "Ranked: #{movie.ranking}" %>
-</p>
-<% end %>
-<%= link_to "View More Movies", movies_path %>
+    <section class="column">
+      <h2>Top Movies </h2>
 
-<h2>Top Books </h2>
-<% @books.each do |book| %>
-<p>
-<%=  link_to "#{book.name}", book_path(book) %>
-<%= "Ranked: #{book.ranking}" %>
-</p>
-<% end %>
-<%= link_to "View More Books", books_path %>
+      <% @movies.each do |movie| %>
+      <p>
+        <%=  link_to "#{movie.name}", movie_path(movie) %>
+        <%= "Ranked: #{movie.ranking}" %>
+      </p>
+      <% end %>
+      <%= link_to "View More Movies", movies_path %>
+    </section>
 
-<h2>Top Albums</h2>
- <% @albums.each do |album| %>
- <p>
- <%=  link_to "#{album.name}", album_path(album) %>
- <%= "Ranked: #{album.ranking}" %>
- </p>
- <% end %>
-<%= link_to "View More Albums", albums_path %>
+
+    <section class="column">
+      <h2>Top Books </h2>
+      <% @books.each do |book| %>
+      <p>
+        <%=  link_to "#{book.name}", book_path(book) %>
+        <%= "Ranked: #{book.ranking}" %>
+      </p>
+      <% end %>
+      <%= link_to "View More Books", books_path %>
+    </section>
+
+
+    <section class="column">
+      <h2>Top Albums</h2>
+      <% @albums.each do |album| %>
+      <p>
+        <%=  link_to "#{album.name}", album_path(album) %>
+        <%= "Ranked: #{album.ranking}" %>
+      </p>
+      <% end %>
+      <%= link_to "View More Albums", albums_path %>
+    </section>
+
+  </article>
+</body>
+</html>

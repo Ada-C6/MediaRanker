@@ -1,1 +1,6 @@
 @import url('foundation.css');
+
+
+body {
+  padding-left: 5%;
+}
