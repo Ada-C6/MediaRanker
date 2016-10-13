@@ -1,0 +1,29 @@
+<p>
+  TOP MOVIES
+<% @movies.each do |movie| %>
+<%= "#{movie.rank}" %>
+  <%= link_to("#{movie.title}", movie_path(movie)) %>
+<% end %>
+</p>
+
+<p>
+  TOP BOOKS
+<% @books.each do |book| %>
+<%= "#{book.rank}" %>
+  <%= link_to("#{book.title}", book_path(book)) %>
+<% end %>
+</p>
+
+<p>
+  TOP ALBUMS
+<% @albums.each do |album| %>
+<%= "#{album.rank}" %>
+  <%= link_to("#{album.title}", album_path(album)) %>
+<% end %>
+</p>
+
+
+
+<%= link_to("See all movies", movies_path, method: :get) %>
+<%= link_to("See all books", books_path, method: :get) %>
+<%= link_to("See all albums", albums_path, method: :get) %>
