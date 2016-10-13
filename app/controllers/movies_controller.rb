@@ -46,17 +46,20 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @this_movie=Movie.find(params[:id])
-    @this_movie.destroy
-
-    redirect_to movies_url
+    potential=Movie.find_by_id(params[:id]) 
+    
+    unless potential==nil 
+      @this_movie=potential
+      @this_movie.destroy
+      redirect_to movies_url
+    end
   end
 
   def upvote 
     @this_movie=Movie.find(params[:id])
     @this_movie.rank+=1
     @this_movie.save
-    redirect_to movie_url(@this_movie)
+    redirect_to :back
 
     #how do you say "the last page it was on"
   end

@@ -1,10 +1,12 @@
 class BooksController < ApplicationController
   def index
     @all_books=Book.order(rank: :desc)
+
   end
 
   def show
     @this_book=Book.find(params[:id])
+
   end
 
   def edit
@@ -46,10 +48,13 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @this_book=Book.find(params[:id])
-    @this_book.destroy
-
-    redirect_to books_url
+    potential=Book.find_by_id(params[:id]) 
+    
+    unless potential==nil 
+      @this_book=potential
+      @this_book.destroy
+      redirect_to books_url
+    end
   end
 
   def upvote
@@ -57,8 +62,7 @@ class BooksController < ApplicationController
     @this_book.rank+=1
     
     @this_book.save
-    
-    redirect_to book_url(@this_book) #how do you say "the last page it was on"
+    redirect_to :back 
   end
 
 end

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  author: MyString
-  description: MyText
+nap:
+  name: Take a Nap
+  author: Dr. Suess
+  description: "Sleep here or there or anywhere"
   rank: 1
 
-two:
-  name: MyString
-  author: MyString
-  description: MyText
+i_know:
+  name: This I Know
+  author: T. Rocket
+  description: Nothing you'd ever want to read
   rank: 1
