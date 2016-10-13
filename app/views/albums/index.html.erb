@@ -6,8 +6,9 @@
 <p>  Votes: <%="#{album.rank}"%>
 </p>
 <p>
-  <%= button_to "UpVote Now!", album_upvote_path(album, method: :patch%>
+  <%= button_to "UpVote Now!", albums_upvote_path(album), method: :patch%>
 </p>
 <%end%>
+<%= link_to "All Media", medias_path %>
 
 <%= button_to "Add an Album", new_album_path, method: :get %>

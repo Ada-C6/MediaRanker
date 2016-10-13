@@ -11,7 +11,7 @@
 <p>
   A short description: <%= "#{@album.description}"%>
 </p>
-<%= button_to "UpVote Now!", album_upvote_path(@album.id), method: :patch%>
+<%= button_to "UpVote Now!", albums_upvote_path(@album.id), method: :patch%>
 <%= link_to "Update", edit_album_path(@album.id) %>
 <%= link_to "All Media", medias_path %>
 <%= button_to "Album List", albums_path, method: :get %>
