@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+
   def index
     @album = Album.all.order(:rank).reverse
   end
