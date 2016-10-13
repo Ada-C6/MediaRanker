@@ -1,5 +1,5 @@
-<h3>Ranked: <%= "#{ media.upvotes }" %></h3>
-<h4><%= "#{ media.description }" %></h4>
+<h5>Ranked: <%= "#{ media.upvotes }" %></h5>
+<h6><%= "#{ media.description }" %></h6>
 
 <%= button_to "Upvote", { action: :vote, id: media.id }, { :class => "upvote-button"} %>
 <ul class="list-of-buttons">
