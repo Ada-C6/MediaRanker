@@ -1,26 +1,7 @@
-<div class="top-container">
-  <h1>Top Movies</h1>
-  <% 10.times do |m| %>
-    <h2><%= link_to "#{ @movies[m].name }", movie_path(@movies[m]) %></h2>
-    <h3><%= "Ranked: #{ @movies[m].upvotes }" %></h3>
-  <% end %>
-  <h6><%= link_to "View More Movies", movies_path %></h6>
-</div>
+<div class="row small-up-1 medium-up-1 large-up-3">
+  <%= render partial: 'topten', locals: { media: @movies, type: "movies" } %>
 
-<div class="top-container">
-  <h1>Top Books</h1>
-  <% 10.times do |b| %>
-    <h2><%= link_to "#{ @books[b].name }", book_path(@books[b]) %></h2>
-    <h3><%= "Ranked: #{ @books[b].upvotes }" %></h3>
-  <% end %>
-  <h6><%= link_to "View More Books", books_path %></h6>
-</div>
+  <%= render partial: 'topten', locals: { media: @books, type: "books" } %>
 
-<div class="top-container">
-  <h1>Top Albums</h1>
-  <% 10.times do |a| %>
-    <h2><%= link_to "#{ @albums[a].name }", album_path(@albums[a]) %></h2>
-    <h3><%= "Ranked: #{ @albums[a].upvotes }" %></h3>
-  <% end %>
-  <h6><%= link_to "View More Albums", albums_path %></h6>
+  <%= render partial: 'topten', locals: { media: @albums, type: "albums" } %>
 </div>

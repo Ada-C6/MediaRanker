@@ -13,14 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('foundation.css');
+
 html {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 header {
-
   margin: 40px 0 20px 0;
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
 }
 
 a {
@@ -37,11 +39,6 @@ header li {
   display: inline-block;
 }
 
-.top-container {
-  width: 32%;
-  float: left;
-}
-
-h3, small {
+h3, h4 {
   color: #777;
 }
