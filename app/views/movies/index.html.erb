@@ -1,6 +1,5 @@
-<h1>ALL the movies shall live here...</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
-  <h1>Top Movies/All Movies</h1>
+<!-- movie index  -->
+  <h1>All Movies</h1>
   <table>
     <tr>
       <th>votes</th>
@@ -14,5 +13,9 @@
       <td><%=button_to("Upvote", movies_upvote_path(movie.id), method: :patch) %></td>
     </tr>
     <% end %>
-  <p><%=button_to("Add Movie", new_movie_path, method: :get)%></p>
 </table>
+
+<section class="button_row">
+ <p><%=button_to("Add Movie", new_movie_path, method: :get)%></p>
+ <p><%=button_to "View All Media", users_path, method: :get %></p>
+</section>
