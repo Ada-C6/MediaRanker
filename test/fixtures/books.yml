@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  director: MyString
+  author: MyString
   description: MyString
   upvotes: 1
 
 two:
   name: MyString
-  director: MyString
+  author: MyString
   description: MyString
   upvotes: 1
