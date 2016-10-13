@@ -1,2 +1,18 @@
 @import 'https://fonts.googleapis.com/css?family=Lobster';
 @import url('foundation.css');
+
+header h1 {
+  color: #428BCA;
+}
+
+header h3 {
+  color: #777;
+}
+
+header {
+  border-bottom: 1px #777 solid;
+}
+
+body {
+  margin: 10vmin;
+}
