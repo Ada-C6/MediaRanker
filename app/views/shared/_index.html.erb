@@ -1,4 +1,4 @@
-<h1><%= media_type.to_s.capitalize %></h1>
+<h1><%= media_type.to_s.capitalize + "s" %></h1>
 <table>
   <tr>
     <th>
@@ -14,11 +14,11 @@
 
   <% media_collection.each do |media_item| %>
   <% case media_type %>
-    <% when :albums %>
+    <% when :album %>
       <% media_path = album_path(media_item) %>
-    <% when :movies %>
+    <% when :movie %>
       <% media_path = movie_path(media_item) %>
-    <% when :books %>
+    <% when :book %>
       <% media_path = book_path(media_item) %>
   <% end %>
   <tr>
@@ -37,3 +37,5 @@
   <% end %>
 
 </table>
+<h4><%# @TODO: ADD LINK TO HOME SITE HERE! %> View All Media Link Will Be Here</h4>
+<%= link_to "Add #{ media_type == :album ? "an" : "a" } #{ media_type.capitalize }", [:new, media_type] %>

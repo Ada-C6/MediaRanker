@@ -1,17 +1,17 @@
 <%# @TODO - refactor DRY! replace paths with symbols? %>
 
 <% case media_type %>
-  <% when :albums %>
+  <% when :album %>
     <% media_path = album_path(media_item) %>
     <% index_path = albums_path %>
     <% edit_media_path = edit_album_path(media_item) %>
     <% made_by_verb = "Recorded" %>
-  <% when :movies %>
+  <% when :movie %>
     <% media_path = movie_path(media_item) %>
     <% index_path = movies_path %>
     <% edit_media_path = edit_movie_path(media_item) %>
     <% made_by_verb = "Directed" %>
-  <% when :books %>
+  <% when :book %>
     <% media_path = book_path(media_item) %>
     <% index_path = books_path %>
     <% edit_media_path = edit_book_path(media_item) %>
@@ -37,6 +37,6 @@
 
 <%= link_to "DELETE", media_path, method: :delete, data: { confirm: "Are you sure?" } %>
 
-<%= link_to "View All #{media_type.to_s.capitalize}", index_path %>
+<%= link_to "View All #{ media_type.to_s.capitalize }s", index_path %>
 
 <h4><%# @TODO: ADD LINK TO HOME SITE HERE! %> View All Media Link Will Be Here</h4>
