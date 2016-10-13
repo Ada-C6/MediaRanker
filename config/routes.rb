@@ -3,10 +3,13 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   resources :movies
+  patch '/movies/:id/upvote', to: 'movies#upvote', as: 'movie_upvote'
 
   resources :books
+  patch '/books/:id/upvote', to: 'books#upvote', as: 'book_upvote'
 
   resources :albums
+  patch '/albums/:id/upvote', to: 'albums#upvote', as: 'album_upvote'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
