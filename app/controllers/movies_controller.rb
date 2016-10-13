@@ -49,9 +49,11 @@ class MoviesController < ApplicationController
 
   def destroy
     @movie = findMovie
-    @movie.destroy
 
-    redirect_to action: "index"
+    if @movie.class == Movie
+      @movie.destroy
+      redirect_to movies_path
+    end
   end
 
   def upvote
@@ -61,6 +63,10 @@ class MoviesController < ApplicationController
 
   private
   def findMovie
-    return Movie.find(params[:id].to_i)
+    if Movie.exists?(params[:id].to_i)
+      return Movie.find(params[:id].to_i)
+    else
+      render status: 404
+    end
   end
 end

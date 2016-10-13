@@ -6,11 +6,6 @@ class AlbumsController < ApplicationController
 
   def show
     @album = findAlbum
-
-    if @album == nil
-      render :file => 'public/404.html',
-          :status => :not_found
-    end
   end
 
   def edit
@@ -54,9 +49,12 @@ class AlbumsController < ApplicationController
 
   def destroy
     @album = findAlbum
-    @album.destroy
 
-    redirect_to action: "index"
+    if @album.class == Album
+      @album.destroy
+      redirect_to albums_path
+    end
+
   end
 
   def upvote
