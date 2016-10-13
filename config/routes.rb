@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   root to: 'homepages#index'
   get 'homepages/index', as: 'index'
 
-  get 'hompages/show' => 'homepages#show', as: 'show_homepages'
-
   get 'movies/index' => 'movies#index', as: 'index_movies'
 
   get 'movies/show/:id' => 'movies#show', as: 'show_movies'
@@ -16,7 +14,9 @@ Rails.application.routes.draw do
 
   patch 'movies/:id/update' => 'movies#update', as: 'update_movies'
 
-  delete 'movies/destroy' => 'movies#destroy', as: 'delete_movies'
+  patch 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movies'
+
+  delete 'movies/:id/destroy' => 'movies#destroy', as: 'delete_movies'
 
   get 'books/index' => 'books#index', as: 'index_books'
 
@@ -30,7 +30,9 @@ Rails.application.routes.draw do
 
   patch 'books/:id/update' => 'books#update', as: 'update_books'
 
-  delete 'books/destroy' => 'books#destroy', as: 'delete_books'
+  patch 'books/:id/upvote' => 'books#upvote', as: 'upvote_books'
+
+  delete 'books/:id/destroy' => 'books#destroy', as: 'delete_books'
 
   get 'albums/index' => 'albums#index', as: 'index_albums'
 

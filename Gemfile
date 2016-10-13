@@ -52,3 +52,8 @@ group :development do
   gem 'binding_of_caller'
 
 end
+
+group :test do
+  # Makes things colorful and easier to read
+  gem 'minitest-reporters'
+end

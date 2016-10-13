@@ -12,10 +12,10 @@ require 'csv'
     Album.create(title: csv_obj[1], artist: csv_obj[2], rank: csv_obj[3], synopsis: csv_obj[4])
   end
 
-  # CSV.foreach ('seed_csvs/vendors.csv') do |csv_obj|
-  #   Vendor.create(name: csv_obj[1], no_employees: csv_obj[2].to_i, market_id: csv_obj[3].to_i)
-  # end
-  #
-  # CSV.foreach ('seed_csvs/products.csv') do |csv_obj|
-  #   Product.create(name: csv_obj[1], vendor_id: csv_obj[2].to_i)
-  # end
+  CSV.foreach ('seed_csvs/books.csv') do |csv_obj|
+    Book.create(title: csv_obj[1], author: csv_obj[2], rank: csv_obj[3], synopsis: csv_obj[4])
+  end
+  
+  CSV.foreach ('seed_csvs/movies.csv') do |csv_obj|
+    Movie.create(title: csv_obj[1], year: csv_obj[2], rank: csv_obj[3], synopsis: csv_obj[4])
+  end

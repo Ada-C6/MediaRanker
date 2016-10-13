@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  year: 1
+  title: "Sully"
+  year: 2016
   rank: 1
-  synopsis: MyText
+  synopsis: "Dang that dude saved everyone onboard"
 
 two:
-  title: MyString
-  year: 1
+  title: "Queen of Katwe"
+  year: 2016
   rank: 1
-  synopsis: MyText
+  synopsis: "A young Ugandan girl becomes a chess champion"

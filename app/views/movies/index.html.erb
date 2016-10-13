@@ -1,2 +1,19 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<section>
+  <tr>
+    <th>Ranking</th>
+    <th>Title</th>
+    <th>Upvote</th>
+  </tr>
+
+  <% @movies.each do |movie| %>
+  <tr>
+    <td><%= "Ranked: #{movie.rank}" %></td>
+    <td><%= link_to movie.title, show_movies_path(movie.id)%></td>
+    <td><%= button_to "Upvote", upvote_movies_path(id: movie.id), method: :patch, class: 'btn' %></td>
+  </tr>
+  <% end %>
+
+  <%= button_to "View All Media", index_path, method: :get %>
+  <%= button_to "Add A Movie", new_movies_path, method: :get %>
+
+</section>

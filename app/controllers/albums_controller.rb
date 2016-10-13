@@ -16,7 +16,7 @@ class AlbumsController < ApplicationController
     @album.rank = 0
     @album.save
 
-    redirect_to index_url
+    redirect_to index_albums_url
   end
 
   def edit

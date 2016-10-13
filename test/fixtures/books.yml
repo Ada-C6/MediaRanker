@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  author: MyString
+  title: "Good Omens"
+  author: "Terry Pratchett and Neil Gaiman"
   rank: 1
-  synopsis: MyText
+  synopsis: "The dream team"
 
 two:
-  title: MyString
-  author: MyString
+  title: "Harry Potter"
+  author: "JK Rowling"
   rank: 1
-  synopsis: MyText
+  synopsis: "MY CHILDHOOD"

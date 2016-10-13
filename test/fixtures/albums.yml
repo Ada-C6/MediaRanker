@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  artist: MyString
+  title: "Icky Thump"
+  artist: "The White Stripes"
   rank: 1
-  synopsis: MyText
+  synopsis: "Buncha cool kids"
 
 two:
-  title: MyString
-  artist: MyString
+  title: "Far"
+  artist: "Regina Spektor"
   rank: 1
-  synopsis: MyText
+  synopsis: "Good lord she's so rad"
