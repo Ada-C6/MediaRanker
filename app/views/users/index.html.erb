@@ -7,7 +7,7 @@
       <p> Ranked: <%=movie.vote_count %> </p>
       </h2>
       <% end %>
-  <p><%=button_to("Add Movie", new_movie_path, method: :get)%></p>
+    <p><%=button_to "View All Movies", movies_path, method: :get%></p>
   </article>
 
   <article >
@@ -17,7 +17,7 @@
         <p>Ranked: <%=book.vote_count %>  </p>
        </h2>
        <% end %>
-      <p><%=button_to("Add Book", new_book_path, method: :get) %></p>
+      <p><%=button_to("View All Books", books_path, method: :get) %></p>
   </article>
 
   <article >
@@ -28,7 +28,7 @@
       <p>Ranked: <%=album.vote_count %> </p>
          </h2>
        <% end %>
-       <p><%=button_to("Add Album", new_album_path, method: :get) %></p>
+        <p><%=button_to("View All Albums", albums_path, method: :get) %></p>
   </article>
 
 

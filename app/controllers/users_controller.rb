@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
   def index
-    @movies = Movie.all
-    @books = Book.all
-    @albums = Album.all
-
+    @movies = Movie.order(vote_count: :desc).limit(4)
+    @books = Book.order(vote_count: :desc).limit(4)
+    @albums = Album.order(vote_count: :desc).limit(4)
   end
 
   def show
