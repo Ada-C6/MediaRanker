@@ -1,8 +1,8 @@
 <% @books.each do |book| %>
 <%= "#{book.rank}" %>
   <%= link_to("#{book.title}", book_path(book)) %>
-  <%# BUTTON TO UPVOTE %>
+  <%= button_to("Upvote", book_upvote_path(book), method: :patch) %>
 <% end %>
 
 <%= button_to("View all media", root_path, method: :get) %>
-<%= button_to("Add a book", new_book_path, method: :get) %>  
+<%= button_to("Add a book", new_book_path, method: :get) %>
