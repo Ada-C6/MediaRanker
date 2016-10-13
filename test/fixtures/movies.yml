@@ -1,13 +1,73 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  director: MyString
-  description: MyText
-  upvotes: 1
+  title: Title1
+  director: Director1
+  description: Description1
+  upvotes: 4
 
 two:
-  title: MyString
-  director: MyString
-  description: MyText
-  upvotes: 1
+  title: Title2
+  director: Director2
+  description: Description2
+  upvotes: 5
+
+three:
+  title: Title3
+  director: Director3
+  description: Description3
+  upvotes: 6
+
+four:
+  title: Title4
+  director: Director4
+  description: Description4
+  upvotes: 7
+
+five:
+  title: Title5
+  director: Director5
+  description: Description5
+  upvotes: 8
+
+six:
+  title: Title6
+  director: Director6
+  description: Description6
+  upvotes: 9
+
+seven:
+  title: Title7
+  director: Director7
+  description: Description7
+  upvotes: 10
+
+eight:
+  title: Title8
+  director: Director8
+  description: Description8
+  upvotes: 11
+
+nine:
+  title: Title9
+  director: Director9
+  description: Description9
+  upvotes: 12
+
+ten:
+  title: Title10
+  director: Director10
+  description: Description10
+  upvotes: 14
+
+eleven:
+  title: Title11
+  director: Director11
+  description: Description11
+  upvotes: 13
+
+twelve:
+  title: Title12
+  director: Director12
+  description: Description12
+  upvotes: 15

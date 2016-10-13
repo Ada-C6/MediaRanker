@@ -14552,3 +14552,845 @@ Processing by AlbumsController#index as HTML
   [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
   Rendered albums/index.html.erb within layouts/application (4.2ms)
 Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-12 15:40:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (1.1ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 264ms (Views: 251.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 15:40:57 -0700
+
+
+Started GET "/albums/show/10000" for ::1 at 2016-10-12 15:41:02 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"10000"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 10000]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+ActionView::MissingTemplate - Missing template public/404.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/emilyabrash/Documents/MediaRanker/app/views"
+:
+  actionview (4.2.7) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.7) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.7) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.7) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.7) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.7) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/albums_controller.rb:10:in `rescue in show'
+  app/controllers/albums_controller.rb:7:in `show'
+  actionpack (4.2.7) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.7) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.7) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/f887931beaf29d8e/variables" for ::1 at 2016-10-12 15:41:02 -0700
+
+
+Started GET "/albums/show/10000" for ::1 at 2016-10-12 15:41:40 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"10000"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 10000]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.1ms)
+
+ActionView::MissingTemplate - Missing template albums/404.html, application/404.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/emilyabrash/Documents/MediaRanker/app/views"
+:
+  actionview (4.2.7) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.7) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.7) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.7) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.7) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.7) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/albums_controller.rb:10:in `rescue in show'
+  app/controllers/albums_controller.rb:7:in `show'
+  actionpack (4.2.7) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.7) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.7) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/ac67e1d84b26a810/variables" for ::1 at 2016-10-12 15:41:40 -0700
+
+
+Started GET "/albums/show/10000" for ::1 at 2016-10-12 15:41:58 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"10000"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 10000]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+ActionView::MissingTemplate - Missing template public/404.html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/emilyabrash/Documents/MediaRanker/app/views"
+:
+  actionview (4.2.7) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.7) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.7) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.7) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.7) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.7) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.7) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.7) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.7) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.7) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/albums_controller.rb:10:in `rescue in show'
+  app/controllers/albums_controller.rb:7:in `show'
+  actionpack (4.2.7) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.7) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.7) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.7) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/7e11909b521da5b9/variables" for ::1 at 2016-10-12 15:41:58 -0700
+
+
+Started GET "/albums/show/10000" for ::1 at 2016-10-12 15:43:09 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"10000"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 10000]]
+  Rendered public/404.html within layouts/application (0.4ms)
+Completed 404 Not Found in 38ms (Views: 25.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 15:43:10 -0700
+
+
+Started GET "/albums/index" for ::1 at 2016-10-12 16:21:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (2.7ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 250ms (Views: 237.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-12 16:21:22 -0700
+
+
+Started GET "/albums/show/4" for ::1 at 2016-10-12 16:21:24 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered albums/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/4/edit" for ::1 at 2016-10-12 16:21:26 -0700
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered albums/edit.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/albums/4/update" for ::1 at 2016-10-12 16:21:29 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5OvEwO+22wIFwLRVnRpHoair/e6WvcjE1k4il0DgrkaSGHyQhz64dmy94zNaA5uhZ0filVlV3GurmrAikR6dAg==", "album"=>{"title"=>"The Red Album", "artist"=>"The Beatles", "description"=>""}, "commit"=>"Update Album", "id"=>"4"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = 'The Beatles') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.1ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = 'The Beatles') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered albums/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 57ms (Views: 38.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/4/update" for ::1 at 2016-10-13 09:22:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlbumsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered albums/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 279ms (Views: 248.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/books.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/mains.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/styles.self-d00b67c509e533e8e8ef0386af3188b04ad1c98b89f85e88f695e3b4751df532.css?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 09:22:30 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 09:22:32 -0700
+Processing by MainsController#index as HTML
+  Parameters: {"authenticity_token"=>"8T1/ktK1pDNEZFUl0CSo+zs7KADYu57j98TIi3mUitOHzsfCuj3HRy0ZAkMXPXT79Nc3exdTikyKEFo+qGq5lw=="}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (5.2ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 76ms (Views: 64.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/books/index" for ::1 at 2016-10-13 09:22:33 -0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"  ORDER BY "books"."upvotes" DESC
+  Rendered books/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/new" for ::1 at 2016-10-13 09:22:35 -0700
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books/create" for ::1 at 2016-10-13 09:22:41 -0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EfA64HlY6rWSW/WxM30hq36KDZNHPrld6S5XQG4A565nA4KwEdCJwfsmotf0ZP2rsWYS6IjWrfKU+sX1v/7U6g==", "book"=>{"title"=>"YO", "author"=>"", "description"=>""}, "commit"=>"Create Book"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mBook Exists (0.1ms)[0m  SELECT  1 AS one FROM "books" WHERE ("books"."title" = 'YO' AND "books"."author" = '') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered books/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 29ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books/create" for ::1 at 2016-10-13 09:23:18 -0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UYycf0foIkMsJt6UR8FnSQFSsbAodows45dflix2Tr8nfyQvL2BBN0VbifKA2LtJzr6uy+eemIOeQ80j/Yh9+w==", "book"=>{"title"=>"The Little Prince", "author"=>"Antoine Saint-Expery", "description"=>"Fable about a little prince."}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mBook Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "books" WHERE ("books"."title" = 'The Little Prince' AND "books"."author" = 'Antoine Saint-Expery') LIMIT 1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "books" ("title", "author", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Little Prince"], ["author", "Antoine Saint-Expery"], ["description", "Fable about a little prince."], ["created_at", "2016-10-13 16:23:18.782920"], ["updated_at", "2016-10-13 16:23:18.782920"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/show/9
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/books/show/9" for ::1 at 2016-10-13 09:23:18 -0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered books/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/show/1000" for ::1 at 2016-10-13 09:23:26 -0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1000"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  Rendered public/404.html within layouts/application (0.3ms)
+Completed 404 Not Found in 20ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/update/2000" for ::1 at 2016-10-13 09:23:36 -0700
+
+ActionController::RoutingError (No route matches [GET] "/books/update/2000"):
+  actionpack (4.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/emilyabrash/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/actionpack-4.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.1ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/emilyabrash/.rvm/gems/ruby-2.3.0@rails_gemset/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+
+
+Started GET "/books/create" for ::1 at 2016-10-13 09:24:40 -0700
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main" for ::1 at 2016-10-13 09:24:42 -0700
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.7ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:24:56 -0700
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC[0m
+  Rendered albums/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/albums/15/update" for ::1 at 2016-10-13 09:25:06 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"gv6i7wawWQnoao2TDNDAhvSiIGFHYdduOeZ/ksiVUPX0DRq/bjg6fYEX2vXLyRyGO04/GoiJw8FEMu0nGWtjsQ==", "id"=>"15"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.2ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Hits' AND "albums"."id" != 15 AND "albums"."artist" = 'The Who') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?[0m  [["upvotes", 1], ["updated_at", "2016-10-13 16:25:06.497159"], ["id", 15]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:06 -0700
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC[0m
+  Rendered albums/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/albums/15/update" for ::1 at 2016-10-13 09:25:09 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"ySh7Oo1z1LQXTfszXIKYWM5VG6jxbK6ICAK9zczfO0m/28Nq5fu3wH4wrFWbm0RYAbkE0z6Euid11i94HSEIDQ==", "id"=>"15"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.2ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Hits' AND "albums"."id" != 15 AND "albums"."artist" = 'The Who') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?[0m  [["upvotes", 2], ["updated_at", "2016-10-13 16:25:09.442890"], ["id", 15]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:09 -0700
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC[0m
+  Rendered albums/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/albums/15/update" for ::1 at 2016-10-13 09:25:11 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"AijlCSMrkg5xEeDx967wOcUJm/nqH3TJyUXo4n8WOKN0211ZS6Pxehhst5cwtyw5CuWEgiX3YGa0kXpXrugL5w==", "id"=>"15"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAlbum Exists (0.3ms)[0m  SELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Hits' AND "albums"."id" != 15 AND "albums"."artist" = 'The Who') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?[0m  [["upvotes", 3], ["updated_at", "2016-10-13 16:25:11.300962"], ["id", 15]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:11 -0700
+Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.4ms)[0m  [1mSELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC[0m
+  Rendered albums/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/albums/show/15" for ::1 at 2016-10-13 09:25:14 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered albums/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/albums/3/update" for ::1 at 2016-10-13 09:25:19 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"XIC5RX2AlaxHRazkQ7kTXyRcOtcLwjJhoMa3gVBDSEoqcwEVFQj22C44+4KEoM9f67AlrMQqJs7dEiU0gb17Dg==", "id"=>"3"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'Thriller' AND "albums"."id" != 3 AND "albums"."artist" = 'Michael Jackson') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?  [["upvotes", 5], ["updated_at", "2016-10-13 16:25:19.236577"], ["id", 3]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:19 -0700
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/albums/4/update" for ::1 at 2016-10-13 09:25:21 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"uaYFhASBA+mSQ6oaXbyUVIilVPvtMUXspQADfJ2bAkjPVb3UbAlgnfs+/XyapUhUR0lLgCLZUUPY1JHJTGUxDA==", "id"=>"4"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'The Red Album' AND "albums"."id" != 4 AND "albums"."artist" = 'The Beatles') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?  [["upvotes", 4], ["updated_at", "2016-10-13 16:25:21.949302"], ["id", 4]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:21 -0700
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/albums/5/update" for ::1 at 2016-10-13 09:25:23 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"W5ons+Vc3q6erkK4VaFtvLM244KQa6eyGs9SJW9qNxQtaZ/jjdS92vfTFd6SuLG8fNr8+V+Dsx1nG8CQvpQEUA==", "id"=>"5"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'Wave' AND "albums"."id" != 5 AND "albums"."artist" = 'Patti Smith') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?  [["upvotes", 4], ["updated_at", "2016-10-13 16:25:23.833421"], ["id", 5]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:23 -0700
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/albums/9/update" for ::1 at 2016-10-13 09:25:24 -0700
+Processing by AlbumsController#update as HTML
+  Parameters: {"authenticity_token"=>"UzL708mPJjfUyWv/kaIH9CUPGVt8pkZ/Xolardtb8aYlwUODoQdFQ720PJlWu9v06uMGILNOUtAjXcgYCqXC4g==", "id"=>"9"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mAlbum Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "albums" WHERE ("albums"."title" = 'Ethiopia' AND "albums"."id" != 9 AND "albums"."artist" = 'Patti Smith') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "albums" SET "upvotes" = ?, "updated_at" = ? WHERE "albums"."id" = ?  [["upvotes", 4], ["updated_at", "2016-10-13 16:25:24.349635"], ["id", 9]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums/index
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/albums/index" for ::1 at 2016-10-13 09:25:24 -0700
+Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC
+  Rendered albums/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
