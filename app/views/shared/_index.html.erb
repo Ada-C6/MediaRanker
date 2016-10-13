@@ -1,4 +1,3 @@
-<h1><%= media_type.to_s.capitalize + "s" %></h1>
 <table>
   <tr>
     <th>
@@ -35,7 +34,4 @@
     </td>
   </tr>
   <% end %>
-
 </table>
-<h4><%# @TODO: ADD LINK TO HOME SITE HERE! %> View All Media Link Will Be Here</h4>
-<%= link_to "Add #{ media_type == :album ? "an" : "a" } #{ media_type.capitalize }", [:new, media_type] %>
