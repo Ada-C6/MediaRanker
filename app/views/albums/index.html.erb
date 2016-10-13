@@ -1,0 +1,8 @@
+<% @albums.each do |album| %>
+<%= "#{album.rank}" %>
+  <%= link_to("#{album.title}", album_path(album)) %>
+  <%# BUTTON TO UPVOTE %>
+<% end %>
+
+<%= button_to("View all media", root_path, method: :get) %>
+<%= button_to("Add an album", new_album_path, method: :get) %>  
