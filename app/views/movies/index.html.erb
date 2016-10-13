@@ -8,7 +8,7 @@
   </thead>
 
   <tbody>
-    <% @movies.each do |movie| %>
+    <% @movies.sort_by_rank.each do |movie| %>
     <tr>
 
       <td>
@@ -21,7 +21,7 @@
 
 
       <td>
-        LINK TO UPVOTE BUTTON
+        <%= link_to :upvote, upvote_movie_path(movie), method: "patch" %>
       </td>
     </tr>
     <% end %>
@@ -29,6 +29,6 @@
 </table>
 
 <p>
-  LINK TO ALL MEDIA
+  <%= link_to "All Media", root_path %>
   <%= link_to "Add New Movie", new_movie_path %>
 </p>

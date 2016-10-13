@@ -8,7 +8,7 @@
   </thead>
 
   <tbody>
-    <% @books.each do |book| %>
+    <% @books.sort_by_rank.each do |book| %>
     <tr>
 
       <td>
@@ -21,7 +21,7 @@
 
 
       <td>
-        LINK TO UPVOTE BUTTON
+        <%= link_to :upvote, upvote_book_path(book), method: "patch" %>
       </td>
     </tr>
     <% end %>

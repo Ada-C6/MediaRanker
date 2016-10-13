@@ -2,7 +2,7 @@
   <section class="column">
     <h2>Top Movies</h2>
     <ol>
-      <% @movies.sort_by_rank.each_with_index do |movie, index| %>
+      <% @movies.each_with_index do |movie, index| %>
       <% break if index == 10 %>
       <li><%= link_to "#{movie.name}", movie_path(movie) %> <span>Ranked: <%= ranking(movie) %></span></li>
     <% end %>
@@ -15,7 +15,7 @@
   <section class="column">
     <h2>Top Books</h2>
     <ol>
-      <% @books.sort_by_rank.each_with_index do |book, index| %>
+      <% @books.each_with_index do |book, index| %>
       <% break if index == 10 %>
       <li><%= link_to "#{book.title}", book_path(book) %> <span>Ranked: <%= ranking(book) %></span></li>
       <% end %>
@@ -28,7 +28,7 @@
   <section class="column">
     <h2>Top Albums</h2>
     <ol>
-      <% @albums.sort_by_rank.each_with_index do |album, index| %>
+      <% @albums.each_with_index do |album, index| %>
       <% break if index == 10 %>
       <li><%= link_to "#{album.name}", album_path(album) %> <span>Ranked: <%= ranking(album) %></span></li>
       <% end %>

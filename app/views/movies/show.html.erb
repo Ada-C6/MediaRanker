@@ -6,8 +6,7 @@
   <li>Upvotes: <%= ranking(@movie) %></li>
 </ul>
 
-
-LINK_TO UPVOTE FUNCTIONALITY HERE
+<%= link_to :upvote, upvote_movie_path(@movie), method: "patch" %>
 
 <%= link_to "Edit #{@movie.name}", edit_movie_path %>
 <%= link_to "DELETE", movie_path,
