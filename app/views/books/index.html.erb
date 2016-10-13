@@ -1,0 +1,14 @@
+<h2>Books in the database</h2>
+
+<TABLE>
+  <% @books.each do |book| %>
+    <TR>
+      <TD>Upvotes: <%= book.upvotes %></TD>
+      <TD><%= link_to book.title, books_show_path(book.id) %></TD>
+      <TD><%= button_to "Upvote", books_update_path(book.id), method: :patch %></TD>
+    </TR>
+  <% end %>
+</TABLE>
+
+<%= button_to "View all media", main_path, method: :get %>
+<%= button_to "Add a book", books_new_path, method: :get %>

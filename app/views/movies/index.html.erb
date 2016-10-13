@@ -1,0 +1,14 @@
+<h2>Movies in the database</h2>
+
+<TABLE>
+  <% @movies.each do |movie| %>
+    <TR>
+      <TD>Upvotes: <%= movie.upvotes %></TD>
+      <TD><%= link_to movie.title, movies_show_path(movie.id) %></TD>
+      <TD><%= button_to "Upvote", movies_update_path(movie.id), method: :patch %></TD>
+    </TR>
+  <% end %>
+</TABLE>
+
+<%= button_to "View all media", main_path, method: :get %>
+<%= button_to "Add a movie", movies_new_path, method: :get %>
