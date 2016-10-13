@@ -43,3 +43,7 @@ group :development do
   gem 'spring'
   gem 'better_errors'
 end
+
+group :test do
+  gem 'minitest-reporters'
+end
