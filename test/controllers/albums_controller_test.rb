@@ -40,9 +40,11 @@ test "should be able to update" do
   end
 
   test "should be able to upvote" do
-    @request.env['HTTP_REFERER'] = '/albums/index'
-    post :upvote, {id: 1}
-    assert_response :redirect
-  end
+   assert_difference("Album.find(albums(:one).id).rank", 1) do
+     post_params = {id: albums(:one).id}
+     @request.env['HTTP_REFERER'] = '/albums/index'
+     post :upvote, post_params
+   end
+ end
 
 end
