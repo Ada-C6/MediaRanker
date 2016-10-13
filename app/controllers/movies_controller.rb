@@ -52,4 +52,13 @@ class MoviesController < ApplicationController
     @mymovie.destroy
     redirect_to users_path(@mymovie.id)
   end
+
+  def upvote
+    @mymovie = Movie.find(params[:id])
+    @mymovie.vote_count += 1
+    @mymovie.save
+    redirect_to :back
+  end
+
+
 end

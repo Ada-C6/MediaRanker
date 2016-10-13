@@ -6,6 +6,10 @@
     <p>Ranked: <%=@myalbum.vote_count %> </p>
     <p>Description: <%=@myalbum.description%></p>
 
+    <section>
+      <%=button_to("Upvote", albums_upvote_path(@myalbum.id), method: :patch) %>
+    </section>
+
   <section class="button_row">
     <%=button_to("Edit #{@myalbum.name}", edit_album_path(@myalbum.id), method: :get)%>
 

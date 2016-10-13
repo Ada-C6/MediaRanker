@@ -52,4 +52,14 @@ class AlbumsController < ApplicationController
     @myalbum.destroy
     redirect_to users_path(@myalbum.id)
   end
+
+  def upvote
+    @myalbum = Album.find(params[:id])
+    @myalbum.vote_count += 1
+    @myalbum.save
+    redirect_to :back
+  end 
+
+
+
 end

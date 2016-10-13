@@ -5,6 +5,9 @@
   <p>Author: <%=@mybook.author %></p>
   <p>Ranked: <%=@mybook.vote_count %> </p>
   <p>Description: <%=@mybook.description%></p>
+  <section>
+    <%=button_to("Upvote", books_upvote_path(@mybook.id), method: :patch) %>
+  </section>
   <section class="button_row">
     <%=button_to("Edit #{@mybook.name}", edit_book_path(@mybook.id), method: :get)%>
 

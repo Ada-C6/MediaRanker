@@ -52,4 +52,12 @@ class BooksController < ApplicationController
     @mybook.destroy
     redirect_to users_path(@mybook.id)
   end
+
+  def upvote
+    @mybook = Book.find(params[:id])
+    @mybook.vote_count += 1
+    @mybook.save
+    redirect_to :back
+  end
+
 end
