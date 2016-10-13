@@ -1,13 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  artist: MyString
+correct_album:
+  name:
+  author: MyString
   description: MyString
   rank: 1
 
-two:
-  name: MyString
-  artist: MyString
+without_a_name:
+  name:
+  author: MyString
   description: MyString
   rank: 1
+
+without_an_author:
+  name: MyString
+  author:
+  description: MyString
+  rank: 1
+
+without_a_description:
+  name: MyString
+  author: MyString
+  description:
+  rank: 1
+
+without_rank_points:
+  name: MyString
+  author:
+  description: MyString
+  rank:
