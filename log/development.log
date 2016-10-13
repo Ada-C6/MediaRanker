@@ -18386,3 +18386,450 @@ Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:15:12 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:17:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 289ms (Views: 273.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:17:31 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:17:56 -0700
+Processing by MainsController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:17:56 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:18:16 -0700
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:18:16 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:18:18 -0700
+Processing by MainsController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:18:18 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:18:32 -0700
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:18:32 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:18:59 -0700
+Processing by MainsController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:18:59 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:19:07 -0700
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-12281233299705b5b3641aea8d52fd7828738e8904d942d18719bb2db016e989.css?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/styles.css" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:19:07 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:19:16 -0700
+Processing by MainsController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-9669cb2b475ae1ae0d3d1442220e5e1af1dffd93e21222b32e66c9f27b56e03e.css?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:19:16 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:20:11 -0700
+Processing by MainsController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-9ffc5380dd830330385761ea4c2331e8334697919a2722929d999e4a4cff4d26.css?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-13 16:20:11 -0700
+
+
+Started GET "/movies/show/7" for ::1 at 2016-10-13 16:20:13 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered movies/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/7/edit" for ::1 at 2016-10-13 16:20:14 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered movies/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:20:14 -0700
+
+
+Started PUT "/movies/7/update" for ::1 at 2016-10-13 16:20:17 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lNsV+cFSRBQ/VJ2bFyCk0uY4Xa3C/FsOUOhNk95EjT3iKK2pqdonYFYpyv3QOXjSKdRC1g0UT6EtPN8mD7q+eQ==", "movie"=>{"title"=>"Ocean's Twelve", "director"=>"", "description"=>"Sequel to Ocean's Eleven."}, "commit"=>"Update Movie", "id"=>"7"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'Ocean''s Twelve' AND "movies"."id" != 7 AND "movies"."director" = '') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Exists (0.2ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'Ocean''s Twelve' AND "movies"."id" != 7 AND "movies"."director" = '') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered movies/edit.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 47ms (Views: 26.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:20:17 -0700
+
+
+Started PUT "/movies/7/update" for ::1 at 2016-10-13 16:20:25 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3aIzlkN8fPJHi4fQcpkZMahR70zvvRzVd19PHe+0fqGrUYvGK/Qfhi720La1gMUxZ73wNyBVCHoKi92oPkpN5Q==", "movie"=>{"title"=>"Ocean's Twelve", "director"=>"Steven Soderbergh", "description"=>"Sequel to Ocean's Eleven."}, "commit"=>"Update Movie", "id"=>"7"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Exists (0.3ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'Ocean''s Twelve' AND "movies"."id" != 7 AND "movies"."director" = 'Steven Soderbergh') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'Ocean''s Twelve' AND "movies"."id" != 7 AND "movies"."director" = 'Steven Soderbergh') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/show/7
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/show/7" for ::1 at 2016-10-13 16:20:25 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered movies/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:20:25 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-13 16:20:58 -0700
+Processing by MainsController#index as HTML
+  Parameters: {"authenticity_token"=>"nzT+uaZiUFQE/iM0I6XZJzDZJy7K2iCkVpujF5LQ3hHpx0bpzuozIG2DdFLkvAUn/zU4VQUyNAsrTzGiQy7tVQ=="}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10
+  Rendered mains/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-13 16:20:58 -0700
