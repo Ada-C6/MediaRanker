@@ -7,15 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="row">
-  <div class="column small-12 medium-12 large-12">
+
 
 
   <header>
     <h1><%= link_to "Ultimate Media Ranker", root_path %></h1>
   </header>
+  <section class="column small-12 medium-12 large-12">
+    <%= yield %>
 
-<%= yield %>
-
-</div>
+  </section>
 </body>
 </html>
