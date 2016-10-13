@@ -1,2 +1,2 @@
 <h1>Edit this movie</h1>
-<p><%= render partial: "form", locals: {action_name: :patch} %></p>
+<%= render partial: "layouts/form", locals: {item: @movie, action_name: :patch} %>

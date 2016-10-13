@@ -1,2 +1,2 @@
 <h1>Edit this album</h1>
-<p><%= render partial: "form", locals: {action_name: :patch} %></p>
+<%= render partial: "layouts/form", locals: {item: @album, creator: @album.musician, action_name: :patch} %>

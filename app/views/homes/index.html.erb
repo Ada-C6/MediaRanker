@@ -1,40 +1,52 @@
-<h3>Movies</h3>
-<% @movies[0..9].each do |movie| %>
-<ul>
-  <li><%= link_to "#{movie.title}", movie_path(movie) %></li>
-  <%= "Ranking: #{movie.vote}" %>
-</ul>
+<section class="row small-up-1 medium-up-3 large-up-3">
+  <div class="column">
+    <h3>Movies</h3>
+    <% @movies[0..9].each do |movie| %>
+    <ul>
+      <li ><%= link_to "#{movie.title}", movie_path(movie) %>
+        <br>
+      <%= "Ranking: #{movie.vote}" %></li>
+    </ul>
 
-<% end %>
-
-<p>
-  <%= link_to "View all movies", movies_path %>
-</p>
-
-<h3>Books</h3>
-<% @books[0..9].each do |book| %>
-<ul>
-  <li><%= link_to "#{book.title}", book_path(book) %></li>
-  <%= "Ranking: #{book.vote}" %>
-</ul>
-
-<% end %>
-
-<p>
-  <%= link_to "View all books", books_path %>
-
-</p>
+    <% end %>
+    <p>
+      <%= link_to "View all movies", movies_path %>
+    </p>
+  </div>
 
 
-<h3>Albums</h3>
-<% @albums[0..9].each do |album| %>
-<ul>
-  <li><%= link_to "#{album.title}", album_path(album) %></li>
-  <%= "Ranking: #{album.vote}" %>
-</ul>
+  <div class="column">
+    <h3>Books</h3>
+    <% @books[0..9].each do |book| %>
+    <ul>
+      <li class="column"><%= link_to "#{book.title}", book_path(book) %>
+        <br>
+      <%= "Ranking: #{book.vote}" %>
+      </li>
+    </ul>
+    <% end %>
 
-<% end %>
+    <p>
+      <%= link_to "View all books", books_path %>
+    </p>
+  </div>
 
-<p>
-  <%= link_to "View all albums", albums_path %>
-</p>
+
+  <div class= "column">
+    <h3>Albums</h3>
+    <% @albums[0..9].each do |album| %>
+    <ul >
+      <li class="column"><%= link_to "#{album.title}", album_path(album) %>
+        <br>
+      <%= "Ranking: #{album.vote}" %>
+      </li>
+    </ul>
+
+    <% end %>
+
+    <p>
+      <%= link_to "View all albums", albums_path %>
+    </p>
+  </div>
+
+</section>

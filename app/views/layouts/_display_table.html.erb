@@ -3,27 +3,27 @@
 
 <table>
   <tbody>
-    <tr>
-      <th>
+    <tr class="row small-up-3 medium-up-3 large-up-3">
+      <th class="column">
         Ranking
       </th>
-      <th>
+      <th class="column">
         Title
       </th>
-      <th>
+      <th class="column">
         Upvote
       </th>
     </tr>
 
       <% items.each do |item| %>
-      <tr>
-        <th>
+      <tr class="row small-up-3 medium-up-3 large-up-3">
+        <th class="column">
           <%= "Ranked: #{item.vote}" %>
         </th>
-        <th>
+        <th class="column">
           <%= link_to "#{item.title}", item %>
         </th>
-        <th>
+        <th class="column">
           <%= form_for item, method: :patch do |f|%>
             <%= f.hidden_field :vote, :value => item.upvote %>
             <%= f.submit "Upvote!" %>
