@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
   def index
-    @albums = Album.all
+    @albums = Album.order(:rank).reverse_order
     # Right now the order of the albums is the order they're in the database. I will need to sort them by their ranking at some point. Woooo, mergesort? maybe here, maybe in the model. Go look at that article we read about how to move things to the model.
   end
 

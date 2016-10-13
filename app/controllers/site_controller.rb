@@ -1,12 +1,12 @@
 class SiteController < ApplicationController
   def index
-    @top_movies = Movie.order(:rank).reverse_order.first(10)
+    @top_movies = Movie.top_ten
     # This should be in the movie model.
-    
-    @top_books = Book.order(:rank).reverse_order.first(10)
+
+    @top_books = Book.top_ten
 
     @top_albums =
-    Album.order(:rank).reverse_order.first(10)
+    Album.top_ten
 
   end
 end

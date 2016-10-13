@@ -10,9 +10,8 @@
    display: inline;
    font-family: sans-serif;
    padding: 10px;
-   margin-bottom: 10px;
    position: relative;
-   bottom: 30px;
+   top: 15px;
  }
 
  header {
