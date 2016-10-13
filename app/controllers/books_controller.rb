@@ -1,8 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
-    # Right now the order of the books is the order they're in the database. I will need to sort them by their ranking at some point. Woooo, mergesort? maybe here, maybe in the model. Go look at that article we read about how to move things to the model.
+    @books = Book.order(:rank).reverse_order
   end
 
   def show

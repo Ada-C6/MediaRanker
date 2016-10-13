@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
-    # Right now the order of the movies is the order they're in the database. I will need to sort them by their ranking at some point. Woooo, mergesort? maybe here, maybe in the model. Go look at that article we read about how to move things to the model.
+    @movies = Movie.order(:rank).reverse_order
   end
 
   def show
