@@ -4,28 +4,28 @@ correct_book:
   name:
   author: MyString
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_a_name:
   name:
   author: MyString
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_an_author:
   name: MyString
   author:
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_a_description:
   name: MyString
   author: MyString
   description:
-  rank: 1
+  rank_points: 1
 
 without_rank_points:
   name: MyString
   author:
   description: MyString
-  rank:
+  rank_points:

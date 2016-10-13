@@ -2,30 +2,30 @@
 
 correct_album:
   name:
-  author: MyString
+  artist: MyString
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_a_name:
   name:
-  author: MyString
+  artist: MyString
   description: MyString
-  rank: 1
+  rank_points: 1
 
-without_an_author:
+without_an_artist:
   name: MyString
-  author:
+  artist:
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_a_description:
   name: MyString
-  author: MyString
+  artist: MyString
   description:
-  rank: 1
+  rank_points: 1
 
 without_rank_points:
   name: MyString
-  author:
+  artist:
   description: MyString
-  rank:
+  rank_points:

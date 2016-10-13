@@ -9,7 +9,7 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.create(album_params)
+    @album = Album.create!(album_params)
 
     redirect_to albums_path
   end

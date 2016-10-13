@@ -2,30 +2,30 @@
 
 correct_movie:
   name:
-  author: MyString
+  director: MyString
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_a_name:
   name:
-  author: MyString
+  director: MyString
   description: MyString
-  rank: 1
+  rank_points: 1
 
-without_an_author:
+without_a_director:
   name: MyString
-  author:
+  director:
   description: MyString
-  rank: 1
+  rank_points: 1
 
 without_a_description:
   name: MyString
-  author: MyString
+  director: MyString
   description:
-  rank: 1
+  rank_points: 1
 
 without_rank_points:
   name: MyString
-  author:
+  director:
   description: MyString
-  rank:
+  rank_points:
