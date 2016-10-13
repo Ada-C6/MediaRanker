@@ -1,4 +1,9 @@
+<h1> Movie Details </h1>
 
-  <p> <%= "#{@this_movie.title}" %> </p>
-  <p>Directed by: <%= "#{@this_movie.director}" %> </p>
-  <p> <%= "#{@this_movie.description}" %> </p>
+  <p> <%= @movie.title %>
+      <%= @movie.director %>
+      <%= @movie.description %>
+  </p>
+  <p>
+    <%= link_to "Edit", edit_movie_path(@movie.id) %>
+  </p>
