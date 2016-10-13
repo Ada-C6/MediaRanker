@@ -14,8 +14,8 @@
 
     <%=button_to("DELETE", movie_path(@mymovie.id), method: :delete) %>
 
-    <%=button_to("View All Movies") %>
+    <%=button_to "View All Movies", movies_path, method: :get %>
 
-    <%=button_to("View All Media") %>
+    <%=button_to "View All Media", users_path, method: :get %>
   </section>
 </section>
