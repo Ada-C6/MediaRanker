@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 group :test do
   gem 'minitest-reporters'
+  gem 'simplecov'
 end
 
 group :development, :test do
