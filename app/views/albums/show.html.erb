@@ -3,6 +3,9 @@
   <p><%= @myalbum.creator %></p>
   <p><%= @myalbum.description %></p>
   <%= button_to("Edit Album", edit_album_path(@myalbum.id), method: :get)%>
-
   <%= button_to("Delete Album", album_path(@myalbum.id), method: :delete)%>
+  <p><%= button_to 'UpVote', upvote_album_path(@myalbum.id), method: :post %></p>
+  <p>Rank: <%= @myalbum.rank %></p>
+  <p><%= button_to('View All Albums', albums_path, method: :get) %></p>
+  <p><%= button_to('View All Media', media_path, method: :get) %></p>
 </section>

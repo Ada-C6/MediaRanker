@@ -3,6 +3,9 @@
   <p><%= @mymovie.creator %></p>
   <p><%= @mymovie.description %></p>
   <%= button_to("Edit Movie", edit_movie_path(@mymovie.id), method: :get)%>
-
   <%= button_to("Delete Movie", movie_path(@mymovie.id), method: :delete)%>
+  <p><%= button_to 'UpVote', upvote_movie_path(@mymovie.id), method: :post %></p>
+  <p>Rank: <%= @mymovie.rank %></p>
+  <p><%= button_to('View All Movies', movies_path, method: :get) %></p>
+  <p><%= button_to('View All Media', media_path, method: :get) %></p>
 </section>

@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  creator: MyString
-  description: MyString
+  title: Alice in Wonderland
+  creator: Lewis Carroll
+  description: Down the rabbit hole
   rank: 0
   id: 1
 
 two:
-  title: MyString
-  creator: MyString
-  description: MyString
+  title: Left Hand of Darkness
+  creator: Ursula Le Guin
+  description: So cool!
   rank: 0
   id: 2

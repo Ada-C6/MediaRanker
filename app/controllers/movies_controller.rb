@@ -12,8 +12,7 @@ end
 
 def new
   @mymovie = Movie.new
-  @movie_method = :post
-  @movie_path = movies_path
+
 end
 
 def create
@@ -27,7 +26,7 @@ end
 
 def edit
 
-  
+
   if @mymovie == nil
         render :file => 'public/404.html',
             :status => :not_found
@@ -43,7 +42,6 @@ def update
   @mymovie.title = params[:movie][:title]
   @mymovie.creator = params[:movie][:creator]
   @mymovie.description = params[:movie][:description]
-  @mymovie.rank = params[:movie][:rank]
   @mymovie.save
   redirect_to movie_path(@mymovie.id)
 end

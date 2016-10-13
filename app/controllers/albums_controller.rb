@@ -11,8 +11,7 @@ class AlbumsController < ApplicationController
 
   def new
     @myalbum = Album.new
-    @album_method = :post
-    @album_path = albums_path
+    
   end
 
   def create
@@ -42,7 +41,6 @@ class AlbumsController < ApplicationController
     @myalbum.title = params[:album][:title]
     @myalbum.creator = params[:album][:creator]
     @myalbum.description = params[:album][:description]
-    @myalbum.rank = params[:album][:rank]
     @myalbum.save
     redirect_to album_path(@myalbum.id)
   end
@@ -56,7 +54,6 @@ class AlbumsController < ApplicationController
   end
 
   def upvote
-
     @myalbum.upvote
     redirect_to albums_path
   end

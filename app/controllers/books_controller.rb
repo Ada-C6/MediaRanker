@@ -55,7 +55,6 @@ class BooksController < ApplicationController
   end
 
   def upvote
-
     @mybook.upvote
     redirect_to books_path
   end
