@@ -1,5 +1,13 @@
 module ApplicationHelper
 
+  def display_amount(media_collection)
+    if media_collection.length > 10
+      10
+    else
+      media_collection.length
+    end
+  end
+
   def create_media_path(media)
     if media.class == Movie
       movie_path(media)
