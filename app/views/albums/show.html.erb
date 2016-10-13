@@ -1,4 +1,13 @@
 <%= render partial: 'layouts/show', locals: { media: @album } %>
 
-<%= link_to "View all Albums", albums_path  %>
-<%= link_to "View all Media", root_path %>
+
+<section class='row small-up-2 large-up-4'>
+
+<%= link_to "View all Albums", albums_path, class: 'column'  %>
+<%= link_to "View all Media", root_path, class: 'column' %>
+<%= link_to "Edit #{@album.name}", edit_album_path(@album), class: 'column' %>
+<%= link_to "DELETE", album_path(@album),
+  class: 'column',
+  method: :delete,
+  data: {confirm: "Are you sure?"} %>
+</section>

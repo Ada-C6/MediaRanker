@@ -1,16 +1,14 @@
-<section>
-  <h1><%= media.name %></h1>
-  <small><%= get_creator(media) %></small>
-  <h2>Ranked: <%= media.upvotes %></h2>
-  <p>
+<section class='row small-up-2 large-up-1'>
+  <div class='column'>
+    <h1><%= media.name %></h1>
+    <small><%= get_creator(media) %></small>
+  </div>
+
+  <h2 class='column'>Ranked: <%= media.upvotes %></h2>
+  <p class='column'>
   <%= media.description %>
   </p>
 
-</section>
-
 <%= render partial: 'layouts/upvote', locals: { media: media } %>
 
-<%= link_to "Edit #{media.name}", create_edit_path(media) %>
-<%= link_to "DELETE", create_media_path(media),
-  method: :delete,
-  data: {confirm: "Are you sure?"} %>
+</section>

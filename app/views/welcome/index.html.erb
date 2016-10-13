@@ -1,26 +1,28 @@
-<section>
-  <h1>Top Movies</h1>
+<main class='row medium-up-1 large-up-3'>
+  <section class='column'>
+    <h1>Top Movies</h1>
 
-  <%= render partial: 'layouts/media_list', locals: { media_collection: @movies } %>
+    <%= render partial: 'layouts/media_list', locals: { media_collection: @movies } %>
 
-  <%= link_to "View more Movies", movies_path %>
+    <%= link_to "View more Movies", movies_path %>
 
-</section>
+  </section>
 
-<section>
-  <h1>Top Books</h1>
+  <section class='column'>
+    <h1>Top Books</h1>
 
-  <%= render partial: 'layouts/media_list', locals: { media_collection: @books } %>
+    <%= render partial: 'layouts/media_list', locals: { media_collection: @books } %>
 
-  <%= link_to "View more Books", books_path %>
+    <%= link_to "View more Books", books_path %>
 
-</section>
+  </section>
 
-<section>
-  <h1>Top Albums</h1>
+  <section class='column'>
+    <h1>Top Albums</h1>
 
-  <%= render partial: 'layouts/media_list', locals: { media_collection: @albums } %>
+    <%= render partial: 'layouts/media_list', locals: { media_collection: @albums } %>
 
     <%= link_to "View more Albums", albums_path %>
 
-</section>
+  </section>
+</main>

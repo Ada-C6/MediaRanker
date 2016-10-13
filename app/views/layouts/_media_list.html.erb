@@ -3,7 +3,7 @@
     <% media = media_collection[i] %>
     <li>
       <h2><%= link_to media.name, create_media_path(media) %></h2>
-      <small><%= media.upvotes %></small>
+      <small><%= "Ranked: #{media.upvotes}" %></small>
     </li>
 
     <% end  %>

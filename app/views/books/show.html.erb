@@ -1,4 +1,12 @@
 <%= render partial: 'layouts/show', locals: { media: @book } %>
 
-<%= link_to "View all Books", books_path  %>
-<%= link_to "View all Media", root_path %>
+<section class='row small-up-2 large-up-4'>
+
+<%= link_to "View all Books", books_path, class: 'column'  %>
+<%= link_to "View all Media", root_path, class: 'column' %>
+<%= link_to "Edit #{@book.name}", edit_book_path(@book), class: 'column' %>
+<%= link_to "DELETE", book_path(@book),
+  class: 'column',
+  method: :delete,
+  data: {confirm: "Are you sure?"} %>
+</section>
