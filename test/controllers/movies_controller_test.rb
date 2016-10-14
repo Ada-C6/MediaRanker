@@ -25,9 +25,10 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "Should be able to create an movie only if fields are correctly filled" do
-    # Movie with all fields completed - should be created and redirected
+    # Movie with all fields completed - should be created, and user redirected to the movie's show page
     post :create, { movie: {title: "MovieName", director: "MovieDirector", description: "MovieDescription"}}
     assert_response :redirect
+    assert_redirected_to movies_show_path(Movie.last)
 
     # Movie with a missing field - should render the new page again
     post :create, { movie: {name: "MovieName", description: "MovieDescription"}}
@@ -67,28 +68,24 @@ class MoviesControllerTest < ActionController::TestCase
     @request.env['HTTP_REFERER'] = '/show'
     patch :update, { id: movies(:one).id}
     assert_response :redirect
+    assert_redirected_to movies_show_path(movies(:one).id)
 
     # From index page
     @request.env['HTTP_REFERER'] = '/index'
     patch :update, { id: movies(:one).id}
     assert_response :redirect
+    assert_redirected_to movies_index_path
 
     # Attempting to update a record that does not exist
     patch :update, { id: -1 }
     assert_response :missing
   end
 
-  # I'm not sure why, but using the fixture directly - movies(:one).upvotes - will result in a
-  # failing test and the appearance of no incrementation. The same is true for editing of apparently
-  # field. My theory is that if there is a redirect in a test, the fixture may get reset as control
-  # is returned back to the test. In any case, this feature actually does work, so I think the
-  # Movie.find(movies(:one).id) is a workaround that gives an accurate reflection of whether things
-  # are working.
-
   test "Patching an update (for upvote) should result in an increase of 1 in the number of upvotes of a record" do
-    assert_difference('Movie.find(movies(:one).id).upvotes', 1) do
+    assert_difference('movies(:one).upvotes', 1) do
       @request.env['HTTP_REFERER'] = '/index'
       patch :update, { id: movies(:one).id }
+      movies(:one).reload
     end
   end
 
@@ -96,6 +93,7 @@ class MoviesControllerTest < ActionController::TestCase
     # Update good record with good info
     put :update, { id: movies(:one).id, movie: { title: "MyMovie1", director: "MyDirector1", description: "MyDescription1" } }
     assert_response :redirect
+    assert_redirected_to movies_show_path(movies(:one).id)
 
     # Update good record with bad info
     put :update, { id: movies(:one).id, movie: { title: "MyMovie", director: "", description: "MyDescription" } }
@@ -111,16 +109,19 @@ class MoviesControllerTest < ActionController::TestCase
     # Update good record with good info
     original_title = movies(:one).title
     put :update, { id: movies(:one).id, movie: { title: "MyMovie2", director: "MyDirector2", description: "MyDescription2" } }
-    assert_equal Movie.find(movies(:one).id).title, "MyMovie2"
-    assert_equal Movie.find(movies(:one).id).director, "MyDirector2"
-    assert_equal Movie.find(movies(:one).id).description, "MyDescription2"
-    assert_not_equal original_title, Movie.find(movies(:one).id).title
+    movies(:one).reload
+
+    assert_equal movies(:one).title, "MyMovie2"
+    assert_equal movies(:one).director, "MyDirector2"
+    assert_equal movies(:one).description, "MyDescription2"
+    assert_not_equal original_title, movies(:one).title
   end
 
   test "Should be able to destroy an movie if it exists" do
     # Destroying an movie that exists
     get :destroy, { id: movies(:one).id }
     assert_response :redirect
+    assert_redirected_to movies_index_path
 
     # Trying to destroy an movie that does not exist
     get :destroy, { id: -1 }

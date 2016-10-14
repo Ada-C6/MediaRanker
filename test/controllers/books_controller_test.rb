@@ -85,11 +85,15 @@ class BooksControllerTest < ActionController::TestCase
   # is returned back to the test. In any case, this feature actually does work, so I think the
   # Book.find(books(:one).id) is a workaround that gives an accurate reflection of whether things
   # are working.
+  #
+  # UPDATE: You need to do a .reload on the record at the end of the assert_difference in order
+  # to retrieve it with its new values: http://edgeguides.rubyonrails.org/testing.html.
 
   test "Patching an update (for upvote) should result in an increase of 1 in the number of upvotes of a record" do
-    assert_difference('Book.find(books(:one).id).upvotes', 1) do
+    assert_difference('books(:one).upvotes', 1) do
       @request.env['HTTP_REFERER'] = '/index'
       patch :update, { id: books(:one).id }
+      books(:one).reload
     end
   end
 
@@ -112,10 +116,12 @@ class BooksControllerTest < ActionController::TestCase
     # Update good record with good info
     original_title = books(:one).title
     put :update, { id: books(:one).id, book: { title: "MyBook2", author: "MyAuthor2", description: "MyDescription2" } }
-    assert_equal Book.find(books(:one).id).title, "MyBook2"
-    assert_equal Book.find(books(:one).id).author, "MyAuthor2"
-    assert_equal Book.find(books(:one).id).description, "MyDescription2"
-    assert_not_equal original_title, Book.find(books(:one).id).title
+    books(:one).reload
+
+    assert_equal books(:one).title, "MyBook2"
+    assert_equal books(:one).author, "MyAuthor2"
+    assert_equal books(:one).description, "MyDescription2"
+    assert_not_equal original_title, books(:one).title
   end
 
   test "Should be able to destroy an book if it exists" do
@@ -129,11 +135,9 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "The number of books in the database should decrement by one when an book is destroyed" do
-
     assert_difference('Book.count', -1) do
       get :destroy, { id: books(:one).id }
     end
-
   end
 
 end
