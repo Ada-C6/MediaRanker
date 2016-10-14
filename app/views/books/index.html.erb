@@ -11,7 +11,7 @@
 		<tr>
 			<td>Rank: <%=book.rank%></td>
 			<td><%=link_to book.name, book_path(book)%></td>
-			<td><%= button_to("Upvote", {action: "upvote", id: book.id}, method: :patch) %></td>
+			<td><%= button_to("Upvote", {action: "upvote", id: book.id}, {method: :patch, :class=> "upvote-button"}) %></td>
 			<td><%= button_to("Downvote", {action: "downvote", id: book.id}, method: :patch) %></td>
 		</tr>
 		<% end %>

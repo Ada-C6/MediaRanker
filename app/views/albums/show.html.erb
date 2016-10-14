@@ -2,7 +2,7 @@
 <h2>Written By: <%= @this_album.artist %></h2>
 <h4>Rank: <%=@this_album.rank%></h4>
 <p><%=@this_album.description%></p>
-<%= button_to("Upvote", {action: "upvote", id: @this_album.id}, method: :patch) %>
+<%= button_to("Upvote", {action: "upvote", id: @this_album.id}, {method: :patch, :class=> "upvote-button"}) %>
 <%= button_to("Downvote", {action: "downvote", id: @this_album.id}, method: :patch) %>
 <%= button_to("Edit", {action: "edit", id: @this_album.id}, method: :get) %>
 <%= button_to("Delete", {action: "destroy", id: @this_album.id}, method: :delete, data: {confirm:  "are you sure?"}) %>
