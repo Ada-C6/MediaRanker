@@ -8,12 +8,15 @@
 </head>
 <body>
   <header>
-    <!-- <%# image_tag("owl.png", :alt => "cartoon owl") %> -->
-    <h1><%=link_to( "Media Ranker", index_path) %></h1>
-    <h2> Vote for your favorites! </h2>
+    <%= image_tag("owl.png", :alt => "cartoon owl") %>
+    <h2><%=link_to( "Media Ranker", index_path) %></h2>
+    <h4> Vote for your favorites! </h4>
   </header>
 
-<%= yield %>
+  <main>
 
+<%= yield %>
+  </main>
+  
 </body>
 </html>

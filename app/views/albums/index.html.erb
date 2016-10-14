@@ -9,9 +9,9 @@
 </tr>
 <% @albums.order('rank DESC').each do |album| %>
     <tr>
-      <td><%= album.rank %> </td>
-      <td><%= link_to album.title, album_show_path(album.id) %></td>
-      <td><%= button_to 'Upvote', album_upvote_path(album.id), method: :post %></td
+      <td class="media_index"><%= album.rank %> </td>
+      <td class="media_index"><%= link_to album.title, album_show_path(album.id) %></td>
+      <td class="media_index"><%= button_to 'Upvote', album_upvote_path(album.id), method: :post %></td
     </tr>
   <% end %>
 </table>

@@ -9,9 +9,9 @@
 </tr>
 <% @movies.order('rank DESC').each do |movie| %>
     <tr>
-      <td><%= movie.rank %> </td>
-      <td><%= link_to movie.title, movie_show_path(movie.id) %></td>
-      <td><%= button_to 'Upvote', movie_upvote_path(movie.id), method: :post %></td
+      <td class="media_index"><%= movie.rank %> </td>
+      <td class="media_index"><%= link_to movie.title, movie_show_path(movie.id) %></td>
+      <td class="media_index"><%= button_to 'Upvote', movie_upvote_path(movie.id), method: :post %></td
     </tr>
   <% end %>
 </table>

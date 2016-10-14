@@ -9,9 +9,9 @@
 </tr>
 <% @books.order('rank DESC').each do |book| %>
     <tr>
-      <td><%= book.rank %> </td>
-      <td><%= link_to book.title, book_show_path(book.id) %></td>
-      <td><%= button_to 'Upvote', book_upvote_path(book.id), method: :post %></td
+      <td class="media_index"><%= book.rank %> </td>
+      <td class="media_index"><%= link_to book.title, book_show_path(book.id) %></td>
+      <td class="media_index"><%= button_to 'Upvote', book_upvote_path(book.id), method: :post %></td
     </tr>
   <% end %>
 </table>
