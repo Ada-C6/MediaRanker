@@ -24,7 +24,7 @@ end
 # ================================
 # Test set 2: An medium that have nil votes should also be valid.
 
-test "An medium that have nil votes is valid" do
-  medium = 
-
-end
+# test "An medium that have nil votes is valid" do
+#   medium =
+#
+# end
