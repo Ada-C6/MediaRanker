@@ -14,7 +14,11 @@ class MediaController < ApplicationController
 
   def show
     @medium_id = params[:id].to_i
-    @medium = Medium.find(@medium_id)
+    @medium = Medium.find_by_id(@medium_id)
+
+    if @medium == nil
+      return render :file => "#{Rails.root}/public/404.html", :status => 404
+    end
 
     type = @medium.type.downcase
     return render("show_#{type}")
@@ -43,9 +47,11 @@ class MediaController < ApplicationController
       @medium.artist = medium_hash[:artist]
     end
 
-    @medium.save
-
-    redirect_to action: 'show'
+    if @medium.save
+      return redirect_to action: 'show'
+    else
+      return render :status => 400
+    end
   end
 
   def delete
@@ -54,9 +60,8 @@ class MediaController < ApplicationController
   end
 
   def upvote
-
     @medium = Medium.find(params[:id].to_i)
-    Medium.increment_counter(:votes, params[:id])
+    Medium.increment_counter(:votes, params[:id].to_i)
 
     redirect_to action: 'show'
   end
