@@ -1,17 +1,37 @@
-<h2><%= @album.name %></h2>
+<main>
+  <h2>
+    <%= @album.name %>
+    <small>by <%= @album.artist %></small>
+  </h2>
 
-<ul>
-  <li>Artist: <%= @album.artist %></li>
-  <li>Description: <%= @album.description %></li>
-  <li>Upvotes: <%= ranking(@album) %></li>
-</ul>
+  <p>Upvotes: <%= ranking(@album) %></p>
+  <p>Description: <%= @album.description %></p>
+</main>
 
-<%= link_to :upvote, upvote_album_path(@album), method: "patch" %>
+<footer class="small-12 large-12 columns">
+  <ul class="menu row small-up-1 medium-up-3 large-up-6">
 
-<%= link_to "Edit #{@album.name}", edit_album_path %>
-<%= link_to "DELETE", album_path,
-            method: "delete",
-            data: { confirm: "Are you sure you want to delete this album?" } %>
+    <li class="column">
+      <%= link_to :upvote, upvote_album_path(@album), value: "UPVOTE", method: "patch", class: "success button" %>
+    </li>
 
-<%= link_to "All Albums", albums_path %>
-<%= link_to "All Media", root_path %>
+    <li class="column">
+      <%= link_to "Edit #{@album.name}", edit_album_path %>
+    </li>
+
+    <li class="column">
+      <%= link_to "DELETE", album_path,
+                method: "delete",
+                data: { confirm: "Are you sure you want to delete this album?" },
+                class: "alert button" %>
+    </li>
+
+    <li class="column">
+      <%= link_to "All Albums", albums_path %>
+    </li>
+
+    <li class="column">
+      <%= link_to "All Media", root_path %>
+    </li>
+  </ul>
+</footer>
