@@ -3172,8 +3172,10 @@ table {
       padding: 0.5rem 0.625rem 0.625rem;
       font-weight: bold;
       text-align: left; }
-  table tbody tr:nth-child(even) {
-    background-color: #f1f1f1; }
+  table tbody tr:nth-child(odd) {
+    background-color: #d0cabf; }
+    table tbody tr:nth-child(even) {
+      background-color: #fff2e7; }
   table tbody th,
   table tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
