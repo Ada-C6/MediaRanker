@@ -46,7 +46,8 @@ class WizardsController < ApplicationController
   def upvote
     @wizard = Wizard.find(params[:id].to_i)
     @wizard.wizard_votes.create
-    redirect_to wizard_path
+    
+    redirect_to show_wizard_path(@wizard.id)
   end
 
 end

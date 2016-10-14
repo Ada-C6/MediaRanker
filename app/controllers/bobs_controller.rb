@@ -46,7 +46,8 @@ class BobsController < ApplicationController
   def upvote
     @bob = Bob.find(params[:id].to_i)
     @bob.bob_votes.create
-    redirect_to bob_path
+
+    redirect_to show_bob_path(@bob.id)
   end
 
 end
