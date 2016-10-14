@@ -4,7 +4,11 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
+    begin
+      @movie = Movie.find(params[:id])
+    rescue StandardError => err
+      render "/errors/not_found", status: :not_found
+    end
   end
 
   def new
