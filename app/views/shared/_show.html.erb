@@ -18,6 +18,7 @@
     <% made_by_verb = "Written" %>
 <% end %>
 
+<article>
 <h1>
   <%= media_item.name %> <small><%= "#{made_by_verb} by: #{creator}" %></small>
 </h1>
@@ -27,11 +28,10 @@
 <p>
   <%= media_item.description %>
 </p>
-<%# button_to "Upvote", media_path, method: :patch, media_item.upvote %>
-
 <%= button_to [:upvote, media_item], method: :patch do %>
   Upvote
 <% end %>
+</article>
 
 <%= link_to "Edit #{media_item.name}", edit_media_path %>
 
@@ -39,4 +39,4 @@
 
 <%= link_to "View All #{ media_type.to_s.capitalize }s", index_path %>
 
-<h4><%# @TODO: ADD LINK TO HOME SITE HERE! %> View All Media Link Will Be Here</h4>
+<%= link_to "View All Media", root_path %>
