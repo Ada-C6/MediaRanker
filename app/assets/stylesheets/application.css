@@ -37,6 +37,10 @@ a:hover {
   text-decoration: underline;
 }
 
+table th {
+  text-align: left;
+}
+
 .not_emphasized {
   color: gray;
   font-size: 23px;
