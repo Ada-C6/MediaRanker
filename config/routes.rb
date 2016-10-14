@@ -6,16 +6,19 @@ Rails.application.routes.draw do
       patch 'vote'
     end
   end
-
-  # patch '/albums/:id', to: "albums#vote", as: 'vote_album'
+  
+  # THIS IS WRONG
+  # resources :albums, :books, :movies
+  #
+  # patch '/albums/:id', to: "albums#upvote", as: 'upvote_album'
   # put '/albums/:id', to: "albums#downvote", as: 'downvote_album'
-
+  #
   # patch '/books/:id', to: "books#upvote", as: 'upvote_book'
   # put '/books/:id', to: "books#downvote", as: 'downvote_book'
   #
   # patch '/movies/:id', to: "movies#upvote", as: 'upvote_movie'
   # put '/movies/:id', to: "movies#downvote", as: 'downvote_movie'
-
+  ######
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

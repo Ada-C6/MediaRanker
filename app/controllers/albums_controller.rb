@@ -7,6 +7,10 @@ class AlbumsController < ApplicationController
   def index
     @albums = sort_by_rank(Album.all)
   end
+  
+  def new
+    @album = Album.new
+  end
 
   def create
     @album = Album.create!(album_params)
@@ -14,9 +18,6 @@ class AlbumsController < ApplicationController
     redirect_to albums_path
   end
 
-  def new
-    @album = Album.new
-  end
 
   def edit
     @album = Album.find(params[:id])

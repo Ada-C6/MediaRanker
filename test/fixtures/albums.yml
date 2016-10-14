@@ -22,10 +22,10 @@ without_a_description:
   name: MyString
   artist: MyString
   description:
-  rank_points: 1
+  rank_points: -1
 
 without_rank_points:
   name: MyString
-  artist:
+  artist: MyString
   description: MyString
   rank_points:
