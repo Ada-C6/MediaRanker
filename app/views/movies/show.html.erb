@@ -1,9 +1,12 @@
 <h1> Movie Details </h1>
 
-  <p> <%= @movie.title %>
-      <%= @movie.director %>
-      <%= @movie.description %>
-  </p>
+  <p> <%= @movie.title %> </p>
+  <p> Directed by: <%= @movie.director %> </p>
+  <p> Summary: <%= @movie.description %> </p>
+  <p> Current ranking: <%= @movie.votes %> votes </p>
+
   <p>
+    <%= button_to 'upvote', upvote_movie_path(@movie.id), method: :patch %>
     <%= link_to "Edit", edit_movie_path(@movie.id) %>
+    <%= link_to "Delete", delete_movie_path(@movie.id), method: :delete , data: {confirm: "Are you sure you want to delete this movie?"} %>
   </p>
