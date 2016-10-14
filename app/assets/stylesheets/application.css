@@ -60,6 +60,11 @@ table td {
   font-size: 23px;
 }
 
+#button-text {
+  color: white;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
