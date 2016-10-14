@@ -1,0 +1,38 @@
+<%# Helpful info on error handling: http://api.rubyonrails.org/classes/ActiveModel/Errors.html %>
+
+<article>
+
+  <% if @movie.errors.any? %>
+    <section class="row errors">
+      <div class="column">
+        <p>Whoops! We couldn't save the movie because:</p>
+        <ul>
+          <% @movie.errors.messages.values.uniq.each do |message| %>
+            <li>
+              <%= message[0] %>
+            </li>
+          <% end %>
+        </ul>
+        <p>Please edit your entries and try again.</p>
+      </div>
+    </section>
+  <% end %>
+
+  <section class="row">
+    <div class="column">
+      <%= form_for @movie, url: @path, method: @method do |f| %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+
+        <%= f.label :director %>
+        <%= f.text_field :director %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+
+        <%= f.submit %>
+
+      <% end %>
+    </div>
+  </section>
