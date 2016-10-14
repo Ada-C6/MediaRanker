@@ -5,8 +5,20 @@ class MovieTest < ActiveSupport::TestCase
     assert movies(:charlottes_web).valid?
   end
 
-  test "Create an album with no name" do
+  test "Create a movie with no name" do
     movie = Movie.new
     assert_not movie.valid?
+  end
+
+  test "Create a movie with the same name as another" do
+    movie1 = Movie.create!(name: "foo")
+    movie2 = Movie.new(name: "foo")
+    assert movie2.valid?
+  end
+
+  test "Create a movie with the same name and director as another" do
+    movie1 = Movie.create!(name: "foo", director: "bar")
+    movie2 = Movie.new(name: "foo", director: "bar")
+    assert_not movie2.valid?
   end
 end
