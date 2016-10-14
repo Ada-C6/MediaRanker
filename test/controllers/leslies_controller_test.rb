@@ -7,7 +7,7 @@ class LesliesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    get :show, {id: leslies(:leslie2).id }
     assert_response :success
   end
 
@@ -17,23 +17,23 @@ class LesliesControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    get :create
-    assert_response :success
+    post :create, {leslie: {title: "Naked Gun"} }
+    assert_response :redirect
   end
 
   test "should get edit" do
-    get :edit
+    get :edit, {id: leslies(:leslie2).id }
     assert_response :success
   end
 
   test "should get update" do
-    get :update
+    patch :update, {id: leslies(:leslie2).id }
     assert_response :success
   end
 
   test "should get delete" do
-    get :delete
-    assert_response :success
+    delete :delete, {id: leslies(:leslie2).id }
+    assert_response :redirect
   end
 
 end
