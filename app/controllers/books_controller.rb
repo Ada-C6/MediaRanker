@@ -42,7 +42,7 @@ class BooksController < ApplicationController
 
       if request.patch?
         @book.update(upvotes: @book.upvotes + 1)
-        if request.referer.include?('show')
+        if request.referer && request.referer.include?('show') #With nil referer, should fall through to the else (index path)
           redirect_to books_show_path(@book.id)
         else
           redirect_to books_index_path

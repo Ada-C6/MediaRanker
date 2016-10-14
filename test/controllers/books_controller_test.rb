@@ -29,6 +29,7 @@ class BooksControllerTest < ActionController::TestCase
     # Book with all fields completed - should be created and redirected
     post :create, { book: {title: "BookName", author: "BookAuthor", description: "BookDescription"}}
     assert_response :redirect
+    assert_redirected_to books_show_path(Book.last)
 
     # Book with a missing field - should render the new page again
     post :create, { book: {name: "BookName", description: "BookDescription"}}
@@ -64,15 +65,22 @@ class BooksControllerTest < ActionController::TestCase
   # But referer is apparently not reliable, so look for a more robust way to do this
 
   test "Should be able to patch an update (for upvote) if the record exists" do
+    # If referer is nil, default should be redirect to books index
+    patch :update, { id: books(:one).id}
+    assert_response :redirect
+    assert_redirected_to books_index_path
+
     # From show page
     @request.env['HTTP_REFERER'] = '/show'
     patch :update, { id: books(:one).id}
     assert_response :redirect
+    assert_redirected_to books_show_path(books(:one).id)
 
     # From index page
     @request.env['HTTP_REFERER'] = '/index'
     patch :update, { id: books(:one).id}
     assert_response :redirect
+    assert_redirected_to books_index_path
 
     # Attempting to update a record that does not exist
     patch :update, { id: -1 }
@@ -85,11 +93,15 @@ class BooksControllerTest < ActionController::TestCase
   # is returned back to the test. In any case, this feature actually does work, so I think the
   # Book.find(books(:one).id) is a workaround that gives an accurate reflection of whether things
   # are working.
+  #
+  # UPDATE: You need to do a .reload on the record at the end of the assert_difference in order
+  # to retrieve it with its new values: http://edgeguides.rubyonrails.org/testing.html.
 
   test "Patching an update (for upvote) should result in an increase of 1 in the number of upvotes of a record" do
-    assert_difference('Book.find(books(:one).id).upvotes', 1) do
+    assert_difference('books(:one).upvotes', 1) do
       @request.env['HTTP_REFERER'] = '/index'
       patch :update, { id: books(:one).id }
+      books(:one).reload
     end
   end
 
@@ -97,6 +109,7 @@ class BooksControllerTest < ActionController::TestCase
     # Update good record with good info
     put :update, { id: books(:one).id, book: { title: "MyBook1", author: "MyAuthor1", description: "MyDescription1" } }
     assert_response :redirect
+    assert_redirected_to books_show_path(books(:one).id)
 
     # Update good record with bad info
     put :update, { id: books(:one).id, book: { title: "MyBook", author: "", description: "MyDescription" } }
@@ -112,16 +125,19 @@ class BooksControllerTest < ActionController::TestCase
     # Update good record with good info
     original_title = books(:one).title
     put :update, { id: books(:one).id, book: { title: "MyBook2", author: "MyAuthor2", description: "MyDescription2" } }
-    assert_equal Book.find(books(:one).id).title, "MyBook2"
-    assert_equal Book.find(books(:one).id).author, "MyAuthor2"
-    assert_equal Book.find(books(:one).id).description, "MyDescription2"
-    assert_not_equal original_title, Book.find(books(:one).id).title
+    books(:one).reload
+
+    assert_equal books(:one).title, "MyBook2"
+    assert_equal books(:one).author, "MyAuthor2"
+    assert_equal books(:one).description, "MyDescription2"
+    assert_not_equal original_title, books(:one).title
   end
 
   test "Should be able to destroy an book if it exists" do
     # Destroying an book that exists
     get :destroy, { id: books(:one).id }
     assert_response :redirect
+    assert_redirected_to books_index_path
 
     # Trying to destroy an book that does not exist
     get :destroy, { id: -1 }
@@ -129,11 +145,9 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "The number of books in the database should decrement by one when an book is destroyed" do
-
     assert_difference('Book.count', -1) do
       get :destroy, { id: books(:one).id }
     end
-
   end
 
 end

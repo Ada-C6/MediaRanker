@@ -42,7 +42,7 @@ class MoviesController < ApplicationController
 
       if request.patch?
         @movie.update(upvotes: @movie.upvotes + 1)
-        if request.referer.include?('show')
+        if request.referer && request.referer.include?('show') # A nil referer will fall through to the else (index path)
           redirect_to movies_show_path(@movie.id)
         else
           redirect_to movies_index_path
