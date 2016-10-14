@@ -39,6 +39,13 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def upvote
+    @album = Album.find(params[:id])
+    @album.upvote
+
+    redirect_to album_path(@album)
+  end
+
   def destroy
     album = Album.find(params[:id])
     album.destroy
@@ -48,6 +55,6 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:name, :artist, :description, :upvotes)
+    params.require(:album).permit(:name, :artist, :description)
   end
 end
