@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
-  require 'sort_by_rank.rb'
-  include SortByRank
+  validates :name, presence: true
+  validates :director, presence: true
+  validates :rank_points, presence: true
 end

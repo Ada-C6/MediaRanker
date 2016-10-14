@@ -20,5 +20,4 @@ class AlbumTest < ActiveSupport::TestCase
     assert album.valid?
   end
 
-
 end
