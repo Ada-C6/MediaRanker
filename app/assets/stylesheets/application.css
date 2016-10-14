@@ -1,4 +1,30 @@
 @import url('foundation.css');
+header {
+  border-bottom:  1px solid #eee;
+}
+
+header h1 {
+  font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif;
+  display: inline;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 40px;
+}
+h2 {
+  display: inline;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+p {
+  display: inline;
+  color: gray;
+  font-size: 25px;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

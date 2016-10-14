@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MediaRanker</title>
+  <title>Media Ranker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <%= image_tag 'owl.jpg' %><h1><%= link_to "Media Ranker", root_path %> </h1><p>Ranking the Best of Everything</p>
+    <nav>
+      <header>
+        <div class ="row">
+          <p class="small-2 medium-2 large-2 columns"><%= image_tag 'owl.jpg', :class => "no_resize" %>
+            <span class="small-10 medium-10 large-2 columns end"> <h1><%= link_to "Media Ranker", root_path %> </h1><p>Ranking the Best of Everything</p></span>
+      </div>
+    </header>
   </nav>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
