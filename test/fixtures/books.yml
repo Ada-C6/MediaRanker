@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  author: MyString
-  description: MyString
-  ranking: 1
-
-two:
-  name: MyString
-  author: MyString
-  description: MyString
-  ranking: 1
+pride_and_prejudice:
+  name: Pride And Prejudice
+  author: Jane Austen
+  description: is a classic
+  ranking: 0
