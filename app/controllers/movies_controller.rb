@@ -40,6 +40,13 @@ class MoviesController < ApplicationController
     end
   end
 
+  def upvote
+    @movie = Movie.find(params[:id])
+    @movie.upvote
+
+    redirect_to movie_path(@movie)
+  end
+
   def destroy
     movie = Movie.find(params[:id])
     movie.destroy
@@ -49,7 +56,7 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:name, :director, :description, :upvotes)
+    params.require(:movie).permit(:name, :director, :description)
   end
 
 end

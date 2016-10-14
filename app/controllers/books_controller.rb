@@ -39,6 +39,13 @@ class BooksController < ApplicationController
     end
   end
 
+  def upvote
+    @book = Book.find(params[:id])
+    @book.upvote
+
+    redirect_to book_path(@book)
+  end
+
   def destroy
     book = Book.find(params[:id])
     book.destroy
@@ -48,7 +55,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :author, :description, :upvotes)
+    params.require(:book).permit(:name, :author, :description)
   end
 
 end

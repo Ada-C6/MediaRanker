@@ -28,6 +28,16 @@ module ApplicationHelper
     end
   end
 
+  def create_upvote_path(media)
+    if media.class == Movie
+      upvote_movie_path(media)
+    elsif media.class == Book
+      upvote_book_path(media)
+    elsif media.class == Album
+      upvote_album_path(media)
+    end
+  end
+
   def get_creator(media)
     if media.class == Movie
       media.director
