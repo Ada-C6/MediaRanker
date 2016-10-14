@@ -10,6 +10,7 @@ class MediaController < ApplicationController
     model_class = type_to_model(medium_type)
     @media = model_class.order('votes DESC')
     @medium_type_name = medium_type.capitalize
+
   end
 
   def show
@@ -24,10 +25,44 @@ class MediaController < ApplicationController
     return render("show_#{type}")
   end
 
+
+  def new
+    @medium_type = params[:type]
+    model_class = type_to_model(@medium_type)
+    @medium = model_class.new
+    return render 'new'
+  end
+
+  def create
+    @medium_type = params[:type]
+    model_class = type_to_model(@medium_type)
+    @medium = model_class.new
+    medium_hash = params[@medium_type.downcase.to_sym]
+    @medium.name = medium_hash[:name]
+    @medium.description = medium_hash[:description]
+
+    case @medium_type.downcase
+    when 'book'
+      @medium.author = medium_hash[:author]
+    when 'movie'
+      @medium.director = medium_hash[:director]
+    when 'album'
+      @medium.singer = medium_hash[:singer]
+      @medium.artist = medium_hash[:artist]
+    end
+
+    @medium.save
+
+    return redirect_to action: 'show', id: @medium.id
+    # else
+    #   return render :status => 400
+    # end
+  end
+
   def edit
     @medium = Medium.find(params[:id].to_i)
-    type = @medium.type.downcase
-    return render("edit_#{type}")
+    @type = @medium.type.downcase
+    return render 'edit'
   end
 
   def update

@@ -1,0 +1,13 @@
+<section>
+  <header>
+    <h1> Add New <%= @medium_type %></h1>
+  </header>
+
+    <article class="form">
+    <%= form_for @medium, url: medium_create_path do |f| %>
+
+      <%= render partial: "form_#{@medium_type}", locals: {:f => f} %>
+
+    <% end %>
+  </article>
+</section>

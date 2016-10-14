@@ -1,0 +1,13 @@
+<section>
+  <header>
+    <h1>Edit <%= @type %></h1>
+  </header>
+
+    <article class="form">
+    <%= form_for @medium, url: medium_update_path do |f| %>
+
+      <%= render partial: "form_#{@type}", locals: {:f => f} %>
+
+    <% end %>
+  </article>
+</section>

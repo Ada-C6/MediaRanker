@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   get 'media/:id/show' => 'media#show', as: 'medium_show'
 
+  get 'media/:type/new' => 'media#new', as: 'medium_new'
+
+  post 'media/:type/create' => 'media#create', as: 'medium_create'
+
   get 'media/:id/edit' => 'media#edit', as: 'medium_edit'
 
   patch 'media/:id/update' => 'media#update', as: 'medium_update'
@@ -15,20 +19,17 @@ Rails.application.routes.draw do
 
   get 'media/:id/upvote' => 'media#upvote', as: 'medium_upvote'
 
-  # get 'movies/index'=> 'movie#index
-  #root to: 'movies#index', as: 'index''
-
-  get 'movies/all' => 'movies#all', as: 'all'
-
-  get 'movies/:id' => 'movies#show', as: 'show'
-
-  get 'movies/:id/edit' => 'movies#edit', as: 'edit'
-
-  patch 'movies/:id/update' => 'movies#update', as: 'update'
-
-  delete 'movies/:id/delete' => 'movies#delete', as: 'delete'
-
-  get 'movies/:id/upvote' => 'movies#upvote', as: 'upvote'
+  # get 'movies/all' => 'movies#all', as: 'all'
+  #
+  # get 'movies/:id' => 'movies#show', as: 'show'
+  #
+  # get 'movies/:id/edit' => 'movies#edit', as: 'edit'
+  #
+  # patch 'movies/:id/update' => 'movies#update', as: 'update'
+  #
+  # delete 'movies/:id/delete' => 'movies#delete', as: 'delete'
+  #
+  # get 'movies/:id/upvote' => 'movies#upvote', as: 'upvote'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
