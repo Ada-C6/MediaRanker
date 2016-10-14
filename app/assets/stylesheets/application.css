@@ -15,10 +15,16 @@
  */
 
 @import url('foundation.css');
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
+
+body * {
+  font-family: 'Hammersmith One', sans-serif;
+}
 
 header {
   border-bottom: 1px solid silver;
 }
+
 header img {
   width: 5%;
   float: left;
@@ -40,4 +46,58 @@ a:hover {
 
 td {
   font-size: 1.5em;
+}
+
+#index_rank {
+  text-align: right;
+}
+
+.index_media {
+  margin-bottom: 3%;
+}
+
+.record {
+  border: 1px solid silver;
+  padding: 2%;
+  margin-bottom: 2%;
+  font-size: 1.5em;
+}
+
+.button_to {
+  display: inline-block;
+  margin-right: 3%;
+  font-size: 1em;
+}
+
+.rank {
+  font-weight: bold;
+}
+
+.links a {
+  margin-right: 5%;
+}
+
+.show_button:hover {
+  color: gray;
+}
+
+.upvote {
+  background-color: teal;
+  border-radius: 25px;
+}
+
+.upvote:hover {
+  color: gray;
+}
+
+.delete, .edit {
+  width: 100%;
+}
+
+.delete, .upvote {
+  color: white;
+}
+
+.delete {
+  background-color: red;
 }
