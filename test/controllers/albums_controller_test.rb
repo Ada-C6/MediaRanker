@@ -38,16 +38,17 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  # test "add a new album to the DB" do
-  #   post_params = { album: { name: "Live Noise",
-	# 							    artist: "Moxy Fruvous",
-  #                   description: "Fantastic" } }
-  #   assert_difference('Album.count', 1) do
-  #     post :create, post_params
-  #   end
-  #
-  #   assert_redirected_to album_path(@album)
-  # end
+  test "add a new album to the DB" do
+    post_params = { album: { name: "Live Noise",
+								    artist: "Moxy Fruvous",
+                    description: "Fantastic" } }
+    assert_difference('Album.count', 1) do
+      post :create, post_params
+    end
+
+    album = assigns(:album)
+    assert_redirected_to album_path(album.id)
+  end
 
   test "cannot add invalid album to DB" do
     post_params = {album: { name: "Live Noise"} }

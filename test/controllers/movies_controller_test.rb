@@ -38,16 +38,17 @@ class MoviesControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  # test "add a new movie to the DB" do
-  #   post_params = { movie: { name: "Drive",
-	# 							    director: "Nicolas Winding Refn",
-  #                   description: "Never seen it" } }
-  #   assert_difference('Movie.count', 1) do
-  #     post :create, post_params
-  #   end
-  #
-  #   assert_redirected_to movie_path(@movie)
-  # end
+  test "add a new movie to the DB" do
+    post_params = { movie: { name: "Drive",
+								    director: "Nicolas Winding Refn",
+                    description: "Never seen it" } }
+    assert_difference('Movie.count', 1) do
+      post :create, post_params
+    end
+    
+    movie = assigns(:movie)
+    assert_redirected_to movie_path(movie.id)
+  end
 
   test "cannot add invalid movie to DB" do
     post_params = {movie: { name: "Drive"} }

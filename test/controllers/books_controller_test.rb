@@ -38,16 +38,17 @@ class BooksControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  # test "add a new book to the DB" do
-  #   post_params = { book: { name: "To Kill a Mockingbird",
-	# 							    author: "Harper Lee",
-  #                   description: "Eh" } }
-  #   assert_difference('Book.count', 1) do
-  #     post :create, post_params
-  #   end
-  #
-  #   assert_redirected_to book_path(@book)
-  # end
+  test "add a new book to the DB" do
+    post_params = { book: { name: "To Kill a Mockingbird",
+								    author: "Harper Lee",
+                    description: "Eh" } }
+    assert_difference('Book.count', 1) do
+      post :create, post_params
+    end
+
+    book = assigns(:book)
+    assert_redirected_to book_path(book.id)
+  end
 
   test "cannot add invalid book to DB" do
     post_params = {book: { name: "To Kill a Mockingbird"} }
