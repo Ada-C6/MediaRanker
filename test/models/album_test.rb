@@ -64,5 +64,15 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not album1.valid?
   end
 
+  test "The method upvote will increase the Album's upvotes by 1" do
+    album = albums(:Harry_and_the_Potters)
+    upvotes = album.upvotes
+    assert_equal(upvotes, 0)
+
+    album.upvote
+    upvotes = album.upvotes
+    assert_equal(upvotes,1)
+  end
+
 
 end

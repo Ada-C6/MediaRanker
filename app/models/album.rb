@@ -7,4 +7,9 @@ class Album < ActiveRecord::Base
     too_long: "%{count} characters is the maximum allowed" }
   validates :upvotes, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+  def upvote
+    self.upvotes += 1
+    self.save
+  end
+
 end
