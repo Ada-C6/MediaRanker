@@ -1,7 +1,9 @@
-<h1>Album Name: <%= @album.name %> </h1>
+<%= render "medias/shared_header", title: @album.name, created_verb: "Recorded", maker: @album.artist, rank: @album.ranking, description: @album.description %>
+
+<!-- <h1>Album Name: <%= @album.name %> </h1>
 <h2> Author: <%= @album.artist %></h2>
 <p> Ranked: <%= @album.ranking %> </p>
-<p> <%= @album.description %> </p>
+<p> <%= @album.description %> </p> -->
 
 <%= button_to "UPVOTE", upvote_album_path(@album), method: :patch  %>
 <%= link_to "Edit #{@album.name}", edit_album_path %>

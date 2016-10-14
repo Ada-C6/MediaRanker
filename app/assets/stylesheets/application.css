@@ -5,9 +5,13 @@ body {
   padding-left: 5%;
 }
 
-
 a.plain-button {
   border-radius: 5%;
   border: 1px black solid;
   padding: 2px;
+}
+
+.creator-header {
+  color: red;
+  display: inline;
 }

@@ -1,7 +1,8 @@
-<h1> Movie Name: <%= @movie.name %></h1>
+<%= render "medias/shared_header", title: @movie.name, created_verb: "Directed", maker: @movie.director, rank: @movie.ranking, description: @movie.description %>
+<!-- <h1> Movie Name: <%= @movie.name %></h1>
 <h2> Directed By: <%= @movie.director %></h2>
 <p> Ranked: <%= @movie.ranking %> </p>
-<p> <%= @movie.description %> </p>
+<p> <%= @movie.description %> </p> -->
 
 <%= button_to "UPVOTE", upvote_movie_path(@movie), method: :patch  %>
 <%= link_to "Edit #{@movie.name}", edit_movie_path %>
