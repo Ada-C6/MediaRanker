@@ -33,8 +33,16 @@ h4 {
   font-size: 20px;
 }
 
+a:link {
+  color: #428bca;
+}
+
 a:hover {
   text-decoration: underline;
+}
+
+a:visited {
+  color: #428bca;
 }
 
 table th {
