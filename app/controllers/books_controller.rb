@@ -3,10 +3,6 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def home
-    render :home
-  end
-
   def new
     @book = Book.new
   end
@@ -42,7 +38,6 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
   end
-
 
   def upvote
     @book = Book.find(params[:id])
