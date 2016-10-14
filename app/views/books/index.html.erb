@@ -4,10 +4,10 @@
     <th>Name</th>
     <th>Upvote</th>
   </tr>
-  <% @books.each do |book| %>
+  <% @books_by_rank.each do |book| %>
     <tr>
-      <td><%= "Ranked: #{book.rank}"%></td>
-      <td><%= link_to "#{book.name}", book_path(book) %></td>
+      <td><%= " #{book.rank}" %></td>
+      <td><%= link_to "#{book.name}", book_path(book.id)%></td>
       <td><%= button_to "Upvote", upvote_book_path(book), method: :patch %></td>
     </tr>
   <% end %>

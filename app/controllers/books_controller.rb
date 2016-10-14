@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
     @books = Book.all
+    @books_by_rank = Book.order(:rank).reverse
   end
 
   def new
