@@ -1,38 +1,40 @@
 <main class="row small-up-1 medium-up-2 large-up-3">
   <section class="column">
     <h2>Top Movies</h2>
-    <ol>
-      <% @movies.each_with_index do |movie, index| %>
-      <% break if index == 10 %>
-      <li><%= link_to "#{movie.name}", movie_path(movie) %> <span>Ranked: <%= ranking(movie) %></span></li>
-    <% end %>
-    </ol>
+    <% @movies.each_with_index do |movie, index| %>
+    <% break if index == 10 %>
     <p>
-      <%= link_to "More Movies", movies_path %>
+      <%= link_to "#{movie.name}", movie_path(movie) %> <small>Ranked: <%= ranking(movie) %></small>
+    </p>
+    <% end %>
+    <p>
+      <%= link_to "More Movies", movies_path, class: "button" %>
     </p>
   </section>
 
   <section class="column">
     <h2>Top Books</h2>
-    <ol>
-      <% @books.each_with_index do |book, index| %>
-      <% break if index == 10 %>
-      <li><%= link_to "#{book.title}", book_path(book) %> <span>Ranked: <%= ranking(book) %></span></li>
-      <% end %>
-    </ol>
+    <% @books.each_with_index do |book, index| %>
+    <% break if index == 10 %>
     <p>
-      <%= link_to "More Books", books_path %>
+      <%= link_to "#{book.title}", book_path(book) %> <small>Ranked: <%= ranking(book) %></small>
+    </p>
+    <% end %>
+    <p>
+      <%= link_to "More Books", books_path, class: "button" %>
     </p>
   </section>
 
   <section class="column">
     <h2>Top Albums</h2>
-    <ol>
-      <% @albums.each_with_index do |album, index| %>
-      <% break if index == 10 %>
-      <li><%= link_to "#{album.name}", album_path(album) %> <span>Ranked: <%= ranking(album) %></span></li>
-      <% end %>
-    </ol>
-    <%= link_to "More Albums", albums_path %>
+    <% @albums.each_with_index do |album, index| %>
+    <% break if index == 10 %>
+    <p>
+      <%= link_to "#{album.name}", album_path(album) %> <small>Ranked: <%= ranking(album) %></small>
+    </p>
+    <% end %>
+    <p>
+      <%= link_to "More Albums", albums_path, class: "button" %>
+    </p>
   </section>
 </main>
