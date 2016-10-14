@@ -8,11 +8,13 @@ one:
   title: one is the loneliest
   director: beatles
   description: This is not actually by the beatles.
+  rank: 1
 
 two:
   title: two can be as bad as one.
   director: jeff bridges
   description: But one is the loneliest number since the number one.
+  rank: 2
 
 three:
   title: three's company
@@ -33,8 +35,9 @@ six:
   title: The Sixth Sense
   director: M. Night
   description: Creepy kid turns out to be SPOILER.
-  
+
 seven:
   title: Se7en
   director: David Fincher.
   description: The seven deadly sins keep popping up and a detective and his rookie try to figure out what's up.
+  rank: 7
