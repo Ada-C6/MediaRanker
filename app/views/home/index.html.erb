@@ -4,8 +4,8 @@
     <div class="column">
       <h1>Top Movies</h1>
       <% @movies.each do |movie| %>
-        <h2><%= link_to(movie.name, movie_path(movie.id)) %></h2>
-        <p>Ranked: <%= movie.ranking %></p>
+        <h2><%= link_to(movie.name, movie_path(movie.id)) %><span class="not_emphasized">
+        Ranked: <%= movie.ranking %></h2>
       <% end %>
       <p><%= link_to("View More Movies", movies_path) %></p>
     </div>
@@ -21,8 +21,8 @@
     <div class="column">
       <h1>Top Albums</h1>
       <% @albums.each do |album| %>
-        <h2><%= link_to(album.name, album_path(album.id)) %></h2>
-        <p>Ranked: <%= album.ranking %></p>
+        <h2><%= link_to(album.name, album_path(album.id)) %><span class="not_emphasized">
+        Ranked: <%= album.ranking %></h2>
       <% end %>
       <p><%= link_to("View More Albums", albums_path) %></p>
     </div>
