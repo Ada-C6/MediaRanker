@@ -1,6 +1,6 @@
 
  @import url('foundation.css');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme|Raleway');
 
  /************************************/
  /* NAVIGATION BAR AND HEADER SECTION */
@@ -36,7 +36,7 @@
  .navigation-container li a {
   color: #000000;
   font-size: .75em;
-  font-family: 'PT Sans';
+  font-family: 'BioRhyme';
   text-decoration: none;
   text-align: center;
 }
@@ -88,12 +88,15 @@ a:hover {
  /************************************/
 
  body {
-   font-family: 'PT Serif';
    background-color: #C9D5D4;
  }
 
- h1, h2, h3, h4, h5 {
-   font-family: 'PT Sans'
+ body, h4, h5 {
+   font-family: 'Raleway';
+ }
+
+ h1, h2, h3 {
+   font-family: 'BioRhyme'
  }
 
  ul   {
@@ -159,4 +162,8 @@ a:hover {
 
  .align-header {
    text-align: left;
+ }
+
+ .align-table {
+   padding: 2% 6% 2% 6%;
  }

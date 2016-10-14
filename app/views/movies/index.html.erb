@@ -11,19 +11,21 @@
         </div>
 </section>
 
-<table>
-  <tr class="align-header">
-    <th>Ranking</th>
-    <th>Name</th>
-    <th>Upvote</th>
-  </tr>
+<div class="align-table">
+  <table>
+    <tr class="align-header">
+      <th>Upvotes</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
 
-<% @movies.each do |movie| %>
+  <% @movies.each do |movie| %>
 
-  <tr>
-    <td>Ranked: <%= movie.ranked %></td>
-    <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
-    <td><%= button_to "Upvote", movie_path(movie.id), :class => "button", method: :get %></td>
-  </tr>
-<% end %>
-</table>
+    <tr>
+      <td>Ranked: <%= movie.ranked %></td>
+      <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
+      <td><%= button_to "Upvote", movie_path(movie.id), :class => "button", method: :get %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

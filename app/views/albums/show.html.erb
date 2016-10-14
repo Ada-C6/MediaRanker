@@ -7,10 +7,10 @@
   </section>
 
   <section class="small-6 columns">
-    <ul>
-      <li><%= button_to 'Upvote', upvote_path(params[:id]), method: :put %></li>
-      <li><%= button_to 'Edit Album', edit_album_path(params[:id]), method: :get %></li>
-      <li><%= button_to 'Delete Album', { controller: :albums, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+    <ul class="align-buttons">
+      <li><%= button_to 'Upvote', upvote_path(params[:id]), :class => "button", method: :put %></li>
+      <li><%= button_to 'Edit Album', edit_album_path(params[:id]), :class => "button", method: :get %></li>
+      <li><%= button_to 'Delete Album', { controller: :albums, action: :destroy}, :class => "button", method: :delete, data: {confirm: 'Are you sure?'} %></li>
     </ul>
   </section>
 </div>
