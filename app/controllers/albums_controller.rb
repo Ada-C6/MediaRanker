@@ -42,7 +42,7 @@ class AlbumsController < ApplicationController
 
       if request.patch?
         @album.update(upvotes: @album.upvotes + 1)
-        if request.referer.include?('show')
+        if request.referer && request.referer.include?('show') # If referer is nil, will fall through to else (index path)
           redirect_to albums_show_path(@album.id)
         else
           redirect_to albums_index_path

@@ -65,6 +65,11 @@ class BooksControllerTest < ActionController::TestCase
   # But referer is apparently not reliable, so look for a more robust way to do this
 
   test "Should be able to patch an update (for upvote) if the record exists" do
+    # If referer is nil, default should be redirect to books index
+    patch :update, { id: books(:one).id}
+    assert_response :redirect
+    assert_redirected_to books_index_path
+
     # From show page
     @request.env['HTTP_REFERER'] = '/show'
     patch :update, { id: books(:one).id}
