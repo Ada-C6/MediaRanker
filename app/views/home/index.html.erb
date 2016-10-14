@@ -1,71 +1,29 @@
-<section>
-  <section class="hero hero1">
-         <a name="top-movies"></a>
-          <div class="wrapper row">
-            <div class="small-10 medium-6 large-3 columns" class="info">
-              <h1> Top Movies </h1>
-              <p>
-                Swag pork belly brunch gluten-free kinfolk before they sold out asymmetrical. Thundercats pug poke, cornhole subway tile skateboard tote bag seitan. Before they sold out artisan vegan, raclette roof party iceland viral 8-bit. Intelligentsia yr 3 wolf moon +1 helvetica
-              </p>
-            </div>
-          </div>
-  </section>
-  <div class="row small-up-3 medium-up-4 top-media">
-    <% @movies.each do |movie| %>
-      <article class="column">
-        <div class="block">
-          <h2><%= link_to(movie.name, movie_path(movie.id)) %></h2>
-          <h3>Upvotes: <%= movie.ranked %></h3>
-        </div>
-      </article>
-    <% end %>
-  </div>
-</section>
-<section>
-  <section class="hero hero3">
-         <a name="top-books"></a>
-          <div class="wrapper row">
-            <div class="small-10 medium-6 large-3 columns" class="info">
-              <h1> Top Books </h1>
-              <p>
-                Swag pork belly brunch gluten-free kinfolk before they sold out asymmetrical. Thundercats pug poke, cornhole subway tile skateboard tote bag seitan. Before they sold out artisan vegan, raclette roof party iceland viral 8-bit. Intelligentsia yr 3 wolf moon +1 helvetica
-              </p>
-            </div>
-          </div>
-  </section>
-  <div class="row small-up-3 medium-up-4 top-media">
-    <% @books.each do |book| %>
-      <article class="column">
-        <div class="block">
-          <h2><%= link_to(book.title, book_path(book.id)) %></h2>
-          <h3>Upvotes: <%= book.ranked %></h3>
-       </div>
-      </article>
-    <% end %>
-  </div>
+<div class="row top-lists">
+    <div class="small-4 columns">
+      <h4>Top Movies</h4>
+      <ul>
+          <% @movies.each do |movie| %>
+          <li><h5><%= link_to(movie.name, movie_path(movie.id)) %> <span> Upvotes: <%= movie.ranked %> </span> </h5>  </li>
+          <% end %>
+      </ul>
+    </div>
 
-</section>
-<section>
-  <section class="hero hero2">
-         <a name="top-albums"></a>
-          <div class="wrapper row">
-            <div class="small-10 medium-6 large-3 columns" class="info">
-              <h1> Top Albums </h1>
-              <p>
-                Swag pork belly brunch gluten-free kinfolk before they sold out asymmetrical. Thundercats pug poke, cornhole subway tile skateboard tote bag seitan. Before they sold out artisan vegan, raclette roof party iceland viral 8-bit. Intelligentsia yr 3 wolf moon +1 helvetica
-              </p>
-            </div>
-          </div>
-  </section>
 
-  <div class="row small-up-3 medium-up-4 top-media">
-    <% @albums.each do |album| %>
-      <article class="column">
-        <div class="block">
-          <h2><%= link_to(album.title, album_path(album.id)) %></h2>
-          <h3>Upvotes: <%= album.ranked %></h3>
-       </div>
-      </article>
-    <% end %>
-  </div>
-</section>
+    <div class="small-4 columns">
+      <h4> Top Books </h4>
+      <ul>
+        <% @books.each do |book| %>
+            <li><h5><%= link_to(book.title, book_path(book.id)) %> <span>Upvotes: <%= book.ranked %></span></h5></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="small-4 columns">
+      <h4> Top Albums </h4>
+      <ul>
+        <% @albums.each do |album| %>
+            <li><h5><%= link_to(album.title, album_path(album.id)) %> <span>Upvotes: <%= album.ranked %></span> </h5> </li>
+        <% end %>
+      </ul>
+    </div>
+</div>

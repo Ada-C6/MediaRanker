@@ -1,5 +1,3 @@
-<h1><%= @album[:title] %></h1>
-
 <section>
   <h2><%= @album.title%></h2>
   <h3> Recorded by: <%= @album.recorded_by %> </h3>
@@ -11,6 +9,4 @@
   <li><%= button_to 'Upvote', upvote_path(params[:id]), method: :put %></li>
   <li><%= button_to 'Edit Album', edit_album_path(params[:id]), method: :get %></li>
   <li><%= button_to 'Delete Album', { controller: :albums, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-  <li><%= button_to 'View All Albums', albums_path, method: :get %></li>
-  <li><%= button_to 'View All Media', root_path, method: :get %></li>
 </ul>

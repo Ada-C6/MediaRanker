@@ -8,13 +8,13 @@
 
  .navigation-container {
    width: 100%;
-   height: 10%;
+   height: 8%;
    text-align:right;
  }
 
  .navigation-container li {
    list-style-type: none;
-   padding: 0 2% 0 2%;
+   padding: 2% 2% 2% 2%;
    display: inline-block;
  }
 
@@ -24,6 +24,7 @@
  }
 
  #logo {
+   padding-top: 2%;
    padding-left: .09%;
    float: left;
  }
@@ -71,29 +72,24 @@ a:hover {
    font-family: 'PT Sans'
  }
 
+ ul   {
+  list-style-type: none;
+}
+
  /*****************************/
  /*   TOP LISTS INDEX PAGE   */
  /****************************/
 
- .top-media {
-   margin: 3em 2em;
- }
-
-.top-media h2,h3 {
-   text-align: center;
- }
-
-.top-media article{
-  margin-bottom: 2em;
-
+.top-lists h4 {
+  text-align: center;
+  margin: 20% 0 5% 0;
 }
 
- .block {
-   margin: 2%;
-   padding: 2%;
-   background-color: #3A919B;
-   color: white;
- }
+.top-lists ul {
+  text-align: center;
+}
+
+
 
  /**************/
  /*   HERO    */
@@ -119,20 +115,32 @@ a:hover {
  }
 
  .hero1 .wrapper div {
-   background-color: #3A919B;
-   color: white;
+   background-color: #C9D5D4;
+   opacity: 0.7;
+   border-radius: 1em;
+   color: black;
  }
 
  .hero3 .wrapper div {
-   background-color: #3A919B;
-   color: white;
+   background-color: #C9D5D4;
+   opacity: 0.85;
+   border-radius: 1em;
+   color: black;
  }
 
  .hero2 .wrapper div {
-   background-color: #3A919B;
-   color: white;
+   background-color: #C9D5D4;
+   opacity: 0.7;
+   border-radius: 1em;
+   color: black;
  }
 
- .info {
-   border-radius: 1em;
- }
+ /********************/
+ /*   SHOW PAGES    */
+ /*******************/
+
+.show-page h2, h3 {
+  text-align: left;
+  margin: 0;
+
+}

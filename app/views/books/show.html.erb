@@ -1,16 +1,14 @@
-<h1><%= @book[:title] %></h1>
 
-<section>
+<section class="show-page">
   <h2><%= @book.title%></h2>
   <h3> Written by: <%= @book.written_by %> </h3>
   <h3> Ranked: <%= @book.ranked %> </h3>
   <p> <%= @book.description %> </p>
 </section>
-
-<ul>
-  <li><%= button_to 'Upvote', bupvote_path(params[:id]), method: :put %></li>
-  <li><%= button_to 'Edit Book', edit_book_path(params[:id]), method: :get %></li>
-  <li><%= button_to 'Delete Book', { controller: :books, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-  <li><%= button_to 'View All Books', books_path, method: :get %></li>
-  <li><%= button_to 'View All Media', root_path, method: :get %></li>
-</ul>
+<section class = "show-page">
+  <ul>
+    <li><%= button_to 'Upvote', bupvote_path(params[:id]), method: :put %></li>
+    <li><%= button_to 'Edit Book', edit_book_path(params[:id]), method: :get %></li>
+    <li><%= button_to 'Delete Book', { controller: :books, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  </ul>
+</section>
