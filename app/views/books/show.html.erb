@@ -1,5 +1,5 @@
-<h1><%= @book.name %><span class="not_emphasized"> Directed by: <%= @book.author %></span></h1>
+<h1><%= @book.name %><span class="not_emphasized"> Written by: <%= @book.author %></span></h1>
   <h4>Ranked: <%= @book.ranking %></h4>
   <p><%= @book.description %></p>
-  <p><%= button_to("Upvote", book_upvote_path(@book.id), method: :patch) %></p>
-  <p><%= button_to("Edit #{ @book.name }", edit_book_path(@book.id), method: :get) %><%= button_to("DELETE", book_path(@book.id), method: :delete, data: { confirm: "Are you sure?"} ) %> <%= button_to("View All Books", books_path, method: :get) %><%= button_to("View All Media",root_path, method: :get)%></p>
+    <p><%= link_to("Upvote", book_upvote_path(@book.id), method: :patch, class: "button radius") %></p>
+  <p><%= link_to("Edit #{ @book.name }", edit_book_path(@book.id), method: :get, class: "button secondary radius") %> <%= link_to("DELETE", book_path(@book.id), method: :delete, class: "button alert radius", data: { confirm: "Are you sure?"} ) %> <%= link_to("View All Books", books_path, method: :get, class: "button secondary radius") %> <%= link_to("View All Media",root_path, method: :get, class: "button secondary radius")%></p>

@@ -7,9 +7,9 @@
   <tr>
     <td>Ranked: <%= album.ranking %></td>
     <td><%= link_to(album.name, album_path(album.id)) %></td>
-    <td><%= button_to("Upvote", album_upvote_path(album.id), method: :patch) %></td>
+    <td><%= link_to("Upvote", album_upvote_path(album.id), method: :patch, class: "button secondary radius") %></td>
   </tr>
 <% end %>
 </table>
 
-<%= button_to("View All Media", root_path, method: :get) %><%= button_to("Add a Album", new_album_path, method: :get) %>
+<%= link_to("View All Media", root_path, method: :get, class: "button secondary radius") %> <%= link_to("Add a Album", new_album_path, method: :get, class: "button secondary radius") %>

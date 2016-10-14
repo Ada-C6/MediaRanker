@@ -1,5 +1,5 @@
-<h1><%= @album.name %><span class="not_emphasized"> Directed by: <%= @album.artist %></span></h1>
+<h1><%= @album.name %><span class="not_emphasized"> Written by: <%= @album.artist %></span></h1>
   <h4>Ranked: <%= @album.ranking %></h4>
   <p><%= @album.description %></p>
-  <p><%= button_to("Upvote", album_upvote_path(@album.id), method: :patch) %></p>
-  <p><%= button_to("Edit #{ @album.name }", edit_album_path(@album.id), method: :get) %><%= button_to("DELETE", album_path(@album.id), method: :delete, data: { confirm: "Are you sure?"} ) %> <%= button_to("View All Albums", albums_path, method: :get) %><%= button_to("View All Media",root_path, method: :get)%></p>
+    <p><%= link_to("Upvote", album_upvote_path(@album.id), method: :patch, class: "button radius") %></p>
+  <p><%= link_to("Edit #{ @album.name }", edit_album_path(@album.id), method: :get, class: "button secondary radius") %> <%= link_to("DELETE", album_path(@album.id), method: :delete, class: "button alert radius", data: { confirm: "Are you sure?"} ) %> <%= link_to("View All Albums", albums_path, method: :get, class: "button secondary radius") %> <%= link_to("View All Media",root_path, method: :get, class: "button secondary radius")%></p>
