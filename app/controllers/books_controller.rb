@@ -13,6 +13,8 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    @url = books_create_path
+    @method = :post
   end
 
   def create
@@ -21,6 +23,8 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to books_show_path(@book.id)
     else
+      @url = books_create_path  # Needed to render new view
+      @method = :post # Needed to render new view
       render :new, :status => :error
     end
 
@@ -29,6 +33,8 @@ class BooksController < ApplicationController
   def edit
     begin
       @book = Book.find(params[:id])
+      @url = books_update_path
+      @method = :put
     rescue ActiveRecord::RecordNotFound
       render :file => 'public/404.html', :status => :not_found
     end
@@ -53,7 +59,9 @@ class BooksController < ApplicationController
         if @book.save
           redirect_to books_show_path(@book.id)
         else
-          @book.restore_attributes
+          @book.restore_attributes  # Fill back in the original values
+          @url = books_update_path  # Needed to render edit view
+          @method = :put  # Needed to render edit view
           render :edit, :status => :error
         end
       end
