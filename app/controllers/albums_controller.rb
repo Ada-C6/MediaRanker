@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
 
   def find_n_sort_all
     # @albums = Album.all
-    @albums = Album.all.sort {|a,b| a <=> b}
+    @albums = Album.all.sort_by {|album| album.votes}.reverse
   end
 
   def find_one

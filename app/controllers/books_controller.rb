@@ -2,7 +2,7 @@ class BooksController < ApplicationController
 
   def find_n_sort_all
     # @books = Book.all
-    @books = Book.all.sort {|a,b| a <=> b}
+    @books = Book.all.sort_by {|book| book.votes}.reverse
   end
 
   def find_one

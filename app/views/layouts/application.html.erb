@@ -7,15 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <p>
+  <header class="row">
+    <h2>
       <%= link_to "Media Ranker", root_path %>
-    </p>
-    <p>
-      Ranking the Best of Everything
-    </p>
+      <small>Ranking the Best of Everything</small>
+    </h2>
   </header>
-
 <%= yield %>
 
 </body>

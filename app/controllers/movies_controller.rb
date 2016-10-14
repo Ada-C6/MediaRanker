@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
 
   def find_n_sort_all
     # @movies = Movie.all
-    @movies = Movie.all.sort {|a,b| a <=> b}
+    @movies = Movie.all.sort_by {|movie| movie.votes}.reverse
   end
 
   def find_one

@@ -1,9 +1,9 @@
 class MediaRankerController < ApplicationController
 
   def find_n_sort_all
-    @movies = Movie.all.sort {|a,b| a <=> b}
-    @books = Book.all.sort {|a,b| a <=> b}
-    @albums = Album.all.sort {|a,b| a <=> b}
+    @movies = Movie.all.sort_by {|movie| movie.votes}.reverse
+    @books = Book.all.sort_by {|book| book.votes}.reverse
+    @albums = Album.all.sort_by {|album| album.votes}.reverse
   end
 
   def index
