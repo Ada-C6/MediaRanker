@@ -1,11 +1,11 @@
 <div class ="row">
   <div class="small-up-12 medium-up-12 large-up-12">
-    <div>
+    <section>
       <h1><%= @movie.name %><span class="not_emphasized"> Directed by: <%= @movie.director %></span></h1>
       <h4>Ranked: <%= @movie.ranking %></h4>
       <p><%= @movie.description %></p>
       <p><%= link_to("Upvote", movie_upvote_path(@movie.id), method: :patch, class: "button radius", id: "button-text") %></p>
       <p><%= link_to("Edit #{ @movie.name }", edit_movie_path(@movie.id), method: :get, class: "button secondary radius") %> <%= link_to("DELETE", movie_path(@movie.id), method: :delete, class: "button alert radius", data: { confirm: "Are you sure?"} ) %> <%= link_to("View All Movies", movies_path, method: :get, class: "button secondary radius") %> <%= link_to("View All Media",root_path, method: :get, class: "button secondary radius")%></p>
-    </div>
+    </section>
   </div>
 </div>
