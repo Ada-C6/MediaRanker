@@ -1,3 +1,14 @@
+<div class="row small-up-3 medium-up-4 top-media">
+  <% @books.each do |book| %>
+    <article class="column">
+      <div class="block">
+        <h2><%= link_to(book.title, book_path(book.id)) %></h2>
+        <h3>Upvotes: <%= book.ranked %></h3>
+     </div>
+    </article>
+  <% end %>
+</div>
+
 <table>
   <tr>
     <th>Ranking</th>
@@ -12,11 +23,9 @@
     <td><%= link_to(book.title, book_path(book.id)) %></td>
     <td><%= button_to "Upvote", book_path(book.id), method: :get %></td>
   </tr>
-  </table>
-
 <% end %>
+</table>
 
 <ul>
-  <li><%= button_to 'View All Media', root_path, method: :get %> </li>
   <li><%= button_to 'Add a Book', new_book_path, method: :get %> </li>
 </ul>

@@ -9,14 +9,15 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li>
-          <h1><%= link_to 'MediaRanker', root_path %> </h1>
-        </li>
-        <li>
-          Rank Movies, Music, Books!
-        </li>
-      </ul>
+
+      <h1 id="logo"><%= link_to 'MediaRanker', root_path %> </h1>
+      <div class="navigation-container">
+        <ul>
+          <li><h3><%= link_to 'Movies', movies_path %></h3></li>
+          <li><h3><%= link_to 'Books', books_path %></h3></li>
+          <li><h3><%= link_to 'Albums', albums_path %></h3></li>
+        </ul>
+      </div>
     </nav>
 
   </header>
