@@ -1,3 +1,10 @@
+<% if @book.errors.any? %>
+  <p>Error!</p>
+  <% @book.errors.each do |field, problem| %>
+    <p><strong><%= field %>: </strong><%= problem %></p>
+  <% end %>
+<% end %>
+
 <%= form_for @book, method: http_method do |b| %>
 
 <p><%= b.label "Name" %></p>

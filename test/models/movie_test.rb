@@ -12,7 +12,7 @@ class MovieTest < ActiveSupport::TestCase
     assert_includes movie.errors, :name
   end
 
-  test "Create two movies with different names" do
+  test "Create two movies with the same name" do
     movie1 = movies(:titanic)
     movie2 = Movie.create(name: "Titanic", director: "Kelly", ranked: 0)
     assert_not movie2.valid?
@@ -53,7 +53,7 @@ class MovieTest < ActiveSupport::TestCase
     new_rank = current_rank + 1
     assert_equal movies(:titanic).upvote, new_rank
   end
-  
+
   test "Movie without a ranking should return nil from upvote" do
     assert_equal movies(:no_rank).upvote, nil
   end

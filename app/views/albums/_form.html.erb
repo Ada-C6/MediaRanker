@@ -1,3 +1,10 @@
+<% if @album.errors.any? %>
+  <p>Error!</p>
+  <% @album.errors.each do |field, problem| %>
+    <p><strong><%= field %>: </strong><%= problem %></p>
+  <% end %>
+<% end %>
+
 <%= form_for @album, method: http_method do |a| %>
 
 <p><%= a.label "Name" %></p>

@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  author: MyString
-  description: MyString
-  ranked: 1
+anna_karenina:
+  name: Anna Karenina
+  author: Leo Tolstoy
+  description: Widely regarded as a pinnacle in realist fiction
+  ranked: 0
 
-two:
-  name: MyString
-  author: MyString
-  description: MyString
-  ranked: 1
+the_prince:
+  name: The Prince
+  author: Niccolò Machiavelli
+  description: A 16th-century political treatise
+  ranked: 0
+
+no_rank:
+  name: Random Book

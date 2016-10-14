@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  artist: MyString
-  description: MyString
+red:
+  name: Red
+  artist: Taylor Swift
+  description: fourth studio album by American singer-songwriter Taylor Swift
+  ranked: 0
+
+miracle:
+  name: Miracle
+  artist: Celine Dion
+  description: a concept album credited to Canadian singer Celine Dion and Australian photographer Anne Geddes
   ranked: 1
 
-two:
-  name: MyString
-  artist: MyString
-  description: MyString
-  ranked: 1
+no_rank:
+  name: Random Album

@@ -1,3 +1,10 @@
+<% if @movie.errors.any? %>
+  <p>Error!</p>
+  <% @movie.errors.each do |field, problem| %>
+    <p><strong><%= field %>: </strong><%= problem %></p>
+  <% end %>
+<% end %>
+
 <%= form_for @movie, method: http_method do |m| %>
 
 <p><%= m.label "Name" %></p>
