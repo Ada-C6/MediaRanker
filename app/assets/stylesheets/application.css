@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lobster';
 @import url('foundation.css');
 
+
 /*Override defaults so spacing is similar to example*/
 body {
   padding: 0 4rem;
