@@ -25,7 +25,7 @@
 
  #logo {
    padding-top: 2%;
-   padding-left: .09%;
+   padding-left: 2%;
    float: left;
  }
 
@@ -34,7 +34,7 @@
  /* LINKS */
  /************************************/
  .navigation-container li a {
-  color: #000000;
+  color: #4B4D52;;
   font-size: .75em;
   font-family: 'BioRhyme';
   text-decoration: none;
@@ -42,20 +42,20 @@
 }
 
 .navigation-container li a:hover {
-  color: #3A919B;
+  color: #DE8642;
 }
 
 a:link {
-  color: #000000;
+  color: #4B4D52;;
   text-decoration: none;
 }
 
 a:visited {
-  color: #285670
+  color: #4B4D52;
 }
 
 a:hover {
-  color: #3A919B;
+  color: #DE8642;
 }
 
 /********************/
@@ -67,9 +67,9 @@ a:hover {
 }
 
 .button {
-  background-color: #D56E4F;
+  background-color: #DE8642;
   border: none;
-  color: #D2E4E8;
+  color: #4B4D52;
   padding: 5px 10px;
   text-align: center;
   font-size: 16px;
@@ -77,8 +77,8 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #A7B724;
-  color: #D2E4E8;
+  background-color: #4B4D52;
+  color: #DE8642;
 }
 
 
@@ -88,19 +88,31 @@ a:hover {
  /************************************/
 
  body {
-   background-color: #C9D5D4;
+   background-color: #FFF2E7;
  }
 
- body, h4, h5 {
+ body, h5 {
    font-family: 'Raleway';
+   color: #4B4D52;
  }
 
- h1, h2, h3 {
-   font-family: 'BioRhyme'
+ h1, h2, h3, h4 {
+   font-family: 'BioRhyme';
+   color: #4B4D52;
  }
 
  ul   {
   list-style-type: none;
+}
+
+.format-forms {
+  margin: 6% 9% 0 9%;
+}
+
+.format-forms h3 {
+  text-align: center;
+  color: #DE8642;
+  margin-bottom: 5%;
 }
 
  /*****************************/
@@ -136,21 +148,21 @@ a:hover {
  }
 
  .hero1 .wrapper div {
-   background-color: #C9D5D4;
+   background-color: #FFF2E7;
    opacity: 0.7;
    border-radius: 1em;
    color: black;
  }
 
  .hero3 .wrapper div {
-   background-color: #C9D5D4;
+   background-color: #FFF2E7;
    opacity: 0.85;
    border-radius: 1em;
    color: black;
  }
 
  .hero2 .wrapper div {
-   background-color: #C9D5D4;
+   background-color: #FFF2E7;
    opacity: 0.7;
    border-radius: 1em;
    color: black;
