@@ -65,4 +65,12 @@ class BooksController < ApplicationController
     redirect_to :back 
   end
 
+
+  def downvote
+    @this_book=Book.find(params[:id])
+    @this_book.rank-=1
+    
+    @this_book.save
+    redirect_to :back 
+  end
 end

@@ -6,12 +6,14 @@
 			<th>Ranking</th>
 			<th>Name</th>
 			<th>Upvote</th>
+			<th>Downvote</th>
 		</tr>
 		<% @all_movies.each do |movie|%>
 		<tr>
 			<td>Rank: <%=movie.rank%></td>
 			<td><%=link_to movie.name, movie_path(movie)%></td>
 			<td><%= button_to("Upvote", {action: "upvote", id: movie.id}, method: :patch) %></td>
+			<td><%= button_to("Downvote", {action: "downvote", id: movie.id}, method: :patch) %></td>
 		</tr>
 		<% end %>
 	</tbody>

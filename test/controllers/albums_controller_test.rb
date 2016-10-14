@@ -54,11 +54,19 @@ class AlbumsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should be able to upvote a book" do
+  test "should be able to upvote an album" do
          #fake page for page page to come from
         request.env["HTTP_REFERER"]="blah"
         upvote_params = {album:{name: albums(:no_escape).name, artist: albums(:no_escape).artist}, id: albums(:no_escape).id}
         patch :upvote, upvote_params
+        assert_redirected_to("blah")
+  end
+
+  test "should be able to downvote an album" do
+         #fake page for page page to come from
+        request.env["HTTP_REFERER"]="blah"
+        upvote_params = {album:{name: albums(:no_escape).name, artist: albums(:no_escape).artist}, id: albums(:no_escape).id}
+        patch :downvote, upvote_params
         assert_redirected_to("blah")
   end
 end
