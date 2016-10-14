@@ -1,5 +1,9 @@
-@import url('foundations.css');
+@import url('foundation.css');
+@import url('users.css');
 
+.big-title a {
+  font-weight: bolder;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -16,43 +20,3 @@
  *= require_tree .
  *= require_self
  */
- /*For changing all fonts for all pages.*/
-* {
-  font-family: sans-serif;
-}
-
-header.page-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-
-/*Styling for section tag that holds all three media*/
-.media_container {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  -o-column-count: 3;
-  column-count: 3;
-}
-
-/*Styling for outline around each media entity*/
-.mediabox {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 6px;
-}
-
-
-.button_row {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.button_row input {
-  background-color: white;
-  border-radius: 6px;
-  padding: 8px;
-
-}

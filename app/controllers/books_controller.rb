@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     @mybook.author = params[:book][:author]
     @mybook.description = params[:book][:description]
     @mybook.save
-    redirect_to users_path(@mybook.id)
+    redirect_to book_path(@mybook.id)
   end
 
   def update

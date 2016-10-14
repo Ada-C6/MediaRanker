@@ -22,7 +22,7 @@ class AlbumsController < ApplicationController
     @myalbum.artist = params[:album][:artist]
     @myalbum.description = params[:album][:description]
     @myalbum.save
-    redirect_to users_path(@myalbum.id)
+    redirect_to album_path(@myalbum.id)
   end
 
   def update

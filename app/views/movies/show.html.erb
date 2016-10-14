@@ -1,22 +1,23 @@
 <!-- movies show  -->
-<section>
-  <h1>Title: <%=@mymovie.name %></h1>
-  <p>Directed by: <%=@mymovie.director %></p>
-  <p>Ranked: <%=@mymovie.vote_count %> </p>
-  <p>Description: <%=@mymovie.description%></p>
 
-  <section>
-    <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch) %>
-  </section>
+<article>
 
-  <section class="button_row">
-    <%=button_to("Edit #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get)%>
+  <h1><%=@mymovie.name %></h1>
+    <p>Directed by: <%=@mymovie.director %></p>
+    <p>Ranked: <%=@mymovie.vote_count %> </p>
+    <p>Description: <%=@mymovie.description%></p>
 
-    <%=button_to("DELETE", movie_path(@mymovie.id), method: :delete) %>
 
-    <%=button_to "View All Movies", movies_path, method: :get %>
+  <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch, class: "large button success") %>
 
-    <%=button_to "View All Media", users_path, method: :get %>
+    <section class: "row button-group">
+        <%=button_to "Edit: #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get, class: "small-2 columns button" %>
 
-  </section>
-</section>
+        <%=button_to "DELETE", movie_path(@mymovie.id), method: :delete, class: "small-2 columns button alert" %>
+
+        <%=button_to "View All Movies", movies_path, method: :get, class: "small-2 columns button"%>
+
+        <%=button_to "View All Media", users_path, method: :get, class: "small-2 columns button" %>
+    </section>
+
+</article>

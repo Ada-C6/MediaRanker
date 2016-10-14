@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.order(vote_count: :desc).all 
+    @movies = Movie.order(vote_count: :desc).all
   end
 
   def new
@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
     @mymovie.director = params[:movie][:director]
     @mymovie.description = params[:movie][:description]
     @mymovie.save
-    redirect_to users_path(@mymovie.id)
+    redirect_to movie_path(@mymovie.id)
   end
 
   def edit
