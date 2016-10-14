@@ -1,39 +1,100 @@
 @import 'https://fonts.googleapis.com/css?family=Lobster';
 @import url('foundation.css');
 
-/*html {
-  font-size: 1rem;
-
-}
-
-small {
-  font-size: 2rem;
-}*/
 
 ol {
   list-style: none;
 }
 
+th {
+  text-align: left;
+}
 
 .page-header {
-  border-bottom: solid thin;
   background-image: url('/assets/owl.jpg');
   background-repeat: no-repeat;
+  padding-bottom: 18px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
 }
 
 .main-header {
   margin-left: 10rem;
 }
 
-h1, h2, small {
-  display: inline;
+.subheader {
+  font-weight: bold;
+  line-height: 1;
+  color: #777;
+  font-size: 19.5px;
+}
 
+.main-header > .subheader {
+  font-size: 23.4px;
 }
 
 
+h1, h2, small {
+  display: inline;
+}
+
+h1, h2 {
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
 .button {
   border-radius: .5rem;
-  border-color: black;
-  background-color:white;
-  color: black;
+  border-color: #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.button:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.button.success {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.button.success:hover {
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+
+.button.alert {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.button.alert:hover {
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+/*action button should not be colored in the table...*/
+table .button.success {
+  border-color: #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+table .button.success:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  color: #333;
 }
