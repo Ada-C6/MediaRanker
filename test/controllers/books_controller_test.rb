@@ -29,6 +29,7 @@ class BooksControllerTest < ActionController::TestCase
     # Book with all fields completed - should be created and redirected
     post :create, { book: {title: "BookName", author: "BookAuthor", description: "BookDescription"}}
     assert_response :redirect
+    assert_redirected_to books_show_path(Book.last)
 
     # Book with a missing field - should render the new page again
     post :create, { book: {name: "BookName", description: "BookDescription"}}
@@ -68,11 +69,13 @@ class BooksControllerTest < ActionController::TestCase
     @request.env['HTTP_REFERER'] = '/show'
     patch :update, { id: books(:one).id}
     assert_response :redirect
+    assert_redirected_to books_show_path(books(:one).id)
 
     # From index page
     @request.env['HTTP_REFERER'] = '/index'
     patch :update, { id: books(:one).id}
     assert_response :redirect
+    assert_redirected_to books_index_path
 
     # Attempting to update a record that does not exist
     patch :update, { id: -1 }
@@ -101,6 +104,7 @@ class BooksControllerTest < ActionController::TestCase
     # Update good record with good info
     put :update, { id: books(:one).id, book: { title: "MyBook1", author: "MyAuthor1", description: "MyDescription1" } }
     assert_response :redirect
+    assert_redirected_to books_show_path(books(:one).id)
 
     # Update good record with bad info
     put :update, { id: books(:one).id, book: { title: "MyBook", author: "", description: "MyDescription" } }
@@ -128,6 +132,7 @@ class BooksControllerTest < ActionController::TestCase
     # Destroying an book that exists
     get :destroy, { id: books(:one).id }
     assert_response :redirect
+    assert_redirected_to books_index_path
 
     # Trying to destroy an book that does not exist
     get :destroy, { id: -1 }
