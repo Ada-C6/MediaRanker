@@ -1,3 +1,4 @@
+// @import url("foundation.css");
 // Place all the styles related to the landings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -11,3 +12,43 @@
 //   display: inline-block;
 //   border: 1px solid black;
 // }
+
+h1.top-title {
+  width: auto;
+  font-size: 2.7em;
+  margin-left: 3%;
+}
+
+.medium-6 .top-media:nth-of-type(odd) {
+  border-left: 0.75px solid #8C8C8C;
+}
+
+.medium-6 .top-media {
+  margin-top: 10%;
+}
+
+.medium-6 .top-media article {
+  margin: 3%;
+}
+
+span {
+  width: auto;
+  border-bottom: 0.75px solid #8C8C8C;
+}
+
+article.row {
+  border-bottom: 0.15px solid #f3f3f3;
+}
+article h4,p {
+  display: inline-block;
+  overflow-wrap: break-word;
+}
+article p.no-padding {
+  float: right;
+  text-align: right;
+  padding: 0;
+}
+
+p.see-all a {
+  text-align: center;
+}

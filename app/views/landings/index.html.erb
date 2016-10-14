@@ -1,46 +1,53 @@
-<h1>Welcome to Media Ranker!</h1>
 <main>
-<article class="seven-movies">
-  <h1>Top 7 Movies</h1>
-  <% @movies.each do |movie| %>
-    <article class="one-movie">
-    <h4><%= link_to movie.title, movie_path(movie.id) %></h4>
-    <p> Votes: <%= movie.rank %></p>
-    </article>
-  <% end %>
-  <p>  <%= link_to "See All Movies", movies_path %></p>
-</article>
+<!-- <div class="row landing-index-styles"> -->
+  <ul class="home-list row">
+    <li class="small-12 medium-6 column">
+      <article class="top-media seven-movies">
+      <h1 class="top-title"><span>Top 7 Movies</span></h1>
+      <% @movies.each do |movie| %>
+        <article class="one-movie row">
+        <h4 "small-10 medium-7 column"><%= link_to movie.title, movie_path(movie.id) %></h4>
+        <p class="small-2 medium-2 column no-padding"> Votes: <%= movie.rank %></p>
+        </article>
+      <% end %>
+      <p class="see-all">  <%= link_to "See All Movies", movies_path %></p>
+      </article>
+    </li>
 
-<article class="seven-books">
-  <h1>Top 7 Books</h1>
-  <% @books.each do |book| %>
-    <article class="one-book">
-    <h4><%= link_to book.title, book_path(book.id) %></h4>
-    <p> Votes: <%= book.rank %></p>
-    </article>
-  <% end %>
-  <p>  <%= link_to "See All Books", books_path %></p>
-</article>
+    <li class="small-12 medium-6 column"><article class="top-media seven-books">
+      <h1 class="top-title"><span>Top 7 Books</span></h1>
+      <% @books.each do |book| %>
+        <article class="one-book row">
+        <h4 "small-10 medium-7 column"><%= link_to book.title, book_path(book.id) %></h4>
+        <p class="small-2 medium-2 column no-padding"> Votes: <%= book.rank %></p>
+        </article>
+      <% end %>
+      <p class="see-all">  <%= link_to "See All Books", books_path %></p>
+    </article></li>
 
-<article class="seven-songs">
-  <h1>Top 7 Songs</h1>
-  <% @songs.each do |song| %>
-    <article class="one-song">
-    <h4><%= link_to song.title, song_path(song.id) %></h4>
-    <p> Votes: <%= song.rank %></p>
-    </article>
-  <% end %>
-  <p>  <%= link_to "See All Songs", songs_path %></p>
-</article>
+    <li class="small-12 medium-6 column"><article class="top-media seven-songs">
+      <h1 class="top-title"><span>Top 7 Songs</span></h1>
 
-<article class="seven-seinfelds">
-  <h1>Top 7 Episodes of Seinfeld</h1>
-  <% @seinfelds.each do |seinfeld| %>
-    <article class="one-seinfeld">
-    <h4><%= link_to seinfeld.title, seinfeld_path(seinfeld.id) %></h4>
-    <p> Votes: <%= seinfeld.rank %></p>
-    </article>
-  <% end %>
-  <p>  <%= link_to "See All Episodes", seinfelds_path %></p>
-</article>
+      <% @songs.each do |song| %>
+
+        <article class="one-song row">
+        <h4 class="small-10 medium-7 column"><%= link_to song.title, song_path(song.id) %></h4>
+        <p class="small-2 medium-2 column no-padding"> Votes: <%= song.rank %></p>
+        </article>
+      <% end %>
+      <p class="see-all">  <%= link_to "See All Songs", songs_path %></p>
+    </article></li>
+
+    <li class="small-12 medium-6 column"><article class="top-media seven-seinfelds">
+      <h1 class="top-title"><span>Top 7 Seinfeld Episodes</span></h1>
+      <% @seinfelds.each do |seinfeld| %>
+        <article class="one-seinfeld row">
+        <h4 "small-10 medium-7 column"><%= link_to seinfeld.title, seinfeld_path(seinfeld.id) %></h4>
+        <p class="small-2 medium-2 column no-padding"> Votes: <%= seinfeld.rank %></p>
+        </article>
+      <% end %>
+      <p class="see-all">  <%= link_to "See All Episodes", seinfelds_path %></p>
+    </article></li>
+  </ul>
+<!-- </div> -->
 </main>
