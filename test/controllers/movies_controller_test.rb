@@ -88,7 +88,6 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "Patching an update (for upvote) should result in an increase of 1 in the number of upvotes of a record" do
     assert_difference('movies(:one).upvotes', 1) do
-      @request.env['HTTP_REFERER'] = '/index'
       patch :update, { id: movies(:one).id }
       movies(:one).reload
     end
