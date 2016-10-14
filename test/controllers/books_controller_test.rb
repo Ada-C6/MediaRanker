@@ -17,6 +17,19 @@ class BooksControllerTest < ActionController::TestCase
     assert_nil book.id
   end
 
+  test "should get the edit form" do
+    book = books(:one_fish_two_fish)
+    get :edit, id: book
+    assert_response :success
+    assert_template :edit
+  end
+
+  test "should update book" do
+    book = books(:one_fish_two_fish)
+    patch :update, id: book, book: { name: book.name, artist: book.author, description: book.description }
+    assert_redirected_to book_path
+  end
+
   test "should show the show page for the specified book" do
     book_id = books(:one_fish_two_fish).id
     get :show, { id: book_id }

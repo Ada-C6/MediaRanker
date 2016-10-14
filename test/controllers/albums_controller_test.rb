@@ -17,6 +17,19 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_nil album.id
   end
 
+  test "should get the edit form" do
+    album = albums(:mellon_collie)
+    get :edit, id: album
+    assert_response :success
+    assert_template :edit
+  end
+
+  test "should update album" do
+    album = albums(:mellon_collie)
+    patch :update, id: album, album: { name: album.name, artist: album.artist, description: album.description }
+    assert_redirected_to album_path
+  end
+
   test "should show the show page for the specified album" do
     album_id = albums(:mellon_collie).id
     get :show, { id: album_id }

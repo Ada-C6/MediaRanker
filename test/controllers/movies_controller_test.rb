@@ -17,6 +17,19 @@ class MoviesControllerTest < ActionController::TestCase
     assert_nil movie.id
   end
 
+  test "should get the edit form" do
+    movie = movies(:pulp_fiction)
+    get :edit, id: movie
+    assert_response :success
+    assert_template :edit
+  end
+
+  test "should update movie" do
+    movie = movies(:pulp_fiction)
+    patch :update, id: movie, movie: { name: movie.name, director: movie.director, description: movie.description }
+    assert_redirected_to movie_path
+  end
+
   test "should show the show page for the specified movie" do
     movie_id = movies(:pulp_fiction).id
     get :show, { id: movie_id }
