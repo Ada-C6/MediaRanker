@@ -4,6 +4,11 @@
 .bottom-button {
   display: inline-block;
   padding: 1% 2% 1% 0;
+  margin-bottom: 1.5%;
+}
+
+.bottom-buttons-index {
+  margin-bottom: 1.5%;
 }
 
 .errors {
