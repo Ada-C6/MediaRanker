@@ -1,13 +1,13 @@
 <%= render partial: 'layouts/show', locals: { media: @album } %>
 
+<section class='row'>
 
-<section class='row small-up-2 large-up-4'>
-
-<%= link_to "View all Albums", albums_path, class: 'column button'  %>
-<%= link_to "View all Media", root_path, class: 'column button' %>
-<%= link_to "Edit #{@album.name}", edit_album_path(@album), class: 'column button' %>
+<%= link_to "Edit #{@album.name}", edit_album_path(@album), class: 'button' %>
 <%= link_to "DELETE", album_path(@album),
-  class: 'column button button-danger',
-  method: :delete,
-  data: {confirm: "Are you sure?"} %>
+    class: 'button button-danger',
+    method: :delete,
+    data: {confirm: "Are you sure?"} %>
+<%= link_to "View all Albums", albums_path, class: 'button'  %>
+<%= link_to "View all Media", root_path, class: 'button' %>
+
 </section>
