@@ -5,7 +5,11 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
+    begin
+      @movie = Movie.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => err
+      render file: "#{Rails.root}/public/404.html", layout: false, status: 404
+    end
   end
 
   def new
