@@ -1,0 +1,13 @@
+<%= form_for @wizard, url: action_name do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author_director %>
+  <%= f.text_field :author_director %>
+
+  <%= f.label :main_character %>
+  <%= f.text_field :main_character %>
+
+  <%= f.submit %>
+<% end %>

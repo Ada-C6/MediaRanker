@@ -1,0 +1,11 @@
+<% @leslies.each do |leslie| %>
+<table>
+  <tr>
+    <td><%= link_to( leslie.title, show_leslie_path(leslie.id) ) %></td>
+    <td><%= button_to 'upvote', upvote_leslie_path(leslie), method: :post %></td>
+    <td><%= pluralize(leslie.leslie_votes.count, "vote") %></td>
+  </tr>
+</table>
+<% end %>
+
+<p><%= link_to( 'create a new leslie', new_leslie_path ) %></p>

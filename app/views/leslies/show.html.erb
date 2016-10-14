@@ -1,0 +1,11 @@
+<h2><%= @leslie.title %></h2>
+<p><%= @leslie.part %></p>
+<p><%= @leslie.year %></p>
+
+
+
+<p><%= pluralize(@leslie.leslie_votes.count, "vote") %></p>
+<p><%= button_to 'upvote', upvote_leslie_path(@leslie), method: :post %></p>
+<p><%= button_to( 'edit', {action: "edit", id: @leslie.id }, method: :get ) %></p>
+<p> <%= button_to( 'delete', {action: "delete", id: @leslie.id }, method: :delete, data: {confirm: "Are you sure?"} ) %> </p>
+<p><%= link_to( 'list of all leslies', leslie_path ) %></p>
