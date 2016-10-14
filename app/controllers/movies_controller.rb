@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    @path = movies_create_path
+    @method = :post
   end
 
   def create
@@ -21,6 +23,8 @@ class MoviesController < ApplicationController
     if @movie.save
       redirect_to movies_show_path(@movie.id)
     else
+      @path = movies_create_path  # To be able to render the new form correctly
+      @method = :post # To be able to render the new form correctly
       render :new, :status => :error
     end
 
@@ -29,6 +33,8 @@ class MoviesController < ApplicationController
   def edit
     begin
       @movie = Movie.find(params[:id])
+      @path = movies_update_path
+      @method = :put
     rescue ActiveRecord::RecordNotFound
       render :file => 'public/404.html', :status => :not_found
     end
@@ -54,6 +60,8 @@ class MoviesController < ApplicationController
           redirect_to movies_show_path(@movie.id)
         else
           @movie.restore_attributes
+          @path = movies_update_path  # To be able to render edit form correctly
+          @method = :put  # To be able to render edit form correctly
           render :edit, :status => :error
         end
       end

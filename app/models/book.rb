@@ -6,7 +6,6 @@ class Book < ActiveRecord::Base
   validates_uniqueness_of :title, :scope => :author, message: "That book (combo of title and author) is already in the database"
   validates_uniqueness_of :author, :scope => :title, message: "That book (combo of title and author) is already in the database"
 
-
   def self.top_ten
     return Book.order(upvotes: :desc).limit(10)
   end
