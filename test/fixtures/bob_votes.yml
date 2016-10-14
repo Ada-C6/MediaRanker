@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+bobby:
   bob_id: 1
 
-two:
+bobby:
   bob_id: 1
