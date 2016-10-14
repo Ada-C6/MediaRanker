@@ -28,8 +28,8 @@ a:hover {
   text-align: center;
 }
 
-td, .record {
-  font-size: 1.5em;
+td {
+  font-size: 1em;
 }
 
 #index_rank {
@@ -44,7 +44,7 @@ td, .record {
   border: 1px solid silver;
   padding: 2%;
   margin-bottom: 2%;
-     word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .button_to {
