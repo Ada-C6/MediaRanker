@@ -12,7 +12,8 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "should get 404 for record that does not exist" do
-    get :show, {id: 99999999999}
+    delete :destroy, {id: 1 }
+    get :show, {id: 1}
     assert_response :missing
   end
 
