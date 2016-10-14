@@ -1,21 +1,31 @@
 <%# name, title, rank, description  %>
-<h1><%= "#{ @movie.name }" %></h1>
+<div class="row">
+  <h2 class='small-12 medium-12 columns'>
+    <%= "#{ @movie.name }" %>
+  </h2>
+</div>
 
-<h3><%= "Directed by: #{ @movie.director }" %></h3>
-<section>
-  <h4><%= "# of Votes: #{ @movie.rank }" %></h4>
-  <h4><%= "Description: #{ @movie.description }" %></h4>
-</section>
+<div class="row">
+  <h3 class="small-12 medium-12 columns">
+    <%= "Directed by: #{ @movie.director }" %>
+  </h3>
 
-<%# buttons: edit, delete, upvote, view all movies, view all media  %>
-<section>
-  <%= button_to "UpVote", upvote_movie_path(@movie.id), method: :patch %>
+  <section class="small-12 medium-12 columns">
+    <h4><%= "# of Votes: #{ @movie.rank }" %></h4>
+    <h4 class= 'description'><%= "Description: #{ @movie.description }" %></h4>
+  </section>
 
+  <%# buttons: edit, delete, upvote, view all movies, view all media  %>
+  <section class="small-10 medium-10 columns upvote-edit-delete">
+    <%= link_to "UpVote", upvote_movie_path(@movie.id), method: :patch, :class => 'link-button' %>
 
-  <%= link_to "Edit", edit_movie_path(@movie.id), method: :get %>
-  <%= link_to "Delete", movie_path(@movie.id), method: :delete,
-        data: {confirm: "Are you sure you want to delete permanently?"}%>
+    <%= link_to "Edit", edit_movie_path(@movie.id), method: :get, :class => 'link-button' %>
+    <%= link_to "Delete", movie_path(@movie.id), method: :delete, :class => 'link-button',
+          data: {confirm: "Are you sure you want to delete permanently?"}%>
+  </section>
 
-  <%= link_to "View all Movies", movies_path, method: :get %>
-  <%= link_to "View all Media", welcome_index_path, method: :get %>
-</section>
+  <section class="small-12 medium-12 columns">
+    <%= link_to "View all Movies", movies_path, method: :get, :class => 'button' %>
+    <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+  </section>
+</div>

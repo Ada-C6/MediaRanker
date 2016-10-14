@@ -1,3 +1,5 @@
+<h2 class='index-header'>Top Books.</h2>
+
 <table>
   <tr>
     <th># of Votes</th>
@@ -15,6 +17,6 @@
 </table>
 
 <section>
-  <%= link_to "View all Media", welcome_index_path, method: :get %>
-  <%= link_to "Add a Book", new_book_path, method: :get %>
+  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+  <%= link_to "Add a Book", new_book_path, method: :get, :class => 'button' %>
 </section>

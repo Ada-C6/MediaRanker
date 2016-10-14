@@ -9,13 +9,13 @@
 
 <%# buttons: edit, delete, upvote, view all movies, view all media  %>
 <section>
-  <%= button_to "UpVote", upvote_book_path(@book.id), method: :patch %>
+  <%= link_to "UpVote", upvote_book_path(@book.id), method: :patch, :class => 'link-button' %>
 
 
-  <%= link_to "Edit", edit_book_path(@book.id), method: :get %>
-  <%= link_to "Delete", book_path(@book.id), method: :delete,
+  <%= link_to "Edit", edit_book_path(@book.id), method: :get, :class => 'link-button' %>
+  <%= link_to "Delete", book_path(@book.id), method: :delete, :class => 'link-button',
         data: {confirm: "Are you sure you want to delete permanently?"}%>
 
-  <%= link_to "View all Books", books_path, method: :get %>
-  <%= link_to "View all Media", welcome_index_path, method: :get %>
+  <%= link_to "View all Books", books_path, method: :get, :class => 'button' %>
+  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
 </section>

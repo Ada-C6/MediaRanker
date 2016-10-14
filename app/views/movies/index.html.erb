@@ -1,3 +1,5 @@
+<h2 class='index-header'>Top Movies.</h2>
+
 <table>
   <tr>
     <th># of Votes</th>
@@ -14,7 +16,7 @@
   <% end  %>
 </table>
 
-<section>
-  <%= link_to "View all Media", welcome_index_path, method: :get %>
-  <%= link_to "Add a Movie", new_movie_path, method: :get %>
+<section class="small-6 medium-6 columns">
+  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+  <%= link_to "Add a Movie", new_movie_path, method: :get, :class => 'button' %>
 </section>

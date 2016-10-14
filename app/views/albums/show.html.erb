@@ -1,5 +1,5 @@
 <%# name, title, rank, description  %>
-<h1><%= "#{ @album.name }" %></h1>
+<h2 class='index-header'><%= "#{ @album.name }" %></h2>
 
 <h3><%= "Artist: #{ @album.artist }" %></h3>
 <section>
@@ -9,13 +9,13 @@
 
 <%# buttons: edit, delete, upvote, view all movies, view all media  %>
 <section>
-  <%= button_to "UpVote", upvote_album_path(@album.id), method: :patch %>
+  <%= link_to "UpVote", upvote_album_path(@album.id), method: :patch, :class => 'link-button' %>
 
 
-  <%= link_to "Edit", edit_album_path(@album.id), method: :get %>
-  <%= link_to "Delete", album_path(@album.id), method: :delete,
+  <%= link_to "Edit", edit_album_path(@album.id), method: :get, :class => 'link-button' %>
+  <%= link_to "Delete", album_path(@album.id), method: :delete, :class => 'link-button',
         data: {confirm: "Are you sure you want to delete permanently?"}%>
 
-  <%= link_to "View all Albums", albums_path, method: :get %>
-  <%= link_to "View all Media", welcome_index_path, method: :get %>
+  <%= link_to "View all Albums", albums_path, method: :get, :class => 'button' %>
+  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
 </section>
