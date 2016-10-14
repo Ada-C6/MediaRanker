@@ -24,7 +24,7 @@
       <h3 > Top Albums</h3>
       <ul>
       <% @albums.each do |album|%>
-      <li ><%=link_to "#{album.title}", album_path(album)%> Number of Votes <%= "#{album.rank}" %></li>
+      <li class="small-6 medium-3 columns"><%=link_to "#{album.title}", album_path(album)%>   Number of Votes <%= "#{album.rank}" %></li>
     <%end%>
   </ul>
   </div>
