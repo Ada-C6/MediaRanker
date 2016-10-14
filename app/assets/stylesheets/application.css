@@ -38,7 +38,13 @@ a:hover {
 }
 
 table th {
+  border-bottom: 1px solid #eee;
   text-align: left;
+}
+
+table td {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
 }
 
 .not_emphasized {
