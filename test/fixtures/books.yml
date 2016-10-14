@@ -1,11 +1,36 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  author: MyString
-  description: MyString
+  title: book one
+  author: j.k. rowling
+  description: The least scary of the Harry Potter Books.
 
 two:
-  title: MyString
-  author: MyString
-  description: MyString
+  title: two birds.
+  author: jeffrey someone.
+  description: another description of some sort.
+
+three:
+  title: three's company (book)
+  author: jane something
+  description: there was a baby. but it was three men and a baby.
+
+four:
+  title: the four horsemen.
+  author: apocolypse
+  description: Plot twist, they're My Little Ponies.
+
+five:
+  title: FIVE GOLDEN RINGS
+  author: The twelve days.
+  description: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr Zorg at bay. (126 mins.)
+
+six:
+  title: Six Songs
+  author: M
+  description: Sing sing sing be SPOILER.
+
+seven:
+  title: Snow White and the Seven Dwarves
+  author: Disney
+  description: The seven deadly sins keep popping up and a detective and his rookie try to figure out what's up.

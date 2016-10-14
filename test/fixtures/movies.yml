@@ -4,8 +4,37 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+one:
+  title: one is the loneliest
+  director: beatles
+  description: This is not actually by the beatles.
+
+two:
+  title: two can be as bad as one.
+  director: jeff bridges
+  description: But one is the loneliest number since the number one.
+
+three:
+  title: three's company
+  director: I should probably know this.
+  description: But I don't. Is there a baby?
+
+four:
+  title: allegiance never dies
+  director: that guy
+  description: aliens and gangsters live it up.
+
+five:
+  title: The Fifth Element
+  director: Luc Besson
+  description: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr Zorg at bay. (126 mins.)
+
+six:
+  title: The Sixth Sense
+  director: M. Night
+  description: Creepy kid turns out to be SPOILER.
+  
+seven:
+  title: Se7en
+  director: David Fincher.
+  description: The seven deadly sins keep popping up and a detective and his rookie try to figure out what's up.

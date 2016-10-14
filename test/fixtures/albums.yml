@@ -1,11 +1,30 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+one:
+  title: book one
+  artist: j.k. rowling
+  description: The least scary of the Harry Potter Books.
+two:
+  title: two birds.
+  artist: jeffrey someone.
+  description: another description of some sort.
+three:
+  title: three's company (book)
+  artist: jane something
+  description: there was a baby. but it was three men and a baby.
+four:
+  title: the four horsemen.
+  artist: apocolypse
+  description: Plot twist, they're My Little Ponies.
+five:
+  title: FIVE GOLDEN RINGS
+  artist: The twelve days
+  description: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr Zorg at bay. (126 mins.)
+six:
+  title: Six Songs
+  artist: M
+  description: Sing sing sing be SPOILER.
+seven:
+  title: Snow White and the Seven Dwarves
+  artist: Disney
+  description: The seven deadly sins keep popping up and a detective and his rookie try to figure out what's up.
