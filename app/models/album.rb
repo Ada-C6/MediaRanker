@@ -1,6 +1,7 @@
 class Album < ActiveRecord::Base
-  require 'sort_by_rank.rb'
-  include SortByRank
-
   validates :name, presence: true
+  validates :artist, presence: true
+  validates :rank_points, presence: true
+
+
 end
