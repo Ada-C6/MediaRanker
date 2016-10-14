@@ -5,13 +5,14 @@
             <h1> Top Movies </h1>
             <p>
               Swag pork belly brunch gluten-free kinfolk before they sold out asymmetrical. Thundercats pug poke, cornhole subway tile skateboard tote bag seitan. Before they sold out artisan vegan, raclette roof party iceland viral 8-bit. Intelligentsia yr 3 wolf moon +1 helvetica
+              <%= button_to 'Add a Movie', new_movie_path, :class => "button", method: :get %>
             </p>
           </div>
         </div>
 </section>
 
 <table>
-  <tr>
+  <tr class="align-header">
     <th>Ranking</th>
     <th>Name</th>
     <th>Upvote</th>
@@ -22,11 +23,7 @@
   <tr>
     <td>Ranked: <%= movie.ranked %></td>
     <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
-    <td><%= button_to "Upvote", movie_path(movie.id), method: :get %></td>
+    <td><%= button_to "Upvote", movie_path(movie.id), :class => "button", method: :get %></td>
   </tr>
 <% end %>
 </table>
-
-<ul>
-  <li><%= button_to 'Add a Movie', new_movie_path, method: :get %></li>
-</ul>

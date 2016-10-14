@@ -58,6 +58,30 @@ a:hover {
   color: #3A919B;
 }
 
+/********************/
+/*   BUTTONS        */
+/*******************/
+
+.align-buttons li {
+  margin: 3% 2% 3% 2%;
+}
+
+.button {
+  background-color: #D56E4F;
+  border: none;
+  color: #D2E4E8;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #A7B724;
+  color: #D2E4E8;
+}
+
+
 
  /************************************/
  /* GENERAL BODY                     */
@@ -84,12 +108,6 @@ a:hover {
   text-align: center;
   margin: 20% 0 5% 0;
 }
-
-.top-lists ul {
-  text-align: center;
-}
-
-
 
  /**************/
  /*   HERO    */
@@ -136,11 +154,9 @@ a:hover {
  }
 
  /********************/
- /*   SHOW PAGES    */
+ /*   MEDIA INDEX   */
  /*******************/
 
-.show-page h2, h3 {
-  text-align: left;
-  margin: 0;
-
-}
+ .align-header {
+   text-align: left;
+ }

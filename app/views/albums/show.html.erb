@@ -1,12 +1,16 @@
-<section>
-  <h2><%= @album.title%></h2>
-  <h3> Recorded by: <%= @album.recorded_by %> </h3>
-  <h3> Ranked: <%= @album.ranked %> </h3>
-  <p> <%= @album.description %> </p>
-</section>
+<div class="row">
+  <section class="small-6 columns">
+    <h3><%= @album.title%></h3>
+    <h4> Recorded by: <%= @album.recorded_by %> </h4>
+    <h5> Upvotes: <%= @album.ranked %> </h5>
+    <p> <%= @album.description %> </p>
+  </section>
 
-<ul>
-  <li><%= button_to 'Upvote', upvote_path(params[:id]), method: :put %></li>
-  <li><%= button_to 'Edit Album', edit_album_path(params[:id]), method: :get %></li>
-  <li><%= button_to 'Delete Album', { controller: :albums, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-</ul>
+  <section class="small-6 columns">
+    <ul>
+      <li><%= button_to 'Upvote', upvote_path(params[:id]), method: :put %></li>
+      <li><%= button_to 'Edit Album', edit_album_path(params[:id]), method: :get %></li>
+      <li><%= button_to 'Delete Album', { controller: :albums, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+    </ul>
+  </section>
+</div>

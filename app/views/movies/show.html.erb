@@ -1,12 +1,16 @@
-<section>
-  <h2><%= @movie.name%></h2>
-  <h3> Directed by: <%= @movie.directed_by %> </h3>
-  <h3> Ranked: <%= @movie.ranked %> </h3>
-  <p> <%= @movie.description %> </p>
-</section>
+<div class="row">
+  <section class="small-6 columns">
+    <h3><%= @movie.name%></h3>
+    <h4> Directed by: <%= @movie.directed_by %> </h4>
+    <h5> Upvotes: <%= @movie.ranked %> </h5>
+    <p> <%= @movie.description %> </p>
+  </section>
 
-<ul>
-  <li><%= button_to 'Upvote', mupvote_path(params[:id]), method: :put %></li>
-  <li><%= button_to 'Edit movie', edit_movie_path(params[:id]), method: :get %></li>
-  <li><%= button_to 'Delete movie', { controller: :movies, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-</ul>
+  <section class="small-6 columns">
+  <ul>
+    <li><%= button_to 'Upvote', mupvote_path(params[:id]), method: :put %></li>
+    <li><%= button_to 'Edit movie', edit_movie_path(params[:id]), method: :get %></li>
+    <li><%= button_to 'Delete movie', { controller: :movies, action: :destroy}, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+  </ul>
+  </section>
+</div>
