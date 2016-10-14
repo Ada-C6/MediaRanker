@@ -51,7 +51,7 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  test "add a new album to the DB" do
+  test "add a new album to the DB with upvotes initialized to zero" do
     post_params = { album: { name: "Live Noise",
 								    artist: "Moxy Fruvous",
                     description: "Fantastic" } }
@@ -61,6 +61,7 @@ class AlbumsControllerTest < ActionController::TestCase
 
     album = assigns(:album)
     assert_redirected_to album_path(album.id)
+    assert_equal album.upvotes, 0
   end
 
   test "cannot add invalid album to DB" do

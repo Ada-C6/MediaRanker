@@ -51,7 +51,7 @@ class MoviesControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  test "add a new movie to the DB" do
+  test "add a new movie to the DB with upvotes initialized to zero" do
     post_params = { movie: { name: "Drive",
 								    director: "Nicolas Winding Refn",
                     description: "Never seen it" } }
@@ -61,6 +61,7 @@ class MoviesControllerTest < ActionController::TestCase
 
     movie = assigns(:movie)
     assert_redirected_to movie_path(movie.id)
+    assert_equal movie.upvotes, 0
   end
 
   test "cannot add invalid movie to DB" do

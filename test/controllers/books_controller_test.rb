@@ -51,7 +51,7 @@ class BooksControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  test "add a new book to the DB" do
+  test "add a new book to the DB with upvotes initialized to zero" do
     post_params = { book: { name: "To Kill a Mockingbird",
 								    author: "Harper Lee",
                     description: "Eh" } }
@@ -61,6 +61,7 @@ class BooksControllerTest < ActionController::TestCase
 
     book = assigns(:book)
     assert_redirected_to book_path(book.id)
+    assert_equal book.upvotes, 0
   end
 
   test "cannot add invalid book to DB" do
