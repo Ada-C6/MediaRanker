@@ -22307,3 +22307,133 @@ Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 6.6ms)
 
 
 Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:50:11 -0700
+
+
+Started GET "/movies/index" for ::1 at 2016-10-14 10:56:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC
+  Rendered movies/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 257ms (Views: 246.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/application.self-c7243e69b8b1420fae39c419cbbfedb81997b475582c12da2cc0e55df0584ab1.css?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/mains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-14 10:56:34 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-14 10:56:36 -0700
+Processing by MainsController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:56:37 -0700
+
+
+Started GET "/movies/show/9" for ::1 at 2016-10-14 10:56:38 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/9/edit" for ::1 at 2016-10-14 10:56:39 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered movies/_movieform.html.erb (12.5ms)
+  Rendered movies/edit.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:56:39 -0700
+
+
+Started PUT "/movies/9/update" for ::1 at 2016-10-14 10:56:43 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpOMH6YNC+88nK9BnWOSlJ3LigcFFfhh6AtQ8m1RgUkQYDRPzoVom1Xh+Cdaek6UUieVfMr97M6V38JHvK+yDQ==", "movie"=>{"title"=>"The Man on the Train", "director"=>"", "description"=>"Thought-provoking independent film. (In French.)"}, "commit"=>"Update Movie", "id"=>"9"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'The Man on the Train' AND "movies"."id" != 9 AND "movies"."director" = '') LIMIT 1
+  [1m[36mMovie Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."director" = '' AND "movies"."id" != 9 AND "movies"."title" = 'The Man on the Train') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mMovie Exists (0.3ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'The Man on the Train' AND "movies"."id" != 9 AND "movies"."director" = '') LIMIT 1
+  [1m[36mMovie Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."director" = '' AND "movies"."id" != 9 AND "movies"."title" = 'The Man on the Train') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered movies/_movieform.html.erb (1.3ms)
+  Rendered movies/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 47ms (Views: 23.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:56:43 -0700
+
+
+Started PUT "/movies/9/update" for ::1 at 2016-10-14 10:56:45 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3dWlem54dcCfcKr+VvFMf40e3sFVxlLUs7+dSEUuNL+rJh0qBvAWtPYN/ZiR6JB/QvLBupouRnvOaw/9lNAH+w==", "movie"=>{"title"=>"The Man on the Train", "director"=>"Mary McGuckian", "description"=>"Thought-provoking independent film. (In French.)"}, "commit"=>"Update Movie", "id"=>"9"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mMovie Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'The Man on the Train' AND "movies"."id" != 9 AND "movies"."director" = 'Mary McGuckian') LIMIT 1[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."director" = 'Mary McGuckian' AND "movies"."id" != 9 AND "movies"."title" = 'The Man on the Train') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."title" = 'The Man on the Train' AND "movies"."id" != 9 AND "movies"."director" = 'Mary McGuckian') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."director" = 'Mary McGuckian' AND "movies"."id" != 9 AND "movies"."title" = 'The Man on the Train') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/show/9
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/show/9" for ::1 at 2016-10-14 10:56:45 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:56:45 -0700
+
+
+Started GET "/main" for ::1 at 2016-10-14 10:56:47 -0700
+Processing by MainsController#index as HTML
+  Parameters: {"authenticity_token"=>"tVNrhwCkRb2P+lD8+GFlriGqk2SCLUSqHFo5qJ1cT6rDoNPXaCwmyeaHB5o/eLmu7kaMH03FUAVhjqsdTKJ87g=="}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  ORDER BY "movies"."upvotes" DESC LIMIT 10[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books"  ORDER BY "books"."upvotes" DESC LIMIT 10
+  [1m[36mAlbum Load (0.4ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."upvotes" DESC LIMIT 10[0m
+  Rendered mains/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/foundation.css" for ::1 at 2016-10-14 10:56:47 -0700
