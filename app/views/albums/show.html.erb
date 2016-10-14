@@ -1,5 +1,11 @@
-<h1><%= @album.name %><span class="not_emphasized"> Written by: <%= @album.artist %></span></h1>
-  <h4>Ranked: <%= @album.ranking %></h4>
-  <p><%= @album.description %></p>
-    <p><%= link_to("Upvote", album_upvote_path(@album.id), method: :patch, class: "button radius") %></p>
-  <p><%= link_to("Edit #{ @album.name }", edit_album_path(@album.id), method: :get, class: "button secondary radius") %> <%= link_to("DELETE", album_path(@album.id), method: :delete, class: "button alert radius", data: { confirm: "Are you sure?"} ) %> <%= link_to("View All Albums", albums_path, method: :get, class: "button secondary radius") %> <%= link_to("View All Media",root_path, method: :get, class: "button secondary radius")%></p>
+<div class ="row">
+  <div class="small-up-12 medium-up-12 large-up-12">
+    <div>
+      <h1><%= @album.name %><span class="not_emphasized"> Written by: <%= @album.artist %></span></h1>
+      <h4>Ranked: <%= @album.ranking %></h4>
+      <p><%= @album.description %></p>
+      <p><%= link_to("Upvote", album_upvote_path(@album.id), method: :patch, class: "button radius") %></p>
+      <p><%= link_to("Edit #{ @album.name }", edit_album_path(@album.id), method: :get, class: "button secondary radius") %> <%= link_to("DELETE", album_path(@album.id), method: :delete, class: "button alert radius", data: { confirm: "Are you sure?"} ) %> <%= link_to("View All Albums", albums_path, method: :get, class: "button secondary radius") %> <%= link_to("View All Media",root_path, method: :get, class: "button secondary radius")%></p>
+    </div>
+  </div>
+</div>
