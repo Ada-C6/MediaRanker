@@ -1,15 +1,10 @@
-<%= "yolo" %>
-
-
-
-
 <table>
   <tr>
     <th>Top Movies</th>
     <th>Top Books</th>
     <th>Top Albums</th>
   </tr>
-  <% 3.times do |i| %>
+  <% 10.times do |i| %>
     <tr>
       <td><%= link_to "#{@movies_by_rank[i].name}", movie_path(@movies_by_rank[i].id)%><%= " #{@movies_by_rank[i].rank}" %></td>
 
