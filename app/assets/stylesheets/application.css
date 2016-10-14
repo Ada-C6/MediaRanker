@@ -1,15 +1,31 @@
 @import 'https://fonts.googleapis.com/css?family=Lobster';
 @import url('foundation.css');
 
+/*Override defaults so spacing is similar to example*/
+body {
+  padding: 0 4rem;
+}
 
 ol {
   list-style: none;
+  margin: 0;
+}
+
+li {
+  margin: 15px 0;
 }
 
 th {
   text-align: left;
 }
 
+a {
+  color: #428bca;
+}
+/*end spacing*/
+
+
+/*styles header on every page with peekaboo owl*/
 .page-header {
   background-image: url('/assets/owl.jpg');
   background-repeat: no-repeat;
@@ -19,23 +35,26 @@ th {
 }
 
 .main-header {
-  margin-left: 10rem;
+  margin-left: 130px;
 }
 
+h1, h2, small {
+  display: inline;
+}
+/*end header*/
+
+
+/*Trying to make font sizes similar to example*/
+/*Ranked subheaders are smaller than "ranking the best of everything"*/
 .subheader {
   font-weight: bold;
   line-height: 1;
   color: #777;
   font-size: 19.5px;
 }
-
+/*"Ranking the best of everything"*/
 .main-header > .subheader {
   font-size: 23.4px;
-}
-
-
-h1, h2, small {
-  display: inline;
 }
 
 h1, h2 {
@@ -50,7 +69,10 @@ h1 {
 h2 {
   font-size: 30px;
 }
+/*end font sizing*/
 
+
+/*BUTTONS! default colors are not like example site*/
 .button {
   border-radius: .5rem;
   border-color: #ccc;
@@ -75,17 +97,6 @@ h2 {
   border-color: #285e8e;
 }
 
-.button.alert {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-
-.button.alert:hover {
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-
 /*action button should not be colored in the table...*/
 table .button.success {
   border-color: #ccc;
@@ -98,3 +109,15 @@ table .button.success:hover {
   border-color: #adadad;
   color: #333;
 }
+
+.button.alert {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.button.alert:hover {
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+/*end buttons*/

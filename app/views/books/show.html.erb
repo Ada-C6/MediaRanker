@@ -4,7 +4,7 @@
 
 <%= link_to "Edit #{@book.name}", edit_book_path(@book), class: 'button' %>
 <%= link_to "DELETE", book_path(@book),
-    class: 'button button-danger',
+    class: 'button alert',
     method: :delete,
     data: {confirm: "Are you sure?"} %>
 <%= link_to "View all Books", books_path, class: 'button'  %>
