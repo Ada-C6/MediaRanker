@@ -32,6 +32,13 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not album.valid?
   end
 
+  # test "Cannot create an album with upvotes as a string" do
+  # this test doesn't work with what we know now :(
+  #   album = albums(:Funny_numbers)
+  #   puts album
+  #   assert_not album.valid?
+  # end
+
   test "Cannot create the same album twice" do
     album = albums(:Harry_and_the_Potters)
     album1 = Album.new(name: 'Harry and the Potters', artist: 'Harry and the Potters', description: 'Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.', upvotes: 0)

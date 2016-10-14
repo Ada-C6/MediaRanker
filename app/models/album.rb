@@ -1,7 +1,6 @@
 class Album < ActiveRecord::Base
   validates :name, presence: true, uniqueness:
     { scope: :artist }
-    # message: "This album has already been added" }
   validates :artist, presence: true
   validates :description, presence: true, length:
     { maximum: 1000,

@@ -28,10 +28,16 @@ Album_no_upvotes:
   description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
 
 Album_negative_upvotes:
-    name: Harry and the Potters Suck
-    artist: Harry and the Potters
-    description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
-    upvotes: -1
+  name: Harry and the Potters Suck
+  artist: Harry and the Potters
+  description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+  upvotes: -1
+
+# Funny_numbers: we don't know how to do this test yet
+#   name: Harry and the Numbers
+#   artist: Harry and the Potters
+#   description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+#   upvotes: one
 
 Named_album:
   name: The Doors
