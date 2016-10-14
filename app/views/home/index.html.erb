@@ -13,8 +13,7 @@
     <div class="column">
       <h1>Top Books</h1>
       <% @books.each do |book| %>
-        <h2><%= link_to(book.name, book_path(book.id)) %></h2>
-        <p>Ranked: <%= book.ranking %></p>
+        <h2><%= link_to(book.name, book_path(book.id)) %><span class="not_emphasized"> Ranked: <%= book.ranking %></span></h2>
       <% end %>
       <p><%= link_to("View More Books", books_path) %></p>
     </div>
