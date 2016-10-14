@@ -13,6 +13,8 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
+    @path = albums_create_path
+    @method = :post
   end
 
   def create
@@ -21,6 +23,8 @@ class AlbumsController < ApplicationController
     if @album.save
       redirect_to albums_show_path(@album.id)
     else
+      @path = albums_create_path
+      @method = :post
       render :new, :status => :error
     end
 
@@ -29,6 +33,8 @@ class AlbumsController < ApplicationController
   def edit
     begin
       @album = Album.find(params[:id])
+      @path = albums_update_path
+      @method = :put
     rescue ActiveRecord::RecordNotFound
       render :file => 'public/404.html', :status => :not_found
     end
@@ -54,6 +60,8 @@ class AlbumsController < ApplicationController
           redirect_to albums_show_path(@album.id)
         else
           @album.restore_attributes
+          @path = albums_update_path
+          @method = :put
           render :edit, :status => :error
         end
       end
