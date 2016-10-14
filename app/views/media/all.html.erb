@@ -1,4 +1,43 @@
 <!-- <h1>Top <%= @medium_type_name.pluralize %></h1> -->
+
+  <div class="row">
+    <div class="small-4 medium-4 large-4 columns">
+      <h4>Ranking</h4>
+    </div>
+    <div class="small-4 medium-4 large-4 columns">
+      <h4>Name</h4>
+    </div>
+    <div class="small-4 medium-4 large-4 columns">
+      <h4>Upvote</h4>
+    </div>
+  </div>
+
+  <% @media.each do |medium| %>
+    <div class="row">
+
+      <div class="small-4 medium-4 large-4 columns">
+        Ranked:<%= medium.votes %>
+      </div>
+
+      <div class="small-4 medium-4 large-4 columns">
+        <%= link_to medium.name, medium_show_path(medium.id) %>
+      </div>
+
+      <div class="small-4 medium-4 large-4 columns">
+        <%= link_to "Upvote", medium_upvote_path(medium.id) %>
+      </div>
+
+    </div>
+  <% end %>
+
+  <%= link_to "View All Media", index_path %>
+  <%= link_to "Add New #{@medium_type_name}", medium_new_path %>
+</div>
+
+
+
+<!-- ###############TABLE ORGANIZED VERSION##################### -->
+<!--
 <table>
   <tr>
     <th>Name</th>
@@ -19,4 +58,4 @@
 </table>
 
 <%= link_to "View All Media", index_path %>
-<%= link_to "Add New #{@medium_type_name}", medium_new_path %>
+<%= link_to "Add New #{@medium_type_name}", medium_new_path %> -->
