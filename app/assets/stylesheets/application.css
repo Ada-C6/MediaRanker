@@ -7,10 +7,12 @@ body * {
 
 header {
   border-bottom: 1px solid silver;
+  overflow: hidden;
+  height: 125px;
 }
 
 header img {
-  width: 5%;
+  width: 20%;
   float: left;
   margin-left: 1%;
   margin-right: 2%;
