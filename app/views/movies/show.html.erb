@@ -5,9 +5,8 @@
 
 
 <!-- UPVOTE -->
-<%# button_to "Upvote", ??? %>
-<!-- I assume upvote is a button, but could be wrong -->
-<!-- no idea how to do the path, possibly update? idk!!! -->
+<td><%= button_to "Upvote", upvote_movie_path(@movie), method: :patch %></td>
+
 
 <!-- EDIT  -->
 
@@ -25,4 +24,4 @@ data: {confirm: "Are you really, really sure?"}%></li>
 
 <!-- VIEW ALL MEDIA -->
 
-<%# link_to "View All Media", ######ROOT ROUTE %>
+<%= link_to "View All Media", homes_index_path %>

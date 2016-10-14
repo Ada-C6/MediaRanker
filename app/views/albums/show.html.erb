@@ -4,9 +4,7 @@
 <p><%= "#{@album.description}" %></p>
 
 <!-- UPVOTE -->
-<%# button_to "Upvote", ??? %>
-<!-- I assume upvote is a button, but could be wrong -->
-<!-- no idea how to do the path, possibly update? idk!!! -->
+<td><%= button_to "Upvote", upvote_album_path(@album), method: :patch %></td>
 
 <!-- EDIT  -->
 
@@ -15,7 +13,7 @@
 
 <!-- DELETE -->
 
-<%= link_to "DELETE", album_path(album), method: :delete,
+<%= link_to "DELETE", album_path(@album), method: :delete,
 data: {confirm: "Are you really, really sure?"}%></li>
 
 <!-- VIEW ALL ALBUMS -->
@@ -24,4 +22,4 @@ data: {confirm: "Are you really, really sure?"}%></li>
 
 <!-- VIEW ALL MEDIA -->
 
-<%# link_to "View All Media", ######ROOT ROUTE %>
+<%= link_to "View All Media", homes_index_path %>

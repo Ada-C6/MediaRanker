@@ -4,7 +4,7 @@
 <p><%= "#{@book.description}" %></p>
 
 
-<%= button_to "Upvote", :action => "upvote" %>
+<td><%= button_to "Upvote", upvote_book_path(@book), method: :patch %></td>
 
 
 
@@ -28,4 +28,4 @@ data: {confirm: "Are you really, really sure?"}%></li>
 
 <!-- VIEW ALL MEDIA -->
 
-<%# link_to "View All Media", ######ROOT ROUTE %>
+<%= link_to "View All Media", homes_index_path %>
