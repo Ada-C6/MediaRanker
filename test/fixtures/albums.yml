@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  artist: MyString
-  description: MyString
-  ranking: 1
-
-two:
-  name: MyString
-  artist: MyString
-  description: MyString
-  ranking: 1
+a_hard_days_night:
+  name: A Hard Day's Night
+  artist: The Beatles
+  description: are great
+  ranking: 0
