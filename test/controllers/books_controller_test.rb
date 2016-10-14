@@ -59,6 +59,15 @@ class BooksControllerTest < ActionController::TestCase
     assert render: :new
   end
 
+  test "will delete a book from the DB" do
+    book = books(:one_fish_two_fish)
+    assert_difference('Book.count', -1) do
+      delete :destroy, id: book
+    end
+
+    assert_redirected_to books_path
+  end
+
   # test "the truth" do
   #   assert true
   # end

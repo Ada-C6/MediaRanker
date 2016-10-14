@@ -59,6 +59,15 @@ class AlbumsControllerTest < ActionController::TestCase
     assert render: :new
   end
 
+  test "will delete an album from the DB" do
+    album = albums(:mellon_collie)
+    assert_difference('Album.count', -1) do
+      delete :destroy, id: album
+    end
+
+    assert_redirected_to albums_path
+  end
+
   # test "the truth" do
   #   assert true
   # end

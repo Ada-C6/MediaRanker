@@ -45,7 +45,7 @@ class MoviesControllerTest < ActionController::TestCase
     assert_difference('Movie.count', 1) do
       post :create, post_params
     end
-    
+
     movie = assigns(:movie)
     assert_redirected_to movie_path(movie.id)
   end
@@ -58,6 +58,16 @@ class MoviesControllerTest < ActionController::TestCase
 
     assert render: :new
   end
+
+  test "will delete a movie from the DB" do
+    movie = movies(:pulp_fiction)
+    assert_difference('Movie.count', -1) do
+      delete :destroy, id: movie
+    end
+
+    assert_redirected_to movies_path
+  end
+
 
   # test "the truth" do
   #   assert true
