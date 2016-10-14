@@ -1,5 +1,5 @@
 <%= form_for media, html: { class: 'row' }  do |f| %>
   <%= f.hidden_field :upvotes, value: add_upvote(media) %>
-  <%= f.submit "Upvote", class: 'button' %>
+  <%= f.submit "Upvote", class: 'success button' %>
 
 <% end %>
