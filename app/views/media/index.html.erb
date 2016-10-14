@@ -5,27 +5,32 @@
       <th><h1>Top Movies</h1></th>
       <th><h1>Top Books</h1></th>
       <th><h1>Top Albums</h1></th>
-
     </tr>
 
     <tr>
       <td>
         <% @movies.each do |movie| %>
-          <%= render partial: 'movie', locals: { :movie => movie } %>
+          <table>
+            <%= render partial: 'movie', locals: { :movie => movie } %>
+          </table>
         <% end %>
         <%= link_to "view more movies", media_all_path(:movie) %>
       </td>
 
       <td>
         <% @books.each do |book| %>
-          <%= render partial: 'book', locals: { :book => book } %>
+          <table>
+            <%= render partial: 'book', locals: { :book => book } %>
+          </table>
         <% end %>
         <%= link_to "view more books", media_all_path(:book) %>
       </td>
 
       <td>
         <% @albums.each do |album| %>
-          <%= render partial: 'album', locals: { :album => album } %>
+          <table>
+            <%= render partial: 'album', locals: { :album => album } %>
+          </table>
         <% end %>
         <%= link_to "view more albums", media_all_path(:album) %>
       </td>
