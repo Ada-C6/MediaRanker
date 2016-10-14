@@ -71,7 +71,7 @@ class AlbumTest < ActiveSupport::TestCase
 
     album.upvote
     upvotes = album.upvotes
-    assert_equal(upvotes,1)
+    assert_equal(upvotes, 1)
   end
 
 
