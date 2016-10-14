@@ -7,6 +7,9 @@ patch 'books/:id/upvote' => 'books#upvote'
 patch 'movies/:id/upvote' => 'movies#upvote'
 patch 'albums/:id/upvote' => 'albums#upvote'
 
+patch 'books/:id/downvote' => 'books#downvote'
+patch 'movies/:id/downvote' => 'movies#downvote'
+patch 'albums/:id/downvote' => 'albums#downvote'
 
 Rails.application.routes.draw do
   resources :albums, :books, :movies

@@ -63,4 +63,13 @@ def index
     
     redirect_to :back
   end
+
+  def downvote
+    @this_album=Album.find(params[:id])
+    @this_album.rank-=1
+    
+    @this_album.save
+    
+    redirect_to :back
+  end
 end

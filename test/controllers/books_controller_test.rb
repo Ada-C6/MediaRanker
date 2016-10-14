@@ -61,4 +61,12 @@ class BooksControllerTest < ActionController::TestCase
         patch :upvote, upvote_params
         assert_redirected_to("blah")
   end
+
+  test "should be able to downvote a book" do
+         #fake page for page page to come from
+        request.env["HTTP_REFERER"]="blah"
+        upvote_params = {book:{name: books(:nap).name, author: books(:nap).author}, id: books(:nap).id}
+        patch :downvote, upvote_params
+        assert_redirected_to("blah")
+  end
 end

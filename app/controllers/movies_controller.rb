@@ -60,7 +60,12 @@ class MoviesController < ApplicationController
     @this_movie.rank+=1
     @this_movie.save
     redirect_to :back
+  end
 
-    #how do you say "the last page it was on"
+   def downvote 
+    @this_movie=Movie.find(params[:id])
+    @this_movie.rank-=1
+    @this_movie.save
+    redirect_to :back
   end
 end

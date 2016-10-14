@@ -62,4 +62,11 @@ class MoviesControllerTest < ActionController::TestCase
         assert_redirected_to("blah")
   end
   
+  test "should be able to downvote a movie" do
+         #fake page for page page to come from
+        request.env["HTTP_REFERER"]="blah"
+        upvote_params = {movie:{name: movies(:dead_or_alive).name, director: movies(:dead_or_alive).director}, id: movies(:dead_or_alive).id}
+        patch :downvote, upvote_params
+        assert_redirected_to("blah")
+  end
 end
