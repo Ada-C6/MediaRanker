@@ -1,5 +1,5 @@
 /* Shutter Out Horizontal */
-header h1.hvr-shutter-out-horizontal a {
+.hvr-shutter-out-horizontal a {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -15,7 +15,7 @@ header h1.hvr-shutter-out-horizontal a {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-header h1.hvr-shutter-out-horizontal a:before {
+.hvr-shutter-out-horizontal a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -36,10 +36,10 @@ header h1.hvr-shutter-out-horizontal a:before {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-header h1.hvr-shutter-out-horizontal a:hover, header h1.hvr-shutter-out-horizontal a:focus, header h1.hvr-shutter-out-horizontal a:active {
+.hvr-shutter-out-horizontal a:hover, .hvr-shutter-out-horizontal a:focus, .hvr-shutter-out-horizontal a:active {
   color: black;
 }
-header h1.hvr-shutter-out-horizontal a:hover:before, header h1.hvr-shutter-out-horizontal a:focus:before, header h1.hvr-shutter-out-horizontal a:active:before {
+.hvr-shutter-out-horizontal a:hover:before, .hvr-shutter-out-horizontal a:focus:before, .hvr-shutter-out-horizontal a:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }

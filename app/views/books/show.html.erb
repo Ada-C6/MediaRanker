@@ -1,18 +1,27 @@
-<h1><%= @mybook.title %></h1>
-<p>  Written By: <%= @mybook.author %> </p>
-<p>  Genre: <%= @mybook.genre %> </p>
-<p>  Description: <%= @mybook.description %> </p>
-<p>  Votes: <%= @mybook.rank %> </p>
-
+<h1 class="top-title align-center"><%= @mybook.title %></h1>
+<div class="row">
+  <div class="small-12 medium-5 column">
+    <h3>Author: </h3><h5> <%= @mybook.author %> </h5>
+  </div>
+  <div class="small-12 medium-5 column">
+    <h3> Genre: </h3><h5> <%= @mybook.genre %> </h5>
+  </div>
+  <div class="small-12 medium-12 column">
+    <h3>  Description: </h3><h5 class="media-description"> <%= @mybook.description %> </h5>
+  </div>
+</div>
 <article class="vote-buttons">
+  <div class="small-12 medium-4 column">
+    <h3>  Votes: </h3><h5> <%= @mybook.rank %> </h5>
+  </div>
   <p class="upvote-button"><%= button_to "Upvote", {controller: 'books', action: 'upvote', id: @mybook.id}, method: :patch%></p>
   <p class="downvote-button"><%= button_to "Downvote", {controller: 'books', action: 'downvote', id: @mybook.id}, method: :patch%></p>
 </article>
 
 <article class="reroute-buttons">
-  <p class="edit-button"><%= button_to "Edit Book", {controller: 'books', action: 'edit'}, {path: 'edit_book', method: :get} %></p>
-  <p class="delete-button"><%= button_to "Delete Book", {controller: 'books', action: 'destroy'}, path: 'book', method: :delete, data: {confirm: "Are you sure?"}%></p>
+  <p class="edit-button route-button"><%= button_to "Edit Book", {controller: 'books', action: 'edit'}, {path: 'edit_book', method: :get} %></p>
+  <p class="delete-button route-button"><%= button_to "Delete Book", {controller: 'books', action: 'destroy'}, path: 'book', method: :delete, data: {confirm: "Are you sure?"}%></p>
 
-  <p class="all-button"><%= button_to "View All Books", {controller: 'books', action: 'index'}, {path: 'books', method: :get} %></p>
-  <p class="media-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+  <p class="all-button route-button"><%= button_to "View All Books", {controller: 'books', action: 'index'}, {path: 'books', method: :get} %></p>
+  <p class="media-button route-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
 </article>

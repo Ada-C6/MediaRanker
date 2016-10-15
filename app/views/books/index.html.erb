@@ -1,13 +1,28 @@
-<h1>Media Ranker Books</h1>
+<h1 class="top-title align-center">Media Ranker Books</h1>
 
-<main>
+<main class="main-container">
+  <article class="table-headers row">
+    <h3 class="small-12 medium-4 column">Title: </h3>
+    <h3 class="small-12 medium-4 column">Author: </h3>
+    <h3 class="small-12 medium-2 column">Rank: </h3>
+    <h3 class="small-12 medium-1 column">Vote: </h3>
+  </article>
+  <div class="media-list-container">
   <% @books.each do |book| %>
     <article class="one-book row">
-      <h4 class="small-10 medium-7 column"><%= link_to book.title, book_path(book.id) %></h4>
-      <p class="small-2 medium-2 column right-padding"> Votes: <%= book.rank %></p>
+      <h5 class="small-12 medium-4 column"><%= link_to book.title, book_path(book.id) %></h5>
+      <h5 class="small-4 medium-4 column"><%= link_to book.author, book_path(book.id) %> </h5>
+      <p class="small-7 medium-2 column right-padding"> Votes: <%= book.rank %></p>
+      <div class="small-6 medium-1 column arrows">
+        <p class="upvote-arrow"><%= link_to "▲  ", {controller: 'books', action: 'upvote', id: book.id}, method: :patch%></p>
+        <p class="downvote-arrow"><%= link_to "▼", {controller: 'books', action: 'downvote', id: book.id}, method: :patch%></p>
+      </div>
     </article>
   <% end %>
+  </div>
+  <div class="bottom-buttons row">
+    <p class="new_button small-5 medium-4 column"><%= button_to "Add New Book", {controller: 'books', action: 'new'}, {path: 'new_book', method: :get} %></p>
+    <p class="media_button small-5 medium-4 column"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+  </div>
 </main>
-
-<p class="new_button"><%= button_to "Add New Book", {controller: 'books', action: 'new'}, {path: 'new_book', method: :get} %></p>
-<p class="media_button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+<p class="scroll">Scroll Through Books</p>

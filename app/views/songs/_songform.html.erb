@@ -1,4 +1,4 @@
-<%= @error if @error %>
+<h5 class="error-message"><%= @error if @error %></h5>
 <%= form_for @mysong,
   method: @post_method,
   url: @post_path do |f| %>

@@ -53,7 +53,19 @@ p.upvote-arrow , p.downvote-arrow {
   margin-top: 2%;
 }
 
+p.scroll {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  width: 15%;
+  /*border: 1px solid black;*/
+  margin: -14% 9% 0 0;
+  float: right;
+}
+
 .main-container {
+  width: 90%;
+  display: inline-block;
   height: 65vh;
   margin-top: 3vh;
 }
@@ -85,4 +97,72 @@ footer {
 
 p span.descriptors {
   font-weight: bold
+}
+
+.form_attribute {
+  width: 50%;
+  margin: auto;
+}
+
+h5.error-message {
+  margin-left: 10%;
+  width: auto;
+  display: inline-block;
+  color: red;
+  background-color: #f7cdcd;
+  font-weight: 400;
+  /*border: 1px solid red;*/
+}
+
+.column h5 {
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.column h3 {
+  display: inline-block;
+  margin-top: 3%;
+}
+
+.column h5.media-description {
+  margin-left: 0;
+  width: 60%;
+  display: block;
+}
+
+.vote-buttons {
+  display: block;
+  margin-top: 3%;
+
+}
+
+.vote-buttons h3 {
+  display: inline-block;
+  margin-left: 27%;
+}
+
+.vote-buttons h5 {
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.vote-buttons .upvote-button {
+  display: inline-block;
+  margin-left: 8%;
+}
+.vote-buttons .downvote-button {
+  display: inline-block;
+  /*margin-left: 3%;*/
+}
+
+.reroute-buttons {
+  margin: 3% 0 0 8%;
+}
+
+.route-button {
+  margin: 0 0.75%;
+}
+
+.song-genre {
+
 }
