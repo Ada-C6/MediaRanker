@@ -17,15 +17,13 @@ class MoviesController < ApplicationController
 
   def upvote
     @mymovie = find_movie
-    @mymovie.rank += 1
-    @mymovie.save
+    @mymovie.upvote
     redirect_to :back
   end
 
   def downvote
     @mymovie = find_movie
-    @mymovie.rank -= 1
-    @mymovie.save
+    @mymovie.downvote
     redirect_to :back
   end
 

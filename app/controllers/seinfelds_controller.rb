@@ -17,15 +17,13 @@ class SeinfeldsController < ApplicationController
 
   def upvote
     @myseinfeld = find_seinfeld
-    @myseinfeld.rank += 1
-    @myseinfeld.save
+    @myseinfeld.upvote
     redirect_to :back
   end
 
   def downvote
     @myseinfeld = find_seinfeld
-    @myseinfeld.rank -= 1
-    @myseinfeld.save
+    @myseinfeld.downvote
     redirect_to :back
   end
 

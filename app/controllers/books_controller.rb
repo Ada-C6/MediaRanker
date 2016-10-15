@@ -17,15 +17,13 @@ class BooksController < ApplicationController
 
   def upvote
     @mybook = find_book
-    @mybook.rank += 1
-    @mybook.save
+    @mybook.upvote
     redirect_to :back  ##redirects to previous page
   end
 
   def downvote
     @mybook = find_book
-    @mybook.rank -= 1
-    @mybook.save
+    @mybook.downvote
     redirect_to :back
   end
 

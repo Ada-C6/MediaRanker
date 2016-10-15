@@ -17,15 +17,13 @@ class SongsController < ApplicationController
 
   def upvote
     @mysong = find_song
-    @mysong.rank += 1
-    @mysong.save
+    @mysong.upvote
     redirect_to :back
   end
 
   def downvote
     @mysong = find_song
-    @mysong.rank -= 1
-    @mysong.save
+    @mysong.downvote
     redirect_to :back
   end
 
