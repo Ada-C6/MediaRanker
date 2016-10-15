@@ -14,7 +14,9 @@
 </ul>
 </main>
 
-<section>
-  <%= button_to("View all media", root_path, method: :get) %>
-  <%= button_to("Add an album", new_album_path, method: :get) %>
-</section>
+<nav>
+  <ul>
+    <li><%= button_to("View all media", root_path, method: :get) %></li>
+    <li><%= button_to("Add an album", new_album_path, method: :get) %></li>
+</ul>
+</nav>
