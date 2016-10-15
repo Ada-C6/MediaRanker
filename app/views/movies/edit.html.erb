@@ -1,12 +1,18 @@
-<%= form_for @movie do |f| %>
-  <%= f.label :title, "Title:" %>
-  <%= f.text_field :title %>
+<main>
+  <article>
+    <h3>New Movie</h3>
 
-  <%= f.label :director, "Directed by:" %>
-  <%= f.text_field :director %>
+    <%= form_for @movie do |f| %>
+      <p class="small-11"><%= f.label :title, "Title:" %>
+      <%= f.text_field :title %></p>
 
-  <%= f.label :description, "Description:" %>
-  <%= f.text_field :description %>
+      <p class="small-11"><%= f.label :director, "Directed by:" %>
+      <%= f.text_field :director %></p>
 
-  <%= f.submit "Submit" %>
-  <% end %>
+      <p class="small-11"><%= f.label :description, "Description:" %>
+      <%= f.text_field :description %></p>
+
+      <p><%= f.submit "Save" %></p>
+    <% end %>
+  </article>
+</main>

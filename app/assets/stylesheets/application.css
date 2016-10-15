@@ -8,6 +8,10 @@ li {
   margin: auto;
 }
 
-.new-main {
+main {
   margin: 0em 1em;
+}
+
+h3 {
+  margin-left: 1.6em;
 }
