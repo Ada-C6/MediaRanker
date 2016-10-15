@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class SongsControllerTest < ActionController::TestCase
+  setup do
+    @request.env['HTTP_REFERER'] = 'songs/show'
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -43,12 +47,14 @@ class SongsControllerTest < ActionController::TestCase
   end
 
   test "should be able to upvote a song" do
+    # get :show, {id: songs(:anywhere).id}
     patch :upvote, {id: songs(:anywhere).id}
-    assert_redirected_to controller: "songs", action: "show"
+    assert_response :redirect
   end
   test "should be able to downvote a song" do
+    # get :show, {id: songs(:anywhere).id}
     patch :downvote, {id: songs(:anywhere).id}
-    assert_redirected_to controller: "songs", action: "show"
+    assert_response :redirect
   end
 
   test "should be able to delete a song" do

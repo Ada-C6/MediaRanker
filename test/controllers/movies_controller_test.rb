@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class MoviesControllerTest < ActionController::TestCase
+  setup do
+    @request.env['HTTP_REFERER'] = 'movies/show'
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -44,11 +48,11 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "should be able to upvote a movie" do
     patch :upvote, {id: movies(:mean_girls).id}
-    assert_redirected_to controller: "movies", action: "show"
+    assert_response :redirect
   end
   test "should be able to downvote a movie" do
     patch :downvote, {id: movies(:mean_girls).id}
-    assert_redirected_to controller: "movies", action: "show"
+    assert_response :redirect
   end
 
   test "should be able to delete a movie" do
