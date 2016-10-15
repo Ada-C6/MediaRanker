@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
   validates :name, presence: true, uniqueness:
-    { scope: :artist }
+    { scope: :author }
   validates :author, presence: true
   validates :description, presence: true, length:
     { maximum: 1000,

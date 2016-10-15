@@ -1,13 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  author: MyString
-  description: MyString
-  upvotes: 1
+Harry_Potter:
+  name: Harry Potter and the Goblet of Fire
+  author: JK Rowling
+  description: Magic!!!!
+  upvotes: 0
 
-two:
-  name: MyString
-  author: MyString
-  description: MyString
-  upvotes: 1
+Book_no_name:
+  author: JK Rowling
+  description: Magic!!!!
+  upvotes: 0
+
+Book_no_desc:
+  name: Harry Potter
+  author: JK Rowling
+  upvotes: 0
+
+Book_no_upvotes:
+  name: Harry Potter
+  author: JK Rowling
+  description: Magic!!!!
+
+Book_negative_upvotes:
+  name: Harry Potter Sucks!
+  author: JK Rowling
+  description: Magic!!!!
+  upvotes: -1
+
+Named_book:
+  name: Batman
+  author: Batman
+  description: This is a very unique book!
+  upvotes: 100
+
+Cant_rename_book:
+  name: Superman
+  author: Batman
+  description: This is not such a unique book!
+  upvotes: 0
+
+Rename_book:
+  name: Superman
+  author: Superman
+  description: This could be a unique book
+  upvotes: 0
