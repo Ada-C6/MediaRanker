@@ -1,3 +1,13 @@
+<% if media_item.errors.any? %>
+<ul>
+  <% media_item.errors.each do |field, message| %>
+  <li>
+    <strong><%= field.capitalize %></strong> <%= message %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
+
 <section>
 <%= form_for media_item, method: http_method do |f| %>
 <%= f.label :name %>
