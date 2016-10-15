@@ -1,34 +1,38 @@
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Ranking</th>
-      <th scope="col">Movie</th>
-      <th scope="col">Upvote</th>
-    </tr>
-  </thead>
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Ranking</th>
+        <th scope="col">Movie</th>
+        <th scope="col">Upvote</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @movies.sort_by_rank.each do |movie| %>
-    <tr>
+    <tbody>
+      <% @movies.sort_by_rank.each do |movie| %>
+      <tr>
 
-      <td>
-        Ranked: <%= ranking(movie) %>
-      </td>
+        <td>
+          <%= ranking(movie) %>
+        </td>
 
-      <td scope="row">
-        <%= link_to "#{movie.name}", movie_path(movie) %>
-      </td>
+        <td scope="row">
+          <%= link_to "#{movie.name}", movie_path(movie) %>
+        </td>
 
 
-      <td>
-        <%= link_to "Upvote", upvote_movie_path(movie), method: "patch" %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+        <td>
+          <%= link_to "Upvote", upvote_movie_path(movie), method: "patch", class: "success small button" %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</main>
 
-<p>
-  <%= link_to "All Media", root_path %>
-  <%= link_to "Add New Movie", new_movie_path %>
-</p>
+<footer class="small-12 large-12 columns">
+  <ul class="menu row small-up-1 medium-up-3 large-up-6">
+    <li class="column"><%= link_to "All Media", root_path, class: "secondary button" %></li>
+    <li class="column"><%= link_to "Add New Movie", new_movie_path, class: "button" %></li>
+  </ul>
+</nav>

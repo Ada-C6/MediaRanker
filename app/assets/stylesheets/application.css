@@ -25,6 +25,19 @@ main, footer {
   margin-left: 3em;
 }
 
+table {
+  width: 95%;
+}
+
+table thead {
+  background: rgb(253, 156, 82);
+  color: #FFFFFF;
+}
+
+a {
+  color: rgb(10, 123, 197);
+}
+
 a:hover {
   text-decoration: underline;
   color: rgb(34, 214, 128);
@@ -43,4 +56,5 @@ label {
   h1 small, h2 small { display: block; margin-bottom: 0.9em; line-height: 0.8}
 
   .menu a { margin: 0.2em}
+
 }
