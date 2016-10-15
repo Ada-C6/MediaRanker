@@ -11,11 +11,22 @@
 <header>
   <div class="row">
     <div class="column">
-      <h1><%= link_to "MediaRanker", main_path, method: :get %><h1>
-      <h2>Pick your favorites and discover new movies, books, and albums!</h2>
+      <h1><%= link_to "m e d i a r a n k e r", main_path, method: :get %><h1>
     </div>
   </div>
+
+  <nav class="row">
+    <ul class="column">
+      <li><h3><%=link_to "home", main_path%></h3></li>
+      <li><h3><%=link_to "movies", movies_index_path%></h3></li>
+      <li><h3><%=link_to "books", books_index_path%></h3></li>
+      <li><h3><%=link_to "albums", albums_index_path%></h3></li>
+    </ul>
+  </nav>
+
 </header>
+
+
 
 <%= yield %>
 

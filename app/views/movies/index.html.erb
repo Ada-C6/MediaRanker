@@ -1,9 +1,8 @@
 <div class="row">
   <div class="column">
-    <h2>Movies in the database</h2>
+    <h2>m o v i e s</h2>
   </div>
 </div>
-
 
 <div class="row">
   <div class="column">
@@ -19,11 +18,13 @@
   </div>
 </div>
 
-<div class="row bottom-buttons-index">
-  <div class="column small-4 medium-3 large-2">
-    <%= button_to "View all media", main_path, method: :get %>
-  </div>
-  <div class="column end small-4 medium-3 large-2">
-    <%= button_to "Add a movie", movies_new_path, method: :get %>
+<div class="row">
+  <div class="column text-center">
+    <div class="bottom-button">
+      <%= button_to "View all media", main_path, method: :get %>
+    </div>
+    <div class="bottom-button">
+      <%= button_to "Add a movie", movies_new_path, method: :get %>
+    </div>
   </div>
 </div>
