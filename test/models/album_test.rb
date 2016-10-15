@@ -24,7 +24,7 @@ class AlbumTest < ActiveSupport::TestCase
     end
   end
 
-  test "Can create an album with no artist; default artist 'unknown artist'" do
+  test "Can create an album with no artist; default artist will be set to 'unknown artist'" do
     album = Album.new(name: "Let's Push Things Forward")
     assert album.valid?
     assert album.save
@@ -35,6 +35,7 @@ class AlbumTest < ActiveSupport::TestCase
     album = Album.new(name: "La La Latch", ranking: 10)
     assert album.valid?
     assert album.save
+    assert_equal album.ranking, 10
   end
 
   test "Cannot create an album with a negative ranking value" do
@@ -43,17 +44,26 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not album.save
   end
 
-  test "Album created without initial ranking value has ranking: 0" do
+  test "Can create an album with an initial ranking value of 0" do
+    album = Album.new(name: "No Apologies", ranking: 0)
+    assert album.valid?
+    assert album.save
+    assert_equal album.ranking, 0
+  end
+
+  test "Album created without initial ranking value will have ranking: 0" do
     album = Album.new(name: "Love Me Do")
     assert album.valid?
     assert album.save
     assert_equal album.ranking, 0
   end
 
-  test "Update does not reset ranking" do
+  test "Update of name or artist does not change ranking" do
     album = albums(:album_9)
     initial_rank = album.ranking
     album.update(artist: "Not a Pokemon")
+    assert_equal initial_rank, album.ranking
+    album.update(name: "Pokemon Hunter")
     assert_equal initial_rank, album.ranking
   end
 end
