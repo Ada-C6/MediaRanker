@@ -1,6 +1,8 @@
 @import url('foundation.css');
 
+/************/
 /* GENERAL */
+/**********/
 html, body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -11,7 +13,9 @@ body {
   line-height: 1.42857143;
 }
 
+/**********/
 /* LINKS */
+/********/
 a {
   color: #428bca;
   text-decoration: none;
@@ -22,7 +26,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ADDITIONAL TEXT */
+/***************/
+/* ADD'L TEXT */
+/*************/
 h1 {
   display: inline-block;
   font-size: 36px;
@@ -47,7 +53,9 @@ h4 {
   margin: 10px auto 10px;
 }
 
-/* PAGE HEADER */
+/***********/
+/* HEADER */
+/*********/
 header h1 {
   margin-left: 150px;
 }
@@ -60,7 +68,9 @@ header {
   border-bottom: 1px solid #EEE;
 }
 
+/************/
 /* BUTTONS */
+/**********/
 .button {
   padding: 6px 12px;
   font-size: 14px;
@@ -86,7 +96,8 @@ header {
   color: #FFF;
   background-color: #428bca;
   border-color: #357ebd;
-  /* @TODO - remove bc foundation .button */
+
+  /* @TODO - remove the 2 lines below - not needed bc foundation .button */
   /*border: 1px solid transparent; */
   /*display: inline-block;*/
 }
@@ -96,7 +107,9 @@ header {
   border-color: #285e8e;
 }
 
+/*********/
 /* FORM */
+/*******/
 label {
   display: inline-block;
   max-width: 100%;
@@ -114,6 +127,8 @@ label {
   border-radius: 4px;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+
+  /* @TODO - remove 3 lines below */
   /*background-color: #fff;*/
   /*font-size: 14px;*/
   /*line-height: 1.42857143;*/
@@ -130,15 +145,38 @@ label {
   color: #9f0a29;
 }
 
+/***********/
 /* TABLES */
-table {
-  background-color: transparent;
+/*********/
+#table {
+  border: 1px solid transparent;
+  /*background-color: #FFF; @TODO - remove, ultimately didn't need this */
 }
 
-th {
+#table tbody tr, #table thead th {
+  background-color: #FFF;
+  vertical-align: middle;
+}
+
+#table.row {
+  /*background-color: #FFF; @TODO - remove, ultimately didn't need this */
+}
+
+#table>tbody, #table>table>thead, #table>thead, #table>thead>tr {
+  border: 0px solid transparent;
+}
+
+tr {
+  /*background-color: #FFF; @TODO - remove, ultimately didn't need this */
+  vertical-align: middle;
+}
+
+td, th {
+  /*background-color: #FFF; @TODO - remove, ultimately didn't need this */
+  vertical-align: middle;
   text-align: left;
+  border-top: 1px solid #ddd;
 }
-
 
 
 

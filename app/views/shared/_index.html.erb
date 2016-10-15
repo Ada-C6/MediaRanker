@@ -1,39 +1,31 @@
 <main class="row">
-  <table class="small-12 columns">
-    <tr>
-      <th>
-        Ranking
-      </th>
-      <th>
-        Name
-      </th>
-      <th>
-        Upvote
-      </th>
-    </tr>
-
-    <% media_collection.each do |media_item| %>
-    <% case media_type %>
-      <% when :album %>
-        <% media_path = album_path(media_item) %>
-      <% when :movie %>
-        <% media_path = movie_path(media_item) %>
-      <% when :book %>
-        <% media_path = book_path(media_item) %>
-    <% end %>
-    <tr>
-      <td>
-        <%= "Ranked: #{media_item.ranking}" %>
-      </td>
-      <td>
-        <%= link_to media_item.name, media_path %>
-      </td>
-      <td>
-        <%= button_to [:upvote, media_item], class: "button", method: :patch do %>
-          Upvote
-        <% end %>
-      </td>
-    </tr>
-    <% end %>
+  <table id="table" class="small-12 columns">
+<!-- <main>
+  <table class="table"> -->
+    <thead class="row">
+      <tr>
+        <th class="small-3 medium-2 large-1 columns">Ranking</th>
+        <th class="small-6 medium-8 large-10 columns">Name</th>
+        <th class="small-3 medium-2 large-1 columns">Upvote</th>
+      </tr>
+    </thead>
+    <tbody class="row">
+      <% media_collection.each do |media_item| %>
+      <% case media_type %>
+        <% when :album %>
+          <% media_path = album_path(media_item) %>
+        <% when :movie %>
+          <% media_path = movie_path(media_item) %>
+        <% when :book %>
+          <% media_path = book_path(media_item) %>
+      <% end %>
+      <tr>
+        <td class="small-3 medium-2 large-1 columns"><%= "Ranked: #{media_item.ranking}" %></td>
+        <td class="small-6 medium-8 large-10 columns"><%= link_to media_item.name, media_path %></td>
+        <td class="small-3 medium-2 large-1 columns"><%= button_to [:upvote, media_item], class: "button", method: :patch do %>Upvote
+          <% end %></td>
+      </tr>
+      <% end %>
+    </tbody>
   </table>
 </main>
