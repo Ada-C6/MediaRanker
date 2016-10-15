@@ -21,12 +21,16 @@ class BooksController < ApplicationController
     begin
       @book = Book.find(params[:id])
     rescue ActiveRecord::RecordNotFound => err
-      render status: :not_found #or render an error view page that you create by render '/errors/not_found', :not_found
+      render '/errors/not_found', status: :not_found
     end
   end
 
   def edit
-    @book = Book.find(params[:id])
+    begin
+      @book = Book.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => err
+      render '/errors/not_found', status: :not_found
+    end
   end
 
   def update

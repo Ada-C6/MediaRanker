@@ -48,16 +48,16 @@ class BooksControllerTest < ActionController::TestCase
     assert_equal book.id, book_id
   end
 
-  # test "doesn't show a non-existant book" do
-  #   book_id = 843
-  #   # Bogus book ID shouldn't be in the DB, otherwise test is invalid
-  #   assert_raises ActiveRecord::RecordNotFound do
-  #     Book.find(book_id)
-  #   end
-  #
-  #   get :show, { id: book_id }
-  #   assert_response :not_found
-  # end
+  test "doesn't show a non-existant book" do
+    book_id = 843
+    # Bogus book ID shouldn't be in the DB, otherwise test is invalid
+    assert_raises ActiveRecord::RecordNotFound do
+      Book.find(book_id)
+    end
+
+    get :show, { id: book_id }
+    assert_response :not_found
+  end
 
   test "edit should get the edit form for a book" do
     book_id = books(:valid_book).id
@@ -66,12 +66,16 @@ class BooksControllerTest < ActionController::TestCase
     assert_template :edit
   end
 
-  # test "edit doesn't get the edit form for a non-existant book" do
-  #   book_id = 1234
-  #   get :edit, { id: book_id }
-  #   assert_response :error
-  # end
-  #
+  test "edit doesn't get the edit form for a non-existant book" do
+    book_id = 1234
+    assert_raises ActiveRecord::RecordNotFound do
+      Book.find(book_id)
+    end
+
+    get :edit, { id: book_id }
+    assert_response :not_found
+  end
+
   # test "updates a book in the DB" do
   #   book_id = books(:valid_book).id
   #   patch :update, { id: book_id }, :valid_book => {title: "Allison's Book", author: "Allison"}
