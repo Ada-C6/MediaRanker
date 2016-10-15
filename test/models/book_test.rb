@@ -21,4 +21,13 @@ class BookTest < ActiveSupport::TestCase
 
     assert_not Book.new(title: "Where the Red Fern Grows", author: "Wilson Rawls", genre: "Children", description: "About a boy who buys and trains two Redbone Coonhound hunting dogs", rank: 10).valid? "Red Fern with same title and same author should not be valid"
   end
+
+  test 'Books can be upvotes or downvote on' do
+    books(:red_fern).upvote
+    assert_equal books(:red_fern).rank, 55
+
+    books(:red_fern).downvote
+    assert_equal books(:red_fern).rank, 54
+  end
+
 end

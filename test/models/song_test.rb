@@ -19,4 +19,12 @@ class SongTest < ActiveSupport::TestCase
 
     assert_not Song.new(title: "Anywhere", artist: "Dillon Francis", album: "Anywhere", genre: "Dance", rank: 15).valid? "Anywhere with same title and same artist should not be valid"
   end
+
+  test 'Books can be upvotes or downvote on' do
+    songs(:cool_girl).upvote
+    assert_equal songs(:cool_girl).rank, 31
+
+    songs(:cool_girl).downvote
+    assert_equal songs(:cool_girl).rank, 30
+  end
 end

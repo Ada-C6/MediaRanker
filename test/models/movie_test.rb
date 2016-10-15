@@ -20,4 +20,12 @@ class MovieTest < ActiveSupport::TestCase
 
     assert_not Movie.new(  title: "Mean Girls", director: "Mark Waters", genre: "Comedy", description: "Some Girls in High School", rank: 3).valid? "Mean Girls with same title and same author should not be valid"
   end
+
+  test 'Books can be upvotes or downvote on' do
+    movies(:mean_girls).upvote
+    assert_equal movies(:mean_girls).rank, 4
+
+    movies(:mean_girls).downvote
+    assert_equal movies(:mean_girls).rank, 3
+  end
 end
