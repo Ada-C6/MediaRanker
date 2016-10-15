@@ -29,4 +29,12 @@ end
    assert_equal assigns(:movie), movies(:two)
  end
 
+ test "should destroy a chosen movie" do
+   assert_difference('Movie.count', -1) do
+     movie = movies(:three)
+     delete :destroy, id:movie
+   end
+   assert_redirected_to movies_path
+ end
+
 end

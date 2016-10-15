@@ -30,12 +30,10 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "should destroy a chosen book" do
-
-  assert_difference('Book.count', -1) do
-    book = books(:one)
-    delete :destroy, id:book
+    assert_difference('Book.count', -1) do
+      book = books(:one)
+      delete :destroy, id:book
+    end
+    assert_redirected_to books_path
   end
-
-  assert_redirected_to books_path
-end
 end

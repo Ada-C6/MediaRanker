@@ -28,4 +28,12 @@ end
 
    assert_equal assigns(:album), albums(:one)
  end
+
+ test "should destroy a chosen album" do
+   assert_difference('Album.count', -1) do
+     album = books(:two)
+     delete :destroy, id:album
+   end
+   assert_redirected_to albums_path
+ end
 end
