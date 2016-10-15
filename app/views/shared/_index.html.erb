@@ -1,37 +1,39 @@
-<table>
-  <tr>
-    <th>
-      Ranking
-    </th>
-    <th>
-      Name
-    </th>
-    <th>
-      Upvote
-    </th>
-  </tr>
-
-  <% media_collection.each do |media_item| %>
-  <% case media_type %>
-    <% when :album %>
-      <% media_path = album_path(media_item) %>
-    <% when :movie %>
-      <% media_path = movie_path(media_item) %>
-    <% when :book %>
-      <% media_path = book_path(media_item) %>
-  <% end %>
-  <tr>
-    <td>
-      <%= "Ranked: #{media_item.ranking}" %>
-    </td>
-    <td>
-      <%= link_to media_item.name, media_path %>
-    </td>
-    <td>
-      <%= button_to [:upvote, media_item], method: :patch do %>
+<main>
+  <table>
+    <tr>
+      <th>
+        Ranking
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
         Upvote
-      <% end %>
-    </td>
-  </tr>
-  <% end %>
-</table>
+      </th>
+    </tr>
+
+    <% media_collection.each do |media_item| %>
+    <% case media_type %>
+      <% when :album %>
+        <% media_path = album_path(media_item) %>
+      <% when :movie %>
+        <% media_path = movie_path(media_item) %>
+      <% when :book %>
+        <% media_path = book_path(media_item) %>
+    <% end %>
+    <tr>
+      <td>
+        <%= "Ranked: #{media_item.ranking}" %>
+      </td>
+      <td>
+        <%= link_to media_item.name, media_path %>
+      </td>
+      <td>
+        <%= button_to [:upvote, media_item], method: :patch do %>
+          Upvote
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</main>

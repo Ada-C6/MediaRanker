@@ -17,26 +17,25 @@
     <% edit_media_path = edit_book_path(media_item) %>
     <% made_by_verb = "Written" %>
 <% end %>
-
-<article>
-<h1>
-  <%= media_item.name %> <small><%= "#{made_by_verb} by: #{creator}" %></small>
-</h1>
-<h4>
-  Ranking: <%= media_item.ranking %>
-</h4>
-<p>
-  <%= media_item.description %>
-</p>
-<%= button_to [:upvote, media_item], method: :patch do %>
-  Upvote
-<% end %>
-</article>
-
-<%= link_to "Edit #{media_item.name}", edit_media_path %>
-
-<%= link_to "DELETE", media_path, method: :delete, data: { confirm: "Are you sure?" } %>
-
-<%= link_to "View All #{ media_type.to_s.capitalize }s", index_path %>
-
-<%= link_to "View All Media", root_path %>
+<main>
+  <article>
+    <h1>
+      <%= media_item.name %> <small><%= "#{made_by_verb} by: #{creator}" %></small>
+    </h1>
+    <h4>
+      Ranking: <%= media_item.ranking %>
+    </h4>
+    <p>
+      <%= media_item.description %>
+    </p>
+  </article>
+</main>
+<nav>
+  <%= button_to [:upvote, media_item], method: :patch do %>
+    Upvote
+  <% end %>
+  <%= link_to "Edit #{media_item.name}", edit_media_path %>
+  <%= link_to "DELETE", media_path, method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to "View All #{ media_type.to_s.capitalize }s", index_path %>
+  <%= link_to "View All Media", root_path %>
+</nav>
