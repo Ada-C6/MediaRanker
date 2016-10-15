@@ -13,7 +13,6 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.new(movie_params)
-    @movie.ranking = 0
 
     if @movie.save
       redirect_to movie_path(@movie)
