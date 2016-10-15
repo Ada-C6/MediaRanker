@@ -1,46 +1,80 @@
 <h2>Top Five For All Categories</h2>
 
-<table class="index-table">
-  <tr>
-    <th colspan="3">Albums</th>
-    <th colspan="3">Books</th>
-    <th colspan="3">Movies</th>
-  </tr>
+<section class="row small-up-1 medium-up-3 large-up-3">
 
-  <tr>
-    <td colspan="3"><h6><%= link_to "Submit a new album for voting", new_album_path %></h6></td>
-    <td colspan="3"><h6><%= link_to "Submit a new book for voting", new_book_path %></h6></td>
-    <td colspan="3"><h6><%= link_to "Submit a new movie for voting", new_movie_path %></h6></td>
-  </tr>
+  <table class="column">
+    <tr>
+      <th colspan="3"><h5>Albums</h5></th>
+    </tr>
 
-  <% 5.times do |i| %>
-  <tr>
-    <td>
-      <%= button_to "⬆", vote_album_path(@albums[i], vote: "up"), controller: :albums, action: :vote, method: :patch %>
-      <%= button_to "⬇", vote_album_path(@albums[i], vote: "down"), controller: :albums, action: :vote, method: :patch %>
-    </td>
-    <td><%= "#{@albums[i].rank_points}" %></td>
-    <td><%= "#{@albums[i].name}" %></td>
+    <tr>
+      <td colspan="3"><h6><%= link_to "Submit a new album for voting", new_album_path %></h6></td>
+    </tr>
 
-    <td>
-      <%= button_to "⬆", vote_book_path(@books[i], vote: "up"), controller: :books, action: :vote, method: :patch %>
-      <%= button_to "⬇", vote_book_path(@books[i], vote: "down"), controller: :books, action: :vote, method: :patch %>
-    </td>
-    <td><%= "#{@books[i].rank_points}" %></td>
-    <td><%= "#{@books[i].name}" %></td>
+    <% @albums.each do |album| %>
+    <tr>
+      <td>
+        <%= button_to "⬆", vote_album_path(album, vote: "up"), controller: :albums, action: :vote, method: :patch %>
+        <%= button_to "⬇", vote_album_path(album, vote: "down"), controller: :albums, action: :vote, method: :patch %>
+      </td>
+      <td><%= "#{album.rank_points}" %></td>
+      <td><%= "#{album.name}" %></td>
+    </tr>
+    <% end %>
 
-    <td>
-      <%= button_to "⬆", vote_movie_path(@movies[i], vote: "up"), controller: :movies, action: :vote, method: :patch %>
-      <%= button_to "⬇", vote_movie_path(@movies[i], vote: "down"), controller: :movies, action: :vote, method: :patch %>
-    </td>
-    <td><%= "#{@movies[i].rank_points}" %></td>
-    <td><%= "#{@movies[i].name}" %></td>
-  </tr>
-  <% end %>
+    <tr>
+      <td colspan="3"><h6><%= link_to "More Albums...", albums_path %></h6></td>
+    </tr>
+  </table>
 
-  <tr>
-    <td colspan="3"><%= link_to "More Albums...", albums_path %></td>
-    <td colspan="3"><%= link_to "More Books...", books_path %></td>
-    <td colspan="3"><%= link_to "More Movies...", movies_path %></td>
-  </tr>
-</table>
+  <table class="column">
+    <tr>
+      <th colspan="3"><h5>Books</h5></th>
+    </tr>
+
+    <tr>
+      <td colspan="3"><h6><%= link_to "Submit a new book for voting", new_book_path %></h6></td>
+    </tr>
+
+    <% @books.each do |book| %>
+    <tr>
+      <td>
+        <%= button_to "⬆", vote_book_path(book, vote: "up"), controller: :books, action: :vote, method: :patch %>
+        <%= button_to "⬇", vote_book_path(book, vote: "down"), controller: :books, action: :vote, method: :patch %>
+      </td>
+      <td><%= "#{book.rank_points}" %></td>
+      <td><%= "#{book.name}" %></td>
+    </tr>
+    <% end %>
+
+    <tr>
+      <td colspan="3"><h6><%= link_to "More Books...", books_path %></h6></td>
+    </tr>
+  </table>
+
+  <table class="column">
+    <tr>
+      <th colspan="3"><h5>Movies</h5></th>
+    </tr>
+
+    <tr>
+      <td colspan="3"><h6><%= link_to "Submit a new movie for voting", new_movie_path %></h6></td>
+    </tr>
+
+    <% @movies.each do |movie| %>
+    <tr>
+      <td>
+        <%= button_to "⬆", vote_movie_path(movie, vote: "up"), controller: :movies, action: :vote, method: :patch %>
+        <%= button_to "⬇", vote_movie_path(movie, vote: "down"), controller: :movies, action: :vote, method: :patch %>
+      </td>
+      <td><%= "#{movie.rank_points}" %></td>
+      <td><%= "#{movie.name}" %></td>
+    </tr>
+    <% end %>
+
+    <tr>
+      <td colspan="3"><h6><%= link_to "More Movies...", movies_path %></h6></td>
+    </tr>
+  </table>
+
+</section>
