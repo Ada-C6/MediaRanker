@@ -2,32 +2,32 @@
 <section class="main-page-content">
 
   <div class="row">
-    <div class="small-4 medium-4 large-4 column">
-      <h3>Movies</h3>
+    <div class="small-4 medium-4 large-4 column main-col">
+      <h3>m o v i e s</h3>
       <% @movies.each do |movie| %>
         <p><%= link_to movie.title, movies_show_path(movie.id) %>, Upvotes: <%= movie.upvotes %> </p>
       <% end %>
 
-      <p><%= link_to "See more movies", movies_index_path %></p>
+      <p><%= link_to "see more movies", movies_index_path, class: "main-link" %></p>
     </div>
 
-    <div class="small-4 medium-4 large-4 column">
-      <h3>Books</h3>
+    <div class="small-4 medium-4 large-4 column main-col">
+      <h3>b o o k s</h3>
       <% @books.each do |book| %>
-        <p><%= link_to book.title, books_show_path(book.id) %>, Upvotes: <%= book.upvotes %> </p>
+        <p><%= link_to book.title, books_show_path(book.id)%>, Upvotes: <%= book.upvotes %> </p>
       <% end %>
 
-      <p><%= link_to "See more books", books_index_path %></p>
+      <p><%= link_to "see more books", books_index_path, class: "main-link"  %></p>
     </div>
 
-    <div class="small-4 medium-4 large-4 column">
-      <h3>Albums</h3>
+    <div class="small-4 medium-4 large-4 column main-col">
+      <h3>a l b u m s</h3>
       <% @albums.each do |album| %>
         <p><%= link_to album.title, albums_show_path(album.id) %>, Upvotes: <%= album.upvotes %> </p>
       <% end %>
 
-      <p><%= link_to "See more albums", albums_index_path %></p>
+      <p><%= link_to "see more albums", albums_index_path, class: "main-link" %></p>
     </div>
   </div>
-  
+
 </section>
