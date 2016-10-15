@@ -1,13 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
-  description: MyString
-  ranking: 1
 
-two:
-  name: MyString
-  director: MyString
-  description: MyString
-  ranking: 1
+
+<% 10.times do |i| %>
+book_<%= i %>:
+  name: <%= Faker::Book.title %>
+  author: <%= Faker::Book.author %>
+  description: <%= Faker::Hipster.paragraph(2, false, 2) %>
+  ranking: <%= rand(0...100) %>
+<% end %>
+
+
+
+# one:
+#   name: MyString
+#   director: MyString
+#   description: MyString
+#   ranking: 1
+#
+# two:
+#   name: MyString
+#   director: MyString
+#   description: MyString
+#   ranking: 1
