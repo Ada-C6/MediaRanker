@@ -11,5 +11,20 @@ class BooksControllerTest < ActionController::TestCase
     assert_not_nil book
     assert_nil book.id
   end
+  test "add a new book to the database (create action)" do
+    assert_difference('Book.count', 1) do
+      post_params = { book: { name: "Why Iris is Awesome" } }
+      post :create, post_params
+    end
 
+    assert_redirected_to book_path(Book.last) #should redirect to the newly made book that was added to the database
+  end
+
+  # test "should show the requested book" do
+  #   get :show, { id: books(:two).id }
+  #   assert_response :success
+  #   assert_template :show
+  #
+  #   assert_equal assigns(:book), books(:two)
+  # end
 end
