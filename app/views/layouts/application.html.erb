@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <h1 id="title"><%= link_to("MediaRanker", media_path, id:"head_title") %></h1>
+</header>
+
 
 <%= yield %>
 
