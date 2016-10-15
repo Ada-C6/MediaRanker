@@ -6,7 +6,6 @@ class MovieTest < ActiveSupport::TestCase
     assert movie.valid?
 
     movie1 = Movie.new(title: "Star Trek")
-    puts " OVER HERE VOTES ARE #{movie1.vote}"
 
     assert movie1.save
   end
