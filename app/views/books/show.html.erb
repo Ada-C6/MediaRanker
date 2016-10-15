@@ -5,7 +5,7 @@
 <p><%= "#{@book.description}" %></p>
 
 <%= "Upvote" %>
-<%= button_to "Edit #{@book.name}", edit_book_path(@book) %>
+<%= button_to "Edit #{@book.name}", edit_book_path(@book), method: :get %>
 <%= button_to "DELETE", book_path(@book), method: :delete, data: { confirm: "Right meow?" }%>
 <%= button_to "View All Books", books_path, method: :get %>
 <%= button_to "View All Media", root_path, method: :get %>
