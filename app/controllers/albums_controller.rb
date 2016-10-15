@@ -3,11 +3,22 @@ class AlbumsController < ApplicationController
     @albums = Album.all
   end
 
-  def show
-    @album = Album.find(params[:id])
+  def create
+    @album = Album.new(album_params)
+    @album.ranking = 0
+    @album.save
+    redirect_to albums_path
+  end
+
+  def new
+    @album = Album.new
   end
 
   def edit
+    @album = Album.find(params[:id])
+  end
+
+  def show
     @album = Album.find(params[:id])
   end
 
@@ -21,19 +32,10 @@ class AlbumsController < ApplicationController
     end
   end
 
-  def new
-    @album = Album.new
-  end
-
-  def create
-    @album = Album.create(album_params)
-    redirect_to album_path
-  end
-
   def destroy
     @album = Album.find(params[:id]).destroy
 
-    redirect_to album_path
+    redirect_to albums_path
   end
 
 ####### STRONG PARAMS ##############
