@@ -1,9 +1,15 @@
 <main>
-  <ul>
+  <ul class="row small-up-3">
+    <li class="column">Rank</li>
+    <li class="column">Title</li>
+    <li class="column">Upvote</li>
+  </ul>
+
+  <ul class="row small-up-3">
   <% @albums.each do |album| %>
-    <li><%= "#{album.rank}" %></li>
-    <li><%= link_to("#{album.title}", album_path(album)) %></li>
-    <li><%= button_to("Upvote", album_upvote_path(album), method: :patch) %></li>
+    <li class="column"><%= "#{album.rank}" %></li>
+    <li class="column"><%= link_to("#{album.title}", album_path(album)) %></li>
+    <li class="column"><%= button_to("Upvote", album_upvote_path(album), method: :patch) %></li>
   <% end %>
 </ul>
 </main>

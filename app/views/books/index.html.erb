@@ -1,9 +1,15 @@
 <main>
-  <ul>
+  <ul class="row small-up-3">
+    <li class="column">Rank</li>
+    <li class="column">Title</li>
+    <li class="column">Upvote</li>
+  </ul>
+
+  <ul class="row small-up-3">
     <% @books.each do |book| %>
-      <li><%= "#{book.rank}" %></li>
-      <li><%= link_to("#{book.title}", book_path(book)) %></li>
-      <li><%= button_to("Upvote", book_upvote_path(book), method: :patch) %></li>
+      <li class="column"><%= "#{book.rank}" %></li>
+      <li class="column"><%= link_to("#{book.title}", book_path(book)) %></li>
+      <li class="column"><%= button_to("Upvote", book_upvote_path(book), method: :patch) %></li>
     <% end %>
   </ul>
 </main>
