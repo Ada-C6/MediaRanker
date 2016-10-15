@@ -13,7 +13,7 @@
       <tr>
 
         <td>
-          Ranked: <%= ranking(book) %>
+          <%= ranking(book) %>
         </td>
 
         <td scope="row">
@@ -22,7 +22,7 @@
 
 
         <td>
-          <%= link_to "Upvote", upvote_book_path(book), method: "patch" %>
+          <%= link_to "Upvote", upvote_book_path(book), method: "patch", class: "success small button" %>
         </td>
       </tr>
       <% end %>
@@ -30,9 +30,9 @@
   </table>
 </main>
 
-<footer class="small-12 large-12 columns">
-  <ul class="menu row small-up-1 medium-up-3 large-up-6">
-    <li class="column"><%= link_to "All Media", root_path, class: "secondary button" %></li>
-    <li class="column"><%= link_to "Add New Book", new_book_path, class: "button" %></li>
+<footer>
+  <ul class="menu row">
+    <li class="small-10 medium-5 large-5 columns"><%= link_to "Add New Book", new_book_path, class: "button" %></li>
+    <li class="small-10 medium-5 large-5 end columns"><%= link_to "All Media", root_path, class: "secondary button" %></li>
   </ul>
 </footer>
