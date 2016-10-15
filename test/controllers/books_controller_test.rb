@@ -17,14 +17,14 @@ class BooksControllerTest < ActionController::TestCase
       post :create, post_params
     end
 
-    assert_redirected_to book_path(Book.last) #should redirect to the newly made book that was added to the database
+    assert_redirected_to book_path(Book.last)
   end
 
-  # test "should show the requested book" do
-  #   get :show, { id: books(:two).id }
-  #   assert_response :success
-  #   assert_template :show
-  #
-  #   assert_equal assigns(:book), books(:two)
-  # end
+  test "should show the requested book" do
+    get :show, { id: books(:three).id }
+    assert_response :success
+    assert_template :show
+
+    assert_equal assigns(:book), books(:three)
+  end
 end
