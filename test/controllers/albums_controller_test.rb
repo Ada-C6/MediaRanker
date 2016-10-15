@@ -21,11 +21,11 @@ class AlbumsControllerTest < ActionController::TestCase
   assert_redirected_to album_path(Album.last) #should redirect to the newly made album that was added to the database
 end
 
- #  test "should show the requested album" do
- #   get :show, { id: albums(:two).id }
- #   assert_response :success
- #   assert_template :show
- #
- #   assert_equal assigns(:album), albums(:two)
- # end
+  test "should show the requested album" do
+   get :show, { id: albums(:one).id }
+   assert_response :success
+   assert_template :show
+
+   assert_equal assigns(:album), albums(:one)
+ end
 end

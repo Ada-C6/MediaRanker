@@ -4,8 +4,17 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+one:
+  name: momentary lapse of happily
+  artist: Adult Mom
+  description: simple dreamy pop punk sad songs in basement
+
+two:
+  name: Hell Bent
+  artist: Potty Mouth
+  description: my friends from NoHo's 2nd album
+
+three:
+  name: Tiger Trap
+  artist: Tiger Trap
+  description: twee-pop from the early 90s
