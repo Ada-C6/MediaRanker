@@ -1,8 +1,14 @@
-<% @books.each do |book| %>
-<%= "#{book.rank}" %>
-  <%= link_to("#{book.title}", book_path(book)) %>
-  <%= button_to("Upvote", book_upvote_path(book), method: :patch) %>
-<% end %>
+<main>
+  <ul>
+    <% @books.each do |book| %>
+      <li><%= "#{book.rank}" %></li>
+      <li><%= link_to("#{book.title}", book_path(book)) %></li>
+      <li><%= button_to("Upvote", book_upvote_path(book), method: :patch) %></li>
+    <% end %>
+  </ul>
+</main>
 
-<%= button_to("View all media", root_path, method: :get) %>
-<%= button_to("Add a book", new_book_path, method: :get) %>
+<section>
+  <%= button_to("View all media", root_path, method: :get) %>
+  <%= button_to("Add a book", new_book_path, method: :get) %>
+</section>

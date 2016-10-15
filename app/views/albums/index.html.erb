@@ -1,8 +1,14 @@
-<% @albums.each do |album| %>
-<%= "#{album.rank}" %>
-  <%= link_to("#{album.title}", album_path(album)) %>
-  <%= button_to("Upvote", album_upvote_path(album), method: :patch) %>
-<% end %>
+<main>
+  <ul>
+  <% @albums.each do |album| %>
+    <li><%= "#{album.rank}" %></li>
+    <li><%= link_to("#{album.title}", album_path(album)) %></li>
+    <li><%= button_to("Upvote", album_upvote_path(album), method: :patch) %></li>
+  <% end %>
+</ul>
+</main>
 
-<%= button_to("View all media", root_path, method: :get) %>
-<%= button_to("Add an album", new_album_path, method: :get) %>
+<section>
+  <%= button_to("View all media", root_path, method: :get) %>
+  <%= button_to("Add an album", new_album_path, method: :get) %>
+</section>

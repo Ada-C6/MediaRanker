@@ -1,8 +1,14 @@
-<% @movies.each do |movie| %>
-<%= "#{movie.rank}" %>
-  <%= link_to("#{movie.title}", movie_path(movie)) %>
-  <%= button_to("Upvote", movie_upvote_path(movie), method: :patch) %>
-<% end %>
+<main>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li><%= "#{movie.rank}" %></li>
+      <li><%= link_to("#{movie.title}", movie_path(movie)) %></li>
+      <li><%= button_to("Upvote", movie_upvote_path(movie), method: :patch) %></li>
+    <% end %>
+  </ul>
+</main>
 
-<%= button_to("View all media", root_path, method: :get) %>
-<%= button_to("Add a movie", new_movie_path, method: :get) %>
+<section>
+  <%= button_to("View all media", root_path, method: :get) %>
+  <%= button_to("Add a movie", new_movie_path, method: :get) %>
+</section>

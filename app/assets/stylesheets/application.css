@@ -1,1 +1,5 @@
 @import url('foundation.css');
+
+li {
+  list-style-type: none;
+}
