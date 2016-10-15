@@ -71,6 +71,22 @@ class BooksControllerTest < ActionController::TestCase
   #   get :edit, { id: book_id }
   #   assert_response :error
   # end
+  #
+  # test "updates a book in the DB" do
+  #   book_id = books(:valid_book).id
+  #   patch :update, { id: book_id }, :valid_book => {title: "Allison's Book", author: "Allison"}
+  #
+  #   book = assigns(:book)
+  #   assert_redirected_to book_path(book)
+  #   assert_equal "Allison's Book", book.title
+  # end
 
-  
+  test "should destroy book" do
+    book_id = books(:valid_book).id
+    assert_difference('Book.count', -1) do
+      delete :destroy, { id: book_id }
+    end
+
+    assert_redirected_to books_path
+  end
 end
