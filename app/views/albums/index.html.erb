@@ -1,4 +1,6 @@
 <%= render partial: "layouts/index", locals: {category: "Albums"} %>
 
-<%= link_to "View All Media", root_path %>
-<%= link_to "Add an Album", new_album_path %>
+<section>
+  <div class="button"><%= link_to "View All Media", root_path %></div>
+  <div class="button"><%= link_to "Add an Album", new_album_path %></div>
+</section>

@@ -36,12 +36,8 @@ table tbody {
   border: none;
 }
 
-/*table tr:hover {
-  background-color: #AAD2BA;
-}*/
-
 a {
-  color: #73AB84;
+  color: #009900;
   text-decoration: none;
 }
 
@@ -54,11 +50,27 @@ a:hover {
   text-decoration: underline;
 }
 
-div.button {
+.button {
   border: 1px solid	#D3D3D3;
   background-color: white;
 }
 
+.button.delete {
+  background-color: #ff9999;
+}
+
+.button.upvote {
+  background-color: #99ccff;
+}
+
+.button:hover {
+  background-color: grey;
+}
+
 .form, .edit_form, .show_media, #media {
   padding: 20px;
+}
+
+#error_explanation {
+  color: red;
 }

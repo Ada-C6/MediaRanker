@@ -1,3 +1,15 @@
+<% if @movie.errors.any? %>
+<div id="error_explanation">
+  <h3>Your changes were not saved:</h2>
+
+  <ul>
+    <% @movie.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
 <div class="form">
   <%= form_for @movie do |m| %>
   <p><%= m.label "Name" %>
