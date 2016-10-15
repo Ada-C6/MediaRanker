@@ -1,5 +1,7 @@
 <%= render partial: "shared/index", locals: { media_type: :movie, media_collection: @movies } %>
-<nav>
-  <%= link_to "View All Media", root_path %>
-  <%= link_to "Add a Movie", new_movie_path %>
-</nav>
+<div class="row">
+  <nav class="small-12 columns">
+    <%= link_to "View All Media", root_path %>
+    <%= link_to "Add a Movie", new_movie_path %>
+  </nav>
+</div>

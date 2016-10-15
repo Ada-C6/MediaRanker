@@ -1,5 +1,7 @@
 <%= render partial: "shared/index", locals: { media_type: :album, media_collection: @albums } %>
-<nav>
-  <%= link_to "View All Media", root_path %>
-  <%= link_to "Add an Album", new_album_path %>
-</nav>
+<div class="row">
+  <nav class="small-12 columns">
+    <%= link_to "View All Media", root_path %>
+    <%= link_to "Add an Album", new_album_path %>
+  </nav>
+</div>
