@@ -2,10 +2,14 @@ source 'https://rubygems.org'
 
 gem 'simplecov', :require => false, :group => :test
 
+# Gems for Heroku
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for Active Record (only for dev/test)
+gem 'sqlite3', group: [:development, :test]
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
