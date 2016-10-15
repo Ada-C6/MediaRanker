@@ -65,6 +65,8 @@ table td {
   font-size: 23px;
 }
 
+.no_resize { max-width: none; }
+
 /*I realize it's bad practice to use the same id in more than one place.
 But haven't been able to figure out yet how to up the specifificty to acomplish this in a better way*/
 #button-text {
