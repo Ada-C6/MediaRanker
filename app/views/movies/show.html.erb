@@ -1,11 +1,11 @@
-<section>
+<section class="background_movies">
   <h1><%= @mymovie.title %></h1>
   <p><%= @mymovie.creator %></p>
   <p><%= @mymovie.description %></p>
-  <%= button_to("Edit Movie", edit_movie_path(@mymovie.id), method: :get)%>
-  <%= button_to("Delete Movie", movie_path(@mymovie.id), method: :delete)%>
-  <p><%= button_to 'UpVote', upvote_movie_path(@mymovie.id), method: :post %></p>
+  <%= button_to("Edit Movie", edit_movie_path(@mymovie.id), method: :get, class:"secondary button")%>
+  <%= button_to("Delete Movie", movie_path(@mymovie.id), method: :delete, class:"alert button")%>
+  <p><%= button_to('View All Movies', movies_path, method: :get, class:"secondary button") %></p>
+  <p><%= button_to('View All Media', media_path, method: :get, class:"secondary button") %></p>
+  <p><%= button_to 'UpVote', upvote_movie_path(@mymovie.id), method: :post, class:"success button" %></p>
   <p>Rank: <%= @mymovie.rank %></p>
-  <p><%= button_to('View All Movies', movies_path, method: :get) %></p>
-  <p><%= button_to('View All Media', media_path, method: :get) %></p>
 </section>

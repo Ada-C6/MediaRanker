@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
 @import url('foundation.css');
 
 /*home page*/
@@ -31,7 +32,7 @@
    height: 100px;
    padding: 5px;
    margin: 15px;
-   background: rgba(228, 63, 111, 0.8);
+   background: rgba(255, 255, 255, 0.5);
 }
 
 .tiles a {
@@ -40,7 +41,6 @@
 
 #title a {
   color: #000;
-
 }
 
 #head_title {
@@ -49,7 +49,6 @@
 
 .media_link a {
   color: #000;
-  background: rgba(255, 255, 255, 0.5);
 }
 
 form.button_to {
@@ -60,6 +59,7 @@ form.button_to {
   padding-left: 60px;
   background: url('books2.jpg');
   background-size: 100% auto;
+  background-position: center;
   height: 900px;
   padding-top: 60px;
   color: #FFF
@@ -69,6 +69,7 @@ form.button_to {
   padding-left: 60px;
   background: url('movie.jpg');
   background-size: 100% auto;
+  background-position: center;
   height: 900px;
   padding-top: 60px;
 }
@@ -77,6 +78,7 @@ form.button_to {
   padding-left: 60px;
   background: url('records.jpg');
   background-size: 100% auto;
+  background-position: center;
   height: 900px;
   padding-top: 60px;
 }
@@ -85,6 +87,7 @@ form.button_to {
   padding-left: 60px;
   background: url('records.jpg');
   background-size: 100% auto;
+  background-position: center;
   height: 900px;
   padding-top: 60px;
 }

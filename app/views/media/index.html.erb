@@ -1,20 +1,43 @@
-<h1>MediaRanker</h1>
 
-<h1>Books</h1>
-<% @books.each do |book| %>
-<h2><%= link_to(book.title, book_path(book.id)) %></h2>
+<section class="background_media">
+<div class="row">
+
+<div class="small-6 medium-4 columns">
+  <h1 class="media_link"><%= link_to("Books", books_path) %></h1>
+  <% @books.each do |book| %>
+  <article class="tiles">
+<p><%= link_to(book.title, book_path(book.id)) %></p>
 <p>Rank: <%= book.rank %></p>
+</article>
 <% end %>
+</div>
 
 
-<h1>Movies</h1>
+
+
+
+<div class="small-6 medium-4 columns">
+  <h1 class="media_link"><%= link_to("Movies", movies_path) %></h1>
 <% @movies.each do |movie| %>
-<h2><%= link_to(movie.title, movie_path(movie.id)) %></h2>
-<p>Rank: <%= movie.rank %></p>
+<article class="tiles">
+<p><%= link_to(movie.title, movie_path(movie.id)) %></p>
+Rank: <%= movie.rank %>
+</article>
 <% end %>
 
-<h1>Albums</h1>
-<% @albums.each do |album| %>
-<h2><%= link_to(album.title, album_path(album.id)) %></h2>
-<p>Rank: <%= album.rank %></p>
-<% end %>
+</div>
+
+
+
+  <div class="small-6 medium-4 columns">
+
+    <h1 class="media_link"><%= link_to("Albums", albums_path) %></h1>
+  <% @albums.each do |album| %>
+  <article class="tiles">
+  <p><%= link_to(album.title, album_path(album.id)) %></p>
+  <p>Rank: <%= album.rank %></p>
+</article>
+  <% end %>
+  </div>
+</div>
+</section>
