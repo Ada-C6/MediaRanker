@@ -1,25 +1,23 @@
-<main>
-  <section id="errors">
-    <% if media_item.errors.any? %>
-    <ul>
-      <% media_item.errors.each do |field, message| %>
-      <li>
-        <strong><%= field.capitalize %></strong> <%= message %>
-      </li>
-      <% end %>
-    </ul>
+<section id="form-errors">
+  <% if media_item.errors.any? %>
+  <ul>
+    <% media_item.errors.each do |field, message| %>
+    <li>
+      <strong><%= field.capitalize %></strong> <%= message %>
+    </li>
     <% end %>
-  </section>
+  </ul>
+  <% end %>
+</section>
 
-  <section id = "form">
-    <%= form_for media_item, method: http_method do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.label creator %>
-      <%= f.text_field creator %>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <%= f.submit "Save" %>
-    <% end %>
-  </section>
-</main>
+<section id = "form-fields">
+  <%= form_for media_item, method: http_method do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label creator %>
+    <%= f.text_field creator %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.submit "Save" %>
+  <% end %>
+</section>

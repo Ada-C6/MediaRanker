@@ -1,15 +1,17 @@
-<section>
-  <h1>Top Movies</h1>
-  <%= render partial: "shared/index", locals: { media_type: :movie, media_collection: @movies } %>
-  <%= link_to "View More Movies", movies_path %>
-</section>
-<section>
-  <h1>Top Books</h1>
-  <%= render partial: "shared/index", locals: { media_type: :book, media_collection: @books } %>
-  <%= link_to "View More Books", books_path %>
-</section>
-<section>  
-  <h1>Top Albums</h1>
-  <%= render partial: "shared/index", locals: { media_type: :album, media_collection: @albums } %>
-  <%= link_to "View More Albums", albums_path %>
-</section>
+<main class="row small-up-1 large-up-3">
+  <section class="column">
+    <h1>Top Movies</h1>
+    <%= render partial: "shared/index", locals: { media_type: :movie, media_collection: @movies } %>
+    <%= link_to "View More Movies", movies_path %>
+  </section>
+  <section class="column">
+    <h1>Top Books</h1>
+    <%= render partial: "shared/index", locals: { media_type: :book, media_collection: @books } %>
+    <%= link_to "View More Books", books_path %>
+  </section>
+  <section class="column">
+    <h1>Top Albums</h1>
+    <%= render partial: "shared/index", locals: { media_type: :album, media_collection: @albums } %>
+    <%= link_to "View More Albums", albums_path %>
+  </section>
+</main>
