@@ -87,8 +87,4 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_redirected_to books_path
   end
-
-  # test "the truth" do
-  #   assert true
-  # end
 end

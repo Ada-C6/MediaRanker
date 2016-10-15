@@ -26,7 +26,4 @@ class MovieTest < ActiveSupport::TestCase
     assert_includes movie.errors, :director
     assert_includes movie.errors, :description
   end
-  # test "the truth" do
-  #   assert true
-  # end
 end

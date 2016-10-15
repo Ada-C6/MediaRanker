@@ -87,9 +87,4 @@ class MoviesControllerTest < ActionController::TestCase
 
     assert_redirected_to movies_path
   end
-
-
-  # test "the truth" do
-  #   assert true
-  # end
 end

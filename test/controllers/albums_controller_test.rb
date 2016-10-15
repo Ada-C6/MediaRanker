@@ -87,8 +87,4 @@ class AlbumsControllerTest < ActionController::TestCase
 
     assert_redirected_to albums_path
   end
-
-  # test "the truth" do
-  #   assert true
-  # end
 end

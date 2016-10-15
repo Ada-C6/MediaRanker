@@ -27,7 +27,4 @@ class AlbumTest < ActiveSupport::TestCase
     assert_includes album.errors, :artist
     assert_includes album.errors, :description
   end
-  # test "the truth" do
-  #   assert true
-  # end
 end

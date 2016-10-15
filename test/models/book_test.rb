@@ -26,7 +26,4 @@ class BookTest < ActiveSupport::TestCase
     assert_includes book.errors, :author
     assert_includes book.errors, :description
   end
-  # test "the truth" do
-  #   assert true
-  # end
 end

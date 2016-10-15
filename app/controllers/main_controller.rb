@@ -5,6 +5,4 @@ class MainController < ApplicationController
     @books = Book.all.order(:upvotes).reverse
     @albums = Album.all.order(:upvotes).reverse
   end
-
-
 end
