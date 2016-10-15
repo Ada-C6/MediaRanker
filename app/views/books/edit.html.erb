@@ -1,6 +1,13 @@
 <main>
   <h2>Edit Book</h2>
 
-  <%= render partial: "form", locals: { http_method: :patch, media: @book, label_one: :title, label_two: :author }%>
+  <%= render partial: "form",
+        locals: {
+          http_method: :patch,
+          media: @book,
+          label_one: :title,
+          label_two: :author,
+          media_name: "Books",
+          media_path: books_path }%>
 
 </main>
