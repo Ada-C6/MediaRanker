@@ -1,6 +1,6 @@
 <!-- movies show  -->
 
-<article>
+<article class="row">
 
   <h1><%=@mymovie.name %></h1>
     <p>Directed by: <%=@mymovie.director %></p>
@@ -8,16 +8,17 @@
     <p>Description: <%=@mymovie.description%></p>
 
 
-  <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch, class: "large button success") %>
+<div class="small-1 columns">  <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch, class: "large button success") %></div>
 
     <section class: "row button-group">
-        <%=button_to "Edit: #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get, class: "small-2 columns button" %>
 
-        <%=button_to "DELETE", movie_path(@mymovie.id), method: :delete, class: "small-2 columns button alert" %>
+        <div class="small-3 columns"><%=button_to "Edit: #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get, class: "button" %></div>
 
-        <%=button_to "View All Movies", movies_path, method: :get, class: "small-2 columns button"%>
+      <div class="small-3 columns">  <%=button_to "DELETE", movie_path(@mymovie.id), method: :delete, class: "button alert" %></div>
 
-        <%=button_to "View All Media", users_path, method: :get, class: "small-2 columns button" %>
+      <div class="small-3 columns">  <%=button_to "View All Movies", movies_path, method: :get, class: "button"%></div>
+
+      <div class="small-3 columns">  <%=button_to "View All Media", users_path, method: :get, class: "button" %></div>
     </section>
 
 </article>
