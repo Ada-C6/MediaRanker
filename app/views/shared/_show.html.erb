@@ -30,12 +30,12 @@
     </p>
   </article>
   <nav class="small-12 columns">
-    <%= button_to [:upvote, media_item], method: :patch do %>
+    <%= button_to [:upvote, media_item], id: "show_upvote_button", class: "button", method: :patch do %>
       Upvote
     <% end %>
-    <%= link_to "Edit #{media_item.name}", edit_media_path %>
-    <%= link_to "DELETE", media_path, method: :delete, data: { confirm: "Are you sure?" } %>
-    <%= link_to "View All #{ media_type.to_s.capitalize }s", index_path %>
-    <%= link_to "View All Media", root_path %>
+    <%= link_to "Edit #{media_item.name}", edit_media_path, class: "button" %>
+    <%= link_to "DELETE", media_path, class: "alert button", method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "View All #{ media_type.to_s.capitalize }s", index_path, class: "button" %>
+    <%= link_to "View All Media", root_path, class: "button" %>
   </nav>
 </main>

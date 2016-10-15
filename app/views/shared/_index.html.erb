@@ -29,7 +29,7 @@
         <%= link_to media_item.name, media_path %>
       </td>
       <td>
-        <%= button_to [:upvote, media_item], method: :patch do %>
+        <%= button_to [:upvote, media_item], class: "button", method: :patch do %>
           Upvote
         <% end %>
       </td>
