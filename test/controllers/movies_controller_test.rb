@@ -64,6 +64,12 @@ class MoviesControllerTest < ActionController::TestCase
     assert_equal movie.upvotes, 0
   end
 
+  test "upvotes will increase ranking by one" do
+    movie = movies(:the_usual_suspects)
+    post :vote, { id: movies(:the_usual_suspects).id }
+    assert_equal movie.upvotes, 1
+  end
+
   test "cannot add invalid movie to DB" do
     post_params = {movie: { name: "Drive"} }
     assert_equal('Movie.count', 'Movie.count') do

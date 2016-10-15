@@ -64,6 +64,12 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_equal album.upvotes, 0
   end
 
+  test "upvotes will increase ranking by one" do
+    album = albums(:mellon_collie)
+    post :vote, { id: albums(:mellon_collie).id }
+    assert_equal album.upvotes, 1
+  end
+
   test "cannot add invalid album to DB" do
     post_params = {album: { name: "Live Noise"} }
     assert_equal('Album.count', 'Album.count') do

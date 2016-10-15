@@ -64,6 +64,12 @@ class BooksControllerTest < ActionController::TestCase
     assert_equal book.upvotes, 0
   end
 
+  test "upvotes will increase ranking by one" do
+    book = books(:one_fish_two_fish)
+    post :vote, { id: books(:one_fish_two_fish).id }
+    assert_equal book.upvotes, 1
+  end
+
   test "cannot add invalid book to DB" do
     post_params = {book: { name: "To Kill a Mockingbird"} }
     assert_equal('Book.count', 'Book.count') do
