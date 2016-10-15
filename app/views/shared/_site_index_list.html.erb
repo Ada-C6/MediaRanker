@@ -1,0 +1,6 @@
+<% media_collection.each do |media_item| %>
+  <h2>
+    <%= link_to media_item.name, media_item %>
+    <small><%= "Ranked: #{ media_item.ranking }" %></small>
+  </h2>
+<% end %>
