@@ -1,5 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 a_hard_days_night:
   name: A Hard Day's Night
   artist: The Beatles
