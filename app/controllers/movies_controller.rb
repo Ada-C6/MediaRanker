@@ -46,7 +46,7 @@ class MoviesController < ApplicationController
     @movie.upvote
     @movie.save
 
-    render :show
+    redirect_to movie_path(@movie)
   end
 
   private
