@@ -1,0 +1,7 @@
+valid_movie:
+  title: "Valid Movie"
+  director: "A really great director"
+  rank: 0
+  description: "This isn't required, but I will put it in just to have a full entry"
+
+# all other test data written inline because it is invalid data
