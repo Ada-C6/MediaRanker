@@ -3,11 +3,22 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
-  def show
-    @movie = Movie.find(params[:id])
+  def create
+    @movie = Movie.new(movie_params)
+    @movie.ranking = 0
+    @movie.save
+    redirect_to movies_path
+  end
+
+  def new
+    @movie = Movie.new
   end
 
   def edit
+    @movie = Movie.find(params[:id])
+  end
+
+  def show
     @movie = Movie.find(params[:id])
   end
 
@@ -21,19 +32,10 @@ class MoviesController < ApplicationController
     end
   end
 
-  def new
-    @movie = Movie.new
-  end
-
-  def create
-    @movie = Movie.create(movie_params)
-    redirect_to movie_path
-  end
-
   def destroy
     @movie = Movie.find(params[:id]).destroy
 
-    redirect_to movie_path
+    redirect_to movies_path
   end
 
 ####### STRONG PARAMS ##############
