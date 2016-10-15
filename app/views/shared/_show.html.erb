@@ -1,22 +1,3 @@
-<%# @TODO - refactor DRY! replace paths with symbols? %>
-
-<% case media_type %>
-  <% when :album %>
-    <% media_path = album_path(media_item) %>
-    <% index_path = albums_path %>
-    <% edit_media_path = edit_album_path(media_item) %>
-    <% made_by_verb = "Recorded" %>
-  <% when :movie %>
-    <% media_path = movie_path(media_item) %>
-    <% index_path = movies_path %>
-    <% edit_media_path = edit_movie_path(media_item) %>
-    <% made_by_verb = "Directed" %>
-  <% when :book %>
-    <% media_path = book_path(media_item) %>
-    <% index_path = books_path %>
-    <% edit_media_path = edit_book_path(media_item) %>
-    <% made_by_verb = "Written" %>
-<% end %>
 <main class="row">
   <article class="small-12 columns">
     <h1>
@@ -30,12 +11,10 @@
     </p>
   </article>
   <nav class="small-12 columns">
-    <%= button_to [:upvote, media_item], id: "show_upvote_button", class: "button", method: :patch do %>
-      Upvote
-    <% end %>
-    <%= link_to "Edit #{media_item.name}", edit_media_path, class: "button" %>
-    <%= link_to "DELETE", media_path, class: "alert button", method: :delete, data: { confirm: "Are you sure?" } %>
-    <%= link_to "View All #{ media_type.to_s.capitalize }s", index_path, class: "button" %>
+    <%= button_to [:upvote, media_item], id: "show_upvote_button", class: "button", method: :patch do %>Upvote<% end %>
+    <%= link_to "Edit #{ media_item.name }", [:edit, media_item], class: "button" %>
+    <%= link_to "DELETE", [media_item], class: "alert button", method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "View All #{ media_type.to_s.capitalize }", [media_type], class: "button" %>
     <%= link_to "View All Media", root_path, class: "button" %>
   </nav>
 </main>
