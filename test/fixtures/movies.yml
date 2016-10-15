@@ -1,13 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
-  description: MyString
-  upvotes: 1
+Harry_Potter:
+  name: Harry Potter and the Goblet of Fire
+  director: JK Rowling
+  description: Magic!!!!
+  upvotes: 0
 
-two:
-  name: MyString
-  director: MyString
-  description: MyString
-  upvotes: 1
+Movie_no_name:
+  director: JK Rowling
+  description: Magic!!!!
+  upvotes: 0
+
+Movie_no_desc:
+  name: Harry Potter
+  director: JK Rowling
+  upvotes: 0
+
+Movie_no_upvotes:
+  name: Harry Potter
+  director: JK Rowling
+  description: Magic!!!!
+
+Movie_negative_upvotes:
+  name: Harry Potter Sucks!
+  director: JK Rowling
+  description: Magic!!!!
+  upvotes: -1
+
+Named_movie:
+  name: Batman
+  director: Batman
+  description: This is a very unique movie!
+  upvotes: 100
+
+Cant_rename_movie:
+  name: Superman
+  director: Batman
+  description: This is not such a unique movie!
+  upvotes: 0
+
+Rename_movie:
+  name: Superman
+  director: Superman
+  description: This could be a unique movie
+  upvotes: 0

@@ -1,6 +1,6 @@
 class Movie < ActiveRecord::Base
   validates :name, presence: true, uniqueness:
-    { scope: :artist }
+    { scope: :director }
   validates :director, presence: true
   validates :description, presence: true, length:
     { maximum: 1000,
