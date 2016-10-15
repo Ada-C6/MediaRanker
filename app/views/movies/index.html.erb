@@ -1,22 +1,31 @@
-<table>
-  <tr>
-    <th>Ranking</th>
-    <th>Name</th>
-    <th>Upvote</th>
-  </tr>
+<section class="hero hero1">
+       <a name="top-movies"></a>
+        <div class="wrapper row">
+          <div class="small-10 medium-6 large-3 columns">
+            <h1> Top Movies </h1>
+            <p>
+              “Film as dream, film as music. No art passes our conscience in the way film does, and goes directly to our feelings, deep down into the dark rooms of our souls.” -Ingmar Bergman
+              <%= button_to 'Add a Movie', new_movie_path, :class => "button", method: :get %>
+            </p>
+          </div>
+        </div>
+</section>
 
-<% @movies.each do |movie| %>
+<div class="align-table">
+  <table>
+    <tr class="align-header">
+      <th>Upvotes</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
 
-  <tr>
-    <td>Ranked: <%= movie.ranked %></td>
-    <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
-    <td><%= button_to "Upvote", movie_path(movie.id), method: :get %></td>
-  </tr>
+  <% @movies.each do |movie| %>
+
+    <tr>
+      <td>Ranked: <%= movie.ranked %></td>
+      <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
+      <td><%= button_to "Upvote", movie_path(movie.id), :class => "button", method: :get %></td>
+    </tr>
+  <% end %>
   </table>
-
-<% end %>
-
-<ul>
-  <li><%= button_to 'View All Media', root_path, method: :get %> </li>
-  <li><%= button_to 'Add a Movie', new_movie_path, method: :get %> </li>
-</ul>
+</div>

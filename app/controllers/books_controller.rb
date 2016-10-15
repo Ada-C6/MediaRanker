@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
+    @books = Book.order(ranked: :desc).limit(50)
   end
 
   def show
@@ -49,9 +49,11 @@ class BooksController < ApplicationController
 
   def destroy
     @book = findBook
-    @book.destroy
 
-    redirect_to action: "index"
+    if @book.class == Book
+      @book.destroy
+      redirect_to books_path
+    end
   end
 
   def upvote
@@ -61,7 +63,11 @@ class BooksController < ApplicationController
 
   private
   def findBook
-    return Book.find(params[:id].to_i)
+    if Book.exists?(params[:id].to_i)
+      return Book.find(params[:id].to_i)
+    else
+      render status: 404
+    end
   end
 
 

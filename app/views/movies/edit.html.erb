@@ -1,2 +1,4 @@
-<h1>Edit a Movie</h1>
-<%= render partial: "movieform", method: :post, locals: { action_name: movie_path, params: {id: @movie.id }} %>
+<div class="format-forms">
+  <h3>Edit a Movie</h3>
+  <%= render partial: "movieform", method: :post, locals: { action_name: movie_path, params: {id: @movie.id }} %>
+</div>

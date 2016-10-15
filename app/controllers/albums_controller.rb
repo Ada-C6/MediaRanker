@@ -1,16 +1,11 @@
 class AlbumsController < ApplicationController
 
   def index
-    @albums = Album.all
+    @albums = Album.order(ranked: :desc).limit(50)
   end
 
   def show
     @album = findAlbum
-
-    if @album == nil
-      render :file => 'public/404.html',
-          :status => :not_found
-    end
   end
 
   def edit
@@ -54,9 +49,12 @@ class AlbumsController < ApplicationController
 
   def destroy
     @album = findAlbum
-    @album.destroy
 
-    redirect_to action: "index"
+    if @album.class == Album
+      @album.destroy
+      redirect_to albums_path
+    end
+
   end
 
   def upvote
@@ -67,6 +65,10 @@ class AlbumsController < ApplicationController
   private
 
   def findAlbum
-    return Album.find(params[:id].to_i)
+    if Album.exists?(params[:id].to_i)
+      return Album.find(params[:id].to_i)
+    else
+      render status: 404
+    end
   end
 end
