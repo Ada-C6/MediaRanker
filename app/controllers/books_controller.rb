@@ -23,10 +23,8 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.ranking = 0
     if @book.save
-      #SUCCESS
       redirect_to book_path(@book)
     else
-      #NOPE
       render :new
     end
   end
@@ -38,10 +36,8 @@ class BooksController < ApplicationController
   def update
     @book = edit
     if @book.update(book_params)
-      #SUCCESS
       redirect_to book_path(@book)
     else
-      #NOPE
       render :edit
     end
   end

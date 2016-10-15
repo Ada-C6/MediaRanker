@@ -5,3 +5,8 @@ pride_and_prejudice:
   author: Jane Austen
   description: is a classic
   ranking: 0
+animal_farm:
+  name: Animal Farm
+  author: George Orwell
+  description:
+  ranking: 0
