@@ -14,8 +14,7 @@
     </td>
     <td><%= "#{book.rank_points}" %></td>
     <td><%= "#{book.name}" %></td>
-    <td><small>
-      <%= link_to "[Details]", book_path(book) %>
+    <td><small><%= link_to "[Details]", book_path(book) %> | <%= link_to "[Delete]", book_path(book), method: :delete, data: { confirm: "Honestly?" } %></small></td>
   </tr>
   <% end %>
 </table>

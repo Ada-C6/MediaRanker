@@ -14,8 +14,7 @@
     </td>
     <td><%= "#{movie.rank_points}" %></td>
     <td><%= "#{movie.name}" %></td>
-    <td><small>
-      <%= link_to "[Details]", movie_path(movie) %>
+    <td><small><%= link_to "[Details]", movie_path(movie) %> | <%= link_to "[Delete]", movie_path(movie), method: :delete, data: { confirm: "Honestly?" } %></small></td>
   </tr>
   <% end %>
 </table>
