@@ -1,3 +1,6 @@
-<h2>Add a New Album</h2>
+<main>
+  <h2>Add a New Album</h2>
 
-<%= render partial: "form", locals: { http_method: :post }%>
+  <%= render partial: "form", locals: { http_method: :post, media: @album, label_one: :name, label_two: :artist }%>
+
+</main>

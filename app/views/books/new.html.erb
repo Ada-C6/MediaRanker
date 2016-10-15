@@ -1,3 +1,5 @@
-<h2>Add a New Book</h2>
+<main>
+  <h2>Add a New Book</h2>
 
-<%= render partial: "form", locals: { http_method: :post }%>
+  <%= render partial: "form", locals: { http_method: :post, media: @book, label_one: :title, label_two: :author }%>
+</main>
