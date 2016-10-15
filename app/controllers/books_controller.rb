@@ -3,11 +3,22 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def show
-    @book = Book.find(params[:id])
+  def create
+    @book = Book.new(book_params)
+    @book.ranking = 0
+    @book.save
+    redirect_to books_path
+  end
+
+  def new
+    @book = Book.new
   end
 
   def edit
+    @book = Book.find(params[:id])
+  end
+
+  def show
     @book = Book.find(params[:id])
   end
 
@@ -21,19 +32,10 @@ class BooksController < ApplicationController
     end
   end
 
-  def new
-    @book = Book.new
-  end
-
-  def create
-    @book = Book.create(book_params)
-    redirect_to book_path
-  end
-
   def destroy
     @book = Book.find(params[:id]).destroy
 
-    redirect_to book_path
+    redirect_to books_path
   end
 
 ####### STRONG PARAMS ##############
