@@ -14,7 +14,6 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
-    @album.ranking = 0
 
     if @album.save
       redirect_to album_path(@album)
