@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.all.order(rank: :desc)
+    @songs = Song.order('rank desc, id')
   end
 
   def find_song
@@ -19,14 +19,14 @@ class SongsController < ApplicationController
     @mysong = find_song
     @mysong.rank += 1
     @mysong.save
-    redirect_to song_path
+    redirect_to :back
   end
 
   def downvote
     @mysong = find_song
     @mysong.rank -= 1
     @mysong.save
-    redirect_to song_path
+    redirect_to :back
   end
 
   def new

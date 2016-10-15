@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all.order(rank: :desc)
+    @movies = Movie.all.order('rank desc, id')
   end
 
   def find_movie
@@ -19,14 +19,14 @@ class MoviesController < ApplicationController
     @mymovie = find_movie
     @mymovie.rank += 1
     @mymovie.save
-    redirect_to movie_path
+    redirect_to :back
   end
 
   def downvote
     @mymovie = find_movie
     @mymovie.rank -= 1
     @mymovie.save
-    redirect_to movie_path
+    redirect_to :back
   end
 
   def new

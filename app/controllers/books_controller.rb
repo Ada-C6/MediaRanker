@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all.order(rank: :desc)
+    @books = Book.all.order('rank desc, id')
   end
 
   def find_book
@@ -19,14 +19,14 @@ class BooksController < ApplicationController
     @mybook = find_book
     @mybook.rank += 1
     @mybook.save
-    redirect_to book_path(@mybook.id)
+    redirect_to :back  ##redirects to previous page
   end
 
   def downvote
     @mybook = find_book
     @mybook.rank -= 1
     @mybook.save
-    redirect_to book_path(@mybook.id)
+    redirect_to :back
   end
 
   def new

@@ -1,6 +1,6 @@
 class SeinfeldsController < ApplicationController
   def index
-    @seinfelds = Seinfeld.all.order(rank: :desc)
+    @seinfelds = Seinfeld.order('rank desc, id')
   end
 
   def find_seinfeld
@@ -19,14 +19,14 @@ class SeinfeldsController < ApplicationController
     @myseinfeld = find_seinfeld
     @myseinfeld.rank += 1
     @myseinfeld.save
-    redirect_to seinfeld_path
+    redirect_to :back
   end
 
   def downvote
     @myseinfeld = find_seinfeld
     @myseinfeld.rank -= 1
     @myseinfeld.save
-    redirect_to seinfeld_path
+    redirect_to :back
   end
 
   def new
