@@ -24,3 +24,39 @@ movies = [
 movies.each do |m|
   Movie.create(m)
 end
+
+books = [
+  {title: "American Gods",
+   author: "Neil Gaiman",
+   description: "Guy dies in car accident and hangs out with some gods."
+  },
+  {title: "The Lorax",
+   author: "Dr. Seuess",
+   description: "The Lorax saves the trees. The Lorax is some fat mystical being that lives with the trees."
+  },
+  {title: "Harry Potter",
+   author: "JK Rowling",
+   description: "Kid with scar turns out to be a wizard."
+  }
+]
+books.each do |b|
+  Book.create(b)
+end
+
+albums = [
+  {title: "Some Metal Album",
+   artist: "Some metal band",
+   description: "Some kind of music that Dan is into"
+  },
+  {title: "Melon Collie and the Infinite Sadness",
+   artist: "Smashing Pumpkins",
+   description: "The 90s had better music."
+  },
+  {title: "The Frozen Soundtrack",
+   artist: "Some disney characters",
+   description: "Don't lie, you like Let It Go"
+  }
+]
+albums.each do |a|
+  Album.create(a)
+end
