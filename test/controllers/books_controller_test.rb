@@ -11,6 +11,7 @@ class BooksControllerTest < ActionController::TestCase
     assert_not_nil book
     assert_nil book.id
   end
+
   test "add a new book to the database (create action)" do
     assert_difference('Book.count', 1) do
       post_params = { book: { name: "Why Iris is Awesome" } }
@@ -27,4 +28,14 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_equal assigns(:book), books(:three)
   end
+
+  test "should destroy a chosen book" do
+
+  assert_difference('Book.count', -1) do
+    book = books(:one)
+    delete :destroy, id:book
+  end
+
+  assert_redirected_to books_path
+end
 end
