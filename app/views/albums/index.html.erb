@@ -1,5 +1,6 @@
 <h2>All Albums</h2>
 <h5><%= link_to "Submit a new album for voting", new_album_path %></h5>
+
 <table class="index-table">
   <tr>
     <th colspan=2>Points</th>
@@ -15,7 +16,9 @@
     </td>
     <td><%= "#{album.rank_points}" %></td>
     <td><%= "#{album.name}" %></td>
-    <td><small><%= link_to "[Details]", album_path(album) %> | <%= link_to "[Delete]", album_path(album), method: :delete, data: { confirm: "Honestly?" } %></small></td>
+    <td><%= link_to "More Details...", album_path(album) %></td>
   </tr>
   <% end %>
 </table>
+
+<h5><%= link_to "Head back home", root_path %></h5>

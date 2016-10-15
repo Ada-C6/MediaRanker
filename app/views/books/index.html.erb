@@ -1,11 +1,13 @@
 <h2>All Books</h2>
 <h5><%= link_to "Submit a new book for voting", new_book_path %></h5>
+
 <table class="index-table">
   <tr>
     <th colspan=2>Points</th>
     <th>Book Name</th>
     <th>More...</th>
   </tr>
+
   <% @books.each do |book| %>
   <tr>
     <td>
@@ -14,7 +16,9 @@
     </td>
     <td><%= "#{book.rank_points}" %></td>
     <td><%= "#{book.name}" %></td>
-    <td><small><%= link_to "[Details]", book_path(book) %> | <%= link_to "[Delete]", book_path(book), method: :delete, data: { confirm: "Honestly?" } %></small></td>
+    <td><%= link_to "More Details...", book_path(book) %></td>
   </tr>
   <% end %>
 </table>
+
+<h5><%= link_to "Head back home", root_path %></h5>
