@@ -66,4 +66,12 @@ class BookTest < ActiveSupport::TestCase
     book.update(name: "Animal, Vegetable, Miracle")
     assert_equal initial_rank, book.ranking
   end
+
+  test "Cannot update a book to have no name" do
+    book = books(:book_4)
+    book.name = nil
+    assert_not book.valid?
+    assert_not book.save
+    assert_includes book.errors, :name
+  end
 end

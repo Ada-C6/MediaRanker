@@ -7,7 +7,6 @@ class AlbumTest < ActiveSupport::TestCase
     assert album.save
   end
 
-
   test "Cannot create an album with no name" do
     album = Album.new
     assert_not album.valid?
@@ -65,5 +64,13 @@ class AlbumTest < ActiveSupport::TestCase
     assert_equal initial_rank, album.ranking
     album.update(name: "Pokemon Hunter")
     assert_equal initial_rank, album.ranking
+  end
+
+  test "Cannot update an album to have no name" do
+    album = albums(:album_4)
+    album.name = nil
+    assert_not album.valid?
+    assert_not album.save
+    assert_includes album.errors, :name
   end
 end

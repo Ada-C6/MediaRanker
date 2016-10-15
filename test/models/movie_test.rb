@@ -65,4 +65,12 @@ class MovieTest < ActiveSupport::TestCase
     movie.update(name: "Better Than Chocolate")
     assert_equal initial_rank, movie.ranking
   end
+
+  test "Cannot update a movie to have no name" do
+    movie = movies(:movie_4)
+    movie.name = nil
+    assert_not movie.valid?
+    assert_not movie.save
+    assert_includes movie.errors, :name
+  end
 end
