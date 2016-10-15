@@ -63,16 +63,12 @@ td {
   margin-right: 5%;
 }
 
-.show_button:hover {
-  color: gray;
-}
-
 .upvote {
   background-color: teal;
   border-radius: 25px;
 }
 
-.upvote:hover {
+.upvote:hover, .show_button:hover {
   color: gray;
 }
 
