@@ -1,4 +1,4 @@
-<main class= "row small-up-1 medium-up-1 large-up-3">
+<main class= "row small-up-1 medium-up-2 large-up-3">
 <section class= "column">
 <h1>Top Movies</h1>
 <ul>
@@ -6,7 +6,7 @@
 	<li><%=link_to top_movie.name, movie_path(top_movie)%><p>Rank: <%=top_movie.rank%> </li>
 <% end %>
 </ul>
-<%= link_to "View more movies", movies_path%>
+<%= link_to "View more movies", movies_path, :class => "view-more"%>
 </section>
 
 <section class= "column">
@@ -16,7 +16,7 @@
 	<li><%=link_to top_book.name, book_path(top_book)%><p>Rank: <%=top_book.rank%> </li>
 <% end %>
 </ul>
-<%= link_to "View more books", books_path%>
+<%= link_to "View more books", books_path, :class => "view-more"%>
 </section>
 
 <section class= "column">
@@ -26,6 +26,6 @@
 	<li><%=link_to top_album.name, album_path(top_album)%><p>Rank: <%=top_album.rank%> </li>
 <% end %>
 </ul>
-<%= link_to "View more albums", albums_path%>
+<%= link_to "View more albums", albums_path, :class => "view-more"%>
 </section>
 </main>
