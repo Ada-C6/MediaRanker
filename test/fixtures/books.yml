@@ -1,0 +1,7 @@
+valid_book:
+  title: "Valid Book"
+  author: "A really great author"
+  rank: 0 # I assign this here because a value is assigned by the controller. Next time I should assign a default value of 0 in the migration so it isn't nil by default
+  description: "This isn't required, but I will put it in just to have a full entry"
+
+# all other test data written inline because it is invalid data
