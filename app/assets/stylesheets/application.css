@@ -91,6 +91,10 @@ form.button_to {
   padding: 1%;
 }
 
+main {
+  margin-bottom: 10vh;
+}
+
 footer {
   display: block;
   text-align: center;
@@ -100,6 +104,7 @@ footer {
   clear: both;
   width: 100%;
   background-color: white;
+  margin-top: 3vh;
 }
 
 footer p {
