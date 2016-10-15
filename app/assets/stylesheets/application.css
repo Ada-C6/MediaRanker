@@ -1,17 +1,17 @@
 @import url('foundation.css');
 
-header {
+nav {
   border-bottom:  1px solid #eee;
 }
 
-header h1 {
+nav h1 {
   font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif;
   display: inline;
   font-weight: 500;
   font-size: 40px;
 }
 
-header p {
+nav p {
   display: inline;
   color: gray;
   font-weight: 500;

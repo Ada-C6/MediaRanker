@@ -7,23 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
     <nav>
-      <header>
-        <div class ="row">
-          <p class="small-6 medium-3 large-2 columns"><%= image_tag 'owl.jpg', :class => "no_resize" %>
-            <span class="small-6 medium-9 large-10 columns"> <h1><%= link_to "Media Ranker", root_path %> </h1><p>Ranking the Best of Everything</p></span>
-      </div>
+      <div class ="row">
+        <p class="small-6 medium-3 large-2 columns"><%= image_tag 'owl.jpg', :class => "no_resize" %>
+          <span class="small-6 medium-9 large-10 columns"> <h1><%= link_to "Media Ranker", root_path %> </h1><p>Ranking the Best of Everything</p></span>
+        </div>
+      </nav>
     </header>
-  </nav>
-
-  <%= yield %>
-
-<footer>
-  <div class ="row">
-    <div class="small-up-12 medium-up-12 large-up-12">
-      <p>&copy; Jennifer Owens <%= Time.now.year %></p>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <div class ="row">
+        <div class="small-up-12 medium-up-12 large-up-12">
+          <p>&copy; Jennifer Owens <%= Time.now.year %></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
