@@ -59,5 +59,18 @@ class BooksControllerTest < ActionController::TestCase
   #   assert_response :not_found
   # end
 
+  test "edit should get the edit form for a book" do
+    book_id = books(:valid_book).id
+    get :edit, { id: book_id }
+    assert_response :success
+    assert_template :edit
+  end
 
+  # test "edit doesn't get the edit form for a non-existant book" do
+  #   book_id = 1234
+  #   get :edit, { id: book_id }
+  #   assert_response :error
+  # end
+
+  
 end
