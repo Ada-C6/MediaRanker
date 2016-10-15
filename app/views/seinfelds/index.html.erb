@@ -2,9 +2,9 @@
 
 <main>
   <% @seinfelds.each do |seinfeld| %>
-    <article class="one-seinfeld">
-      <h4><%= link_to seinfeld.title, seinfeld_path(seinfeld.id) %></h4>
-      <p> Votes: <%= seinfeld.rank %></p>
+    <article class="one-seinfeld row">
+      <h4 class="small-10 medium-7 column"><%= link_to seinfeld.title, seinfeld_path(seinfeld.id) %></h4>
+      <p class="small-2 medium-2 column right-padding"> Votes: <%= seinfeld.rank %></p>
     </article>
   <% end %>
 </main>

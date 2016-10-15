@@ -39,3 +39,50 @@
  }
 
  header h1.header a:hover {text-decoration: none }
+
+div.arrows {
+  text-align: center;
+}
+
+p.upvote-arrow , p.downvote-arrow {
+  display: inline-block;
+  width: 40%;
+}
+
+.align-center {
+  margin-top: 2%;
+}
+
+.main-container {
+  height: 65vh;
+  margin-top: 3vh;
+}
+ .media-list-container {
+   width: 90%;
+   height: 75%;
+   position: relative;
+   overflow: auto;
+   margin: 2vh auto;
+ }
+
+div.bottom_buttons {
+   padding-top: 10%;
+ }
+
+p.new_button, p.media_button {
+  display: inline-block;
+}
+
+
+form.button_to {
+  display: inline-block;
+  padding: 1%;
+}
+
+footer {
+  display: block;
+}
+
+p span.descriptors {
+  font-weight: bold
+}

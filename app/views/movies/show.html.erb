@@ -1,10 +1,19 @@
-<h1><%= @mymovie.title %></h1>
-<p>  Directed By: <%= @mymovie.director %> </p>
-<p>  Genre: <%= @mymovie.genre %> </p>
-<p>  Description: <%= @mymovie.description %> </p>
-<p>  Votes: <%= @mymovie.rank %> </p>
-
+<h1 class="top-title align-center"><%= @mymovie.title %></h1>
+<div class="row">
+  <div class="small-12 medium-5 column">
+    <h3>Directed By: </h3><h5> <%= @mymovie.director %> </h5>
+  </div>
+  <div class="small-12 medium-5 column">
+    <h3> Genre: </h3><h5> <%= @mymovie.genre %> </h5>
+  </div>
+  <div class="small-12 medium-12 column">
+    <h3>  Description: </h3><h5> <%= @mymovie.description %> </h5>
+  </div>
+</div>
 <article class="vote-buttons">
+  <div class="small-12 medium-4 column">
+    <h3>  Votes: </h3><h5> <%= @mymovie.rank %> </h5>
+  </div>
   <p class="upvote-button"><%= button_to "Upvote", {controller: 'movies', action: 'upvote', id: @mymovie.id}, method: :patch%></p>
   <p class="downvote-button"><%= button_to "Downvote", {controller: 'movies', action: 'downvote', id: @mymovie.id}, method: :patch%></p>
 </article>

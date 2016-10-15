@@ -2,9 +2,9 @@
 
 <main>
   <% @books.each do |book| %>
-    <article class="one-book">
-      <h4><%= link_to book.title, book_path(book.id) %></h4>
-      <p> Votes: <%= book.rank %></p>
+    <article class="one-book row">
+      <h4 class="small-10 medium-7 column"><%= link_to book.title, book_path(book.id) %></h4>
+      <p class="small-2 medium-2 column right-padding"> Votes: <%= book.rank %></p>
     </article>
   <% end %>
 </main>

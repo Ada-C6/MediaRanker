@@ -2,9 +2,9 @@
 
 <main>
   <% @songs.each do |song| %>
-    <article class="one-song">
-      <h4><%= link_to song.title, song_path(song.id) %></h4>
-      <p> Votes: <%= song.rank %></p>
+    <article class="one-song row">
+      <h4 class="small-10 medium-7 column"><%= link_to song.title, song_path(song.id) %></h4>
+      <p class="small-2 medium-2 column right-padding"> Votes: <%= song.rank %></p>
     </article>
   <% end %>
 </main>
