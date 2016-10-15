@@ -1,36 +1,11 @@
-<main>
-  <h2>
-    <%= @movie.name %>
-    <small>directed by <%= @movie.director %></small>
-  </h2>
-
-  <p>Upvotes: <%= ranking(@movie) %></p>
-  <p>Description: <%= @movie.description %></p>
-</main>
-
-<footer class="small-12 large-12 columns">
-  <ul class="menu row small-up-1 medium-up-3 large-up-6">
-    <li class="column">
-      <%= link_to "Upvote", upvote_movie_path(@movie), method: "patch", class: "success button" %>
-    </li>
-
-    <li class="column">
-      <%= link_to "Edit Movie", edit_movie_path, class: "warning button" %>
-    </li>
-
-    <li class="column">
-      <%= link_to "Delete", movie_path,
-                  method: "delete",
-                  data: { confirm: "Are you sure you want to delete this movie?" },
-                  class: "alert button" %>
-    </li>
-
-    <li class="column">
-      <%= link_to "All Movies", movies_path, class: "button" %>
-    </li>
-
-    <li class="column">
-      <%= link_to "All Media", root_path, class: "secondary button" %>
-    </li>
-  </ul>
-</footer>
+<%= render partial: "show",
+      locals: {
+        media: @movie,
+        media_name: "movie",
+        name_field: @movie.name,
+        creator_field: @movie.director,
+        edit_path: edit_movie_path,
+        show_path: movie_path,
+        media_path: movies_path,
+        upvote_path: upvote_movie_path(@movie),
+ }%>
