@@ -1,12 +1,18 @@
-<%= form_for @album do |f| %>
-  <%= f.label :title, "Title:" %>
-  <%= f.text_field :title %>
+<main class="new-main">
+  <article>
+    <h3>New Album</h3>
 
-  <%= f.label :artist, "Artist:" %>
-  <%= f.text_field :artist %>
+    <%= form_for @album do |f| %>
+      <p class="small-11"><%= f.label :title, "Title:" %>
+      <%= f.text_field :title %></p>
 
-  <%= f.label :description, "Description:" %>
-  <%= f.text_field :description %>
+      <p class="small-11"><%= f.label :artist, "Artist:" %>
+      <%= f.text_field :artist %></p>
 
-  <%= f.submit "Submit" %>
-  <% end %>
+      <p class="small-11"><%= f.label :description, "Description:" %>
+      <%= f.text_field :description %></p>
+
+      <p><%= f.submit "Save" %></p>
+    <% end %>
+  </article>
+</main>

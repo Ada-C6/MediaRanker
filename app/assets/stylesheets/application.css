@@ -3,3 +3,11 @@
 li {
   list-style-type: none;
 }
+
+.small-11 {
+  margin: auto;
+}
+
+.new-main {
+  margin: 0em 1em;
+}
