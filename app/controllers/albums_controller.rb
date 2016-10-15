@@ -45,7 +45,7 @@ class AlbumsController < ApplicationController
     @album.upvote
     @album.save
 
-    redirect_to album_path
+    redirect_to album_path(@album)
   end
 
   private

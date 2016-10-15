@@ -89,4 +89,12 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_redirected_to books_path
   end
+
+  test "should redirect to the correct page" do
+    book_id = books(:valid_book).id
+    patch :upvote, { id: book_id }
+
+    book = assigns(:book)
+    assert_redirected_to book_path(book)
+  end
 end

@@ -49,7 +49,7 @@ class BooksController < ApplicationController
     @book.upvote
     @book.save
 
-    redirect_to book_path
+    redirect_to book_path(@book)
   end
 
   private
