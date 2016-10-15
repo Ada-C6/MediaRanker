@@ -13,12 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('foundation.css');
+
+/* Entire stylesheet*/
 html *{
 	font-family: "Lucida Grande";
 }
 
-@import url('foundation.css');
 
+/*Header Logo bar and tagline*/
 header{
 	border-bottom: 1px solid gray;
 }
@@ -42,11 +46,10 @@ header h2{
 	font-style: italic;
 }
 
+/*Body of homepage*/
 ul{
 	list-style: none;
 }
-
-
 
 li a{
 	margin-right: 2%;
@@ -60,6 +63,8 @@ a.view-more:hover{
 	text-decoration: underline;
 }
 
+
+/*Buttons*/
 .button {
 	border-radius: 4px;
 }
@@ -68,6 +73,7 @@ ul.button-group li{
 	display: inline-block;
 	padding: 2px;
 }
+
 
 /* Media Queries */
 @media (max-width: 400px) {
