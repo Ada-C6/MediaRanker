@@ -18,6 +18,48 @@ class MoviesControllerTest < ActionController::TestCase
     assert_not_empty movies
   end
 
+  # Below represents several ideas I had or Googled trying to figure out a test of the sort order for the index lists before deciding to abandon the effort.
+
+  # test "(index) should have all of the movies sorted in descending order by ranking attribute" do
+  #
+  #   movies = movies(:movies)
+  #   ranking_array = []
+  #
+  #
+  #   movies.all.each do |movie|
+  #     ranking_array.push(movie.ranking)
+  #   end
+  #
+  #   desc_sorted = false
+  #   iteration = ranking_array.length
+  #
+  #   iteration.times do |i|
+  #     if ranking_array[i] > ranking_array[i + 1]
+  #       count += 1
+  #     end
+  #     if count == iteration
+  #       desc_sorted = true
+  #     else
+  #       desc_sorted = false
+  #     end
+  #   end
+  #   assert_equal desc_sorted, true
+  #
+  #   ------
+  #
+  #   movie1 = Movie.create(name: "Life of Pi", ranking: 2)
+  #   movie2 = Movie.create(name: "Big", ranking: 1)
+  #   movie3 = Movie.create(name: "Jurassic Park", ranking: 5)
+  #   movie4 = Movie.create(name: "Zootopia", ranking: 0)
+  #   movie5 = Movie.create(name: "Finding Nemo", ranking: 3)
+  #
+  #   assert Person.all.index(albert) < Person.all.index(xavier)
+  #
+  #   ______
+  #
+  #   assert movies.all.each_cons(2).all?{ |i,j| i.ranking >= j.ranking }
+  # end
+
   test "(show) should show the requested movie record" do
     movie_id = movies(:top_gun).id
     get :show, { id: movie_id }

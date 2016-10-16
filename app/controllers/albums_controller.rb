@@ -2,6 +2,7 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = Album.all
+    @albums = @albums.order(ranking: :desc)
   end
 
   def show

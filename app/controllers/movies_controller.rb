@@ -2,6 +2,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @movies = @movies.order(ranking: :desc)
   end
 
   def show
