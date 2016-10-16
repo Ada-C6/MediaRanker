@@ -1,13 +1,66 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
-  description: MyString
-  rank: 1
+Pulp_Fiction:
+  name: Pulp_Fiction
+  director: Quentin Tarantino
+  description: Blood
 
-two:
-  name: MyString
-  director: MyString
-  description: MyString
-  rank: 1
+Jackie_Brown:
+  name: Jackie_Brown
+  director: Quentin Tarantino
+  description: more blood
+
+Inglorious_Basterds:
+  name: Inglorious_Basterds
+  director: Quentin Tarantino
+  description: even more blood
+
+Kill_Bill_vol_1:
+  name: Kill_Bill_vol_1
+  director: Quentin Tarantino
+  description: so much blood
+
+Kill_Bill_vol_2:
+  name: Kill_Bill_vol_2
+  director: Quentin Tarantino
+  description: literally buckets of blood
+
+Reservoir_Dogs:
+  name: Reservoir_Dogs
+  director: Quentin Tarantino
+  description: a fair amount of blood
+
+The_Breakfast_Club:
+  name: The_Breakfast_Club
+  director: John Hughes
+  description: molly ringwald
+
+Sixteen_Candles:
+  name: Sixteen_Candles
+  director: John Hughes
+  description: more molly ringwald
+
+Ferris_Buellers_Day_Off:
+  name: Ferris_Buellers_Day_Off
+  director: John Hughes
+  description: playing hookey = awesome
+
+Uncle_Buck:
+  name: Uncle_Buck
+  director: John Hughes
+  description: RIP John Candy
+
+Shes_Having_A_Baby:
+  name: Shes_Having_A_Baby
+  director: John Hughes
+  description: Six degrees of Kevin Bacon
+
+Spirited_Away:
+  name: Spirited_Away
+  director: Hayao Miyazaki
+  description: parents = pigs
+
+Ponyo:
+  name: Ponyo
+  director: Hayao Miyazaki
+  description: a better little mermaid
