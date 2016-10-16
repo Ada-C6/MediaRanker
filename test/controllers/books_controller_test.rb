@@ -14,7 +14,6 @@ class BooksControllerTest < ActionController::TestCase
     assert_raises ActiveRecord::RecordNotFound do
       Book.find(book_id)
     end
-
     get :show, { id: book_id }
     assert_response :not_found
   end
@@ -23,7 +22,6 @@ class BooksControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_template :new
-
     book = assigns(:book)
     assert_not_nil book
     assert_nil book.name
@@ -34,7 +32,6 @@ class BooksControllerTest < ActionController::TestCase
       post_params = { book: { name: "Hello", author: "Goodbye"}}
       post :create, post_params
     end
-
     assert_redirected_to books_path
   end
 
@@ -52,7 +49,6 @@ class BooksControllerTest < ActionController::TestCase
     assert_response :success
     assert_template 'books/edit'
     assert_template partial: '_form', count: 1
-
     book = assigns(:book)
     assert_not_nil book
     assert_not_nil book.name
@@ -60,11 +56,9 @@ class BooksControllerTest < ActionController::TestCase
 
   test "should update an existing book with valid new inputs" do
     book = books(:anna_karenina)
-
     assert_no_difference('Book.count') do
       patch :update, id: book.id, book: { name: "Hello Billy" }
     end
-
     assert book.reload
     assert_equal "Hello Billy", book.name
 
@@ -74,11 +68,9 @@ class BooksControllerTest < ActionController::TestCase
 
   test "cannot update a book without valid inputs and will render the 'edit' form" do
     book = books(:anna_karenina)
-
     assert_no_difference('Book.count') do
       patch :update, id: book.id, book: { name: nil }
     end
-
     assert book.reload
     assert_template :edit
     assert_response :success
@@ -86,7 +78,9 @@ class BooksControllerTest < ActionController::TestCase
 
   test "should change the value of the 'ranked' data field when call the 'upvote' method" do
     book = books(:the_prince)
-    patch :upvote, id: book.id
+    assert_difference('Book.find(book.id).ranked', 1) do
+      patch :upvote, id: book.id
+    end
     assert book.save
     assert_redirected_to book_path(book.id)
     assert_response :redirect

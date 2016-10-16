@@ -14,7 +14,6 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_raises ActiveRecord::RecordNotFound do
       Album.find(album_id)
     end
-
     get :show, { id: album_id }
     assert_response :not_found
   end
@@ -23,7 +22,6 @@ class AlbumsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_template :new
-
     album = assigns(:album)
     assert_not_nil album
     assert_nil album.name
@@ -34,7 +32,6 @@ class AlbumsControllerTest < ActionController::TestCase
       post_params = { album: { name: "Hello", artist: "Goodbye"}}
       post :create, post_params
     end
-
     assert_redirected_to albums_path
   end
 
@@ -52,7 +49,6 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :success
     assert_template 'albums/edit'
     assert_template partial: '_form', count: 1
-
     album = assigns(:album)
     assert_not_nil album
     assert_not_nil album.name
@@ -60,25 +56,20 @@ class AlbumsControllerTest < ActionController::TestCase
 
   test "should update an existing album with valid new inputs" do
     album = albums(:red)
-
     assert_no_difference('Album.count') do
       patch :update, id: album.id, album: { name: "Hello Billy" }
     end
-
     assert album.reload
     assert_equal "Hello Billy", album.name
-
     assert_redirected_to album_path(album.id)
     assert_response :redirect
   end
 
   test "cannot update a album without valid inputs and will render the 'edit' form" do
     album = albums(:red)
-
     assert_no_difference('Album.count') do
       patch :update, id: album.id, album: { name: nil }
     end
-
     assert album.reload
     assert_template :edit
     assert_response :success
@@ -86,7 +77,9 @@ class AlbumsControllerTest < ActionController::TestCase
 
   test "should change the value of the 'ranked' data field when call the 'upvote' method" do
     album = albums(:miracle)
-    patch :upvote, id: album.id
+    assert_difference('Album.find(album.id).ranked', 1) do
+      patch :upvote, id: album.id
+    end
     assert album.save
     assert_redirected_to album_path(album.id)
     assert_response :redirect

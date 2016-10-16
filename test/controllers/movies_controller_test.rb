@@ -14,7 +14,6 @@ class MoviesControllerTest < ActionController::TestCase
     assert_raises ActiveRecord::RecordNotFound do
       Movie.find(movie_id)
     end
-
     get :show, { id: movie_id }
     assert_response :not_found
   end
@@ -23,7 +22,6 @@ class MoviesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_template :new
-
     movie = assigns(:movie)
     assert_not_nil movie
     assert_nil movie.name
@@ -34,7 +32,6 @@ class MoviesControllerTest < ActionController::TestCase
       post_params = { movie: { name: "Hello", director: "Goodbye"}}
       post :create, post_params
     end
-
     assert_redirected_to movies_path
   end
 
@@ -52,7 +49,6 @@ class MoviesControllerTest < ActionController::TestCase
     assert_response :success
     assert_template 'movies/edit'
     assert_template partial: '_form', count: 1
-
     movie = assigns(:movie)
     assert_not_nil movie
     assert_not_nil movie.name
@@ -60,25 +56,20 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "should update an existing movie with valid new inputs" do
     movie = movies(:titanic)
-
     assert_no_difference('Movie.count') do
       patch :update, id: movie.id, movie: { name: "Hello Billy" }
     end
-
     assert movie.reload
     assert_equal "Hello Billy", movie.name
-
     assert_redirected_to movie_path(movie.id)
     assert_response :redirect
   end
 
   test "cannot update a movie without valid inputs and will render the 'edit' form" do
     movie = movies(:titanic)
-
     assert_no_difference('Movie.count') do
       patch :update, id: movie.id, movie: { name: nil }
     end
-
     assert movie.reload
     assert_template :edit
     assert_response :success
@@ -86,7 +77,9 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "should change the value of the 'ranked' data field when call the 'upvote' method" do
     movie = movies(:shawshank_redemption)
-    patch :upvote, id: movie.id
+    assert_difference('Movie.find(movie.id).ranked', 1) do
+      patch :upvote, id: movie.id
+    end
     assert movie.save
     assert_redirected_to movie_path(movie.id)
     assert_response :redirect
