@@ -21,3 +21,7 @@ h3 {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
+.heading {
+  border-bottom: 1px black solid;
+}

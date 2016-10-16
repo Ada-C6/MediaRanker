@@ -1,29 +1,31 @@
-<p>
-  TOP MOVIES
-<% @movies.each do |movie| %>
-<%= "#{movie.rank}" %>
-  <%= link_to("#{movie.title}", movie_path(movie)) %>
-<% end %>
-</p>
+<main class="row small-up-3">
+  <section class="column">
+    <p class="heading">TOP MOVIES</p>
+    <% @movies.each do |movie| %>
+      <p><%= link_to("#{movie.title}", movie_path(movie)) %>
+      <%= "Ranked: #{movie.rank}" %></p>
+    <% end %>
 
-<p>
-  TOP BOOKS
-<% @books.each do |book| %>
-<%= "#{book.rank}" %>
-  <%= link_to("#{book.title}", book_path(book)) %>
-<% end %>
-</p>
+    <p><%= link_to("See all movies", movies_path, method: :get) %></p>
+  </section>
 
-<p>
-  TOP ALBUMS
-<% @albums.each do |album| %>
-<%= "#{album.rank}" %>
-  <%= link_to("#{album.title}", album_path(album)) %>
-<% end %>
-</p>
+  <section class="column">
+    <p class="heading">TOP BOOKS</p>
+      <% @books.each do |book| %>
+        <p><%= link_to("#{book.title}", book_path(book)) %>
+        <%= "Ranked: #{book.rank}" %></p>
+      <% end %>
 
+    <p><%= link_to("See all books", books_path, method: :get) %></p>
+  </section>
 
+  <section class="column">
+    <p class="heading">TOP ALBUMS</p>
+      <% @albums.each do |album| %>
+        <p><%= link_to("#{album.title}", album_path(album)) %>
+        <%= "Ranked: #{album.rank}" %></p>
+      <% end %>
 
-<%= link_to("See all movies", movies_path, method: :get) %>
-<%= link_to("See all books", books_path, method: :get) %>
-<%= link_to("See all albums", albums_path, method: :get) %>
+    <p><%= link_to("See all albums", albums_path, method: :get) %></p>
+  </section>
+</main>
