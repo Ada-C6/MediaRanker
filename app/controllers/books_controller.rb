@@ -9,7 +9,6 @@ class BooksController < ApplicationController
 
     def create
         @book = Book.new(book_params)
-        @book.votes = 0
         if @book.save  # successful
             redirect_to books_path
         else  # unsuccessful, return to form with instance variables poplulated
