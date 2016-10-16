@@ -19,6 +19,9 @@ class MoviesController < ApplicationController
 
   def new
     @new_item = Movie.new
+    @name = :name
+    @person = :director
+    @description = :description
 
   end
 
@@ -32,6 +35,9 @@ class MoviesController < ApplicationController
   def edit
     @id = params[:id]
     @this_item = Movie.find(params[:id])
+    @name = :name
+    @person = :director
+    @description = :description
 
   end
 

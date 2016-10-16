@@ -7,10 +7,9 @@
     </div>
     <div class="row">
       <h4 class="small-12">Rank: <%=@this_item.rank%></h4>
-
-    </div>
       <p class="small-12"><%=@description%></p>
       <p class="small-12"><%= button_to "Vote", @show, method: :patch %><p>
+    </div>
   </section>
 
   <div class="row">

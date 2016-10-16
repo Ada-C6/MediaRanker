@@ -5,7 +5,7 @@
       <li>Top 10 Movies</li>
       <ul>
         <% @movies.each do |item| %>
-        <li><%= link_to item.name, show_movie_path(item) %></li>
+        <li><%= link_to item.name, show_movie_path(item) %><small>Ranked: <%=item.rank%></small></li>
         <% end %>
       </ul>
       <p><small><%=link_to "View All", movies_path%></small></p>
@@ -14,7 +14,7 @@
       <li>Top 10 Books</li>
       <ul>
         <% @books.each do |item| %>
-        <li><%= link_to item.title, show_book_path(item) %></li>
+        <li><%= link_to item.title, show_book_path(item) %><small>Ranked: <%=item.rank%></small></li>
         <% end %>
       </ul>
       <p><small><%=link_to "View All", books_path%></small><p>
@@ -23,7 +23,7 @@
       <li>Top 10 Albums</li>
       <ul>
         <% @albums.each do |item| %>
-        <li><%= link_to item.name, show_album_path(item) %></li>
+        <li><%= link_to item.name, show_album_path(item) %><small>Ranked: <%=item.rank%></small></li>
         <% end %>
       </ul>
       <p><small><%=link_to "View All", albums_path%></small></p>

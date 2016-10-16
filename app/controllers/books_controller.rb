@@ -19,6 +19,9 @@ class BooksController < ApplicationController
 
   def new
     @new_item = Book.new
+    @name = :title
+    @person = :author
+    @description = :description
 
   end
 
@@ -32,6 +35,9 @@ class BooksController < ApplicationController
   def edit
     @id = params[:id]
     @this_item = Book.find(params[:id])
+    @name = :title
+    @person = :author
+    @description = :description
 
   end
 

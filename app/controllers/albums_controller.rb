@@ -19,6 +19,9 @@ class AlbumsController < ApplicationController
 
   def new
     @new_item = Album.new
+    @name = :name
+    @person = :artist
+    @description = :description
 
   end
 
@@ -32,6 +35,9 @@ class AlbumsController < ApplicationController
   def edit
     @id = params[:id]
     @this_item = Album.find(params[:id])
+    @name = :name
+    @person = :artist
+    @description = :description
 
   end
 
