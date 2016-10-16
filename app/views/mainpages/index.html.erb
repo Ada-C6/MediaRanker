@@ -4,7 +4,7 @@
       <% @movies.each do |movie| %>
         <h2>
           <%= link_to movie.name, movie_path(movie.id) %>
-           <small>Ranked:</small>
+           <small>Ranked:<%= movie.ranked %></small>
         </h2>
       <% end %>
     <p>
@@ -17,7 +17,7 @@
   <% @books.each do |book| %>
     <h2>
       <%= link_to book.name, book_path(book.id) %>
-      <small>Ranked:</small>
+      <small>Ranked:<%= book.ranked %></small>
    </h2>
   <% end %>
   <p><%= link_to "View More Books", books_path %></p>
@@ -28,7 +28,7 @@
     <% @albums.each do |album| %>
   <h2>
     <%= link_to album.name, album_path(album.id) %>
-    <small>Ranked:</small>
+    <small>Ranked:<%= album.ranked %></small>
   </h2>
     <% end %>
     <p><%= link_to "View More Albums", albums_path %></p>

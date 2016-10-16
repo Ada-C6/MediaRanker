@@ -5,6 +5,14 @@ valid_data:
   ranked: 10
 
 missing_name:
+  name: book 2
   author: Louis Sachar
   description: Book Descreption 1
   ranked: 10
+
+too_many_des_words:
+  name: book 3
+  author: author 3
+  description: R r r r r r r r r r r  r r r re aereaw ere war we are war are ewr areer arer areear ar err rea
+               Rer erer erer erer ere r ere erer erer erer erer erere rere erere reer  rerer rerer  rer rer  rer rerer  erer
+  ranked: 8

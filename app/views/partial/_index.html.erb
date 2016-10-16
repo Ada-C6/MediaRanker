@@ -1,0 +1,21 @@
+
+<table class="table"  style="width:100%">
+<thead class="table-head">
+<tr>
+  <th>Ranking</th>
+  <th>Name</th>
+  <th>Upvote</th>
+</tr>
+</thead>
+
+<tbody class="table-body">
+  <% medias.each do |media|  %>
+  <tr>
+    <td>Rank: <%= media.ranked %> </td>
+    <td><%=link_to "#{media.name}", polymorphic_url(media)%></td>
+    <td><%= link_to "Upvote", polymorphic_path([media, :upvote]), method: :patch%><td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+<%= link_to "View All Media", root_path %>

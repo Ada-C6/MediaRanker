@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   root 'mainpages#index'
-  resources :movies
-  resources :albums
-  resources :books
+  get '/index' => 'mainpages#index'
+
+  resources :movies do
+    patch 'upvote'
+  end
+
+  resources :albums do
+    patch 'upvote'
+  end
+
+  resources :books do
+    patch 'upvote'
+  end
 end

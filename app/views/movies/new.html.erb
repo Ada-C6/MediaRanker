@@ -1,9 +1,1 @@
-<%= form_for @movie, url: {action: "create"} do |f| %>
-<p><%= f.label :Name  %></p>
-<p><%= f.text_field :name %></p>
-<p><%= f.label :Director  %></p>
-<p><%= f.text_field :director %></p>
-<p><%= f.label :Description  %></p>
-<p><%= f.text_field :description %></p>
-<p> <%= f.submit "Save" %></p>
-<% end %>
+<%= render partial: "/partial/form", locals: {midia: @movie, director: :director} %>

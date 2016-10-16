@@ -1,15 +1,1 @@
-<p>
-  books show
-</p>
-
-<h1>
-  <%= @book.name  %>
-  <small>Written by: <%= @book.author %> </small>
-</h1>
-<h4>Ranked:</h4>
-<p><%= @book.description %></p>
-<p id="upvote"><%= button_to "Upvote" %></p>
-<p class="buttons"><%= link_to "Edit #{@book.name}", edit_book_path %>
-<%= link_to "Delete", book_path, method: :delete, data: {confirm: "Are you sure?"} %>
-<%= link_to "View All Books", books_path, method: :get %>
-<%= link_to "View All Media", root_path, method: :get %> </p>
+<%= render partial: "/partial/show", locals: {media: @book, director: @book.author} %>
