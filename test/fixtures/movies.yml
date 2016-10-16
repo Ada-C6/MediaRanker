@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 Pulp_Fiction:
-  name: Pulp_Fiction
+  name:
   director: Quentin Tarantino
   description: Blood
 
 Jackie_Brown:
   name: Jackie_Brown
-  director: Quentin Tarantino
+  director:
   description: more blood
 
 Inglorious_Basterds:

@@ -2,11 +2,11 @@
 
 HP_one:
   name: HP_one
-  author: J.K. Rowling
+  author:
   description: Awesome
 
 HP_two:
-  name: HP_two
+  name:
   author: J.K. Rowling
   description: Great
 

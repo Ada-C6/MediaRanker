@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 Elton_one:
-  name: Elton_one
+  name:
   artist: Elton John
   description: Awesome
 
 Elton_two:
   name: Elton_two
-  artist: Elton John
+  artist:
   description: Great
 
 Phil_Collins_one:
