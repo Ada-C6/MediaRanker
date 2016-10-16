@@ -59,16 +59,17 @@ footer {
   padding: 1% 0% 5% 1%;
 }
 
-footer p {
+/*footer p {
   color: #1A1F16;
   float: right;
+  font-size:
   padding: 2% 1% 1% 0%
-}
+}*/
 
-div.footer-icon img {
+/*div.footer-icon img {
   width: 4%;
   float: right;
-}
+}*/
 
 /*WELCOME PAGE*/
 ul {
