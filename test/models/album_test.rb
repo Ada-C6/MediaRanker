@@ -25,4 +25,15 @@ class AlbumTest < ActiveSupport::TestCase
     assert album2.valid?
   end
 
+  test "When a new album is created, rank is 0" do
+    album = albums(:Phil_Collins_one)
+    assert album.rank == 0
+  end
+
+  test "When a new album is created, rank isn't something besides 0" do
+    album = albums(:Smashing_Pumpkins_one)
+    assert_not album.rank == rand(1..2000)
+    assert_not album.rank == rand(-2000..-1)
+  end
+
 end

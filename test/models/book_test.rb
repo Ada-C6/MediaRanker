@@ -24,4 +24,15 @@ class BookTest < ActiveSupport::TestCase
     assert book2.valid?
   end
 
+  test "When a new book is created, rank is 0" do
+    book = books(:HP_seven)
+    assert book.rank == 0
+  end
+
+  test "When a new book is created, rank isn't something besides 0" do
+    book = books(:HP_six)
+    assert_not book.rank == rand(1..2000)
+    assert_not book.rank == rand(-2000..-1)
+  end
+
 end
