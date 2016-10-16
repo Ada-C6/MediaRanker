@@ -13,15 +13,14 @@ class MovieTest < ActiveSupport::TestCase
   end
 
   test "Create two albums with different names" do
-    movie1 = Movie.create!(name: "Boo!")
+    Movie.create!(name: "Boo!")
     movie2 = Movie.new(name: "Moo!")
     assert movie2.valid?
   end
 
   test "Should reject an movie with a name that already exists" do
-    movie1 = Movie.create!(name: "Boo!")
+    Movie.create!(name: "Boo!")
     movie2 = Movie.new(name: "Boo!")
     assert_not movie2.valid?
   end
-
 end
