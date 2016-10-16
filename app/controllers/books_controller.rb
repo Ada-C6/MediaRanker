@@ -33,10 +33,8 @@ class BooksController < ApplicationController
 
     if request.patch?
       @book.upvote
-    elsif
-      @book.update(book_params)
     else
-      return "Book did not upvote or update"
+      @book.update(book_params)
     end
 
     if @book.save

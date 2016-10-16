@@ -84,7 +84,13 @@ class BooksControllerTest < ActionController::TestCase
     assert_equal Book.find(book.id).title, "Tycho"
     assert_redirected_to book_path(book.id)
   end
-  #
+
+  test "should render edit page if update does not save and does not save empty string" do
+    book = books(:the_girls)
+    put :update, id: book.id, book: {title: ""}
+    assert_template :edit
+  end
+
   test "upvote should increase ranked by one and not change any other attributes" do
     fix_book = books(:matilda)
     assert_difference('Book.find(fix_book.id).ranked', 1) do
