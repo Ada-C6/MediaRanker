@@ -2,13 +2,13 @@
 
 LIVE heroku app: https://media-vote.herokuapp.com/
 
-Built only one model media instead of four, with movies, albums and books as subclasses.
-Used single table inheritance to reorganize models.
-Used faker gem to generate databases.
-Built rake task to generate database in heroku.
-Used after_initialize method in model to ensure model objects are properly initialized(votes - 0; director/author/artist - "").
-Built basic tests on model, controller and views.
-Custom layout design. Used css framework foundation grids enabling the app available across browsers.
+1. Built only one model media instead of four, with movies, albums and books as subclasses.
+  - Used single table inheritance to reorganize models.
+2. Used faker gem to generate databases.
+  - Built rake task to generate database in heroku.
+3. Used after_initialize method in model to ensure model objects are properly initialized(votes - 0; director/author/artist - "").
+4. Built basic tests on model, controller and views.
+5. Custom layout design. Used css framework foundation grids enabling the app available across browsers.
 
 ---
 
