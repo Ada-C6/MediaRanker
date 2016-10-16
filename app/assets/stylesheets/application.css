@@ -23,9 +23,28 @@ h3 {
 }
 
 .heading {
-  border-bottom: 1px black solid;
+  border-bottom: 1px lightgrey solid;
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 
 .error {
   color: red;
+}
+
+.heading-title {
+  font-size: 2.5em;
+}
+
+header {
+  border-bottom: 1px lightgrey solid;
+}
+
+#title {
+  font-size: 2em;
+}
+
+#creator {
+  font-size: 1.5em;
+  padding-top: .5em;
 }

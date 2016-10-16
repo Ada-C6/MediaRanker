@@ -1,7 +1,7 @@
 <main>
   <article class="row">
-    <p class="small-4 columns">Title: <%= @album.title %></p>
-    <p class="small-4 columns">Artist: <%= @album.artist %></p>
+    <p id="title" class="small-4 columns">Title: <%= @album.title %></p>
+    <p id="creator" class="small-4 columns">Artist: <%= @album.artist %></p>
     <p class="small-12 columns">Votes: <%= @album.rank %></p>
     <p class="small-12 columns">Description: <%= @album.description %></p>
     <p class="small-12 columns"><%= link_to("Upvote", album_upvote_path, class: "small warning button", method: :patch) %></p>

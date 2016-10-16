@@ -1,7 +1,7 @@
 <main>
   <article class="row">
-    <p class="small-4 columns">Title: <%= @book.title %></p>
-    <p class="small-4 columns">Author: <%= @book.author %></p>
+    <p id="title" class="small-4 columns">Title: <%= @book.title %></p>
+    <p id="creator" class="small-4 columns">Author: <%= @book.author %></p>
     <p class="small-12 columns">Votes: <%= @book.rank %></p>
     <p class="small-12 columns">Description: <%= @book.description %></p>
     <p class="small-12 columns"><%= link_to("Upvote", book_upvote_path, class: "small warning button", method: :patch) %></p>

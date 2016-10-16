@@ -6,7 +6,7 @@
       <%= "Votes: #{movie.rank}" %></p>
     <% end %>
 
-    <p><%= link_to("See all movies", movies_path, method: :get) %></p>
+    <p><%= link_to("See all movies", movies_path, class: "hollow button", method: :get) %></p>
   </section>
 
   <section class="column">
@@ -16,7 +16,7 @@
         <%= "Votes: #{book.rank}" %></p>
       <% end %>
 
-    <p><%= link_to("See all books", books_path, method: :get) %></p>
+    <p><%= link_to("See all books", books_path, class: "hollow button", method: :get) %></p>
   </section>
 
   <section class="column">
@@ -26,6 +26,6 @@
         <%= "Votes: #{album.rank}" %></p>
       <% end %>
 
-    <p><%= link_to("See all albums", albums_path, method: :get) %></p>
+    <p><%= link_to("See all albums", albums_path, class: "hollow button", method: :get) %></p>
   </section>
 </main>
