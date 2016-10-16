@@ -1,0 +1,11 @@
+pulp_fiction:
+  name: Pulp Fiction
+  director: Quentin Tarantino
+  description: Travolta and Thurman dance
+  upvotes: 1
+
+the_usual_suspects:
+  name: The Usual Suspects
+  director: Bryan Singer
+  description: Keyser Soze
+  upvotes: 1

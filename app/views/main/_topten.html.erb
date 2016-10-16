@@ -1,0 +1,12 @@
+<div class="column">
+  <h2>Top <%= "#{ type.capitalize }" %></h2>
+  <% media.each_with_index do |m, i| %>
+    <% if i == 10 %>
+      <% break %>
+    <% else %>
+      <h3><%= link_to "#{ m.name }", url_for(m) %></h3>
+      <h4><%= "Ranked: #{ m.upvotes }" %></h4>
+    <% end %>
+  <% end %>
+  <h6><%= link_to "View More #{ type.capitalize }", url_for(type) %></h6>
+</div>

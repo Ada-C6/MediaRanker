@@ -1,0 +1,7 @@
+<div class="row small-up-1 medium-up-1 large-up-3">
+  <%= render partial: 'topten', locals: { media: @movies, type: "movies" } %>
+
+  <%= render partial: 'topten', locals: { media: @books, type: "books" } %>
+
+  <%= render partial: 'topten', locals: { media: @albums, type: "albums" } %>
+</div>

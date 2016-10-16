@@ -1,0 +1,30 @@
+require 'test_helper'
+
+class AlbumTest < ActiveSupport::TestCase
+
+  test "Can create an album with valid data" do
+    album = Album.new(name: "Ten", artist: "Pearl Jam", description: "90s grunge")
+    assert album.valid?
+  end
+
+  test "Cannot create two albums with the same title and artist" do
+    album1 = Album.create!(name: "Ten", artist: "Pearl Jam", description: "90s grunge")
+    album2 = Album.new(name: "Ten", artist: "Pearl Jam", description: "90s grunge rock")
+    assert_not album2.valid?
+    assert_includes album2.errors, :name
+  end
+
+  test "Can create two albums with different titles" do
+    album1 = Album.create!(name: "Ten", artist: "Pearl Jam", description: "90s grunge")
+    album2 = Album.new(name: "No Code", artist: "Pearl Jam", description: "90s grunge rock")
+    assert album2.valid?
+  end
+
+  test "Cannot create an album with missing information" do
+    album = Album.new
+    assert_not album.valid?
+    assert_includes album.errors, :name
+    assert_includes album.errors, :artist
+    assert_includes album.errors, :description
+  end
+end

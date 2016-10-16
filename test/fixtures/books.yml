@@ -1,0 +1,11 @@
+we_the_living:
+  name: We The Living
+  author: Ayn Rand
+  description: Being a Libertarian
+  upvotes: 1
+
+one_fish_two_fish:
+  name: One Fish Two Fish
+  author: Dr. Seuss
+  description: Kid book with fish
+  upvotes: 1

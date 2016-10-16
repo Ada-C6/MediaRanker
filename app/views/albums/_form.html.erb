@@ -1,0 +1,20 @@
+<% if @album.errors.any? %>
+  <ul class="errors">
+    <% @album.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @album do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :artist %>
+  <%= f.text_field :artist %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit "Save", :class => "buttons" %>
+<% end %>

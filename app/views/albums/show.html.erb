@@ -1,0 +1,2 @@
+<h2 class="media-name"><%= "#{ @album.name }" %></h2> <h3 class="media-creator">Recorded by: <%= "#{ @album.artist }" %></h3>
+<%= render partial: '/layouts/show', locals: { media: @album, type: "albums" } %>

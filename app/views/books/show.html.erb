@@ -1,0 +1,2 @@
+<h2 class="media-name"><%= "#{ @book.name }" %></h2> <h3 class="media-creator">Written by: <%= "#{ @book.author }" %></h3>
+<%= render partial: '/layouts/show', locals: { media: @book, type: "books" } %>

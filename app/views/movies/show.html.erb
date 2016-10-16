@@ -1,0 +1,2 @@
+<h2 class="media-name"><%= "#{ @movie.name }" %></h2> <h3 class="media-creator">Directed by: <%= "#{ @movie.director }" %></h3>
+<%= render partial: '/layouts/show', locals: { media: @movie, type: "movies" } %>

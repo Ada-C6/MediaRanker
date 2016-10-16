@@ -13,3 +13,91 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('foundation.css');
+
+html {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body {
+  padding: 0 3%;
+}
+
+header {
+  margin: 40px 0 20px 0;
+  border-bottom: 1px solid #eee;
+  background-image: url("/assets/owl.jpg");
+  background-repeat: no-repeat;
+}
+
+.header-text {
+  margin-left: 150px;
+}
+
+.ranking-header-text {
+  margin-left: 4px;
+}
+
+/*Once the line "Ranking the best of everything" can't appear on one line, it jumps
+down to the next line, leaving room to see the background image*/
+@media only screen and (max-width: 69em) {
+  /* Note: img will still be loaded, but not shown */
+  .ranking-header-text { margin-left: 150px; }
+}
+
+/*These three styles mimic the link and text appearance on the original inspiration page*/
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2d689b;
+  text-decoration: underline;
+}
+
+h3, h4 {
+  color: #777;
+}
+
+/*This forces block elements to appear next to each other*/
+li, .media-name, .media-creator {
+  display: inline-block;
+}
+
+/*Buttons on each media item's page except for upvote*/
+.list-of-buttons {
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+/*All buttons that are neither upvote nor delete*/
+.buttons {
+  border-radius: 5px;
+  background-color: lightgrey;
+  margin-bottom: 5px;
+}
+
+.buttons:hover {
+  background-color: grey;
+}
+
+.upvote-button {
+  background-color: purple;
+  color: white;
+  border-radius: 45%;
+  padding: 5px;
+}
+
+.upvote-button:hover {
+  background-color: hotpink;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.errors {
+  color: red;
+}
