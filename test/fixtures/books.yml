@@ -4,4 +4,70 @@ valid_book:
   rank: 0 # I assign this here because a value is assigned by the controller. Next time I should assign a default value of 0 in the migration so it isn't nil by default
   description: "This isn't required, but I will put it in just to have a full entry"
 
-# all other test data written inline because it is invalid data
+jazz:
+  title: "Jazz"
+  author: "Jazz historian"
+  rank: 45
+
+
+country:
+  title: "Country"
+  author: "Country historian"
+  rank: 43
+
+
+rock_and_roll:
+  title: "Rock & Roll"
+  author: "Rock & Roll historian"
+  rank: 41
+
+
+metal:
+  title: "Metal"
+  author: "Metal historian"
+  rank: 42
+
+funk:
+  title: "Funk"
+  author: "Funk historian"
+  rank: 40
+
+classical:
+  title: "Classical"
+  author: "Classical historian"
+  rank: 44
+
+
+reggae:
+  title: "Reggae"
+  author: "Reggae historian"
+  rank: 37
+
+
+k_pop:
+  title: "K-Pop"
+  author: "K-Pop historian"
+  rank: 38
+
+
+big_band:
+  title: "Big Band"
+  author: "Big Band historian"
+  rank: 39
+
+childrens:
+  title: "Children's"
+  author: "Children's historian"
+  rank: 1
+
+
+r_and_b:
+  title: "R&B"
+  author: "R&B historian"
+  rank: 36
+
+
+blues:
+  title: "Blues"
+  author: "Blues historian"
+  rank: 3

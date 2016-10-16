@@ -2,6 +2,71 @@ valid_album:
   title: "Valid Album"
   artist: "A really great artist"
   rank: 0 # I assign this here because a value is assigned by the controller. Next time I should assign a default value of 0 in the migration so it isn't nil by default
-  description: "This isn't required, but I will put it in just to have a full entry"
 
-# all other test data written inline because it is invalid data
+jazz:
+  title: "Jazz"
+  artist: "Jazz musician"
+  rank: 45
+
+
+country:
+  title: "Country"
+  artist: "Country musician"
+  rank: 43
+
+
+rock_and_roll:
+  title: "Rock & Roll"
+  artist: "Rock & Roll musician"
+  rank: 41
+
+
+metal:
+  title: "Metal"
+  artist: "Metal musician"
+  rank: 42
+
+funk:
+  title: "Funk"
+  artist: "Funk musician"
+  rank: 40
+
+classical:
+  title: "Classical"
+  artist: "Classical musician"
+  rank: 44
+
+
+reggae:
+  title: "Reggae"
+  artist: "Reggae musician"
+  rank: 37
+
+
+k_pop:
+  title: "K-Pop"
+  artist: "K-Pop musician"
+  rank: 38
+
+
+big_band:
+  title: "Big Band"
+  artist: "Big Band musician"
+  rank: 39
+
+childrens:
+  title: "Children's"
+  artist: "Children's musician"
+  rank: 1
+
+
+r_and_b:
+  title: "R&B"
+  artist: "R&B musician"
+  rank: 36
+
+
+blues:
+  title: "Blues"
+  artist: "Blues musician"
+  rank: 3

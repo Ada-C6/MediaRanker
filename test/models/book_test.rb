@@ -42,4 +42,21 @@ class BookTest < ActiveSupport::TestCase
     assert book.save
     assert_equal book.rank, 1, "Rank value did not increase by 1"
   end
+
+  test "self.order_descending should order the books highest to lowest" do
+    ordered = Book.order_descending
+
+    assert_equal "Jazz", ordered[0].title
+    assert_equal "Classical", ordered[1].title
+    assert_equal "Valid Book", ordered.last.title
+  end
+
+  test "self.top_ten should return only 10 highest books in order" do
+    top = Book.top_ten
+
+    assert_equal 10, top.length
+    assert_equal "Jazz", top[0].title
+    assert_equal "R&B", top.last.title
+  end
+
 end

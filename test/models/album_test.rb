@@ -42,4 +42,20 @@ class AlbumTest < ActiveSupport::TestCase
     assert album.save
     assert_equal album.rank, 1, "Rank value did not increase by 1"
   end
+
+  test "self.order_descending should order the albums highest to lowest" do
+    ordered = Album.order_descending
+
+    assert_equal "Jazz", ordered[0].title
+    assert_equal "Classical", ordered[1].title
+    assert_equal "Valid Album", ordered.last.title
+  end
+
+  test "self.top_ten should return only 10 highest albums in order" do
+    top = Album.top_ten
+
+    assert_equal 10, top.length
+    assert_equal "Jazz", top[0].title
+    assert_equal "R&B", top.last.title
+  end
 end

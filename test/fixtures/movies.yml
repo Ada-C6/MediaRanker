@@ -4,4 +4,70 @@ valid_movie:
   rank: 0
   description: "This isn't required, but I will put it in just to have a full entry"
 
-# all other test data written inline because it is invalid data
+jazz:
+  title: "Jazz"
+  director: "Jazz music enthusiast"
+  rank: 45
+
+
+country:
+  title: "Country"
+  director: "Country music enthusiast"
+  rank: 43
+
+
+rock_and_roll:
+  title: "Rock & Roll"
+  director: "Rock & Roll music enthusiast"
+  rank: 41
+
+
+metal:
+  title: "Metal"
+  director: "Metal music enthusiast"
+  rank: 42
+
+funk:
+  title: "Funk"
+  director: "Funk music enthusiast"
+  rank: 40
+
+classical:
+  title: "Classical"
+  director: "Classical music enthusiast"
+  rank: 44
+
+
+reggae:
+  title: "Reggae"
+  director: "Reggae music enthusiast"
+  rank: 37
+
+
+k_pop:
+  title: "K-Pop"
+  director: "K-Pop music enthusiast"
+  rank: 38
+
+
+big_band:
+  title: "Big Band"
+  director: "Big Band music enthusiast"
+  rank: 39
+
+childrens:
+  title: "Children's"
+  director: "Children's music enthusiast"
+  rank: 1
+
+
+r_and_b:
+  title: "R&B"
+  director: "R&B music enthusiast"
+  rank: 36
+
+
+blues:
+  title: "Blues"
+  director: "Blues music enthusiast"
+  rank: 3

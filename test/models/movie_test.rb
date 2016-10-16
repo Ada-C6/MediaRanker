@@ -43,4 +43,20 @@ class MovieTest < ActiveSupport::TestCase
     assert movie.save
     assert_equal movie.rank, 1, "Rank value did not increase by 1"
   end
+
+  test "self.order_descending should order the movies highest to lowest" do
+    ordered = Movie.order_descending
+
+    assert_equal "Jazz", ordered[0].title
+    assert_equal "Classical", ordered[1].title
+    assert_equal "Valid Movie", ordered.last.title
+  end
+
+  test "self.top_ten should return only 10 highest movies in order" do
+    top = Movie.top_ten
+
+    assert_equal 10, top.length
+    assert_equal "Jazz", top[0].title
+    assert_equal "R&B", top.last.title
+  end
 end
