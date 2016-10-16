@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+/*############################*/
+/*#           HEADER         #*/
+/*############################*/
+
+header{
+  text-align: center;
+  border-bottom: 2px solid #eee;
+}
+.header_str{
+  font-family:"Black Ops One";
+  color: #ff6666;
+  width: 30%;
+  font-size: 3rem;
+  /*text-transform: uppercase;*/
+  /*border-bottom: 1px solid #eee;*/
+  /*margin-left: 3%;*/
+}
+
+/*.owl_pic{
+  float: left;
+  width: 15%;
+  height: 15%;
+  z-index: -1;
+}*/
+
+/*main{
+  position: relative;
+  top: -2.5rem;
+  background-color: white;
+}*/
+/*############################*/
+/*#;           INDEX          #*/
+/*############################*/
+.index_title{
+  font-family: "Play";
+  border-bottom:2px solid black;
+  /*text-transform: uppercase;*/
+  color: grey;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+
+}
+
+.list_title a{
+  font-family: "Play";
+  font-size: 1.5rem;
+  color: black;
+}
+.list_rank{
+  color: grey;
+}
+
+/*############################*/
+/*#;           SHOW          #*/
+/*############################*/
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}

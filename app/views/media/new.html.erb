@@ -6,7 +6,7 @@
     <article class="form">
     <%= form_for @medium, url: medium_create_path do |f| %>
 
-      <%= render partial: "form_#{@medium_type}", locals: {:f => f} %>
+      <%= render partial: "form", locals: {:f => f} %>
 
     <% end %>
   </article>

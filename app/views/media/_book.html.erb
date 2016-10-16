@@ -1,4 +1,9 @@
 <div>
+  <p class="list_title">
     <%= link_to book.name, medium_show_path(book.id) %>
-    Ranked:<%= book.votes %>
+
+    <small class="list_rank">
+      Ranked:<%= book.votes %>
+    </small>
+  </p>
 </div>

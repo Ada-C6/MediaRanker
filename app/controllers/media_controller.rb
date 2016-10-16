@@ -21,8 +21,8 @@ class MediaController < ApplicationController
       return render :file => "#{Rails.root}/public/404.html", :status => 404
     end
 
-    type = @medium.type.downcase
-    return render("show_#{type}")
+    @type = @medium.type.downcase.to_sym
+    return render "show"
   end
 
 
@@ -30,7 +30,6 @@ class MediaController < ApplicationController
     @medium_type = params[:type]
     model_class = type_to_model(@medium_type)
     @medium = model_class.new
-    return render 'new'
   end
 
   def create

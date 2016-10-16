@@ -1,0 +1,31 @@
+    <ul>
+      <li>
+        <%= f.label "Title:" %>
+        <%= f.text_field :name, :class => "name" %>
+      </li>
+
+      <li>
+        <% if @medium.director != nil %>
+          <%= f.label "Director:" %>
+          <%= f.text_field :director, :class => "director" %>
+        <% end %>
+
+        <% if @medium.author != nil %>
+          <%= f.label "Author:" %>
+          <%= f.text_field :author, :class => "author" %>
+        <% end %>
+
+        <% if @medium.artist != nil %>
+          <%= f.label "Artist:" %>
+          <%= f.text_field :artist, :class => "artist" %>
+        <% end %>
+      </li>
+
+      <li>
+        <%= f.label "Description:" %>
+        <%= f.text_field :description, :class => "description" %>
+      </li>
+
+    </ul>
+
+    <%= f.submit 'Save'%>

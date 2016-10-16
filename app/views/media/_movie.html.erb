@@ -1,4 +1,8 @@
 <div>
-    <%= link_to movie.name, medium_show_path(movie.id) %>
-    Ranked:<%= movie.votes %>
+    <p class="list_title">
+      <%= link_to movie.name, medium_show_path(movie.id) %>
+      <small class="list_rank">
+        Ranked:<%= movie.votes %>
+      </small>
+    </p>
 </div>

@@ -1,4 +1,9 @@
 <div>
-  <%= link_to album.name, medium_show_path(album.id) %>
-  Ranked:<%= album.votes %>
+  <p class="list_title">
+    <%= link_to album.name, medium_show_path(album.id) %>
+    <small class="list_rank">
+      Ranked:<%= album.votes %>
+    </small>
+  </p>
+
 </div>
