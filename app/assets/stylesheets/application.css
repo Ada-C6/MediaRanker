@@ -1,6 +1,22 @@
 @import url('foundation.css');
 
+h1 {
+  font-size: 5em;
+  text-align: left;
+  text-decoration: underline;
+}
 
+div a, p a {
+  padding-right: 15px;
+}
+
+p.links, div.links {
+  margin-top: 15px;
+}
+
+.red{
+  background-color: #e84630;
+}
 
 
 /*

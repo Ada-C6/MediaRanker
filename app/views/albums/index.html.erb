@@ -1,10 +1,6 @@
 <%= render partial: "layouts/display_table", locals: {items: @albums, title: "These are all the albums:"} %>
-<div class="row">
-<p class="column small-12 medium-2 large-2">
-<%= link_to "Add a new album", new_album_path %>
-</p>
 
-<p class="column small-12 medium-1 large-1 end">
-<%= link_to "Home", root_path %>
-</p>
+<div class="links">
+<%= link_to "Add a new album", new_album_path, class: "button" %>
+<%= link_to "Home", root_path, class: "button" %>
 </div>
