@@ -2,7 +2,7 @@
   <article class="row">
     <p class="small-4 columns">Title: <%= @book.title %></p>
     <p class="small-4 columns">Author: <%= @book.author %></p>
-    <p class="small-12 columns">Rank: <%= @book.rank %></p>
+    <p class="small-12 columns">Votes: <%= @book.rank %></p>
     <p class="small-12 columns">Description: <%= @book.description %></p>
     <p class="small-12 columns"><%= button_to("Upvote", book_upvote_path, method: :patch) %></p>
   </article>

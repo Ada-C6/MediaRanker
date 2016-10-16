@@ -2,7 +2,7 @@
   <article class="row">
     <p class="small-4 columns">Title: <%= @album.title %></p>
     <p class="small-4 columns">Artist: <%= @album.artist %></p>
-    <p class="small-12 columns">Rank: <%= @album.rank %></p>
+    <p class="small-12 columns">Votes: <%= @album.rank %></p>
     <p class="small-12 columns">Description: <%= @album.description %></p>
     <p class="small-12 columns"><%= button_to("Upvote", album_upvote_path, method: :patch) %></p>
   </article>

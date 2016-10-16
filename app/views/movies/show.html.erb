@@ -2,7 +2,7 @@
   <article class="row">
     <p class="small-4 columns">Title: <%= @movie.title %></p>
     <p class="small-4 columns">Directed by: <%= @movie.director %></p>
-    <p class="small-12 columns">Rank: <%= @movie.rank %></p>
+    <p class="small-12 columns">Votes: <%= @movie.rank %></p>
     <p class="small-12 columns">Description: <%= @movie.description %></p>
     <p class="small-12 columns"><%= button_to("Upvote", movie_upvote_path, method: :patch) %></p>
   </article>

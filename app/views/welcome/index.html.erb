@@ -3,7 +3,7 @@
     <p class="heading">TOP MOVIES</p>
     <% @movies.each do |movie| %>
       <p><%= link_to("#{movie.title}", movie_path(movie)) %>
-      <%= "Ranked: #{movie.rank}" %></p>
+      <%= "Votes: #{movie.rank}" %></p>
     <% end %>
 
     <p><%= link_to("See all movies", movies_path, method: :get) %></p>
@@ -13,7 +13,7 @@
     <p class="heading">TOP BOOKS</p>
       <% @books.each do |book| %>
         <p><%= link_to("#{book.title}", book_path(book)) %>
-        <%= "Ranked: #{book.rank}" %></p>
+        <%= "Votes: #{book.rank}" %></p>
       <% end %>
 
     <p><%= link_to("See all books", books_path, method: :get) %></p>
@@ -23,7 +23,7 @@
     <p class="heading">TOP ALBUMS</p>
       <% @albums.each do |album| %>
         <p><%= link_to("#{album.title}", album_path(album)) %>
-        <%= "Ranked: #{album.rank}" %></p>
+        <%= "Votes: #{album.rank}" %></p>
       <% end %>
 
     <p><%= link_to("See all albums", albums_path, method: :get) %></p>
