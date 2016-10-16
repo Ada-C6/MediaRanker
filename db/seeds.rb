@@ -5,9 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first).
-
-require 'csv'
-
-CSV.read("seed_csvs/movies.csv").each do |t|
-  Movie.create(id: t[0], name: t[1], director: t[2], description: t[3])
-end
