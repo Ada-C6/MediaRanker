@@ -52,7 +52,7 @@ class MediaController < ApplicationController
 
     @medium.save
 
-    return redirect_to action: 'show', id: @medium.id
+    return redirect_to action: 'all', type: @medium.type
     # else
     #   return render :status => 400
     # end

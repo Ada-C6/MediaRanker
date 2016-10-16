@@ -101,6 +101,27 @@ main{
   border-color: #285e8e;
 }*/
 
+/*############################*/
+/*#;           FORMS         #*/
+/*############################*/
+.full_page{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form_title{
+  text-align: left;
+  font-family: "Play";
+  padding-left: 8%;
+  font-size: 2rem;
+}
+
+.form li{
+  font-family: "Play";
+  padding-left: 5%;
+  padding-right: 5%;
+  list-style-type: none;
+}
 
 /*############################*/
 /*#;           SHOW          #*/

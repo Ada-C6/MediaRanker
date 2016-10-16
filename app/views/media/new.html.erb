@@ -1,9 +1,9 @@
-<section>
-  <header>
-    <h1> Add New <%= @medium_type %></h1>
-  </header>
+<section class="full_page">
 
-    <article class="form">
+    <h4 class="form_title"> Add New <%= @medium_type %></h4>
+
+
+    <article>
     <%= form_for @medium, url: medium_create_path do |f| %>
 
       <%= render partial: "form", locals: {:f => f} %>

@@ -1,4 +1,4 @@
-    <ul>
+    <ul class="form">
       <li>
         <%= f.label "Title:" %>
         <%= f.text_field :name, :class => "name" %>
@@ -26,6 +26,7 @@
         <%= f.text_field :description, :class => "description" %>
       </li>
 
+      <li>
+        <%= f.submit 'Save'%>
+      </li>
     </ul>
-
-    <%= f.submit 'Save'%>
