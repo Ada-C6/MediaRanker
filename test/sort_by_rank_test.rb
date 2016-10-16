@@ -18,7 +18,7 @@ class SortByRankTest < ActiveSupport::TestCase
   end
 
   test "Sort By Rank should change nil rank points to 0" do
-    movie = Movie.create(name: "movietwo", director: "allison", rank_points: nil)
+    movie = @collection[1]
     sort_by_rank(movie)
     assert_equal 0, movie.rank_points
   end
