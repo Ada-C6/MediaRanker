@@ -1,0 +1,15 @@
+<h2>Viewing All <%= media_type %> </h2>
+
+<article class="row">
+  <h3 class="large-4 columns"> Ranking </h3>
+  <h3 class="large-4 columns">Name </h3>
+  <h3 class="large-4 columns">Upvote </h3>
+  <% all_media.each do |media| %>
+  <section>
+    <p class="large-4 columns"><%= "#{media.ranking}" %>  </p>
+    <p class="large-4 columns"><%=  link_to "#{media.name}", media %>  </p>
+    <!-- <p class="large-4 columns"><%# button_to "UPVOTE", upvote_media_path(media), method: :patch, class: "upvote-button" %> </p> -->
+  </section>
+  <% end %>
+</article>
+<%= link_to "View All Media", root_path%>
