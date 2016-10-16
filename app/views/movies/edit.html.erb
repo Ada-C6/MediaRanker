@@ -8,7 +8,7 @@
         <% end %>
       <% end %>
     </section>
-    
+
     <h3>New Movie</h3>
 
     <%= form_for @movie do |f| %>
@@ -21,7 +21,7 @@
       <p class="small-11"><%= f.label :description, "Description:" %>
       <%= f.text_field :description %></p>
 
-      <p><%= f.submit "Save" %></p>
+      <p><%= f.submit "Save", class: "secondary hollow button" %></p>
     <% end %>
   </article>
 </main>

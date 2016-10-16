@@ -4,13 +4,13 @@
     <p class="small-4 columns">Author: <%= @book.author %></p>
     <p class="small-12 columns">Votes: <%= @book.rank %></p>
     <p class="small-12 columns">Description: <%= @book.description %></p>
-    <p class="small-12 columns"><%= button_to("Upvote", book_upvote_path, method: :patch) %></p>
+    <p class="small-12 columns"><%= link_to("Upvote", book_upvote_path, class: "small warning button", method: :patch) %></p>
   </article>
 
-  <nav>
-    <p><%= button_to("Edit this book", edit_book_path, method: :get) %></p>
-    <p><%= button_to("Delete this book", book_path, method: :delete, data: { confirm: 'Are you sure you want to delete this?' }) %></p>
-    <p><%= button_to("View all books", books_path, method: :get) %></p>
-    <p><%= button_to("View all media", root_path, method: :get) %></p>
+  <nav class="row small-up-7">
+      <p class="column"><%= link_to("Edit this book", edit_book_path, class: "hollow button", method: :get) %></p>
+      <p class="column"><%= link_to("Delete this book", book_path, class: "hollow button", method: :delete, data: { confirm: 'Are you sure you want to delete this?' }) %></p>
+      <p class="column"><%= link_to("View all books", books_path, class: "hollow button", method: :get) %></p>
+      <p class="column"><%= link_to("View all media", root_path, class: "hollow button", method: :get) %></p>
   </nav>
 </main>
