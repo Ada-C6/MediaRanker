@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AlbumsControllerTest < ActionController::TestCase
   setup do
-    @album = albums(:album_5)
+    @album = albums(:album_7)
   end
 
   test "should get index" do
