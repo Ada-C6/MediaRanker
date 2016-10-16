@@ -1,21 +1,26 @@
-<h2 class='index-header'>Top Albums.</h2>
-<table>
-  <tr>
-    <th># of Votes</th>
-    <th>Album Name</th>
-    <th>UpVote</th>
-  </tr>
+<main>
+  <h2 class='index-header'>Top Albums.</h2>
 
-  <% @albums_by_rank.each do | album | %>
-    <tr>
-        <td><%= album.rank %></td>
-        <td><%= link_to "#{album.name}", album_path(album.id) %></td>
-        <td><%= button_to "UpVote", upvote_album_path(album.id), method: :patch %></td>
-    </tr>
-  <% end  %>
-</table>
+  <div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th># of Votes</th>
+        <th>Album Name</th>
+        <th>UpVote</th>
+      </tr>
 
-<section>
-  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
-  <%= link_to "Add an Album", new_album_path, method: :get, :class => 'button' %>
-</section>
+      <% @albums_by_rank.each do | album | %>
+        <tr>
+            <td><%= album.rank %></td>
+            <td><%= link_to "#{album.name}", album_path(album.id) %></td>
+            <td><%= button_to "UpVote", upvote_album_path(album.id), method: :patch %></td>
+        </tr>
+      <% end  %>
+    </table>
+
+    <section class="small-12 medium-12 columns">
+      <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+      <%= link_to "Add an Album", new_album_path, method: :get, :class => 'button' %>
+    </section>
+  </div>
+</main>

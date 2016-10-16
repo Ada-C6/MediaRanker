@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MediaRanker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <header>
-    <h1><%= link_to "Media Ranker", welcome_index_path%></h1>
-  </header>
+  <head>
+    <title>MediaRanker</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= image_tag 'headphones.jpg'%>
+      <h1><%= link_to "Media Ranker", welcome_index_path%></h1>
+      <!-- <ul class="row small-up-1" >
+        <li class='header-icon column'><%= image_tag 'movie.png' %></li>
+        <li class='header-icon column'><%= image_tag 'book.png' %></li>
+        <li class='header-icon column end'><%= image_tag 'album.png' %></li>
+      </ul> -->
+    </header>
 
-  <%= yield %>
+    <%= yield %>
 
-  <footer>
-
-  </footer>
-</body>
+    <footer>
+      <p>
+        <div class="footer-icon">
+          <!-- <%= image_tag 'movie.png' %>
+          <%= image_tag 'book.png' %>
+          <%= image_tag 'album.png' %> -->
+          <%= image_tag 'headphones.jpg'%>
+          <p>&copy;MediaRanker<%= Time.now.year %></p>
+        </div>
+      </p>
+    </footer>
+  </body>
 </html>

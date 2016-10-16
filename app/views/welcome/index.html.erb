@@ -1,54 +1,56 @@
-<h2 class='index-header'>Check out our Top Hits:</h2>
+<main>
+  <h2 class='index-header'>Check out our Top Hits:</h2>
 
-<ul class="row small-up-1 medium-up-2 large-up-3" >
-  <li class="column">
-    <table>
-      <tr>
-        <th><h3>Top Movies:</h3></th>
-      </tr>
+  <ul class="row small-up-1 medium-up-2 large-up-3" >
+    <li class="column">
+      <table>
+        <tr>
+          <th><h3>Top Movies:</h3></th>
+        </tr>
 
-      <% 3.times do | i | %>
-      <tr>
-          <td><%= link_to "#{@movies_by_rank[i].name}", movie_path(@movies_by_rank[i].id) %><%= " (Votes: #{@movies_by_rank[i].rank})" %></td>
-      </tr>
-      <% end %>
-      <tr>
-        <td><%= link_to "See More Movies...", movies_path, method: :get %></td>
-      </tr>
-    </table>
-  </li>
+        <% @movies_by_rank.each do | movie | %>
+        <tr>
+            <td><%= link_to "#{movie.name}", movie_path(movie.id) %><%= " (Votes: #{movie.rank})" %></td>
+        </tr>
+        <% end %>
+        <tr>
+          <td><%= link_to "See More Movies...", movies_path, method: :get %></td>
+        </tr>
+      </table>
+    </li>
 
-  <li class="column">
-    <table>
-      <tr>
-        <th><h3>Top Books:</h3></th>
-      </tr>
+    <li class="column">
+      <table>
+        <tr>
+          <th><h3>Top Books:</h3></th>
+        </tr>
 
-      <% 3.times do | i | %>
-      <tr>
-          <td><%= link_to "#{@books_by_rank[i].name}", book_path(@books_by_rank[i].id) %><%= " (Votes: #{@books_by_rank[i].rank})" %></td>
-      </tr>
-      <% end %>
-      <tr>
-        <td><%= link_to "See More Books...", books_path, method: :get %></td>
-      </tr>
-    </table>
-  </li>
+        <% @books_by_rank.each do | book | %>
+        <tr>
+            <td><%= link_to "#{book.name}", book_path(book.id) %><%= " (Votes: #{book.rank})" %></td>
+        </tr>
+        <% end %>
+        <tr>
+          <td><%= link_to "See More Books...", books_path, method: :get %></td>
+        </tr>
+      </table>
+    </li>
 
-  <li class="column">
-    <table>
-      <tr>
-        <th><h3>Top Albums:</h3></th>
-      </tr>
+    <li class="column">
+      <table>
+        <tr>
+          <th><h3>Top Albums:</h3></th>
+        </tr>
 
-      <% 3.times do | i | %>
-      <tr>
-          <td><%= link_to "#{@albums_by_rank[i].name}", album_path(@albums_by_rank[i].id) %><%= " (Votes: #{@albums_by_rank[i].rank})" %></td>
-      </tr>
-      <% end %>
-      <tr>
-        <td><%= link_to "See More Albums...", albums_path, method: :get %></td>
-      </tr>
-    </table>
-  </li>
-</ul>
+        <% @albums_by_rank.each do | album | %>
+        <tr>
+            <td><%= link_to "#{album.name}", album_path(album.id) %><%= " (Votes: #{album.rank})" %></td>
+        </tr>
+        <% end %>
+        <tr>
+          <td><%= link_to "See More Albums...", albums_path, method: :get %></td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+</main>

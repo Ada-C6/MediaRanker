@@ -1,22 +1,26 @@
-<h2 class='index-header'>Top Movies.</h2>
+<main>
+  <h2 class='index-header'>Top Movies.</h2>
 
-<table>
-  <tr>
-    <th># of Votes</th>
-    <th>Movie Name</th>
-    <th>UpVote</th>
-  </tr>
+  <div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th># of Votes</th>
+        <th>Movie Name</th>
+        <th>UpVote</th>
+      </tr>
 
-  <% @movies_by_rank.each do | movie | %>
-    <tr>
-        <td><%= movie.rank %></td>
-        <td><%= link_to "#{movie.name}", movie_path(movie.id) %></td>
-        <td><%= button_to "UpVote", upvote_movie_path(movie.id), method: :patch %></td>
-    </tr>
-  <% end  %>
-</table>
+      <% @movies_by_rank.each do | movie | %>
+        <tr>
+            <td><%= movie.rank %></td>
+            <td><%= link_to "#{movie.name}", movie_path(movie.id) %></td>
+            <td><%= button_to "UpVote", upvote_movie_path(movie.id), method: :patch %></td>
+        </tr>
+      <% end  %>
+    </table>
 
-<section class="small-6 medium-6 columns">
-  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
-  <%= link_to "Add a Movie", new_movie_path, method: :get, :class => 'button' %>
-</section>
+    <section class="small-12 medium-12 columns index-links">
+      <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+      <%= link_to "Add a Movie", new_movie_path, method: :get, :class => 'button' %>
+    </section>
+  </div>
+</main>

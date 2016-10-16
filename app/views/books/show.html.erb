@@ -1,21 +1,33 @@
-<%# name, title, rank, description  %>
-<h1><%= "#{ @book.name }" %></h1>
+<main>
+  <%# name, title, rank, description  %>
+  <div class="row">
+    <h2 class='small-12 medium-12 columns'>
+      <%= "#{ @book.name }" %>
+    </h2>
+  </div>
 
-<h3><%= "Written by: #{ @book.author }" %></h3>
-<section>
-  <h4><%= "# of Votes: #{ @book.rank }" %></h4>
-  <h4><%= "Description: #{ @book.description }" %></h4>
-</section>
+  <div class="row">
+    <h3 class="small-12 medium-12 columns">
+      <%= "Written by: #{ @book.author }" %>
+    </h3>
 
-<%# buttons: edit, delete, upvote, view all movies, view all media  %>
-<section>
-  <%= link_to "UpVote", upvote_book_path(@book.id), method: :patch, :class => 'link-button' %>
+    <section class="small-12 medium-12 columns">
+      <h4><%= "# of Votes: #{ @book.rank }" %></h4>
+      <h4 class= 'description'><%= "Description: #{ @book.description }" %></h4>
+    </section>
 
+    <%# buttons: edit, delete, upvote, view all books, view all media  %>
+    <section class="small-10 medium-10 columns upvote-edit-delete">
+      <%= link_to "UpVote", upvote_book_path(@book.id), method: :patch, :class => 'link-button' %>
 
-  <%= link_to "Edit", edit_book_path(@book.id), method: :get, :class => 'link-button' %>
-  <%= link_to "Delete", book_path(@book.id), method: :delete, :class => 'link-button',
-        data: {confirm: "Are you sure you want to delete permanently?"}%>
+      <%= link_to "Edit", edit_book_path(@book.id), method: :get, :class => 'link-button' %>
+      <%= link_to "Delete", book_path(@book.id), method: :delete, :class => 'link-button',
+            data: {confirm: "Are you sure you want to delete permanently?"}%>
+    </section>
 
-  <%= link_to "View all Books", books_path, method: :get, :class => 'button' %>
-  <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
-</section>
+    <section class="small-12 medium-12 columns">
+      <%= link_to "View all Books", books_path, method: :get, :class => 'button' %>
+      <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+    </section>
+  </div>
+</main>

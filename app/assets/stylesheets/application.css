@@ -2,8 +2,9 @@
 @import url('foundation.css');
 
 /*HEADER*/
-header { padding-left: 1%;
-  float: right;
+header {
+  padding-left: 1%;
+  float: left;
   background-color: #0093D1;
   width: 100%;
   margin-bottom: 1.5%;
@@ -12,19 +13,34 @@ header { padding-left: 1%;
 header h1 {
   display: inline-block;
   padding-right: 2%;
-  float: right;
+  padding-top: 2.5%;
 }
 
 header a {
   color: #1A1F16;
 }
 
-header img { width: 15%;
+header a:hover {
+  color: white;
+}
+
+header img {
+  width: 15%;
+  float: left;
+  padding: 0%;
+  display: inline-block;
+}
+
+div.header-icon {
   float: right;
 }
 
+/*body {
+  background-image: image('music-face.jpg')
+}*/
+
 h2.index-header {
-  clear: right;
+  clear: left;
   margin-top: 4%;
   color: #006495;
   padding-left: 2%
@@ -35,6 +51,23 @@ h2 {
   margin-top: 4%;
   color: #006495;
 
+}
+
+footer {
+  width: 100%;
+  background-color: #0093D1;
+  padding: 1% 0% 5% 1%;
+}
+
+footer p {
+  color: #1A1F16;
+  float: right;
+  padding: 2% 1% 1% 0%
+}
+
+div.footer-icon img {
+  width: 4%;
+  float: right;
 }
 
 /*WELCOME PAGE*/
@@ -63,7 +96,8 @@ h4.description {
 }
 
 .upvote-edit-delete {
-  margin-top: 4%;
+  margin-top: 3%;
+  margin-bottom: 1%;
 }
 
 a.link-button {
@@ -79,6 +113,16 @@ a.link-button {
   color: #FFF;
   padding: 8px 12px;
   text-decoration: none;
+}
+
+/*table formating*/
+th, td {
+    padding: 3%;
+    text-align: left;
+}
+
+table {
+  margin: 2%;
 }
 
 .form {
