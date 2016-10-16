@@ -1,0 +1,27 @@
+<h1>Top <%= category %></h1>
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+
+  <% @data.each do |d| %>
+    <% if category == "Books" %>
+      <% details = book_path(d) %>
+      <% upvote = upvote_book_path(d) %>
+    <% elsif category == "Movies" %>
+      <% details = movie_path(d) %>
+      <% upvote = upvote_movie_path(d) %>
+    <% elsif %>
+      <% details = album_path(d) %>
+      <% upvote = upvote_album_path(d) %>
+    <% end %>
+    <tr>
+      <td><%= "Ranked: #{d.ranking}" %></td>
+      <td><%= link_to d.name, details %></td>
+      <td><%= link_to "Upvote", upvote, method: :patch %></td>
+    </tr>
+  <% end %>
+
+</table>

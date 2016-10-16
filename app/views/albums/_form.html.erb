@@ -1,0 +1,26 @@
+<% if @album.errors.any? %>
+<div id="error_explanation">
+  <h3>Your changes were not saved:</h2>
+
+  <ul>
+    <% @album.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="form">
+  <%= form_for @album do |a| %>
+  <p><%= a.label "Name" %>
+    <%= a.text_field :name %></p>
+
+  <p><%= a.label "Artist" %>
+    <%= a.text_field :artist %></p>
+
+  <p><%= a.label "Description" %>
+    <%= a.text_field :description %></p>
+
+  <p><%= a.submit "Save" %></p>
+  <% end %>
+</div>

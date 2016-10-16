@@ -1,15 +1,76 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('foundation.css');
+
+
+header {
+  border-bottom: 1px solid	#D3D3D3;
+}
+
+header h1, h3 {
+  display: inline;
+  padding-bottom: 20px;
+}
+
+header img {
+  width: 10%;
+  min-width: 100px;
+  margin: 20px 5px 0 20px;
+  /*float: left;*/
+}
+
+.quick_links {
+  text-align: center;
+  padding: 20px;
+}
+
+table {
+  margin: 20px;
+  width: 100%;
+}
+
+table th {
+  font-size: 250%;
+  text-align: left;
+}
+
+table tbody {
+  border: none;
+}
+
+a {
+  color: #009900;
+  text-decoration: none;
+}
+
+.name a {
+  font-size: 125%;
+}
+
+a:hover {
+  color: #AAD2BA;
+  text-decoration: underline;
+}
+
+.button {
+  border: 1px solid	#D3D3D3;
+  background-color: white;
+}
+
+.button.delete {
+  background-color: #ff9999;
+}
+
+.button.upvote {
+  background-color: #99ccff;
+}
+
+.button:hover {
+  background-color: grey;
+}
+
+.form, .edit_form, .show_media, #media {
+  padding: 20px;
+}
+
+#error_explanation {
+  color: red;
+}

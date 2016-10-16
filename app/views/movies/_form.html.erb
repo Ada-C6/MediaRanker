@@ -1,0 +1,28 @@
+<% if @movie.errors.any? %>
+<div id="error_explanation">
+  <h3>Your changes were not saved:</h2>
+
+  <ul>
+    <% @movie.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="form">
+  <%= form_for @movie do |m| %>
+  <p><%= m.label "Name" %>
+  <%= m.text_field :name %></p>
+
+  <p><%= m.label "Director" %>
+  <%= m.text_field :director %></p>
+
+  <p><%= m.label "Description" %>
+  <%= m.text_field :description %></p>
+
+  <p>
+    <%= m.submit "Save" %>
+  </p>
+<% end %>
+</div>

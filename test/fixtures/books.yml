@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+pride_and_prejudice:
+  name: Pride And Prejudice
+  author: Jane Austen
+  description: is a classic
+  ranking: 0
+animal_farm:
+  name: Animal Farm
+  author: George Orwell
+  description:
+  ranking: 0
