@@ -1,4 +1,4 @@
-<h3><%= "#{@album.title}" %></h3>
+<h2><%= "#{@album.title}" %></h2>
 <h4><%= "Recorded by #{@album.musician}" %></h4>
 <p>
   <%= "#{@album.description}" %>
@@ -7,8 +7,6 @@
   <%= "Ranked: #{@album.vote}" %>
 </p>
 
-
-<p class="column small-12 medium-2 large-2">
 
 <%= form_for @album, method: :patch do |f|%>
   <%= f.hidden_field :vote, :value => @album.upvote %>
