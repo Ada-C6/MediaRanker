@@ -23,16 +23,13 @@
 header{
   text-align: center;
   border-bottom: 2px solid #eee;
+  padding-top: 3%;
 }
 .header_str{
   font-family:"Fredericka the Great","Black Ops One";
   color: #ff6666;
   width: 30%;
-  font-size: 4rem;
-  margin-top: 2rem;
-  /*text-transform: uppercase;*/
-  /*border-bottom: 1px solid #eee;*/
-  /*margin-left: 3%;*/
+  font-size: 150%;
 }
 
 .owl_pic{
