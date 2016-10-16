@@ -18,3 +18,13 @@ a.plain-button {
   color: red;
   display: inline;
 }
+
+.upvote-button {
+  display: block;
+
+}
+
+.text-stuff {
+  text-align: center;
+
+}

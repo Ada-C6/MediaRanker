@@ -36,4 +36,11 @@ class BooksControllerTest < ActionController::TestCase
     end
     assert_redirected_to books_path
   end
+
+  # test for create method
+  # test "should update a chosen book" do
+  #   book = books(:three)
+  #
+  #   assert_equal "new title", assigns(:three).name
+  # end
 end
