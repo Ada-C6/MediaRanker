@@ -3,16 +3,29 @@ require 'sort_by_rank.rb'
 include SortByRank
 
 class SortByRankTest < ActiveSupport::TestCase
-  # 
-  # test "The first in the list should be greater than the last" do
-  #   collect = [
-  #     Album.new(name:"Sdf", artist: "lskdjf", rank_points: 8),
-  #     Book.new(name:"sat", author: "sdsdf", rank_points: 6),
-  #     Movie.new(name: "k", director: "well", rank_points: 19)
-  #   ]
-  #
-  #   sort_by_rank(collect)
-  #
-  #   assert_operator collect[1].rank_points, :>,  collect[-1].rank_points
-  # end
+  setup do
+    @collection = [
+      Movie.create(name: "movieone", director: "jeff", rank_points: 0),
+      Movie.create(name: "movietwo", director: "allison", rank_points: nil),
+      Movie.create(name: "moviethree", director: "personface", rank_points: 1)
+    ]
+  end
+
+  test "The first in the list should be greater than or equal to the last" do
+    movies = sort_by_rank(@collection)
+
+    assert_operator movies[0].rank_points, :>=,  movies[-1].rank_points
+  end
+
+  test "Sort By Rank should change nil rank points to 0" do
+    movie = Movie.create(name: "movietwo", director: "allison", rank_points: nil)
+    sort_by_rank(movie)
+    assert_equal 0, movie.rank_points
+  end
+
+  test "Sort By Rank should work on a single record" do
+    assert_nothing_raised do
+      sort_by_rank(@collection[0])
+    end
+  end
 end
