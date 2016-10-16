@@ -19,7 +19,13 @@
   </small>
 </h3>
 
-<p class="detail_rank">VOTES: <%= @medium.votes %></p>
+
+  <p class="detail_rank">VOTES: <%= @medium.votes %></p>
+  <button class="btn_upvote">
+    <%= link_to "▲", medium_upvote_path(@medium.id) %>
+  </button>
+<div class="clear_both">
+</div>
 
 <p class="detail_des"><%= @medium.description %></p>
 
