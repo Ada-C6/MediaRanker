@@ -48,16 +48,16 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_equal album.id, album_id
   end
 
-  # test "doesn't show a non-existant album" do
-  #   album_id = 843
-  #   # Bogus album ID shouldn't be in the DB, otherwise test is invalid
-  #   assert_raises ActiveRecord::RecordNotFound do
-  #     Album.find(album_id)
-  #   end
-  #
-  #   get :show, { id: album_id }
-  #   assert_response :not_found
-  # end
+  test "doesn't show a non-existant album" do
+    album_id = 843
+    # Bogus album ID shouldn't be in the DB, otherwise test is invalid
+    assert_raises ActiveRecord::RecordNotFound do
+      Album.find(album_id)
+    end
+
+    get :show, { id: album_id }
+    assert_response :not_found
+  end
 
   test "edit should get the edit form for a album" do
     album_id = albums(:valid_album).id

@@ -48,16 +48,16 @@ class MoviesControllerTest < ActionController::TestCase
     assert_equal movie.id, movie_id
   end
 
-  # test "doesn't show a non-existant movie" do
-  #   movie_id = 843
-  #   # Bogus movie ID shouldn't be in the DB, otherwise test is invalid
-  #   assert_raises ActiveRecord::RecordNotFound do
-  #     Movie.find(movie_id)
-  #   end
-  #
-  #   get :show, { id: movie_id }
-  #   assert_response :not_found
-  # end
+  test "doesn't show a non-existant movie" do
+    movie_id = 843
+    # Bogus movie ID shouldn't be in the DB, otherwise test is invalid
+    assert_raises ActiveRecord::RecordNotFound do
+      Movie.find(movie_id)
+    end
+
+    get :show, { id: movie_id }
+    assert_response :not_found
+  end
 
   test "edit should get the edit form for a movie" do
     movie_id = movies(:valid_movie).id
