@@ -1,0 +1,9 @@
+<h1>Books</h1>
+
+<ul class = 'list'>
+<%  @book_list.each do |b| %>
+  <li><%= link_to "#{b.title}", book_path(b) %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add Book", new_book_path %>
