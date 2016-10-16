@@ -1,22 +1,24 @@
 <main>
-  <ul class="row small-up-3">
-    <li class="column">Rank</li>
-    <li class="column">Title</li>
-    <li class="column">Upvote</li>
-  </ul>
+  <div class="index-list">
+    <ul class="row small-up-3">
+      <li class="column">Rank</li>
+      <li class="column">Title</li>
+      <li class="column">Upvote</li>
+    </ul>
+  </div>
 
-  <ul class="row small-up-3">
-    <% @movies.each do |movie| %>
-      <li class="column"><%= "#{movie.rank}" %></li>
-      <li class="column"><%= link_to("#{movie.title}", movie_path(movie)) %></li>
-      <li class="column"><%= button_to("Upvote", movie_upvote_path(movie), method: :patch) %></li>
-    <% end %>
-  </ul>
+  <div class="index-list">
+    <ul class="row small-up-3">
+      <% @movies.each do |movie| %>
+        <li class="column"><%= "#{movie.rank}" %></li>
+        <li class="column"><%= link_to("#{movie.title}", movie_path(movie)) %></li>
+        <li class="column"><%= button_to("Upvote", movie_upvote_path(movie), method: :patch) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <nav>
+    <p><%= button_to("View all media", root_path, method: :get) %></p>
+    <p><%= button_to("Add a movie", new_movie_path, method: :get) %></p>
+  </nav>
 </main>
-
-<nav>
-  <ul>
-  <li><%= button_to("View all media", root_path, method: :get) %></li>
-  <li><%= button_to("Add a movie", new_movie_path, method: :get) %></li>
-</ul>
-</nav>
