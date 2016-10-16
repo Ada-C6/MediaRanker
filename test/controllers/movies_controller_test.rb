@@ -65,9 +65,9 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "upvotes will increase ranking by one" do
-    movie = movies(:the_usual_suspects)
-    post :vote, { id: movies(:the_usual_suspects).id }
-    assert_equal movie.upvotes, 1
+    post :vote, id: movies(:the_usual_suspects).id
+    movie = assigns(:movie)
+    assert_equal movie.upvotes, 2
   end
 
   test "cannot add invalid movie to DB" do

@@ -65,9 +65,9 @@ class AlbumsControllerTest < ActionController::TestCase
   end
 
   test "upvotes will increase ranking by one" do
-    album = albums(:mellon_collie)
-    post :vote, { id: albums(:mellon_collie).id }
-    assert_equal album.upvotes, 1
+    post :vote, id: albums(:mellon_collie).id
+    album = assigns(:album)
+    assert_equal album.upvotes, 2
   end
 
   test "cannot add invalid album to DB" do

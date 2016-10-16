@@ -65,9 +65,9 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "upvotes will increase ranking by one" do
-    book = books(:one_fish_two_fish)
-    post :vote, { id: books(:one_fish_two_fish).id }
-    assert_equal book.upvotes, 1
+    post :vote, id: books(:one_fish_two_fish).id
+    book = assigns(:book)
+    assert_equal book.upvotes, 2
   end
 
   test "cannot add invalid book to DB" do
