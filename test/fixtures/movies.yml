@@ -4,28 +4,28 @@ correct_movie:
   name: MyString
   director: MyString
   description: MyString
-  rank_points: 1
+  rank_points: 16
 
 without_a_name:
-  name:
+  name: MyString
   director: MyString
   description: MyString
-  rank_points: 1
+  rank_points: 11
 
 without_a_director:
   name: MyString
-  director:
+  director: MyString
   description: MyString
-  rank_points: 1
+  rank_points: 0
 
 without_a_description:
   name: MyString
   director: MyString
   description:
-  rank_points: 1
+  rank_points: -1
 
 without_rank_points:
   name: MyString
-  director:
+  director: MyString
   description: MyString
-  rank_points:
+  rank_points: 0

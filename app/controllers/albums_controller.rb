@@ -7,7 +7,7 @@ class AlbumsController < ApplicationController
   def index
     @albums = sort_by_rank(Album.all)
   end
-  
+
   def new
     @album = Album.new
   end
@@ -15,7 +15,7 @@ class AlbumsController < ApplicationController
   def create
     @album = Album.create!(album_params)
 
-    redirect_to albums_path
+    redirect_to album_path(@album)
   end
 
 
