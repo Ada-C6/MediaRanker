@@ -4,7 +4,12 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    begin
+      @book = Book.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => err
+      render file: "#{Rails.root}/public/404.html", layout: false, status: :not_found
+    end
+
   end
 
   def new
