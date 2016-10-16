@@ -4,7 +4,11 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
+    begin
+      @movie = Movie.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => err
+      render "/errors/not_found", status: :not_found
+    end
   end
 
   def new
@@ -27,7 +31,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(movie_params)
-      redirect_to movies_path
+      redirect_to movie_path(@movie.id)
     else
       render :edit
     end
