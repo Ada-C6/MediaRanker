@@ -16,7 +16,6 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
     # media starts out with zero and not nill upvotes.
     @movie.upvotes = 0
-
     if @movie.save
       redirect_to movie_path(@movie)
     else
