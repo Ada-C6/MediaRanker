@@ -1,0 +1,29 @@
+<% if item.errors.any? %>
+<ul>
+  <% item.errors.each do |column, message| %>
+  <li>
+    <%= column %>
+    <%= message %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for item, method: action_name do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<% if item.has_attribute?(:author) %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+<% elsif item.has_attribute?(:musician) %>
+  <%= f.label :musician %>
+  <%= f.text_field :musician %>
+<% else %>
+  <%= f.label :director %>
+  <%= f.text_field :director %>
+<% end %>
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.submit "Commit Changes" %>
+<% end %>

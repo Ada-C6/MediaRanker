@@ -1,0 +1,22 @@
+<h2><%= "#{@album.title}" %></h2>
+<h4><%= "Recorded by #{@album.musician}" %></h4>
+<p>
+  <%= "#{@album.description}" %>
+</p>
+<p>
+  <%= "Ranked: #{@album.vote}" %>
+</p>
+
+
+<%= form_for @album, method: :patch do |f|%>
+  <%= f.hidden_field :vote, :value => @album.upvote %>
+  <%= f.submit "Upvote!" %>
+<% end %>
+
+<div class="links">
+
+<%= link_to "Edit Album", edit_album_path, class: "button"%>
+<%= link_to "Delete this album!", album_path(@album), :class => ["button", "red"], :method =>'delete', data: { confirm: "Are you really sure?" } %>
+<%= link_to "Home", root_path, class: "button" %>
+<%= link_to "All Albums", albums_path, class: "button" %>
+</div>

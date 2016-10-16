@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Sir David Attenborough
+  author: MyString
+  description: MyString
+  vote: 1
+
+two:
+  title: Booky McBookface
+  author: MyString
+  description: MyString
+  vote: 37
+
+three:
+  title: Not clever
+  author: MyString
+  description: MyString
+  vote: 0

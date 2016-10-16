@@ -1,0 +1,21 @@
+<h2><%= "#{@movie.title}" %></h2>
+<h4><%= "Directed by #{@movie.director}" %></h4>
+<p>
+  <%= "#{@movie.description}" %>
+</p>
+<p>
+  <%= "Ranked: #{@movie.vote}" %>
+</p>
+
+
+<%= form_for @movie, method: :patch do |f|%>
+  <%= f.hidden_field :vote, :value => @movie.upvote %>
+  <%= f.submit "Upvote!" %>
+<% end %>
+
+<div class="links">
+<%= link_to "Edit Movie", edit_movie_path, class: "button" %>
+<%= link_to "Delete this movie!", movie_path(@movie), :class => ["button", "red"], :method =>'delete', data: { confirm: "Are you really sure?"} %>
+<%= link_to "Home", root_path, class: "button" %>
+<%= link_to "All Movies", movies_path, class: "button" %>
+</div>

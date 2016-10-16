@@ -1,0 +1,6 @@
+<%= render partial: "layouts/display_table", locals: {items: @movies, title: "These are all the movies:"} %>
+
+<div class="links">
+<%= link_to "Add a new movie", new_movie_path, class: "button" %>
+<%= link_to "Home", root_path, class: "button" %>
+</div>

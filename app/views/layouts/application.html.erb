@@ -2,13 +2,27 @@
 <html>
 <head>
   <title>MediaRanker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="row">
 
-<%= yield %>
 
+
+  <header>
+    <div class="row">
+      <div class="column small-12 medium-4 large-2">
+        <%= image_tag "capy.jpeg" %>
+      </div>
+      <div class="column small-12 medium-8 large-10">
+        <h1><%= link_to "Ultimate Media Ranker", root_path %></h1>
+      </div>
+  </div>
+  </header>
+  <main class="column small-12 medium-12 large-12">
+    <%= yield %>
+
+  </main>
 </body>
 </html>

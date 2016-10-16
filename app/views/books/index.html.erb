@@ -1,0 +1,6 @@
+<%= render partial: "layouts/display_table", locals: {items: @books, title: "These are all the books:"} %>
+
+<div class="links">
+<%= link_to "Add a new book", new_book_path, class: "button" %>
+<%= link_to "Home", root_path, class: "button" %>
+</div>

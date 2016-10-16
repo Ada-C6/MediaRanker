@@ -1,0 +1,22 @@
+<h2><%= "#{@book.title}" %></h2>
+<h4><%= "Written by #{@book.author}" %></h4>
+<p>
+  <%= "#{@book.description}" %>
+</p>
+<p>
+  <%= "Ranked: #{@book.vote}" %>
+</p>
+
+
+<%= form_for @book, method: :patch do |f|%>
+  <%= f.hidden_field :vote, :value => @book.upvote %>
+  <%= f.submit "Upvote!" %>
+<% end %>
+
+<div class="links">
+
+<%= link_to "Edit Book", edit_book_path, class: "button" %>
+<%= link_to "Delete this book!", book_path(@book), :class => ["button", "red"], :method =>'delete', data: { confirm: "Are you really sure?"} %>
+<%= link_to "Home", root_path, class: "button" %>
+<%= link_to "All Books", books_path, class: "button" %>
+</div>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Violin
+  musician: MyString
+  description: MyString
+  vote: 1
+
+two:
+  title: Cello
+  musician: MyString
+  description: MyString
+  vote: 13
+
+three:
+  title: Oboe
+  musician: MyWoodwind
+  description: toot toot toot
+  vote: 0

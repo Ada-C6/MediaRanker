@@ -1,3 +1,32 @@
+@import url('foundation.css');
+
+h1 {
+  font-size: 3em;
+  text-align: left;
+  text-decoration: underline;
+}
+
+h2 {
+  color: blue;
+}
+
+div a, p a {
+  padding-right: 15px;
+}
+
+p.links, div.links {
+  margin-top: 15px;
+}
+
+.red{
+  background-color: #e84630;
+}
+
+.floatleft {
+  float: left;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
