@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @movies = Movie.all.sort_by_rank
-    @books = Book.all.sort_by_rank
-    @albums = Album.all.sort_by_rank
+    @movies = Movie.all.order(:rank).reverse_order
+    @books = Book.all.order(:rank).reverse_order
+    @albums = Album.all.order(:rank).reverse_order
   end
 end
