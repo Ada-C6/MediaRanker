@@ -12,13 +12,13 @@
       <% @books.each do |book| %>
         <li class="column"><%= "#{book.rank}" %></li>
         <li class="column"><%= link_to("#{book.title}", book_path(book)) %></li>
-        <li class="column"><%= button_to("Upvote", book_upvote_path(book), method: :patch) %></li>
+        <li class="column"><%= link_to("Upvote", book_upvote_path(book), class: "small warning button", method: :patch) %></li>
       <% end %>
     </ul>
   </div>
 
-  <nav>
-    <p><%= button_to("View all media", root_path, method: :get) %></p>
-    <p><%= button_to("Add a book", new_book_path, method: :get) %></p>
+  <nav class="row small-up-6">
+    <p class="column"><%= link_to("View all media", root_path, class: "hollow button") %></p>
+    <p class="column"><%= link_to("Add a book", new_book_path, class: "hollow button") %></p>
   </nav>
 </main>
