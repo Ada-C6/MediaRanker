@@ -1,5 +1,14 @@
 <main>
   <article>
+    <section class="error">
+      <% if @book.errors.any? %>
+        <h4><%= "ERROR" %></h4>
+        <% @book.errors.each do |attribute, message| %>
+          <p><%="#{attribute.capitalize}: #{message}" %></p>
+        <% end %>
+      <% end %>
+    </section>
+
     <h3>New Book</h3>
 
     <%= form_for @book do |f| %>

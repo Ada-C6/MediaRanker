@@ -1,5 +1,14 @@
 <main>
   <article>
+    <section class="error">
+      <% if @movie.errors.any? %>
+        <h4><%= "ERROR" %></h4>
+        <% @movie.errors.each do |attribute, message| %>
+          <p><%="#{attribute.capitalize}: #{message}" %></p>
+        <% end %>
+      <% end %>
+    </section>
+    
     <h3>New Movie</h3>
 
     <%= form_for @movie do |f| %>

@@ -25,3 +25,7 @@ h3 {
 .heading {
   border-bottom: 1px black solid;
 }
+
+.error {
+  color: red;
+}
