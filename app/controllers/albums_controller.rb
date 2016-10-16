@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.all.order(:rank).reverse_order
+    @albums = Album.all.order('rank DESC NULLS LAST')
   end
 
   def show

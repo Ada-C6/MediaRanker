@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all.order(:rank).reverse_order
+    @movies = Movie.all.order('rank DESC NULLS LAST')
   end
 
   def show
