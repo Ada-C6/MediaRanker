@@ -3,6 +3,6 @@ class Album < ActiveRecord::Base
   validates :artist, presence: true
 
   def self.sort_by_rank
-    order('rank DESC')
+    order('rank')
   end
 end
