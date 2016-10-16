@@ -1,16 +1,12 @@
 require 'test_helper'
 
 class WelcomeControllerTest < ActionController::TestCase
-
-  test "should get index" do
-    get :index
-    assert_response :success
-
-  end
-
   test "index should display movies, books, and albums" do
     get :index
     assert_response :success
+    assert_template :index
+    assert_template partial: 'layouts/_media_list', count: 3
+
 
     movies = assigns(:movies)
     books  = assigns(:books)
