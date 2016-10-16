@@ -53,7 +53,7 @@ group :test do
   gem 'minitest-reporters'
 end
 
-# group :production do
-#   gem 'pg'
-#   gem 'rails_12factor'
-# end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
