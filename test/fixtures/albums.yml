@@ -20,6 +20,8 @@ Album_no_upvotes:
   name: Harry and the Potters Reprised Reprise
   artist: Harry and the Potters
   description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+  # upvotes are needed for the testing of the controller.  will set to nil in testing the model...
+  upvotes: 0
 
 Album_negative_upvotes:
   name: Harry and the Potters Suck

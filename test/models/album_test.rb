@@ -22,6 +22,7 @@ class AlbumTest < ActiveSupport::TestCase
 
   test "Cannot create an album with missing upvotes" do
     album = albums(:Album_no_upvotes)
+    album.upvotes = nil
 
     assert_not album.valid?
   end

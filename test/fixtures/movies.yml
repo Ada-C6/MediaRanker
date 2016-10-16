@@ -20,6 +20,8 @@ Movie_no_upvotes:
   name: Harry Potter
   director: JK Rowling
   description: Magic!!!!
+  # upvotes are needed for the testing of the controller.  will set to nil in testing the model...
+  upvotes: 0
 
 Movie_negative_upvotes:
   name: Harry Potter Sucks!

@@ -22,6 +22,7 @@ class MovieTest < ActiveSupport::TestCase
 
   test "Cannot create a movie with missing upvotes" do
     movie = movies(:Movie_no_upvotes)
+    movie.upvotes = nil
 
     assert_not movie.valid?
   end

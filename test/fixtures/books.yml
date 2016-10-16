@@ -20,6 +20,8 @@ Book_no_upvotes:
   name: Harry Potter
   author: JK Rowling
   description: Magic!!!!
+  # upvotes are needed for the testing of the controller.  will set to nil in testing the model...
+  upvotes: 0
 
 Book_negative_upvotes:
   name: Harry Potter Sucks!

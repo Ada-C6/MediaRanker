@@ -22,6 +22,7 @@ class BookTest < ActiveSupport::TestCase
 
   test "Cannot create a book with missing upvotes" do
     book = books(:Book_no_upvotes)
+    book.upvotes = nil
 
     assert_not book.valid?
   end
