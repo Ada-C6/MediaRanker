@@ -26,11 +26,11 @@ require 'faker'
 #     )
 # end
 
-6.times do
-   Movie.create(
-      name: Faker::Space.nebula,
-      director: Faker::GameOfThrones.character,
-      description: Faker::StarWars.quote,
-      type: "Movie",
-    )
-end
+# 15.times do
+#    Movie.create(
+#       name: Faker::Space.nebula,
+#       director: Faker::GameOfThrones.character,
+#       description: Faker::StarWars.quote,
+#       type: "Movie",
+#     )
+# end
