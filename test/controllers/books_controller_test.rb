@@ -18,11 +18,11 @@ class BooksControllerTest < ActionController::TestCase
     assert_equal book.id, book_id
   end
 
-  test "show an book that doesn't exist" do
+  test "show a book that doesn't exist" do
     book_id = 12345
 
     assert_raises ActiveRecord::RecordNotFound do
-      Album.find(book_id)
+      Book.find(book_id)
     end
 
     get :show, {id: book_id}
