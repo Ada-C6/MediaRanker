@@ -9,7 +9,7 @@
 5.times do
   Book.create(
   title: Faker::Book.title,
-  written_by: Faker::Book.author,
+  by: Faker::Book.author,
   description: Faker::ChuckNorris.fact,
   ranked: rand(50))
 end
@@ -17,7 +17,7 @@ end
 5.times do
   Movie.create(
   title: Faker::Book.title,
-  directed_by: Faker::Book.author,
+  by: Faker::Book.author,
   description: Faker::ChuckNorris.fact,
   ranked: rand(50))
 end
@@ -25,7 +25,7 @@ end
 5.times do
   Album.create(
   title: Faker::Book.title,
-  recorded_by: Faker::Book.author,
+  by: Faker::Book.author,
   description: Faker::ChuckNorris.fact,
   ranked: rand(50))
 end
