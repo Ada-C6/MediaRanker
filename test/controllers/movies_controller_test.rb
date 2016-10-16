@@ -34,15 +34,17 @@ class MoviesControllerTest < ActionController::TestCase
   end
 
   test "should get update" do
-    patch :update, {id: movies(:two).id, movie: {title: "The Grand Budapest Hotel", year: 2014, synopsis: "On my list"}}
+    patch :update, id: movies(:two), movie: {synopsis: "On my list"}
+    assert_equal "On my list", assigns(:movie).synopsis
     assert_response :redirect
   end
 
-  # test "should upvote" do
-  #   patch :upvote
-  #   assert_response :success
-  # end
-  #
+  test "should upvote" do
+    patch :upvote, id: movies(:one)
+    assert_equal 3, assigns(:movie).rank
+    assert_response :redirect
+  end
+
   test "should get destroy" do
     delete :destroy, {id: movies(:one).id}
     assert_response :redirect

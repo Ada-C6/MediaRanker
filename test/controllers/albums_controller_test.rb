@@ -34,16 +34,16 @@ class AlbumsControllerTest < ActionController::TestCase
   end
 
   test "should get update" do
-    patch :update, {id: albums(:one).id, album: {title: "Gossamer", artist: "Passion Pit", synopsis: "Noice"}}
+    patch :update, id: albums(:one), album: {synopsis: "Noice"}
+    assert_equal "Noice", assigns(:album).synopsis
     assert_response :redirect
   end
 
-  # test "should upvote" do
-  #   current_rank = albums(:two).rank
-  #   patch :upvote, {id: albums(:two).id}
-  #   assert_equal albums(:two).rank, current_rank + 1
-  #   assert_response :redirect
-  # end
+  test "should upvote" do
+    patch :upvote, id: albums(:two)
+    assert_equal 3, assigns(:album).rank
+    assert_response :redirect
+  end
 
   test "should get destroy" do
     delete :destroy, {id: albums(:one).id}

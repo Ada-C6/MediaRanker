@@ -34,15 +34,17 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "should get update" do
-    patch :update, {id: books(:one).id, book: {title: "Homeless Bird", author: "Gloria Whelan", synopsis: "Wonderful"}}
+    patch :update, id: books(:two), book: {synopsis: "Wonderful"}
+    assert_equal "Wonderful", assigns(:book).synopsis
     assert_response :redirect
   end
-  #
-  # test "should upvote" do
-  #   patch :upvote
-  #   assert_response :success
-  # end
-  #
+
+  test "should upvote" do
+    patch :upvote, id: books(:two)
+    assert_equal 2, assigns(:book).rank
+    assert_response :redirect
+  end
+
   test "should get destroy" do
     delete :destroy, {id: books(:one).id}
     assert_response :redirect
