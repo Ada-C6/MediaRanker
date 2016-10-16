@@ -1,11 +1,6 @@
 require 'test_helper'
 
 class MoviesControllerTest < ActionController::TestCase
-  # assert_response
-  # assert_redirected_to
-  # assert_template
-  # assert_difference
-
   test "show the requested movie" do
     movie_id = movies(:titanic).id
     get :show, {id: movie_id}
@@ -99,7 +94,9 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "can destroy a movie" do
     movie = movies(:shawshank_redemption)
-    delete :destroy, id: movie.id
+    assert_difference('Movie.count', -1) do
+      delete :destroy, id: movie.id
+    end
     assert_redirected_to movies_path
     assert_response :redirect
   end
