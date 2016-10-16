@@ -5,7 +5,9 @@
       <% @movies.each do |movie| %>
         <%= render partial: 'movie', locals: { :movie => movie } %>
       <% end %>
-      <button><%= link_to "view more movies", media_all_path(:movie) %></button>
+      <button class="btn btn-default">
+        <%= link_to "View More Movies", media_all_path(:movie) %>
+      </button>
     </div>
 
     <div class="small-12 medium-4 large-4 columns">
@@ -13,7 +15,9 @@
       <% @books.each do |book| %>
           <%= render partial: 'book', locals: { :book => book } %>
       <% end %>
-      <button><%= link_to "view more books", media_all_path(:book) %></button>
+      <button class="btn btn-default">
+        <%= link_to "View More Books", media_all_path(:book) %>
+      </button>
     </div>
 
   <div class="small-12 medium-4 large-4 columns">
@@ -21,7 +25,9 @@
     <% @albums.each do |album| %>
         <%= render partial: 'album', locals: { :album => album } %>
     <% end %>
-    <button><%= link_to "view more albums", media_all_path(:album) %></button>
+    <button class="btn btn-default">
+      <%= link_to "View More Albums", media_all_path(:album) %>
+    </button>
   </div>
 </section>
 
