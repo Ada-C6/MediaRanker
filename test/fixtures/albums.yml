@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  recorded_by: MyString
-  ranked: 1
+alabama_shakes:
+  title: Alabama Shakes
+  by: Alabama Shakes
+  ranked: 10
   description: MyString
 
-two:
-  title: MyString
-  recorded_by: MyString
-  ranked: 1
+juanes:
+  title: Juanes
+  by: Juanes
+  ranked: 5
   description: MyString

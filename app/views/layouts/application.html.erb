@@ -7,7 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header class="row">
+    <%= image_tag 'owl.jpg', alt: "Owl Logo", class: "small-3 medium-2 large-1 columns" %>
+    <section class="site-title small-9 medium-10 large-11 columns">
+      <h1><%= link_to "Media Ranker", root_path, id: "logo" %></h1>
+      <h3>Ranking the Best of Everything</h3>
+    </section>
+  </header>
 <%= yield %>
 
 </body>

@@ -1,0 +1,30 @@
+<% if media.class == Book %>
+  <% by = "Written by: " %>
+<% elsif media.class == Album %>
+  <% by = "Recorded by: " %>
+<% elsif media.class == Movie %>
+  <% by = "Recorded by: " %>
+<% end %>
+<main>
+  <h1><%= media.title %></h1>
+  <h2><%= by %><%= media.by %></h2>
+  <h3>Ranked: <%= media.ranked %></h3>
+  <p>
+    <%= media.description %>
+  </p>
+
+  <%= link_to "Upvote", url_for(media), { action: "update", method: "patch", class: "show-upvote button" } %>
+
+  <nav>
+    <section class="make-changes">
+      <%= link_to "Edit #{media.title}", polymorphic_path([:edit, media]), class: "secondary hollow button" %>
+
+      <%= button_to "DELETE", url_for(media),  method: :delete, class: "button alert", data: { confirm: "Are you sure?"} %>
+    </section>
+    <section class="view">
+      <%= link_to "View All #{type.capitalize}", polymorphic_url(type), class: "secondary hollow button" %>
+
+      <%= link_to "View All Media", root_path, { class: "secondary hollow button", method: "get"} %>
+    </section>
+  </nav>
+</main>

@@ -5,3 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+5.times do
+  Book.create(
+  title: Faker::Book.title,
+  by: Faker::Book.author,
+  description: Faker::ChuckNorris.fact,
+  ranked: rand(50))
+end
+
+5.times do
+  Movie.create(
+  title: Faker::Book.title,
+  by: Faker::Book.author,
+  description: Faker::ChuckNorris.fact,
+  ranked: rand(50))
+end
+
+5.times do
+  Album.create(
+  title: Faker::Book.title,
+  by: Faker::Book.author,
+  description: Faker::ChuckNorris.fact,
+  ranked: rand(50))
+end

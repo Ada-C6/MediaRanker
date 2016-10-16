@@ -1,15 +1,52 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('foundation.css');
+
+body {
+  width: 88vw;
+  margin: 4vh auto;
+}
+
+main {
+  margin: 5vh auto;
+  max-width: 75rem;
+  /*clear: both;*/
+}
+
+.top-10 h2 {
+  display: inline;
+}
+
+header h1, header h3 {
+  display: inline;
+  white-space: nowrap;
+}
+
+header {
+  border-bottom: 1px solid lightgrey;
+  margin: 0;
+}
+
+header h1 {
+  margin-right: .75vmin;
+}
+
+h2, h3 {
+  color: gray;
+}
+
+#logo {
+  border: none;
+}
+
+.upvote {
+  margin-bottom: 0;
+  padding: 0.5em;
+}
+
+.button {
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+nav section, nav .button, nav form {
+  display: inline-block;
+}
