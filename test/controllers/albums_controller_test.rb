@@ -125,4 +125,12 @@ class AlbumsControllerTest < ActionController::TestCase
 
     assert_redirected_to album_path(album_id)
   end
+
+  test "upvote should set nil ranks to one" do
+    album_id = albums(:nil_rank).id
+
+    assert_difference("Album.find(album_id).rank", 1) do
+      patch :upvote, {id: album_id}
+    end
+  end
 end
