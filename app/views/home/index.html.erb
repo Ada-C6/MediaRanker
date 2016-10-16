@@ -1,24 +1,24 @@
 <table class="index_table">
     <tr>
-        <th colspan="2">Top Albums</th>
-        <th colspan="2">Top Books</th>
-        <th colspan="2">Top Movies</th>
+        <th colspan="3">Top Albums</th>
+        <th colspan="3">Top Books</th>
+        <th colspan="3">Top Movies</th>
     </tr>
 
     <% 5.times do |i| %>
     <tr>
-        <td><%= link_to "#{ @albums[i].name }", album_path(@albums[i]) %></td>
+        <td colspan="2"><%= link_to "#{ @albums[i].name }", album_path(@albums[i]) %></td>
         <td><small>Votes:<%= "#{ @albums[i].votes }" %></td>
-        <td><%= link_to "#{ @books[i].name }", book_path(@books[i]) %></td>
+        <td colspan="2"><%= link_to "#{ @books[i].name }", book_path(@books[i]) %></td>
         <td><small>Votes:<%= "#{ @books[i].votes }" %></td>
-        <td><%= link_to "#{ @movies[i].name }", movie_path(@movies[i]) %></td>
+        <td colspan="2"><%= link_to "#{ @movies[i].name }", movie_path(@movies[i]) %></td>
         <td><small>Votes:<%= "#{ @movies[i].votes }" %></td>
     </tr>
     <% end %>
     <tr>
-        <th colspan="2"><%= link_to("View All Albums", albums_path, class: "button") %></th>
-        <th colspan="2"><%= link_to("View All Books", books_path, class: "button") %></th>
-        <th colspan="2"><%= link_to("View All Movies", movies_path, class: "button") %></th>
+        <th colspan="3"><%= link_to("View All Albums", albums_path, class: "button") %></th>
+        <th colspan="3"><%= link_to("View All Books", books_path, class: "button") %></th>
+        <th colspan="3"><%= link_to("View All Movies", movies_path, class: "button") %></th>
     </tr>
 
 </table>

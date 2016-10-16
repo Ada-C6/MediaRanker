@@ -7,9 +7,9 @@
 
     <% @movies.each do |movie| %>
     <tr>
-        <td><%= "#{ movie.votes }" %></td>
-        <td><%= link_to "#{ movie.name }", movie_path(movie) %></td>
-        <td><%= button_to("upvote", movie_upvote_path(movie), method: :patch) %></td>
+        <td align=center><%= "#{ movie.votes }" %></td>
+        <td align=center><%= link_to "#{ movie.name }", movie_path(movie) %></td>
+        <td align=center><%= button_to("upvote", movie_upvote_path(movie), method: :patch) %></td>
     </tr>
     <% end %>
 </table>

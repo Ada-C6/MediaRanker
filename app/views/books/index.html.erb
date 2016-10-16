@@ -7,9 +7,9 @@
 
     <% @books.each do |book| %>
     <tr>
-        <td><%= "#{ book.votes }" %></td>
-        <td><%= link_to "#{ book.name }", book_path(book) %></td>
-        <td><%= button_to("upvote", book_upvote_path(book), method: :patch) %></td>
+        <td align=center><%= "#{ book.votes }" %></td>
+        <td align=center><%= link_to "#{ book.name }", book_path(book) %></td>
+        <td align=center><%= button_to("upvote", book_upvote_path(book), method: :patch) %></td>
     </tr>
     <% end %>
 </table>
