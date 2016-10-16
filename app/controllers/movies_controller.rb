@@ -9,7 +9,11 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.create!(movie_params)
+    if movie_params[:rank_points].nil?
+      @movie = Movie.create!(name: movie_params[:name], author: movie_params[:author], description: movie_params[:description], rank_points: 1)
+    else
+      @movie = Movie.create!(movie_params)
+    end
 
     redirect_to movie_path(@movie)
   end

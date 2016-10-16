@@ -13,7 +13,11 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.create!(album_params)
+    if album_params[:rank_points].nil?
+      @album = Album.create!(name: album_params[:name], author: album_params[:author], description: album_params[:description], rank_points: 1)
+    else
+      @album = Album.create!(album_params)
+    end
 
     redirect_to album_path(@album)
   end

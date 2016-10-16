@@ -9,7 +9,11 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create!(book_params)
+    if book_params[:rank_points].nil?
+      @book = Book.create!(name: book_params[:name], author: book_params[:author], description: book_params[:description], rank_points: 1)
+    else
+      @book = Book.create!(book_params)
+    end
 
     redirect_to book_path(@book)
   end
