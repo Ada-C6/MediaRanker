@@ -6,19 +6,19 @@ class BookTest < ActiveSupport::TestCase
     assert book.valid?
   end
 
-  test "Create a book with no name" do
+  test "Cannot create a book with no name" do
     book = Book.new(author: "Kelly", ranked: 0)
     assert_not book.save
     assert_includes book.errors, :name
   end
 
-  test "Create two books with the same name" do
+  test "Cannot create two books with the same name" do
     book1 = books(:the_prince)
     book2 = Book.create(name: "The Prince", author: "Kelly", ranked: 0)
     assert_not book2.valid?
   end
 
-  test "Create a book with no author" do
+  test "Cannot create a book with no author" do
     book = Book.new(name: "Gone with the Wind", ranked: 0)
     assert_not book.save
     assert_includes book.errors, :author
@@ -26,8 +26,8 @@ class BookTest < ActiveSupport::TestCase
 
   test "Create a book with no ranking" do
     book = Book.new(name: "Hello", author: "Kelly")
-    assert_not book.save
-    assert_includes book.errors, :ranked
+    assert book.save
+    assert book.valid?
   end
 
   test "Create a book with non-numerical ranking" do
@@ -54,7 +54,7 @@ class BookTest < ActiveSupport::TestCase
     assert_equal books(:anna_karenina).upvote, new_rank
   end
 
-  test "Book without a ranking should return nil from upvote" do
-    assert_equal books(:no_rank).upvote, nil
+  test "Book without a ranking should return 1 from upvote" do
+    assert_equal books(:no_rank).upvote, 1
   end
 end

@@ -1,5 +1,5 @@
 <% if @book.errors.any? %>
-  <p>Error!</p>
+  <p>Error! Cannot save your inputs.</p>
   <% @book.errors.each do |field, problem| %>
     <p><strong><%= field %>: </strong><%= problem %></p>
   <% end %>
