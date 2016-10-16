@@ -3,5 +3,6 @@ class Book < Medium
   after_initialize :init
   def init
     self.author ||= ""
+    self.votes ||= 0
   end
 end

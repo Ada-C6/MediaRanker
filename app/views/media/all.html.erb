@@ -1,8 +1,11 @@
-<!-- <h1>Top <%= @medium_type_name.pluralize %></h1> -->
+<h4 class="detail_title">
+  Top <%= @medium_type_name.pluralize %>
+</h4>
 
+<section class="detail_title">
   <div class="row">
     <div class="small-4 medium-4 large-4 columns">
-      <h4>Ranking</h4>
+      <h4>Votes</h4>
     </div>
     <div class="small-4 medium-4 large-4 columns">
       <h4>Name</h4>
@@ -16,24 +19,33 @@
     <div class="row">
 
       <div class="small-4 medium-4 large-4 columns">
-        Ranked:<%= medium.votes %>
+        <button class="btn_upvote_all">
+          <%= link_to "▲", medium_upvote_path(medium.id) %>
+        </button>
+        <%= medium.votes %>
       </div>
 
       <div class="small-4 medium-4 large-4 columns">
-        <%= link_to medium.name, medium_show_path(medium.id) %>
+        <p class="all_title">
+          <%= link_to medium.name, medium_show_path(medium.id) %>
+        </p>
       </div>
 
       <div class="small-4 medium-4 large-4 columns">
-        <%= link_to "Upvote", medium_upvote_path(medium.id) %>
+        <button class="btn btn-default">
+          <%= link_to "Upvote", medium_upvote_path(medium.id) %>
+        </button>
       </div>
-
     </div>
   <% end %>
 
-  <%= link_to "View All Media", index_path %>
-  <%= link_to "Add New #{@medium_type_name}", medium_new_path %>
-</div>
-
+  <button class="btn btn-default">
+    <%= link_to "View All Media", index_path %>
+  </button>
+  <button class="btn btn-default">
+    <%= link_to "Add New #{@medium_type_name}", medium_new_path %>
+  </button>
+</section>
 
 
 <!-- ###############TABLE ORGANIZED VERSION##################### -->

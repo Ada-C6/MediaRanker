@@ -57,22 +57,52 @@ main{
   color: grey;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 3rem;
   font-size: 2rem;
+
 }
 
 .list_title a{
   font-family: "Play";
   font-size: 1.5rem;
-  color: black;
+  /*color: black;*/
+  color: #ff6666;
 }
 
 .list_title a:hover{
-  color: #ff6666;
+  color: black;
 }
 
 .list_rank{
   color: grey;
 }
+
+/*############################*/
+/*#;           ALL           #*/
+/*############################*/
+
+.btn_upvote_all a{
+  color: #ff6666;
+}
+.all_title a:hover{
+  color: #ff6666;
+}
+/*.btn-primary {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary a{
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-primary:hover{
+  color: #fff;
+  background-color: #3071a9;
+  border-color: #285e8e;
+}*/
+
 
 /*############################*/
 /*#;           SHOW          #*/
@@ -149,20 +179,3 @@ main{
 .clear_both{
   clear: both;
 }
-
-
-/*.btn-primary {
-  background-color: #428bca;
-  border-color: #357ebd;
-}
-
-.btn-primary a{
-  color: #fff;
-  font-weight: bold;
-}
-
-.btn-primary:hover{
-  color: #fff;
-  background-color: #3071a9;
-  border-color: #285e8e;
-}*/
