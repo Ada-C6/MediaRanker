@@ -3,8 +3,8 @@ class Album < ActiveRecord::Base
   validates :description, length: {maximum: 50}
 
   def self.upvote(album)
-   album.ranked += 1
-   album.save
+    album.ranked += 1
+    album.save
   end
 
   def self.rank
