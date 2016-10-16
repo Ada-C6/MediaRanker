@@ -27,4 +27,10 @@ class BookTest < ActiveSupport::TestCase
     assert books.first.ranked > books.last.ranked
   end
 
+  test "Book.top_ten should return up to 10 of the highest ranked books" do
+    books = Book.by_rank.take(10)
+    top_ten = Book.top_ten
+    assert_equal books, top_ten
+  end
+
 end

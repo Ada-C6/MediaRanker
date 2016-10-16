@@ -27,7 +27,7 @@ class AlbumsController < ApplicationController
   def update
     @album = Album.find(params[:id])
 
-    if params[:_method] == "patch"
+    if request.patch?
       @album.ranked += 1
     else
       @album.update(album_params)

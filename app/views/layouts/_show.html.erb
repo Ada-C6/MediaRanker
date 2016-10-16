@@ -13,8 +13,27 @@
   <%= media.description %>
 </p>
 
-<%= link_to "Upvote", url_for(media), { action: "upvote", method: "patch" } %>
-<%= link_to "Edit", polymorphic_path([:edit, media]) %>
-<%= button_to "DELETE", url_for(media), { method: "delete" } %>
-<%= link_to "View All #{type.capitalize}", polymorphic_url(type) %>
-<%= link_to "View All Media", root_path, { method: "get"} %>
+<%= link_to "Upvote", url_for(media), { action: "update", method: "patch", class: "show-upvote" } %>
+
+<nav class="row">
+  <section class="make-changes small-12 medium-6 large-6 columns">
+    <section class="row">
+      <section class="small-6 medium-6 large-6 columns">
+        <%= link_to "Edit", polymorphic_path([:edit, media]) %>
+      </section>
+      <section class="button small-6 medium-6 large-6 columns end">
+        <%= button_to "DELETE", url_for(media),  method: :delete, data: { confirm: "Are you sure?"} %>
+      </section>
+    </section>
+  </section>
+  <section class="view small-12 medium-6 large-6 columns end">
+    <section class="row">
+      <section class="small-6 medium-6 large-6 columns">
+        <%= link_to "View All #{type.capitalize}", polymorphic_url(type) %>
+      </section>
+      <section class="small-6 medium-6 large-6 columns end">
+        <%= link_to "View All Media", root_path, { method: "get"} %>
+      </section>
+    </section>
+  </section>
+</nav>

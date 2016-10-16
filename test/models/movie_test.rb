@@ -27,4 +27,9 @@ class MovieTest < ActiveSupport::TestCase
     assert movies.first.ranked > movies.last.ranked
   end
 
+  test "Movie.top_ten should return up to 10 of the highest ranked movies" do
+    movies = Movie.by_rank.take(10)
+    top_ten = Movie.top_ten
+    assert_equal movies, top_ten
+  end
 end

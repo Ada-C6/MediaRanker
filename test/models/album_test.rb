@@ -27,4 +27,9 @@ class AlbumTest < ActiveSupport::TestCase
     assert albums.first.ranked > albums.last.ranked
   end
 
+  test "Album.top_ten should return up to 10 of the highest ranked albums" do
+    albums = Album.by_rank.take(10)
+    top_ten = Album.top_ten
+    assert_equal albums, top_ten
+  end
 end

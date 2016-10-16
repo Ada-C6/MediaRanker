@@ -17,7 +17,11 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    begin
+      @book = Book.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => err
+      render file: "#{Rails.root}/public/404.html", status: :not_found
+    end
   end
 
   def edit
@@ -27,10 +31,12 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
 
-    if params[:_method] == "patch"
+    if request.patch?
       @book.upvote
-    else
+    elsif
       @book.update(book_params)
+    else
+      return "Book did not upvote or update"
     end
 
     if @book.save

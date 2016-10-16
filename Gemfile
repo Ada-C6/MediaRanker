@@ -36,6 +36,7 @@ gem 'faker'
 
 group :test do
   gem 'minitest-reporters'
+  gem 'simplecov'
 end
 
 group :development, :test do

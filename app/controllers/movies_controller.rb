@@ -27,7 +27,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
 
-    if params[:_method] == "patch"
+    if request.patch?
       @movie.ranked += 1
     else
       @movie.update(movie_params)
