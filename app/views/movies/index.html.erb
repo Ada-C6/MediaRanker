@@ -1,0 +1,20 @@
+<div class ="row">
+  <div class="small-up-12 medium-up-12 large-up-12">
+    <section>
+      <table>
+        <th>Ranking</th>
+        <th>Name</th>
+        <th>Upvote</th>
+        <% @movies.each do |movie| %>
+        <tr>
+          <td>Ranked: <%= movie.ranking %></td>
+          <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
+          <td><%= link_to("Upvote", movie_upvote_path(movie.id), method: :patch, class: "button secondary radius") %></td>
+        </tr>
+        <% end %>
+      </table>
+      <%= link_to("View All Media", root_path, method: :get, class: "button secondary radius") %> <%= link_to("Add a Movie", new_movie_path, method: :get, class: "button secondary radius") %>
+    </section>
+    </div>
+  </div>
+</div>
