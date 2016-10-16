@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
 
   def create
     if album_params[:rank_points].nil?
-      @album = Album.create!(name: album_params[:name], author: album_params[:author], description: album_params[:description], rank_points: 1)
+      @album = Album.create!(name: album_params[:name], artist: album_params[:artist], description: album_params[:description], rank_points: 1)
     else
       @album = Album.create!(album_params)
     end

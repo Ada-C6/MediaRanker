@@ -65,7 +65,7 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_equal 1, assigns(:book).rank_points
   end
-  
+
   ############### SHOW ###############
   test "Show should show book and template" do
     get :show, id: @book.id
@@ -103,4 +103,16 @@ class BooksControllerTest < ActionController::TestCase
     delete :destroy, id: @book.id
     assert_redirected_to books_path
   end
+
+  ############### VOTE ###############
+  test "Vote should change rank_points by 1 if upvote" do
+    patch :vote, id: @book.id, vote: "up"
+    assert_equal 20, Book.find(@book.id).rank_points
+  end
+
+  test "Vote should change rank_points by -1 if downvote" do
+    patch :vote, id: @book.id, vote: "down"
+    assert_equal 18, Book.find(@book.id).rank_points
+  end
+
 end

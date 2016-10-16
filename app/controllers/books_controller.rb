@@ -50,9 +50,9 @@ class BooksController < ApplicationController
     book = Book.find(params[:id])
 
     if params[:vote] == "up"
-      add_vote(book).save
+      add_vote(book)
     elsif params[:vote] == "down"
-      subtract_vote(book).save
+      subtract_vote(book)
     else
       raise
     end

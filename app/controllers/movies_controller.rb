@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
 
   def create
     if movie_params[:rank_points].nil?
-      @movie = Movie.create!(name: movie_params[:name], author: movie_params[:author], description: movie_params[:description], rank_points: 1)
+      @movie = Movie.create!(name: movie_params[:name], director: movie_params[:director], description: movie_params[:description], rank_points: 1)
     else
       @movie = Movie.create!(movie_params)
     end
