@@ -1,101 +1,52 @@
 @import url('foundation.css');
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-/*article {
-  display: inline-block;
-  width: 25vw;
-  min-width: 300px;
-  padding: 2vw;
-  vertical-align: top;
-}*/
-
 
 body {
   width: 88vw;
-  margin: auto;
+  margin: 4vh auto;
 }
 
 main {
-  margin-top: 5vh;
+  margin: 5vh auto;
+  max-width: 75rem;
+  /*clear: both;*/
 }
 
 .top-10 h2 {
   display: inline;
 }
 
-a[data-method="patch"] {
-  background-color: #2199e8;
-  color: white;
-  padding: 5px;
-}
-
-a {
-  border-radius: 5px;
-}
-
-a[href="/"], a[href*="new"], nav a {
-  border: 2px solid gray;
-  padding: 10px;
-}
-
-header img {
-  margin: 4vmin;
-}
-
 header h1, header h3 {
   display: inline;
+  white-space: nowrap;
 }
 
 header {
   border-bottom: 1px solid lightgrey;
+  margin: 0;
+}
+
+header h1 {
+  margin-right: .75vmin;
+}
+
+h2, h3 {
+  color: gray;
 }
 
 #logo {
   border: none;
 }
 
-nav a, nav form {
-  display: inline-block;
-  min-width: 12vw;
-  text-align: center;
+.upvote {
+  margin-bottom: 0;
+  padding: 0.5em;
 }
 
-nav.row {
-  margin: 2vh 0;
-  width: 60vw;
-  padding: 0;
-}
-
-nav section.columns, nav section.row, nav section.row section.columns{
-  padding: 0;
-  margin: 0;
-}
-
-input[type="submit" i] {
-  background-color: #d9534f;
-  padding: 15px;
+.button {
   border-radius: 5px;
-  border: 2px #d9534f;
-  color: white;
-  min-width: 12vw;
-  text-align: center;
+  white-space: nowrap;
 }
 
-.show-upvote {
-  margin-bottom: 2vh;
+nav section, nav .button, nav form {
   display: inline-block;
 }

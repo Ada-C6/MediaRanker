@@ -5,35 +5,26 @@
 <% elsif media.class == Movie %>
   <% by = "Recorded by: " %>
 <% end %>
+<main>
+  <h1><%= media.title %></h1>
+  <h2><%= by %><%= media.by %></h2>
+  <h3>Ranked: <%= media.ranked %></h3>
+  <p>
+    <%= media.description %>
+  </p>
 
-<h1><%= media.title %></h1>
-<h2><%= by %><%= media.by %></h2>
-<h3>Ranked: <%= media.ranked %></h3>
-<p>
-  <%= media.description %>
-</p>
+  <%= link_to "Upvote", url_for(media), { action: "update", method: "patch", class: "show-upvote button" } %>
 
-<%= link_to "Upvote", url_for(media), { action: "update", method: "patch", class: "show-upvote" } %>
+  <nav>
+    <section class="make-changes">
+      <%= link_to "Edit #{media.title}", polymorphic_path([:edit, media]), class: "secondary hollow button" %>
 
-<nav class="row">
-  <section class="make-changes small-12 medium-6 large-6 columns">
-    <section class="row">
-      <section class="small-6 medium-6 large-6 columns">
-        <%= link_to "Edit", polymorphic_path([:edit, media]) %>
-      </section>
-      <section class="button small-6 medium-6 large-6 columns end">
-        <%= button_to "DELETE", url_for(media),  method: :delete, data: { confirm: "Are you sure?"} %>
-      </section>
+      <%= button_to "DELETE", url_for(media),  method: :delete, class: "button alert", data: { confirm: "Are you sure?"} %>
     </section>
-  </section>
-  <section class="view small-12 medium-6 large-6 columns end">
-    <section class="row">
-      <section class="small-6 medium-6 large-6 columns">
-        <%= link_to "View All #{type.capitalize}", polymorphic_url(type) %>
-      </section>
-      <section class="small-6 medium-6 large-6 columns end">
-        <%= link_to "View All Media", root_path, { method: "get"} %>
-      </section>
+    <section class="view">
+      <%= link_to "View All #{type.capitalize}", polymorphic_url(type), class: "secondary hollow button" %>
+
+      <%= link_to "View All Media", root_path, { class: "secondary hollow button", method: "get"} %>
     </section>
-  </section>
-</nav>
+  </nav>
+</main>

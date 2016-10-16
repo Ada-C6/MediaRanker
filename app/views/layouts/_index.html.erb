@@ -1,23 +1,25 @@
-<h2><%= "#{media[0].class}s by Rank" %></h2>
+<main>
+  <h2><%= "#{media[0].class}s by Rank" %></h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Ranking</th>
-      <th>Title</th>
-      <th>Upvote</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% media.each do |media| %>
-    <tr>
-      <td><%= media.ranked %></td>
-      <td><%= link_to media.title, url_for(media) %></td>
-      <td><%= link_to "Upvote", url_for(media), { action: "update", method: "patch" } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Title</th>
+        <th>Upvote</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% media.each do |media| %>
+      <tr>
+        <td><%= media.ranked %></td>
+        <td><%= link_to media.title, url_for(media) %></td>
+        <td><%= link_to "Upvote", url_for(media), { action: "update", method: "patch", class: "button upvote" } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to "View All Media", root_path %>
-<%= link_to "Add #{media[0].class}", polymorphic_path([:new, media[0]]) %>
+  <%= link_to "View All Media", root_path, class: "hollow secondary button" %>
+  <%= link_to "Add #{media[0].class}", polymorphic_path([:new, media[0]]), class: "hollow secondary button" %>
+</main>
