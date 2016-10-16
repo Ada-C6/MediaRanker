@@ -9,7 +9,6 @@ class AlbumsController < ApplicationController
 
     def create
         @album = Album.new(album_params)
-        @album.votes = 0
         if @album.save  # successful
             redirect_to albums_path
         else  # unsuccessful, return to form with instance variables poplulated
