@@ -13,6 +13,23 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  # test "add a new album to the DB" do
+  #   post_params = { album: { title: "Yolo", artist: "Mdawg" } }
+  #   assert_difference('Album.count', 1) do
+  #     post :create, post_params
+  #   end
+  #   album = assigns(:album)
+  #   assert_redirected_to album_path(album)
+  # end
+
+  test "won't add an invalid album" do
+    post_params = { album: { artist: "Yolo" } }
+    assert_no_difference('Album.count') do
+      post :create, post_params
+    end
+    assert_template :new
+  end
+
   # test "should get create" do
   #   get :create
   #   assert_response :success

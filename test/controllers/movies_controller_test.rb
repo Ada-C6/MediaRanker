@@ -13,6 +13,14 @@ class MoviesControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test "won't add an invalid movie" do
+    post_params = { movie: { director: "Yolo" } }
+    assert_no_difference('Movie.count') do
+      post :create, post_params
+    end
+    assert_template :new
+  end
+
 
   # test "should get create" do
   #   get :create

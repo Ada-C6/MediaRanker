@@ -13,6 +13,14 @@ class BooksControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test "won't add an invalid book" do
+    post_params = { book: { author: "Yolo" } }
+    assert_no_difference('Book.count') do
+      post :create, post_params
+    end
+    assert_template :new
+  end
+
   # test "should get create" do
   #   get :create
   #   assert_response :success
