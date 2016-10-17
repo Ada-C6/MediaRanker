@@ -1,5 +1,7 @@
 require 'test_helper'
 
+# This test is very similar to the other two model tests - because other than the name of the author/artist/director they're exactly the same. If I have time, I might consider trying to model all of these things together. 
+
 class MovieTest < ActiveSupport::TestCase
   test "create a new movie with valid data" do
     assert movies(:one).valid?

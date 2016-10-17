@@ -1,5 +1,7 @@
 require 'test_helper'
 
+# This test is very similar to the other two model tests - because other than the name of the author/artist/director they're exactly the same. If I have time, I might consider trying to model all of these things together. 
+
 class BookTest < ActiveSupport::TestCase
   test "create a new books with valid data" do
     assert books(:one).valid?
