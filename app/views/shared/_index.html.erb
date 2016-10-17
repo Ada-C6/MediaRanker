@@ -1,0 +1,24 @@
+<main class="row">
+  <table id="table" class="small-12 columns">
+    <thead class="row">
+      <tr>
+        <th class="small-3 medium-2 large-1 columns">Ranking</th>
+        <th class="small-6 medium-8 large-10 columns">Name</th>
+        <th class="small-3 medium-2 large-1 columns">Upvote</th>
+      </tr>
+    </thead>
+    <tbody class="row">
+      <% media_collection.each do |media_item| %>
+      <tr>
+        <td class="small-3 medium-2 large-1 columns"><%= "Ranked: #{media_item.ranking}" %></td>
+        <td class="small-6 medium-8 large-10 columns"><%= link_to media_item.name, [media_item] %></td>
+        <td class="small-3 medium-2 large-1 columns">
+          <%= button_to [:upvote, media_item], class: "button", method: :patch do %>
+            Upvote
+          <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</main>

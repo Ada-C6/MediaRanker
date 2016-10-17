@@ -1,0 +1,6 @@
+<main class="row">
+  <section class="form small-12 columns">
+    <h1>Edit Album</h1>
+    <%= render partial: "shared/form", locals: { media_item: @album, creator: :artist, http_method: :patch } %>
+  </section>
+</main>

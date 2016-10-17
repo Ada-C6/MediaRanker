@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+<% 10.times do |i| %>
+album_<%= i %>:
+  name: Album <%= i %> is the raddest album
+  artist: <%= Faker::Pokemon.name %>
+  description: <%= Faker::Hipster.paragraph(2, false, 2) %>
+  ranking: <%= rand(0...100) %>
+<% end %>
+
+# one:
+#   name: MyString
+#   artist: MyString
+#   description: MyString
+#   ranking: 1
+#
+# two:
+#   name: MyString
+#   artist: MyString
+#   description: MyString
+#   ranking: 1

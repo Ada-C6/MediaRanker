@@ -1,0 +1,6 @@
+<main class="row">
+  <section class="form small-12 columns">
+    <h1>Edit Movie</h1>
+    <%= render partial: "shared/form", locals: { media_item: @movie, creator: :director, http_method: :patch } %>
+  </section>
+</main>

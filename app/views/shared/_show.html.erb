@@ -1,0 +1,20 @@
+<main class="row">
+  <article class="small-12 columns">
+    <h1>
+      <%= media_item.name %> <small><%= "#{made_by_verb} by: #{creator}" %></small>
+    </h1>
+    <h4>
+      Ranked: <%= media_item.ranking %>
+    </h4>
+    <p>
+      <%= media_item.description %>
+    </p>
+  </article>
+  <nav class="small-12 columns">
+    <%= button_to [:upvote, media_item], id: "show_upvote_button", class: "button", method: :patch do %>Upvote<% end %>
+    <%= link_to "Edit #{ media_item.name }", [:edit, media_item], class: "button" %>
+    <%= link_to "DELETE", [media_item], class: "alert button", method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "View All #{ media_type.to_s.capitalize }", [media_type], class: "button" %>
+    <%= link_to "View All Media", root_path, class: "button" %>
+  </nav>
+</main>

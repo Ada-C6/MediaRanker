@@ -1,0 +1,17 @@
+<main class="row small-up-1 large-up-3">
+  <section class="movies column">
+    <h1>Top Movies</h1>
+    <%= render partial: "shared/site_index_list", locals: { media_collection: @top_movies } %>
+    <%= link_to "View More Movies", movies_path %>
+  </section>
+  <section class="books column">
+    <h1>Top Books</h1>
+    <%= render partial: "shared/site_index_list", locals: { media_collection: @top_books } %>
+    <%= link_to "View More Books", books_path %>
+  </section>
+  <section class="albums column">
+    <h1>Top Albums</h1>
+    <%= render partial: "shared/site_index_list", locals: { media_collection: @top_albums } %>
+    <%= link_to "View More Albums", albums_path %>
+  </section>
+</main>

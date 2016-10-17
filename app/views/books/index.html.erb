@@ -1,0 +1,7 @@
+<%= render partial: "shared/index", locals: { media_type: :book, media_collection: @books } %>
+<div class="row">
+  <nav class="small-12 columns">
+    <%= link_to "View All Media", root_path, class: "button"  %>
+    <%= link_to "Add a Book", new_book_path, class: "button"  %>
+  </nav>
+</div>
