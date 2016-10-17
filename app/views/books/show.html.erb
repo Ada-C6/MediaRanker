@@ -19,5 +19,11 @@
   </tr>
 </table>
 
-<h5><%= link_to "Head back to all books", books_path %></h5>
-<h5><%= link_to "Head back home", root_path %></h5>
+<div class="row">
+<%= link_to root_path do%>
+  <div class="button even-2"><h5>Go back home</h5></div>
+<% end %>
+<%= link_to books_path do%>
+  <div class="button even-2"><h5>Go back to all books</h5></div>
+<% end %>
+</div>
