@@ -1,0 +1,12 @@
+<%= render "medias/shared_display", title: @album, created_verb: "Recorded", maker: @album.artist, rank: @album, about: @album %>
+
+<%= button_to "UPVOTE", upvote_album_path(@album), method: :patch  %>
+
+<section class="button-list">
+<%= link_to "Edit #{@album.name}", edit_album_path, class: 'plain-button'  %>
+<%= link_to "DELETE", album_path(@album.id), class: 'delete-button', method: :delete,
+data: { confirm: 'Are you sure?'} %>
+</section>
+
+<%= link_to "View All Media", root_path, class: 'plain-button' %>
+<%= link_to "View All Albums", albums_path, class: 'plain-button'  %>

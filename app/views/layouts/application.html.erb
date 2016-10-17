@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MediaRanker</title>
+  <title> Dianne's Media Ranker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <nav class="row">
+    <%=image_tag 'aliens.png', class: "small-12 columns medium-4 columns large-2 columns" %>
+  <h1 class=" small-12 columns medium-8 columns large-10 columns"> Media Ranker <small class="creator-header"> Ranking the Best of Everything</small></h1>
+  </nav>
 
 <%= yield %>
 

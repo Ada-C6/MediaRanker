@@ -1,0 +1,18 @@
+one:
+  name: Spy Kids
+  director: A Kid
+  description: A movie about spies
+
+two:
+  name: D.E.B.S.
+  director: Jamie
+  description: A movie about gay spies
+
+three:
+  name:
+  director: D.E.N
+  description: another cool movie
+# copy:
+#   name:
+#   director:
+#   description:

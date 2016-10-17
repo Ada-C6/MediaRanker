@@ -1,0 +1,13 @@
+<%= render "medias/shared_display", title: @movie, created_verb: "Directed", maker: @movie.director, rank: @movie, about: @movie %>
+
+
+<%= button_to "UPVOTE", upvote_movie_path(@movie), method: :patch  %>
+
+<section class="button-list">
+<%= link_to "Edit #{@movie.name}", edit_movie_path, class: 'plain-button' %>
+<%= link_to "DELETE", movie_path(@movie.id), class: 'delete-button', method: :delete,
+data: { confirm: 'Are you sure?'} %>
+</section>
+
+<%= link_to "View All Media", root_path, class: 'plain-button' %>
+<%= link_to "View All Movies", movies_path, class: 'plain-button'  %>

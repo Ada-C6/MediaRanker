@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  #root 'media#index'
+  root 'medias#index'
+  resources :movies
+  resources :books
+  resources :albums
+
+  #to update the ranking using an upvote button:
+  patch 'albums/:id/upvote' => 'albums#upvote', as: 'upvote_album'
+  patch 'books/:id/upvote' => 'books#upvote', as: 'upvote_book'
+  patch 'movies/:id/upvote' => 'movies#upvote', as: 'upvote_movie'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

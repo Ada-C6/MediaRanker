@@ -1,0 +1,11 @@
+<%= form_for @book, method: http_method do |f| %>
+  <br><b><%= f.label :name, " Name" %></b>
+  <br><%= f.text_field :name %>
+
+  <br><b><%= f.label :author %></b>
+  <br><%= f.text_field :author %>
+
+  <br><b><%= f.label :description, "Description" %></b>
+  <br><%= f.text_field :description %>
+  <br><%= f.submit "Save"%>
+<% end %>

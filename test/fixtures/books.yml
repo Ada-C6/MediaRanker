@@ -1,0 +1,20 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  name: Lumberjanes
+  author:
+  description: yay comic book about girls at a magical summer camp!
+
+two:
+  name: Dykes to Watch Out For
+  author: Allison Bechdel
+  description: the life and times of a butch lesbian
+
+three:
+  name: cool stuff
+  author: who
+  description: last cool book ever
