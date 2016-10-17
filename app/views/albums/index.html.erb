@@ -1,0 +1,24 @@
+<main>
+  <div>
+    <ul class="row small-up-3">
+      <li class="column">Votes</li>
+      <li class="column">Title</li>
+      <li class="column">Upvote</li>
+    </ul>
+  </div>
+
+  <div  class="index-list">
+    <ul class="row small-up-3">
+      <% @albums.each do |album| %>
+        <li class="column"><%= "#{album.rank}" %></li>
+        <li class="column"><%= link_to("#{album.title}", album_path(album)) %></li>
+        <li class="column"><%= link_to("Upvote", album_upvote_path(album), class: "small warning button", method: :patch) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <nav class="row small-up-1 medium-up-6 large-up-6">
+    <p class="column"><%= link_to("View all media", root_path, class: "hollow button") %></p>
+    <p class="column"><%= link_to("Add an album", new_album_path, class: "hollow button") %></p>
+  </nav>
+</main>

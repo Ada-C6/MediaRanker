@@ -1,0 +1,27 @@
+<main>
+  <article>
+    <section class="error">
+      <% if @book.errors.any? %>
+        <h4><%= "ERROR" %></h4>
+        <% @book.errors.each do |attribute, message| %>
+          <p><%="#{attribute.capitalize}: #{message}" %></p>
+        <% end %>
+      <% end %>
+    </section>
+
+    <h3>New Book</h3>
+
+    <%= form_for @book do |f| %>
+      <p class="small-11"><%= f.label :title, "Title:" %>
+      <%= f.text_field :title %></p>
+
+      <p class="small-11"><%= f.label :author, "Author:" %>
+      <%= f.text_field :author %></p>
+
+      <p class="small-11"><%= f.label :description, "Description:" %>
+      <%= f.text_field :description %></p>
+
+      <p><%= f.submit "Save", class: "secondary hollow button" %></p>
+    <% end %>
+  </article>
+</main>

@@ -1,0 +1,27 @@
+<main>
+  <article>
+    <section class="error">
+      <% if @movie.errors.any? %>
+        <h4><%= "ERROR" %></h4>
+        <% @movie.errors.each do |attribute, message| %>
+          <p><%="#{attribute.capitalize}: #{message}" %></p>
+        <% end %>
+      <% end %>
+    </section>
+
+    <h3>New Movie</h3>
+
+    <%= form_for @movie do |f| %>
+      <p class="small-11"><%= f.label :title, "Title:" %>
+      <%= f.text_field :title %></p>
+
+      <p class="small-11"><%= f.label :director, "Directed by:" %>
+      <%= f.text_field :director %></p>
+
+      <p class="small-11"><%= f.label :description, "Description:" %>
+      <%= f.text_field :description %></p>
+
+      <p><%= f.submit "Save", class: "secondary hollow button" %></p>
+    <% end %>
+  </article>
+</main>

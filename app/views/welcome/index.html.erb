@@ -1,0 +1,31 @@
+<main class="row small-up-12 medium-up-3">
+  <section class="column">
+    <p class="heading">TOP MOVIES</p>
+    <% @movies.each do |movie| %>
+      <p><%= link_to("#{movie.title}", movie_path(movie)) %>
+      <%= "Votes: #{movie.rank}" %></p>
+    <% end %>
+
+    <p><%= link_to("See all movies", movies_path, class: "hollow button", method: :get) %></p>
+  </section>
+
+  <section class="column">
+    <p class="heading">TOP BOOKS</p>
+      <% @books.each do |book| %>
+        <p><%= link_to("#{book.title}", book_path(book)) %>
+        <%= "Votes: #{book.rank}" %></p>
+      <% end %>
+
+    <p><%= link_to("See all books", books_path, class: "hollow button", method: :get) %></p>
+  </section>
+
+  <section class="column">
+    <p class="heading">TOP ALBUMS</p>
+      <% @albums.each do |album| %>
+        <p><%= link_to("#{album.title}", album_path(album)) %>
+        <%= "Votes: #{album.rank}" %></p>
+      <% end %>
+
+    <p><%= link_to("See all albums", albums_path, class: "hollow button", method: :get) %></p>
+  </section>
+</main>
