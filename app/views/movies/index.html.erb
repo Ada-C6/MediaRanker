@@ -9,7 +9,7 @@
   <tr>
     <th><%= "Ranked: #{movie.ranking}" %></th>
     <th><%= link_to "#{movie.name}", movie_path(movie) %></th>
-    <th><%= "upvote" %></th>
+    <th><%= button_to "upvote", upvote_movie_path(movie), method: :patch %></th>
   </tr>
   <% end %>
 </table>

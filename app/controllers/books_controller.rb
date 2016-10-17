@@ -32,6 +32,13 @@ class BooksController < ApplicationController
     end
   end
 
+  def upvote
+      @book = Book.find(params[:id])
+      @book.ranking += 1
+      @book.save
+      redirect_to book_path
+  end
+
   def destroy
     @book = Book.find(params[:id]).destroy
 

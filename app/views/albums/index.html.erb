@@ -9,7 +9,7 @@
   <tr>
     <th><%= "Ranked: #{album.ranking}" %></th>
     <th><%= link_to "#{album.name}", album_path(album) %></th>
-    <th><%= "upvote" %></th>
+    <th><%= button_to "upvote", upvote_album_path(album), method: :patch %></th>
   </tr>
   <% end %>
 </table>

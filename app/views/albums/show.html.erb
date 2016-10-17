@@ -3,7 +3,7 @@
 <h4><%= "Ranked: #{@album.ranking}" %></h4>
 <p><%= "#{@album.description}" %></p>
 
-<%= "Upvote" %>
+<%= button_to "upvote", upvote_album_path(@album), method: :patch %>
 <%= button_to "Edit #{@album.name}", edit_album_path(@album), method: :get %>
 <%= button_to "DELETE", album_path(@album), method: :delete, data: { confirm: "Right meow?" }%>
 <%= button_to "View All Albums", albums_path, method: :get %>
