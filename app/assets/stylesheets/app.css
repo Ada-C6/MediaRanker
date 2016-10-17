@@ -1,0 +1,23 @@
+body {
+  font-size: 16px;
+}
+
+header {
+  padding: 2% 0 1% 5%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header li {
+  font-size: 2rem;
+  list-style-type: none;
+}
+
+section {
+  margin: 1% 2% 0 4%;
+  display: inline-block;
+  float: left;
+}
