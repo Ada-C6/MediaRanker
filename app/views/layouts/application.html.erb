@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <<%=image_tag 'aliens.png'%>
-  <h1> Media Ranker <small class="creator-header"> Ranking the Best of Everything</small></h1>
+  <nav class="row">
+    <%=image_tag 'aliens.png', class: "large-2 columns" %>
+  <h1 class="large-10 columns"> Media Ranker <small class="creator-header"> Ranking the Best of Everything</small></h1>
   </nav>
 
 <%= yield %>

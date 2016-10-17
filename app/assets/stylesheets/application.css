@@ -1,5 +1,13 @@
 @import url('foundation.css');
 
+.large-4 {
+  border-top: 1px gray solid;
+}
+
+body {
+  background-color: rgb(141, 224, 209);
+}
+
 img {
   width: 20%;
 }
@@ -12,19 +20,22 @@ a.plain-button {
   border-radius: 5%;
   border: 1px black solid;
   padding: 2px;
+  background-color: rgb(175, 181, 181);
 }
 
 .creator-header {
-  color: red;
+  color: rgb(76, 42, 191);
   display: inline;
 }
 
 .upvote-button {
-  display: block;
-
+  display: inline-block;
 }
 
 .text-stuff {
   text-align: center;
+}
 
+a {
+  color: rgb(64, 30, 179);
 }

@@ -1,9 +1,5 @@
-<%= render "medias/shared_header", title: @book, created_verb: "Written", maker: @book.author, rank: @book, about: @book %>
+<%= render "medias/shared_display", title: @book, created_verb: "Written", maker: @book.author, rank: @book, about: @book %>
 
-<!-- <h1>Book Name: <%= @book.name %> </h1>
-<h2> Author: <%= @book.author %></h2> -->
-<!-- <h4> Ranked: <%= @book.ranking %> </h4>
-<p> <%= @book.description %> </p> -->
 <section>
 <%= button_to "UPVOTE", upvote_book_path(@book), method: :patch  %>
 <%= link_to "Edit #{@book.name}", edit_book_path, class: "plain-button" %>
