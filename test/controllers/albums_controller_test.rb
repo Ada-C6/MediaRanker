@@ -1,26 +1,27 @@
 require 'test_helper'
 
 class AlbumsControllerTest < ActionController::TestCase
+
   test "should get index" do
     get :index
     assert_response :success
     assert_template :index
   end
 
-  test "should get new" do
+  test "should get new form" do
     get :new
     assert_response :success
+    assert_template partial: '_form'
     assert_template :new
   end
 
-  # test "add a new album to the DB" do
-  #   post_params = { album: { title: "Yolo", artist: "Mdawg" } }
-  #   assert_difference('Album.count', 1) do
-  #     post :create, post_params
-  #   end
-  #   album = assigns(:album)
-  #   assert_redirected_to album_path(album)
-  # end
+  test "add a new album" do
+     post_params = {album: {name: "Yolo", artist: "Yates"} }
+     assert_difference("Album.count", 1) do
+       post :create, post_params
+     end
+     assert_redirected_to albums_path
+   end
 
   test "won't add an invalid album" do
     post_params = { album: { artist: "Yolo" } }
@@ -39,29 +40,12 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_not_nil yolo
     assert_equal yolo.id, album
   end
-  # test "should get create" do
-  #   get :create
-  #   assert_response :success
-  # end
-  #
-  # test "should get edit" do
-  #   get :edit
-  #   assert_response :success
-  # end
-  #
-  # test "should get update" do
-  #   get :update
-  #   assert_response :success
-  # end
-  #
-  # test "should get delete" do
-  #   get :delete
-  #   assert_response :success
-  # end
-  #
-  # test "should get show" do
-  #   get :show
-  #   assert_response :success
-  # end
+
+  test "should get edit form" do
+    id = albums(:Britney_Spears_one).id
+    get :edit, { id: id }
+    assert_response :success
+    assert_template :edit
+  end
 
 end
