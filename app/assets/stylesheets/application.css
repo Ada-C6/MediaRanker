@@ -41,6 +41,13 @@ footer.basic {
   padding-left: 0px;
 }
 
+.primary-action {
+  background-color: #53CECE;
+}
+.primary-action:hover {
+  background-color: #34BABA;
+}
+
 body {
   margin: 5%;
 }

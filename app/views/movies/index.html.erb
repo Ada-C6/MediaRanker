@@ -1,4 +1,13 @@
 <h1> All the Movies. </h1>
 <%= render partial: "layouts/basic_info", locals: { media_type: @movies, media_class: "movie"}%>
 
-<%= button_to "Add new movie", new_movie_path, method: :get, class: "button"%>
+<table class="buttons">
+  <tr>
+    <td>
+      <%= button_to "Add new movie", new_movie_path, method: :get, class: "button primary-action" %>
+    </td>
+    <td>
+      <%= button_to "Go back home", root_path, method: :get, class: "button"%>
+    </td>
+  </tr>
+</table>
