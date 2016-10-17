@@ -59,7 +59,7 @@ class AlbumsController < ApplicationController
 
   def upvote
     Album.increment_counter(:ranked, params[:id])
-    redirect_to action: "show"
+    redirect_to request.referer
   end
 
   private

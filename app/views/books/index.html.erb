@@ -24,7 +24,7 @@
     <tr>
       <td>Ranked: <%= book.ranked %></td>
       <td><%= link_to(book.title, book_path(book.id)) %></td>
-      <td><%= button_to "Upvote", book_path(book.id), :class => "button", method: :get %></td>
+      <td><%= button_to "Upvote", bupvote_path(book.id), :class => "button", method: :put %></td>
     </tr>
   <% end %>
   </table>
