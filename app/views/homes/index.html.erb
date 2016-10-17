@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <th>Top Movies</th>
+    <th>Top Books</th>
+    <th>Top Albums</th>
+  </tr>
+  <% 10.times do |i| %>
+    <tr>
+      <td><%= link_to "#{@movies_by_rank[i].name}", movie_path(@movies_by_rank[i].id)%><%= " #{@movies_by_rank[i].rank}" %></td>
+
+      <td><%= link_to "#{@books_by_rank[i].name}", book_path(@books_by_rank[i].id)%><%= " #{@books_by_rank[i].rank}" %></td>
+
+      <td><%= link_to "#{@albums_by_rank[i].name}", album_path(@albums_by_rank[i].id)%><%= " #{@albums_by_rank[i].rank}" %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td>
+      <%= link_to "View More Movies", movies_path %>
+
+    </td>
+    <td>
+      <%= link_to "View More Books", books_path %>
+
+    </td>
+    <td>
+      <%= link_to "View More Albums", albums_path %>
+
+    </td>
+  </tr>
+</table>
+
+<!-- movies_by_name[i], rank_by_name[i] -->

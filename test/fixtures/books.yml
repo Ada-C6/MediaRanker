@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+HP_one:
+  name: HP_one
+  author:
+  description: Awesome
+
+HP_two:
+  name:
+  author: J.K. Rowling
+  description: Great
+
+HP_three:
+  name: HP_three
+  author: J.K. Rowling
+  description: Mysterious
+
+HP_four:
+  name: HP_four
+  author: J.K. Rowling
+  description: Wow
+
+HP_five:
+  name: HP_five
+  author: J.K. Rowling
+  description: Sad
+
+HP_six:
+  name: HP_six
+  author: J.K. Rowling
+  description: Sadder
+
+HP_seven:
+  name: HP_seven
+  author: J.K. Rowling
+  description: Best!
+
+ASOIAF_one:
+  name: ASOIAF_one
+  author: George R.R. Martin
+  description: RIP Ned!
+
+ASOIAF_two:
+  name: ASOIAF_two
+  author: George R.R. Martin
+  description: Woohoo
+
+ASOIAF_three:
+  name: ASOIAF_three
+  author: George R.R. Martin
+  description: RIP Robb!
+
+ASOIAF_four:
+  name: ASOIAF_four
+  author: George R.R. Martin
+  description: Where Dany at?
+
+ASOIAF_five:
+  name: ASOIAF_five
+  author: George R.R. Martin
+  description: YAS QUEEN

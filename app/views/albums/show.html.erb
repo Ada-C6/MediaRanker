@@ -1,0 +1,25 @@
+<h3><%= "#{@album.name} Recorded by: #{@album.artist}" %></h3>
+
+<h4><%= "Ranked: #{@album.rank}" %></h4>
+<p><%= "#{@album.description}" %></p>
+
+<!-- UPVOTE -->
+<td><%= button_to "Upvote", upvote_album_path(@album), method: :patch %></td>
+
+<!-- EDIT  -->
+
+<%= link_to "Edit #{@album.name}", edit_album_path %>
+
+
+<!-- DELETE -->
+
+<%= link_to "DELETE", album_path(@album), method: :destroy,
+data: {confirm: "Are you really, really sure?"}%></li>
+
+<!-- VIEW ALL ALBUMS -->
+
+<%= link_to "View All Albums", albums_path %>
+
+<!-- VIEW ALL MEDIA -->
+
+<%= link_to "View All Media", homes_index_path %>

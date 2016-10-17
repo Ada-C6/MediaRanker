@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Elton_one:
+  name:
+  artist: Elton John
+  description: Awesome
+
+Elton_two:
+  name: Elton_two
+  artist:
+  description: Great
+
+Phil_Collins_one:
+  name: Phil_Collins_one
+  artist: Phil Collins
+  description: The best
+
+Phil_Collins_two:
+  name: Phil_Collins_two
+  artist: Phil Collins
+  description: woot
+
+Robyn_one:
+  name: Robyn_one
+  artist: Robyn
+  description: yeah
+
+Robyn_two:
+  name: Robyn_two
+  artist: Robyn
+  description: so good
+
+Britney_Spears_one:
+  name: Britney_Spears_one
+  artist: Britney Spears
+  description: So lucky
+
+Britney_Spears_two:
+  name: Britney_Spears_two
+  artist: Britney Spears
+  description: Toxic
+
+Nirvana_one:
+  name: Nirvana_one
+  artist: Nirvana
+  description: RIP Kurt
+
+Nirvana_two:
+  name: Nirvana_two
+  artist: Nirvana
+  description: teen spirit
+
+Smashing_Pumpkins_one:
+  name: Smashing_Pumpkins_one
+  artist: Smashing Pumpkins
+  description: today
+
+Smashing_Pumpkins_two:
+  name: Smashing_Pumpkins_two
+  artist: Smashing Pumpkins
+  description: the world is a vampire

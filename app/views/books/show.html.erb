@@ -1,0 +1,31 @@
+<h3><%= "#{@book.name} Recorded by: #{@book.author}" %></h3>
+
+<h4><%= "Ranked: #{@book.rank}" %></h4>
+<p><%= "#{@book.description}" %></p>
+
+
+<td><%= button_to "Upvote", upvote_book_path(@book), method: :patch %></td>
+
+
+
+<!-- I assume upvote is a button, but could be wrong -->
+<!-- no idea how to do the path, possibly update? idk!!! -->
+
+
+<!-- EDIT  -->
+
+<%= link_to "Edit #{@book.name}", edit_book_path %>
+
+
+<!-- DELETE -->
+
+<%= link_to "DELETE", book_path(@book), method: :destroy,
+data: {confirm: "Are you really, really sure?"}%></li>
+
+<!-- VIEW ALL BOOKS -->
+
+<%= link_to "View All Books", books_path %>
+
+<!-- VIEW ALL MEDIA -->
+
+<%= link_to "View All Media", homes_index_path %>

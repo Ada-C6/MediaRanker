@@ -8,7 +8,20 @@
 </head>
 <body>
 
+  <header>
+    <nav>
+      <%= image_tag 'owl.jpg', :class => "no_resize" %>
+      <%= link_to "Media Ranker", homes_index_path %>
+      <%= "Ranking the Best of Everything" %>
+    </nav>
+  </header>
 <%= yield %>
 
+<footer>
+  <h4>&copy; 2016 #poodles</h4>
+    <p>
+      by morrime
+    </p>
+</footer>
 </body>
 </html>

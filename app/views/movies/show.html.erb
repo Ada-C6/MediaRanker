@@ -1,0 +1,27 @@
+<h3><%= "#{@movie.name} Recorded by: #{@movie.director}" %></h3>
+
+<h4><%= "Ranked: #{@movie.rank}" %></h4>
+<p><%= "#{@movie.description}" %></p>
+
+
+<!-- UPVOTE -->
+<td><%= button_to "Upvote", upvote_movie_path(@movie), method: :patch %></td>
+
+
+<!-- EDIT  -->
+
+<%= link_to "Edit #{@movie.name}", edit_movie_path %>
+
+
+<!-- DELETE -->
+
+<%= link_to "DELETE", movie_path(@movie), method: :destroy,
+data: {confirm: "Are you really, really sure?"}%></li>
+
+<!-- VIEW ALL MOVIES -->
+
+<%= link_to "View All Movies", movies_path %>
+
+<!-- VIEW ALL MEDIA -->
+
+<%= link_to "View All Media", homes_index_path %>
