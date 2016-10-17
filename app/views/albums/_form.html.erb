@@ -1,0 +1,41 @@
+<% if @album.errors.any? %>
+  <ul class="error">
+    <% @album.errors.each do |error, message| %>
+    <li><strong><%= error.upcase %></strong><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @album, url: path, method: http_method do |f| %>
+<table class="form">
+  <tr>
+    <td><%= f.label :name, "Album Name: " %> </td>
+    <td><%= f.text_field :name, :size => 50 %> </td>
+  </tr>
+
+  <tr>
+    <td><%= f.label :artist, "Album Artist: " %> </td>
+    <td><%= f.text_field :artist, :size => 50 %> </td>
+  </td>
+
+  <tr>
+    <td><%= f.label :description, "Album Description: " %></td>
+    <td><%= f.text_field :description, :size => 75 %></td>
+  </tr>
+
+    <%= f.hidden_field :rank_points, value: 1 %>
+
+  <tr id="submit">
+    <td><%= f.submit "Submit Album Info" %></td>
+  </tr>
+</table>
+<% end %>
+
+<div class="row">
+<%= link_to root_path do%>
+  <div class="button even-2"><h5>Go back home</h5></div>
+<% end %>
+<%= link_to albums_path do%>
+  <div class="button even-2"><h5>Go back to all albums</h5></div>
+<% end %>
+</div>

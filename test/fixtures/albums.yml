@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+correct_album:
+  name: MyString
+  artist: MyString
+  description: MyString
+  rank_points: 10
+
+without_a_name:
+  name: MyString
+  artist: MyString
+  description: MyString
+  rank_points: 14
+
+without_an_artist:
+  name: MyString
+  artist: MyString
+  description: MyString
+  rank_points: -19
+
+without_a_description:
+  name: MyString
+  artist: MyString
+  description:
+  rank_points: -1
+
+without_rank_points:
+  name: MyString
+  artist: MyString
+  description: MyString
+  rank_points: 0

@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+/*@import url('foundation.css')*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Changa One', sans-serif;
+  text-align: center;
+}
+
+p, td {
+  font-family: 'Varela', sans-serif;
+}
+
+table h6 {
+  text-align: center;
+}
+
+table tr:nth-last-of-type(odd) {
+  background-color: #cde6f1;
+}
+table tr:nth-last-of-type(even) {
+  background-color: #e1eaed;
+}
+
+.button {
+  border: solid black 1px;
+  border-radius: 1em;
+}
+
+table * {
+  border-color: #b1e6fc;
+}
+.form-div {
+  background-color: #b1e6fc;
+}
+#submit {
+  background-color: #b1e6fc;
+}
+
+body {
+  background-color: #b1e6fc;
+}

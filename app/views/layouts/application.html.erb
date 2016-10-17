@@ -5,10 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Changa+One|Varela" rel="stylesheet">
 </head>
+
 <body>
 
-<%= yield %>
+  <header class="row">
+    <h1 class="large-12 small-12 columns">Media Ranker</h1>
+  </header>
+
+  <section>
+    <%= yield %>
+  </section>
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+<h2>All Albums</h2>
+<h5><%= link_to "Submit a new album for voting", new_album_path %></h5>
+
+<table class="index-table">
+  <tr>
+    <th colspan=2>Points</th>
+    <th>Album Name</th>
+    <th>More...</th>
+  </tr>
+
+  <% @albums.each do |album| %>
+  <tr>
+    <td>
+      <%= button_to "⬆", vote_album_path(album, vote: "up"), contoller: :albums, action: :vote, method: :patch %>
+      <%= button_to "⬇", vote_album_path(album, vote: "down"), contoller: :albums, action: :vote, method: :patch %>
+    </td>
+    <td><%= "#{album.rank_points}" %></td>
+    <td><%= "#{album.name}" %></td>
+    <td><%= link_to "More Details...", album_path(album) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to root_path do%>
+  <div class="row"><div class="button columns-12"><h5>Go back home</h5></div></div>
+<% end %>

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+correct_book:
+  name: MyString
+  author: MyString
+  description: MyString
+  rank_points: 19
+
+without_a_name:
+  name: MyString
+  author: MyString
+  description: MyString
+  rank_points: 14
+
+without_an_author:
+  name: MyString
+  author: MyString
+  description: MyString
+  rank_points: 0
+
+without_a_description:
+  name: MyString
+  author: MyString
+  description:
+  rank_points: 4
+
+without_rank_points:
+  name: MyString
+  author: MyString
+  description: MyString
+  rank_points: -19
