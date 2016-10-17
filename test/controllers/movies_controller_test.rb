@@ -80,4 +80,16 @@ class MoviesControllerTest < ActionController::TestCase
      assert_redirected_to movie_path
    end
 
+  # UPVOTE
+  test "should add 1 to rank" do
+    setup do
+      movie = movies(:Kill_Bill_vol_2).id
+      @request.env['HTTP_REFERER'] = 'http://localhost:3000/movies'
+      patch :upvote, id: movie.id, movie: { }
+      movie.reload
+      assert_equal 1, movie.rank
+    end
+  end
+
+
 end

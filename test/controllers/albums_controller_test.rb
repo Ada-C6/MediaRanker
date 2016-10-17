@@ -80,4 +80,16 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_redirected_to album_path
   end
 
+  # UPVOTE
+  test "should add 1 to rank" do
+    setup do
+      album = albums(:Phil_Collins_one)
+      album.upvote
+      @request.env['HTTP_REFERER'] = 'http://localhost:3000/albums'
+      patch :upvote, id: album.id, album: { }
+      album.reload
+      assert_equal 1, album.rank
+    end
+  end
+
 end
