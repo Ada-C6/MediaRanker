@@ -1,0 +1,39 @@
+<body>
+  <div class="row">
+    <div class="small-4 large-12 columns">
+
+      <section class="mainpage-colomn" id="mainpage-moves">
+        <h1 id= "mainpage">Top Movies</h1>
+        <% @movies.each do |movie| %>
+          <h2>
+            <%= link_to movie.name, movie_path(movie.id) %>
+            <small>Ranked:<%= movie.ranked %></small>
+          </h2>
+        <% end %>
+        <p><%= link_to "View More Movies", movies_path %></p>
+      </section>
+
+      <section class="mainpage-colomn" id= "mainpage-books">
+        <h1>Top Books</h1>
+        <% @books.each do |book| %>
+          <h2>
+            <%= link_to book.name, book_path(book.id) %>
+            <small>Ranked:<%= book.ranked %></small>
+          </h2>
+        <% end %>
+        <p><%= link_to "View More Books", books_path %></p>
+      </section>
+
+      <section class="mainpage-colomn" id="mainpage-albums">
+        <h1>Top Albums</h1>
+        <% @albums.each do |album| %>
+          <h2>
+            <%= link_to album.name, album_path(album.id) %>
+            <small>Ranked:<%= album.ranked %></small>
+          </h2>
+        <% end %>
+        <p><%= link_to "View More Albums", albums_path %></p>
+      </section>
+    </div>
+  </div>
+</body>

@@ -1,15 +1,68 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import 'https://fonts.googleapis.com/css?family=Lobster';
+@import url('foundation.css');
+
+
+.mainpage-colomn {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  float: left;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.header-all {
+  position: relative;
+  background: url(/assets/owl.jpg);
+  background-size: 159px;
+  background-repeat: no-repeat;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-all h1 {
+  margin-left: 158px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 14px;
+  line-height: 1.5px;
+  margin: 35px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+#mainpage-moves{
+  display: inline-block;
+  float: right;
+}
+
+small {
+  font-size: 70%;
+}
+
+table, td {
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}

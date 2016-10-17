@@ -1,0 +1,17 @@
+valid_data:
+  name: movie 1
+  director: director 1
+  description: song number one
+  ranked: 8
+
+missing_name:
+  director: director 2
+  description: song number one
+  ranked: 8
+
+too_many_des_words:
+  name: movie 3
+  director: director 3
+  description: R r r r r r r r r r r  r r r re aereaw ere war we are war are ewr areer arer areear ar err rea
+               Rer erer erer erer ere r ere erer erer erer erer erere rere erere reer  rerer rerer  rer rer  rer rerer  erer
+  ranked: 8
