@@ -36,6 +36,7 @@ class AlbumsControllerTest < ActionController::TestCase
 
   test "should update album" do
     patch :update, id: @album, album: { name: "Bear Creek", artist: "Brandi Carlile" }
+    assert_equal assigns(:album).name, "Bear Creek"
     assert_redirected_to album_path(assigns(:album))
   end
 
@@ -45,5 +46,14 @@ class AlbumsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to albums_path
+  end
+
+  test "upvote should increment ranking attribute" do
+    @album = albums(:album_4)
+    initial_ranking = @album.ranking
+    patch :upvote, { id: @album.id }
+
+    assert_equal assigns(:album).ranking, initial_ranking + 1
+    # had attempted to use assert_difference here - tried about 15 different syntaxes unsuccessfully before using assert_equal
   end
 end

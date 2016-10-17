@@ -46,4 +46,13 @@ class BooksControllerTest < ActionController::TestCase
 
     assert_redirected_to books_path
   end
+
+  test "upvote should increment ranking attribute" do
+    @book = books(:book_4)
+    initial_ranking = @book.ranking
+    patch :upvote, { id: @book.id }
+
+    assert_equal assigns(:book).ranking, initial_ranking + 1
+    # had attempted to use assert_difference here - tried about 15 different syntaxes unsuccessfully before using assert_equal
+  end
 end

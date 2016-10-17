@@ -46,4 +46,13 @@ class MoviesControllerTest < ActionController::TestCase
 
     assert_redirected_to movies_path
   end
+
+  test "upvote should increment ranking attribute" do
+    @movie = movies(:movie_4)
+    initial_ranking = @movie.ranking
+    patch :upvote, { id: @movie.id }
+
+    assert_equal assigns(:movie).ranking, initial_ranking + 1
+    # had attempted to use assert_difference here - tried about 15 different syntaxes unsuccessfully before using assert_equal
+  end
 end
