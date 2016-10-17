@@ -12,10 +12,10 @@
     </div>
   </section>
 
-  <div class="row">
-    <p class="small-6 medium-3 columns"><%=link_to "Edit", @edit%></p>
-    <p class="small-6 medium-3 columns"><%= link_to "Delete", @delete,  method: :delete , data: {confirm: "Are you reallysure?"}%></p>
-    <p class="small-6 medium-3 columns"><%=link_to "View all",@index%></p>
-    <p class="small-6 medium-3 columns"><%=link_to "View all Media",@root%></p>
-  <div>
+  <ul class="row">
+    <li class="small-6 medium-3 columns" class = "button"><%=link_to "Edit", @edit%></li>
+    <li class="small-6 medium-3 columns" class = "button"><%= link_to "Delete", @delete,  method: :delete , data: {confirm: "Are you reallysure?"}%></li>
+    <li class="small-6 medium-3 columns" class = "button"><%=link_to "View all",@index%></li>
+    <li class="small-6 medium-3 columns" class = "button"><%=link_to "View all Media",@root%></li>
+  <ul>
 </main>
