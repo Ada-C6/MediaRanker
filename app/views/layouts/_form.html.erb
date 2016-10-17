@@ -1,0 +1,13 @@
+  <%= form_for media,  html: { class: 'row' } do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label get_creator_field(media) %>
+    <%= f.text_field get_creator_field(media) %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.submit "Save", class: 'button' %>
+
+  <% end %>

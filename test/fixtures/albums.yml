@@ -1,0 +1,54 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Harry_and_the_Potters:
+  name: Harry and the Potters
+  artist: Harry and the Potters
+  description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+  upvotes: 0
+
+Album_no_name:
+  artist: Harry and the Potters
+  description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+  upvotes: 0
+
+Album_no_desc:
+  name: Harry and the Potters Reprise
+  artist: Harry and the Potters
+  upvotes: 0
+
+Album_no_upvotes:
+  name: Harry and the Potters Reprised Reprise
+  artist: Harry and the Potters
+  description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+  # upvotes are needed for the testing of the controller.  will set to nil in testing the model...
+  upvotes: 0
+
+Album_negative_upvotes:
+  name: Harry and the Potters Suck
+  artist: Harry and the Potters
+  description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+  upvotes: -1
+
+# Funny_numbers: we don't know how to do this test yet
+#   name: Harry and the Numbers
+#   artist: Harry and the Potters
+#   description: Harry and the Potters is the eponymous debut studio album by indie rock band Harry and the Potters, released in June 2003.
+#   upvotes: one
+
+Named_album:
+  name: The Doors
+  artist: The Doors
+  description: This is a very unique album!
+  upvotes: 100
+
+Cant_rename_album:
+  name: The Window
+  artist: The Doors
+  description: This is not such a unique album!
+  upvotes: 0
+
+Rename_album:
+  name: The Wall
+  artist: Pink Floyd
+  description: This could be a unique album
+  upvotes: 0

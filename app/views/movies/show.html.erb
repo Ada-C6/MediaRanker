@@ -1,0 +1,13 @@
+<%= render partial: 'layouts/show', locals: { media: @movie } %>
+
+<section class='row'>
+
+<%= link_to "Edit #{@movie.name}", edit_movie_path(@movie), class: 'button' %>
+<%= link_to "DELETE", movie_path(@movie),
+    class: 'button alert',
+    method: :delete,
+    data: {confirm: "Are you sure?"} %>
+<%= link_to "View all Movies", movies_path, class: 'button'  %>
+<%= link_to "View all Media", root_path, class: 'button' %>
+
+</section>

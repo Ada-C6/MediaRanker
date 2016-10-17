@@ -1,0 +1,10 @@
+  <ol>
+    <% display_amount(media_collection).times do |i| %>
+    <% media = media_collection[i] %>
+    <li>
+      <h2><%= link_to media.name, create_media_path(media) %></h2>
+      <small class='subheader'><%= "Ranked: #{media.upvotes}" %></small>
+    </li>
+
+    <% end  %>
+  </ol>

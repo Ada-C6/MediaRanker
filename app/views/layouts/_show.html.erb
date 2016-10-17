@@ -1,0 +1,17 @@
+<section>
+  <div class='row'>
+    <h1><%= media.name %></h1>
+    <small class='subheader'><%= get_creator(media) %></small>
+  </div>
+
+  <div class='row'>
+    <h2>Ranked: <%= media.upvotes %></h2>
+  </div>
+
+  <div class='row'>
+    <p><%= media.description %></p>
+  </div>
+
+<%= render partial: 'layouts/upvote', locals: { media: media } %>
+
+</section>
