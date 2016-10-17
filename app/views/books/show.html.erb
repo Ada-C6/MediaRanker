@@ -1,0 +1,27 @@
+<%= render partial: "layouts/media_info", locals: { media: @book } %>
+
+<table class="buttons">
+  <tr>
+    <td>
+      <%= button_to "Upvote", upvote_book_path(@book), method: :patch, class: "button" %>
+    </td>
+    <td>
+      <%= button_to "Edit Book", edit_book_path(@book), method: :get, class: "button primary-action" %>
+    </td>
+    <td>
+      <%= button_to "Delete Book", book_path(@book), method: :delete, data: {confirm: "Are you sure you want to delete this book?"}, class: "alert button" %>
+    </td>
+  </tr>
+</table>
+
+
+<section class="sub-nav">
+  <ul>
+    <li>
+      <%= link_to "Back to all Books", books_path %>
+    </li>
+    <li>
+      <%= link_to "Back to MediaRanker Home", root_path %>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,27 @@
+<%= render partial: "layouts/media_info", locals: { media: @movie } %>
+
+<table class="buttons">
+  <tr>
+    <td>
+      <%= button_to "Upvote", upvote_movie_path(@movie), method: :patch, class: "button" %>
+    </td>
+    <td>
+      <%= button_to "Edit Movie", edit_movie_path(@movie), method: :get, class: "button primary-action" %>
+    </td>
+    <td>
+      <%= button_to "Delete Movie", movie_path(@movie), method: :delete, data: {confirm: "Are you sure you want to delete this movie?"}, class: "alert button" %>
+    </td>
+  </tr>
+</table>
+
+
+<section class="sub-nav">
+  <ul>
+    <li>
+      <%= link_to "Back to all Movies", movies_path %>
+    </li>
+    <li>
+      <%= link_to "Back to MediaRanker Home", root_path %>
+    </li>
+  </ul>
+</section>

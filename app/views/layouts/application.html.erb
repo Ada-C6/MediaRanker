@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <a href = "/">
+      <%= image_tag("apple.jpeg") %>
+      <h1>MediaRanker!</h1>
+      <h2>for ranking all the things.</h2> 
+    </a>
+  </header>
 
 <%= yield %>
 
+  <footer class="basic">
+    <p> &copy; 2016 Karin Kubischta </p>
+  </footer>
 </body>
 </html>
