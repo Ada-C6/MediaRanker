@@ -1,5 +1,4 @@
-
- @import url('foundation.css');
+@import url('foundation.css');
 @import url('https://fonts.googleapis.com/css?family=BioRhyme|Raleway');
 
  /************************************/
@@ -82,7 +81,6 @@ a:hover {
 }
 
 
-
  /************************************/
  /* GENERAL BODY                     */
  /************************************/
@@ -133,6 +131,11 @@ a:hover {
   /*background:#4B4D52;*/
   border-bottom: 2px solid #DE8642;
   margin-bottom: 5%;
+}
+
+.format-upvotes {
+  font-style: italic;
+  font-size: .75em;
 }
 
 /******************************/

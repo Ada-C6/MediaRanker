@@ -4,7 +4,7 @@
       <div class="line-separator"></div>
       <ul>
           <% @movies.each do |movie| %>
-          <li><h5><%= link_to(movie.name, movie_path(movie.id)) %> <span> Upvotes: <%= movie.ranked %> </span> </h5>  </li>
+          <li><h5><%= link_to(movie.name, movie_path(movie.id)) %> <span class="format-upvotes"> Upvotes: <%= movie.ranked %> </span> </h5>  </li>
           <% end %>
       </ul>
     </div>
@@ -15,7 +15,7 @@
       <div class="line-separator"></div>
       <ul>
         <% @books.each do |book| %>
-            <li><h5><%= link_to(book.title, book_path(book.id)) %> <span>Upvotes: <%= book.ranked %></span></h5></li>
+            <li><h5><%= link_to(book.title, book_path(book.id)) %> <span class="format-upvotes">Upvotes: <%= book.ranked %></span></h5></li>
         <% end %>
       </ul>
     </div>
@@ -25,7 +25,7 @@
       <div class="line-separator"></div>
       <ul>
         <% @albums.each do |album| %>
-            <li><h5><%= link_to(album.title, album_path(album.id)) %> <span>Upvotes: <%= album.ranked %></span> </h5> </li>
+            <li><h5><%= link_to(album.title, album_path(album.id)) %> <span class="format-upvotes">Upvotes: <%= album.ranked %></span> </h5> </li>
         <% end %>
       </ul>
     </div>
