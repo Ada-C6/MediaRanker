@@ -68,4 +68,15 @@ class BooksControllerTest < ActionController::TestCase
        assert_template :edit
      end
 
+  # DESTROY
+ test "destroy should delete the item" do
+    id = books(:HP_seven).id
+    assert_difference("Book.count", -1) do
+      delete :destroy, {id: id}
+    end
+    assert_raises ActiveRecord::RecordNotFound do
+      Book.find(id)
+    end
+    assert_redirected_to book_path
+  end
 end

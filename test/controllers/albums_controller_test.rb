@@ -68,4 +68,16 @@ class AlbumsControllerTest < ActionController::TestCase
        assert_template :edit
      end
 
+  # DESTROY
+ test "destroy should delete the item" do
+    id = albums(:Phil_Collins_one).id
+    assert_difference("Album.count", -1) do
+      delete :destroy, {id: id}
+    end
+    assert_raises ActiveRecord::RecordNotFound do
+      Album.find(id)
+    end
+    assert_redirected_to album_path
+  end
+
 end

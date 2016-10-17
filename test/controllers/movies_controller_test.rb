@@ -66,6 +66,18 @@ class MoviesControllerTest < ActionController::TestCase
        patch :update, {id: id, movie: {director: nil} }
        assert_equal "John Hughes", Movie.find(id).director
        assert_template :edit
+  end
+
+  # DESTROY
+  test "destroy should delete the item" do
+     id = movies(:Kill_Bill_vol_1).id
+     assert_difference("Movie.count", -1) do
+       delete :destroy, {id: id}
      end
+     assert_raises ActiveRecord::RecordNotFound do
+       Movie.find(id)
+     end
+     assert_redirected_to movie_path
+   end
 
 end
