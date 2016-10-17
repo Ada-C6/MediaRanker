@@ -55,8 +55,8 @@ class MoviesController < ApplicationController
     this_item = Movie.find(id)
     this_item.rank +=1
     this_item.save
+    @voted_item = this_item
     redirect_to movies_path
-
   end
 
   def destroy

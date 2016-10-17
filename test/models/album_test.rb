@@ -14,13 +14,13 @@ class AlbumTest < ActiveSupport::TestCase
   end
 
   test "Create two albums with different names" do
-    album1 = Album.create!(name: "Boo!")
+    Album.create!(name: "Boo!")
     album2 = Album.new(name: "Moo!")
     assert album2.valid?
   end
 
   test "Should reject an album with a name that already exists" do
-    album1 = Album.create!(name: "Boo!")
+    Album.create!(name: "Boo!")
     album2 = Album.new(name: "Boo!")
     assert_not album2.valid?
   end

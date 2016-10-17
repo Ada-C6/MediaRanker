@@ -1,16 +1,16 @@
 
 <main>
-  <ul class ="row small-up-1 medium-up-3 large-up-3">
-    <div class = "column">
+  <ul class ="row">
+    <div class = "small-12 medium 4 columns">
       <li>Top 10 Movies</li>
       <ul>
         <% @movies.each do |item| %>
-        <li><%= link_to item.name, show_movie_path(item) %><small>Ranked: <%=item.rank%></small></li>
+        <li><div><%= link_to item.name, show_movie_path(item) %></div><div><small>Ranked: <%=item.rank%></small></div></li>
         <% end %>
       </ul>
       <p><small><%=link_to "View All", movies_path%></small></p>
     </div>
-    <div class = "column">
+    <div class = "small-12 medium 4 columns">
       <li>Top 10 Books</li>
       <ul>
         <% @books.each do |item| %>
@@ -19,7 +19,7 @@
       </ul>
       <p><small><%=link_to "View All", books_path%></small><p>
     </div>
-    <div class = "column">
+    <div class = "small-12 medium 4 columns">
       <li>Top 10 Albums</li>
       <ul>
         <% @albums.each do |item| %>
