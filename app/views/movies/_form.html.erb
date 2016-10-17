@@ -1,0 +1,28 @@
+<section>
+  <div class="error">
+    <% if @movie.errors.any? %>
+      <p>Error! Cannot save your inputs.</p>
+      <% @movie.errors.each do |field, problem| %>
+        <li><strong><%= field %>: </strong><%= problem %></li>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="small-10 medium-10 large-10">
+    <%= form_for @movie, method: http_method do |m| %>
+    <p class="row">
+      <%= m.label "Name" %>
+      <%= m.text_field :name %>
+    </p>
+    <p class="row">
+      <%= m.label "Director" %>
+      <%= m.text_field :director %>
+    </p>
+    <p class="row">
+      <%= m.label "Description" %>
+      <%= m.text_field :description %>
+    </p>
+    <%= m.submit "Save" %>
+    <% end %>
+  </div>
+</section>

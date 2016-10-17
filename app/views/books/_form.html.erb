@@ -1,0 +1,31 @@
+<section>
+  <div class="error">
+<% if @book.errors.any? %>
+  <p>Error! Cannot save your inputs.</p>
+  <% @book.errors.each do |field, problem| %>
+    <li><strong><%= field %>: </strong><%= problem %></li>
+  <% end %>
+<% end %>
+</div>
+
+<div class="small-10 medium-10 large-10">
+<%= form_for @book, method: http_method do |b| %>
+
+<p class="row">
+  <%= b.label "Name" %>
+  <%= b.text_field :name %>
+</p>
+<p class="row">
+  <%= b.label "Author" %>
+  <%= b.text_field :author %>
+</p>
+<p class="row">
+  <%= b.label "Description" %>
+  <%= b.text_field :description %>
+</p>
+
+<%= b.submit "Save" %>
+
+<% end %>
+</div>
+</section>

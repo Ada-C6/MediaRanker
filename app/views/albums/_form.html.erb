@@ -1,0 +1,28 @@
+<section>
+  <div class="error">
+    <% if @album.errors.any? %>
+      <p>Error! Cannot save your inputs.</p>
+      <% @album.errors.each do |field, problem| %>
+        <li><strong><%= field %>: </strong><%= problem %></li>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="small-10 medium-10 large-10">
+    <%= form_for @album, method: http_method do |a| %>
+    <p class="row">
+      <%= a.label "Name" %>
+      <%= a.text_field :name %>
+    </p>
+    <p class="row">
+      <%= a.label "Artist" %>
+      <%= a.text_field :artist %>
+    </p>
+    <p class="row">
+      <%= a.label "Description" %>
+      <%= a.text_field :description %>
+    </p>
+    <%= a.submit "Save" %>
+    <% end %>
+  </div>
+</section>

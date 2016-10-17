@@ -1,3 +1,103 @@
+@import url('foundation.css');
+
+body {
+  font-size: 16px;
+  width: 88vw;
+  margin: 4vh auto;
+}
+
+nav {
+  border-bottom:  1px solid #EEE;
+}
+
+nav h3 {
+  color: gray;
+}
+
+nav p {
+  display: inline;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 25px;
+}
+
+table {
+  border-collapse: collapse;
+  line-height: 1;
+}
+
+td, th {
+  border-top: 1px solid #CCCCCC;
+}
+
+th {
+  text-align: left;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+a:hover, a:visited:hover {
+  color: #CC3333;
+  text-decoration: underline;
+}
+
+.not-highlighted {
+  color: gray;
+  font-size: 18px;
+}
+
+.button.secondary {
+  border: 2px solid #CCC;
+  background-color: #FFF;
+  color: #333;
+  font-weight: normal;
+}
+
+.button.alert {
+  border:  2px solid #d43f3a;
+  background-color: #d9534f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button.radius {
+  border-radius: 10px;
+  margin: 0px;
+  font-weight: 500;
+}
+
+.command {
+  margin-top: 50px;
+}
+
+.row {
+  margin: 20px;
+}
+
+.error {
+  color: red;
+  margin: 20px;
+}
+
+.home-name {
+  font-weight: 500;
+}
+
+#blue-button {
+  color: white;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

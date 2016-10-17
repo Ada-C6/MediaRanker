@@ -1,0 +1,18 @@
+<div class ="row">
+  <div class="small-up-12 medium-up-12 large-up-12">
+    <section>
+<h2><%= @album.name %><span class="not-highlighted"> Recorded by: <%= @album.artist %></span></h2>
+
+<h4>Ranked: <%= @album.ranked %></h4>
+
+<p>Description: <%= @album.description %></p>
+
+<div class="command">
+<p><%= button_to "Upvote", upvote_album_path(@album.id), :method => :patch, class: "button radius", id: "blue-button" %></p>
+
+<p>
+  <%= link_to "Edit '#{@album.name}'", edit_album_path(@album.id), class: "button secondary radius" %>
+  <%= link_to "Delete", album_path(@album.id), method: :delete,  class: "button radius alert", data: { confirm: "Are you sure you want to delete?"} %>
+  <%= link_to "View All Albums", albums_path, class: "button secondary radius" %>
+  <%= link_to "View All Media", home_path, class: "button secondary radius" %>
+</p>

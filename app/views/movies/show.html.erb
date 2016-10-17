@@ -1,0 +1,21 @@
+<div class ="row">
+  <div class="small-up-12 medium-up-12 large-up-12">
+    <section>
+      <h2><%= @movie.name %><span class="not-highlighted"> Directed by: <%= @movie.director %></span></h2>
+
+      <h4>Ranked: <%= @movie.ranked %></h4>
+
+      <p>Description: <%= @movie.description %></p>
+
+      <div class="command">
+        <p><%= link_to "Upvote", upvote_movie_path(@movie.id), :method => :patch, class: "button radius", id: "blue-button" %></p>
+        <p>
+          <%= link_to "Edit '#{@movie.name}'", edit_movie_path(@movie.id), class: "button secondary radius" %>
+          <%= link_to "Delete", movie_path(@movie.id), method: :delete, class: "button radius alert", data: { confirm: "Are you sure you want to delete?"} %>
+          <%= link_to "View All Movies", movies_path, class: "button secondary radius" %>
+          <%= link_to "View All Media", home_path, class: "button secondary radius" %>
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

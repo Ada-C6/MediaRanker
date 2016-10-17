@@ -1,0 +1,28 @@
+<div class ="row">
+  <div class="small-up-12 medium-up-12 large-up-12">
+    <section>
+      <h2>All Albums</h2>
+
+      <table>
+        <tr>
+          <th>Ranking</th>
+          <th>Name</th>
+          <th>Upvote</th>
+        </tr>
+
+        <% @albums.each do |album| %>
+        <tr>
+          <td><strong><%= album.ranked %></strong></td>
+          <td><%= link_to "#{album.name}", album_path(album.id), class: "home-name"%></td>
+          <td><%= button_to "Upvote", upvote_album_path(album.id), :method => :patch, class: "button radius" %></td>
+        </tr>
+        <% end %>
+      </table>
+
+      <div class="command">
+        <%= link_to "View All Media", home_path, class: "button secondary radius" %>
+        <%= link_to "Add an Album", new_album_path, class: "button secondary radius" %>
+      </div>
+    </section>
+  </div>
+</div>
