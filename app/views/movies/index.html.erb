@@ -1,4 +1,4 @@
 <h1> All the Movies. </h1>
 <%= render partial: "layouts/basic_info", locals: { media_type: @movies, media_class: "movie"}%>
 
-<%= button_to "Add new movie", new_movie_path, method: :get%>
+<%= button_to "Add new movie", new_movie_path, method: :get, class: "button"%>

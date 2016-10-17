@@ -1,4 +1,4 @@
 <h1> All the books. </h1>
 <%= render partial: "layouts/basic_info", locals: { media_type: @books, media_class: "book"}%>
 
-<%= button_to "Add new book", new_book_path, method: :get%>
+<%= button_to "Add new book", new_book_path, method: :get, class: "button"%>
