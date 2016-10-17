@@ -1,20 +1,4 @@
 <%= render "medias/shared_table", media_type: "Albums", all_media: @all_albums%>
 
 
-<!-- Old version for displaying albums, with working upvote button  -->
-<h2>Viewing All Albums </h2>
-
-<article class="row">
-  <h3 class="large-4 columns"> Ranking </h3>
-  <h3 class="large-4 columns">Name </h3>
-  <h3 class="large-4 columns">Upvote </h3>
-  <% @all_albums.each do |album| %>
-  <section>
-    <p class="large-4 columns"><%= "#{album.ranking}" %>  </p>
-    <p class="large-4 columns"><%=  link_to "#{album.name}", album_path(album) %>  </p>
-    <p class="large-4 columns"><%= button_to "UPVOTE", upvote_album_path(album), method: :patch, class: "upvote-button" %> </p>
-  </section>
-  <% end %>
-</article>
-<%= link_to "View All Media", root_path%>
 <%= link_to "Add an Album", new_album_path%>
