@@ -8,7 +8,7 @@
   <section>
     <p class="large-4 columns"><%= "#{media.ranking}" %>  </p>
     <p class="large-4 columns"><%=  link_to "#{media.name}", media %>  </p>
-    <p class="large-4 columns"><%= button_to "UPVOTE", upvote_path, method: :patch, class: "upvote-button" %> </p>
+    <p class="large-4 columns"><%= button_to "UPVOTE", [:upvote, album], method: :patch, class: "upvote-button" %> </p>
   </section>
   <% end %>
 </article>
