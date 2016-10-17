@@ -1,3 +1,36 @@
+@import url('foundation.css');
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: inherit;
+    padding: .2rem;
+}
+
+.page-header {
+    position: relative;
+    background: url(/assets/owl.jpg);
+    background-size: 140px;
+    background-repeat: no-repeat;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.page-header h1 {
+    margin-left: 156px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0.8em;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

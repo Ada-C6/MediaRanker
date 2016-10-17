@@ -1,0 +1,14 @@
+<h1><%= @album.name %></h1>
+<h3>Recorded by: <%= @album.artist %></h3>
+<h5>Votes: <%= @album.votes %></h5>
+<p><%= @album.description %></p>
+
+<%= button_to("upvote", album_upvote_path(@album), method: :patch) %>
+
+<%= link_to("Edit #{ @album.name }", edit_album_path(@album), class: "button") %>
+
+<%= link_to("DELETE", album_path(@album), method: :delete, data: {confirm: "Are you sure you want to permanently delete this album?"}, class: "button") %>
+
+<%= link_to("View All Albums", albums_path, class: "button") %>
+
+<%= link_to("View All Media", root_path, class: "button") %>
