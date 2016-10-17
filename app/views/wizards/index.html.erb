@@ -1,9 +1,9 @@
 <% @wizards.each do |wizard| %>
 <table>
-  <tr>
-    <td><%= link_to( wizard.title, show_wizard_path(wizard.id) ) %></td>
-    <td><%= button_to 'upvote', upvote_wizard_path(wizard), method: :post %></td>
-    <td><%= pluralize(wizard.wizard_votes.count, "vote") %></td>
+  <tr class="row small-up-3 columns">
+    <td class="column"><%= link_to( wizard.title, show_wizard_path(wizard.id) ) %></td>
+    <td class="column"><%= button_to 'upvote', upvote_wizard_path(wizard), method: :post %></td>
+    <td class="column"><%= pluralize(wizard.wizard_votes.count, "vote") %></td>
   </tr>
 </table>
 <% end %>
