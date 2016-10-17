@@ -5,3 +5,9 @@ pelicula_de_gatos:
   director: Joaquin
   description: peli de gatos naranja en la calle
   ranking: 43
+
+first:
+  name: First Movie
+  director: Joaquin
+  description: First interesting Movie
+  ranking: 8
