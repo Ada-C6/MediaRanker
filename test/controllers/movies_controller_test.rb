@@ -21,6 +21,16 @@ class MoviesControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test "should show the requested movie" do
+    movie = movies(:Reservoir_Dogs).id
+    get :show, { id: movie }
+    assert_response :success
+    assert_template :show
+    yolo = assigns(:movie)
+    assert_not_nil yolo
+    assert_equal yolo.id, movie
+  end
+
 
   # test "should get create" do
   #   get :create

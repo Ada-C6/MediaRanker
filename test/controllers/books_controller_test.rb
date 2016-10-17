@@ -21,6 +21,15 @@ class BooksControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test "should show the requested book" do
+    book = books(:HP_seven).id
+    get :show, { id: book }
+    assert_response :success
+    assert_template :show
+    yolo = assigns(:book)
+    assert_not_nil yolo
+    assert_equal yolo.id, book
+  end
   # test "should get create" do
   #   get :create
   #   assert_response :success

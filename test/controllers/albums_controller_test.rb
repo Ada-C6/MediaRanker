@@ -30,6 +30,15 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test "should show the requested album" do
+    album = albums(:Robyn_one).id
+    get :show, { id: album }
+    assert_response :success
+    assert_template :show
+    yolo = assigns(:album)
+    assert_not_nil yolo
+    assert_equal yolo.id, album
+  end
   # test "should get create" do
   #   get :create
   #   assert_response :success
