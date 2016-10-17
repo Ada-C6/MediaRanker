@@ -5,7 +5,7 @@
 
       <h4>Ranked: <%= @movie.ranked %></h4>
 
-      <p>Description:<%= @movie.description %></p>
+      <p>Description: <%= @movie.description %></p>
 
       <div class="command">
         <p><%= link_to "Upvote", upvote_movie_path(@movie.id), :method => :patch, class: "button radius", id: "blue-button" %></p>
