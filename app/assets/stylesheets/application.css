@@ -1,8 +1,15 @@
 @import url('foundation.css');
 
-.wrapper {
-  width: 100%;
+h1 {
+  display: inline-block;
 }
+
+header p {
+  display: inline-block;
+}
+
+
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -1,9 +1,9 @@
 <% @bobs.each do |bob| %>
 <table>
-  <tr>
-    <td><%= link_to( bob.name, show_bob_path(bob.id) ) %></td>
-    <td><%= button_to 'upvote', upvote_bob_path(bob), method: :post %></td>
-    <td><%= pluralize(bob.bob_votes.count, "vote") %></td>
+  <tr class="row small-3 ">
+    <td class="column"><%= link_to( bob.name, show_bob_path(bob.id) ) %></td>
+    <td class="column"><%= button_to 'upvote', upvote_bob_path(bob), method: :post %></td>
+    <td class="column"><%= pluralize(bob.bob_votes.count, "vote") %></td>
   </tr>
 </table>
 <% end %>
