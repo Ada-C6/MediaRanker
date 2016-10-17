@@ -5,12 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Anton|Julius+Sans+One|Poiret+One|Quicksand" rel="stylesheet">
 </head>
 <body>
 <header>
-  <img src="http://i.imgur.com/f5sBtgx.png" alt="cat owl clipart" />
-  <h1>Media Ranker</h1>
-  <h3>Ranking the Best of Everything</h3>
+  <div>
+    <img src="http://i.imgur.com/f5sBtgx.png" alt="cat owl clipart" />
+    <h1 class="title"><%= link_to "Media Ranker", root_path %></h1>
+    <h3>Ranking the Best of Everything</h3>
+  </div>
 </header>
 <%= yield %>
 
