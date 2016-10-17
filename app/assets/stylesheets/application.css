@@ -6,19 +6,20 @@
    display: inline-block;
  }
 
- header h1 {
+ header h1, header h2 {
    display: inline;
-   font-family: sans-serif;
    padding: 10px;
    position: relative;
    top: 15px;
  }
 
+ h2 {
+   font-size: 1.25em;
+ }
+
  header {
-   /*border: black thin solid;*/
    padding-bottom: 10px;
    position: relative;
-   /*background:*/
  }
 
 footer p {
