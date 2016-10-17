@@ -40,6 +40,16 @@ table tr:nth-last-of-type(even) {
   border-radius: 1em;
 }
 
+table * {
+  border-color: #b1e6fc;
+}
+.form-div {
+  background-color: #b1e6fc;
+}
+#submit {
+  background-color: #b1e6fc;
+}
+
 body {
   background-color: #b1e6fc;
 }
