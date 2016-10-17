@@ -80,15 +80,16 @@ class BooksControllerTest < ActionController::TestCase
     assert_redirected_to book_path
   end
 
+
   # UPVOTE
   test "should add 1 to rank" do
+    book = books(:HP_four)
     setup do
-      book = books(:HP_four)
       @request.env['HTTP_REFERER'] = 'http://localhost:3000/books'
-      patch :upvote, id: book.id, book: { }
-      book.reload
-      assert_equal 1, book.rank
+      patch :upvote, id: book.id
     end
+    book.upvote
+    assert_equal 1, book.rank
   end
 
 end

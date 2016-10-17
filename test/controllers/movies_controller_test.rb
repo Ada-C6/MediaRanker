@@ -82,13 +82,13 @@ class MoviesControllerTest < ActionController::TestCase
 
   # UPVOTE
   test "should add 1 to rank" do
+    movie = movies(:Kill_Bill_vol_1)
     setup do
-      movie = movies(:Kill_Bill_vol_2).id
       @request.env['HTTP_REFERER'] = 'http://localhost:3000/movies'
-      patch :upvote, id: movie.id, movie: { }
-      movie.reload
-      assert_equal 1, movie.rank
+      patch :upvote, id: movie.id
     end
+    movie.upvote
+    assert_equal 1, movie.rank
   end
 
 
