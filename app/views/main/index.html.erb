@@ -1,0 +1,28 @@
+<h1>Media Ranker</h1>
+
+<h3>Movies</h3>
+<ul class = 'list'>
+<%  @movie_list.each do |m| %>
+  <li><%= link_to "#{m.title}", movie_path(m) %></li>
+<% end %>
+</ul>
+<%= link_to "All Movies", movies_path %>
+<%= link_to "Add Movie", new_movie_path %>
+
+<h3>Books</h3>
+<ul class = 'list'>
+<%  @book_list.each do |b| %>
+  <li><%= link_to "#{b.title}", book_path(b) %></li>
+<% end %>
+</ul>
+<%= link_to "All Books", books_path %>
+<%= link_to "Add Book", new_book_path %>
+
+<h3>Albums</h3>
+<ul class = 'list'>
+<%  @album_list.each do |a| %>
+  <li><%= link_to "#{a.title}", album_path(a) %></li>
+<% end %>
+</ul>
+<%= link_to "All Albums", albums_path %>
+<%= link_to "Add Album", new_album_path %>

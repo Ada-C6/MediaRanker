@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
     @book_list = Book.all
+    @book_list_by_votes = Book.order(:votes).reverse
   end
 
   def show
@@ -46,8 +47,6 @@ class BooksController < ApplicationController
     @book.save
       redirect_to books_path
   end
-
-
 
 
   private

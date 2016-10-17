@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'main#index'
+  get '/main/index' => 'main#index'
 
   get '/movies' => 'movies#index'
   get '/movies/new', to: 'movies#new', as: 'new_movie'

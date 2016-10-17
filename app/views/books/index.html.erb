@@ -1,9 +1,10 @@
 <h1>Books</h1>
 
+<% 10.times do |i| %>
 <ul class = 'list'>
-<%  @book_list.each do |b| %>
-  <li><%= link_to "#{b.title}", book_path(b) %></li>
-<% end %>
+  <li><%= link_to "#{@book_list_by_votes[i].title}", book_path(@book_list_by_votes[i].id) %>
+  <%= "Votes #{@book_list_by_votes[i].votes}" %></li>
 </ul>
+<% end %>
 
 <%= link_to "Add Book", new_book_path %>

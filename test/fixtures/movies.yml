@@ -1,13 +1,67 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  director: MyString
-  description: MyString
+casablanca:
+  title: Casablanca
+  director: Michael Curtiz
+  description: People go to Casablanca and have an affair
   votes: 1
 
-two:
-  title: MyString
-  director: MyString
-  description: MyString
+gone_with_wind:
+  title: Gone With the Wind
+  director: Victor Fleming
+  description: southern people deal with the civil war
+  votes: 3
+
+singin_in_rain:
+  title: Singin' In the Rain
+  director: Gene Kelly
+  description: people sing, in the rain.
+  votes: 6
+
+psycho:
+  title: Psycho
+  director: Alfred Hitchcock
+  description: woman goes to creepy motel
+  votes: 1
+
+citizen_kane:
+  title: Citizen Kane
+  director: Orsen Welles
+  description: Kane's a citizen
+  votes: 2
+
+jaws:
+  title: Jaws
+  director: Steven Spielberg
+  description: big shark
+  votes: 1
+
+godfather:
+  title:
+  director: Francis Ford Coppola
+  description: big Italian family
+  votes: 8
+
+king_kong:
+  title: King Kong
+  director: Merian C. Cooper
+  description: large ape wreaks havoc
+  votes: 1
+
+kill_a_mockingbird:
+  title: To Kill A Mockingbird
+  director:
+  description: court case in the south
+  votes: 3
+
+sound_of_music:
+  title: The Sound of Music
+  director: Robert Wise
+  description: woman leaves nunnery and becomes nanny
+  votes: 9
+
+12_angry_men:
+  title: 12 Angry Men
+  director: Sidney Lumet
+  description: there are 12 men they are angry
   votes: 1

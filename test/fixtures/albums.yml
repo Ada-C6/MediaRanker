@@ -1,13 +1,67 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  artist: MyString
-  description: MyString
+shutup_and_dance:
+  title: Shut Up and Dance
+  artist: WALK THE MOON
+  description: Album called shut up and dance
   votes: 1
 
-two:
-  title: MyString
-  artist: MyString
-  description: MyString
+girl_on_fire:
+  title:
+  artist: Alicia Keys
+  description: Some girl's on fire
   votes: 1
+
+pitch_perfect:
+  title: Pitch Perfect Soundtrack
+  artist: Barden Bellas
+  description: Girl goes to college, joins a capella group
+  votes: 2
+
+glee_6:
+  title: Glee, The Music vol 6
+  artist: Glee Cast
+  description: Kids in high school sing stuff
+  votes: 4
+
+glee_5:
+  title: Glee, The Music vol 5
+  artist: Glee Cast
+  description: Kids in high school sing stuff
+  votes: 6
+
+night_visions:
+  title: Night Visions
+  artist: Imagine Dragons
+  description: Imagine Dragons have night visions
+  votes: 1
+
+brittany_2:
+  title: Brittany 2.0
+  artist:
+  description: Glee sings Brittany
+  votes: 1
+
+the_way:
+  title: The Way
+  artist: Ariana Grande
+  description: Ariana sings some stuff
+  votes: 3
+
+immaculate_collection:
+  title: The Immaculate Collection
+  artist: Madonna
+  description: Madonna was awesome in the 80s
+  votes: 8
+
+pink_friday:
+  title: Pink Friday
+  artist: Nicki Minaj
+  description: Nicki Minaj has an annoying voice
+  votes: 4
+
+music_box:
+  title: Music Box
+  artist: Mariah Carey
+  description: Mariah Carey was great in the 90s
+  votes: 3
