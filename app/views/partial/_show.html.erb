@@ -4,7 +4,7 @@
 </h1>
 <h4>Ranked:<%= media.ranked %></h4>
 <p><%= media.description %></p>
-<p id="upvote"><%= link_to "Upvote", polymorphic_path([media, :upvote]), method: :patch %></p>
+<p id="upvote-show"><%= button_to "Upvote", polymorphic_path([media, :upvote]), method: :patch %></p>
 
 <p class="buttons"> <%= link_to "Edit #{media.name}", edit_polymorphic_path(media) %>
 <%= link_to "Delete", polymorphic_path(media), method: :delete, data: {confirm: "Are you sure?"} %>

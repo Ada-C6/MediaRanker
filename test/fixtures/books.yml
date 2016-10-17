@@ -5,7 +5,6 @@ valid_data:
   ranked: 10
 
 missing_name:
-  name: book 2
   author: Louis Sachar
   description: Book Descreption 1
   ranked: 10

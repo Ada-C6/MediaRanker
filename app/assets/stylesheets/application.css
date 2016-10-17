@@ -2,93 +2,67 @@
 @import url('foundation.css');
 
 
- .mainpage-colomn {
-     position: relative;
-     min-height: 1px;
-     padding-right: 15px;
-     padding-left: 15px;
-     display: inline-block;
-     float: left;
- }
-
- a {
-   color: blue;
-   text-decoration: none;
- }
-
- .header-all {
-   position: relative;
-   background: url(/assets/owl.jpg);
-   background-size: 159px;
-   background-repeat: no-repeat;
-   padding-bottom: 9px;
-   margin: 40px 0 20px;
-   border-bottom: 1px solid #eee;
- }
-
- .header-all h1 {
-   margin-left: 158px;
- }
-
- h1 {
-    font-size: 36px;
- }
-
- h2 {
-    font-size: 30px
- }
-
- body {
-    font-family: Helvetica;
-    font-size: 14px;
-    line-height: 1.5px;
-    margin: 35px;
- }
- h1, h2, h3, h4, h5, h6 {
-     font-family: inherit;
-     font-weight: 500;
-     line-height: 1.1;
-     color: inherit;
- }
- #mainpage-moves{
-   display: inline-block;
-   float: right;
- }
-
- small {
-   font-size: 70%;
- }
-
-  table, td {
-    padding: 8px;
-    line-height: 1.5;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-  }
-
-
-/*
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}*/
-/*.buttons {
-   display: inline-block;
-   float: right;
-}*/
-/*.table {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+.mainpage-colomn {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  float: left;
 }
-/*th {
-text-align: left;
-}*/
 
-/*.table-body {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-}*
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.header-all {
+  position: relative;
+  background: url(/assets/owl.jpg);
+  background-size: 159px;
+  background-repeat: no-repeat;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-all h1 {
+  margin-left: 158px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px
+}
+
+body {
+  font-family: Helvetica;
+  font-size: 14px;
+  line-height: 1.5px;
+  margin: 35px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+#mainpage-moves{
+  display: inline-block;
+  float: right;
+}
+
+small {
+  font-size: 70%;
+}
+
+table, td {
+  padding: 8px;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
