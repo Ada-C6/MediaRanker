@@ -1,0 +1,35 @@
+<main>
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Ranking</th>
+          <th scope="col">Name</th>
+          <th scope="col">Upvote</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @media_listings.order(:ranking).reverse.each do |listing| %>
+        <tr>
+          <td scope="row">
+            <%= "Ranked: #{listing.ranking}" %>
+          </td>
+          <td>
+            <%= link_to "#{listing.name}", media_listing_route(listing) %>
+          </td>
+          <td>
+            <%= render partial: "upvote", locals: { media_listing: listing } %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <%= link_to "View all media", root_path, method: :get, class: :button %>
+    <%= link_to add_media_text(@media_listings), new_route, method: :get, class: :button %>
+  </section>
+</main>
+
+
+<!-- <p>This is the /index.html.erb page for each all media listings</p> -->

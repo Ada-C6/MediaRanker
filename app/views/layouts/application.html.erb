@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MediaRanker</title>
+  <title>MediaRanker (AM)</title>
+  <% require 'media_routing.rb' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<header>
+  <%= image_tag("owl.jpg",  alt: "Wise Bird") -%>
+  <span><%= link_to "Media Ranker", root_path %></span>
+  <aside>Ranking the best of everything</aside>
+</header>
+  <%= yield %>
 
 </body>
 </html>

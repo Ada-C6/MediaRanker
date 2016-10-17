@@ -1,0 +1,19 @@
+<h2><%= @listing.name %></h2>
+<h3>
+  <div class="show_view">
+  <%= "#{created_per_type(@listing)} by: #{@listing.creator}" %>
+</h3>
+<p>
+  Ranked: <%= @listing.ranking %>
+</p>
+</div>
+<div class="all_buttons">
+  <p>
+    <%= render partial: "upvote", locals: { media_listing: @listing } %>
+  </p>
+  <p>
+    <%= render partial: "buttons", locals: { media_listing: @listing, media_type: @listing.type.downcase, id: @listing.id } %>
+  </p>
+</div>
+
+<!-- <p>This is the views/media_listings/show.html.erb page</p> -->

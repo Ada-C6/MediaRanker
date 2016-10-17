@@ -1,0 +1,4 @@
+<%= form_for media_listing do |f| %>
+<%= hidden_field_tag :ranking, media_listing.ranking+=1 -%>
+<%= f.submit "Upvote", class: "success button"%>
+<% end %>

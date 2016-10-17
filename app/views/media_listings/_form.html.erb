@@ -1,0 +1,33 @@
+<main>
+  <% if @media_listing.errors.any? %>
+    <ul class="errors">
+      <% @media_listing.errors.each do |column, message| %>
+        <li>
+          <strong>
+            <%= column.capitalize %>
+          </strong> <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_for @media_listing, url: form_route, method: http_method do |f| %>
+    <p>
+      <%= f.label :name %>:
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :creator %>:
+      <%= f.text_field :creator %>
+    </p>
+
+    <p>
+      <%= f.label :description %>:
+      <%= f.text_field :description %>
+    </p>
+    <%= f.submit "Submit" %>
+  <% end %>
+</main>
+
+<!-- <p>This the the _form partial</p> -->

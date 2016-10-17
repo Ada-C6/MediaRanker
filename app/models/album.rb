@@ -1,2 +1,2 @@
-class Album < MediaListing
+class Album < MediaListing  
 end

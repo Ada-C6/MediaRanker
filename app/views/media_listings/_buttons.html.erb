@@ -1,0 +1,10 @@
+
+<p>
+  <%= link_to "Edit", edit_route(media_listing), method: :get, class: "hollow button" %>
+  <%= link_to "Delete", media_listing_route(media_listing), method: :delete, data: { confirm: "Are you sure that this listing must be deleted?" }, class: "alert button"%>
+  <%= link_to "View all #{media_listing.type.downcase}s", create_media_route, method: :get, class: 'hollow button' %>
+  <%= link_to "View all media", root_path, method: :get, class: "hollow button" %>
+</p>
+
+
+<!-- <p>This is the buttons partial view from the show form</p> -->

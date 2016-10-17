@@ -1,15 +1,84 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+valid_movie:
+  name: valid_movie
+  creator: Some Name
+  description: A long bit of text
+  ranking: 10
+  type: Movie
 
-one:
-  name: MyString
-  creator: MyString
-  description: MyString
-  ranking: 1
-  type: 
+valid_book:
+  name: valid_book
+  creator: Some Name
+  description: A long bit of text
+  ranking: 50
+  type: Book
 
-two:
-  name: MyString
-  creator: MyString
-  description: MyString
+valid_album:
+  name: valid_album
+  creator: Some Name
+  description: A long bit of text
+  ranking: 70
+  type: Album
+
+invalid_listing_type:
+  name: invalid_listing
+  creator: Some Name
+  description: A long bit of text
   ranking: 1
-  type: 
+  type: MediaListing
+
+blank_listing_name:
+  # name:
+  creator: Some Name
+  description: A long bit of text
+  ranking: 1
+  type: Movie
+
+blank_listing_type:
+  name: invalid_listing
+  creator: Some Name
+  description: A long bit of text
+  ranking: 1
+  # type:
+
+valid_movie2:
+  name: valid_movie2
+  creator: Some Name
+  description: A long bit of text
+  ranking: 20
+  type: Movie
+
+valid_book2:
+  name: valid_book2
+  creator: Some Name
+  description: A long bit of text
+  ranking: 40
+  type: Book
+
+valid_album2:
+  name: valid_album3
+  creator: Some Name
+  description: A long bit of text
+  ranking: 20
+  type: Album
+
+valid_movie3:
+  name: valid_movie
+  creator: Some Name
+  description: A long bit of text
+  ranking: 30
+  type: Movie
+
+valid_book3:
+  name: valid_book
+  creator: Some Name
+  description: A long bit of text
+  ranking: 30
+  type: Book
+
+valid_album3:
+  name: valid_album
+  creator: Some Name
+  description: A long bit of text
+  ranking: 50
+  type: Album

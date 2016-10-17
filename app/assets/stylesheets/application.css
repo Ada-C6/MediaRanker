@@ -1,3 +1,4 @@
+@import url('foundation.css');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,11 @@
  *= require_tree .
  *= require_self
  */
+
+header span {
+  font-size: 36px;
+}
+
+header aside {
+  display: inline;
+}

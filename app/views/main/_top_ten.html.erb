@@ -1,0 +1,12 @@
+<h3><%= "Top #{media.first.type}s" %></h3>
+  <span>
+    <% ordered_media = order_by_ranking(media) %>
+    <% 10.times do %>
+      <% listing = ordered_media.shift %>
+      <p>
+      <span><%= link_to "#{listing.name}", media_listing_route(listing) %></span>
+      <span><%= "Ranked: #{listing.ranking}" %></span>
+      </p>
+    <% end %>
+  </span>
+  <p><%= link_to "View More #{media.first.type}s", media_listings_route(media) %></p>
