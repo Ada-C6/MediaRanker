@@ -27,7 +27,7 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_nil album.name
   end
 
-  test "should create a album with valid inputs" do
+  test "should create an album with valid inputs" do
     assert_difference('Album.count', 1) do
       post_params = { album: { name: "Hello", artist: "Goodbye"}}
       post :create, post_params
@@ -35,7 +35,7 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_redirected_to albums_path
   end
 
-  test "cannot create a album without valid inputs and will render the new form" do
+  test "cannot create an album without valid inputs and will render the new form" do
     assert_no_difference('Album.count') do
       post_params = { album: { name: nil, artist: nil}}
       post :create, post_params
@@ -65,7 +65,7 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test "cannot update a album without valid inputs and will render the 'edit' form" do
+  test "cannot update an album without valid inputs and will render the 'edit' form" do
     album = albums(:red)
     assert_no_difference('Album.count') do
       patch :update, id: album.id, album: { name: nil }
@@ -85,7 +85,7 @@ class AlbumsControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test "can destroy a album" do
+  test "can destroy an album" do
     album = albums(:miracle)
     assert_difference('Album.count', -1) do
       delete :destroy, id: album.id
