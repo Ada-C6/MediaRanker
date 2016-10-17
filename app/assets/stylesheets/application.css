@@ -18,6 +18,7 @@
    /*border: black thin solid;*/
    padding-bottom: 10px;
    position: relative;
+   background:
  }
 
 footer p {
@@ -28,5 +29,23 @@ footer p {
 }
 
 footer.basic {
-  background-color: red;
+  background-color: #A9A1B5;
+}
+
+.buttons {
+  width: 50%;
+  border-collapse: inherit;
+}
+
+.buttons td {
+  padding-left: 0px;
+}
+
+body {
+  margin: 5%;
+}
+
+.sub-nav ul {
+  list-style: none;
+  margin-left: 0;
 }
