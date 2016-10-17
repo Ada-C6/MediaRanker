@@ -27,13 +27,26 @@ class WizardsControllerTest < ActionController::TestCase
   end
 
   test "should get update" do
-    patch :update, {id: wizards(:two).id }
-    assert_response :success
+    two = wizards(:two)
+    patch :update, {id: two.id, wizard: {title: two.title}  }
+    assert_response :redirect
   end
 
   test "should get delete" do
     delete :delete, {id: wizards(:two).id }
     assert_response :redirect
+  end
+
+  test "Deleting a Wizard changes the number of wizards" do
+    assert_difference("Wizard.count", -1) do
+      delete :delete, {id: wizards(:two).id }
+    end
+  end
+
+  test "Voting for a Wizard changes vote count" do
+    assert_difference("WizardVote.count", 1) do
+      post :upvote, {id: wizards(:two).id }
+    end
   end
 
 end

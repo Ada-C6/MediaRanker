@@ -27,13 +27,26 @@ class BobsControllerTest < ActionController::TestCase
   end
 
   test "should get update" do
-    patch :update, {id: bobs(:bobby).id }
-    assert_response :success
+    bobby = bobs(:bobby)
+    patch :update, {id: bobby.id, bob: {name: bobby.name } }
+    assert_response :redirect
   end
 
   test "should get delete" do
     delete :delete, {id: bobs(:bobby).id }
     assert_response :redirect
+  end
+
+  test "Deleting a Bob changes the number of bobs" do
+    assert_difference("Bob.count", -1) do
+      delete :delete, {id: bobs(:bobby).id }
+    end
+  end
+
+  test "Voting for a Bob changes vote count" do
+    assert_difference("BobVote.count", 1) do
+      post :upvote, {id: bobs(:bobby).id }
+    end
   end
 
 end

@@ -46,7 +46,7 @@ class LesliesController < ApplicationController
   def upvote
     @leslie = Leslie.find(params[:id].to_i)
     @leslie.leslie_votes.create
-    
+
     redirect_to show_leslie_path(@leslie.id)
   end
 

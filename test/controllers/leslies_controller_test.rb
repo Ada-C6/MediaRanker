@@ -21,19 +21,40 @@ class LesliesControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test "should get edit" do
+  test "Creating a Leslie changes the number of leslies" do
+  assert_difference("Leslie.count", 1) do
+    post_params = {leslie: {title: "Surf Ninjas"} }
+    post :create, post_params
+    end
+  end
+
+  test "should go to edit" do
     get :edit, {id: leslies(:leslie2).id }
     assert_response :success
   end
 
-  test "should get update" do
-    patch :update, {id: leslies(:leslie2).id }
-    assert_response :success
+  test "should update" do
+    leslie2 = leslies(:leslie2)
+    patch :update, {id: leslie2.id, leslie: {title: leslie2.title} }
+    assert_response :redirect
   end
 
   test "should get delete" do
     delete :delete, {id: leslies(:leslie2).id }
     assert_response :redirect
+  end
+
+  test "Deleting a Leslie changes the number of leslies" do
+    assert_difference("Leslie.count", -1) do
+      post_params = {id: leslies(:leslie2).id }
+      delete :delete, post_params
+    end
+  end
+
+  test "Voting for a Leslie changes vote count" do
+    assert_difference("LeslieVote.count", 1) do
+      post :upvote, {id: leslies(:leslie2).id}
+    end
   end
 
 end
