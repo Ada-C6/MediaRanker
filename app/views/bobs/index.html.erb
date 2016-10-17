@@ -1,6 +1,6 @@
 <% @bobs.each do |bob| %>
 <table>
-  <tr class="row small-3 ">
+  <tr class="row small-up-3 columns">
     <td class="column"><%= link_to( bob.name, show_bob_path(bob.id) ) %></td>
     <td class="column"><%= button_to 'upvote', upvote_bob_path(bob), method: :post %></td>
     <td class="column"><%= pluralize(bob.bob_votes.count, "vote") %></td>
