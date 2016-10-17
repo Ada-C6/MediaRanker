@@ -6,7 +6,11 @@ class AlbumsController < ApplicationController
   end
 
   def show
+    begin
     @album = Album.find(params[:id])
+    rescue         ActiveRecord::RecordNotFound
+      render "/errors/not_found", status: :not_found
+    end
   end
 
   def new
