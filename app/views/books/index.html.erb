@@ -1,10 +1,12 @@
 <h1>Books</h1>
 
-<% 10.times do |i| %>
-<ul class = 'list'>
-  <li><%= link_to "#{@book_list_by_votes[i].title}", book_path(@book_list_by_votes[i].id) %>
-  <%= "Votes #{@book_list_by_votes[i].votes}" %></li>
-</ul>
+<% @book_list_by_votes.each do |b| %>
+   <ul class = 'list'>
+     <li><%= " #{b.votes}" %>
+     <%= link_to "#{b.title}", book_path(b.id)%>
+     <%= button_to "Upvote", upvote_book_path(b), method: :patch %></li>
+   </ul>
 <% end %>
 
 <%= link_to "Add Book", new_book_path %>
+<%= link_to "Return to All Media", main_index_path %>

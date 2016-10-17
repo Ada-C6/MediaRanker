@@ -132,13 +132,55 @@ albums = [
    artist: "Some metal band",
    description: "Some kind of music that Dan is into"
   },
+
   {title: "Melon Collie and the Infinite Sadness",
    artist: "Smashing Pumpkins",
    description: "The 90s had better music."
   },
+
   {title: "The Frozen Soundtrack",
    artist: "Some disney characters",
    description: "Don't lie, you like Let It Go"
+ },
+
+ {title: "Some Pop Album",
+  artist: "Artist known as",
+  description: "It's an album"
+ },
+
+ {title: "Walls",
+  artist: "Kings of Leon",
+  description: "there are walls in this album"
+ },
+
+ {title: "Purpose",
+  artist: "Justin Bieber",
+  description: "Justin Bieber has purpose"
+ },
+
+ {title: "Thunder",
+  artist: "Leona Lewis",
+  description: "Album called Thunder"
+ },
+
+ {title: "Sixteen Stone",
+  artist: "Bush",
+  description: "Bush was stoned"
+ },
+
+ {title: "Crazy Love",
+  artist: "Michael Bubble",
+  description: "Michael Bubbles"
+ },
+
+ {title: "Can't Feel My Face",
+  artist: "The Weeknd",
+  description: "The Weekend can't feel its face"
+ },
+
+ {title: "Demi",
+  artist: "Demi Lovato",
+  description: "Demi Lovato is bad at album names"
  }
 ]
 albums.each do |a|

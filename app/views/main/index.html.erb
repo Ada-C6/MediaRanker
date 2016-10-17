@@ -1,28 +1,43 @@
 <h1>Media Ranker</h1>
 
-<h3>Movies</h3>
-<ul class = 'list'>
-<%  @movie_list.each do |m| %>
-  <li><%= link_to "#{m.title}", movie_path(m) %></li>
-<% end %>
-</ul>
-<%= link_to "All Movies", movies_path %>
-<%= link_to "Add Movie", new_movie_path %>
+<% 10.times do |i| %>
+   <tr>
+     <td><%= link_to "#{@movie_list_by_votes[i].title}", movie_path(@movie_list_by_votes[i].id)%><%= " #{@movie_list_by_votes[i].votes}" %></td>
 
-<h3>Books</h3>
-<ul class = 'list'>
-<%  @book_list.each do |b| %>
-  <li><%= link_to "#{b.title}", book_path(b) %></li>
-<% end %>
-</ul>
-<%= link_to "All Books", books_path %>
-<%= link_to "Add Book", new_book_path %>
+     <td><%= link_to "#{@book_list_by_votes[i].title}", book_path(@book_list_by_votes[i].id)%><%= " #{@book_list_by_votes[i].votes}" %></td>
 
-<h3>Albums</h3>
-<ul class = 'list'>
-<%  @album_list.each do |a| %>
-  <li><%= link_to "#{a.title}", album_path(a) %></li>
-<% end %>
-</ul>
-<%= link_to "All Albums", albums_path %>
-<%= link_to "Add Album", new_album_path %>
+     <td><%= link_to "#{@album_list_by_votes[i].title}", album_path(@album_list_by_votes[i].id)%><%= " #{@album_list_by_votes[i].votes}" %></td>
+   </tr>
+ <% end %>
+
+
+<table>
+ <tr>
+   <th>Top Movies</th>
+   <th>Top Books</th>
+   <th>Top Albums</th>
+ </tr>
+ <% 10.times do |i| %>
+   <tr>
+     <td><%= link_to "#{@movie_list_by_votes[i].title}", movie_path(@movie_list_by_votes[i].id)%> <%= " #{@movie_list_by_votes[i].votes}" %></td>
+
+     <td><%= link_to "#{@book_list_by_votes[i].title}", book_path(@book_list_by_votes[i].id)%><%= " #{@book_list_by_votes[i].votes}" %></td>
+
+     <td><%= link_to "#{@album_list_by_votes[i].title}", album_path(@album_list_by_votes[i].id)%><%= " #{@album_list_by_votes[i].votes}" %></td>
+   </tr>
+ <% end %>
+ <tr>
+   <td>
+     <%= link_to "View All Movies", movies_path %>
+
+   </td>
+   <td>
+     <%= link_to "View All Books", books_path %>
+
+   </td>
+   <td>
+     <%= link_to "View All Albums", albums_path %>
+
+   </td>
+ </tr>
+</table>

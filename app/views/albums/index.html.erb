@@ -1,9 +1,11 @@
 <h1>Albums</h1>
 
+<% @album_list_by_votes.each do |a| %>
 <ul class = 'list'>
-<%  @album_list.each do |a| %>
-  <li><%= link_to "#{a.title}", album_path(a) %></li>
-<% end %>
+  <li><%= " #{a.votes}" %>
+  <%= link_to "#{a.title}", album_path(a.id)%>
+  <%= button_to "Upvote", upvote_album_path(a), method: :patch %></li>
 </ul>
-
+<% end %>
 <%= link_to "Add Album", new_album_path %>
+<%= link_to "Return to All Media", main_index_path %>
