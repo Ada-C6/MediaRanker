@@ -1,11 +1,13 @@
 <%= render "medias/shared_display", title: @book, created_verb: "Written", maker: @book.author, rank: @book, about: @book %>
 
-<section>
+
 <%= button_to "UPVOTE", upvote_book_path(@book), method: :patch  %>
+
+<section class="button-list">
 <%= link_to "Edit #{@book.name}", edit_book_path, class: "plain-button" %>
-<%= link_to "DELETE", book_path(@book.id), method: :delete,
+<%= link_to "DELETE", book_path(@book.id),class: 'delete-button', method: :delete,
 data: { confirm: 'Are you sure?'} %>
+</section>
 
 <%= link_to "View All Media", root_path, class: "plain-button"%>
 <%= link_to "View All Books", books_path, class: "plain-button"%>
-</section>

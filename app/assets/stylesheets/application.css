@@ -1,6 +1,6 @@
 @import url('foundation.css');
 
-.large-4 {
+.small-4 {
   border-top: 1px gray solid;
 }
 
@@ -12,15 +12,12 @@ img {
   width: 20%;
 }
 
-body {
-  padding-left: 5%;
-}
-
 a.plain-button {
   border-radius: 5%;
-  border: 1px black solid;
+  border: 1px transparent solid;
   padding: 2px;
   background-color: rgb(175, 181, 181);
+  padding: 6px 12px;
 }
 
 .creator-header {
@@ -32,10 +29,28 @@ a.plain-button {
   display: inline-block;
 }
 
+.delete-button {
+  background-color: red;
+  color: white;
+  border-radius: 5%;
+  border: 2px transparent solid;
+  padding: 6px 12px;
+}
+
+input, .button_to {
+  margin: 15px 10px;
+
+}
+.button-list {
+  display: inline-block;
+  margin: 15px 10px;
+}
 .text-stuff {
   text-align: center;
 }
-
+h2 {
+  text-align: center;
+}
 a {
   color: rgb(64, 30, 179);
 }
