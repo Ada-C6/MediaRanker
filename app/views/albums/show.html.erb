@@ -1,0 +1,14 @@
+<section>
+  <h2><%= @album.name %></h2>
+  <h3><%= "Recorded by: #{@album.artist}" %></h3>
+  <h4><%= "Ranked: #{@album.ranking}" %></h4>
+  <p><%= "#{@album.description}" %></p>
+</section>
+
+<section class="buttons">
+<%= button_to "upvote", upvote_album_path(@album), method: :patch%>
+<%= button_to "Edit #{@album.name}", edit_album_path(@album), method: :get %>
+<%= button_to "DELETE", album_path(@album), method: :delete, data: { confirm: "Right meow?" }%>
+<%= button_to "View All Albums", albums_path, method: :get %>
+<%= button_to "View All Media", root_path, method: :get %>
+</section>

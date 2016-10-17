@@ -1,0 +1,13 @@
+
+
+gatos:
+  name: Gatos
+  artist: meow_meow
+  description: los gatos hace meow
+  ranking: 12
+
+first:
+  name: First
+  artist: The First Ones
+  description: first album of the first ones band
+  ranking: 0

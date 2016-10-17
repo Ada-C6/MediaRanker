@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+libro_de_gatos:
+  name: Libro de Gatos
+  author: meow_meow
+  description: los gatos hace meow
+  ranking: 12
+
+first_book:
+  name: First Book
+  author: First person
+  description: first book written by the first person
+  ranking: 0

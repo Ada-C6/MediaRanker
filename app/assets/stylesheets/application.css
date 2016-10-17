@@ -1,15 +1,49 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('foundation.css');
+
+body {
+  margin: 5%;
+}
+
+div img {
+  float: left;
+}
+div h3, div h1 {
+  display: inline;
+}
+
+a:hover {
+  color: #ff5050;
+}
+
+a {
+  color: #33cccc;
+  font-family: 'Quicksand';
+  text-decoration: none;
+}
+
+tr th, h3 {
+  color: #ff5050;
+  font-family: 'Bad Script', sans-serif;
+}
+
+tr td {
+  font-family: 'Quicksand';
+  color: #737373;
+  font-size: 1.25em;
+}
+
+section, section h2, section h3, section h4 {
+  clear: both;
+  color: #33cccc;
+  font-family: 'Julius Sans One';
+  text-decoration: none;
+  line-height: 25px;
+}
+
+section {
+  padding-top: 5%;
+}
+
+.buttons {
+  display: inline;
+}

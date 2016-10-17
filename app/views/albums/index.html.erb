@@ -1,0 +1,17 @@
+
+<table>
+  <tr>
+    <th> Ranking </th>
+    <th> Name </th>
+    <th> Upvote </th>
+  </tr>
+  <% @albums.each do |album| %>
+  <tr>
+    <th><%= "Ranked: #{album.ranking}" %></th>
+    <th><%= link_to "#{album.name}", album_path(album) %></th>
+    <th><%= button_to "upvote", upvote_album_path(album), method: :patch %></th>
+  </tr>
+  <% end %>
+</table>
+<%= button_to "View All Media", root_path, method: :get %>
+<%= button_to "Add an Album", new_album_path, method: :get %>
