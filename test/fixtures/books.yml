@@ -1,0 +1,66 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+charlotte_web:
+  title: Charlotte's Web
+  author: E.B. White
+  description: Spider and pig become friends until spider dies.
+  votes: 1
+
+goodnight_moon:
+  title: Good Night Moon
+  author: Margaret Wise Brown
+  description: Say good night to everything and go to bed dammit
+  votes: 1
+
+wild_things:
+  title: Where The Wild Things Are
+  author: Maurice Sendak
+  description: Kid gets mad, goes to island, meets some wild things.
+  votes: 2
+
+green_eggs:
+  title: Green Eggs and Ham
+  author: Dr. Seuess
+  description: no one wants green eggs and ham
+  votes: 1
+
+giving_tree:
+  title: The Giving Tree
+  author: Shel Silverstein
+  description: tree that gives things
+  votes: 5
+
+matilda:
+  title:
+  author: Roald Dahl
+  description: girls has super powers
+  votes: 3
+
+are_you_mom:
+  title: Are You My Mother
+  author: P.D. Eastman
+  description: someone runs around asking everything if they're their mother.
+  votes: 1
+
+wizard_of_oz:
+  title: The Wizard of Oz
+  author: L. Frank Baum
+  description: someone wrote something while high on opiods
+  votes: 8
+
+coraline:
+  title: Coraline
+  author: Neil Gaiman
+  description: girls winds up in some parallel universe
+  votes: 9
+
+anne_green_gables:
+  title: Anne of Green Gables
+  author:
+  description: girl with red hair gets adopted
+  votes: 2
+
+rainbow_fish:
+  title: The Rainbow Fish
+  author: Marcus Pfister
+  description: there's a fish with rainbow
+  votes: 1

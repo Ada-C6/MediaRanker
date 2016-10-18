@@ -1,0 +1,12 @@
+<h1> Book Details </h1>
+
+  <p> <%= @book.title %> </p>
+  <p> Written by: <%= @book.author %> </p>
+  <p> Summary: <%= @book.description %> </p>
+  <p> Current ranking: <%= @book.votes %> votes </p>
+
+<p>
+  <%= button_to 'upvote', upvote_book_path(@book.id), method: :patch %>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
+  <%= link_to "Delete", delete_book_path(@book.id), method: :delete , data: {confirm: "Are you sure you want to delete this book?"} %>
+</p>

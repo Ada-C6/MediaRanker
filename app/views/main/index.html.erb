@@ -1,0 +1,43 @@
+<h1>Media Ranker</h1>
+
+<% 10.times do |i| %>
+   <tr>
+     <td><%= link_to "#{@movie_list_by_votes[i].title}", movie_path(@movie_list_by_votes[i].id)%><%= " #{@movie_list_by_votes[i].votes}" %></td>
+
+     <td><%= link_to "#{@book_list_by_votes[i].title}", book_path(@book_list_by_votes[i].id)%><%= " #{@book_list_by_votes[i].votes}" %></td>
+
+     <td><%= link_to "#{@album_list_by_votes[i].title}", album_path(@album_list_by_votes[i].id)%><%= " #{@album_list_by_votes[i].votes}" %></td>
+   </tr>
+ <% end %>
+
+
+<table>
+ <tr>
+   <th>Top Movies</th>
+   <th>Top Books</th>
+   <th>Top Albums</th>
+ </tr>
+ <% 10.times do |i| %>
+   <tr>
+     <td><%= link_to "#{@movie_list_by_votes[i].title}", movie_path(@movie_list_by_votes[i].id)%> <%= " #{@movie_list_by_votes[i].votes}" %></td>
+
+     <td><%= link_to "#{@book_list_by_votes[i].title}", book_path(@book_list_by_votes[i].id)%><%= " #{@book_list_by_votes[i].votes}" %></td>
+
+     <td><%= link_to "#{@album_list_by_votes[i].title}", album_path(@album_list_by_votes[i].id)%><%= " #{@album_list_by_votes[i].votes}" %></td>
+   </tr>
+ <% end %>
+ <tr>
+   <td>
+     <%= link_to "View All Movies", movies_path %>
+
+   </td>
+   <td>
+     <%= link_to "View All Books", books_path %>
+
+   </td>
+   <td>
+     <%= link_to "View All Albums", albums_path %>
+
+   </td>
+ </tr>
+</table>
