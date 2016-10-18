@@ -4,8 +4,24 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+now:
+  title: now
+  artist: Various
+  best_song: All star
+  description: mix of music
+  rank: 1
+
+to_pimp_a_butterfly:
+  title: To Pimp a Butterfly
+  artist: Kendrick Lamar
+  best_song: Alright
+  description: anthem of BLM
+  rank: 2
+
+tragic_kingdom:
+  title: Tragic Kingdom
+  artist: No Doubt
+  best_song: Excuse Me Mr.
+  description: No Doubt at its best
+  rank: 3

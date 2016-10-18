@@ -4,6 +4,23 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+why_class_matters:
+  title: Why Class Matters
+  author: bell hooks
+  description: Society is terrible
+  rank: 1
+
+losing_it:
+  title: Losing It
+  author: Emma Rothbane
+  description: Lady trying to lose it
+  rank: 2
+
+bridget_jones_diary:
+  title: Bridget Jones Diary
+  author: Helen Fielding
+  description: Single Thirty Something
+  rank: 3
 one: {}
 # column: value
 #
