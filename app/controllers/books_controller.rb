@@ -33,7 +33,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.increment!(:rank)
 
-    redirect_to show_books_url
+    redirect_to :back
   end
 
   def destroy

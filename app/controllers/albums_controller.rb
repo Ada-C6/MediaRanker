@@ -33,7 +33,7 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
     @album.increment!(:rank)
 
-    redirect_to show_albums_url
+    redirect_to :back
   end
 
   def destroy
