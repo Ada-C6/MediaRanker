@@ -33,7 +33,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.increment!(:rank)
 
-    redirect_to index_movies_url
+    redirect_to show_movies_url
   end
 
   def destroy

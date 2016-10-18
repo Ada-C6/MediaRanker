@@ -1,20 +1,21 @@
-<section>
-  <table>
-    <tr>
-      <th scope="column">Ranking</th>
-      <th scope="column">Title</th>
-      <th scope="column">Upvote</th>
-    </tr>
+<div class="row">
+  <section>
+    <table>
+      <tr>
+        <th scope="column">Ranking</th>
+        <th scope="column">Title</th>
+        <th scope="column">Upvote</th>
+      </tr>
 
-    <% @movies.each do |movie| %>
-    <tr>
-      <td><%= "Ranked: #{movie.rank}" %></td>
-      <td><%= link_to movie.title, show_movies_path(movie.id)%></td>
-      <td><%= button_to "Upvote", upvote_movies_path(id: movie.id), method: :patch, class: 'btn' %></td>
-    </tr>
-    <% end %>
-
-    <%= button_to "View All Media", root_path, method: :get %>
-    <%= button_to "Add A Movie", new_movies_path, method: :get %>
-  </table>
-</section>
+      <% @movies.each do |movie| %>
+      <tr>
+        <td><%= "Ranked: #{movie.rank}" %></td>
+        <td><%= link_to movie.title, show_movies_path(movie.id)%></td>
+        <td><%= button_to "Upvote", upvote_movies_path(id: movie.id), method: :patch, class: 'button radius' %></td>
+      </tr>
+      <% end %>
+    </table>
+    <%= button_to "View All Media", root_path, method: :get, class: 'button secondary' %>
+    <%= button_to "Add A Movie", new_movies_path, method: :get, class: 'button secondary' %>
+  </section>
+</div>

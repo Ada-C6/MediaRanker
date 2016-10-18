@@ -1,21 +1,21 @@
-<div class="form">
-<%= form_for @album, url: action_name do |f| %>
+<div class="row">
+  <%= form_for @album, url: action_name do |f| %>
 
-  <div class="field">
-    <%= f.label "Title: " %>
-    <%= f.text_field :title, :title => nil, :required => true %>
-  </div>
+    <div class="field">
+      <%= f.label "Title: " %>
+      <%= f.text_field :title, :title => nil, :required => true %>
+    </div>
 
-  <div class="field">
-    <%= f.label "Artist: " %>
-    <%= f.text_field :artist, :artist => nil, :required => true  %>
-  </div>
+    <div class="field">
+      <%= f.label "Artist: " %>
+      <%= f.text_field :artist, :artist => nil, :required => true  %>
+    </div>
 
-  <div class="field">
-    <%= f.label "Tell us why they're rad: " %>
-    <%= f.text_area :synopsis, :synopsis => nil, :required => true   %>
-  </div>
+    <div class="field">
+      <%= f.label "Tell us why they're rad: " %>
+      <%= f.text_area :synopsis, :synopsis => nil, :required => true   %>
+    </div>
 
-  <%= f.submit action_name, class: 'submit_btn' %>
-<% end %>
+    <%= f.submit action_name, class: 'button secondary' %>
+  <% end %>
 </div>
