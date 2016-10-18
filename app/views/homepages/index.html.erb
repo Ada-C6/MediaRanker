@@ -1,0 +1,34 @@
+<div class="row">
+  <section class="small-12 medium-6 large-4 columns">
+    <h2>Top Albums</h2>
+    <% @albums.each do |album| %>
+      <p>
+        <%= link_to album.title, show_albums_path(album.id)%>
+        <%= "Ranked: #{album.rank}" %>
+      </p>
+    <% end %>
+    <%= link_to "View all albums", index_albums_path%>
+  </section>
+
+  <section class="small-12 medium-6 large-4 columns">
+    <h2>Top Books</h2>
+    <% @books.each do |book| %>
+      <p>
+        <%= link_to book.title, show_books_path(book.id)%>
+        <%= "Ranked: #{book.rank}" %>
+      </p>
+    <% end %>
+    <%= link_to "View all books", index_books_path%>
+  </section>
+
+  <section class="small-12 medium-6 large-4 columns">
+    <h2>Top Movies</h2>
+    <% @movies.each do |movie| %>
+      <p>
+        <%= link_to movie.title, show_movies_path(movie.id)%>
+        <%= "Ranked: #{movie.rank}" %>
+      </p>
+    <% end %>
+    <%= link_to "View all movies", index_movies_path%>
+  </section>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: "Good Omens"
+  author: "Terry Pratchett and Neil Gaiman"
+  rank: 2
+  synopsis: "The dream team"
+
+two:
+  title: "The Windup Girl"
+  author: "Paolo Bacigalupi"
+  rank: 1
+  synopsis: "Dystopian Thailand in the future"

@@ -1,0 +1,85 @@
+body {
+  font-size: 16px;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:hover, a:focus {
+  text-decoration: underline !important;
+}
+
+section p {
+  font-size: 1.5rem;
+  line-height: double;
+}
+
+header {
+  padding: 3% 0 3% 0%;
+  text-align: center;
+  background-color: #2199e8;
+}
+
+header a {
+  font-size: 3rem;
+  color: white;
+}
+
+header a:hover, header a:focus {
+  color: white !important;
+}
+
+div.row {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.row h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.column, .columns {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+table th {
+  font-size: 1.25rem;
+  color: white;
+  background-color: #2199e8;
+}
+
+table tr {
+  font-size: 1.25rem;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+table tr:nth-of-type(even) {
+    background-color: transparent !important;
+}
+
+table tr:hover, table tr:focus {
+  background-color: #D8E8F2 !important;
+}
+
+form.button_to{
+  display: inline-block;
+  padding-right: 1%;
+}
+
+input.button {
+  border-radius: 5%;
+}
+
+input.button.radius {
+  margin-top: 1rem !important;
+}
+
+/*section {
+  margin: 1% 2% 0 4%;
+  display: inline-block;
+  float: left;
+}*/
