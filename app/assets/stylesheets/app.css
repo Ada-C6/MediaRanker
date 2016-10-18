@@ -10,6 +10,10 @@ a:hover, a:focus {
   text-decoration: underline !important;
 }
 
+h2 {
+  margin-bottom: 5% !important;
+}
+
 section p {
   font-size: 1.5rem;
   line-height: double;
