@@ -9,4 +9,9 @@ class AlbumTest < ActiveSupport::TestCase
     album = Album.new
     assert_not album.valid?
   end
+
+  test "orders albums by most votes" do
+    popular = Album.most_votes
+    assert_equal  popular.first, albums(:tragic_kingdom)
+  end
 end

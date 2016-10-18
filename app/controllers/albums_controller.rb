@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
   def index
-    @album = Album.all.order(:rank).reverse
+    @album = Album.all.most_votes
   end
 
   def show
