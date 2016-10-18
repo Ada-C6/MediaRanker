@@ -39,6 +39,7 @@ end
 
 group :test do
   gem 'minitest-reporters'
+  gem 'simplecov'
 end
 
 group :development do

@@ -38,4 +38,21 @@ class MoviesControllerTest < ActionController::TestCase
     assert_nil movie.id
   end
 
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:movie)
+  end
+
+  test "should update a movie" do
+    patch :update, id: @movie, movie: {name: @movie.name, year: @movie.year}
+    assert_redirected_to movie_path
+  end
+
+  test " should upvote a movie" do
+    assert_difference('Movie.last.rank') do
+      patch :upvote, {id: Movie.last.id}
+    end
+  end
+  
 end
