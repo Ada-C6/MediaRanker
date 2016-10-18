@@ -5,6 +5,7 @@
   <p><%= "Ranked: #{@book.rank }"%><p>
 
   <p><%= @book.synopsis %></p>
+</section>
 
 <section class="buttons">
   <%= button_to "Upvote", upvote_books_path(id: @book.id), method: :patch, class: 'btn' %>
@@ -14,6 +15,5 @@
   <%= button_to "Delete", delete_books_path(book_id: @book.id), method: :delete, data: { confirm: "Are you sure you want to delete this album? This action cannot be undone." } %>
 
   <%= button_to "View All Books", index_books_path, method: :get %>
-
   <%= button_to "View All Media", root_path, method: :get %>
 </section>
