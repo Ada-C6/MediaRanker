@@ -1,0 +1,23 @@
+<main>
+  <div class="row">
+    <h3><%= @album.name %>
+    <small>Directed by: <%= @album.artist %></small>
+    </h3>
+  </div>
+  <h4 class="row">
+    <p>Ranked: <%= @album.ranking %></p>
+  </h4>
+  <div class="row">
+    <p><%= @album.description %></p>
+  </div>
+
+  <div class="row">
+    <%= button_to "Upvote", { action: :upvote, id: @album.id }, :class => "upvote" %>
+    <p></p>
+
+    <%= button_to "Edit #{ @album.name }", edit_album_path, method: :get, :class => "normal-button" %>
+    <%= button_to "DELETE", album_path, method: :delete, :class => "delete", data: { confirm: "Are you really sure?" } %>
+    <%= button_to "View all albums", albums_path, method: :get, :class => "normal-button" %>
+    <%= button_to "View all media", root_path, method: :get, :class => "normal-button" %>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+
+  <div class="row large-up-3">
+    <div class="column">
+      <h2>Top Movies</h2>
+      <% 10.times do |m| %>
+        <h4>
+          <%= link_to "#{ @movies[m].name }", movie_path(@movies[m].id) %>
+          <small><%= "Ranked: #{ @movies[m].ranking }" %></small>
+        </h4>
+      <% end %>
+      <p><%= link_to("View more movies", movies_path) %></p>
+    </div>
+    <div class="column">
+      <h2>Top Books</h2>
+      <% 10.times do |b| %>
+        <h4>
+          <%= link_to "#{ @books[b].name }", book_path(@books[b].id) %>
+          <small><%= "Ranked: #{ @books[b].ranking }" %></small>
+        </h4>
+      <% end %>
+      <p><%= link_to("View more books", books_path) %></p>
+    </div>
+    <div class="column">
+      <h2>Top Albums</h2>
+      <% 10.times do |a| %>
+        <h4>
+          <%= link_to "#{ @albums[a].name }", album_path(@albums[a].id) %>
+          <small><%= "Ranked: #{ @albums[a].ranking }" %></small>
+        </h4>
+      <% end %>
+      <p><%= link_to("View more albums", albums_path) %></p>
+    </div>
+  </div>

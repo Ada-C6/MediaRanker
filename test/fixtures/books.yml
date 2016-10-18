@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+americanah:
+  name: Americanah
+  author: Chimamanda Ngozi Adichie
+  description: Americanah tells the story of a young Nigerian woman, Ifemelu, who emigrates to the United States to attend university. The novel traces Ifemelu's life in both countries, threaded by her love story with high school classmate Obinze.
+  ranking: 0
+
+the_prophet:
+  name: The Prophet
+  author: Kahlil Gibran
+  description: A book of 26 prose poetry fables written in English by the Lebanese-American artist, philosopher and writer Kahlil Gibran.
+  ranking: 0

@@ -1,0 +1,18 @@
+<main>
+  <table class= "row">
+    <tr>
+      <td class = "large-2 columns"><strong>Ranking</strong></th>
+      <td class = "large-8 columns"><strong>Name</strong></th>
+      <td class = "large-2 columns"><strong>Upvote</strong></th>
+    </tr>
+
+  <% media.each do |m| %>
+    <tr class= "row">
+      <td class = "large-2 columns"><%= "Ranked: #{ m.ranking }" %></td>
+      <td class = "large-8 columns"><%= link_to m.name, action: :show, id: m.id %></td>
+      <td class = "large-2 columns"><%= button_to "Upvote", { action: :upvote, id: m.id }, :class => "upvote" %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= button_to "View all Media", root_path, method: :get, :class => "normal-button" %>

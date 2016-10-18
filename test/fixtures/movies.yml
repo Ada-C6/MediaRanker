@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+do_the_right_thing:
+  name: Do The Right Thing
+  director: Spike Lee
+  description: A 1989 American comedy-drama film produced, written, and directed by Spike Lee, who also played the part of Mookie in the film.
+  ranking: 0
+
+bamboozled:
+  name: Bamboozled
+  director: Spike Lee
+  description: A 2000 satirical film written and directed by Spike Lee about a modern televised minstrel show featuring black actors donning blackface makeup and the violent fall out from the show's success.
+  ranking: 0
+
+pans_labyrinth:
+  name: Pan's Labyrinth
+  director: Guillermo Del Toro
+  description: A 2006 Spanish-Mexican film which is both a war film and in part a dark fantasy film.
+  ranking: 0

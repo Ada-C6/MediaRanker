@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+@import url('foundation.css');
+
+.upvote {
+  border-radius: 5px;
+  background-color: #0066cc;
+  color: white;
+}
+
+.normal-button {
+  border-radius: 5px;
+  background-color: white;
+  display: inline-block;
+}
+
+.delete {
+  border-radius: 5px;
+  background-color: #cc0000;
+  color: white;
+  display: inline-block;;
+}

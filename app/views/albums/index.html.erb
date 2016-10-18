@@ -1,0 +1,3 @@
+<%= render partial: "/layouts/index", locals: { media: @albums } %>
+
+<%= button_to "Add an Album", new_album_path, method: :get, :class => "normal-button" %>

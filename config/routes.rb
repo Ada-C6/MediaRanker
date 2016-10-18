@@ -1,4 +1,36 @@
 Rails.application.routes.draw do
+
+  root 'home#index'
+  resources :home, only: [:index]
+
+  resources :movies do
+    member do
+      get :upvote
+      post :upvote
+    end
+  end
+  # The member block nested in the resources will create two
+  # routes: /movies/:id/upvote with GET and with PATCH
+
+  resources :albums do
+    member do
+      get :upvote
+      post :upvote
+    end
+  end
+  # The member block nested in the resources will create two
+  # routes: /albums/:id/upvote with GET and with PATCH
+
+  resources :books do
+    member do
+      get :upvote
+      post :upvote
+    end
+  end
+  # The member block nested in the resources will create two
+  # routes: /books/:id/upvote with GET and with PATCH
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

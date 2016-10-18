@@ -1,0 +1,23 @@
+<main>
+  <div class="row">
+    <h3><%= @movie.name %>
+    <small>Directed by: <%= @movie.director %></small>
+    </h3>
+  </div>
+  <h4 class="row">
+    <p>Ranked: <%= @movie.ranking %></p>
+  </h4>
+  <div class="row">
+    <p><%= @movie.description %></p>
+  </div>
+
+  <div class="row">
+    <%= button_to "Upvote", { action: :upvote, id: @movie.id }, :class => "upvote" %>
+    <p></p>
+
+    <%= button_to "Edit #{ @movie.name }", edit_movie_path, method: :get, :class => "normal-button" %>
+    <%= button_to "DELETE", movie_path, method: :delete, :class => "delete", data: { confirm: "Are you really sure?" } %>
+    <%= button_to "View all movies", movies_path, method: :get, :class => "normal-button" %>
+    <%= button_to "View all media", root_path, method: :get, :class => "normal-button" %>
+  </div>
+</main>
