@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @movie = Movie.all.order(:rank).reverse
+    @movie = Movie.all.most_votes
   end
 
   def show
