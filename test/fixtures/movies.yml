@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+mission_impossible:
+  name: Mission Impossible
+  year: 2003
+  description: Man falls from ceiling
+  rank: 1
+
+terminator:
+  name: Terminator
+  year: 1994
+  description: Robots will rulle us all
+  rank: 2
+
+selena:
+  name: selena
+  year: 1998
+  description: Best JLO movie ever
+  rank: 3

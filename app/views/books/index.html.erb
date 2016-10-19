@@ -1,0 +1,14 @@
+<h1> Hottest Books Out</h1>
+
+<% @book.each do |novel| %>
+<p>  Title: <%=link_to "#{novel.title}", book_path(novel)%>
+</p>
+<p>  Votes: <%="#{novel.rank}"%>
+</p>
+<p>
+  <%= button_to "UpVote Now!", book_upvote_path(novel), method: :patch%>
+</p>
+<%end%>
+<%= link_to "All Media", medias_path %>
+
+<%= button_to "Create a Book", new_book_path, method: :get %>

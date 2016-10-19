@@ -1,0 +1,34 @@
+<main>
+
+
+  <section class="row">
+    <div class="small-12 medium-4 columns">
+      <h3 > Top Movies</h3>
+      <ul>
+        <% @movies.each do |film|%>
+        <li ><%=link_to "#{film.name}", movie_path(film)%> Number of Votes <%= "#{film.rank}" %></li>
+        <%end%>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-4 columns">
+      <h3 > Best Books</h3>
+      <ul>
+        <% @books.each do |book|%>
+        <li > <%=link_to "#{book.title}", book_path(book)%> Number of Votes <%= "#{book.rank}" %> </li>
+        <%end%>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-4 columns">
+      <h3 > Top Albums</h3>
+      <ul>
+      <% @albums.each do |album|%>
+      <li class="small-6 medium-3 columns"><%=link_to "#{album.title}", album_path(album)%>   Number of Votes <%= "#{album.rank}" %></li>
+    <%end%>
+  </ul>
+  </div>
+
+</section>
+
+</main>

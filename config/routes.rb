@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  root 'medias#index'
+  get '/medias' => 'medias#index'
+
+  resources :movies
+  patch 'movies/:id/upvote' => 'movies#upvote', as: 'movies_upvote'
+
+  resources :books
+  patch 'books/:id/upvote' => 'books#upvote', as: 'book_upvote'
+
+  resources :albums
+  patch 'albums/:id/upvote' => 'albums#upvote', as: 'albums_upvote'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
