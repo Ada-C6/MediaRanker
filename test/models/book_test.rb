@@ -28,15 +28,15 @@ class BookTest < ActiveSupport::TestCase
     end
   end
 
-  test "Book.sort_by_rank returns a list of books sorted by rank in descending order" do
-    assert_equal Book.sort_by_rank.first, books(:lotr)
-  end
-
-  test "Book.sort_by_rank places items with nil :rank at the bottom" do
-    assert_equal Book.sort_by_rank.last, books(:nil_rank)
-  end
-
-  test "Book.sort_by_rank returns all items in database" do
-    assert_equal Book.sort_by_rank.count, 4
-  end
+  # test "Book.sort_by_rank returns a list of books sorted by rank in descending order" do
+  #   assert_equal Book.sort_by_rank.first, books(:lotr)
+  # end
+  #
+  # test "Book.sort_by_rank places items with nil :rank at the bottom" do
+  #   assert_equal Book.sort_by_rank.last, books(:nil_rank)
+  # end
+  #
+  # test "Book.sort_by_rank returns all items in database" do
+  #   assert_equal Book.sort_by_rank.count, 4
+  # end
 end

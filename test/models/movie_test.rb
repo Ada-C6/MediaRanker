@@ -27,15 +27,15 @@ class MovieTest < ActiveSupport::TestCase
     end
   end
 
-  test "Movie.sort_by_rank returns a list of movies sorted by rank in descending order" do
-    assert_equal Movie.sort_by_rank.first, movies(:schindlers_list)
-  end
-
-  test "Movie.sort_by_rank places items with nil :rank at the bottom" do
-    assert_equal Movie.sort_by_rank.last, movies(:nil_rank)
-  end
-
-  test "Movie.sort_by_rank returns all items in database" do
-    assert_equal Movie.sort_by_rank.count, 4
-  end
+  # test "Movie.sort_by_rank returns a list of movies sorted by rank in descending order" do
+  #   assert_equal Movie.sort_by_rank.first, movies(:schindlers_list)
+  # end
+  #
+  # test "Movie.sort_by_rank places items with nil :rank at the bottom" do
+  #   assert_equal Movie.sort_by_rank.last, movies(:nil_rank)
+  # end
+  #
+  # test "Movie.sort_by_rank returns all items in database" do
+  #   assert_equal Movie.sort_by_rank.count, 4
+  # end
 end
