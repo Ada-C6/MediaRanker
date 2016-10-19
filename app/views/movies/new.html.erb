@@ -1,0 +1,12 @@
+<main>
+  <h2>Add a New Movie</h2>
+
+  <%= render partial: "form",
+        locals: {
+          http_method: :post,
+          media: @movie,
+          label_one: :name,
+          label_two: :director,
+          media_name: "Movies",
+          media_path: movies_path }%>
+</main>

@@ -1,0 +1,11 @@
+<%= render partial: "show",
+      locals: {
+        media: @movie,
+        media_name: "movie",
+        name_field: @movie.name,
+        creator_field: @movie.director,
+        edit_path: edit_movie_path,
+        show_path: movie_path,
+        media_path: movies_path,
+        upvote_path: upvote_movie_path(@movie),
+ }%>

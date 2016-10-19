@@ -1,0 +1,20 @@
+gone_with_the_wind:
+  title: Gone with the Wind
+  author: Margaret Mitchell
+  description: Civil War in the South. There's a guy named Ashley.
+  rank: 5
+lotr:
+  title: Lord of the Rings
+  author: JRR Tolkien
+  description: A hobbit named Frodo must destroy the One Ring.
+  rank: 200
+of_mice_and_men:
+  title: Of Mice and Men
+  author: John Steinbeck
+  description: Two friends struggle during the Depression.
+  rank: 40
+nil_rank:
+  title: Fake Book
+  author: Hillary Oss
+  description: weirdness
+  rank: nil

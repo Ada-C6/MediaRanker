@@ -1,0 +1,20 @@
+schindlers_list:
+  name: Schindler's list
+  director: Stephen Spielberg
+  description: A man tries to save Jews during the Holocaust.
+  rank: 500
+toy_story:
+  name: Toy Story
+  director: Pixar
+  description: When a boy isn't in the room, his toys come to life
+  rank: 250
+galaxy_quest:
+  name: Galaxy Quest
+  director: someone bad
+  description: Sci Fi Actors actually travel through space.
+  rank: 4
+nil_rank:
+  name: Not a Movie
+  director: Esteban Spielbergo
+  description: something
+  rank: nil

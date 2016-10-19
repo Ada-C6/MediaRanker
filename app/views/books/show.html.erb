@@ -1,0 +1,11 @@
+<%= render partial: "show",
+      locals: {
+        media: @book,
+        media_name: "book",
+        name_field: @book.title,
+        creator_field: @book.author,
+        edit_path: edit_book_path,
+        show_path: book_path,
+        media_path: books_path,
+        upvote_path: upvote_book_path(@book),
+ }%>

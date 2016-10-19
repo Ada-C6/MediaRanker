@@ -1,0 +1,12 @@
+<main>
+  <h2>Add a New Book</h2>
+
+  <%= render partial: "form",
+        locals: {
+          http_method: :post,
+          media: @book,
+          label_one: :title,
+          label_two: :author,
+          media_name: "Books",
+          media_path: books_path }%>
+</main>

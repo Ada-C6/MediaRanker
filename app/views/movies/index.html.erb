@@ -1,0 +1,38 @@
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Ranking</th>
+        <th scope="col">Movie</th>
+        <th scope="col">Upvote</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @movies.each do |movie| %>
+      <tr>
+
+        <td>
+          <%= ranking(movie) %>
+        </td>
+
+        <td scope="row">
+          <%= link_to "#{movie.name}", movie_path(movie) %>
+        </td>
+
+
+        <td>
+          <%= link_to "Upvote", upvote_movie_path(movie), method: "patch", class: "success small button" %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</main>
+
+<footer>
+  <ul class="menu row">
+    <li class="small-10 medium-5 large-5 columns"><%= link_to "Add New Movie", new_movie_path, class: "button" %></li>
+    <li class="small-10 medium-5 large-5 end columns"><%= link_to "All Media", root_path, class: "secondary button" %></li>
+  </ul>
+</nav>

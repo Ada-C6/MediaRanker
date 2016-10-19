@@ -1,0 +1,20 @@
+bad_company:
+  name: Bad Company
+  artist: Bad Company
+  description: the best album ever
+  rank: 1000
+white_album:
+  name: White Album
+  artist: The Beatles
+  description: Classic Beatles songs
+  rank: 999
+blue:
+  name: Blue
+  artist: Third Eye Blind
+  description: not as good as their self-titled, but good
+  rank: 50
+nil_rank:
+  name: Nothing
+  artist: Nada Surf
+  description: zip
+  rank: nil

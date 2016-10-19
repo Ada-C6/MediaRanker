@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+  @import url('foundation.css');
+
+header {
+  text-align: center;
+  margin: 0.75em 0 0.75em 0;
+  border-bottom: 1px solid #cacaca;
+}
+
+main, footer {
+  margin-left: 3em;
+}
+
+table {
+  width: 95%;
+}
+
+table thead {
+  background: rgb(253, 156, 82);
+  color: #FFFFFF;
+}
+
+a {
+  color: rgb(10, 123, 197);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(34, 214, 128);
+}
+
+a.button:hover {
+  text-decoration: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+.menu {
+  margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 73em) {
+  /* Note: img will still be loaded, but not shown */
+  h1 small, h2 small { display: block; margin-bottom: 0.9em; line-height: 0.8}
+
+  .menu a { margin: 0.2em}
+
+}

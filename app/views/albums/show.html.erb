@@ -1,0 +1,11 @@
+<%= render partial: "show",
+      locals: {
+        media: @album,
+        media_name: "album",
+        name_field: @album.name,
+        creator_field: @album.artist,
+        edit_path: edit_album_path,
+        show_path: album_path,
+        media_path: albums_path,
+        upvote_path: upvote_album_path(@album),
+ }%>

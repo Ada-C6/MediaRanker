@@ -1,0 +1,12 @@
+<main>
+  <h2>Edit Movie</h2>
+
+  <%= render partial: "form",
+        locals: {
+          http_method: :patch,
+          media: @movie,
+          label_one: :name,
+          label_two: :director,
+          media_name: "Movies",
+          media_path: movies_path }%>
+</main>
