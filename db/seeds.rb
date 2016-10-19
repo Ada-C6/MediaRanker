@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# movies = Movie.create([{name:} {creator:} {description:}])
+#
+# albums = Album.create([{name:} {creator:} {description:}])
+#
+# books = Book.create([{name:} {creato:} {description:}])

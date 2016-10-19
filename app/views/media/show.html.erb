@@ -1,0 +1,10 @@
+<%item = @medium %>
+
+  <div class="title"><h1><%= item.name %></h1>  by:  <h3><%= item.creator %></h3></div>
+  <td>Ranked:<%= item.votes %></td>
+  <h1><%= item.description %></h1>
+  <h1><%= button_to "Upvote", votes_medium_path(item.url_params), method: :post %></h1>
+  <h1><%= button_to "Edit", edit_medium_path(item.url_params), method: :get %></h1>
+  <h1><%= button_to "Delete", medium_path(item.url_params), method: :delete, data: { confirm: "Are you sure?" } %></h1>
+  <h1><%= button_to "View All #{item.media_type}", media_path, method: :get %></h1>
+  <h1><%= button_to "View All Media", root_path, method: :get %></h1>

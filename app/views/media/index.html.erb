@@ -1,0 +1,9 @@
+<h1> Ranking | Name | Upvote </h1>
+<% @media.each do |item| %>
+<tr>
+  <td>Ranked:<%= item.votes %><%=link_to item.name, medium_path(item.url_params), method: :get %><%= button_to 'upvote', votes_medium_path(item.url_params), method: :post %></td>
+  <% end %>
+  <td><%= link_to 'view all media', root_path %></td>
+  <td><%= link_to "add", new_medium_path %></td>
+</tr>
+<h3><%= button_to("View all Media", root_path, method: :get) %></h3>

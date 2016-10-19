@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+nine_stories:
+  media_type: books
+  name: 9 stories
+  creator: Salinger
+  description: The best short stories
+
+one:
+  media_type: movies
+  name: what about bob?
+  creator: Director
+  description: FUnniest stuff

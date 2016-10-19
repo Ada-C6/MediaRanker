@@ -1,0 +1,10 @@
+
+<%= form_for @medium do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label "Created By" %>
+  <%= f.text_field :creator %>
+  <%= f.label "Description" %>
+  <%= f.text_area :description %>
+  <%= f.submit :save %>
+<% end %>
