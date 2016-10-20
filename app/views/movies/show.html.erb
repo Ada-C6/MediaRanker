@@ -1,24 +1,35 @@
 <!-- movies show  -->
 
-<article class="row">
+<article>
 
-  <h1><%=@mymovie.name %></h1>
-    <p>Directed by: <%=@mymovie.director %></p>
-    <p>Ranked: <%=@mymovie.vote_count %> </p>
-    <p>Description: <%=@mymovie.description%></p>
+  <h1><%=@mymovie.name%></h1>
+
+<div class="row">
+
+  <div class="medium-5 columns">  <p>Directed by: <%=@mymovie.director %></p>
+    <p class="medium-5 columns">Ranked: <%=@mymovie.vote_count %> </p>
+    <p class="medium-5 columns">Description: <%=@mymovie.description%></p></div>
+</div>
+
+  <div class="row">
+    <%=button_to "Edit: #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get, class: "button medium-4 columns", class: "edt-btn" %>
+  </div>
 
 
-<div class="small-1 columns">  <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch, class: "large button success") %></div>
+  <div class="upvt-btn"class="row">
+    <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch, class: "large button success medium-2 columns") %>
+  </div>
 
-    <section class: "row button-group">
+  <div class ="btm-btn-grp"class="row">
+    <section class: "button-group even three-up">
 
-        <div class="small-3 columns"><%=button_to "Edit: #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get, class: "button" %></div>
+       <%=button_to "DELETE", movie_path(@mymovie.id), method: :delete, class: " button alert medium-2 columns" %>
 
-      <div class="small-3 columns">  <%=button_to "DELETE", movie_path(@mymovie.id), method: :delete, class: "button alert" %></div>
+       <%=button_to "View All Movies", movies_path, method: :get, class: "button medium-2 columns"%>
 
-      <div class="small-3 columns">  <%=button_to "View All Movies", movies_path, method: :get, class: "button"%></div>
+       <%=button_to "View All Media", users_path, method: :get, class: "button secondary medium-2 columns" %>
 
-      <div class="small-3 columns">  <%=button_to "View All Media", users_path, method: :get, class: "button" %></div>
     </section>
+  </div>
 
 </article>

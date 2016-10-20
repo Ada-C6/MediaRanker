@@ -78,6 +78,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    minitest-emoji (2.0.0)
     minitest-reporters (1.1.11)
       ansi
       builder
@@ -163,6 +164,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  minitest-emoji (~> 2.0)
   minitest-reporters
   rails (= 4.2.7)
   sass-rails (~> 5.0)

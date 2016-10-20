@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'minitest/emoji'
 
 class MoviesControllerTest < ActionController::TestCase
   test "should get index" do

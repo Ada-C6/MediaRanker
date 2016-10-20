@@ -5,6 +5,17 @@
   font-weight: bolder;
 }
 
+button, input, optgroup, select, textarea {
+  background-color: whitesmoke;
+}
+.btm-btn-grp {
+  padding-left: 20%;
+}
+
+.upvt-btn {
+  padding: 30px;
+  display: inline;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
