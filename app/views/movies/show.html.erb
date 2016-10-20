@@ -1,0 +1,11 @@
+<%= render "layouts/show" %>
+
+<main>
+  <p class="small-12"><%= button_to "Vote", @show, method: :patch %><p>
+  <div class="row">
+    <p class="small-6 medium-3 columns"><%=link_to "Edit", @edit%></p>
+    <p class="small-6 medium-3 columns"><%= link_to "Delete", @delete,  method: :delete , data: {confirm: "Are you reallysure?"}%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "View all Movies",@index%></p>
+    <p class="small-6 medium-3 columns"><%=link_to "View all Media",@root%></p>
+  <div>
+</main>

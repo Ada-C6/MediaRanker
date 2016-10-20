@@ -1,0 +1,19 @@
+<section>
+  <table style="width:100%">
+    <tr>
+      <th><strong>Ranking</strong></th>
+      <th><strong>Name</strong></th>
+      <th><strong>Upvote</strong></th>
+    </tr
+    <% @full_list.each do |item| %>
+      <tr>
+        <td><%=item.rank%></td>
+        <td><%=link_to item.name, show_movie_path(item.id)%></td>
+        <td><%= button_to "Vote", vote_movie_path(item.id), method: :patch %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <p><%=link_to "View all Media", root_path%></p>
+  <p><%=link_to "Add a Movie", movies_new_path%></p>
+</section>

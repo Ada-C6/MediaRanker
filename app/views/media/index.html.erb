@@ -1,0 +1,32 @@
+
+<main>
+  <ul class ="row">
+    <div class = "small-12 large-4 columns">
+      <li>Top 10 Movies</li>
+      <ul class = "row">
+        <% @movies.each do |item| %>
+        <li><div class = "small-6 large-12 columns"><%= link_to item.name, show_movie_path(item) %></div><div class = "small-6 large-12 columns" class = "small"><small>Ranked: <%=item.rank%></small></div></li>
+        <% end %>
+      </ul>
+      <p><small><%=link_to "View All", movies_path%></small></p>
+    </div>
+    <div class = "small-12 large-4 columns">
+      <li>Top 10 Books</li>
+      <ul class = "row">
+        <% @books.each do |item| %>
+        <li><div class = "small-6 large-12 columns"><%= link_to item.title, show_book_path(item) %></div><div class = "small-6 large-12 columns" class = "small"><small>Ranked: <%=item.rank%></small></div></li>
+        <% end %>
+      </ul>
+      <p><small><%=link_to "View All", books_path%></small><p>
+    </div>
+    <div class = "small-12 large-4 columns">
+      <li>Top 10 Albums</li>
+      <ul class = "row">
+        <% @albums.each do |item| %>
+        <li><div class = "small-6 large-12 columns"><%= link_to item.name, show_album_path(item) %></div><div class = "small-6 large-12 columns" class = "small"><small>Ranked: <%=item.rank%></small></div></li>
+        <% end %>
+      </ul>
+      <p><small><%=link_to "View All", albums_path%></small></p>
+    </div>
+  </ul>
+</main>

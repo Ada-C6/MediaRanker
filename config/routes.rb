@@ -1,4 +1,38 @@
 Rails.application.routes.draw do
+
+  root 'media#index'
+  get '/media' => 'media#index'
+
+
+
+  get '/movies' => 'movies#index'
+  get '/movies/new' => 'movies#new'
+  post 'movies/new' => 'movies#create'
+  get '/movies/:id', to: 'movies#show', as: 'show_movie'
+  get '/movies/:id/edit', to: 'movies#edit', as: 'edit_movie'
+  patch '/movies/:id' => 'movies#update'
+  patch '/movies/:id/vote', to: 'movies#vote', as: 'vote_movie'
+  delete '/movies/:id', to: 'movies#destroy', as: 'delete_movie'
+
+  get '/books' => 'books#index'
+  get '/books/new' => 'books#new'
+  post 'books/new' => 'books#create'
+  get '/books/:id', to: 'books#show', as: 'show_book'
+  get '/books/:id/edit', to: 'books#edit', as: 'edit_book'
+  patch '/books/:id' => 'books#update'
+  patch '/books/:id/vote', to: 'books#vote', as: 'vote_book'
+  delete '/books/:id', to: 'books#destroy', as: 'delete_book'
+
+  get '/albums' => 'albums#index'
+  get '/albums/new' => 'albums#new'
+  post 'albums/new' => 'albums#create'
+  get '/albums/:id', to: 'albums#show', as: 'show_album'
+  get '/albums/:id/edit', to: 'albums#edit', as: 'edit_album'
+  patch '/albums/:id/edit' => 'albums#update'
+  patch '/albums/:id/vote', to: 'albums#vote', as: 'vote_album'
+  delete '/albums/:id', to: 'albums#destroy', as: 'delete_album'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
