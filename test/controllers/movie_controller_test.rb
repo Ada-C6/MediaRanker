@@ -89,7 +89,13 @@ class MoviesControllerTest < ActionController::TestCase
     assert_redirected_to movies_path
   end
 
-  test "should increase the rank by 1" do
+  # test "should increase the rank by 1" do
+  #   movie = movies(:nightmare)
+  #   assert_difference(movie.rank) do
+  #     patch :vote, :id => movie.id
+  #   end
+  # end
+
     # patch :vote, :id => movies(:nightmare).id, movie: {vote: true}
 
     # movie = Movie.create!(name: "Please", director: "add", description: "one")
@@ -107,6 +113,6 @@ class MoviesControllerTest < ActionController::TestCase
     #
     # assert_equal(one + 1, two)
 
-  end
+  # end
 
 end
