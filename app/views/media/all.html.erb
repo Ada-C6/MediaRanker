@@ -1,0 +1,73 @@
+<h4 class="detail_title">
+  Top <%= @medium_type_name.pluralize %>
+</h4>
+
+<section class="detail_title">
+  <div class="row">
+    <div class="small-4 medium-4 large-4 columns">
+      <h4>Votes</h4>
+    </div>
+    <div class="small-4 medium-4 large-4 columns">
+      <h4>Name</h4>
+    </div>
+    <div class="small-4 medium-4 large-4 columns">
+      <h4>Upvote</h4>
+    </div>
+  </div>
+
+  <% @media.each do |medium| %>
+    <div class="row">
+
+      <div class="small-4 medium-4 large-4 columns">
+        <button class="btn_upvote_all">
+          <%= link_to "▲", medium_upvote_path(medium.id) %>
+        </button>
+        <%= medium.votes %>
+      </div>
+
+      <div class="small-4 medium-4 large-4 columns">
+        <p class="all_title">
+          <%= link_to medium.name, medium_show_path(medium.id) %>
+        </p>
+      </div>
+
+      <div class="small-4 medium-4 large-4 columns">
+        <button class="btn btn-default">
+          <%= link_to "Upvote", medium_upvote_path(medium.id) %>
+        </button>
+      </div>
+    </div>
+  <% end %>
+
+  <button class="btn btn-default">
+    <%= link_to "View All Media", index_path %>
+  </button>
+  <button class="btn btn-default">
+    <%= link_to "Add New #{@medium_type_name}", medium_new_path %>
+  </button>
+</section>
+
+
+<!-- ###############TABLE ORGANIZED VERSION##################### -->
+<!--
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ranking</th>
+    <th>Upvote</th>
+  </tr>
+
+
+  <% @media.each do |medium| %>
+    <tr>
+      <%= render partial: medium.type.downcase, locals: { medium.type.downcase.to_sym => medium } %>
+      <td>
+        <%= link_to "Upvote", medium_upvote_path(medium.id) %>
+      </td>
+    <tr>
+  <% end %>
+
+</table>
+
+<%= link_to "View All Media", index_path %>
+<%= link_to "Add New #{@medium_type_name}", medium_new_path %> -->

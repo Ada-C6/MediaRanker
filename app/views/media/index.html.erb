@@ -1,0 +1,87 @@
+<section>
+  <div class="row">
+    <div class="small-12 medium-4 large-4 columns">
+      <h3 class="index_title">Top Movies</h3>
+      <% @movies.each do |movie| %>
+        <%= render partial: 'movie', locals: { :movie => movie } %>
+      <% end %>
+      <button class="btn btn-default">
+        <%= link_to "View More Movies", media_all_path(:movie) %>
+      </button>
+    </div>
+
+    <div class="small-12 medium-4 large-4 columns">
+      <h3 class="index_title">Top Books</h3>
+      <% @books.each do |book| %>
+          <%= render partial: 'book', locals: { :book => book } %>
+      <% end %>
+      <button class="btn btn-default">
+        <%= link_to "View More Books", media_all_path(:book) %>
+      </button>
+    </div>
+
+  <div class="small-12 medium-4 large-4 columns">
+    <h3 class="index_title">Top Albums</h3>
+    <% @albums.each do |album| %>
+        <%= render partial: 'album', locals: { :album => album } %>
+    <% end %>
+    <button class="btn btn-default">
+      <%= link_to "View More Albums", media_all_path(:album) %>
+    </button>
+  </div>
+</section>
+
+
+
+<!-- ###############TABLE ORGANIZED VERSION##################### -->
+
+<!-- <section>
+  <div class="row">
+  <table>
+    <div class="small-12 large-4 columns">
+    <tr>
+      <th><h1>Top Movies</h1></th>
+      <th><h1>Top Books</h1></th>
+      <th><h1>Top Albums</h1></th>
+    </tr>
+    </div>
+
+    <div class="small-2 large-4 columns">
+    <tr>
+      <td>
+        <% @movies.each do |movie| %>
+          <table>
+            <%= render partial: 'movie', locals: { :movie => movie } %>
+          </table>
+        <% end %>
+        <%= link_to "view more movies", media_all_path(:movie) %>
+      </td>
+    </div>
+
+    <div class="small-2 large-4 columns">
+      <td>
+        <% @books.each do |book| %>
+          <table>
+            <%= render partial: 'book', locals: { :book => book } %>
+          </table>
+        <% end %>
+        <%= link_to "view more books", media_all_path(:book) %>
+      </td>
+    </div>
+
+    <div class="small-2 large-4 columns">
+      <td>
+        <% @albums.each do |album| %>
+          <table>
+            <%= render partial: 'album', locals: { :album => album } %>
+          </table>
+        <% end %>
+        <%= link_to "view more albums", media_all_path(:album) %>
+      </td>
+    </tr>
+    </div>
+
+  </table>
+    </tbody>
+  </table>
+</section> -->

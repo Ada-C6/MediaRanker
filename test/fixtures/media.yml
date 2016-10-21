@@ -1,0 +1,50 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+movie1:
+  name: movie1
+  votes: 2
+  director: director1
+  description: I am movie1!!
+  type: Movie
+
+movie2:
+  name: movie2
+  votes: 3
+  director: director2
+  description: I am movie2!!
+  type: Movie
+
+movie3:
+  name: movie3
+  votes: nil
+  director: director3
+  description: I am movie3!!
+  type: Movie
+
+book1:
+  name: book1
+  votes: 2
+  author: writer1
+  description: book desc 1
+  type: Book
+
+book2:
+  name: book2
+  votes: 3
+  author: writer2
+  description: book desc 2
+  type: Book
+
+album1:
+  name: album1
+  artist: artist1
+  votes: 2
+  description: I am the album1
+  type: Album
+
+album2:
+  name: album2
+  artist: artist2
+  votes: 1
+  description: I am album 2
+  type: Album

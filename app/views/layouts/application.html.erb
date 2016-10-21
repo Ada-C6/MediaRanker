@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MediaRanker</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Play|Fredericka+the+Great" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <a  href="/"><img class="owl_pic" src="  http://pre06.deviantart.net/e08b/th/pre/i/2011/164/d/1/baby_owl_by_arani-d3iu8n7.png"></a>
+          <h1>
+            <a class="header_str" href="/"> Media Ranker </a>
+            <!-- <small> Ranking the Best of Everything </small> -->
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+  </body>
+</html>
