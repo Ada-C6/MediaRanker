@@ -1,0 +1,12 @@
+<h2><%= @book[:name] %></h2>
+<h3>Votes <%= @book[:ranking] %></h3>
+<p>Description <%= @book[:description] %></p>
+
+<ul class="button-group">
+  <li class="button"><%= button_to 'Upvote', booksupvote_path(params[:id]), :class => "button", method: :post %></li>
+  <br />
+  <li class="button"><%= button_to 'Edit', booksedit_path(params[:id]), :class => "button", method: :get %></li>
+  <li class="button"><%= button_to 'Delete', booksdestroy_path(params[:id]), :class => "button", method: :delete, data: {confirm: 'Are you sure you want to delete this suggestion? 😳'} %></li>
+  <li class="button"><%= button_to 'View all book suggestions', booksindex_path, :class => "button", method: :get %></li>
+  <li class="button"><%= button_to "Back to Meeeeedium's home", homepageindex_path, :class => "button", method: :get %></li>
+</ul>
