@@ -1,0 +1,14 @@
+<h1> <a href="/">Media Ranker</a></h1>
+<p>Ranking the Best of Everything<p>
+
+<h1><%= @mybook.name %></h1>
+<h2><%= @mybook.author %></h2><br>
+<h3><%= "Ranked: " + @mybook.rankings.to_s   %></h3>
+
+<%= link_to 'Upvote', books_upvote_path(@mybook) %>
+
+<%= link_to 'Edit ' + @mybook.name, books_edit_path(@mybook) %>
+
+<%= link_to 'DELETE', books_destroy_path(@mybook), method: :delete, data: {confirm:"Are you Sure?" } %>
+
+<%= link_to 'View All books', books_index_path(@books) %>

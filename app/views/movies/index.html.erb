@@ -1,0 +1,22 @@
+<%= image_tag "owl_media_ranker.jpg" %>
+<h1> <a href="/">Media Ranker</a></h1>
+<p>Ranking the Best of Everything<p>
+
+<table>
+  <tr>
+    <th>Ranking</th> 
+    <th>Name</th> 
+    <th>Upvote</th>
+  </tr>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= "Ranking: " + movie.rankings.to_s %></td>
+      <td><%= link_to movie.name, movies_show_path(movie) %></td> 
+      <td><%= link_to 'Upvote', movies_upvote_path(movie) %></td>
+      
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Add a Movie!  ', movies_new_path(@mymovie) %>
+<%= link_to 'View All Media!', root_path %>
+
