@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+mean_girls:
+  title: "Mean Girls"
+  director: "Mark Waters"
+  genre: "Comedy"
+  description: "Some Girls in High School"
+  rank: 3
+
+mean_girls_title:
+  title: "Mean Girls"
+  director: "A Different Director"
+  genre: "Comedy"
+  description: "Some Girls in High School"
+  rank: 3
+
+how_to_lose:
+  title: "How to Lose a Guy in 10 Days"
+  director: "Donald Petrie"
+  genre: "Romance"
+  description: "A great film - high quality cinema (in all seriousness)"
+  rank: 123

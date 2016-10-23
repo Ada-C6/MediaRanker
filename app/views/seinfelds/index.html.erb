@@ -1,0 +1,28 @@
+<h1 class="top-title align-center">Media Ranker Seinfeld Episodes</h1>
+
+<main class="main-container">
+  <article class="table-headers row">
+    <h3 class="small-12 medium-4 column">Title: </h3>
+    <h3 class="small-12 medium-4 column">Season: </h3>
+    <h3 class="small-12 medium-2 column">Rank: </h3>
+    <h3 class="small-12 medium-1 column">Vote: </h3>
+  </article>
+  <div class="media-list-container">
+  <% @seinfelds.each do |seinfeld| %>
+    <article class="one-seinfeld row">
+      <h5 class="small-12 medium-4 column"><%= link_to seinfeld.title, seinfeld_path(seinfeld.id) %></h5>
+      <h5 class="small-4 medium-4 column"><%= link_to seinfeld.season, seinfeld_path(seinfeld.id) %> </h5>
+      <p class="small-7 medium-2 column right-padding"> Votes: <%= seinfeld.rank %></p>
+      <div class="small-6 medium-1 column arrows">
+        <p class="upvote-arrow"><%= link_to "▲  ", {controller: 'seinfelds', action: 'upvote', id: seinfeld.id}, method: :patch%></p>
+        <p class="downvote-arrow"><%= link_to "▼", {controller: 'seinfelds', action: 'downvote', id: seinfeld.id}, method: :patch%></p>
+      </div>
+    </article>
+  <% end %>
+  </div>
+  <div class="bottom-buttons row">
+    <p class="new_button"><%= button_to "Add New Seinfeld Episode", {controller: 'seinfelds', action: 'new'}, {path: 'new_seinfeld', method: :get} %></p>
+    <p class="media_button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+  </div>
+</main>
+<p class="scroll">Scroll Through Seinfeld Episodes</p>

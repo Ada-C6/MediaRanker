@@ -1,0 +1,27 @@
+<h1 class="top-title align-center"><%= @mymovie.title %></h1>
+<div class="row">
+  <div class="small-12 medium-5 column">
+    <h3>Directed By: </h3><h5> <%= @mymovie.director %> </h5>
+  </div>
+  <div class="small-12 medium-5 column">
+    <h3> Genre: </h3><h5> <%= @mymovie.genre %> </h5>
+  </div>
+  <div class="small-12 medium-12 column">
+    <h3>  Description: </h3><h5 class="media-description"> <%= @mymovie.description %> </h5>
+  </div>
+</div>
+<article class="vote-buttons">
+  <div class="small-12 medium-4 column">
+    <h3>  Votes: </h3><h5> <%= @mymovie.rank %> </h5>
+  </div>
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'movies', action: 'upvote', id: @mymovie.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'movies', action: 'downvote', id: @mymovie.id}, method: :patch%></p>
+</article>
+
+<article class="reroute-buttons">
+  <p class="edit-button route-button"><%= button_to "Edit Movie", {controller: 'movies', action: 'edit'}, {path: 'edit_movie', method: :get} %></p>
+  <p class="delete-button route-button"><%= button_to "Delete Movie", {controller: 'movies', action: 'destroy'}, path: 'movie', method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+  <p class="all-button route-button"><%= button_to "View All Movies", {controller: 'movies', action: 'index'}, {path: 'movies', method: :get} %></p>
+  <p class="media-button route-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>

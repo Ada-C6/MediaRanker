@@ -1,0 +1,27 @@
+<h1 class="top-title align-center"><%= @myseinfeld.title %></h1>
+<div class="row">
+  <div class="small-12 medium-5 column">
+    <h3>Season By: </h3><h5> <%= @myseinfeld.season %> </h5>
+  </div>
+  <div class="small-12 medium-5 column">
+    <h3> Episode: </h3><h5> <%= @myseinfeld.episode %> </h5>
+  </div>
+  <div class="small-12 medium-12 column">
+    <h3>  Description: </h3><h5 class="media-description"> <%= @myseinfeld.description %> </h5>
+  </div>
+</div>
+<article class="vote-buttons">
+  <div class="small-12 medium-4 column">
+    <h3>  Votes: </h3><h5> <%= @myseinfeld.rank %> </h5>
+  </div>
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'seinfelds', action: 'upvote', id: @myseinfeld.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'seinfelds', action: 'downvote', id: @myseinfeld.id}, method: :patch%></p>
+</article>
+
+<article class="reroute-buttons">
+  <p class="edit-button route-button"><%= button_to "Edit Episode", {controller: 'seinfelds', action: 'edit'}, {path: 'edit_seinfeld', method: :get} %></p>
+  <p class="delete-button route-button"><%= button_to "Delete Episode", {controller: 'seinfelds', action: 'destroy'}, path: 'seinfeld', method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+  <p class="all-button route-button"><%= button_to "View All Episodes", {controller: 'seinfelds', action: 'index'}, {path: 'seinfelds', method: :get} %></p>
+  <p class="media-button route-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>

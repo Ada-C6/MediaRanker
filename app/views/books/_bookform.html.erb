@@ -1,0 +1,24 @@
+<h5 class="error-message"><%= @error if @error %></h5>
+<%= form_for @mybook,
+  method: @post_method,
+  url: @post_path do |f| %>
+  <div class="form_attribute">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form_attribute">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+  <div class="form_attribute">
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </div>
+  <div class="form_attribute">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="form_attribute">
+    <%= f.submit %>
+  </div>
+<% end %>

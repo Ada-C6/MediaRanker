@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+peephole:
+  title: "The Reverse Peephole"
+  season: 9
+  episode: 12
+  description: "Elaine's boyfriend, Puddy, wears a fur coat; Jerry starts living without a wallet; Newman may be evicted."
+  rank: 63
+
+slicer:
+  title: "The Slicer"
+  season: 9
+  episode: 7
+  description: "Kramer gets into meat slicing; Jerry dates a doctor (Marcia Cross) who isn't impressed with his job; George's new boss is a former adversary."
+  rank: 54

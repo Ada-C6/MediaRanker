@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+red_fern:
+  title: "Where the Red Fern Grows"
+  author: "Wilson Rawls"
+  genre: "Children"
+  description: "About a boy who buys and trains two Redbone Coonhound hunting dogs"
+  rank: 54
+
+red_fern_title:
+  title: "Where the Red Fern Grows"
+  author: "A Different Author"
+  genre: "Children"
+  description: "About a boy who buys and trains two Redbone Coonhound hunting dogs"
+  rank: 30
+
+dingo:
+  title: "The Dingo Ate Your Baby"
+  author: "Anonymous"
+  genre: "Non-Fiction"
+  description: "One time, a dingo ate a baby"
+  rank: 3

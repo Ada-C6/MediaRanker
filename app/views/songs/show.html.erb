@@ -1,0 +1,27 @@
+<h1 class="top-title align-center"><%= @mysong.title %></h1>
+<div class="row">
+  <div class="small-12 medium-5 column">
+    <h3>Artist: </h3><h5> <%= @mysong.artist %> </h5>
+  </div>
+  <div class="small-12 medium-5 column">
+    <h3> Album: </h3><h5> <%= @mysong.album %> </h5>
+  </div>
+  <div class="small-12 medium-5 column end">
+    <h3 class="song-genre"> Genre: </h3><h5> <%= @mysong.genre %> </h5>
+  </div>
+</div>
+<article class="vote-buttons">
+  <div class="small-12 medium-4 column">
+    <h3>  Votes: </h3><h5> <%= @mysong.rank %> </h5>
+  </div>
+  <p class="upvote-button"><%= button_to "Upvote", {controller: 'songs', action: 'upvote', id: @mysong.id}, method: :patch%></p>
+  <p class="downvote-button"><%= button_to "Downvote", {controller: 'songs', action: 'downvote', id: @mysong.id}, method: :patch%></p>
+</article>
+
+<article class="reroute-buttons">
+  <p class="edit-button route-button"><%= button_to "Edit Song", {controller: 'songs', action: 'edit'}, {path: 'edit_song', method: :get} %></p>
+  <p class="delete-button route-button"><%= button_to "Delete Song", {controller: 'songs', action: 'destroy'}, path: 'song', method: :delete, data: {confirm: "Are you sure?"}%></p>
+
+  <p class="all-button route-button"><%= button_to "View All Songs", {controller: 'songs', action: 'index'}, {path: 'songs', method: :get} %></p>
+  <p class="media-button route-button"><%= button_to "View All Media", {controller: 'landings', action: 'index'}, {path: 'landings', method: :get} %></p>
+</article>
