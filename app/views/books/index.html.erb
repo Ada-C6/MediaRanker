@@ -1,0 +1,26 @@
+<main>
+  <h2 class='index-header'>Top Books.</h2>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th># of Votes</th>
+        <th>Book Name</th>
+        <th>UpVote</th>
+      </tr>
+
+      <% @books_by_rank.each do | book | %>
+        <tr>
+            <td><%= book.rank %></td>
+            <td><%= link_to "#{book.name}", book_path(book.id) %></td>
+            <td><%= button_to "UpVote", upvote_book_path(book.id), method: :patch %></td>
+        </tr>
+      <% end  %>
+    </table>
+
+    <section class="small-12 medium-12 columns">
+      <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+      <%= link_to "Add a Book", new_book_path, method: :get, :class => 'button' %>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,5 @@
+<main>
+  <h2 class='index-header'><%= "Edit #{ @movie.name }" %></h2>
+
+  <%= render partial: "form_movies", locals: { submit_url: movie_path, http_method: :patch } %>
+</main>

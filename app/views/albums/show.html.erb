@@ -1,0 +1,33 @@
+<main>
+  <%# name, title, rank, description  %>
+  <div class="row">
+    <h2 class='small-12 medium-12 columns'>
+      <%= "#{ @album.name }" %>
+    </h2>
+  </div>
+
+  <div class="row">
+    <h3 class="small-12 medium-12 columns">
+      <%= "Artist: #{ @album.artist }" %>
+    </h3>
+
+    <section class="small-12 medium-12 columns">
+      <h4><%= "# of Votes: #{ @album.rank }" %></h4>
+      <h4 class= 'description'><%= "Description: #{ @album.description }" %></h4>
+    </section>
+
+    <%# buttons: edit, delete, upvote, view all albums, view all media  %>
+    <section class="small-10 medium-10 columns upvote-edit-delete">
+      <%= link_to "UpVote", upvote_album_path(@album.id), method: :patch, :class => 'link-button' %>
+
+      <%= link_to "Edit", edit_album_path(@album.id), method: :get, :class => 'link-button' %>
+      <%= link_to "Delete", album_path(@album.id), method: :delete, :class => 'link-button',
+            data: {confirm: "Are you sure you want to delete permanently?"}%>
+    </section>
+
+    <section class="small-12 medium-12 columns">
+      <%= link_to "View all Albums", albums_path, method: :get, :class => 'button' %>
+      <%= link_to "View all Media", welcome_index_path, method: :get, :class => 'button' %>
+    </section>
+  </div>
+</main>

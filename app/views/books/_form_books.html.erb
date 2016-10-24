@@ -1,0 +1,23 @@
+<% if @book.errors.any? %>
+  <ul class="errors">
+    <% @book.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @book, class: 'add-form', url: submit_url, html: {class: 'form'}, method: http_method do |f| %>
+  <%= f.label :name, 'Name:' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :author, 'Author:' %>
+  <%= f.text_field :author %>
+
+  <%= f.label :description, 'Description' %>
+  <%= f.text_field :description %>
+
+  <%= f.submit :class => 'button'%>
+
+<% end %>

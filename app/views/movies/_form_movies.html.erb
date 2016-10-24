@@ -1,0 +1,23 @@
+<% if @movie.errors.any? %>
+  <ul class="errors">
+    <% @movie.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+  <%= form_for @movie, class: 'add-form', html: {class: 'form'}, url: submit_url, method: http_method do |f| %>
+    <%= f.label :name, 'Name:' %>
+    <%= f.text_field :name %>
+
+    <%= f.label :director, 'Director:' %>
+    <%= f.text_field :director %>
+
+    <%= f.label :description, 'Description' %>
+    <%= f.text_field :description %>
+
+    <%= f.submit :class => 'button' %>
+
+  <% end %>
