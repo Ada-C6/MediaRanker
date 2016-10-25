@@ -1,0 +1,10 @@
+<section class="background_albums">
+<h1>Albums</h1>
+<% @albums.each do |album| %>
+<article class="tiles">
+<h4><%= link_to(album.title, album_path(album.id)) %></h4>
+<h5>Rank: <%= album.rank %></h5>
+</article>
+<% end %>
+<p><%= button_to("Add Album", new_album_path, class:"success button") %></p>
+</section>

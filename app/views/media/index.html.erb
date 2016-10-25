@@ -1,0 +1,43 @@
+
+<section class="background_media">
+<div class="row">
+
+<div class="small-6 medium-4 columns">
+  <h1 class="media_link"><%= link_to("Books", books_path) %></h1>
+  <% @books.each do |book| %>
+  <article class="tiles">
+<p><%= link_to(book.title, book_path(book.id)) %></p>
+<p>Rank: <%= book.rank %></p>
+</article>
+<% end %>
+</div>
+
+
+
+
+
+<div class="small-6 medium-4 columns">
+  <h1 class="media_link"><%= link_to("Movies", movies_path) %></h1>
+<% @movies.each do |movie| %>
+<article class="tiles">
+<p><%= link_to(movie.title, movie_path(movie.id)) %></p>
+Rank: <%= movie.rank %>
+</article>
+<% end %>
+
+</div>
+
+
+
+  <div class="small-6 medium-4 columns">
+
+    <h1 class="media_link"><%= link_to("Albums", albums_path) %></h1>
+  <% @albums.each do |album| %>
+  <article class="tiles">
+  <p><%= link_to(album.title, album_path(album.id)) %></p>
+  <p>Rank: <%= album.rank %></p>
+</article>
+  <% end %>
+  </div>
+</div>
+</section>

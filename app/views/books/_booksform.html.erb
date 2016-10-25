@@ -1,0 +1,22 @@
+<section class="background_books">
+
+<div class="grid-block">
+<div class="small-12 medium-6 grid-content">
+<%= form_for @mybook do |f| %>
+  <%= f.label :title %>
+    <%= f.text_field :title %>
+
+  <%= f.label :author  %>
+  <%= f.text_field :creator%>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%# <%= f.label :rank %>
+  <%#<%= f.text_field :rank %>
+
+  <%= f.submit %>
+    <% end %>
+</div>
+</div>
+</section>

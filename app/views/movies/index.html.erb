@@ -1,0 +1,10 @@
+<section class="background_movies">
+<h1>Movies</h1>
+<% @movies.each do |movie| %>
+<article class="tiles">
+<h4><%= link_to(movie.title, movie_path(movie.id)) %></h4>
+<h5>Rank: <%= movie.rank %></h5>
+</article>
+<% end %>
+<p><%= button_to("Add Movie", new_movie_path, class:"success button") %></p>
+</section>

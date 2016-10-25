@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('foundation.css');
+
+/*home page*/
+
+
+
+/*body {
+  background: url('grassy.jpg');
+  background-size: cover;
+  background-position: center;
+}*/
+
+
+.tiles {
+   width: 25%;
+   height: 100px;
+   padding: 5px;
+   margin: 15px;
+   background: rgba(228, 63, 111, 0.8);
+}
+
+.tiles a {
+  color: #000;
+}
+
+#title a {
+  color: #000;
+
+}
+
+#head_title {
+  position: absolute;
+}
+
+.media_link a {
+  color: #000;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+form.button_to {
+  display: inline;
+}
+
+.background_books {
+  padding-left: 60px;
+  background: url('books2.jpg');
+  background-size: 100% auto;
+  height: 900px;
+  padding-top: 60px;
+  color: #FFF
+}
+
+.background_movies {
+  padding-left: 60px;
+  background: url('movie.jpg');
+  background-size: 100% auto;
+  height: 900px;
+  padding-top: 60px;
+}
+
+.background_albums {
+  padding-left: 60px;
+  background: url('records.jpg');
+  background-size: 100% auto;
+  height: 900px;
+  padding-top: 60px;
+}
+
+.background_media {
+  padding-left: 60px;
+  background: url('records.jpg');
+  background-size: 100% auto;
+  height: 900px;
+  padding-top: 60px;
+}
