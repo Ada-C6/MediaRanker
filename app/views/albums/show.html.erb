@@ -1,0 +1,15 @@
+<h1><%=@this_album.name%></h1>
+<h2>Written By: <%= @this_album.artist %></h2>
+<h4>Rank: <%=@this_album.rank%></h4>
+<p><%=@this_album.description%></p>
+
+<ul class="button-group">
+	<li><%= button_to("Upvote", {action: "upvote", id: @this_album.id}, {method: :patch, :class=> "button success"}) %></li>
+	<li><%= button_to("Downvote", {action: "downvote", id: @this_album.id}, {method: :patch, :class=> "button alert"}) %></li>
+</ul>
+<ul class="button-group">
+	<li><%= button_to("Edit", {action: "edit", id: @this_album.id}, {method: :get, :class=> "button"}) %></li>
+	<li><%= button_to("Delete", {action: "destroy", id: @this_album.id}, {method: :delete, :class=> "button", data: {confirm:  "are you sure?"}}) %></li>
+	<li><%= button_to("View All Albums", {action: "index"}, {method: :get, :class=> "button"}) %></li>
+	<li><%= button_to("View All Media", media_path, {method: :get, :class=> "button"}) %></li>
+</ul>

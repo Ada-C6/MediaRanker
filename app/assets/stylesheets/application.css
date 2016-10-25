@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html *{
+	font-family: "Lucida Grande";
+}
+
+@import url('foundation.css');
+
+header{
+	border-bottom: 1px solid gray;
+}
+
+header img{
+	max-width: 150px;
+	height: auto;
+	
+}
+
+header h1,h2{
+	display: inline-block;
+}
+
+header h1{
+	font-size: 2.5em;
+}
+header h2{
+	color: gray;
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+ul{
+	list-style: none;
+}
+
+
+
+li a{
+	margin-right: 2%;
+	font-size: 1.3em;
+}
+li p{
+	display: inline-block;
+}
+
+a.view-more:hover{
+	text-decoration: underline;
+}
+
+.button {
+	border-radius: 4px;
+}
+
+ul.button-group li{ 
+	display: inline-block;
+	padding: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+	/*when screen gets too narrow, don't show description*/
+	.description{
+		display: none;
+	}
+}
+
+
