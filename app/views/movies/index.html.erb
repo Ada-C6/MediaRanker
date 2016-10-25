@@ -1,0 +1,22 @@
+
+<h1> Movies</h1>
+<table>
+	<tbody>
+		<tr>
+			<th>Ranking</th>
+			<th>Name</th>
+			<th>Upvote</th>
+			<th>Downvote</th>
+		</tr>
+		<% @all_movies.each do |movie|%>
+		<tr>
+			<td>Rank: <%=movie.rank%></td>
+			<td><%=link_to movie.name, movie_path(movie)%></td>
+			<td><%= button_to("Upvote", {action: "upvote", id: movie.id}, {method: :patch, :class=> "success button"}) %></td>
+			<td><%= button_to("Downvote", {action: "downvote", id: movie.id}, {method: :patch, :class=> "alert button"}) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= button_to("View All Media", media_path, {method: :get, :class=>"button"}) %>
+<%= button_to("Add a Movie", new_movie_path, {method: :get, :class=>"button"}) %>

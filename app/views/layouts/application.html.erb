@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRanker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+	<%= image_tag("thumbs_up_down.png", :alt => "thumbs up and thumbs down symbols in light blue") %>
+	<h1><%= link_to"Yea or Nay", media_path %></h1>
+	<h2>Appealing to your need to judge things</h2>
+	</header>
+<%= yield %>
+
+</body>
+</html>
