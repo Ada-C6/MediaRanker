@@ -1,0 +1,18 @@
+<span class="buttons">
+	<ul class="row small-up-1 medium-up-2">
+		<li class="column">
+			<%= link_to(image_tag("/assets/upvote_cupid_dart_heart.png"), image_path(upvote_path(movie.id)), action: :upvote, method: :post) %>
+		</li>
+		<li class="column">
+			<%= link_to(image_tag("/assets/downvote_broken_heart.png"), image_path(downvote_path(movie.id)), method: :post, action: :downvote) %>
+		</li>
+		<!-- edit button -->
+		<li class="column">
+			<%= button_to("Edit", edit_path(movie.id), method: :get, action: :edit) %>
+		</li>	
+		<!-- delete buttons -->	
+		<li class="column">
+			<%= button_to("Delete", delete_path(movie.id), data: {confirm: "Are you sure you want to destroy this beautiful music?"}) %>
+		</li>
+	</ul>
+</span>
