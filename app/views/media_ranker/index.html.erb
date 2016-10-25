@@ -1,0 +1,123 @@
+
+
+<div class="row">
+
+  <span class="small-12 medium-4 columns">
+    <h1>top albums</h1>
+    <table>
+      <tr>
+        <th>name</th>
+        <th>votes</th>
+      </tr>
+     <% @index_albums.each do |album| %>
+     <tr>
+       <td><%= link_to album.name, album_path(album.id) %></td>
+       <td>ranked: <%=album.votes%></td>
+     </tr>
+     <% end %>
+
+    </table>
+    <p>
+      <%= link_to "view all", albums_path %>
+    </p>
+  </span>
+  <!--
+<div class="row">
+<p class="small-6 medium-3 columns"> </p>
+<p class="small-6 medium-3 columns"> </p>
+<p class="small-12 medium-6 columns"> </p>
+</div> -->
+
+
+  <span class="small-12 medium-4 columns">
+    <h1>not styled</h1>
+    <table>
+      <tr>
+        <th>name</th>
+        <th>votes</th>
+      </tr>
+     <% @index_books.each do |book| %>
+     <tr>
+       <td><%= link_to book.name, book_path(book.id) %></td>
+       <td>ranked: <%=book.votes%></td>
+     </tr>
+     <% end %>
+
+    </table>
+    <p>
+      <%= link_to "view all", books_path %>
+    </p>
+  </span>
+<!-- </div> -->
+
+<!-- <article>
+  <h1>top books</h1>
+  <% @index_books.each do |book| %>
+  <p>
+    <%= link_to book.name, book_path(book.id) %>
+  </p>
+  <p>
+    ranked: <%=book.votes%>
+  </p>
+  <% end %>
+  <p>
+    <%= link_to "view all", books_path %>
+  </p>
+</article> -->
+
+<!-- <div class="row"> -->
+  <span class="small-12 medium-4 columns">
+    <h1>not styled</h1>
+    <table>
+      <tr>
+        <th>name</th>
+        <th>votes</th>
+      </tr>
+     <% @index_movies.each do |movie| %>
+     <tr>
+       <td><%= link_to movie.name, movie_path(movie.id) %></td>
+       <td>ranked: <%=movie.votes%></td>
+     </tr>
+     <% end %>
+
+    </table>
+    <p>
+      <%= link_to "view all", movies_path %>
+    </p>
+  </span>
+</div>
+<!-- </div> -->
+
+<!-- <article>
+  <h1>top movies</h1>
+  <% @index_movies.each do |movie| %>
+  <p>
+    <%= link_to movie.name, movie_path(movie.id) %>
+  </p>
+  <p>
+    ranked: <%=movie.votes%>
+  </p>
+  <% end %>
+  <p>
+    <%= link_to "view all", movies_path %>
+  </p>
+</article> -->
+
+<!-- <div class="row"> -->
+
+
+<!--
+<article>
+  <h1>top albums</h1>
+  <% @index_albums.each do |album| %>
+  <p>
+    <%= link_to album.name, album_path(album.id) %>
+  </p>
+  <p>
+    ranked: <%=album.votes%>
+  </p>
+  <% end %>
+  <p>
+    <%= link_to "view all", albums_path %>
+  </p>
+</article> -->

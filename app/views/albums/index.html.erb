@@ -1,0 +1,29 @@
+
+
+
+<div class="row">
+  <h4 class="small-4 columns">ranking</h4>
+  <h4 class="small-4 columns">name</h4>
+  <h4 class="small-4 columns">upvote</h4>
+</div>
+<div class="row">
+  <% @albums.each do |album| %>
+  <p class="small-4 columns">
+    ranked: <%=album.votes%>
+  </p>
+  <p class="small-4 columns">
+    <%= link_to album.name, album_path(album.id) %>
+  </p>
+  <p class="small-4 columns">
+    <%= button_to 'upvote', {action: "upvote", id: album.id }, method: :patch %>
+  </p>
+  <% end %>
+</div>
+<div class="row">
+  <p class="small-2 columns">
+    <%= link_to 'Media Ranker', root_path %>
+  </p>
+  <p class="small-1 columns end">
+    <%= link_to 'add new', new_album_path %>
+  </p>
+</div>

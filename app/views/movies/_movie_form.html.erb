@@ -1,0 +1,13 @@
+<%= form_for @movie, url: @path_name do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :director %>
+  <%= f.text_field :director %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
