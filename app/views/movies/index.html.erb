@@ -1,0 +1,28 @@
+<h1>All Movies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th width="50">Ranking</th>
+      <th width="150">Title</th>
+      <th width="150">Upvote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movie.each do |movie| %>
+    <tr>
+      <td><%= movie.rank %></td>
+      <td><%= link_to(movie.title, movie_path(movie[:id])) %></td>
+      <td><%= button_to("Upvote", {action: "upvote", id: movie.id}, method: :patch, :class => 'tiny button') %></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<%= button_to "Add a Movie", new_movie_path, :method => :get, :class => 'success button' %>
+
+<%= button_to("View All Media", medias_index_path, :method => :get, :class => 'button') %>

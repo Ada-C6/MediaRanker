@@ -1,0 +1,11 @@
+<h2>Title: <%= @movie.title %></h2>
+<h4>Director: <%= @movie.director %></h4>
+<h4>Description: <%= @movie.description %></h4>
+<h4>Rank: <%= @movie.rank %></h4>
+
+<%= button_to("Upvote", {action: "upvote", id: @movie.id}, method: :patch, :class => "small button") %>
+
+<%= button_to "Edit", {action: "edit", id: @movie[:id] }, method: :get, :class => "button" %>
+<%= button_to "Delete Movie", {action: "destroy", id: @movie[:id] }, method: :delete, :class => " alert button", data: { confirm: "Are you sure?"} %>
+<%= button_to("View All Movies", movies_path, :method => :get, :class => "button") %>
+<%= button_to("View All Media", medias_index_path, :method => :get, :class => "button") %>

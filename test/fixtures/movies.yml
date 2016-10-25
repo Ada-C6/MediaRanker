@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: "Movie"
+  director: "Olivia"
+  description: "A movie1"
+  rank: 1
+
+two:
+  id: 2
+  title: "Movie2"
+  director: "Ashley"
+  description: "A movie2"
+  rank: 2
+
+three:
+  id: 3
+  title:
+  director: "Ashley"
+  description: "A movie3"
+  rank: 3
+
+four:
+  id: 4
+  title: "Movie3"
+  director: "Ashley"
+  description: "A movie3"
+  rank:

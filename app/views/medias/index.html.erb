@@ -1,0 +1,34 @@
+<div class= "row large-up-3 medium-up-1">
+
+<div class="column">
+  <h2>Movies</h2>
+  <% @movies.each do |movie| %>
+    <h3><%= link_to(movie.title, movie_path(movie.id)) %></h3>
+    <h5>Rank: <%= movie.rank %></h5>
+    </br>
+  <% end %>
+  <%= link_to("View All Movies", movies_path, :method => :get) %>
+
+</div>
+
+<div class="column">
+  <h2>Books</h2>
+  <% @books.each do |book| %>
+      <h3><%= link_to(book.title, book_path(book.id))  %></h3>
+      <h5>Rank: <%= book.rank %></h5>
+      </br>
+  <% end %>
+  <%= link_to("View All Books", books_path, :method => :get) %>
+</div>
+
+<div class="column">
+<h2>Albums</h2>
+  <% @albums.each do |album| %>
+    <h3><%= link_to(album.title, album_path(album.id))  %></h3>
+    <h5>Rank: <%= album.rank %></h5>
+    </br>
+  <% end %>
+  <%= link_to("View All Albums", albums_path, :method => :get) %>
+</div>
+
+</div>

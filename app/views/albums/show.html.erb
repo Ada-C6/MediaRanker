@@ -1,0 +1,11 @@
+<h1>Title: <%= @album.title %></h1>
+<h4>Artist: <%= @album.artist %></h4>
+<h4>Description: <%= @album.description %></h4>
+<h4>Rank: <%= @album.rank %></h4>
+
+<%= button_to("Upvote", {action: "upvote", id: @album.id}, method: :patch, :class => "small button") %>
+
+<%= button_to "Edit", {action: "edit", id: @album[:id] }, method: :get, :class => "button" %>
+<%= button_to "Delete Album", {action: "destroy", id: @album[:id] }, method: :delete, :class => " alert button", data: { confirm: "Are you sure?"} %>
+<%= button_to("View All Albums", albums_path, :method => :get, :class => "button") %>
+<%= button_to("View All Media", medias_index_path, :method => :get, :class => "button") %>
