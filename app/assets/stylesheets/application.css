@@ -1,0 +1,34 @@
+@import url('foundation.css');
+@import url('users.css');
+
+.big-title a {
+  font-weight: bolder;
+}
+
+button, input, optgroup, select, textarea {
+  background-color: whitesmoke;
+}
+.btm-btn-grp {
+  padding-left: 20%;
+}
+
+.upvt-btn {
+  padding: 30px;
+  display: inline;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

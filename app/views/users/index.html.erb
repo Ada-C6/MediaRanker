@@ -1,0 +1,40 @@
+
+<section class="row">
+
+  <article class="small-12 medium-6 large-4 columns">
+
+    <h1 class="mediatitle">Top Movies</h1>
+      <% @movies.each do |movie| %>
+      <h2><%= link_to(movie.name, movie_path(movie.id)) %></h2>
+      <p>Ranked: <%=movie.vote_count %></p>
+
+      <% end %>
+    <p><%=button_to "View All Movies", movies_path, method: :get%></p>
+
+  </article>
+
+  <article class="small-12 medium-6 large-4 columns">
+
+     <h1 class="mediatitle">Top Books</h1>
+       <% @books.each do |book| %>
+       <h2><%= link_to(book.name, book_path(book.id)) %></h2>
+        <p>Ranked: <%=book.vote_count %></p>
+
+       <% end %>
+      <p><%=button_to("View All Books", books_path, method: :get) %></p>
+
+  </article>
+
+  <article class="small-2 medium-6 large-4 end columns">
+
+     <h1 class="mediatitle">Top Albums</h1>
+       <% @albums.each do |album| %>
+       <h2><%= link_to(album.name, album_path(album.id)) %></h2>
+      <p>Ranked: <%=album.vote_count %></p>
+
+       <% end %>
+        <p><%=button_to("View All Albums", albums_path, method: :get) %></p>
+
+  </article>
+
+</section>
