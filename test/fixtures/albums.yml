@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+death_and_taxes:
+  name: Death and Taxes
+  artist: Muertista
+  description: Songs about things we are certain of
+  rank: 1
+
+no_escape:
+  name: You Can't Escape
+  artist: Fellow
+  description: Just when you think you've figured things out
+  rank: 1
+
+wishful_thinking:
+  name: Just Wishful Thinking
+  artist: El Hombre
+  description: String instrumentals
+  rank: 1

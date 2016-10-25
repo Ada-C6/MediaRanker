@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+nap:
+  name: Take a Nap
+  author: Dr. Suess
+  description: "Sleep here or there or anywhere"
+  rank: 1
+
+i_know:
+  name: This I Know
+  author: T. Rocket
+  description: Nothing you'd ever want to read
+  rank: 1

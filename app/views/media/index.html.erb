@@ -1,0 +1,31 @@
+<main class= "row small-up-1 medium-up-1 large-up-3">
+<section class= "column">
+<h1>Top Movies</h1>
+<ul>
+<% @top_movies.each do |top_movie|%>
+	<li><%=link_to top_movie.name, movie_path(top_movie)%><p>Rank: <%=top_movie.rank%> </li>
+<% end %>
+</ul>
+<%= link_to "View more movies", movies_path%>
+</section>
+
+<section class= "column">
+<h1>Top Books</h1>
+<ul>
+<% @top_books.each do |top_book|%>
+	<li><%=link_to top_book.name, book_path(top_book)%><p>Rank: <%=top_book.rank%> </li>
+<% end %>
+</ul>
+<%= link_to "View more books", books_path%>
+</section>
+
+<section class= "column">
+<h1>Top Albums</h1>
+<ul>
+<% @top_albums.each do |top_album|%>
+	<li><%=link_to top_album.name, album_path(top_album)%><p>Rank: <%=top_album.rank%> </li>
+<% end %>
+</ul>
+<%= link_to "View more albums", albums_path%>
+</section>
+</main>

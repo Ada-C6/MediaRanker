@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+dead_or_alive:
+  name: Dead or Alive
+  director: G. Allen
+  description: A videogame made into a movie
+  rank: 1
+
+king_kong:
+  name: King Kong
+  director: Someone
+  description: You know what happens already
+  rank: 1
