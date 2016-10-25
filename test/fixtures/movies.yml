@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  director: MyString
+babe:
+  name: babe
+  director: johndoe
   description: MyString
 
-two:
-  name: MyString
-  director: MyString
+saved:
+  name: saved
+  director: janedoe
   description: MyString

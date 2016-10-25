@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 # delete "/movies/:id" => "movies#destroy"
 # get "/movies/new" => "movies#new", as: :new_movie
 # get "/movies/:id/edit" => "movies#edit", as: :edit_movie
+  patch "movies/:id/upvote" => "movies#upvote", as: :movies_upvote
 
   resources :books
 # get "/books" => "books#index", as: :books
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
 # delete "/books/:id" => "books#destroy"
 # get "/books/new" => "books#new", as: :new_book
 # get "/books/:id/edit" => "books#edit", as: :edit_book
+  patch "books/:id/upvote" => "books#upvote", as: :books_upvote
 
   resources :albums
   # get "/albums" => "albums#index", as: :albums
@@ -28,7 +30,7 @@ Rails.application.routes.draw do
   # delete "/albums/:id" => "albums#destroy"
   # get "/albums/new" => "albums#new", as: :new_albym
   # get "/albums/:id/edit" => "albums#edit", as: :edit_album
-
+  patch "albums/:id/upvote" => "albums#upvote", as: :albums_upvote
   # I was orignally going to not include all of the resource functionality. Yet, because I know another wave is coming with potential web auth. I have chosen to include this.
   resources :users
 
@@ -40,6 +42,8 @@ Rails.application.routes.draw do
   # delete "/users/:id" => "users#destroy"
   # get "/users/new" => "users#new", as: :new_user
   # get "/users/:id/edit" => "users#edit", as: :edit_user
+
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -96,4 +100,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

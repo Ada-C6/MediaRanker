@@ -1,2 +1,25 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<!-- books show  -->
+<section>
+  <h1>Title: <%=@mybook.name %></h1>
+  <p>Author: <%=@mybook.author %></p>
+  <p>Ranked: <%=@mybook.vote_count %> </p>
+  <p>Description: <%=@mybook.description%></p>
+
+  <section>
+    <%=button_to("Upvote", books_upvote_path(@mybook.id), method: :patch) %>
+  </section>
+
+  <section class="button_row">
+    <%=button_to("Edit #{@mybook.name}", edit_book_path(@mybook.id), method: :get)%>
+
+    <%=button_to("DELETE", book_path(@mybook.id), method: :delete) %>
+
+    <%=button_to "View All Books", books_path, method: :get %>
+
+    <%=button_to "View All Media", users_path, method: :get %>
+
+  </section>
+</section>
+
+
+<!-- <%=link_to "MEDIA RANKER", users_path %> -->

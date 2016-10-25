@@ -1,2 +1,22 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<!-- albums.index -->
+<h1>All Albums</h1>
+<table>
+  <tr>
+    <th>votes</th>
+    <th>name</th>
+    <th>Upvote</th>
+  </tr>
+  <% @albums.each do |book| %>
+  <tr>
+    <td>Ranked: <%=book.vote_count %></td>
+    <td><%=link_to book.name, book_path(book.id) %></td>
+    <td><%=button_to("Upvote", books_upvote_path(book.id), method: :patch) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<section class="button_row">
+   <p><%=button_to("Add album", new_album_path, method: :get) %></p>
+   <p>
+  <%=button_to "View All Media", users_path, method: :get %></p>
+</section>

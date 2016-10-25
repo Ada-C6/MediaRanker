@@ -1,2 +1,35 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<!-- movies show  -->
+
+<article>
+
+  <h1><%=@mymovie.name%></h1>
+
+<div class="row">
+
+  <div class="medium-5 columns">  <p>Directed by: <%=@mymovie.director %></p>
+    <p class="medium-5 columns">Ranked: <%=@mymovie.vote_count %> </p>
+    <p class="medium-5 columns">Description: <%=@mymovie.description%></p></div>
+</div>
+
+  <div class="row">
+    <%=button_to "Edit: #{@mymovie.name}", edit_movie_path(@mymovie.id), method: :get, class: "button medium-4 columns", class: "edt-btn" %>
+  </div>
+
+
+  <div class="upvt-btn"class="row">
+    <%=button_to("Upvote", movies_upvote_path(@mymovie.id), method: :patch, class: "large button success medium-2 columns") %>
+  </div>
+
+  <div class ="btm-btn-grp"class="row">
+    <section class: "button-group even three-up">
+
+       <%=button_to "DELETE", movie_path(@mymovie.id), method: :delete, class: " button alert medium-2 columns" %>
+
+       <%=button_to "View All Movies", movies_path, method: :get, class: "button medium-2 columns"%>
+
+       <%=button_to "View All Media", users_path, method: :get, class: "button secondary medium-2 columns" %>
+
+    </section>
+  </div>
+
+</article>

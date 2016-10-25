@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'minitest-emoji', '~> 2.0'
 end
 
 group :development do
@@ -42,7 +43,13 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # in theory the spring gem may have influenced why console wasn't working.
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
+# this adds colors to testss
+  group :test do
+  gem 'minitest-reporters'
+  end
+
 end
