@@ -1,0 +1,16 @@
+<div class="row align-show">
+  <section class="small-6 columns">
+    <h3><%= @album.title%></h3>
+    <h4> Recorded by: <%= @album.recorded_by %> </h4>
+    <h5> Upvotes: <%= @album.ranked %> </h5>
+    <p> <%= @album.description %> </p>
+  </section>
+
+  <section class="small-6 columns">
+    <ul class="align-buttons">
+      <li><%= button_to 'Upvote', upvote_path(params[:id]), :class => "button", method: :put %></li>
+      <li><%= button_to 'Edit Album', edit_album_path(params[:id]), :class => "button", method: :get %></li>
+      <li><%= button_to 'Delete Album', { controller: :albums, action: :destroy}, :class => "button", method: :delete, data: {confirm: 'Are you sure?'} %></li>
+    </ul>
+  </section>
+</div>

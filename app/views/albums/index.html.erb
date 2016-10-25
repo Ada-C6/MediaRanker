@@ -1,0 +1,32 @@
+<section class="hero hero2">
+       <a name="top-albums"></a>
+        <div class="wrapper row">
+          <div class="small-10 medium-6 large-3 columns">
+            <h1> Top Albums </h1>
+            <p>
+              "Music, even in its most intimate moments, is a pathway between us all.  It is the nuts and bolts of humanity as well as its totality. It is made sacred between people and in return makes those relationships sacred. It is the buoyant substance that we grab onto when the water rises above our heads." - Trever Hagen
+              <%= button_to 'Add an Album', new_album_path, :class => "button", method: :get %>
+            </p>
+          </div>
+        </div>
+</section>
+
+<div class="align-table">
+
+  <table>
+    <tr class="align-header">
+      <th>Upvotes</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
+
+  <% @albums.each do |album| %>
+
+    <tr>
+      <td>Ranked: <%= album.ranked %></td>
+      <td><%= link_to(album.title, album_path(album.id)) %></td>
+      <td><%= button_to "Upvote", upvote_path(album.id), :class => "button", method: :put %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

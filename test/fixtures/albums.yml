@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+suburbs:
+  title: "The Suburbs"
+  recorded_by: Arcade Fire
+  ranked: 1
+  description: "Best album"
+
+parachutes:
+  title: "Parachutes"
+  recorded_by: "Coldplay"
+  ranked: 2
+  description: "Good album"
