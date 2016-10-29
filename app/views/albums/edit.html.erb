@@ -1,0 +1,16 @@
+<h1>Edit #{@album}</h1>
+
+<%= form_for @album, url: update_path, method: :put do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :recorded_by %>
+  <%= f.text_field :recorded_by %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit %>
+
+<% end %>

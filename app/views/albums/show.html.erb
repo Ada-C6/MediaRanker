@@ -1,0 +1,14 @@
+<h1> <a href="/">Media Ranker</a></h1>
+<p>Ranking the Best of Everything<p>
+
+<h1><%= @myalbum.name %></h1>
+<h2><%= @myalbum.recorded_by %></h2><br>
+<h3><%= "Ranked: " + @myalbum.rankings.to_s   %></h3>
+
+<%= link_to 'Upvote', albums_upvote_path(@myalbum) %>
+
+<%= link_to 'Edit ' + @myalbum.name, albums_edit_path(@myalbum) %>
+
+<%= link_to 'DELETE', albums_destroy_path(@myalbum), method: :delete, data: {confirm:"Are you Sure?" } %>
+
+<%= link_to 'View All albums', albums_index_path(@albums) %>
