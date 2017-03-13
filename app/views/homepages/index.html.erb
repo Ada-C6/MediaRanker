@@ -1,0 +1,31 @@
+
+<%# Since this code was really repetative, I tried to see if I could just loop through all media types %>
+
+
+
+<div class="row">
+    <% @mediaTypes.each do |mediaInstances| %>
+      <div class="large-4 medium-5 small-12 columns end">
+        <!-- <div class="primary callout"> -->
+          <section>
+            <h2>Top <%= mediaInstances.first.class%>s</h2>
+            <%# i = 1 %>
+              <% mediaInstances.each do |media| %>
+                <%# if i < 3 %>
+                  <h4>
+                    <%= link_to(media.name, :controller => "#{media.class.to_s.downcase}s", :action => 'show', :id => media.id)%>
+                    <small> Upvotes: <%= media.rank %></small>
+                  </h4>
+                <%# end %>
+                <%# i += 1 %>
+              <% end %>
+            <%=  link_to("View more #{mediaInstances[0].class.to_s.downcase}s", {:controller => "#{mediaInstances[0].class.to_s.downcase}s", :action => 'index'}, {method: :get, class: 'btn'} ) %>
+            <hr />
+          </section>
+        <!-- </div> -->
+      </div>
+
+    <% end %>
+</div>
+
+<%# params %>

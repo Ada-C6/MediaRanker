@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRanker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="row">
+  <div class="large-12 columns">
+    <header>
+      <%= image_tag("Intellectual-Cat-1600-1200.jpg", alt:"kitten", class:"header_img") %>
+      <!-- <img src="../assets/images/Intellectual-Cat-1600-1200.jpg" alt="kitten" class="header_img"> -->
+      <div class=title>
+        <h1><%= link_to("MediaRanker", index_path, method: :get) %> <small> Ranking the Best of Everything</small></h1>   <%# The td is for a cell in a table, but here it is keeping these 2 things on the same line %>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+  <main>
+    <%= yield %>
+  </main>
+
+</body>
+</html>

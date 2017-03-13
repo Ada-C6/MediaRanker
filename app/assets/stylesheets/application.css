@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url('foundation.css');
+ @import url(https://fonts.googleapis.com/css?family=Amatic+SC|Catamaran:100);
+
+
+body * {
+    font-family: 'Amatic SC', cursive;
+    line-height: 1.42857143;
+}
+
+body {
+  font-size: 125%;
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+  /*background-color: cyan;*/
+
+}
+
+
+
+main {
+  /*position: relative;
+  top: -12%;*/
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+}
+
+
+.button_to {
+  display: inline-block;
+}
+
+.delete_btn {
+  background-color: red;
+}
+
+.header_img {
+  width: 4em;
+  float: left;
+  padding: .5em .5em .5em 0;
+}
+
+
+@media only screen and (max-width: 40em) {
+
+h1 {
+  font-size: 2em;
+}
+
+}
