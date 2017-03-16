@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: "Interstellar"
+  year: 2014
+  rank: 2
+  synopsis: "Come on, TARS!"
+
+two:
+  title: "Queen of Katwe"
+  year: 2016
+  rank: 1
+  synopsis: "A young Ugandan girl becomes a chess champion"
