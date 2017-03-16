@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+  <% @movies.each do |movie| %>
+  <tr>
+    <td>Ranked: <%= movie.rank %></td>
+    <td><%= link_to(movie.name, movie_path(movie.id)) %></td>
+    <td>
+      <%= form_tag movies_upvote_path(movie.id), class: "edit_movies", method: :put do %>
+        <%= submit_tag "Upvote", class: "upvote_button" %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to("View All Media", root_path) %>
+<%= link_to("Add a Movie", new_movie_path) %>

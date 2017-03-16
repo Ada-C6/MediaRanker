@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+aladdin:
+  name: Aladdin
+  director: Disney
+  description: A magic carpet ride.
+  rank: 1
+
+mulan:
+  name: Mulan
+  director: Disney
+  description: When will my reflection show who I am inside?
+  rank: 1

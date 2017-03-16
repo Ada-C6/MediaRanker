@@ -1,0 +1,17 @@
+<h1>
+  <%= @movie.name %>
+  <small>Directed by: <%= @movie.director %></small>
+</h1>
+
+<h4>Ranked: <%= @movie.rank %></h4>
+
+<p><%= @movie.description %></p>
+
+<%= form_tag movies_upvote_path, class: "edit_movies", method: :put do %>
+  <%= submit_tag "Upvote", class: "upvote_button" %>
+<% end %>
+
+<%= link_to("Edit " + @movie.name, edit_movie_path) %>
+<%= link_to("DELETE", movie_path, class: "alert button", method: :delete, data: {confirm: "Are you sure?"})%>
+<%= link_to("View All Movies", movies_path) %>
+<%= link_to("View All Media", root_path) %>
