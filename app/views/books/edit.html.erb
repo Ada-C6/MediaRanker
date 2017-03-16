@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="column">
+    <h2>Edit a book</h2>
+  </div>
+</div>
+
+<article>
+
+  <% if @book.errors.any? %>
+    <section class="errors row">
+      <div class="column">
+        <p>Whoops! We couldn't save your changes because:</p>
+        <ul>
+          <% @book.errors.each do |column, message| %>
+            <li>
+              <%= message %>
+            </li>
+          <% end %>
+        </ul>
+        <p>Please edit your entries and try again.</p>
+      </div>
+    </section>
+  <% end %>
+
+  <section class="row">
+    <div class="column">
+      <%= form_for @book, url: books_update_path, method: :put do |f| %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+
+        <%= f.submit %>
+
+      <% end %>
+    </div>
+  </section>
+
+</article>

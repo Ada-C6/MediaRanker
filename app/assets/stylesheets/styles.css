@@ -1,0 +1,29 @@
+body {
+  font-family: helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+  background: lightblue;
+  padding: 1.5%;
+}
+
+.errors {
+  color: red;
+}
+
+.new_album label, input, div {
+  display: inline-block;
+}
+
+.new_album {
+  padding-top: 2%;
+}
+
+.field_with_errors input, .field_with_errors textarea {
+  border: red 1px solid;
+}
+
+#main-page-content {
+  margin: 0 auto;
+}

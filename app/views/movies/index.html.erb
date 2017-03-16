@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="column">
+    <h2>Movies in the database</h2>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <TABLE>
+      <% @movies.each do |movie| %>
+        <TR>
+          <TD>Upvotes: <%= movie.upvotes %></TD>
+          <TD><%= link_to movie.title, movies_show_path(movie.id) %></TD>
+          <TD><%= button_to "Upvote", movies_update_path(movie.id), method: :patch %></TD>
+        </TR>
+      <% end %>
+    </TABLE>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column small-4 medium-3 large-2">
+    <%= button_to "View all media", main_path, method: :get %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column small-4 medium-3 large-2">
+    <%= button_to "Add a movie", movies_new_path, method: :get %>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRanker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <div class="row">
+    <div class="column">
+      <h1><%= link_to "MediaRanker", main_path, method: :get %><h1>
+      <h2>Pick your favorites and discover new movies, books, and albums!</h2>
+    </div>
+  </div>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
