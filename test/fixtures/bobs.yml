@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bobby:
+  name: Bobby
+  appears_in: televeision
+  identifying_quality: tricycle
+
+bob_burger:
+  name: Bob Burger
+  appears_in: movie
+  identifying_quality: store owner
+
+bob_burger_two:
+  name: Bob Burger
+  appears_in: picture show
+  identifying_quality: dad

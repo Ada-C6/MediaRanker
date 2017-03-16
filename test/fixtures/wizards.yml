@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Abarat
+  author_director: Susie
+  main_character: Candy
+
+two:
+  title: Rings
+  author_director: Tolkein
+  main_character: Frodo
+
+three:
+  title: Abarat
+  author_director: Susie
+  main_character: Christopher Carrion

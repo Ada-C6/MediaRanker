@@ -1,0 +1,30 @@
+<div>
+  <div class="row small-up-1 medium-up-2 large-up-3">
+    <div class="column">
+      <h3>Top Bobs</h3>
+      <% @bobs.each do |bob| %>
+          <h4><%= link_to( bob.name, show_bob_path(bob.id) ) %></h4>
+          <p><%= pluralize(bob.bob_votes.count, "vote") %></p>
+      <% end %>
+      <p><%= link_to( 'list of all bobs', bob_path ) %></p>
+    </div>
+
+    <div class="column">
+      <h3>Top Leslie Films</h3>
+      <% @leslies.each do |leslie| %>
+          <h4><%= link_to( leslie.title, show_leslie_path(leslie.id) ) %></h4>
+          <p><%= pluralize(leslie.leslie_votes.count, "vote") %></p>
+      <% end %>
+      <p><%= link_to( 'list of all leslies', leslie_path ) %></p>
+    </div>
+
+    <div class="column">
+      <h3>Top Magical Stories</h3>
+      <% @wizards.each do |wizard| %>
+          <h4><%= link_to( wizard.title, show_wizard_path(wizard.id) ) %></h4>
+          <p><%= pluralize(wizard.wizard_votes.count, "vote") %></p>
+      <% end %>
+      <p><%= link_to( 'list of all magical stories', wizard_path ) %></p>
+    </div>
+  </div>
+</div>

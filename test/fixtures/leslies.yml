@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+leslie1:
+  title: Dracula
+  part: Dracula
+  year: 1900
+
+leslie2:
+  title: Dracula
+  part: Renfield
+  year: 1900
