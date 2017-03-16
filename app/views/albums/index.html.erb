@@ -1,0 +1,16 @@
+<section class="full-list">
+
+<h1>Albums</h1>
+  <% @albums.each do |album| %>
+      <h2><%= link_to(album.name, album_path(album[:id])) %></h2>
+      <div class="voting">
+        <h3><b>Votes:</b> <%=album.votes.to_s%></h3>
+        <p><%= link_to "👍🏼", {action: "up_vote", id: album[:id] }, method: :post %></p>
+      </div>
+      <hr>
+  <%end %>
+
+  <p><%= link_to( "Add a New Album", new_album_path) %></p>
+  <p><%= link_to( "View All Media", root_path) %><p>
+</section>
+<!-- <p>Find me in app/views/albums/index.html.erb</p> -->

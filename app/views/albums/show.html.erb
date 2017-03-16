@@ -1,0 +1,30 @@
+<div id="show" class ="row">
+
+  <section class= "show-one">
+    <h1><%= @album.name %></h1>
+    <p><b>Artist:</b> <%= @album.artist %></p>
+
+    <div class="voting">
+      <h3><b>Votes:</b> <%=@album.votes%></h3>
+      <p><%= link_to "👍🏼", {action: "up_vote", id: @album[:id] }, method: :post %></p>
+    </div>
+    <p></p>
+    <p><%= @album.description%></p>
+
+    <div class = "buttons">
+      <%= button_to "Edit", {action: "edit", id: @album[:id] }, method: :get %>
+      <%= button_to "Delete", {action: "destroy", id: @album[:id] }, method: :delete, data: { confirm: "Do you really want to delete this album?"} %>
+    </div>
+    <p></p>
+
+    <section class= "show-one" class = "small-12, medium-8, large-6 columns">
+      <% if @album[:image] != nil%>
+        <image class="show-picture", size="10"><%= image_tag(@album.image) %></image>
+      <%end%>
+    </section>
+
+    <p><%= link_to( "View All Albums", albums_path) %></p>
+    <p><%= link_to( "View All Media", root_path) %></p>
+  </section>
+
+</div>

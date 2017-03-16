@@ -1,0 +1,130 @@
+@import url('foundation.css');
+
+body {
+  background-color: #efefef;
+}
+
+*{
+  font-family: "Actor";
+}
+
+ h1, .list-number {
+   font-family:'Alfa Slab One';
+   color:#2B2B2B;
+   font-size: .75em;
+ }
+
+  h1{
+    font-size: 2.5em;
+  }
+
+.all-page-header{
+  text-align: center;
+  font-size: 4em;
+  border-bottom: solid 5px #dd1b1b;
+  background-color: #2B2B2B;
+}
+
+.all-page-header a{
+  color: #efefef;
+  font-family:'Alfa Slab One';
+}
+
+#index{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#index p{
+  font-size: 2em;
+}
+
+#index-votes h3{
+  padding-left: 13%;
+}
+
+#index-votes h2{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ .form-new, .full-list {
+   padding: 5%;
+}
+
+h2 a, h3 {
+  font-family: Actor;
+  color:#2B2B2B;
+}
+
+h2 a {
+  font-size: .75em;
+}
+
+
+h2 a:hover, p a{
+  color: #dd1b1b;
+}
+
+p a:hover {
+  color:  #2B2B2B;
+}
+
+footer p{
+  border-top: solid 5px #dd1b1b;
+  clear: both;
+  font-family: Actor;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #2B2B2B;
+  color: #efefef;
+}
+
+div .buttons *, .voting *{
+  display:inline;
+}
+
+.voting p, .show-one p, .full-list p, h3, li p {
+  font-size: 1.5em;
+}
+
+
+.show-one {
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 3%;
+}
+
+li {
+  display: block;
+}
+
+#show img {
+  float: right;
+  width: 50%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+  margin-top: -25%;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

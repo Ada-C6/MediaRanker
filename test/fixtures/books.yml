@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+harry_potter_1:
+  name: "Harry Potter and the Sorcer's Stone"
+  author: "J.K. Rowling"
+  description: "Harry's a wizard! What?!?"
+  votes: 0
+
+matilda:
+  name: "Matilda"
+  author: "Roald Dahl"
+  description: "Magical little girl takes revenge on horrible headmistress"
+  votes: 1
+
+holes:
+  name: "Holes"
+  author: "Louis Sachar"
+  description: "Deviant youth dig holes in the desert for a lipstick-loving cowgirl"
+  votes: 2
+
+hatchet:
+  name: "Hatchet"
+  author: "Gary Paulson"
+  description: "Survival story of teen alone in Canadian wilderness after a plane crash"
+  votes: 5
