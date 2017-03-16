@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+inception:
+  name: "Inception"
+  directed_by: "Christopher Nolan"
+  ranked: 2
+  description: "Good movie"
+
+shoes:
+  name: "In Her Shoes"
+  directed_by: "I don't"
+  ranked: 1
+  description: "Good movie too"

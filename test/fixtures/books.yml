@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+mockingbird:
+  title: "To Kill a Mockingbird"
+  written_by: "Ken Kesey"
+  ranked: 1
+  description: "This is a description"
+
+pride:
+  title: "Pride and Prejudice"
+  written_by: "Jane Austen"
+  ranked: 2
+  description: "Best book ever"

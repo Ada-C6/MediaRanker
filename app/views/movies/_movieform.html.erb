@@ -1,0 +1,16 @@
+<%= form_for @movie,
+  url: action_name do |f| %>
+<ul>
+  <li><%= f.label :name %></li>
+  <li><%= f.text_field :name %></li>
+
+  <li><%= f.label :directed_by %></li>
+  <li><%= f.text_field :directed_by %></li>
+
+  <li><%= f.label :description %></li>
+  <li><%= f.text_area :description %></li>
+
+  <li><%= f.submit class: 'button' %> </li>
+</ul>
+
+<% end %>
