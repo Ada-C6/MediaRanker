@@ -1,0 +1,16 @@
+<article class="category-item">
+  <h2>New Movie</h2>
+  <%= form_for @movie do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :director %>
+    <%= f.text_field :director %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.submit "Save" %>
+  <% end %>
+  <%= link_to "⬅ Back", movies_path, method: :get %>
+</article>

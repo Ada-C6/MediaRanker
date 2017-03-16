@@ -1,0 +1,29 @@
+<article class="index-page">
+  <table>
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th class="remove">Artist</th>
+    </tr>
+
+    <% @albums.each do |album| %>
+    <tr>
+      <td>
+          <%= link_to "⬆", album_upvote_path(album.id), method: :patch %>
+          Ranked: <%= album.num_votes %>
+      </td>
+      <td>
+        <%= link_to album.title, {action: 'show', id: album}, method: :get %>
+      </td>
+      <td class="remove">
+        <%= album.artist %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+  <div class="index-buttons">
+  <%= button_to "View All Media", root_path, method: :get %>
+  <%= button_to "Add an Album", new_album_path, method: :get %>
+  </div>
+</article>

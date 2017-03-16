@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+book1:
+  title: TestBook1
+  num_votes: 1
+  author: Author1
+  description: MyText
+
+book2:
+  title:
+  num_votes: 1
+  author: Author2
+  description: MyText
+
+book3:
+  title: Meow
+  num_votes: 0
+  author:
+  description:

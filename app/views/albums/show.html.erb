@@ -1,0 +1,33 @@
+<article class="category-item">
+  <div class="ranked-box small-12 medium-2 large-2 columns">
+    <div class="arrow"><%= link_to "⬆", album_upvote_path(@album.id), method: :patch %></div>
+    <div>
+      <p>Votes:</p>
+      <p><%= @album.num_votes %></p>
+    </div>
+  </div>
+
+  <section class="main-info small-12 medium-10 large-10 columns">
+    <h2><%= @album.title %></h2>
+
+    <h3>Recorded by: <%= @album.artist %></h3>
+  </section>
+
+  <section class="description small-12 columns">
+    <%= @album.description %>
+  </section>
+
+  <section>
+    <div class="modify-buttons small-12 columns">
+      <%= button_to "Edit #{@album.title}", edit_album_path(@album.id), method: :get %>
+
+      <%= button_to "DELETE", album_path(@album.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+
+    <div class="view-more small-12 columns">
+      <%= link_to "View All Albums", albums_path, method: :get %>
+
+      <%= link_to "View All Media", root_path, method: :get %>
+    </div>
+  </section>
+</article>

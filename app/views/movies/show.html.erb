@@ -1,0 +1,34 @@
+<article class="category-item">
+  <div class="ranked-box large-2 columns">
+    <div class="arrow"><%= link_to "⬆", movie_upvote_path(@movie.id), method: :patch %>
+    </div>
+    <div>
+      <p>Votes:</p>
+      <p><%= @movie.num_votes %></p>
+    </div>
+  </div>
+
+  <section class="main-info large-10 columns">
+    <h2><%= @movie.title %></h2>
+
+    <h3>Recorded by: <%= @movie.director %></h3>
+  </section>
+
+  <section class="description large-12 columns">
+    <%= @movie.description %>
+  </section>
+
+  <section>
+    <div class="modify-buttons large-12 columns">
+      <%= button_to "Edit #{@movie.title}", edit_movie_path(@movie.id), method: :get %>
+
+      <%= button_to "DELETE", movie_path(@movie.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+
+    <div class="view-more large-12 columns">
+      <%= link_to "View All Movies", movies_path, method: :get %>
+
+      <%= link_to "View All Media", root_path, method: :get %>
+    </div>
+  </section>
+</article
