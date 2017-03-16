@@ -1,0 +1,14 @@
+<section class="full-list">
+<h1>Movies</h1>
+  <% @movies.each do |movie| %>
+      <h2><%= link_to(movie.name, movie_path(movie[:id])) %></h2>
+      <div class="voting">
+        <h3><b>Votes:</b> <%=movie.votes.to_s%></h3>
+        <p><%= link_to "👍🏼", {action: "up_vote", id: movie[:id] }, method: :post %></p>
+      </div>
+      <hr>
+  <%end %>
+
+  <p><%= link_to( "Add a New Movie", new_movie_path) %></p>
+  <p><%= link_to( "View All Media", root_path) %></p>
+</section>

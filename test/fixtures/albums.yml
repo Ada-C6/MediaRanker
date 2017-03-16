@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+spiceworld:
+  name: "SpiceWorld"
+  artist: "Spice Girls"
+  description: "'90s British pop sensation'"
+  votes: 10
+
+no_strings_attached:
+  name: "No Strings Attached"
+  artist: "NSYNC"
+  description: "Because even Justin Timberlake had to start somewhere."
+  votes: 3

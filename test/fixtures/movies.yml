@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+aladin:
+  name: "Aladin"
+  director: "Walt Disney"
+  description: "Petty theft befriends multi-personality genie and uses sorcery to entice a princess"
+  votes: 1
+
+little_mermaid:
+  name: "Little Mermaid"
+  director: "Walt Disney"
+  description: "Woman gives up voice and home for a prince"
+  votes: 2

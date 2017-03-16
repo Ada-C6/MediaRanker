@@ -1,0 +1,19 @@
+
+<div class="form-new">
+  <h1>Edit Movie</h1>
+<%= form_for (@movie) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    <p></p>
+    <%= f.label :director %>
+    <%= f.text_field :director%>
+    <p></p>
+    <%= f.label :description %>
+    <%= f.text_area :description%>
+    <p></p>
+
+    <%= f.submit %>
+  <%end%>
+</div>
+<!-- <p>Find me in app/views/movies/edit.html.erb</p> -->

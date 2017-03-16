@@ -1,0 +1,39 @@
+<div id="index" class ="row">
+
+<section id= "index-votes" class = "small-12, medium-6, large-4 columns">
+<h1>Top 10 Movies 🍿</h1>
+  <% counter = 1 %>
+  <% @movies.limit(10).each do |movie| %>
+      <h2><span class="list-number"><%=counter%>. </span><%= link_to(movie.name, movie_path(movie[:id])) %></h2>
+      <h3><b>Votes:</b> <%=movie.votes.to_s%></h3>
+      <hr>
+      <% counter += 1 %>
+  <%end %>
+  <p><%=link_to("See more movies...", movies_path)%></p>
+</section>
+
+<section id= "index-votes" class = "small-12, medium-6, large-4 columns">
+<h1>Top 10 Books 📕</h1>
+  <% counter = 1 %>
+  <% @books.limit(10).each do |book| %>
+      <h2><span class="list-number"><%=counter%>. </span><%= link_to(book.name, book_path(book[:id])) %></h2>
+      <h3><b>Votes:</b> <%=book.votes.to_s%></h3>
+      <hr>
+      <% counter += 1 %>
+  <%end %>
+  <p><%=link_to("See more books...", books_path)%></p>
+</section>
+
+<section id= "index-votes" class = "small-12, medium-6, large-4 columns">
+<h1>Top 10 Albums 🎼</h1>
+  <% counter = 1 %>
+  <% @albums.limit(10).each do |album| %>
+      <h2><span class="list-number"><%=counter%>. </span><%= link_to(album.name, album_path(album[:id])) %></h2>
+      <h3><b>Votes:</b> <%=album.votes.to_s%></h3>
+      <hr>
+      <% counter += 1 %>
+  <%end %>
+  <p><%=link_to("See more albums...", albums_path)%></p>
+</section>
+</div>
+<!-- <p>Find me in app/views/mediarankers/index.html.erb</p> -->

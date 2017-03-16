@@ -1,0 +1,15 @@
+<section class="full-list">
+
+<h1>Books</h1>
+  <% @books.each do |book| %>
+      <h2><%= link_to(book.name, book_path(book[:id])) %></h2>
+      <div class="voting">
+        <h3><b>Votes:</b> <%=book.votes.to_s%></h3>
+        <p><%= link_to "👍🏼", {action: "up_vote", id: book[:id] }, method: :post %></p>
+      </div>
+      <hr>
+  <%end %>
+
+  <p><%= link_to( "Add a New Book", new_book_path) %></p>
+  <p><%= link_to( "View All Media", root_path) %></p>
+</section>

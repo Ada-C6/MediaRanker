@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRanker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link href="https://fonts.googleapis.com/css?family=Actor|Alfa+Slab+One" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1 class="all-page-header"><%= link_to("Media Ranker", root_path)%></h1>
+</header>
+
+<%= yield %>
+
+<footer>
+<p> &copy Erin Bond 2016</p>
+</footer>
+
+</body>
+</html>
