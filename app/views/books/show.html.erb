@@ -1,0 +1,17 @@
+<h1>
+  <%= @book.name %>
+  <small>Written by: <%= @book.author %></small>
+</h1>
+
+<h4>Ranked: <%= @book.rank %></h4>
+
+<p><%= @book.description %></p>
+
+<%= form_tag books_upvote_path, class: "edit_books", method: :put do %>
+  <%= submit_tag "Upvote", class: "success hollow button" %>
+<% end %>
+
+<%= link_to("Edit " + @book.name, edit_book_path, class: "secondary hollow button") %>
+<%= link_to("DELETE", book_path, class: "alert button", method: :delete, data: {confirm: "Are you sure?"}) %>
+<%= link_to("View All Books", books_path, class: "secondary hollow button") %>
+<%= link_to("View All Media", root_path, class: "secondary hollow button") %>

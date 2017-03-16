@@ -1,0 +1,25 @@
+<div>
+<section class="small-12 medium-4 columns" class="home">
+<h2>Top Movies</h2>
+<% @movies.each do |movie| %>
+  <h3><%= link_to(movie.name, movie_path(movie.id)) %><small> Ranked: <%= movie.rank %></small></h3>
+<% end %>
+<%= link_to("View More Movies", movies_path) %>
+</section>
+
+<section class="small-12 medium-4 columns" class="home">
+<h2>Top Books</h2>
+<% @books.each do |book| %>
+  <h3><%= link_to(book.name, book_path(book.id)) %><small> Ranked: <%= book.rank %></small></h3>
+<% end %>
+<%= link_to("View More Books", books_path) %>
+</section>
+
+<section class="small-12 medium-4 columns" class="home">
+<h2>Top Albums</h2>
+<% @albums.each do |album| %>
+  <h3><%= link_to(album.name, album_path(album.id)) %><small> Ranked: <%= album.rank %></small></h3>
+<% end %>
+<%= link_to("View More Albums", albums_path) %>
+</section>
+</div>

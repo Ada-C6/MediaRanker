@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+corduroy:
+  name: Corduroy
+  author: Someone
+  description: Little bear loses button.
+  rank: 1
+
+rainbow:
+  name: The Rainbow Fish
+  author: Someone 2
+  description: A fish has beautiful scales.
+  rank: 1

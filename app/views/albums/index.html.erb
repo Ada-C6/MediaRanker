@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+  <% @albums.each do |album| %>
+  <tr>
+    <td>Ranked: <%= album.rank %></td>
+    <td><%= link_to(album.name, album_path(album.id)) %></td>
+    <td>
+      <%= form_tag albums_upvote_path(album.id), class: "edit_albums", method: :put do %>
+        <%= submit_tag "Upvote", class: "success hollow button" %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to("View All Media", root_path, class: "secondary hollow button") %>
+<%= link_to("Add an Album", new_album_path, class: "secondary hollow button") %>
