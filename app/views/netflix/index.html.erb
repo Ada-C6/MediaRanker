@@ -1,0 +1,28 @@
+<h2>Netflix</h2>
+
+<article>
+  <table>
+    <tbody>
+      <tr>
+        <th>Votes</th>
+        <th>Movie or Show</th>
+        <th>Upvote</th>
+      </tr>
+
+      <% @netflixes.each do |netflix|  %>
+        <tr>
+          <th>Votes: <%= netflix.ranking %></th>
+          <th><%= link_to(netflix.name, netflixshow_path(netflix.id)) %></th>
+          <th><%= button_to('Upvote', netflixupvote_path(netflix.id), :class => "button", method: :post) %></th>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+</article>
+
+<ul class="button-group">
+  <li class="button"><%= button_to('View all Meeeeedium', homepageindex_path,  :class => "button", method: :get) %></li>
+  <li class="button"><%= button_to('Add a Netflix suggestion', netflixnew_path,  :class => "button", method: :get) %></li>
+</ul>

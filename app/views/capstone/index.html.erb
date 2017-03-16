@@ -1,0 +1,28 @@
+<h2>Capstones</h2>
+
+<article>
+  <table>
+    <tbody>
+      <tr>
+        <th>Votes</th>
+        <th>Capstone Idea</th>
+        <th>Upvote</th>
+      </tr>
+
+      <% @capstones.each do |capstone|  %>
+        <tr>
+          <th>Votes: <%= capstone.ranking %></th>
+          <th><%= link_to(capstone.name, capstoneshow_path(capstone.id)) %></th>
+          <th><%= button_to('Upvote', capstoneupvote_path(capstone.id), :class => "button", method: :post) %></th>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+</article>
+
+<ul class="button-group">
+  <li class="button"><%= button_to('View all Meeeeedium', homepageindex_path,:class => "button",  method: :get) %></li>
+  <li class="button"><%= button_to('Add a Capstone suggestion', capstonenew_path, :class => "button", method: :get) %></li>
+</ul>

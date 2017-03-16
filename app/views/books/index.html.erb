@@ -1,0 +1,28 @@
+<h2>Books</h2>
+
+<article>
+  <table>
+    <tbody>
+      <tr>
+        <th>Votes</th>
+        <th>Book Idea</th>
+        <th>Upvote</th>
+      </tr>
+
+      <% @books.each do |book|  %>
+        <tr>
+          <th>Votes: <%= book.ranking %></th>
+          <th><%= link_to(book.name, booksshow_path(book.id)) %></th>
+          <th><%= button_to('Upvote', booksupvote_path(book.id), :class => "button", method: :post) %></th>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+</article>
+
+<ul class="button-group">
+  <li class="button"><%= button_to('View all Meeeeedium', homepageindex_path, :class => "button", method: :get) %></li>
+  <li class="button"><%= button_to('Add a book suggestion', booksnew_path, :class => "button", method: :get) %></li>
+</ul>

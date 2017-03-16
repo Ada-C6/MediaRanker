@@ -1,0 +1,48 @@
+<% top_how_many_to_show = 5 %>
+
+<div class="row small-up-1 medium-up-2 large-up-3">
+  <div class="column">
+    <h2>Netflix</h2>
+      <% i = 0 %>
+      <% @netflixes.each do |netflix|  %>
+        <article>
+          <h3><%= link_to(netflix.name, netflixshow_path(netflix.id)) %></h3><h5>Votes: <%= netflix.ranking %></h5>
+          <% i += 1 %>
+          <% break if i == top_how_many_to_show %>
+        </article>
+      <% end %>
+
+    <p><%= button_to('See more Netflix', netflixindex_path, :class => "button", method: :get) %></p>
+  </div>
+
+  <div class="column">
+    <h2>Books</h2>
+      <% i = 0 %>
+      <% @books.each do |book|  %>
+        <article>
+          <h3><%= link_to(book.name, booksshow_path(book.id)) %></h3>
+          <h5>Votes: <%= book.ranking %></h5>
+          <% i += 1 %>
+          <% break if i == top_how_many_to_show %>
+        </article>
+      <% end %>
+
+    <p><%= button_to('See more books', booksindex_path, :class => "button", method: :get) %></p>
+  </div>
+
+
+  <div class="column">
+    <h2>Capstone Project Ideas</h2>
+      <% i = 0 %>
+      <% @capstones.each do |capstone|  %>
+        <article>
+          <h3><%= link_to(capstone.name, capstoneshow_path(capstone.id)) %></h3>
+          <h5>Votes: <%= capstone.ranking %></h5>
+          <% i += 1 %>
+          <% break if i == top_how_many_to_show %>
+        </article>
+      <% end %>
+
+    <p><%= button_to('See more Capstones', capstoneindex_path, :class => "button", method: :get) %></p>
+  </div>
+</div>

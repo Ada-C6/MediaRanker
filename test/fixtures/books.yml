@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: book1
+  ranking: 1
+  genre: fiction
+  description: MyText
+
+two:
+  name: book2
+  ranking: 1
+  genre: scifi
+  description: MyText

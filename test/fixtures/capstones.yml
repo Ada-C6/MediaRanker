@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: idea1
+  ranking: 1
+  description: MyText
+
+two:
+  name: idea2
+  ranking: 1
+  description: MyText

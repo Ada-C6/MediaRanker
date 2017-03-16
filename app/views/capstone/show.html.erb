@@ -1,0 +1,12 @@
+<h2><%= @capstone[:name] %></h2>
+<h3>Votes: <%= @capstone[:ranking] %></h3>
+<p>Description: <%= @capstone[:description] %></p>
+
+<ul class="button-group">
+  <li class="button"><%= button_to 'Upvote', capstoneupvote_path(params[:id]), :class => "button", method: :post %></li>
+  <br />
+  <li class="button"><%= button_to 'Edit', capstoneedit_path(params[:id]), :class => "button", method: :get %></li>
+  <li class="button"><%= button_to 'Delete', capstonedestroy_path(params[:id]), :class => "button", method: :delete, data: {confirm: 'Are you sure you want to delete this capstone idea? 😳'} %></li>
+  <li class="button"><%= button_to 'View all capstone suggestions', capstoneindex_path, :class => "button", method: :get %></li>
+  <li class="button"><%= button_to "Back to Meeeeedium's home", homepageindex_path, :class => "button", method: :get %></li>
+</ul>
