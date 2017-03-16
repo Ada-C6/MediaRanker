@@ -1,0 +1,161 @@
+@import url('foundation.css');
+
+/*-- ALL --*/
+body {
+  width: 75%;
+  margin: 1rem auto;
+  margin-bottom: 5rem;
+  font-family: 'Bungee Hairline', cursive;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.center-this {
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+article {
+  margin-top: 2rem;
+}
+
+.view-more {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+header {
+  border-bottom: 3px rgb(97, 97, 97) solid;
+}
+
+header h2 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 3.25rem;
+}
+
+header h2 a:hover {
+  color: rgb(242, 120, 135);
+}
+
+header h3 {
+  font-family: 'Bungee', cursive;
+  color: rgb(189, 189, 189);
+  font-size: 1.5rem;
+}
+
+h2, h3 {
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 2rem;
+}
+
+a {
+  color: rgb(242, 120, 135);
+}
+
+a:hover {
+  color: rgb(33, 33, 33);
+}
+
+/*-- HOMEPAGE --*/
+.category {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.category h3 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+.category a {
+  font-weight: bold;
+}
+
+.category .view-more a {
+  color: rgb(93, 93, 93);
+}
+
+.ranking {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+/*-- INDEX --*/
+td {
+  text-align: center;
+  width: 33.33333%;
+}
+
+.table {
+  width: 100%;
+}
+
+.button_to {
+  display: inline-block;
+}
+
+.index-buttons {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.index-page th {
+  font-size: 1.5rem;
+}
+
+/*-- SHOW --*/
+.ranked-box * {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ranked-box {
+  padding: 0 15px;
+}
+
+.ranked-box div {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  padding: 0 .5rem;
+}
+
+.description {
+  margin: 1.5rem auto;
+}
+
+.arrow a {
+  font-size: 2rem;
+}
+
+.modify-buttons {
+  margin: 1.5rem 0;
+}
+
+.main-info h2, h3 {
+  font-weight: bold;
+}
+
+.category-item .modify-buttons {
+  font-size: 1.1rem;
+}
+
+.category-item .view-more a {
+  margin: 0 1.5rem;
+  font-size: 1.4rem;
+}
+
+/*-- NEW & EDIT --*/
+.category-item label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/*-- MEDIA QUERIES --*/
+@media only screen and (max-width: 73em) {
+  .remove { display: none; }
+}

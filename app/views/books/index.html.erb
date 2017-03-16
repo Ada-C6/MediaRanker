@@ -1,0 +1,29 @@
+<article class="index-page">
+  <table>
+    <tr>
+      <th>Ranking</th>
+      <th>Title</th>
+      <th class="remove">Author</th>
+    </tr>
+
+    <% @books.each do |book| %>
+    <tr>
+      <td>
+        <%= link_to "⬆", book_upvote_path(book.id), method: :patch %>
+        Ranked: <%= book.num_votes %>
+      </td>
+      <td>
+        <%= link_to book.title, {action: 'show', id: book}, method: :get %>
+      </td>
+      <td class="remove">
+        <%= book.author %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+  <div class="index-buttons">
+  <%= button_to "View All Media", root_path, method: :get %>
+  <%= button_to "Add a Book", new_book_path, method: :get %>
+  </div>
+</article>

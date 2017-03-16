@@ -1,0 +1,34 @@
+<article class="category-item">
+  <div class="ranked-box large-2 columns">
+    <div class="arrow"><%= link_to "⬆", book_upvote_path(@book.id), method: :patch %>
+    </div>
+    <div>
+      <p>Votes:</p>
+      <p><%= @book.num_votes %></p>
+    </div>
+  </div>
+
+  <section class="main-info large-10 columns">
+    <h2><%= @book.title %></h2>
+
+    <h3>Recorded by: <%= @book.author %></h3>
+  </section>
+
+  <section class="description large-12 columns">
+    <%= @book.description %>
+  </section>
+
+  <section>
+    <div class="modify-buttons large-12 columns">
+      <%= button_to "Edit #{@book.title}", edit_book_path(@book.id), method: :get %>
+
+      <%= button_to "DELETE", book_path(@book.id), method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+
+    <div class="view-more large-12 columns">
+      <%= link_to "View All Books", books_path, method: :get %>
+
+      <%= link_to "View All Media", root_path, method: :get %>
+    </div>
+  </section>
+</article>

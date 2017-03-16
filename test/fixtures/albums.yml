@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+album1:
+  title: TestAlbum1
+  num_votes: 1
+  artist: Artist1
+  description: MyText
+
+album2:
+  title:
+  num_votes: 1
+  artist: Artist2
+  description: MyText
+
+album3:
+  title: Meow
+  num_votes: 0
+  artist:
+  description:

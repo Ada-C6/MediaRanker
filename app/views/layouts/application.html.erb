@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Ranker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <h2><%= link_to "Media Ranker", root_path %></h2>
+  <h3>Ranking the Best of Everything</h3>
+</header>
+
+<%= yield %>
+
+</body>
+
+</html>
