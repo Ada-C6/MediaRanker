@@ -1,0 +1,45 @@
+<h1>Media!</h1>
+
+	<% @media.each do |medium| %>
+	<article>
+		<p>Ranking: <%= medium.votes.count %> </p>
+		<p>Title: <%= link_to(medium.title, show_media_path(medium.id)) %></p>
+		
+		<% if medium.kind == 'album' %>
+			<p>Artist: <%=medium.maker %></p>
+		<% elsif %>
+			<% medium.kind == 'book' %>
+			<p>Author: <%=medium.maker %></p>
+		<%else %>
+			<% medium.kind == 'movie' %>
+			<p>Director: <%=medium.maker %></p>
+		<%end%>
+		
+		<p>Description: <%= medium.description %></p>
+
+		<p><%= button_to("Upvote", upvote_media_path(medium.id)) %></p>
+		<p><%= button_to("Downvote", downvote_media_path(medium.id)) %></p>
+<!-- edit buttons -->
+		<% if medium.kind == 'album' %>
+			<p><%= button_to("Edit Album", edit_media_path(medium.id), method: :get, action: :edit) %></p>
+		<% elsif %>
+			<% medium.kind == 'book' %>
+			<p><%= button_to("Edit Book", edit_media_path(medium.id), method: :get, action: :edit) %></p>			
+		<%else %>
+			<% medium.kind == 'movie' %>
+			<p><%= button_to("Edit Movie", edit_media_path(medium.id), method: :get, action: :edit) %></p>	
+		<% end %>
+
+<!-- delete buttons -->
+		<% if medium.kind == 'album' %>		
+		<p><%= button_to("Delete Album", delete_media_path(medium.id), data: {confirm: "Are you sure you want to destroy this beautiful music?"}) %></p>
+		<% elsif %>
+			<% medium.kind == 'book' %>
+		<p><%= button_to("Delete Book", delete_media_path(medium.id), data: {confirm: "Are you sure you want to destroy this beautiful writing?"}) %></p>
+		<%else %>
+			<% medium.kind == 'movie' %>						
+		<p><%= button_to("Delete Movie", delete_media_path(medium.id), data: {confirm: "Are you sure you want to destroy this beautiful example of cinematography?"}) %></p>
+		<% end %>
+	</article>
+	<% end %>
+

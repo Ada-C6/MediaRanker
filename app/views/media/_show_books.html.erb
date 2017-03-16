@@ -1,0 +1,34 @@
+<span class="column">
+	<h1>Books!</h1>
+	<div class="row">
+		<% @books.each do |book| %>
+			<article class="column">
+	       <div class="card">
+					<p>Ranking: <%= book.votes.count %> </p>
+					<p><%= link_to(book.title, show_media_path(book.id)) %></p>
+
+					<p>By: <%=book.maker %></p>
+		<!-- <p>Description: <%= book.description %></p> -->
+<!-- voting buttons				 -->
+					<ul class="row small-up-1 medium-up-2">
+						<li class="column">
+							<%= button_to("Upvote", upvote_media_path(book.id)) %>
+						</li>
+						<li class="column">
+							<%= button_to("Downvote", downvote_media_path(book.id)) %>
+						</li>
+<!-- edit button -->
+						<li class="column">
+							<%= button_to("Edit", edit_media_path(book.id), method: :get, action: :edit) %>
+						</li>	
+<!-- delete buttons -->	
+						<li class="column">
+							<%= button_to("Delete", delete_media_path(book.id), data: {confirm: "Are you sure you want to destroy this beautiful music?"}) %>
+						</li>
+					</ul>
+				</div>
+			</article>
+		<% end %>
+	</div>
+	<%= button_to("New Book", media_new_path, action: :get) %>
+</span>

@@ -1,0 +1,33 @@
+<h1>This One Medium</h1>
+<p>Ranking: <%= @my_medium.votes.count %> </p>
+<p>Name: <%= @my_medium.title %></p>
+<p>Maker: <%= @my_medium.maker %></p>
+<p>Description: <%= @my_medium.description %></p>
+
+<p><%= button_to("Upvote", upvote_media_path(@my_medium.id)) %></p>
+<p><%= button_to("Downvote", downvote_media_path(@my_medium.id)) %></p>
+
+<!-- edit buttons -->
+<% if @my_medium.kind == 'album' %>
+	<p><%= button_to("Edit Medium", edit_media_path(@my_medium.id), method: :get, action: :edit) %></p>
+<% elsif %>
+	<% @my_medium.kind == 'book' %>
+	<p><%= button_to("Edit Book", edit_media_path(@my_medium.id), method: :get, action: :edit) %></p>			
+<%else %>
+	<% @my_medium.kind == 'movie' %>
+	<p><%= button_to("Edit Movie", edit_media_path(@my_medium.id), method: :get, action: :edit) %></p>	
+<% end %>
+
+
+<!-- delete buttons -->
+<% if @my_medium.kind == 'album' %>		
+<p><%= button_to("Delete Album", delete_media_path(@my_medium.id), data: {confirm: "Are you sure you want to destroy this beautiful music?"}) %></p>
+<% elsif %>
+	<% @my_medium.kind == 'book' %>
+<p><%= button_to("Delete Book", delete_media_path(@my_medium.id), data: {confirm: "Are you sure you want to destroy this beautiful writing?"}) %></p>
+<%else %>
+	<% @my_medium.kind == 'movie' %>						
+<p><%= button_to("Delete Movie", delete_media_path(@my_medium.id), data: {confirm: "Are you sure you want to destroy this beautiful example of cinematography?"}) %></p>
+<% end %>
+
+
