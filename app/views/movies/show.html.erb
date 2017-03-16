@@ -1,0 +1,16 @@
+<h1> <a href="/">Media Ranker</a></h1>
+<p>Ranking the Best of Everything<p>
+
+<h1><%= @mymovie.name %></h1>
+<h2><%= @mymovie.director %></h2><br>
+<h3><%= "Ranked: " + @mymovie.rankings.to_s   %></h3>
+
+<%= link_to 'Upvote', movies_upvote_path(@mymovie) %>
+
+<%= link_to 'Edit ' + @mymovie.name, movies_edit_path(@mymovie) %>
+
+<%= link_to 'DELETE', movies_destroy_path(@mymovie), method: :delete, data: {confirm:"Are you Sure?" } %>
+
+<%= link_to 'View All Movies', movies_index_path(@movies) %>
+
+<%# link_to 'View All Media', root_path(@mymovie) %>

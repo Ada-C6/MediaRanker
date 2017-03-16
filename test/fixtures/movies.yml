@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Star Trek
+  director: Gene_Rodenberry
+  description: Hope for humanity in outer space
+
+two:
+  name: Arrival
+  director: Who knows
+  description: cool new movie
