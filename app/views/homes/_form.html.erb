@@ -1,0 +1,29 @@
+<section class='row'>
+  <h2><%= "#{@form_name} #{params[:controller][0..-2]}" %></h2>
+</section>
+
+<section class='row'>
+    <!-- These divs provide the space on either side so that the form doesn't take up the whole gosh darn page -->
+   <div class='small-1 medium-2 columns'></div>
+
+  <%= form_for @object, {method: @method, url: @path, class: 'small-10 medium-8 columns'} do |form| %>
+    <p>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :creator %>
+      <%= form.text_field :creator %>
+    </p>
+
+    <p>
+      <%= form.label :description %>
+      <%= form.text_area :description, {rows: 7} %>
+    </p>
+    <%= form.submit %>
+  <% end %>
+
+  <!-- These provide the space on either side so that the form doesn't take up the whole gosh darn page -->
+  <div class='small-1 medium-2 columns'></div>
+</section>

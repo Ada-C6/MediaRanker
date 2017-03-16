@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+the_long_way_round:
+  name: "The Long Way Round"
+  votes: 0
+  creator: "Dixie Chicks"
+  description: nil
+
+the_voyager:
+  name: "The Voyager"
+  votes: 1000
+  creator: "Jenny Lewis"
+  description: nil

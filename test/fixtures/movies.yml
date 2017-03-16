@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+batman:
+  name: "Batman"
+  votes: 1
+  creator: "i have literally no idea"
+  description: "batman does stuff"
+
+catwoman:
+  name: "Catwoman"
+  votes: 1
+  creator: "Not Halle Berry"
+  description: "Cats >>>>>>> Bats 2016"

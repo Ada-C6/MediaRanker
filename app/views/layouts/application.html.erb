@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mediaranker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class='row'>
+    <h1  class='small-4 columns'><%= link_to("Media Ranker", "/") %></h1>
+    <h3  class='small-8 columns'>Rank All The Things!!!!</h3>
+</header>
+
+<%= yield %>
+
+</body>
+</html>

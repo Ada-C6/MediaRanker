@@ -1,0 +1,27 @@
+<section class='row title'>
+  <h2 class='medium-7 columns'><%= @name %></h2>
+</section>
+
+<section class='row'>
+  <h4 class='small-2 columns'>Votes: <%= @votes %></h4>
+  <h4 class='small-5 columns'>Created by: <%= @creator %></h4>
+  <h1 class='small-8 columns'></h1>
+</section>
+
+<section class='row descrip'>
+  <p class='medium-6 columns'>
+    <%= @description %>
+  </p>
+</section>
+
+<nav class='row'>
+  <%= link_to("Upvote", {action: "upvote"}, {method: :patch, class: 'buttons'}) %>
+
+  <%= link_to("Edit", {action: "edit"}, {method: :get, class: 'buttons'}) %>
+
+  <%= link_to("Delete", {action: "destroy", id: params[:id]}, {method: :delete, data: {confirm: "are you sure?"}, class: 'buttons'}) %>
+
+  <%= link_to("View all #{params[:controller]}", {action: "index"}, {method: :get, class: 'buttons'}) %>
+
+  <%= link_to("View all media", "/", {method: :get, class: 'buttons'} ) %>
+</row>

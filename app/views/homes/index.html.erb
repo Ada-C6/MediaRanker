@@ -1,0 +1,40 @@
+<main id='homes-index'>
+
+  <div class='row'>
+    <h2 class='small-4 columns'>Vote now!</h2>
+  </div>
+
+
+  <div class='row'>
+    <article class='medium-4 columns'>
+      <h3>Top Books</h3>
+      <ul>
+
+        <% @books.each do |book| %>
+            <li><%= link_to("#{book.name}", books_show_path(book)) %><%= ": #{book.votes} votes" %></li>
+          </p>
+        <% end %>
+      </ul>
+    </article>
+
+    <article class='medium-4 columns'>
+      <h3>Top Albums</h3>
+      <ul>
+        <% @albums.each do |album| %>
+            <li><%= link_to("#{album.name}", albums_show_path(album)) %><%= ": #{album.votes} votes" %></li>
+          </p>
+        <% end %>
+      </ul>
+    </article>
+
+    <article class='medium-4 columns'>
+      <h3>Top Movies</h3>
+      <ul>
+        <% @movies.each do |movie| %>
+            <li><%= link_to("#{movie.name}", movies_show_path(movie)) %><%= ": #{movie.votes} votes" %></li>
+          </p>
+        <% end %>
+      </ul>
+    </article>
+  </div>
+</main>
