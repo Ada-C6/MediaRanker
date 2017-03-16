@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRanker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <nav>
+
+      <h1 id="logo"><%= link_to 'MediaRanker', root_path %> </h1>
+      <div class="navigation-container">
+        <ul>
+          <li><h3><%= link_to 'Movies', movies_path %></h3></li>
+          <li><h3><%= link_to 'Books', books_path %></h3></li>
+          <li><h3><%= link_to 'Albums', albums_path %></h3></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+<%= yield %>
+
+</body>
+</html>

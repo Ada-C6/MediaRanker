@@ -1,0 +1,4 @@
+<div class="format-forms">
+  <h3>Edit an Album</h3>
+  <%= render partial: "albumform", method: :post, locals: { action_name: album_path, params: {id: @album.id }} %>
+</div>

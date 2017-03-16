@@ -1,0 +1,202 @@
+
+ @import url('foundation.css');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme|Raleway');
+
+ /************************************/
+ /* NAVIGATION BAR AND HEADER SECTION */
+ /************************************/
+
+ .navigation-container {
+   width: 100%;
+   height: 8%;
+   text-align:right;
+ }
+
+ .navigation-container li {
+   list-style-type: none;
+   padding: 2% 2% 2% 2%;
+   display: inline-block;
+ }
+
+ .navigation-container ul {
+   padding: 1% 0 0 0;
+   margin: 0;
+ }
+
+ #logo {
+   padding-top: 2%;
+   padding-left: 2%;
+   float: left;
+ }
+
+
+ /************************************/
+ /* LINKS */
+ /************************************/
+ .navigation-container li a {
+  color: #4B4D52;;
+  font-size: .75em;
+  font-family: 'BioRhyme';
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation-container li a:hover {
+  color: #DE8642;
+}
+
+a:link {
+  color: #4B4D52;;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4B4D52;
+}
+
+a:hover {
+  color: #DE8642;
+}
+
+/********************/
+/*   BUTTONS        */
+/*******************/
+
+.align-buttons li {
+  margin: 3% 2% 3% 2%;
+}
+
+.button {
+  background-color: #DE8642;
+  border: none;
+  color: #4B4D52;
+  padding: 8px 13px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #4B4D52;
+  color: #DE8642;
+}
+
+
+
+ /************************************/
+ /* GENERAL BODY                     */
+ /************************************/
+
+ body {
+   background-color: #FFF2E7;
+ }
+
+ body, h5 {
+   font-family: 'Raleway';
+   color: #4B4D52;
+ }
+
+ h1, h2, h3, h4 {
+   font-family: 'BioRhyme';
+   color: #4B4D52;
+ }
+
+ ul   {
+  list-style-type: none;
+}
+
+.format-forms {
+  margin: 6% 9% 0 9%;
+}
+
+.format-forms h3 {
+  text-align: center;
+  color: #DE8642;
+  margin-bottom: 5%;
+}
+
+ /*****************************/
+ /*   TOP LISTS INDEX PAGE   */
+ /****************************/
+
+.top-lists h4 {
+  margin: 20% 0 5% 5%;
+  text-align: center;
+}
+
+.top-lists ul {
+  text-align: center;
+}
+
+.line-separator {
+  height:2px;
+  /*background:#4B4D52;*/
+  border-bottom: 2px solid #DE8642;
+  margin-bottom: 5%;
+}
+
+/******************************/
+/*   HERO                     */
+/*****************************/
+ .hero {
+   background-size: cover;
+   background-position: center;
+
+ }
+ .hero1 {
+   background-image: url('moviebanner.jpeg');
+ }
+ .hero2 {
+   background-image: url('albumbanner.jpeg');
+ }
+
+ .hero3 {
+   background-image: url('bookbanner.jpeg');
+ }
+
+ .hero .wrapper {
+   padding: 2em;
+ }
+
+ .hero1 .wrapper div {
+   background-color: #FFF2E7;
+   opacity: 0.7;
+   border-radius: 1em;
+   color: black;
+   float: right;
+ }
+
+ .hero3 .wrapper div {
+   background-color: #FFF2E7;
+   opacity: 0.85;
+   border-radius: 1em;
+   color: black;
+   float: right;
+ }
+
+ .hero2 .wrapper div {
+   background-color: #FFF2E7;
+   opacity: 0.7;
+   border-radius: 1em;
+   color: black;
+
+ }
+
+ /********************/
+ /*   MEDIA INDEX   */
+ /*******************/
+
+ .align-header {
+   text-align: left;
+ }
+
+ .align-table {
+   padding: 2% 6% 2% 6%;
+ }
+
+ /********************/
+ /*   SHOW           */
+ /*******************/
+ .align-show {
+   margin: 10% 0 10% 20%;
+ }
