@@ -1,0 +1,21 @@
+<div class="row">
+  <%= form_for @movie, url: action_name do |f| %>
+
+    <div class="field">
+      <%= f.label "Title: " %>
+      <%= f.text_field :title, :title => nil, :required => true %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Year: " %>
+      <%= f.text_field :year, :year => nil, :required => true  %>
+    </div>
+
+    <div class="field">
+      <%= f.label "Tell us why they're rad: " %>
+      <%= f.text_area :synopsis, :synopsis => nil, :required => true   %>
+    </div>
+
+    <%= f.submit action_name, class: 'button secondary' %>
+  <% end %>
+</div>
