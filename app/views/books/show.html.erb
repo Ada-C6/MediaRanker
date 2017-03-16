@@ -1,0 +1,31 @@
+<article>
+  <div class="row">
+    <div class="column">
+      <h2><%= @book.title %></h1>
+      <h3>Written by: <%= @book.author %> </h3>
+      <h4>Upvotes: <%= @book.upvotes %> </h4>
+      <p> <%= @book.description %> </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="bottom-button">
+        <%= button_to "Upvote", books_update_path, method: :patch %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "Edit #{@book.title}", books_edit_path(@book.id), method: :get %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "Delete", books_destroy_path(@book.id), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "View all books", books_index_path, method: :get %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "View all media", main_path, method: :get %>
+      </div>
+    </div>
+  </div>
+
+</article>

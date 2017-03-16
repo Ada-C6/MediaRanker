@@ -1,0 +1,38 @@
+<article>
+
+  <% if @album.errors.any? %>
+    <section class="errors row">
+      <div class="column">
+        <p>Whoops! We couldn't save the album because:</p>
+        <ul>
+          <% @album.errors.messages.values.uniq.each do |message| %>
+            <li>
+              <%= message[0] %>
+            </li>
+          <% end %>
+        </ul>
+        <p>Please edit your entries and try again.</p>
+      </div>
+    </section>
+  <% end %>
+
+  <section class="row">
+    <div class="column">
+      <%= form_for @album, url: @path, method: @method do |f| %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+
+        <%= f.label :artist %>
+        <%= f.text_field :artist %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+
+        <%= f.submit %>
+
+      <% end %>
+    </div>
+  </section>
+
+</article>
