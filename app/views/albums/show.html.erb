@@ -1,0 +1,30 @@
+<article>
+  <div class="row">
+    <div class="column">
+      <h2><%= @album.title %></h1>
+      <h3>Recorded by: <%= @album.artist %> </h3>
+      <h4>Upvotes: <%= @album.upvotes %> </h4>
+      <p> <%= @album.description %> </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="bottom-button">
+        <%= button_to "Upvote", albums_update_path, method: :patch %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "Edit #{@album.title}", albums_edit_path(@album.id), method: :get %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "Delete", albums_destroy_path(@album.id), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "View all albums", albums_index_path, method: :get %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "View all media", main_path, method: :get %>
+      </div>
+    </div>
+  </div>
+</article>

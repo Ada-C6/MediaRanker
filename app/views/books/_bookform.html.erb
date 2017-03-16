@@ -1,0 +1,38 @@
+<article>
+  <% if @book.errors.any? %>
+    <section class="errors row">
+      <div class="column">
+        <p>Whoops! We couldn't save this book because:</p>
+        <ul>
+          <%# The .uniq statement below removes the duplicate messages produced by the reciprocal validations for uniqueness of name and title. I'm doing reciprocal ones instead of just one so that both fields will be automatically tagged as having errors for display to the user. %>
+          <% @book.errors.messages.values.uniq.each do |message| %>
+            <li>
+              <%= message[0] %>
+            </li>
+          <% end %>
+        </ul>
+        <p>Please edit your entries and try again.</p>
+      </div>
+    </section>
+  <% end %>
+
+  <section class="row">
+    <div class="div">
+      <%= form_for @book, url: @url, method: @method do |f| %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+
+        <%= f.submit %>
+
+      <% end %>
+    </div>
+  </section>
+
+</article>
