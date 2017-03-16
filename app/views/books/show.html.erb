@@ -1,0 +1,17 @@
+<div class="row align-show">
+
+  <section class="small-6 columns">
+    <h3><%= @book.title%></h3>
+    <h4> Written by: <%= @book.written_by %> </h4>
+    <h5> Upvotes: <%= @book.ranked %> </h5>
+    <p> <%= @book.description %> </p>
+  </section>
+  <section class="small-6 columns">
+    <ul class="align-buttons">
+      <li><%= button_to 'Upvote', bupvote_path(params[:id]), :class => "button", method: :put %></li>
+      <li><%= button_to 'Edit Book', edit_book_path(params[:id]), :class => "button", method: :get %></li>
+      <li><%= button_to 'Delete Book', { controller: :books, action: :destroy}, :class => "button", method: :delete, data: {confirm: 'Are you sure?'} %></li>
+    </ul>
+  </section>
+
+</div>
