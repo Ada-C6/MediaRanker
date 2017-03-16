@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="column">
+    <h2>Albums in the database</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <TABLE>
+      <% @albums.each do |album| %>
+        <TR>
+          <TD>Upvotes: <%= album.upvotes %></TD>
+          <TD><%= link_to album.title, albums_show_path(album.id) %></TD>
+          <TD><%= button_to "Upvote", albums_update_path(album.id), method: :patch %></TD>
+        </TR>
+      <% end %>
+    </TABLE>
+  </div>
+</div>
+
+<div class="row bottom-buttons-index">
+  <div class="column small-4 medium-3 large-2">
+    <%= button_to "View all media", main_path, method: :get %>
+  </div>
+  <div class="column end small-2 medium-2 large-2">
+    <%= button_to "Add an album", albums_new_path, method: :get %>
+  </div>
+</div>

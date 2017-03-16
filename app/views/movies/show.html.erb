@@ -1,0 +1,38 @@
+<%# Delete button info: http://apidock.com/rails/ActionView/Helpers/UrlHelper/button_to %>
+
+<article>
+  <div class="row">
+    <div class="column">
+      <h2><%= @movie.title %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h3>Directed by: <%= @movie.director %> </h3>
+      <h4>Upvotes: <%= @movie.upvotes %> </h4>
+      <p> <%= @movie.description %> </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="bottom-button">
+        <%= button_to "Upvote", movies_update_path, method: :patch %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "Edit #{@movie.title}", movies_edit_path(@movie.id), method: :get %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "Delete", movies_destroy_path(@movie.id), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "View all movies", movies_index_path, method: :get %>
+      </div>
+      <div class="bottom-button">
+        <%= button_to "View all media", main_path, method: :get %>
+      </div>
+    </div>
+  </div>
+
+</article>
