@@ -1,0 +1,30 @@
+<main>
+
+  <div class="row small-up-2 medium-up-3">
+
+    <section class="small-4 medium-3 columns">
+      <% @movies.each do |movie| %>
+        <h3><%= link_to movie.name, medium_path(movie), method: :get %></h3>
+        <h4>Rating: <%= movie.score %></h4>
+      <% end %>
+      <a href='/movies'>View all Movies</a>
+    </section>
+
+    <section class="small-4 medium-3 columns">
+      <% @books.each do |book| %>
+        <h3><%= link_to book.name, medium_path(book), method: :get %></h3>
+        <h4>Rating: <%= book.score %></h4>
+      <% end %>
+      <a href='/books'>View all Books</a>
+    </section>
+
+    <section class="small-4 medium-3 columns">
+      <% @songs.each do |song| %>
+        <h3><%= link_to song.name, medium_path(song), method: :get %></h3>
+        <h4>Rating: <%= song.score %></h4>
+      <% end %>
+      <a href='/songs'>View all Songs</a>
+    </section>
+  </div>
+
+</main>

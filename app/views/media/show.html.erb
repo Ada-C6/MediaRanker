@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @medium.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @medium.name %>
+</p>
+
+<p>
+  <strong>Auteur:</strong>
+  <%= @medium.auteur %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @medium.description %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @medium.score %>
+</p>
+
+<%= link_to 'Upvote', upvote_path(@medium), method: :patch %> |
+<%= link_to 'Edit', edit_medium_path(@medium) %> |
+<%= link_to 'Delete', medium_path(@medium), method: :delete %> |
+<%= link_to "View All #{@medium.category}s", "../#{@medium.category.downcase}s" %> |
+<%= link_to 'View All Media', '/' %>

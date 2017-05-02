@@ -1,0 +1,56 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+movie_all_fields:
+  category: Movie
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  description: "This is a the description"
+  score: 1
+
+book_all_fields:
+  category: Book
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  description: "This is a the description"
+  score: 1
+
+song_all_fields:
+  category: Song
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  description: "This is a the description"
+  score: 1
+
+movie_min_fields:
+  category: Movie
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  score: 1
+
+movie_missing_name:
+  category: Movie
+  auteur: "Rene Russo"
+  score: 1
+
+movie_missing_auteur:
+  category: Movie
+  name: "My Fair Lady"
+  score: 1
+
+movie_zero_score:
+  category: Movie
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  score: 0
+
+movie_negative_score:
+  category: Movie
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  score: -1
+
+bad_category:
+  category: Pencils
+  name: "My Fair Lady"
+  auteur: "Rene Russo"
+  score: 1

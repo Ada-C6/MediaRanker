@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+<% selection.each do |one| %>
+  <tr>
+    <td>Ranked: <%= one.score %></td>
+    <td><%= link_to one.name, medium_path(one), method: :get %></td>
+    <td><%= button_to "Upvote", upvote_path(one), method: :patch %></td>
+  </tr>
+<% end %>
+</table>
